@@ -33,8 +33,8 @@
 		</Postproc>
 	</Environment>
 	<Camera>
-		<Position x="379.042" y="95.1755" z="73.5267"/>
-		<Rotation angle="0"/>
+		<Position x="524.575" y="109.999" z="459.15"/>
+		<Rotation angle="0.262606"/>
 		<Declination angle="0.610865"/>
 	</Camera>
 	<ScriptSettings><![CDATA[
@@ -14122,6 +14122,118 @@
 			<Position x="724.66657" z="666.7306"/>
 			<Orientation y="12.05793"/>
 			<Actor seed="18359"/>
+		</Entity>
+		<Entity uid="2932">
+			<Template>units/mace_infantry_pikeman_a</Template>
+			<Player>1</Player>
+			<Position x="420.78327" z="179.4286"/>
+			<Orientation y="-0.26401"/>
+			<Actor seed="36599"/>
+		</Entity>
+		<Entity uid="2933">
+			<Template>units/mace_infantry_pikeman_a</Template>
+			<Player>1</Player>
+			<Position x="423.41807" z="179.04142"/>
+			<Orientation y="-0.26401"/>
+			<Actor seed="36599"/>
+		</Entity>
+		<Entity uid="2934">
+			<Template>units/mace_infantry_pikeman_a</Template>
+			<Player>1</Player>
+			<Position x="425.67734" z="178.85929"/>
+			<Orientation y="-0.26401"/>
+			<Actor seed="36599"/>
+		</Entity>
+		<Entity uid="2935">
+			<Template>units/mace_infantry_pikeman_a</Template>
+			<Player>1</Player>
+			<Position x="427.9362" z="178.88105"/>
+			<Orientation y="-0.26401"/>
+			<Actor seed="36599"/>
+		</Entity>
+		<Entity uid="2936">
+			<Template>units/mace_infantry_pikeman_a</Template>
+			<Player>1</Player>
+			<Position x="429.9361" z="179.11023"/>
+			<Orientation y="-0.26401"/>
+			<Actor seed="36599"/>
+		</Entity>
+		<Entity uid="2937">
+			<Template>units/mace_infantry_pikeman_a</Template>
+			<Player>1</Player>
+			<Position x="432.01328" z="179.00611"/>
+			<Orientation y="-0.26401"/>
+			<Actor seed="36599"/>
+		</Entity>
+		<Entity uid="2938">
+			<Template>units/mace_infantry_pikeman_a</Template>
+			<Player>1</Player>
+			<Position x="363.44294" z="211.81968"/>
+			<Orientation y="0.27741"/>
+			<Actor seed="36599"/>
+		</Entity>
+		<Entity uid="2939">
+			<Template>units/mace_infantry_pikeman_a</Template>
+			<Player>1</Player>
+			<Position x="361.7165" z="212.97934"/>
+			<Orientation y="0.27741"/>
+			<Actor seed="36599"/>
+		</Entity>
+		<Entity uid="2940">
+			<Template>units/mace_infantry_pikeman_a</Template>
+			<Player>1</Player>
+			<Position x="359.88447" z="213.81351"/>
+			<Orientation y="0.27741"/>
+			<Actor seed="36599"/>
+		</Entity>
+		<Entity uid="2941">
+			<Template>units/mace_infantry_pikeman_a</Template>
+			<Player>1</Player>
+			<Position x="357.93744" z="214.95896"/>
+			<Orientation y="0.27741"/>
+			<Actor seed="36599"/>
+		</Entity>
+		<Entity uid="2942">
+			<Template>units/mace_infantry_pikeman_a</Template>
+			<Player>1</Player>
+			<Position x="356.0951" z="216.27927"/>
+			<Orientation y="0.27741"/>
+			<Actor seed="36599"/>
+		</Entity>
+		<Entity uid="2943">
+			<Template>units/mace_infantry_pikeman_a</Template>
+			<Player>1</Player>
+			<Position x="354.03666" z="217.96891"/>
+			<Orientation y="0.27741"/>
+			<Actor seed="36599"/>
+		</Entity>
+		<Entity uid="2944">
+			<Template>units/mace_support_healer_b</Template>
+			<Player>1</Player>
+			<Position x="371.0691" z="159.5644"/>
+			<Orientation y="2.35622"/>
+			<Actor seed="22804"/>
+		</Entity>
+		<Entity uid="2945">
+			<Template>units/mace_support_healer_a</Template>
+			<Player>1</Player>
+			<Position x="373.718" z="157.31055"/>
+			<Orientation y="2.35622"/>
+			<Actor seed="17981"/>
+		</Entity>
+		<Entity uid="2946">
+			<Template>units/mace_support_healer_b</Template>
+			<Player>1</Player>
+			<Position x="359.79773" z="167.91413"/>
+			<Orientation y="2.35622"/>
+			<Actor seed="22804"/>
+		</Entity>
+		<Entity uid="2947">
+			<Template>units/mace_support_healer_a</Template>
+			<Player>1</Player>
+			<Position x="362.44663" z="165.66025"/>
+			<Orientation y="2.35622"/>
+			<Actor seed="17981"/>
 		</Entity>
 	</Entities>
 	<Paths/>
