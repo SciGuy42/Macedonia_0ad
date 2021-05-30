@@ -1,0 +1,40 @@
+{
+	"Name": "Macedonia",
+	"Description": "A campaign about Macedonia",
+	"Interface": "default_menu",
+	"Levels": {
+		"Macedonia_1": {
+			"Name": "Consolidating Control (359 BC)",
+			"Map": "scenarios/Macedonia_1.xml",
+			"MapType": "scenario"
+		},
+		"Macedonia_2": {
+			"Map": "scenarios/Macedonia_2.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_1"
+		},
+		"Macedonia_3": {
+			"Map": "scenarios/Macedonia_3 - Scythian Campaign.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_2"
+		},
+		"Macedonia_4": {
+			"Map": "scenarios/Macedonia_4 - Battle of Chaeronea.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_3"
+		},
+		"Macedonia_5": {
+			"Map": "scenarios/Macedonia_5 - Magnesia.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_4"
+		}
+	},
+	"Order": [
+		"Macedonia_1",
+		"Macedonia_2",
+		"Macedonia_3",
+		"Macedonia_4",
+		"Macedonia_5"
+	],
+	"ShowUnavailable": true
+}
