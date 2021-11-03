@@ -290,7 +290,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let e of towers_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",5,p);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",5,p);
 			
 			for (let a of archers_e)
 			{
@@ -309,7 +309,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		{
 			//spawn the garrison inside the tower
 			
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",fort_size,p);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",fort_size,p);
 			
 			for (let a of archers_e)
 			{
@@ -323,7 +323,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let e of towers_w)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",2,p);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",2,p);
 				
 			for (let a of archers_e)
 			{
@@ -337,7 +337,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of camps_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen_champion_ranged",10,p);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen/champion_ranged",10,p);
 			
 			for (let a of archers_e)
 			{
@@ -363,10 +363,10 @@ Trigger.prototype.GarrisonEntities = function(data)
 			for (let ship of ships_p)
 			{
 				//spawn the garrison inside the ship
-				TriggerHelper.SpawnGarrisonedUnits(ship, "units/mace_infantry_archer_e",5,p);
+				TriggerHelper.SpawnGarrisonedUnits(ship, "units/mace/infantry_archer_e",5,p);
 				
 				//spawn the garrison inside the ship
-				TriggerHelper.SpawnGarrisonedUnits(ship, "units/mace_champion_infantry_a",5,p);
+				TriggerHelper.SpawnGarrisonedUnits(ship, "units/mace/champion_infantry_spearman",5,p);
 			}
 		}
 		

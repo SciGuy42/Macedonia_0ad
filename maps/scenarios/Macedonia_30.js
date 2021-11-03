@@ -417,7 +417,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		{
 			//spawn the garrison inside the tower
 			
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",fort_size,owner);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",fort_size,owner);
 			
 			for (let a of archers_e)
 			{
@@ -432,7 +432,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let e of towers_w)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",2,owner);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",2,owner);
 					
 			for (let a of archers_e)
 			{
@@ -882,7 +882,7 @@ Trigger.prototype.RangeActionWorkshop = function(data)
 		if (resources.food > cost && resources.metal > Math.round(cost*0.5))
 		{
 			//select random template
-			let templates = ["units/mace_mechanical_siege_ram","units/mace_mechanical_siege_lithobolos_packed","units/mace_mechanical_siege_oxybeles_packed"];
+			let templates = ["units/mace/siege_ram","units/mace/siege_lithobolos_packed","units/mace_mechanical_siege_oxybeles_packed"];
 			let names = ["Siege Ram","Catapult","Bolt Shooter"];
 			let piece = pickRandom(templates);
 			let name =  names[templates.indexOf(piece)];

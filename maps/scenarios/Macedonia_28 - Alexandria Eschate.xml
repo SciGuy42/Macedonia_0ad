@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Scenario version="6">
+<Scenario version="7">
 	<Environment>
 		<SkySet>cirrus</SkySet>
 		<SunColor r="1" g="0.792157" b="0.364706"/>
 		<SunElevation angle="0.523599"/>
 		<SunRotation angle="-1.86532"/>
-		<TerrainAmbientColor r="0.501961" g="0.501961" b="0.501961"/>
-		<UnitsAmbientColor r="0.564706" g="0.576471" b="0.54902"/>
+		<AmbientColor r="0.564706" g="0.576471" b="0.54902"/>
 		<Fog>
 			<FogFactor>0.000986328</FogFactor>
 			<FogThickness>0.301758</FogThickness>
@@ -201,31 +200,31 @@
 			<Orientation y="0.60007"/>
 		</Entity>
 		<Entity uid="173">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1742.7685" z="789.37818"/>
 			<Orientation y="0.8182"/>
 		</Entity>
 		<Entity uid="174">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1727.44642" z="790.5694"/>
 			<Orientation y="-4.28904"/>
 		</Entity>
 		<Entity uid="175">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1738.06897" z="794.14185"/>
 			<Orientation y="-3.28307"/>
 		</Entity>
 		<Entity uid="176">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1670.70582" z="565.44837"/>
 			<Orientation y="-1.56913"/>
 		</Entity>
 		<Entity uid="177">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1734.01539" z="793.55958"/>
 			<Orientation y="-0.64736"/>
@@ -429,31 +428,31 @@
 			<Orientation y="-2.46032"/>
 		</Entity>
 		<Entity uid="313">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="946.38831" z="331.87894"/>
 			<Orientation y="-2.09993"/>
 		</Entity>
 		<Entity uid="314">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1237.86451" z="543.47114"/>
 			<Orientation y="1.2248"/>
 		</Entity>
 		<Entity uid="315">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="941.31537" z="325.53104"/>
 			<Orientation y="-4.09075"/>
 		</Entity>
 		<Entity uid="316">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="935.39014" z="319.37107"/>
 			<Orientation y="-1.98865"/>
 		</Entity>
 		<Entity uid="317">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="949.69166" z="326.60038"/>
 			<Orientation y="-4.0122"/>
@@ -27864,133 +27863,133 @@
 			<Orientation y="-8.43018"/>
 		</Entity>
 		<Entity uid="5568">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1351.47669" z="517.6822"/>
 			<Orientation y="-0.51717"/>
 		</Entity>
 		<Entity uid="5569">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1356.11219" z="526.73792"/>
 			<Orientation y="-1.34672"/>
 		</Entity>
 		<Entity uid="5570">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1345.19721" z="515.50483"/>
 			<Orientation y="-0.60384"/>
 		</Entity>
 		<Entity uid="5571">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1353.07087" z="529.95441"/>
 			<Orientation y="1.17128"/>
 		</Entity>
 		<Entity uid="5572">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1340.4408" z="522.26691"/>
 			<Orientation y="-0.12198"/>
 		</Entity>
 		<Entity uid="5579">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1290.94202" z="600.12824"/>
 			<Orientation y="1.33725"/>
 		</Entity>
 		<Entity uid="5580">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1300.30726" z="592.42304"/>
 			<Orientation y="-1.64303"/>
 		</Entity>
 		<Entity uid="5581">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1287.3617" z="603.25397"/>
 			<Orientation y="-0.7742"/>
 		</Entity>
 		<Entity uid="5582">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1295.83997" z="606.11457"/>
 			<Orientation y="-3.6956"/>
 		</Entity>
 		<Entity uid="5583">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1299.2472" z="608.29462"/>
 			<Orientation y="-2.24398"/>
 		</Entity>
 		<Entity uid="5584">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1296.63953" z="598.06366"/>
 			<Orientation y="-3.11953"/>
 		</Entity>
 		<Entity uid="5585">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="655.6778" z="1740.53669"/>
 			<Orientation y="-4.11498"/>
 		</Entity>
 		<Entity uid="5586">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="646.80518" z="1732.16578"/>
 			<Orientation y="0.71811"/>
 		</Entity>
 		<Entity uid="5587">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="651.55396" z="1742.87116"/>
 			<Orientation y="-2.93778"/>
 		</Entity>
 		<Entity uid="5588">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="657.24134" z="1728.83783"/>
 			<Orientation y="-2.42795"/>
 		</Entity>
 		<Entity uid="5589">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="663.37159" z="1738.80817"/>
 			<Orientation y="1.04053"/>
 		</Entity>
 		<Entity uid="5590">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="361.7063" z="430.73603"/>
 			<Orientation y="-3.09574"/>
 		</Entity>
 		<Entity uid="5591">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="367.34717" z="428.30195"/>
 			<Orientation y="-2.83915"/>
 		</Entity>
 		<Entity uid="5592">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="372.31397" z="436.03412"/>
 			<Orientation y="-2.99344"/>
 		</Entity>
 		<Entity uid="5593">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="374.15046" z="424.55591"/>
 			<Orientation y="0.32563"/>
 		</Entity>
 		<Entity uid="5594">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="365.62989" z="433.0334"/>
 			<Orientation y="-1.307"/>
 		</Entity>
 		<Entity uid="5595">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="373.57642" z="432.22004"/>
 			<Orientation y="-0.37269"/>
@@ -30518,112 +30517,112 @@
 			<Actor seed="49361"/>
 		</Entity>
 		<Entity uid="6116">
-			<Template>structures/mace_civil_centre</Template>
+			<Template>structures/mace/civil_centre</Template>
 			<Player>1</Player>
 			<Position x="833.44819" z="374.70978"/>
 			<Orientation y="-3.13997"/>
 			<Actor seed="47945"/>
 		</Entity>
 		<Entity uid="6117">
-			<Template>structures/mace_barracks</Template>
+			<Template>structures/mace/barracks</Template>
 			<Player>1</Player>
 			<Position x="820.32313" z="326.08643"/>
 			<Orientation y="3.08228"/>
 			<Actor seed="5208"/>
 		</Entity>
 		<Entity uid="6118">
-			<Template>structures/mace_royal_stoa</Template>
+			<Template>structures/mace/royal_stoa</Template>
 			<Player>1</Player>
 			<Position x="864.05347" z="332.7659"/>
 			<Orientation y="-1.60344"/>
 			<Actor seed="34445"/>
 		</Entity>
 		<Entity uid="6119">
-			<Template>structures/mace_house</Template>
+			<Template>structures/mace/house</Template>
 			<Player>1</Player>
 			<Position x="847.48902" z="280.20179"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="38426"/>
 		</Entity>
 		<Entity uid="6120">
-			<Template>structures/mace_house</Template>
+			<Template>structures/mace/house</Template>
 			<Player>1</Player>
 			<Position x="860.89692" z="292.98139"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="11308"/>
 		</Entity>
 		<Entity uid="6121">
-			<Template>structures/mace_house</Template>
+			<Template>structures/mace/house</Template>
 			<Player>1</Player>
 			<Position x="792.73206" z="297.17212"/>
 			<Orientation y="0.78214"/>
 			<Actor seed="45747"/>
 		</Entity>
 		<Entity uid="6122">
-			<Template>structures/mace_house</Template>
+			<Template>structures/mace/house</Template>
 			<Player>1</Player>
 			<Position x="806.45673" z="284.31016"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="46959"/>
 		</Entity>
 		<Entity uid="6123">
-			<Template>structures/mace_farmstead</Template>
+			<Template>structures/mace/farmstead</Template>
 			<Player>1</Player>
 			<Position x="951.02826" z="273.36329"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="32807"/>
 		</Entity>
 		<Entity uid="6124">
-			<Template>structures/mace_field</Template>
+			<Template>structures/mace/field</Template>
 			<Player>1</Player>
 			<Position x="958.26154" z="304.66773"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="49112"/>
 		</Entity>
 		<Entity uid="6125">
-			<Template>structures/mace_field</Template>
+			<Template>structures/mace/field</Template>
 			<Player>1</Player>
 			<Position x="985.94068" z="280.71421"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="62989"/>
 		</Entity>
 		<Entity uid="6126">
-			<Template>structures/mace_field</Template>
+			<Template>structures/mace/field</Template>
 			<Player>1</Player>
 			<Position x="968.54078" z="251.1194"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="17579"/>
 		</Entity>
 		<Entity uid="6127">
-			<Template>structures/mace_field</Template>
+			<Template>structures/mace/field</Template>
 			<Player>1</Player>
 			<Position x="925.8459" z="292.93848"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="64376"/>
 		</Entity>
 		<Entity uid="6128">
-			<Template>structures/mace_field</Template>
+			<Template>structures/mace/field</Template>
 			<Player>1</Player>
 			<Position x="935.84034" z="258.56748"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="25345"/>
 		</Entity>
 		<Entity uid="6129">
-			<Template>structures/mace_corral</Template>
+			<Template>structures/mace/corral</Template>
 			<Player>1</Player>
 			<Position x="900.68812" z="277.03367"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="3368"/>
 		</Entity>
 		<Entity uid="6130">
-			<Template>structures/mace_storehouse</Template>
+			<Template>structures/mace/storehouse</Template>
 			<Player>1</Player>
 			<Position x="977.3108" z="191.19266"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="38860"/>
 		</Entity>
 		<Entity uid="6131">
-			<Template>structures/mace_storehouse</Template>
+			<Template>structures/mace/storehouse</Template>
 			<Player>0</Player>
 			<Position x="858.599" z="151.92362"/>
 			<Orientation y="1.78565"/>
@@ -30637,14 +30636,14 @@
 			<Actor seed="62570"/>
 		</Entity>
 		<Entity uid="6133">
-			<Template>structures/mace_range</Template>
+			<Template>structures/mace/range</Template>
 			<Player>1</Player>
 			<Position x="759.79072" z="338.49747"/>
 			<Orientation y="-3.21084"/>
 			<Actor seed="9590"/>
 		</Entity>
 		<Entity uid="6134">
-			<Template>structures/mace_defense_tower</Template>
+			<Template>structures/mace/defense_tower</Template>
 			<Player>1</Player>
 			<Position x="797.0987" z="355.33777"/>
 			<Orientation y="2.35621"/>
@@ -32205,42 +32204,42 @@
 			<Actor seed="62934"/>
 		</Entity>
 		<Entity uid="6363">
-			<Template>structures/mace_house</Template>
+			<Template>structures/mace/house</Template>
 			<Player>1</Player>
 			<Position x="759.26362" z="518.73121"/>
 			<Orientation y="1.47226"/>
 			<Actor seed="45747"/>
 		</Entity>
 		<Entity uid="6364">
-			<Template>structures/mace_house</Template>
+			<Template>structures/mace/house</Template>
 			<Player>1</Player>
 			<Position x="760.80243" z="499.9214"/>
 			<Orientation y="3.04635"/>
 			<Actor seed="46959"/>
 		</Entity>
 		<Entity uid="6365">
-			<Template>structures/mace_market</Template>
+			<Template>structures/mace/market</Template>
 			<Player>1</Player>
 			<Position x="750.73572" z="293.07465"/>
 			<Orientation y="2.41732"/>
 			<Actor seed="29300"/>
 		</Entity>
 		<Entity uid="6366">
-			<Template>structures/mace_storehouse</Template>
+			<Template>structures/mace/storehouse</Template>
 			<Player>1</Player>
 			<Position x="713.64399" z="597.61628"/>
 			<Orientation y="-2.38343"/>
 			<Actor seed="3105"/>
 		</Entity>
 		<Entity uid="6367">
-			<Template>structures/mace_storehouse</Template>
+			<Template>structures/mace/storehouse</Template>
 			<Player>1</Player>
 			<Position x="976.23322" z="561.4264"/>
 			<Orientation y="-2.87714"/>
 			<Actor seed="63657"/>
 		</Entity>
 		<Entity uid="6369">
-			<Template>structures/mace_blacksmith</Template>
+			<Template>structures/mace/forge</Template>
 			<Player>1</Player>
 			<Position x="895.95289" z="359.66294"/>
 			<Orientation y="3.0642"/>
@@ -32492,14 +32491,14 @@
 			<Actor seed="62391"/>
 		</Entity>
 		<Entity uid="6406">
-			<Template>other/stall_big</Template>
+			<Template>structures/stall_big</Template>
 			<Player>4</Player>
 			<Position x="326.41279" z="1519.54566"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="17990"/>
 		</Entity>
 		<Entity uid="6407">
-			<Template>other/stall_small_b</Template>
+			<Template>structures/stall_small_b</Template>
 			<Player>4</Player>
 			<Position x="348.86603" z="1482.74097"/>
 			<Orientation y="2.35621"/>
@@ -32513,7 +32512,7 @@
 			<Actor seed="14222"/>
 		</Entity>
 		<Entity uid="6409">
-			<Template>other/stall_small_b</Template>
+			<Template>structures/stall_small_b</Template>
 			<Player>4</Player>
 			<Position x="373.45493" z="1514.72266"/>
 			<Orientation y="-2.22963"/>
@@ -32961,210 +32960,210 @@
 			<Actor seed="320"/>
 		</Entity>
 		<Entity uid="6473">
-			<Template>units/mace_support_female_citizen</Template>
+			<Template>units/mace/support_female_citizen</Template>
 			<Player>1</Player>
 			<Position x="907.12092" z="263.05549"/>
 			<Orientation y="2.32947"/>
 			<Actor seed="61227"/>
 		</Entity>
 		<Entity uid="6474">
-			<Template>units/mace_support_female_citizen</Template>
+			<Template>units/mace/support_female_citizen</Template>
 			<Player>1</Player>
 			<Position x="909.123" z="265.2305"/>
 			<Orientation y="2.32947"/>
 			<Actor seed="21773"/>
 		</Entity>
 		<Entity uid="6475">
-			<Template>units/mace_support_female_citizen</Template>
+			<Template>units/mace/support_female_citizen</Template>
 			<Player>1</Player>
 			<Position x="911.65473" z="266.97718"/>
 			<Orientation y="2.32947"/>
 			<Actor seed="50256"/>
 		</Entity>
 		<Entity uid="6476">
-			<Template>units/mace_support_female_citizen</Template>
+			<Template>units/mace/support_female_citizen</Template>
 			<Player>1</Player>
 			<Position x="913.70972" z="268.92823"/>
 			<Orientation y="2.32947"/>
 			<Actor seed="34462"/>
 		</Entity>
 		<Entity uid="6477">
-			<Template>units/mace_support_female_citizen</Template>
+			<Template>units/mace/support_female_citizen</Template>
 			<Player>1</Player>
 			<Position x="916.31238" z="271.85227"/>
 			<Orientation y="2.32947"/>
 			<Actor seed="36699"/>
 		</Entity>
 		<Entity uid="6478">
-			<Template>units/mace_support_female_citizen</Template>
+			<Template>units/mace/support_female_citizen</Template>
 			<Player>1</Player>
 			<Position x="909.32691" z="260.59379"/>
 			<Orientation y="2.32947"/>
 			<Actor seed="38842"/>
 		</Entity>
 		<Entity uid="6479">
-			<Template>units/mace_support_female_citizen</Template>
+			<Template>units/mace/support_female_citizen</Template>
 			<Player>1</Player>
 			<Position x="911.17853" z="263.16401"/>
 			<Orientation y="2.32947"/>
 			<Actor seed="34180"/>
 		</Entity>
 		<Entity uid="6480">
-			<Template>units/mace_support_female_citizen</Template>
+			<Template>units/mace/support_female_citizen</Template>
 			<Player>1</Player>
 			<Position x="913.06592" z="265.00516"/>
 			<Orientation y="2.32947"/>
 			<Actor seed="16258"/>
 		</Entity>
 		<Entity uid="6481">
-			<Template>units/mace_support_female_citizen</Template>
+			<Template>units/mace/support_female_citizen</Template>
 			<Player>1</Player>
 			<Position x="915.40156" z="267.2476"/>
 			<Orientation y="2.32947"/>
 			<Actor seed="10562"/>
 		</Entity>
 		<Entity uid="6482">
-			<Template>units/mace_support_female_citizen</Template>
+			<Template>units/mace/support_female_citizen</Template>
 			<Player>1</Player>
 			<Position x="917.85138" z="268.69031"/>
 			<Orientation y="2.32947"/>
 			<Actor seed="37674"/>
 		</Entity>
 		<Entity uid="6483">
-			<Template>units/mace_infantry_pikeman_b</Template>
+			<Template>units/mace/infantry_pikeman_b</Template>
 			<Player>1</Player>
 			<Position x="801.51966" z="321.70646"/>
 			<Orientation y="4.41276"/>
 			<Actor seed="48684"/>
 		</Entity>
 		<Entity uid="6484">
-			<Template>units/mace_infantry_pikeman_b</Template>
+			<Template>units/mace/infantry_pikeman_b</Template>
 			<Player>1</Player>
 			<Position x="801.55976" z="324.23545"/>
 			<Orientation y="4.41276"/>
 			<Actor seed="9434"/>
 		</Entity>
 		<Entity uid="6485">
-			<Template>units/mace_infantry_pikeman_b</Template>
+			<Template>units/mace/infantry_pikeman_b</Template>
 			<Player>1</Player>
 			<Position x="800.9723" z="326.97852"/>
 			<Orientation y="4.41276"/>
 			<Actor seed="52727"/>
 		</Entity>
 		<Entity uid="6486">
-			<Template>units/mace_infantry_pikeman_b</Template>
+			<Template>units/mace/infantry_pikeman_b</Template>
 			<Player>1</Player>
 			<Position x="800.17658" z="329.40757"/>
 			<Orientation y="4.41276"/>
 			<Actor seed="64537"/>
 		</Entity>
 		<Entity uid="6487">
-			<Template>units/mace_infantry_pikeman_b</Template>
+			<Template>units/mace/infantry_pikeman_b</Template>
 			<Player>1</Player>
 			<Position x="799.50355" z="332.35743"/>
 			<Orientation y="4.41276"/>
 			<Actor seed="32997"/>
 		</Entity>
 		<Entity uid="6488">
-			<Template>units/mace_infantry_pikeman_b</Template>
+			<Template>units/mace/infantry_pikeman_b</Template>
 			<Player>1</Player>
 			<Position x="795.1775" z="331.60657"/>
 			<Orientation y="4.41276"/>
 			<Actor seed="13550"/>
 		</Entity>
 		<Entity uid="6489">
-			<Template>units/mace_infantry_pikeman_b</Template>
+			<Template>units/mace/infantry_pikeman_b</Template>
 			<Player>1</Player>
 			<Position x="797.0329" z="329.04041"/>
 			<Orientation y="4.41276"/>
 			<Actor seed="37847"/>
 		</Entity>
 		<Entity uid="6490">
-			<Template>units/mace_infantry_pikeman_b</Template>
+			<Template>units/mace/infantry_pikeman_b</Template>
 			<Player>1</Player>
 			<Position x="797.56073" z="326.35615"/>
 			<Orientation y="4.41276"/>
 			<Actor seed="58549"/>
 		</Entity>
 		<Entity uid="6491">
-			<Template>units/mace_infantry_pikeman_b</Template>
+			<Template>units/mace/infantry_pikeman_b</Template>
 			<Player>1</Player>
 			<Position x="797.85865" z="323.8058"/>
 			<Orientation y="4.41276"/>
 			<Actor seed="24093"/>
 		</Entity>
 		<Entity uid="6492">
-			<Template>units/mace_infantry_pikeman_b</Template>
+			<Template>units/mace/infantry_pikeman_b</Template>
 			<Player>1</Player>
 			<Position x="797.96222" z="321.025"/>
 			<Orientation y="4.41276"/>
 			<Actor seed="13137"/>
 		</Entity>
 		<Entity uid="6493">
-			<Template>units/mace_infantry_archer_a</Template>
+			<Template>units/mace/infantry_archer_a</Template>
 			<Player>1</Player>
 			<Position x="817.25873" z="307.12943"/>
 			<Orientation y="2.90378"/>
 			<Actor seed="58532"/>
 		</Entity>
 		<Entity uid="6494">
-			<Template>units/mace_infantry_archer_a</Template>
+			<Template>units/mace/infantry_archer_a</Template>
 			<Player>1</Player>
 			<Position x="819.71857" z="307.19733"/>
 			<Orientation y="2.90378"/>
 			<Actor seed="8337"/>
 		</Entity>
 		<Entity uid="6495">
-			<Template>units/mace_infantry_archer_a</Template>
+			<Template>units/mace/infantry_archer_a</Template>
 			<Player>1</Player>
 			<Position x="822.22431" z="307.31507"/>
 			<Orientation y="2.90378"/>
 			<Actor seed="34847"/>
 		</Entity>
 		<Entity uid="6496">
-			<Template>units/mace_infantry_archer_a</Template>
+			<Template>units/mace/infantry_archer_a</Template>
 			<Player>1</Player>
 			<Position x="824.71082" z="306.9654"/>
 			<Orientation y="2.90378"/>
 			<Actor seed="26821"/>
 		</Entity>
 		<Entity uid="6497">
-			<Template>units/mace_infantry_archer_a</Template>
+			<Template>units/mace/infantry_archer_a</Template>
 			<Player>1</Player>
 			<Position x="827.18818" z="306.80683"/>
 			<Orientation y="2.90378"/>
 			<Actor seed="9845"/>
 		</Entity>
 		<Entity uid="6498">
-			<Template>units/mace_infantry_archer_a</Template>
+			<Template>units/mace/infantry_archer_a</Template>
 			<Player>1</Player>
 			<Position x="817.53595" z="304.48691"/>
 			<Orientation y="2.90378"/>
 			<Actor seed="8271"/>
 		</Entity>
 		<Entity uid="6499">
-			<Template>units/mace_infantry_archer_a</Template>
+			<Template>units/mace/infantry_archer_a</Template>
 			<Player>1</Player>
 			<Position x="820.14917" z="304.52088"/>
 			<Orientation y="2.90378"/>
 			<Actor seed="43264"/>
 		</Entity>
 		<Entity uid="6500">
-			<Template>units/mace_infantry_archer_a</Template>
+			<Template>units/mace/infantry_archer_a</Template>
 			<Player>1</Player>
 			<Position x="822.59644" z="304.43042"/>
 			<Orientation y="2.90378"/>
 			<Actor seed="31170"/>
 		</Entity>
 		<Entity uid="6501">
-			<Template>units/mace_infantry_archer_a</Template>
+			<Template>units/mace/infantry_archer_a</Template>
 			<Player>1</Player>
 			<Position x="824.96985" z="304.18854"/>
 			<Orientation y="2.90378"/>
 			<Actor seed="14724"/>
 		</Entity>
 		<Entity uid="6502">
-			<Template>units/mace_infantry_archer_a</Template>
+			<Template>units/mace/infantry_archer_a</Template>
 			<Player>1</Player>
 			<Position x="827.95862" z="304.3625"/>
 			<Orientation y="2.90378"/>
@@ -37574,28 +37573,28 @@
 			<Actor seed="32746"/>
 		</Entity>
 		<Entity uid="7132">
-			<Template>other/stall_big</Template>
+			<Template>structures/stall_big</Template>
 			<Player>5</Player>
 			<Position x="1961.84327" z="1296.94776"/>
 			<Orientation y="2.58931"/>
 			<Actor seed="15156"/>
 		</Entity>
 		<Entity uid="7133">
-			<Template>other/stall_med</Template>
+			<Template>structures/stall_med</Template>
 			<Player>5</Player>
 			<Position x="1941.0918" z="1285.35425"/>
 			<Orientation y="0.04935"/>
 			<Actor seed="43178"/>
 		</Entity>
 		<Entity uid="7134">
-			<Template>other/stall_small_a</Template>
+			<Template>structures/stall_small_a</Template>
 			<Player>5</Player>
 			<Position x="1922.24" z="1325.69861"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="18076"/>
 		</Entity>
 		<Entity uid="7135">
-			<Template>other/stall_small_b</Template>
+			<Template>structures/stall_small_b</Template>
 			<Player>5</Player>
 			<Position x="1920.19043" z="1301.08448"/>
 			<Orientation y="1.09794"/>
@@ -39345,21 +39344,21 @@
 			<Actor seed="12354"/>
 		</Entity>
 		<Entity uid="7386">
-			<Template>units/mace_support_trader</Template>
+			<Template>units/mace/support_trader</Template>
 			<Player>1</Player>
 			<Position x="359.17692" z="1486.2511"/>
 			<Orientation y="2.83957"/>
 			<Actor seed="56693"/>
 		</Entity>
 		<Entity uid="7387">
-			<Template>units/mace_support_trader</Template>
+			<Template>units/mace/support_trader</Template>
 			<Player>1</Player>
 			<Position x="1921.06751" z="1284.44874"/>
 			<Orientation y="-2.6214"/>
 			<Actor seed="64920"/>
 		</Entity>
 		<Entity uid="7388">
-			<Template>units/mace_support_trader</Template>
+			<Template>units/mace/support_trader</Template>
 			<Player>1</Player>
 			<Position x="1700.99085" z="858.99006"/>
 			<Orientation y="-2.40699"/>
@@ -39569,7 +39568,7 @@
 			<Actor seed="39298"/>
 		</Entity>
 		<Entity uid="7419">
-			<Template>units/mace_hero_philip</Template>
+			<Template>units/mace/hero_philip_ii</Template>
 			<Player>1</Player>
 			<Position x="842.43635" z="345.6742"/>
 			<Orientation y="-3.10236"/>
@@ -40808,105 +40807,105 @@
 			<Actor seed="1458"/>
 		</Entity>
 		<Entity uid="7596">
-			<Template>units/mace_infantry_javelinist_a</Template>
+			<Template>units/mace/infantry_javelineer_a</Template>
 			<Player>1</Player>
 			<Position x="837.60651" z="331.67362"/>
 			<Orientation y="7.76081"/>
 			<Actor seed="3630"/>
 		</Entity>
 		<Entity uid="7597">
-			<Template>units/mace_infantry_javelinist_a</Template>
+			<Template>units/mace/infantry_javelineer_a</Template>
 			<Player>1</Player>
 			<Position x="837.96137" z="329.36963"/>
 			<Orientation y="7.76081"/>
 			<Actor seed="34505"/>
 		</Entity>
 		<Entity uid="7598">
-			<Template>units/mace_infantry_javelinist_a</Template>
+			<Template>units/mace/infantry_javelineer_a</Template>
 			<Player>1</Player>
 			<Position x="838.09443" z="327.20429"/>
 			<Orientation y="7.76081"/>
 			<Actor seed="63652"/>
 		</Entity>
 		<Entity uid="7599">
-			<Template>units/mace_infantry_javelinist_a</Template>
+			<Template>units/mace/infantry_javelineer_a</Template>
 			<Player>1</Player>
 			<Position x="838.28241" z="324.9827"/>
 			<Orientation y="7.76081"/>
 			<Actor seed="21539"/>
 		</Entity>
 		<Entity uid="7600">
-			<Template>units/mace_infantry_javelinist_a</Template>
+			<Template>units/mace/infantry_javelineer_a</Template>
 			<Player>1</Player>
 			<Position x="838.31965" z="322.59861"/>
 			<Orientation y="7.76081"/>
 			<Actor seed="9255"/>
 		</Entity>
 		<Entity uid="7601">
-			<Template>units/mace_infantry_javelinist_a</Template>
+			<Template>units/mace/infantry_javelineer_a</Template>
 			<Player>1</Player>
 			<Position x="840.36805" z="331.87647"/>
 			<Orientation y="7.76081"/>
 			<Actor seed="6359"/>
 		</Entity>
 		<Entity uid="7602">
-			<Template>units/mace_infantry_javelinist_a</Template>
+			<Template>units/mace/infantry_javelineer_a</Template>
 			<Player>1</Player>
 			<Position x="840.46668" z="329.68961"/>
 			<Orientation y="7.76081"/>
 			<Actor seed="39200"/>
 		</Entity>
 		<Entity uid="7603">
-			<Template>units/mace_infantry_javelinist_a</Template>
+			<Template>units/mace/infantry_javelineer_a</Template>
 			<Player>1</Player>
 			<Position x="840.23548" z="327.45759"/>
 			<Orientation y="7.76081"/>
 			<Actor seed="43967"/>
 		</Entity>
 		<Entity uid="7604">
-			<Template>units/mace_infantry_javelinist_a</Template>
+			<Template>units/mace/infantry_javelineer_a</Template>
 			<Player>1</Player>
 			<Position x="840.37653" z="324.9673"/>
 			<Orientation y="7.76081"/>
 			<Actor seed="57868"/>
 		</Entity>
 		<Entity uid="7614">
-			<Template>units/mace_cavalry_javelinist_a</Template>
+			<Template>units/mace/cavalry_javelineer_a</Template>
 			<Player>1</Player>
 			<Position x="751.969" z="380.99247"/>
 			<Orientation y="-0.46421"/>
 			<Actor seed="11818"/>
 		</Entity>
 		<Entity uid="7615">
-			<Template>units/mace_cavalry_javelinist_a</Template>
+			<Template>units/mace/cavalry_javelineer_a</Template>
 			<Player>1</Player>
 			<Position x="755.70551" z="383.68906"/>
 			<Orientation y="-0.46421"/>
 			<Actor seed="29516"/>
 		</Entity>
 		<Entity uid="7616">
-			<Template>units/mace_cavalry_javelinist_a</Template>
+			<Template>units/mace/cavalry_javelineer_a</Template>
 			<Player>1</Player>
 			<Position x="758.96735" z="386.043"/>
 			<Orientation y="-0.46421"/>
 			<Actor seed="35939"/>
 		</Entity>
 		<Entity uid="7617">
-			<Template>units/mace_cavalry_javelinist_a</Template>
+			<Template>units/mace/cavalry_javelineer_a</Template>
 			<Player>1</Player>
 			<Position x="762.29371" z="388.30951"/>
 			<Orientation y="-0.46421"/>
 			<Actor seed="11279"/>
 		</Entity>
 		<Entity uid="7618">
-			<Template>units/mace_cavalry_javelinist_a</Template>
+			<Template>units/mace/cavalry_javelineer_a</Template>
 			<Player>1</Player>
 			<Position x="765.74598" z="390.23328"/>
 			<Orientation y="-0.46421"/>
 			<Actor seed="34241"/>
 		</Entity>
 		<Entity uid="7619">
-			<Template>units/mace_infantry_javelinist_a</Template>
+			<Template>units/mace/infantry_javelineer_a</Template>
 			<Player>1</Player>
 			<Position x="840.54426" z="322.60306"/>
 			<Orientation y="7.76081"/>

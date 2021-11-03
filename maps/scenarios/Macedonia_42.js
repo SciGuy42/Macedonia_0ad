@@ -1429,33 +1429,33 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 			}
 			
 		}
-		else if (template == "units/mace_cavalry_javelinist_b" || template == "units/mace_cavalry_javelinist_a")
+		else if (template == "units/mace_cavalry_javelinist_b" || template == "units/mace/cavalry_javelineer_a")
 		{
 			template = "units/mace_cavalry_javelinist_e";
 		}
-		else if (template == "units/mace_cavalry_spearman_b" || template == "units/mace_cavalry_spearman_a")
+		else if (template == "units/mace/cavalry_spearman_b" || template == "units/mace/cavalry_spearman_a")
 		{
 			template = "units/mace_cavalry_spearman_e";
 		}
-		else if (template == "units/mace_infantry_archer_b" || template == "units/mace_infantry_archer_a")
+		else if (template == "units/mace/infantry_archer_b" || template == "units/mace/infantry_archer_a")
 		{
-			template = "units/mace_infantry_archer_e";
+			template = "units/mace/infantry_archer_e";
 		}
-		else if (template == "units/mace_infantry_javelinist_b" || template == "units/mace_infantry_javelinist_a")
+		else if (template == "units/mace/infantry_javelineer_b" || template == "units/mace/infantry_javelineer_a")
 		{
 			template = "units/mace_infantry_javelinist_e";
 		}
-		else if (template == "units/mace_infantry_pikeman_b" || template == "units/mace_infantry_pikeman_a")
+		else if (template == "units/mace/infantry_pikeman_b" || template == "units/mace/infantry_pikeman_a")
 		{
 			template = "units/mace_infantry_pikeman_e";
 		}
-		else if (template == "units/mace_infantry_slinger_b" || template == "units/mace_infantry_slinger_a")
+		else if (template == "units/mace_infantry_slinger_b" || template == "units/mace/infantry_slinger_a")
 		{
-			template = "units/mace_infantry_slinger_e";
+			template = "units/mace/infantry_slinger_e";
 		}
-		else if (template == "units/mace_champion_infantry_a")
+		else if (template == "units/mace/champion_infantry_spearman")
 		{
-			template = "units/mace_champion_infantry_e";
+			template = "units/mace/champion_infantry_spearman_02";
 		}
 		
 		
@@ -1558,7 +1558,7 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 		
 		if (p == 1)
 		{
-			disTemplates = disTemplates.concat(["units/mace_hero_alexander","units/mace_hero_craterus","units/mace_hero_philip","units/mace_hero_demetrius","units/mace_hero_pyrhus"]);
+			disTemplates = disTemplates.concat(["units/mace_hero_alexander","units/mace_hero_craterus","units/mace/hero_philip_ii","units/mace_hero_demetrius","units/mace_hero_pyrhus"]);
 		}
 			
 		cmpPlayer.SetDisabledTemplates(disTemplates);

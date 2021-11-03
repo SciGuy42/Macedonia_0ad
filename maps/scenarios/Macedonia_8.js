@@ -62,7 +62,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				//give reward to human player for killing trader
 				let ccs = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(1), "CivilCentre").filter(TriggerHelper.IsInWorld);
 				
-				TriggerHelper.SpawnUnits(pickRandom(ccs),"units/mace_support_trader",1,1);
+				TriggerHelper.SpawnUnits(pickRandom(ccs),"units/mace/support_trader",1,1);
 			}
 			else if (this.crannog_ids.indexOf(data.entity) >= 0 || data.entity == 7176 || data.entity == 7177) //if pl2 or pl4 lose a civic center
 			{

@@ -327,7 +327,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			{ 
 				//spawn siege equipment
 				let p = 1;
-				let siege = TriggerHelper.SpawnUnits(data.entity,"units/mace_mechanical_siege_lithobolos_packed",4,p);
+				let siege = TriggerHelper.SpawnUnits(data.entity,"units/mace/siege_lithobolos_packed",4,p);
 				
 				this.ShowText("This abandoned workshop was beyond repair -- but we did find a few catapults that the barbarians must have captured some time ago.","Glad to help!","Oh boy..");
 				
@@ -472,7 +472,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 			
 			
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",g_size,p);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",g_size,p);
 			
 			for (let a of archers_e)
 			{
@@ -487,7 +487,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let e of towers_s)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",3,p);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",3,p);
 			
 			for (let a of archers_e)
 			{
@@ -502,7 +502,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let e of towers_o)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",1,p);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",1,p);
 			
 			for (let a of archers_e)
 			{
@@ -530,7 +530,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 				}
 			}
 			else {
-				let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",fort_size,p);
+				let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",fort_size,p);
 				
 				for (let a of archers_e)
 				{
@@ -547,7 +547,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 			for (let e of towers_w)
 			{
 				//spawn the garrison inside the tower
-				let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",2,p);
+				let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",2,p);
 					
 				for (let a of archers_e)
 				{
@@ -562,7 +562,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of camps_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen_champion_ranged",5,p);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen/champion_ranged",5,p);
 			
 			for (let a of archers_e)
 			{
@@ -1025,7 +1025,7 @@ Trigger.prototype.ArcadianAttack = function(data)
 		else 
 		{
 			//siege
-			let units_i = TriggerHelper.SpawnUnits(spawn_site,"units/mace_mechanical_siege_lithobolos_packed",1,p);
+			let units_i = TriggerHelper.SpawnUnits(spawn_site,"units/mace/siege_lithobolos_packed",1,p);
 			attackers.push(units_i[0]);
 		}
 	}
@@ -1927,7 +1927,7 @@ Trigger.prototype.PointIncrement = function(data)
 	cmpTrigger.patrolSizeDefault = 6;
 	cmpTrigger.maxPatrolNumber = 300;
 	cmpTrigger.patrolSpawnTime = 15; //30 seconds
-	cmpTrigger.patrolTemplates = ["units/athen_champion_ranged","units/athen_black_cloak","units/athen_champion_marine","units/athen_champion_infantry","units/athen_thureophoros"];
+	cmpTrigger.patrolTemplates = ["units/athen/champion_ranged","units/athen_black_cloak","units/athen/champion_marine","units/athen_champion_infantry","units/athen_thureophoros"];
 	
 	cmpTrigger.repairTemplates = ["units/athen_infantry_spearman_a","units/athen_infantry_slinger_a","units/athen_infantry_javelinist_a"];
 	cmpTrigger.slaveTemplates = ["units/gaul_infantry_spearman_a","units/gaul_infantry_spearman_e","units/gaul_infantry_slinger_a","units/gaul_infantry_javelinist_a","units/cart_infantry_swordsman_gaul_a","units/cart_infantry_swordsman_gaul_b","units/brit_war_dog_e"];
@@ -1971,13 +1971,13 @@ Trigger.prototype.PointIncrement = function(data)
 	cmpTrigger.currentStone = 0;
 	cmpTrigger.currentMetal = 0;
 	
-	cmpTrigger.foodTemplates = ["units/athen_infantry_spearman_b","units/mace_infantry_pikeman_a","units/mace_cavalry_spearman_a","units/mace_infantry_pikeman_a","units/athen_infantry_spearman_a"];
+	cmpTrigger.foodTemplates = ["units/athen_infantry_spearman_b","units/mace/infantry_pikeman_a","units/mace/cavalry_spearman_a","units/mace/infantry_pikeman_a","units/athen_infantry_spearman_a"];
 	cmpTrigger.foodUnitPrice = 18;
-	cmpTrigger.woodTemplates = ["units/mace_infantry_javelinist_a","units/mace_cavalry_javelinist_a","units/mace_infantry_archer_b","units/mace_infantry_archer_a","units/mace_infantry_slinger_e","units/mace_infantry_slinger_a"];
+	cmpTrigger.woodTemplates = ["units/mace/infantry_javelineer_a","units/mace/cavalry_javelineer_a","units/mace/infantry_archer_b","units/mace/infantry_archer_a","units/mace/infantry_slinger_e","units/mace/infantry_slinger_a"];
 	cmpTrigger.woodUnitPrice = 25;
-	cmpTrigger.stoneTemplates = ["units/athen_mechanical_siege_oxybeles_packed","units/mace_mechanical_siege_lithobolos_packed","units/mace_mechanical_siege_ram"];
+	cmpTrigger.stoneTemplates = ["units/athen_mechanical_siege_oxybeles_packed","units/mace/siege_lithobolos_packed","units/mace/siege_ram"];
 	cmpTrigger.stoneUnitPrice = 170;
-	cmpTrigger.metalTemplates = ["units/athen_champion_ranged","units/athen_champion_marine","units/mace_champion_infantry_a","units/mace_champion_infantry_e","units/mace_champion_cavalry","units/mace_thorakites","units/mace_thureophoros"];
+	cmpTrigger.metalTemplates = ["units/athen/champion_ranged","units/athen/champion_marine","units/mace/champion_infantry_spearman","units/mace/champion_infantry_spearman_02","units/mace_champion_cavalry","units/mace_thorakites","units/mace_thureophoros"];
 	cmpTrigger.metalUnitPrice = 40;
 	
 	//healer spawn probability

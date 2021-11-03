@@ -570,7 +570,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let e of towers_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",5,p);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",5,p);
 			
 			for (let a of archers_e)
 			{
@@ -587,7 +587,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		{
 			//spawn the garrison inside the tower
 			
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",fort_size,p);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",fort_size,p);
 			
 			for (let a of archers_e)
 			{
@@ -603,7 +603,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 			for (let e of towers_w)
 			{
 				//spawn the garrison inside the tower
-				let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",2,p);
+				let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",2,p);
 					
 				for (let a of archers_e)
 				{
@@ -618,7 +618,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of camps_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen_champion_ranged",10,p);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen/champion_ranged",10,p);
 			
 			for (let a of archers_e)
 			{
@@ -814,8 +814,8 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	cmpTrigger.persAttackLevel = 15;
 	
 	
-	cmpTrigger.greekInfTypes = ["units/athen_champion_ranged","units/athen_champion_marine","units/athen_champion_marine","units/athen_champion_infantry","units/athen_champion_infantry","units/athen_champion_ranged_gastraphetes","units/thebes_sacred_band_hoplitai"];
-	cmpTrigger.greekSiegeTypes = ["units/athen_mechanical_siege_oxybeles_packed","units/athen_mechanical_siege_oxybeles_packed","units/mace_mechanical_siege_lithobolos_packed"];
+	cmpTrigger.greekInfTypes = ["units/athen/champion_ranged","units/athen/champion_marine","units/athen/champion_marine","units/athen_champion_infantry","units/athen_champion_infantry","units/athen_champion_ranged_gastraphetes","units/thebes_sacred_band_hoplitai"];
+	cmpTrigger.greekSiegeTypes = ["units/athen_mechanical_siege_oxybeles_packed","units/athen_mechanical_siege_oxybeles_packed","units/mace/siege_lithobolos_packed"];
 	cmpTrigger.spawn_ship_templates = TriggerHelper.GetTemplateNamesByClasses("Warship", "athen", undefined, undefined, true);
 
 	//whether allied inasion is under way

@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Scenario version="6">
+<Scenario version="7">
 	<Environment>
 		<SkySet>stormy</SkySet>
 		<SunColor r="0.8" g="0.8" b="0.8"/>
 		<SunElevation angle="0.5"/>
 		<SunRotation angle="3.14159"/>
-		<TerrainAmbientColor r="0.294118" g="0.294118" b="0.294118"/>
-		<UnitsAmbientColor r="0.294118" g="0.294118" b="0.294118"/>
+		<AmbientColor r="0.294118" g="0.294118" b="0.294118"/>
 		<Fog>
 			<FogFactor>0</FogFactor>
 			<FogThickness>0</FogThickness>
@@ -5715,25 +5714,25 @@
 			<Orientation y="-2.9351"/>
 		</Entity>
 		<Entity uid="1267">
-			<Template>gaia/geology_metal_mediterranean_slabs</Template>
+			<Template>gaia/ore/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="1586.4322" z="460.28925"/>
 			<Orientation y="1.2451"/>
 		</Entity>
 		<Entity uid="1268">
-			<Template>gaia/geology_metal_mediterranean_slabs</Template>
+			<Template>gaia/ore/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="657.32227" z="368.28467"/>
 			<Orientation y="-2.06868"/>
 		</Entity>
 		<Entity uid="1269">
-			<Template>gaia/geology_metal_mediterranean_slabs</Template>
+			<Template>gaia/ore/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="965.23755" z="1803.68049"/>
 			<Orientation y="-4.26256"/>
 		</Entity>
 		<Entity uid="1270">
-			<Template>gaia/geology_metal_mediterranean_slabs</Template>
+			<Template>gaia/ore/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="745.31482" z="813.17066"/>
 			<Orientation y="-2.5096"/>
@@ -28003,7 +28002,7 @@
 			<Orientation y="-2.99128"/>
 		</Entity>
 		<Entity uid="5032">
-			<Template>structures/mace_civil_centre</Template>
+			<Template>structures/mace/civil_centre</Template>
 			<Player>1</Player>
 			<Position x="788.89838" z="109.41724"/>
 			<Orientation y="-4.54918"/>
@@ -29671,70 +29670,70 @@
 			<Actor seed="22549"/>
 		</Entity>
 		<Entity uid="5274">
-			<Template>units/mace_infantry_archer_e</Template>
+			<Template>units/mace/infantry_archer_e</Template>
 			<Player>1</Player>
 			<Position x="803.92615" z="133.91736"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="19684"/>
 		</Entity>
 		<Entity uid="5275">
-			<Template>units/mace_infantry_archer_e</Template>
+			<Template>units/mace/infantry_archer_e</Template>
 			<Player>1</Player>
 			<Position x="803.92481" z="137.35792"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="47760"/>
 		</Entity>
 		<Entity uid="5276">
-			<Template>units/mace_infantry_archer_e</Template>
+			<Template>units/mace/infantry_archer_e</Template>
 			<Player>1</Player>
 			<Position x="804.67652" z="140.8202"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="1613"/>
 		</Entity>
 		<Entity uid="5277">
-			<Template>units/mace_infantry_archer_e</Template>
+			<Template>units/mace/infantry_archer_e</Template>
 			<Player>1</Player>
 			<Position x="805.52576" z="144.12412"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="47017"/>
 		</Entity>
 		<Entity uid="5278">
-			<Template>units/mace_infantry_archer_e</Template>
+			<Template>units/mace/infantry_archer_e</Template>
 			<Player>1</Player>
 			<Position x="806.45057" z="147.27161"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="48904"/>
 		</Entity>
 		<Entity uid="5279">
-			<Template>units/mace_support_female_citizen</Template>
+			<Template>units/mace/support_female_citizen</Template>
 			<Player>1</Player>
 			<Position x="811.84632" z="90.61565"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="46335"/>
 		</Entity>
 		<Entity uid="5280">
-			<Template>units/mace_support_female_citizen</Template>
+			<Template>units/mace/support_female_citizen</Template>
 			<Player>1</Player>
 			<Position x="812.85132" z="93.96943"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="2258"/>
 		</Entity>
 		<Entity uid="5281">
-			<Template>units/mace_support_female_citizen</Template>
+			<Template>units/mace/support_female_citizen</Template>
 			<Player>1</Player>
 			<Position x="813.86554" z="97.23913"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="45699"/>
 		</Entity>
 		<Entity uid="5282">
-			<Template>units/mace_support_female_citizen</Template>
+			<Template>units/mace/support_female_citizen</Template>
 			<Player>1</Player>
 			<Position x="814.84791" z="101.23194"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="16695"/>
 		</Entity>
 		<Entity uid="5283">
-			<Template>units/mace_support_female_citizen</Template>
+			<Template>units/mace/support_female_citizen</Template>
 			<Player>1</Player>
 			<Position x="815.18085" z="104.05211"/>
 			<Orientation y="2.35621"/>
@@ -30275,14 +30274,14 @@
 			<Actor seed="25624"/>
 		</Entity>
 		<Entity uid="5363">
-			<Template>structures/mace_royal_stoa</Template>
+			<Template>structures/mace/royal_stoa</Template>
 			<Player>1</Player>
 			<Position x="790.38575" z="53.61864"/>
 			<Orientation y="0.1929"/>
 			<Actor seed="13696"/>
 		</Entity>
 		<Entity uid="5364">
-			<Template>structures/mace_barracks</Template>
+			<Template>structures/mace/barracks</Template>
 			<Player>1</Player>
 			<Position x="796.75373" z="164.95813"/>
 			<Orientation y="2.88022"/>

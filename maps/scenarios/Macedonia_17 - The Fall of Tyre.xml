@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Scenario version="6">
+<Scenario version="7">
 	<Environment>
 		<SkySet>twilight</SkySet>
 		<SunColor r="0.909804" g="0.827451" b="0.729412"/>
 		<SunElevation angle="0.352816"/>
 		<SunRotation angle="-1.22105"/>
-		<TerrainAmbientColor r="0.564706" g="0.576471" b="0.54902"/>
-		<UnitsAmbientColor r="0.447059" g="0.509804" b="0.54902"/>
+		<AmbientColor r="0.447059" g="0.509804" b="0.54902"/>
 		<Fog>
 			<FogFactor>0.000986328</FogFactor>
 			<FogThickness>0.248047</FogThickness>
@@ -2800,37 +2799,37 @@
 			<Orientation y="-2.65224"/>
 		</Entity>
 		<Entity uid="2285">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1795.81763" z="643.42701"/>
 			<Orientation y="-2.26006"/>
 		</Entity>
 		<Entity uid="2286">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1803.5713" z="644.89856"/>
 			<Orientation y="-1.9624"/>
 		</Entity>
 		<Entity uid="2287">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1790.67151" z="631.80201"/>
 			<Orientation y="-0.34478"/>
 		</Entity>
 		<Entity uid="2288">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1785.04761" z="644.81849"/>
 			<Orientation y="-2.74953"/>
 		</Entity>
 		<Entity uid="2289">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1796.97742" z="632.75062"/>
 			<Orientation y="0.93699"/>
 		</Entity>
 		<Entity uid="2290">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1788.97608" z="625.06617"/>
 			<Orientation y="1.37018"/>
@@ -2848,7 +2847,7 @@
 			<Orientation y="-3.77273"/>
 		</Entity>
 		<Entity uid="2895">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="2021.03309" z="2017.46552"/>
 			<Orientation y="-4.03046"/>
@@ -5251,56 +5250,56 @@
 			<Actor seed="11602"/>
 		</Entity>
 		<Entity uid="3347">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="867.13691" z="1216.03016"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="36498"/>
 		</Entity>
 		<Entity uid="3348">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="851.37867" z="1256.2881"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="64049"/>
 		</Entity>
 		<Entity uid="3349">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="894.39649" z="1223.21766"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="32452"/>
 		</Entity>
 		<Entity uid="3350">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="887.15717" z="1203.31959"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="5677"/>
 		</Entity>
 		<Entity uid="3351">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="881.0052" z="1228.36988"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="3859"/>
 		</Entity>
 		<Entity uid="3352">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="855.89081" z="1225.69922"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="65421"/>
 		</Entity>
 		<Entity uid="3353">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="846.6576" z="1215.43995"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="7168"/>
 		</Entity>
 		<Entity uid="3354">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="846.90803" z="1237.04603"/>
 			<Orientation y="2.35621"/>
@@ -5979,28 +5978,28 @@
 			<Actor seed="45111"/>
 		</Entity>
 		<Entity uid="3452">
-			<Template>other/stall_big</Template>
+			<Template>structures/stall_big</Template>
 			<Player>2</Player>
 			<Position x="1067.86243" z="1045.47083"/>
 			<Orientation y="0.20678"/>
 			<Actor seed="59706"/>
 		</Entity>
 		<Entity uid="3453">
-			<Template>other/stall_med</Template>
+			<Template>structures/stall_med</Template>
 			<Player>2</Player>
 			<Position x="1049.17945" z="1045.85792"/>
 			<Orientation y="0.38213"/>
 			<Actor seed="52833"/>
 		</Entity>
 		<Entity uid="3454">
-			<Template>other/stall_small_a</Template>
+			<Template>structures/stall_small_a</Template>
 			<Player>2</Player>
 			<Position x="1030.85438" z="1048.54371"/>
 			<Orientation y="0.61501"/>
 			<Actor seed="32746"/>
 		</Entity>
 		<Entity uid="3455">
-			<Template>other/stall_small_b</Template>
+			<Template>structures/stall_small_b</Template>
 			<Player>2</Player>
 			<Position x="1037.88086" z="1057.67627"/>
 			<Orientation y="6.87104"/>
@@ -6014,14 +6013,14 @@
 			<Actor seed="34076"/>
 		</Entity>
 		<Entity uid="3457">
-			<Template>other/stall_med</Template>
+			<Template>structures/stall_med</Template>
 			<Player>2</Player>
 			<Position x="982.05658" z="1111.41297"/>
 			<Orientation y="0.99292"/>
 			<Actor seed="52833"/>
 		</Entity>
 		<Entity uid="3458">
-			<Template>other/stall_big</Template>
+			<Template>structures/stall_big</Template>
 			<Player>2</Player>
 			<Position x="994.04871" z="1116.9441"/>
 			<Orientation y="1.1628"/>
@@ -6189,21 +6188,21 @@
 			<Actor seed="3046"/>
 		</Entity>
 		<Entity uid="3484">
-			<Template>other/stall_small_a</Template>
+			<Template>structures/stall_small_a</Template>
 			<Player>2</Player>
 			<Position x="1012.65528" z="1061.55152"/>
 			<Orientation y="-0.37981"/>
 			<Actor seed="32746"/>
 		</Entity>
 		<Entity uid="3485">
-			<Template>other/stall_big</Template>
+			<Template>structures/stall_big</Template>
 			<Player>2</Player>
 			<Position x="976.8354" z="1075.65406"/>
 			<Orientation y="-5.16648"/>
 			<Actor seed="59706"/>
 		</Entity>
 		<Entity uid="3486">
-			<Template>other/stall_small_b</Template>
+			<Template>structures/stall_small_b</Template>
 			<Player>2</Player>
 			<Position x="990.11384" z="1059.20191"/>
 			<Orientation y="6.87104"/>
@@ -6483,28 +6482,28 @@
 			<Actor seed="37085"/>
 		</Entity>
 		<Entity uid="3526">
-			<Template>other/stall_big</Template>
+			<Template>structures/stall_big</Template>
 			<Player>2</Player>
 			<Position x="946.70185" z="806.50721"/>
 			<Orientation y="1.40944"/>
 			<Actor seed="59706"/>
 		</Entity>
 		<Entity uid="3527">
-			<Template>other/stall_med</Template>
+			<Template>structures/stall_med</Template>
 			<Player>2</Player>
 			<Position x="932.06763" z="804.58631"/>
 			<Orientation y="1.38106"/>
 			<Actor seed="52833"/>
 		</Entity>
 		<Entity uid="3530">
-			<Template>other/stall_small_a</Template>
+			<Template>structures/stall_small_a</Template>
 			<Player>2</Player>
 			<Position x="936.32874" z="784.72901"/>
 			<Orientation y="-0.09438"/>
 			<Actor seed="32746"/>
 		</Entity>
 		<Entity uid="3531">
-			<Template>other/stall_small_b</Template>
+			<Template>structures/stall_small_b</Template>
 			<Player>2</Player>
 			<Position x="950.88123" z="788.70136"/>
 			<Orientation y="5.91404"/>
@@ -6728,21 +6727,21 @@
 			<Actor seed="51040"/>
 		</Entity>
 		<Entity uid="3563">
-			<Template>other/stall_small_b</Template>
+			<Template>structures/stall_small_b</Template>
 			<Player>2</Player>
 			<Position x="1084.50171" z="444.01914"/>
 			<Orientation y="8.51351"/>
 			<Actor seed="33616"/>
 		</Entity>
 		<Entity uid="3564">
-			<Template>other/stall_big</Template>
+			<Template>structures/stall_big</Template>
 			<Player>2</Player>
 			<Position x="1158.57947" z="412.61451"/>
 			<Orientation y="-1.43915"/>
 			<Actor seed="59706"/>
 		</Entity>
 		<Entity uid="3565">
-			<Template>other/stall_small_a</Template>
+			<Template>structures/stall_small_a</Template>
 			<Player>2</Player>
 			<Position x="1081.93531" z="430.78498"/>
 			<Orientation y="1.85656"/>
@@ -6756,14 +6755,14 @@
 			<Actor seed="3732"/>
 		</Entity>
 		<Entity uid="3567">
-			<Template>other/stall_big</Template>
+			<Template>structures/stall_big</Template>
 			<Player>2</Player>
 			<Position x="1137.33814" z="410.82554"/>
 			<Orientation y="3.39916"/>
 			<Actor seed="59706"/>
 		</Entity>
 		<Entity uid="3568">
-			<Template>other/stall_med</Template>
+			<Template>structures/stall_med</Template>
 			<Player>2</Player>
 			<Position x="1139.08375" z="427.83576"/>
 			<Orientation y="3.22928"/>
@@ -8182,49 +8181,49 @@
 			<Actor seed="3732"/>
 		</Entity>
 		<Entity uid="3785">
-			<Template>gaia/flora_tree_fig</Template>
+			<Template>gaia/fruit/fig</Template>
 			<Player>0</Player>
 			<Position x="1102.03565" z="523.87873"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="31794"/>
 		</Entity>
 		<Entity uid="3786">
-			<Template>gaia/flora_tree_fig</Template>
+			<Template>gaia/fruit/fig</Template>
 			<Player>0</Player>
 			<Position x="1113.8069" z="523.8141"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="35379"/>
 		</Entity>
 		<Entity uid="3787">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>2</Player>
 			<Position x="1157.7782" z="631.26868"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="52658"/>
 		</Entity>
 		<Entity uid="3788">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>2</Player>
 			<Position x="1152.6742" z="628.97046"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="23707"/>
 		</Entity>
 		<Entity uid="3789">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>2</Player>
 			<Position x="1146.36426" z="632.61768"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="35581"/>
 		</Entity>
 		<Entity uid="3790">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>2</Player>
 			<Position x="1153.33387" z="638.34711"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="54957"/>
 		</Entity>
 		<Entity uid="3791">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>2</Player>
 			<Position x="1151.4856" z="634.24885"/>
 			<Orientation y="2.35621"/>
@@ -8273,91 +8272,91 @@
 			<Actor seed="13964"/>
 		</Entity>
 		<Entity uid="3798">
-			<Template>gaia/flora_tree_fig</Template>
+			<Template>gaia/fruit/fig</Template>
 			<Player>2</Player>
 			<Position x="1038.59351" z="620.36945"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="35408"/>
 		</Entity>
 		<Entity uid="3799">
-			<Template>gaia/flora_tree_fig</Template>
+			<Template>gaia/fruit/fig</Template>
 			<Player>2</Player>
 			<Position x="1028.82081" z="610.07624"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="49141"/>
 		</Entity>
 		<Entity uid="3800">
-			<Template>gaia/flora_tree_fig</Template>
+			<Template>gaia/fruit/fig</Template>
 			<Player>2</Player>
 			<Position x="1037.43421" z="591.46131"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="35868"/>
 		</Entity>
 		<Entity uid="3801">
-			<Template>gaia/flora_tree_fig</Template>
+			<Template>gaia/fruit/fig</Template>
 			<Player>2</Player>
 			<Position x="1051.73902" z="590.4319"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="37030"/>
 		</Entity>
 		<Entity uid="3802">
-			<Template>gaia/flora_tree_fig</Template>
+			<Template>gaia/fruit/fig</Template>
 			<Player>2</Player>
 			<Position x="1063.05457" z="600.40558"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="60895"/>
 		</Entity>
 		<Entity uid="3803">
-			<Template>gaia/flora_tree_fig</Template>
+			<Template>gaia/fruit/fig</Template>
 			<Player>2</Player>
 			<Position x="1063.76294" z="611.95386"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="7275"/>
 		</Entity>
 		<Entity uid="3804">
-			<Template>gaia/flora_tree_fig</Template>
+			<Template>gaia/fruit/fig</Template>
 			<Player>2</Player>
 			<Position x="1055.70862" z="620.16688"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="7377"/>
 		</Entity>
 		<Entity uid="3805">
-			<Template>gaia/flora_tree_fig</Template>
+			<Template>gaia/fruit/fig</Template>
 			<Player>2</Player>
 			<Position x="1044.39197" z="607.42005"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="32423"/>
 		</Entity>
 		<Entity uid="3806">
-			<Template>gaia/flora_tree_fig</Template>
+			<Template>gaia/fruit/fig</Template>
 			<Player>2</Player>
 			<Position x="1027.90674" z="598.41517"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="49026"/>
 		</Entity>
 		<Entity uid="3807">
-			<Template>gaia/flora_tree_fig</Template>
+			<Template>gaia/fruit/fig</Template>
 			<Player>2</Player>
 			<Position x="1049.76917" z="601.0033"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="60579"/>
 		</Entity>
 		<Entity uid="3808">
-			<Template>gaia/flora_tree_fig</Template>
+			<Template>gaia/fruit/fig</Template>
 			<Player>2</Player>
 			<Position x="1038.71106" z="601.38282"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="43107"/>
 		</Entity>
 		<Entity uid="3809">
-			<Template>gaia/flora_tree_fig</Template>
+			<Template>gaia/fruit/fig</Template>
 			<Player>2</Player>
 			<Position x="1039.67176" z="610.9137"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="19912"/>
 		</Entity>
 		<Entity uid="3810">
-			<Template>gaia/flora_tree_fig</Template>
+			<Template>gaia/fruit/fig</Template>
 			<Player>2</Player>
 			<Position x="1052.24915" z="610.47132"/>
 			<Orientation y="2.35621"/>
@@ -20320,357 +20319,357 @@
 			<Actor seed="11079"/>
 		</Entity>
 		<Entity uid="5523">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="927.86438" z="1065.05713"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="5628"/>
 		</Entity>
 		<Entity uid="5524">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="933.73322" z="1068.16553"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="21479"/>
 		</Entity>
 		<Entity uid="5525">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="932.0619" z="1060.8534"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="14858"/>
 		</Entity>
 		<Entity uid="5526">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1003.52875" z="1040.52198"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="8113"/>
 		</Entity>
 		<Entity uid="5527">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="998.3172" z="1038.84314"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="22600"/>
 		</Entity>
 		<Entity uid="5528">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1004.71576" z="1036.87793"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="47131"/>
 		</Entity>
 		<Entity uid="5529">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="963.33484" z="923.7552"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="8703"/>
 		</Entity>
 		<Entity uid="5530">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="955.23633" z="913.02533"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="61296"/>
 		</Entity>
 		<Entity uid="5531">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="964.2287" z="916.52088"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="27045"/>
 		</Entity>
 		<Entity uid="5532">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1058.13831" z="781.10608"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="31962"/>
 		</Entity>
 		<Entity uid="5533">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1051.86231" z="773.77741"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="16835"/>
 		</Entity>
 		<Entity uid="5534">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1062.4823" z="774.25666"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="38306"/>
 		</Entity>
 		<Entity uid="5535">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1061.15845" z="779.11213"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="3394"/>
 		</Entity>
 		<Entity uid="5536">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1029.62952" z="728.34443"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="54121"/>
 		</Entity>
 		<Entity uid="5537">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1023.83716" z="723.34803"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="5236"/>
 		</Entity>
 		<Entity uid="5538">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1028.46387" z="723.44092"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="42413"/>
 		</Entity>
 		<Entity uid="5539">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="999.56073" z="604.71467"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="32928"/>
 		</Entity>
 		<Entity uid="5540">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1001.6233" z="609.41095"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="33108"/>
 		</Entity>
 		<Entity uid="5541">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1004.44813" z="606.33106"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="65349"/>
 		</Entity>
 		<Entity uid="5542">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1084.16553" z="585.9646"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="56879"/>
 		</Entity>
 		<Entity uid="5543">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1079.85303" z="581.25672"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="34264"/>
 		</Entity>
 		<Entity uid="5544">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1085.09974" z="582.51648"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="17288"/>
 		</Entity>
 		<Entity uid="5545">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1058.95081" z="459.97516"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="15249"/>
 		</Entity>
 		<Entity uid="5546">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1054.09046" z="455.57316"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="30597"/>
 		</Entity>
 		<Entity uid="5547">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1059.35047" z="455.53205"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="39069"/>
 		</Entity>
 		<Entity uid="5548">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1215.06092" z="554.38575"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="63489"/>
 		</Entity>
 		<Entity uid="5549">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1212.52002" z="541.76148"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="23272"/>
 		</Entity>
 		<Entity uid="5550">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1208.39136" z="526.58515"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="48596"/>
 		</Entity>
 		<Entity uid="5551">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1203.33106" z="508.86881"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="11825"/>
 		</Entity>
 		<Entity uid="5552">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1197.59998" z="487.79963"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="4876"/>
 		</Entity>
 		<Entity uid="5553">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1193.37195" z="470.96842"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="32826"/>
 		</Entity>
 		<Entity uid="5554">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1200.23267" z="498.51868"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="38591"/>
 		</Entity>
 		<Entity uid="5555">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1195.81959" z="481.03275"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="38796"/>
 		</Entity>
 		<Entity uid="5556">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1192.08436" z="462.39399"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="22473"/>
 		</Entity>
 		<Entity uid="5557">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1189.96326" z="453.3956"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="49567"/>
 		</Entity>
 		<Entity uid="5558">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1208.1139" z="520.14051"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="15125"/>
 		</Entity>
 		<Entity uid="5559">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1216.90308" z="564.12262"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="55261"/>
 		</Entity>
 		<Entity uid="5560">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1119.19922" z="639.16767"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="47997"/>
 		</Entity>
 		<Entity uid="5561">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1115.01685" z="633.64393"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="45412"/>
 		</Entity>
 		<Entity uid="5562">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1121.8058" z="631.30774"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="4057"/>
 		</Entity>
 		<Entity uid="5563">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1118.06946" z="627.25092"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="34854"/>
 		</Entity>
 		<Entity uid="5564">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1221.32093" z="764.1023"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="56108"/>
 		</Entity>
 		<Entity uid="5565">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1223.68396" z="754.60676"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="2739"/>
 		</Entity>
 		<Entity uid="5566">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1224.95923" z="744.48707"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="10622"/>
 		</Entity>
 		<Entity uid="5567">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1227.11219" z="736.23542"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="16531"/>
 		</Entity>
 		<Entity uid="5568">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1229.49891" z="729.51966"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="26720"/>
 		</Entity>
 		<Entity uid="5569">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1227.31836" z="717.688"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="22095"/>
 		</Entity>
 		<Entity uid="5570">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1224.44483" z="708.23304"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="11650"/>
 		</Entity>
 		<Entity uid="5571">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1218.56959" z="696.55518"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="23868"/>
 		</Entity>
 		<Entity uid="5572">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1219.31531" z="686.94941"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="41236"/>
 		</Entity>
 		<Entity uid="5573">
-			<Template>gaia/flora_tree_cypress</Template>
+			<Template>gaia/tree/cypress</Template>
 			<Player>0</Player>
 			<Position x="1223.41858" z="697.33063"/>
 			<Orientation y="2.35621"/>
@@ -20782,105 +20781,105 @@
 			<Actor seed="62443"/>
 		</Entity>
 		<Entity uid="5593">
-			<Template>structures/mace_civil_centre</Template>
+			<Template>structures/mace/civil_centre</Template>
 			<Player>1</Player>
 			<Position x="1761.76746" z="681.86841"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="11795"/>
 		</Entity>
 		<Entity uid="5594">
-			<Template>structures/mace_house</Template>
+			<Template>structures/mace/house</Template>
 			<Player>1</Player>
 			<Position x="1801.64393" z="698.43543"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="15919"/>
 		</Entity>
 		<Entity uid="5595">
-			<Template>structures/mace_house</Template>
+			<Template>structures/mace/house</Template>
 			<Player>1</Player>
 			<Position x="1790.49122" z="709.336"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="3948"/>
 		</Entity>
 		<Entity uid="5596">
-			<Template>structures/mace_house</Template>
+			<Template>structures/mace/house</Template>
 			<Player>1</Player>
 			<Position x="1779.21045" z="720.12165"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="18872"/>
 		</Entity>
 		<Entity uid="5597">
-			<Template>structures/mace_house</Template>
+			<Template>structures/mace/house</Template>
 			<Player>1</Player>
 			<Position x="1812.69288" z="709.95203"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="55741"/>
 		</Entity>
 		<Entity uid="5598">
-			<Template>structures/mace_house</Template>
+			<Template>structures/mace/house</Template>
 			<Player>1</Player>
 			<Position x="1801.26746" z="720.91004"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="27758"/>
 		</Entity>
 		<Entity uid="5599">
-			<Template>structures/mace_house</Template>
+			<Template>structures/mace/house</Template>
 			<Player>1</Player>
 			<Position x="1788.72767" z="731.59363"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="7335"/>
 		</Entity>
 		<Entity uid="5600">
-			<Template>structures/mace_barracks</Template>
+			<Template>structures/mace/barracks</Template>
 			<Player>1</Player>
 			<Position x="1740.66382" z="720.44391"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="12057"/>
 		</Entity>
 		<Entity uid="5601">
-			<Template>structures/mace_royal_stoa</Template>
+			<Template>structures/mace/royal_stoa</Template>
 			<Player>1</Player>
 			<Position x="1716.46045" z="693.15717"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="57274"/>
 		</Entity>
 		<Entity uid="5602">
-			<Template>structures/mace_fortress</Template>
+			<Template>structures/mace/fortress</Template>
 			<Player>1</Player>
 			<Position x="1722.42237" z="653.88398"/>
 			<Orientation y="0.77416"/>
 			<Actor seed="843"/>
 		</Entity>
 		<Entity uid="5603">
-			<Template>structures/mace_range</Template>
+			<Template>structures/mace/range</Template>
 			<Player>1</Player>
 			<Position x="1757.41297" z="751.23145"/>
 			<Orientation y="-2.38431"/>
 			<Actor seed="25904"/>
 		</Entity>
 		<Entity uid="5604">
-			<Template>structures/mace_farmstead</Template>
+			<Template>structures/mace/farmstead</Template>
 			<Player>1</Player>
 			<Position x="1836.81849" z="674.48139"/>
 			<Orientation y="2.28508"/>
 			<Actor seed="52046"/>
 		</Entity>
 		<Entity uid="5605">
-			<Template>structures/mace_field</Template>
+			<Template>structures/mace/field</Template>
 			<Player>1</Player>
 			<Position x="1852.87879" z="657.58625"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="62696"/>
 		</Entity>
 		<Entity uid="5606">
-			<Template>structures/mace_field</Template>
+			<Template>structures/mace/field</Template>
 			<Player>1</Player>
 			<Position x="1868.26954" z="682.91681"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="58945"/>
 		</Entity>
 		<Entity uid="5607">
-			<Template>structures/mace_field</Template>
+			<Template>structures/mace/field</Template>
 			<Player>1</Player>
 			<Position x="1845.6792" z="700.4021"/>
 			<Orientation y="2.35621"/>
@@ -20922,175 +20921,175 @@
 			<Actor seed="56762"/>
 		</Entity>
 		<Entity uid="5614">
-			<Template>units/mace_infantry_archer_b</Template>
+			<Template>units/mace/infantry_archer_b</Template>
 			<Player>1</Player>
 			<Position x="1765.18934" z="653.48816"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="15341"/>
 		</Entity>
 		<Entity uid="5615">
-			<Template>units/mace_infantry_archer_b</Template>
+			<Template>units/mace/infantry_archer_b</Template>
 			<Player>1</Player>
 			<Position x="1763.54358" z="652.10303"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="13437"/>
 		</Entity>
 		<Entity uid="5616">
-			<Template>units/mace_infantry_archer_b</Template>
+			<Template>units/mace/infantry_archer_b</Template>
 			<Player>1</Player>
 			<Position x="1761.93055" z="650.63776"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="38752"/>
 		</Entity>
 		<Entity uid="5617">
-			<Template>units/mace_infantry_archer_b</Template>
+			<Template>units/mace/infantry_archer_b</Template>
 			<Player>1</Player>
 			<Position x="1760.60181" z="648.9372"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="27995"/>
 		</Entity>
 		<Entity uid="5618">
-			<Template>units/mace_infantry_archer_b</Template>
+			<Template>units/mace/infantry_archer_b</Template>
 			<Player>1</Player>
 			<Position x="1758.55994" z="647.45368"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="28235"/>
 		</Entity>
 		<Entity uid="5619">
-			<Template>units/mace_infantry_javelinist_b</Template>
+			<Template>units/mace/infantry_javelineer_b</Template>
 			<Player>1</Player>
 			<Position x="1761.97913" z="643.87128"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="60978"/>
 		</Entity>
 		<Entity uid="5620">
-			<Template>units/mace_infantry_javelinist_b</Template>
+			<Template>units/mace/infantry_javelineer_b</Template>
 			<Player>1</Player>
 			<Position x="1763.65015" z="645.38526"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="50601"/>
 		</Entity>
 		<Entity uid="5621">
-			<Template>units/mace_infantry_javelinist_b</Template>
+			<Template>units/mace/infantry_javelineer_b</Template>
 			<Player>1</Player>
 			<Position x="1764.93812" z="646.85376"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="37020"/>
 		</Entity>
 		<Entity uid="5622">
-			<Template>units/mace_infantry_javelinist_b</Template>
+			<Template>units/mace/infantry_javelineer_b</Template>
 			<Player>1</Player>
 			<Position x="1766.39527" z="648.20972"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="12287"/>
 		</Entity>
 		<Entity uid="5623">
-			<Template>units/mace_infantry_javelinist_b</Template>
+			<Template>units/mace/infantry_javelineer_b</Template>
 			<Player>1</Player>
 			<Position x="1768.05799" z="650.10322"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="32801"/>
 		</Entity>
 		<Entity uid="5624">
-			<Template>units/mace_infantry_pikeman_b</Template>
+			<Template>units/mace/infantry_pikeman_b</Template>
 			<Player>1</Player>
 			<Position x="1765.24585" z="640.77729"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="60415"/>
 		</Entity>
 		<Entity uid="5625">
-			<Template>units/mace_infantry_pikeman_b</Template>
+			<Template>units/mace/infantry_pikeman_b</Template>
 			<Player>1</Player>
 			<Position x="1766.66358" z="642.12824"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="36165"/>
 		</Entity>
 		<Entity uid="5626">
-			<Template>units/mace_infantry_pikeman_b</Template>
+			<Template>units/mace/infantry_pikeman_b</Template>
 			<Player>1</Player>
 			<Position x="1767.92408" z="643.61414"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="47119"/>
 		</Entity>
 		<Entity uid="5627">
-			<Template>units/mace_infantry_pikeman_b</Template>
+			<Template>units/mace/infantry_pikeman_b</Template>
 			<Player>1</Player>
 			<Position x="1769.14942" z="644.8866"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="10738"/>
 		</Entity>
 		<Entity uid="5628">
-			<Template>units/mace_infantry_pikeman_b</Template>
+			<Template>units/mace/infantry_pikeman_b</Template>
 			<Player>1</Player>
 			<Position x="1770.53663" z="646.19636"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="60744"/>
 		</Entity>
 		<Entity uid="5629">
-			<Template>units/mace_support_female_citizen</Template>
+			<Template>units/mace/support_female_citizen</Template>
 			<Player>1</Player>
 			<Position x="1824.15967" z="682.10914"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="16542"/>
 		</Entity>
 		<Entity uid="5630">
-			<Template>units/mace_support_female_citizen</Template>
+			<Template>units/mace/support_female_citizen</Template>
 			<Player>1</Player>
 			<Position x="1822.55738" z="678.87531"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="7106"/>
 		</Entity>
 		<Entity uid="5631">
-			<Template>units/mace_support_female_citizen</Template>
+			<Template>units/mace/support_female_citizen</Template>
 			<Player>1</Player>
 			<Position x="1821.2693" z="675.64832"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="56037"/>
 		</Entity>
 		<Entity uid="5632">
-			<Template>units/mace_support_female_citizen</Template>
+			<Template>units/mace/support_female_citizen</Template>
 			<Player>1</Player>
 			<Position x="1820.85474" z="671.73914"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="1974"/>
 		</Entity>
 		<Entity uid="5633">
-			<Template>units/mace_support_female_citizen</Template>
+			<Template>units/mace/support_female_citizen</Template>
 			<Player>1</Player>
 			<Position x="1817.73023" z="672.99024"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="62522"/>
 		</Entity>
 		<Entity uid="5634">
-			<Template>units/mace_support_female_citizen</Template>
+			<Template>units/mace/support_female_citizen</Template>
 			<Player>1</Player>
 			<Position x="1817.85474" z="677.85895"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="60061"/>
 		</Entity>
 		<Entity uid="5635">
-			<Template>units/mace_support_female_citizen</Template>
+			<Template>units/mace/support_female_citizen</Template>
 			<Player>1</Player>
 			<Position x="1818.72889" z="681.29969"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="8047"/>
 		</Entity>
 		<Entity uid="5636">
-			<Template>units/mace_support_female_citizen</Template>
+			<Template>units/mace/support_female_citizen</Template>
 			<Player>1</Player>
 			<Position x="1820.14551" z="684.41858"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="37501"/>
 		</Entity>
 		<Entity uid="5637">
-			<Template>units/mace_support_female_citizen</Template>
+			<Template>units/mace/support_female_citizen</Template>
 			<Player>1</Player>
 			<Position x="1816.64417" z="670.32764"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="38331"/>
 		</Entity>
 		<Entity uid="5638">
-			<Template>units/mace_support_female_citizen</Template>
+			<Template>units/mace/support_female_citizen</Template>
 			<Player>1</Player>
 			<Position x="1819.67603" z="669.28333"/>
 			<Orientation y="2.35621"/>
@@ -21118,21 +21117,21 @@
 			<Actor seed="28112"/>
 		</Entity>
 		<Entity uid="5643">
-			<Template>units/mace_support_trader</Template>
+			<Template>units/mace/support_trader</Template>
 			<Player>1</Player>
 			<Position x="1658.28931" z="601.37678"/>
 			<Orientation y="0.89707"/>
 			<Actor seed="51748"/>
 		</Entity>
 		<Entity uid="5644">
-			<Template>units/mace_support_trader</Template>
+			<Template>units/mace/support_trader</Template>
 			<Player>1</Player>
 			<Position x="1649.45044" z="608.57343"/>
 			<Orientation y="0.19956"/>
 			<Actor seed="27535"/>
 		</Entity>
 		<Entity uid="5645">
-			<Template>units/mace_support_trader</Template>
+			<Template>units/mace/support_trader</Template>
 			<Player>1</Player>
 			<Position x="1638.42188" z="610.61713"/>
 			<Orientation y="0.46805"/>

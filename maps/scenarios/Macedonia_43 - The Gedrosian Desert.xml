@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Scenario version="6">
+<Scenario version="7">
 	<Environment>
 		<SkySet>cumulus</SkySet>
 		<SunColor r="0.729412" g="0.737255" b="0.564706"/>
 		<SunElevation angle="0.502655"/>
 		<SunRotation angle="-3.14159"/>
-		<TerrainAmbientColor r="0.513726" g="0.47451" b="0.321569"/>
-		<UnitsAmbientColor r="0.564706" g="0.576471" b="0.54902"/>
+		<AmbientColor r="0.564706" g="0.576471" b="0.54902"/>
 		<Fog>
 			<FogFactor>0</FogFactor>
 			<FogThickness>0</FogThickness>
@@ -11231,14 +11230,14 @@
 			<Actor seed="52653"/>
 		</Entity>
 		<Entity uid="2481">
-			<Template>structures/mace_outpost</Template>
+			<Template>structures/mace/outpost</Template>
 			<Player>3</Player>
 			<Position x="1700.56983" z="1747.19788"/>
 			<Orientation y="0.47674"/>
 			<Actor seed="42476"/>
 		</Entity>
 		<Entity uid="2482">
-			<Template>structures/mace_outpost</Template>
+			<Template>structures/mace/outpost</Template>
 			<Player>3</Player>
 			<Position x="1727.08851" z="1725.23719"/>
 			<Orientation y="0.58465"/>
@@ -11371,70 +11370,70 @@
 			<Actor seed="6753"/>
 		</Entity>
 		<Entity uid="2501">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="596.52271" z="185.82966"/>
 			<Orientation y="0.14611"/>
 			<Actor seed="64751"/>
 		</Entity>
 		<Entity uid="2502">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="594.59345" z="186.43186"/>
 			<Orientation y="0.14611"/>
 			<Actor seed="638"/>
 		</Entity>
 		<Entity uid="2503">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="592.66272" z="187.04096"/>
 			<Orientation y="0.14611"/>
 			<Actor seed="42425"/>
 		</Entity>
 		<Entity uid="2504">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="590.79084" z="187.68857"/>
 			<Orientation y="0.14611"/>
 			<Actor seed="57756"/>
 		</Entity>
 		<Entity uid="2505">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="588.83088" z="188.12256"/>
 			<Orientation y="0.14611"/>
 			<Actor seed="52061"/>
 		</Entity>
 		<Entity uid="2506">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="600.19111" z="184.54502"/>
 			<Orientation y="0.14611"/>
 			<Actor seed="53398"/>
 		</Entity>
 		<Entity uid="2507">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="602.11915" z="184.23246"/>
 			<Orientation y="0.14611"/>
 			<Actor seed="37547"/>
 		</Entity>
 		<Entity uid="2508">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="603.78602" z="183.85471"/>
 			<Orientation y="0.14611"/>
 			<Actor seed="11952"/>
 		</Entity>
 		<Entity uid="2509">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="605.68665" z="183.05436"/>
 			<Orientation y="0.14611"/>
 			<Actor seed="44393"/>
 		</Entity>
 		<Entity uid="2510">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="607.52863" z="182.34449"/>
 			<Orientation y="0.14611"/>
@@ -11483,42 +11482,42 @@
 			<Actor seed="9430"/>
 		</Entity>
 		<Entity uid="2517">
-			<Template>units/athen_champion_ranged</Template>
+			<Template>units/athen/champion_ranged</Template>
 			<Player>1</Player>
 			<Position x="590.4214" z="178.19239"/>
 			<Orientation y="0.35213"/>
 			<Actor seed="20942"/>
 		</Entity>
 		<Entity uid="2518">
-			<Template>units/athen_champion_ranged</Template>
+			<Template>units/athen/champion_ranged</Template>
 			<Player>1</Player>
 			<Position x="592.62037" z="177.5756"/>
 			<Orientation y="0.35213"/>
 			<Actor seed="41142"/>
 		</Entity>
 		<Entity uid="2519">
-			<Template>units/athen_champion_ranged</Template>
+			<Template>units/athen/champion_ranged</Template>
 			<Player>1</Player>
 			<Position x="595.15662" z="177.08863"/>
 			<Orientation y="0.35213"/>
 			<Actor seed="32589"/>
 		</Entity>
 		<Entity uid="2520">
-			<Template>units/athen_champion_ranged</Template>
+			<Template>units/athen/champion_ranged</Template>
 			<Player>1</Player>
 			<Position x="597.63727" z="176.35401"/>
 			<Orientation y="0.35213"/>
 			<Actor seed="23820"/>
 		</Entity>
 		<Entity uid="2521">
-			<Template>units/athen_champion_ranged</Template>
+			<Template>units/athen/champion_ranged</Template>
 			<Player>1</Player>
 			<Position x="599.7425" z="175.50126"/>
 			<Orientation y="0.35213"/>
 			<Actor seed="42861"/>
 		</Entity>
 		<Entity uid="2522">
-			<Template>units/athen_champion_ranged</Template>
+			<Template>units/athen/champion_ranged</Template>
 			<Player>1</Player>
 			<Position x="601.78193" z="174.78891"/>
 			<Orientation y="0.35213"/>
@@ -12062,14 +12061,14 @@
 			<Actor seed="23249"/>
 		</Entity>
 		<Entity uid="2671">
-			<Template>other/stall_med</Template>
+			<Template>structures/stall_med</Template>
 			<Player>4</Player>
 			<Position x="1135.71045" z="551.77204"/>
 			<Orientation y="5.74604"/>
 			<Actor seed="51256"/>
 		</Entity>
 		<Entity uid="2672">
-			<Template>other/stall_big</Template>
+			<Template>structures/stall_big</Template>
 			<Player>4</Player>
 			<Position x="1130.27247" z="568.93293"/>
 			<Orientation y="2.6865"/>
@@ -12167,77 +12166,77 @@
 			<Actor seed="10694"/>
 		</Entity>
 		<Entity uid="2695">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="91.14394" z="722.45746"/>
 			<Orientation y="0.91041"/>
 			<Actor seed="28933"/>
 		</Entity>
 		<Entity uid="2696">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="79.53647" z="736.46094"/>
 			<Orientation y="1.35105"/>
 			<Actor seed="25049"/>
 		</Entity>
 		<Entity uid="2697">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="71.50773" z="752.82874"/>
 			<Orientation y="1.45047"/>
 			<Actor seed="32989"/>
 		</Entity>
 		<Entity uid="2698">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="143.55906" z="790.77833"/>
 			<Orientation y="-2.36957"/>
 			<Actor seed="8307"/>
 		</Entity>
 		<Entity uid="2699">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="134.73121" z="803.34833"/>
 			<Orientation y="-2.46735"/>
 			<Actor seed="52009"/>
 		</Entity>
 		<Entity uid="2700">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="128.21857" z="819.35834"/>
 			<Orientation y="-2.22428"/>
 			<Actor seed="26624"/>
 		</Entity>
 		<Entity uid="2701">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="68.51958" z="771.49048"/>
 			<Orientation y="1.28902"/>
 			<Actor seed="65248"/>
 		</Entity>
 		<Entity uid="2702">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="141.41684" z="712.27619"/>
 			<Orientation y="2.31313"/>
 			<Actor seed="56387"/>
 		</Entity>
 		<Entity uid="2703">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="153.14954" z="695.85297"/>
 			<Orientation y="-0.46607"/>
 			<Actor seed="54433"/>
 		</Entity>
 		<Entity uid="2704">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="165.53748" z="708.23188"/>
 			<Orientation y="-1.56887"/>
 			<Actor seed="60713"/>
 		</Entity>
 		<Entity uid="2705">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="156.04618" z="724.72461"/>
 			<Orientation y="3.12548"/>
@@ -12265,25 +12264,25 @@
 			<Actor seed="27202"/>
 		</Entity>
 		<Entity uid="2710">
-			<Template>other/palisades_rocks_long</Template>
+			<Template>structures/palisades_long</Template>
 			<Player>5</Player>
 			<Position x="58.52372" z="915.11353"/>
 			<Orientation y="-0.3329"/>
 		</Entity>
 		<Entity uid="2711">
-			<Template>other/palisades_rocks_long</Template>
+			<Template>structures/palisades_long</Template>
 			<Player>5</Player>
 			<Position x="63.17681" z="923.91877"/>
 			<Orientation y="-1.8493"/>
 		</Entity>
 		<Entity uid="2712">
-			<Template>other/palisades_rocks_long</Template>
+			<Template>structures/palisades_long</Template>
 			<Player>5</Player>
 			<Position x="49.85112" z="919.87146"/>
 			<Orientation y="1.3175"/>
 		</Entity>
 		<Entity uid="2713">
-			<Template>other/palisades_rocks_long</Template>
+			<Template>structures/palisades_long</Template>
 			<Player>5</Player>
 			<Position x="54.72455" z="928.55671"/>
 			<Orientation y="2.8339"/>
@@ -12527,35 +12526,35 @@
 			<Actor seed="12019"/>
 		</Entity>
 		<Entity uid="2771">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="152.33075" z="779.11438"/>
 			<Orientation y="-2.82227"/>
 			<Actor seed="18637"/>
 		</Entity>
 		<Entity uid="2772">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="165.3072" z="777.58497"/>
 			<Orientation y="3.09411"/>
 			<Actor seed="7078"/>
 		</Entity>
 		<Entity uid="2773">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="133.6125" z="835.51282"/>
 			<Orientation y="-1.37923"/>
 			<Actor seed="45103"/>
 		</Entity>
 		<Entity uid="2774">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="89.05164" z="683.96473"/>
 			<Orientation y="0.71486"/>
 			<Actor seed="2041"/>
 		</Entity>
 		<Entity uid="2775">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="99.83445" z="674.9632"/>
 			<Orientation y="0.55056"/>
@@ -12611,42 +12610,42 @@
 			<Actor seed="25297"/>
 		</Entity>
 		<Entity uid="2786">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="141.04554" z="682.35651"/>
 			<Orientation y="0.31095"/>
 			<Actor seed="54433"/>
 		</Entity>
 		<Entity uid="2787">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="129.2938" z="697.63514"/>
 			<Orientation y="1.30727"/>
 			<Actor seed="56387"/>
 		</Entity>
 		<Entity uid="2788">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="174.83008" z="745.73127"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="63144"/>
 		</Entity>
 		<Entity uid="2789">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="184.5448" z="754.4253"/>
 			<Orientation y="2.408"/>
 			<Actor seed="15213"/>
 		</Entity>
 		<Entity uid="2790">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="195.74436" z="760.41095"/>
 			<Orientation y="2.83637"/>
 			<Actor seed="48359"/>
 		</Entity>
 		<Entity uid="2791">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="209.30744" z="764.73212"/>
 			<Orientation y="-2.98644"/>
@@ -12744,14 +12743,14 @@
 			<Actor seed="25574"/>
 		</Entity>
 		<Entity uid="2822">
-			<Template>units/athen_champion_ranged</Template>
+			<Template>units/athen/champion_ranged</Template>
 			<Player>1</Player>
 			<Position x="605.71735" z="173.83378"/>
 			<Orientation y="0.35213"/>
 			<Actor seed="31329"/>
 		</Entity>
 		<Entity uid="2823">
-			<Template>units/athen_champion_ranged</Template>
+			<Template>units/athen/champion_ranged</Template>
 			<Player>1</Player>
 			<Position x="603.67792" z="174.54615"/>
 			<Orientation y="0.35213"/>
@@ -12772,14 +12771,14 @@
 			<Actor seed="12778"/>
 		</Entity>
 		<Entity uid="2826">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="609.46491" z="181.83979"/>
 			<Orientation y="0.14612"/>
 			<Actor seed="22387"/>
 		</Entity>
 		<Entity uid="2827">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="598.45899" z="185.32493"/>
 			<Orientation y="0.14612"/>

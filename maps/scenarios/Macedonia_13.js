@@ -416,7 +416,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let e of towers_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",5,p);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",5,p);
 			
 			for (let a of archers_e)
 			{
@@ -435,7 +435,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		{
 			//spawn the garrison inside the tower
 			
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",fort_size,p);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",fort_size,p);
 			
 			for (let a of archers_e)
 			{
@@ -449,7 +449,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let e of towers_w)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",2,p);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",2,p);
 				
 			for (let a of archers_e)
 			{
@@ -467,10 +467,10 @@ Trigger.prototype.GarrisonEntities = function(data)
 			for (let ship of ships_p)
 			{
 				//spawn the garrison inside the ship
-				TriggerHelper.SpawnGarrisonedUnits(ship, "units/mace_infantry_archer_e",5,p);
+				TriggerHelper.SpawnGarrisonedUnits(ship, "units/mace/infantry_archer_e",5,p);
 				
 				//spawn the garrison inside the ship
-				TriggerHelper.SpawnGarrisonedUnits(ship, "units/mace_champion_infantry_a",5,p);
+				TriggerHelper.SpawnGarrisonedUnits(ship, "units/mace/champion_infantry_spearman",5,p);
 			}
 		}*/
 		
@@ -920,11 +920,11 @@ Trigger.prototype.RangeActionArrival = function(data)
 		cmpOwnership.SetOwner(1);
 		
 		//spawn some units
-		TriggerHelper.SpawnUnits(camps_p[0],"units/mace_champion_infantry_e",10,1);
-		TriggerHelper.SpawnUnits(camps_p[0],"units/athen_champion_ranged",10,1);
-		TriggerHelper.SpawnUnits(forts_p[0],"units/athen_champion_ranged",10,1);
-		TriggerHelper.SpawnUnits(markets_p[0],"units/mace_support_trader",5,1);
-		TriggerHelper.SpawnUnits(markets_p[1],"units/mace_support_trader",5,3);
+		TriggerHelper.SpawnUnits(camps_p[0],"units/mace/champion_infantry_spearman_02",10,1);
+		TriggerHelper.SpawnUnits(camps_p[0],"units/athen/champion_ranged",10,1);
+		TriggerHelper.SpawnUnits(forts_p[0],"units/athen/champion_ranged",10,1);
+		TriggerHelper.SpawnUnits(markets_p[0],"units/mace/support_trader",5,1);
+		TriggerHelper.SpawnUnits(markets_p[1],"units/mace/support_trader",5,3);
 		
 		//start persian attacks
 		this.DoAfterDelay(4 * 60 * 1000,"DockPersianAttackRepeats",null);

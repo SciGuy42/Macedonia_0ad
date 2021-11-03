@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Scenario version="6">
+<Scenario version="7">
 	<Environment>
 		<SkySet>default</SkySet>
 		<SunColor r="0.74902" g="0.74902" b="0.74902"/>
 		<SunElevation angle="0.785398"/>
 		<SunRotation angle="-0.785396"/>
-		<TerrainAmbientColor r="0.501961" g="0.501961" b="0.501961"/>
-		<UnitsAmbientColor r="0.501961" g="0.501961" b="0.501961"/>
+		<AmbientColor r="0.501961" g="0.501961" b="0.501961"/>
 		<Fog>
 			<FogFactor>0.002</FogFactor>
 			<FogThickness>0.1</FogThickness>
@@ -77,49 +76,49 @@
 ]]></ScriptSettings>
 	<Entities>
 		<Entity uid="160">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="309.93" z="396.3133"/>
 			<Orientation y="0.92574"/>
 		</Entity>
 		<Entity uid="161">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="308.69111" z="384.19745"/>
 			<Orientation y="-4.12871"/>
 		</Entity>
 		<Entity uid="162">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="309.55542" z="397.51801"/>
 			<Orientation y="-4.64533"/>
 		</Entity>
 		<Entity uid="164">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="310.29133" z="397.97858"/>
 			<Orientation y="-4.07609"/>
 		</Entity>
 		<Entity uid="169">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="381.22004" z="445.1006"/>
 			<Orientation y="1.39031"/>
 		</Entity>
 		<Entity uid="170">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="386.88624" z="439.30982"/>
 			<Orientation y="-0.3802"/>
 		</Entity>
 		<Entity uid="172">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="383.54072" z="449.12946"/>
 			<Orientation y="-1.63567"/>
 		</Entity>
 		<Entity uid="173">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="394.9803" z="443.44507"/>
 			<Orientation y="-1.18638"/>
@@ -201,169 +200,169 @@
 			<Orientation y="-3.04773"/>
 		</Entity>
 		<Entity uid="232">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="479.33088" z="174.78919"/>
 			<Orientation y="4.1832"/>
 		</Entity>
 		<Entity uid="233">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="456.68561" z="180.71839"/>
 			<Orientation y="0.54891"/>
 		</Entity>
 		<Entity uid="234">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="449.05451" z="263.26825"/>
 			<Orientation y="6.43944"/>
 		</Entity>
 		<Entity uid="235">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="445.63178" z="261.19843"/>
 			<Orientation y="6.65777"/>
 		</Entity>
 		<Entity uid="236">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="118" z="302"/>
 			<Orientation y="1.61327"/>
 		</Entity>
 		<Entity uid="237">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="118" z="310"/>
 			<Orientation y="0.51568"/>
 		</Entity>
 		<Entity uid="238">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="274" z="390"/>
 			<Orientation y="5.26217"/>
 		</Entity>
 		<Entity uid="239">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="270" z="394"/>
 			<Orientation y="0.96624"/>
 		</Entity>
 		<Entity uid="240">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="282" z="390"/>
 			<Orientation y="2.76487"/>
 		</Entity>
 		<Entity uid="241">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="282" z="402"/>
 			<Orientation y="2.26063"/>
 		</Entity>
 		<Entity uid="242">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="270" z="402"/>
 			<Orientation y="6.20621"/>
 		</Entity>
 		<Entity uid="243">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="478" z="338"/>
 			<Orientation y="5.16913"/>
 		</Entity>
 		<Entity uid="244">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="136.26056" z="322.91153"/>
 			<Orientation y="1.92125"/>
 		</Entity>
 		<Entity uid="245">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="136.26056" z="330.91147"/>
 			<Orientation y="3.18113"/>
 		</Entity>
 		<Entity uid="246">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="140.26053" z="326.91153"/>
 			<Orientation y="1.11207"/>
 		</Entity>
 		<Entity uid="247">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="422" z="86"/>
 			<Orientation y="0.84467"/>
 		</Entity>
 		<Entity uid="248">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="322.12372" z="319.49762"/>
 			<Orientation y="4.42835"/>
 		</Entity>
 		<Entity uid="249">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="322" z="294"/>
 			<Orientation y="3.00673"/>
 		</Entity>
 		<Entity uid="250">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="326.30988" z="324.69703"/>
 			<Orientation y="1.91245"/>
 		</Entity>
 		<Entity uid="251">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="321.9897" z="311.22541"/>
 			<Orientation y="4.23607"/>
 		</Entity>
 		<Entity uid="252">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="26" z="218"/>
 			<Orientation y="4.21415"/>
 		</Entity>
 		<Entity uid="253">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="162" z="386"/>
 			<Orientation y="5.44903"/>
 		</Entity>
 		<Entity uid="254">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="166" z="386"/>
 			<Orientation y="0.1881"/>
 		</Entity>
 		<Entity uid="255">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="174" z="394"/>
 			<Orientation y="5.98494"/>
 		</Entity>
 		<Entity uid="256">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="56.84261" z="247.9293"/>
 			<Orientation y="2.14553"/>
 		</Entity>
 		<Entity uid="257">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="78.5228" z="199.87223"/>
 			<Orientation y="1.25635"/>
 		</Entity>
 		<Entity uid="258">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="87.41657" z="212.24808"/>
 			<Orientation y="4.6459"/>
 		</Entity>
 		<Entity uid="259">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="97.42933" z="294.68775"/>
 			<Orientation y="2.26912"/>
@@ -837,31 +836,31 @@
 			<Orientation y="-3.35157"/>
 		</Entity>
 		<Entity uid="352">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="114.7209" z="363.76496"/>
 			<Orientation y="-1.02665"/>
 		</Entity>
 		<Entity uid="353">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="110.07642" z="368.93091"/>
 			<Orientation y="0.0651"/>
 		</Entity>
 		<Entity uid="354">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="120.10645" z="356.65973"/>
 			<Orientation y="0.16967"/>
 		</Entity>
 		<Entity uid="355">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="127.54853" z="352.10401"/>
 			<Orientation y="-2.55883"/>
 		</Entity>
 		<Entity uid="356">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="118.32636" z="365.74347"/>
 			<Orientation y="0.57438"/>
@@ -1047,163 +1046,163 @@
 			<Orientation y="-3.70905"/>
 		</Entity>
 		<Entity uid="390">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="229.56928" z="439.13068"/>
 			<Orientation y="-4.09536"/>
 		</Entity>
 		<Entity uid="392">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="209.29502" z="15.60782"/>
 			<Orientation y="0.51449"/>
 		</Entity>
 		<Entity uid="393">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="442.31385" z="318.94843"/>
 			<Orientation y="-1.52121"/>
 		</Entity>
 		<Entity uid="394">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="63.41742" z="281.3625"/>
 			<Orientation y="-0.10814"/>
 		</Entity>
 		<Entity uid="395">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="394.46952" z="216.4532"/>
 			<Orientation y="-0.24701"/>
 		</Entity>
 		<Entity uid="396">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="454.45398" z="298.94184"/>
 			<Orientation y="-3.99914"/>
 		</Entity>
 		<Entity uid="397">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="424.11048" z="207.26542"/>
 			<Orientation y="-1.58256"/>
 		</Entity>
 		<Entity uid="398">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="332.1807" z="327.36786"/>
 			<Orientation y="1.36571"/>
 		</Entity>
 		<Entity uid="399">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="279.51142" z="464.51075"/>
 			<Orientation y="-4.45562"/>
 		</Entity>
 		<Entity uid="401">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="31.45771" z="198.41794"/>
 			<Orientation y="-1.53354"/>
 		</Entity>
 		<Entity uid="402">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="185.33783" z="317.18073"/>
 			<Orientation y="0.27912"/>
 		</Entity>
 		<Entity uid="403">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="180.85157" z="458.27784"/>
 			<Orientation y="0.26525"/>
 		</Entity>
 		<Entity uid="404">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="100.71485" z="364.45014"/>
 			<Orientation y="-2.60112"/>
 		</Entity>
 		<Entity uid="405">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="374.34583" z="282.84736"/>
 			<Orientation y="1.12247"/>
 		</Entity>
 		<Entity uid="406">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="181.27985" z="405.8108"/>
 			<Orientation y="-4.68004"/>
 		</Entity>
 		<Entity uid="408">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="416.80262" z="214.32697"/>
 			<Orientation y="-3.32496"/>
 		</Entity>
 		<Entity uid="410">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="56.58645" z="192.7764"/>
 			<Orientation y="-0.32674"/>
 		</Entity>
 		<Entity uid="411">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="100.24982" z="223.21314"/>
 			<Orientation y="-1.04989"/>
 		</Entity>
 		<Entity uid="412">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="409.6515" z="253.4455"/>
 			<Orientation y="-0.29897"/>
 		</Entity>
 		<Entity uid="413">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="146.35328" z="370.22529"/>
 			<Orientation y="-3.92869"/>
 		</Entity>
 		<Entity uid="414">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="135.28241" z="277.41846"/>
 			<Orientation y="-1.09566"/>
 		</Entity>
 		<Entity uid="415">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="228.20231" z="20.41843"/>
 			<Orientation y="1.22841"/>
 		</Entity>
 		<Entity uid="416">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="196.51661" z="344.8125"/>
 			<Orientation y="-1.38665"/>
 		</Entity>
 		<Entity uid="417">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="234.11286" z="273.15119"/>
 			<Orientation y="-1.68789"/>
 		</Entity>
 		<Entity uid="418">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="110.5561" z="435.24897"/>
 			<Orientation y="-1.02634"/>
 		</Entity>
 		<Entity uid="420">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="181.79645" z="392.09192"/>
 			<Orientation y="-1.45557"/>
 		</Entity>
 		<Entity uid="421">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="341.54053" z="36.96131"/>
 			<Orientation y="-2.21528"/>
@@ -2043,77 +2042,77 @@
 			<Actor seed="60306"/>
 		</Entity>
 		<Entity uid="544">
-			<Template>units/mace_infantry_slinger_e</Template>
+			<Template>units/mace/infantry_slinger_e</Template>
 			<Player>1</Player>
 			<Position x="333.95777" z="112.69054"/>
 			<Orientation y="5.60723"/>
 			<Actor seed="15766"/>
 		</Entity>
 		<Entity uid="545">
-			<Template>units/mace_infantry_slinger_e</Template>
+			<Template>units/mace/infantry_slinger_e</Template>
 			<Player>1</Player>
 			<Position x="326.39588" z="107.19024"/>
 			<Orientation y="5.60723"/>
 			<Actor seed="47290"/>
 		</Entity>
 		<Entity uid="546">
-			<Template>units/mace_infantry_slinger_e</Template>
+			<Template>units/mace/infantry_slinger_e</Template>
 			<Player>1</Player>
 			<Position x="319.23383" z="102.55956"/>
 			<Orientation y="5.60723"/>
 			<Actor seed="29496"/>
 		</Entity>
 		<Entity uid="547">
-			<Template>units/mace_infantry_slinger_e</Template>
+			<Template>units/mace/infantry_slinger_e</Template>
 			<Player>1</Player>
 			<Position x="312.3744" z="96.1837"/>
 			<Orientation y="5.60723"/>
 			<Actor seed="64292"/>
 		</Entity>
 		<Entity uid="548">
-			<Template>units/mace_infantry_slinger_e</Template>
+			<Template>units/mace/infantry_slinger_e</Template>
 			<Player>1</Player>
 			<Position x="286.0124" z="75.54955"/>
 			<Orientation y="5.60724"/>
 			<Actor seed="64292"/>
 		</Entity>
 		<Entity uid="549">
-			<Template>units/mace_infantry_slinger_e</Template>
+			<Template>units/mace/infantry_slinger_e</Template>
 			<Player>1</Player>
 			<Position x="292.84305" z="81.59917"/>
 			<Orientation y="5.60724"/>
 			<Actor seed="29496"/>
 		</Entity>
 		<Entity uid="550">
-			<Template>units/mace_infantry_slinger_e</Template>
+			<Template>units/mace/infantry_slinger_e</Template>
 			<Player>1</Player>
 			<Position x="298.36002" z="84.79247"/>
 			<Orientation y="5.60724"/>
 			<Actor seed="47290"/>
 		</Entity>
 		<Entity uid="551">
-			<Template>units/mace_infantry_slinger_e</Template>
+			<Template>units/mace/infantry_slinger_e</Template>
 			<Player>1</Player>
 			<Position x="304.98197" z="89.5374"/>
 			<Orientation y="5.60724"/>
 			<Actor seed="15766"/>
 		</Entity>
 		<Entity uid="552">
-			<Template>units/mace_infantry_slinger_e</Template>
+			<Template>units/mace/infantry_slinger_e</Template>
 			<Player>1</Player>
 			<Position x="341.80506" z="118.14007"/>
 			<Orientation y="5.60723"/>
 			<Actor seed="47290"/>
 		</Entity>
 		<Entity uid="582">
-			<Template>units/mace_infantry_slinger_e</Template>
+			<Template>units/mace/infantry_slinger_e</Template>
 			<Player>1</Player>
 			<Position x="353.61435" z="127.99816"/>
 			<Orientation y="5.60723"/>
 			<Actor seed="47290"/>
 		</Entity>
 		<Entity uid="584">
-			<Template>units/mace_infantry_slinger_e</Template>
+			<Template>units/mace/infantry_slinger_e</Template>
 			<Player>1</Player>
 			<Position x="348.13163" z="123.21003"/>
 			<Orientation y="5.60723"/>
@@ -2218,280 +2217,280 @@
 			<Actor seed="60306"/>
 		</Entity>
 		<Entity uid="601">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="366.09421" z="118.6942"/>
 			<Orientation y="-0.6562"/>
 			<Actor seed="30036"/>
 		</Entity>
 		<Entity uid="602">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="364.20624" z="117.22411"/>
 			<Orientation y="-0.6562"/>
 			<Actor seed="22617"/>
 		</Entity>
 		<Entity uid="603">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="362.4691" z="115.80425"/>
 			<Orientation y="-0.6562"/>
 			<Actor seed="10204"/>
 		</Entity>
 		<Entity uid="604">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="360.66492" z="114.32029"/>
 			<Orientation y="-0.6562"/>
 			<Actor seed="35621"/>
 		</Entity>
 		<Entity uid="605">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="359.02146" z="112.93654"/>
 			<Orientation y="-0.6562"/>
 			<Actor seed="37516"/>
 		</Entity>
 		<Entity uid="606">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="357.25275" z="111.58169"/>
 			<Orientation y="-0.6562"/>
 			<Actor seed="56231"/>
 		</Entity>
 		<Entity uid="607">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="355.64338" z="110.20768"/>
 			<Orientation y="-0.6562"/>
 			<Actor seed="31572"/>
 		</Entity>
 		<Entity uid="608">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="353.87327" z="108.94481"/>
 			<Orientation y="-0.6562"/>
 			<Actor seed="55401"/>
 		</Entity>
 		<Entity uid="609">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="352.08841" z="107.77385"/>
 			<Orientation y="-0.6562"/>
 			<Actor seed="40635"/>
 		</Entity>
 		<Entity uid="610">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="350.74421" z="106.32407"/>
 			<Orientation y="-0.6562"/>
 			<Actor seed="30448"/>
 		</Entity>
 		<Entity uid="611">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="348.60865" z="105.12426"/>
 			<Orientation y="-0.6562"/>
 			<Actor seed="33892"/>
 		</Entity>
 		<Entity uid="612">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="347.30256" z="103.05355"/>
 			<Orientation y="-0.6562"/>
 			<Actor seed="60062"/>
 		</Entity>
 		<Entity uid="613">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="326.20759" z="84.92594"/>
 			<Orientation y="-0.65618"/>
 			<Actor seed="60062"/>
 		</Entity>
 		<Entity uid="614">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="328.12632" z="86.90917"/>
 			<Orientation y="-0.65618"/>
 			<Actor seed="33892"/>
 		</Entity>
 		<Entity uid="615">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="329.91211" z="88.716"/>
 			<Orientation y="-0.65618"/>
 			<Actor seed="30448"/>
 		</Entity>
 		<Entity uid="616">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="331.25632" z="90.16572"/>
 			<Orientation y="-0.65618"/>
 			<Actor seed="40635"/>
 		</Entity>
 		<Entity uid="617">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="334.81122" z="92.59911"/>
 			<Orientation y="-0.65618"/>
 			<Actor seed="31572"/>
 		</Entity>
 		<Entity uid="618">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="336.42057" z="93.97297"/>
 			<Orientation y="-0.65618"/>
 			<Actor seed="56231"/>
 		</Entity>
 		<Entity uid="619">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="338.18928" z="95.32763"/>
 			<Orientation y="-0.65618"/>
 			<Actor seed="37516"/>
 		</Entity>
 		<Entity uid="620">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="339.83271" z="96.71116"/>
 			<Orientation y="-0.65618"/>
 			<Actor seed="35621"/>
 		</Entity>
 		<Entity uid="621">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="341.63685" z="98.19491"/>
 			<Orientation y="-0.65618"/>
 			<Actor seed="10204"/>
 		</Entity>
 		<Entity uid="622">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="343.37391" z="99.6144"/>
 			<Orientation y="-0.65618"/>
 			<Actor seed="22617"/>
 		</Entity>
 		<Entity uid="623">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="345.26188" z="101.08442"/>
 			<Orientation y="-0.65618"/>
 			<Actor seed="30036"/>
 		</Entity>
 		<Entity uid="624">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="333.04108" z="91.33642"/>
 			<Orientation y="-0.65618"/>
 			<Actor seed="55401"/>
 		</Entity>
 		<Entity uid="625">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="305.41898" z="67.48806"/>
 			<Orientation y="-0.65618"/>
 			<Actor seed="60062"/>
 		</Entity>
 		<Entity uid="626">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="307.20463" z="69.15496"/>
 			<Orientation y="-0.65618"/>
 			<Actor seed="33892"/>
 		</Entity>
 		<Entity uid="627">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="308.86066" z="70.75853"/>
 			<Orientation y="-0.65618"/>
 			<Actor seed="30448"/>
 		</Entity>
 		<Entity uid="628">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="310.20484" z="72.20823"/>
 			<Orientation y="-0.65618"/>
 			<Actor seed="40635"/>
 		</Entity>
 		<Entity uid="629">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="313.75971" z="74.64167"/>
 			<Orientation y="-0.65618"/>
 			<Actor seed="31572"/>
 		</Entity>
 		<Entity uid="630">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="315.36908" z="76.01554"/>
 			<Orientation y="-0.65618"/>
 			<Actor seed="56231"/>
 		</Entity>
 		<Entity uid="631">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="317.13776" z="77.3702"/>
 			<Orientation y="-0.65618"/>
 			<Actor seed="37516"/>
 		</Entity>
 		<Entity uid="632">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="318.78122" z="78.7537"/>
 			<Orientation y="-0.65618"/>
 			<Actor seed="35621"/>
 		</Entity>
 		<Entity uid="633">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="320.58536" z="80.23746"/>
 			<Orientation y="-0.65618"/>
 			<Actor seed="10204"/>
 		</Entity>
 		<Entity uid="634">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="322.32245" z="81.65697"/>
 			<Orientation y="-0.65618"/>
 			<Actor seed="22617"/>
 		</Entity>
 		<Entity uid="635">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="324.21042" z="83.12696"/>
 			<Orientation y="-0.65618"/>
 			<Actor seed="30036"/>
 		</Entity>
 		<Entity uid="636">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="311.98966" z="73.37894"/>
 			<Orientation y="-0.65618"/>
 			<Actor seed="55401"/>
 		</Entity>
 		<Entity uid="637">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="302.36246" z="64.38234"/>
 			<Orientation y="-0.65618"/>
 			<Actor seed="30448"/>
 		</Entity>
 		<Entity uid="638">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="303.9697" z="65.5756"/>
 			<Orientation y="-0.65618"/>
 			<Actor seed="40635"/>
 		</Entity>
 		<Entity uid="639">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="300.4899" z="62.92612"/>
 			<Orientation y="-0.65618"/>
 			<Actor seed="33892"/>
 		</Entity>
 		<Entity uid="640">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>1</Player>
 			<Position x="298.66416" z="61.22411"/>
 			<Orientation y="-0.65618"/>
@@ -2918,203 +2917,203 @@
 			<Actor seed="19219"/>
 		</Entity>
 		<Entity uid="718">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="406.57663" z="159.2758"/>
 			<Orientation y="5.59433"/>
 			<Actor seed="48864"/>
 		</Entity>
 		<Entity uid="719">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="404.56833" z="157.70676"/>
 			<Orientation y="5.75881"/>
 			<Actor seed="10187"/>
 		</Entity>
 		<Entity uid="720">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="402.46036" z="156.41642"/>
 			<Orientation y="5.75881"/>
 			<Actor seed="41543"/>
 		</Entity>
 		<Entity uid="721">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="400.35627" z="155.00058"/>
 			<Orientation y="5.75881"/>
 			<Actor seed="7785"/>
 		</Entity>
 		<Entity uid="722">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="397.99479" z="153.53599"/>
 			<Orientation y="5.75881"/>
 			<Actor seed="57822"/>
 		</Entity>
 		<Entity uid="723">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="397.08573" z="155.124"/>
 			<Orientation y="5.75881"/>
 			<Actor seed="4503"/>
 		</Entity>
 		<Entity uid="724">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="399.54084" z="156.31403"/>
 			<Orientation y="5.75881"/>
 			<Actor seed="31263"/>
 		</Entity>
 		<Entity uid="725">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="401.70517" z="158.20347"/>
 			<Orientation y="5.75881"/>
 			<Actor seed="41087"/>
 		</Entity>
 		<Entity uid="726">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="403.24369" z="159.94516"/>
 			<Orientation y="5.75881"/>
 			<Actor seed="21663"/>
 		</Entity>
 		<Entity uid="727">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="404.99589" z="162.04563"/>
 			<Orientation y="5.75881"/>
 			<Actor seed="15945"/>
 		</Entity>
 		<Entity uid="728">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="393.42286" z="150.13093"/>
 			<Orientation y="5.59433"/>
 			<Actor seed="48864"/>
 		</Entity>
 		<Entity uid="729">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="408.99198" z="160.86036"/>
 			<Orientation y="5.75881"/>
 			<Actor seed="10187"/>
 		</Entity>
 		<Entity uid="730">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="407.62662" z="163.25644"/>
 			<Orientation y="5.75881"/>
 			<Actor seed="41543"/>
 		</Entity>
 		<Entity uid="731">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="395.96076" z="151.64316"/>
 			<Orientation y="5.75881"/>
 			<Actor seed="7785"/>
 		</Entity>
 		<Entity uid="732">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="394.59162" z="153.70954"/>
 			<Orientation y="5.75881"/>
 			<Actor seed="57822"/>
 		</Entity>
 		<Entity uid="733">
-			<Template>units/mace_infantry_javelinist_a</Template>
+			<Template>units/mace/infantry_javelineer_a</Template>
 			<Player>1</Player>
 			<Position x="343.04004" z="127.31795"/>
 			<Orientation y="-0.61902"/>
 			<Actor seed="41150"/>
 		</Entity>
 		<Entity uid="734">
-			<Template>units/mace_infantry_javelinist_a</Template>
+			<Template>units/mace/infantry_javelineer_a</Template>
 			<Player>1</Player>
 			<Position x="338.40152" z="123.49958"/>
 			<Orientation y="-0.41398"/>
 			<Actor seed="42082"/>
 		</Entity>
 		<Entity uid="735">
-			<Template>units/mace_infantry_javelinist_a</Template>
+			<Template>units/mace/infantry_javelineer_a</Template>
 			<Player>1</Player>
 			<Position x="347.61051" z="131.03495"/>
 			<Orientation y="-0.79433"/>
 			<Actor seed="38441"/>
 		</Entity>
 		<Entity uid="736">
-			<Template>units/mace_infantry_javelinist_a</Template>
+			<Template>units/mace/infantry_javelineer_a</Template>
 			<Player>1</Player>
 			<Position x="332.83616" z="119.41642"/>
 			<Orientation y="-0.79433"/>
 			<Actor seed="38441"/>
 		</Entity>
 		<Entity uid="737">
-			<Template>units/mace_infantry_javelinist_a</Template>
+			<Template>units/mace/infantry_javelineer_a</Template>
 			<Player>1</Player>
 			<Position x="323.62717" z="111.88106"/>
 			<Orientation y="-0.414"/>
 			<Actor seed="42082"/>
 		</Entity>
 		<Entity uid="738">
-			<Template>units/mace_infantry_javelinist_a</Template>
+			<Template>units/mace/infantry_javelineer_a</Template>
 			<Player>1</Player>
 			<Position x="328.2657" z="115.69942"/>
 			<Orientation y="-0.61902"/>
 			<Actor seed="41150"/>
 		</Entity>
 		<Entity uid="739">
-			<Template>units/mace_infantry_javelinist_a</Template>
+			<Template>units/mace/infantry_javelineer_a</Template>
 			<Player>1</Player>
 			<Position x="317.1374" z="109.73989"/>
 			<Orientation y="-0.79433"/>
 			<Actor seed="38441"/>
 		</Entity>
 		<Entity uid="740">
-			<Template>units/mace_infantry_javelinist_a</Template>
+			<Template>units/mace/infantry_javelineer_a</Template>
 			<Player>1</Player>
 			<Position x="307.92841" z="102.20453"/>
 			<Orientation y="-0.414"/>
 			<Actor seed="42082"/>
 		</Entity>
 		<Entity uid="741">
-			<Template>units/mace_infantry_javelinist_a</Template>
+			<Template>units/mace/infantry_javelineer_a</Template>
 			<Player>1</Player>
 			<Position x="312.56693" z="106.0229"/>
 			<Orientation y="-0.61902"/>
 			<Actor seed="41150"/>
 		</Entity>
 		<Entity uid="742">
-			<Template>units/mace_infantry_javelinist_a</Template>
+			<Template>units/mace/infantry_javelineer_a</Template>
 			<Player>1</Player>
 			<Position x="302.00028" z="97.61808"/>
 			<Orientation y="-0.79433"/>
 			<Actor seed="38441"/>
 		</Entity>
 		<Entity uid="743">
-			<Template>units/mace_infantry_javelinist_a</Template>
+			<Template>units/mace/infantry_javelineer_a</Template>
 			<Player>1</Player>
 			<Position x="292.7913" z="90.08272"/>
 			<Orientation y="-0.414"/>
 			<Actor seed="42082"/>
 		</Entity>
 		<Entity uid="744">
-			<Template>units/mace_infantry_javelinist_a</Template>
+			<Template>units/mace/infantry_javelineer_a</Template>
 			<Player>1</Player>
 			<Position x="297.42981" z="93.90108"/>
 			<Orientation y="-0.61902"/>
 			<Actor seed="41150"/>
 		</Entity>
 		<Entity uid="745">
-			<Template>units/mace_infantry_javelinist_a</Template>
+			<Template>units/mace/infantry_javelineer_a</Template>
 			<Player>1</Player>
 			<Position x="287.03992" z="86.25873"/>
 			<Orientation y="-0.55431"/>
 			<Actor seed="41150"/>
 		</Entity>
 		<Entity uid="746">
-			<Template>units/mace_infantry_javelinist_a</Template>
+			<Template>units/mace/infantry_javelineer_a</Template>
 			<Player>1</Player>
 			<Position x="282.16422" z="82.7483"/>
 			<Orientation y="-0.3493"/>
@@ -5382,35 +5381,35 @@
 			<Actor seed="5755"/>
 		</Entity>
 		<Entity uid="1100">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="106.93467" z="260.81562"/>
 			<Orientation y="-1.45557"/>
 			<Actor seed="420"/>
 		</Entity>
 		<Entity uid="1101">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="121.65485" z="213.5362"/>
 			<Orientation y="-1.38665"/>
 			<Actor seed="416"/>
 		</Entity>
 		<Entity uid="1102">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="71.49152" z="238.94898"/>
 			<Orientation y="-3.9287"/>
 			<Actor seed="413"/>
 		</Entity>
 		<Entity uid="1103">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="106.41807" z="274.5345"/>
 			<Orientation y="-4.68004"/>
 			<Actor seed="406"/>
 		</Entity>
 		<Entity uid="1104">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="110.47605" z="185.90442"/>
 			<Orientation y="0.27912"/>
@@ -5424,14 +5423,14 @@
 			<Actor seed="387"/>
 		</Entity>
 		<Entity uid="1106">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="43.46459" z="234.46717"/>
 			<Orientation y="0.5744"/>
 			<Actor seed="356"/>
 		</Entity>
 		<Entity uid="1107">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="39.85912" z="232.48865"/>
 			<Orientation y="-1.02666"/>
@@ -5466,63 +5465,63 @@
 			<Actor seed="346"/>
 		</Entity>
 		<Entity uid="1112">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="52.68676" z="220.8277"/>
 			<Orientation y="-2.55883"/>
 			<Actor seed="355"/>
 		</Entity>
 		<Entity uid="1113">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="45.24468" z="225.38343"/>
 			<Orientation y="0.16967"/>
 			<Actor seed="354"/>
 		</Entity>
 		<Entity uid="1114">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="35.21465" z="237.65461"/>
 			<Orientation y="0.0651"/>
 			<Actor seed="353"/>
 		</Entity>
 		<Entity uid="1115">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="99.13822" z="262.7237"/>
 			<Orientation y="5.98494"/>
 			<Actor seed="255"/>
 		</Entity>
 		<Entity uid="1116">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="91.13822" z="254.7237"/>
 			<Orientation y="0.1881"/>
 			<Actor seed="254"/>
 		</Entity>
 		<Entity uid="1117">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="87.13822" z="254.7237"/>
 			<Orientation y="5.44904"/>
 			<Actor seed="253"/>
 		</Entity>
 		<Entity uid="1118">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="65.39875" z="195.63523"/>
 			<Orientation y="1.11208"/>
 			<Actor seed="246"/>
 		</Entity>
 		<Entity uid="1119">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="61.39878" z="199.63517"/>
 			<Orientation y="3.18114"/>
 			<Actor seed="245"/>
 		</Entity>
 		<Entity uid="1120">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="61.39878" z="191.63523"/>
 			<Orientation y="1.92125"/>
@@ -5550,14 +5549,14 @@
 			<Actor seed="387"/>
 		</Entity>
 		<Entity uid="1124">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="170.99158" z="362.6731"/>
 			<Orientation y="-2.39248"/>
 			<Actor seed="416"/>
 		</Entity>
 		<Entity uid="1125">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="151.35834" z="349.77527"/>
 			<Orientation y="-2.05573"/>
@@ -5578,7 +5577,7 @@
 			<Actor seed="334"/>
 		</Entity>
 		<Entity uid="1128">
-			<Template>gaia/flora_tree_poplar_lombardy</Template>
+			<Template>gaia/tree/poplar_lombardy</Template>
 			<Player>0</Player>
 			<Position x="153.7487" z="333.06568"/>
 			<Orientation y="3.64008"/>
@@ -5711,7 +5710,7 @@
 			<Actor seed="25473"/>
 		</Entity>
 		<Entity uid="1147">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="391.75782" z="152.52372"/>
 			<Orientation y="5.59433"/>

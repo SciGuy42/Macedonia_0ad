@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Scenario version="6">
+<Scenario version="7">
 	<Environment>
 		<SkySet>cloudless</SkySet>
 		<SunColor r="1" g="0.964706" b="0.909804"/>
 		<SunElevation angle="0.908117"/>
 		<SunRotation angle="-0.558369"/>
-		<TerrainAmbientColor r="0.54902" g="0.419608" b="0.34902"/>
-		<UnitsAmbientColor r="0.721569" g="0.529412" b="0.4"/>
+		<AmbientColor r="0.721569" g="0.529412" b="0.4"/>
 		<Fog>
 			<FogFactor>0.00195313</FogFactor>
 			<FogThickness>0.352051</FogThickness>
@@ -133,31 +132,31 @@
 			<Orientation y="-1.94014"/>
 		</Entity>
 		<Entity uid="164">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="499.62531" z="1437.7386"/>
 			<Orientation y="-1.389"/>
 		</Entity>
 		<Entity uid="165">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="495.52594" z="1444.04413"/>
 			<Orientation y="-1.45585"/>
 		</Entity>
 		<Entity uid="166">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="479.33326" z="1446.7118"/>
 			<Orientation y="-3.60363"/>
 		</Entity>
 		<Entity uid="167">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="484.89417" z="1436.81562"/>
 			<Orientation y="-3.91149"/>
 		</Entity>
 		<Entity uid="168">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="484.21912" z="1445.5528"/>
 			<Orientation y="-1.72515"/>
@@ -310,31 +309,31 @@
 			<Orientation y="0.24698"/>
 		</Entity>
 		<Entity uid="208">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1506.86042" z="584.30799"/>
 			<Orientation y="-1.45623"/>
 		</Entity>
 		<Entity uid="209">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1502.27662" z="576.73743"/>
 			<Orientation y="-0.09522"/>
 		</Entity>
 		<Entity uid="210">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1496.1969" z="570.90461"/>
 			<Orientation y="-3.76391"/>
 		</Entity>
 		<Entity uid="211">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1498.8766" z="574.07618"/>
 			<Orientation y="0.68107"/>
 		</Entity>
 		<Entity uid="212">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1506.52356" z="578.92481"/>
 			<Orientation y="-4.36292"/>
@@ -37225,271 +37224,271 @@
 			<Orientation y="-3.56284"/>
 		</Entity>
 		<Entity uid="6415">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1648.85938" z="679.11512"/>
 			<Orientation y="0.74119"/>
 		</Entity>
 		<Entity uid="6416">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1659.98731" z="677.7635"/>
 			<Orientation y="1.30224"/>
 		</Entity>
 		<Entity uid="6417">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1646.16401" z="683.13953"/>
 			<Orientation y="-0.63254"/>
 		</Entity>
 		<Entity uid="6418">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="459.339" z="1836.86"/>
 			<Orientation y="-0.40165"/>
 		</Entity>
 		<Entity uid="6419">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="454.35553" z="1836.4657"/>
 			<Orientation y="0.84057"/>
 		</Entity>
 		<Entity uid="6420">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="447.52192" z="1846.37098"/>
 			<Orientation y="-0.50931"/>
 		</Entity>
 		<Entity uid="6421">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1836.47327" z="512.33887"/>
 			<Orientation y="-1.87458"/>
 		</Entity>
 		<Entity uid="6422">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1839.34607" z="517.50611"/>
 			<Orientation y="1.48755"/>
 		</Entity>
 		<Entity uid="6423">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1847.60657" z="512.42835"/>
 			<Orientation y="-1.83458"/>
 		</Entity>
 		<Entity uid="6424">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1840.46131" z="505.72223"/>
 			<Orientation y="-3.99093"/>
 		</Entity>
 		<Entity uid="6425">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1737.09375" z="391.25184"/>
 			<Orientation y="0.86471"/>
 		</Entity>
 		<Entity uid="6426">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1732.15784" z="391.11835"/>
 			<Orientation y="-4.03866"/>
 		</Entity>
 		<Entity uid="6427">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1744.04896" z="390.09516"/>
 			<Orientation y="-4.64245"/>
 		</Entity>
 		<Entity uid="6428">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1731.78443" z="383.1598"/>
 			<Orientation y="-2.49537"/>
 		</Entity>
 		<Entity uid="6429">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1766.04633" z="912.56202"/>
 			<Orientation y="0.87702"/>
 		</Entity>
 		<Entity uid="6430">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1757.08344" z="919.54566"/>
 			<Orientation y="0.29642"/>
 		</Entity>
 		<Entity uid="6431">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1769.20667" z="919.02607"/>
 			<Orientation y="-0.91292"/>
 		</Entity>
 		<Entity uid="6432">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1766.06806" z="922.84144"/>
 			<Orientation y="-3.55954"/>
 		</Entity>
 		<Entity uid="6433">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1760.4969" z="925.62104"/>
 			<Orientation y="-0.56191"/>
 		</Entity>
 		<Entity uid="6434">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="976.857" z="146.43049"/>
 			<Orientation y="-2.72454"/>
 		</Entity>
 		<Entity uid="6435">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="965.26252" z="151.74988"/>
 			<Orientation y="-1.41543"/>
 		</Entity>
 		<Entity uid="6436">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="969.92341" z="138.06788"/>
 			<Orientation y="-4.67191"/>
 		</Entity>
 		<Entity uid="6437">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="973.49189" z="148.94214"/>
 			<Orientation y="-1.31637"/>
 		</Entity>
 		<Entity uid="6438">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1667.00831" z="718.58674"/>
 			<Orientation y="0.75591"/>
 		</Entity>
 		<Entity uid="6439">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1673.83851" z="717.34583"/>
 			<Orientation y="1.01801"/>
 		</Entity>
 		<Entity uid="6440">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1677.60413" z="721.54291"/>
 			<Orientation y="1.49691"/>
 		</Entity>
 		<Entity uid="6441">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1668.02527" z="729.07856"/>
 			<Orientation y="-1.5581"/>
 		</Entity>
 		<Entity uid="6442">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="359.57764" z="338.56959"/>
 			<Orientation y="-2.45203"/>
 		</Entity>
 		<Entity uid="6443">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="359.07935" z="350.47059"/>
 			<Orientation y="-0.01882"/>
 		</Entity>
 		<Entity uid="6444">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="353.9098" z="343.16645"/>
 			<Orientation y="0.99279"/>
 		</Entity>
 		<Entity uid="6445">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1430.96564" z="477.83954"/>
 			<Orientation y="-3.84061"/>
 		</Entity>
 		<Entity uid="6446">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1427.37433" z="487.89905"/>
 			<Orientation y="-0.81057"/>
 		</Entity>
 		<Entity uid="6447">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1426.7375" z="476.37958"/>
 			<Orientation y="-2.04284"/>
 		</Entity>
 		<Entity uid="6448">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1782.9466" z="786.2118"/>
 			<Orientation y="0.21724"/>
 		</Entity>
 		<Entity uid="6449">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1788.84559" z="793.51478"/>
 			<Orientation y="-1.35792"/>
 		</Entity>
 		<Entity uid="6450">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1781.2685" z="795.8661"/>
 			<Orientation y="-2.8389"/>
 		</Entity>
 		<Entity uid="6451">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1793.72303" z="791.39094"/>
 			<Orientation y="-2.7766"/>
 		</Entity>
 		<Entity uid="6452">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1838.61841" z="986.47101"/>
 			<Orientation y="0.96497"/>
 		</Entity>
 		<Entity uid="6453">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1839.47938" z="975.17963"/>
 			<Orientation y="0.9448"/>
 		</Entity>
 		<Entity uid="6454">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1844.82532" z="985.2793"/>
 			<Orientation y="-0.17975"/>
 		</Entity>
 		<Entity uid="6455">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="1845.96784" z="979.34833"/>
 			<Orientation y="0.29535"/>
 		</Entity>
 		<Entity uid="6456">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="320.813" z="1332.4131"/>
 			<Orientation y="-1.8874"/>
 		</Entity>
 		<Entity uid="6457">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="311.76667" z="1334.17298"/>
 			<Orientation y="1.16591"/>
 		</Entity>
 		<Entity uid="6458">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="322.31104" z="1340.59601"/>
 			<Orientation y="-2.34739"/>
 		</Entity>
 		<Entity uid="6459">
-			<Template>gaia/flora_bush_berry_desert</Template>
+			<Template>gaia/fruit/berry_01_desert</Template>
 			<Player>0</Player>
 			<Position x="311.6714" z="1338.8855"/>
 			<Orientation y="-3.26615"/>

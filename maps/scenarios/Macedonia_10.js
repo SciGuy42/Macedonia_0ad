@@ -92,7 +92,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		else if (data.entity == 2553) // siege shop
 		{
 			//spawn some rams
-			TriggerHelper.SpawnUnits(2014,"units/mace_mechanical_siege_ram",3,1);
+			TriggerHelper.SpawnUnits(2014,"units/mace/siege_ram",3,1);
 			
 			//add some points 
 			this.current_points += 10;
@@ -217,7 +217,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				//give reward to human player for killing trader
 				let ccs = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(1), "CivilCentre").filter(TriggerHelper.IsInWorld);
 				
-				TriggerHelper.SpawnUnits(pickRandom(ccs),"units/mace_support_trader",1,1);
+				TriggerHelper.SpawnUnits(pickRandom(ccs),"units/mace/support_trader",1,1);
 			}
 			else if (this.crannog_ids.indexOf(data.entity) >= 0 || data.entity == 7176 || data.entity == 7177) //if pl2 or pl4 lose a civic center
 			{
@@ -835,11 +835,11 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	cmpTrigger.fort_attack_done = false;
 	
 	//store list of defender types
-	cmpTrigger.infTypes = ["units/thebes_sacred_band_hoplitai","units/athen_champion_marine","units/athen_champion_ranged","units/athen_champion_ranged_gastraphetes","units/athen_black_cloak"];
-	cmpTrigger.cavTypes = ["units/athen_cavalry_javelinist_e","units/athen_cavalry_swordsman_b","units/spart_cavalry_spearman_e"];
+	cmpTrigger.infTypes = ["units/thebes_sacred_band_hoplitai","units/athen/champion_marine","units/athen/champion_ranged","units/athen_champion_ranged_gastraphetes","units/athen_black_cloak"];
+	cmpTrigger.cavTypes = ["units/athen_cavalry_javelinist_e","units/athen/cavalry_swordsman_b","units/spart_cavalry_spearman_e"];
 	
 	//list of reinforcements
-	cmpTrigger.reinforceTypes = ["units/mace_champion_cavalry","units/athen_black_cloak","units/mace_champion_infantry_a","units/mace_infantry_archer_a","units/mace_infantry_slinger_a","units/mace_cavalry_javelinist_a"];
+	cmpTrigger.reinforceTypes = ["units/mace_champion_cavalry","units/athen_black_cloak","units/mace/champion_infantry_spearman","units/mace/infantry_archer_a","units/mace/infantry_slinger_a","units/mace/cavalry_javelineer_a"];
 	
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalDefenderSpawnAction", {
 		"enabled": true,

@@ -541,7 +541,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 
 	//persion info
 	cmpTrigger.persianSpawnSites = [7647,7646,7645];
-	cmpTrigger.persianInfTypes = ["units/pers_champion_infantry","units/pers_kardakes_hoplite","units/pers_kardakes_skirmisher","units/athen_champion_ranged","units/pers_arstibara"];
+	cmpTrigger.persianInfTypes = ["units/pers_champion_infantry","units/pers_kardakes_hoplite","units/pers_kardakes_skirmisher","units/athen/champion_ranged","units/pers_arstibara"];
 	
 	cmpTrigger.persianSiegeTypes = ["units/rome_mechanical_siege_scorpio_packed","units/rome_mechanical_siege_scorpio_packed"];
 	cmpTrigger.persianSiegeTypesAll = ["units/rome_mechanical_siege_scorpio_packed","units/pers_champion_elephant","units/pers_mechanical_siege_ram"];
@@ -559,8 +559,8 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	
 	//greek info
 	cmpTrigger.greekSpawnSites = [7670,7671,7672,7680];
-	cmpTrigger.greekInfTypes = ["units/athen_cavalry_javelinist_a","units/athen_cavalry_swordsman_a","units/athen_cavalry_javelinist_b","units/athen_cavalry_swordsman_b","units/athen_champion_ranged","units/athen_champion_marine","units/athen_champion_infantry","units/athen_champion_ranged_gastraphetes","units/thebes_sacred_band_hoplitai","units/athen_champion_ranged"];
-	cmpTrigger.greekSiegeTypes = ["units/rome_mechanical_siege_scorpio_packed","units/athen_mechanical_siege_oxybeles_packed","units/mace_mechanical_siege_lithobolos_packed", "units/rome_mechanical_siege_scorpio_packed"];
+	cmpTrigger.greekInfTypes = ["units/athen_cavalry_javelinist_a","units/athen_cavalry_swordsman_a","units/athen_cavalry_javelinist_b","units/athen/cavalry_swordsman_b","units/athen/champion_ranged","units/athen/champion_marine","units/athen_champion_infantry","units/athen_champion_ranged_gastraphetes","units/thebes_sacred_band_hoplitai","units/athen_champion_ranged"];
+	cmpTrigger.greekSiegeTypes = ["units/rome_mechanical_siege_scorpio_packed","units/athen_mechanical_siege_oxybeles_packed","units/mace/siege_lithobolos_packed", "units/rome_mechanical_siege_scorpio_packed"];
 	
 	cmpTrigger.greekRatio = 0.85;
 	cmpTrigger.greekAttackCounter = 0;

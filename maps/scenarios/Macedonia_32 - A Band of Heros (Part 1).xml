@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Scenario version="6">
+<Scenario version="7">
 	<Environment>
 		<SkySet>sunny</SkySet>
 		<SunColor r="0.737255" g="0.713726" b="0.537255"/>
 		<SunElevation angle="0.392699"/>
 		<SunRotation angle="-0.677631"/>
-		<TerrainAmbientColor r="0.501961" g="0.501961" b="0.501961"/>
-		<UnitsAmbientColor r="0.501961" g="0.501961" b="0.501961"/>
+		<AmbientColor r="0.501961" g="0.501961" b="0.501961"/>
 		<Fog>
 			<FogFactor>0.000400391</FogFactor>
 			<FogThickness>0.401367</FogThickness>
@@ -17538,28 +17537,28 @@
 			<Actor seed="2998"/>
 		</Entity>
 		<Entity uid="3464">
-			<Template>other/stall_small_a</Template>
+			<Template>structures/stall_small_a</Template>
 			<Player>3</Player>
 			<Position x="149.42289" z="352.37058"/>
 			<Orientation y="-0.49465"/>
 			<Actor seed="53481"/>
 		</Entity>
 		<Entity uid="3465">
-			<Template>other/stall_med</Template>
+			<Template>structures/stall_med</Template>
 			<Player>3</Player>
 			<Position x="163.81052" z="394.12961"/>
 			<Orientation y="-2.69576"/>
 			<Actor seed="45621"/>
 		</Entity>
 		<Entity uid="3466">
-			<Template>other/stall_big</Template>
+			<Template>structures/stall_big</Template>
 			<Player>3</Player>
 			<Position x="173.40241" z="374.93848"/>
 			<Orientation y="-1.9935"/>
 			<Actor seed="46112"/>
 		</Entity>
 		<Entity uid="3467">
-			<Template>other/stall_small_b</Template>
+			<Template>structures/stall_small_b</Template>
 			<Player>3</Player>
 			<Position x="161.70063" z="359.76865"/>
 			<Orientation y="-0.63535"/>
@@ -17804,77 +17803,77 @@
 			<Actor seed="30256"/>
 		</Entity>
 		<Entity uid="3579">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>4</Player>
 			<Position x="207.71189" z="330.54026"/>
 			<Orientation y="0.25063"/>
 			<Actor seed="12301"/>
 		</Entity>
 		<Entity uid="3580">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>4</Player>
 			<Position x="212.41236" z="323.42185"/>
 			<Orientation y="1.1886"/>
 			<Actor seed="63030"/>
 		</Entity>
 		<Entity uid="3581">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>4</Player>
 			<Position x="222.56885" z="318.18796"/>
 			<Orientation y="1.12566"/>
 			<Actor seed="35243"/>
 		</Entity>
 		<Entity uid="3582">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>4</Player>
 			<Position x="225.27698" z="308.83518"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="40705"/>
 		</Entity>
 		<Entity uid="3583">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>4</Player>
 			<Position x="220.98032" z="293.57291"/>
 			<Orientation y="0.89179"/>
 			<Actor seed="55515"/>
 		</Entity>
 		<Entity uid="3584">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>4</Player>
 			<Position x="192.8264" z="333.48685"/>
 			<Orientation y="-0.10828"/>
 			<Actor seed="17779"/>
 		</Entity>
 		<Entity uid="3585">
-			<Template>units/mace_champion_infantry_a</Template>
+			<Template>units/mace/champion_infantry_spearman</Template>
 			<Player>4</Player>
 			<Position x="182.50031" z="333.66654"/>
 			<Orientation y="0.02001"/>
 			<Actor seed="41835"/>
 		</Entity>
 		<Entity uid="3586">
-			<Template>units/athen_champion_ranged</Template>
+			<Template>units/athen/champion_ranged</Template>
 			<Player>4</Player>
 			<Position x="202.20994" z="322.92273"/>
 			<Orientation y="0.09307"/>
 			<Actor seed="30385"/>
 		</Entity>
 		<Entity uid="3587">
-			<Template>units/athen_champion_ranged</Template>
+			<Template>units/athen/champion_ranged</Template>
 			<Player>4</Player>
 			<Position x="216.05048" z="304.17566"/>
 			<Orientation y="1.79398"/>
 			<Actor seed="8059"/>
 		</Entity>
 		<Entity uid="3588">
-			<Template>units/athen_champion_ranged</Template>
+			<Template>units/athen/champion_ranged</Template>
 			<Player>4</Player>
 			<Position x="177.54081" z="324.40345"/>
 			<Orientation y="0.34249"/>
 			<Actor seed="38560"/>
 		</Entity>
 		<Entity uid="3589">
-			<Template>units/athen_champion_ranged</Template>
+			<Template>units/athen/champion_ranged</Template>
 			<Player>4</Player>
 			<Position x="211.22904" z="283.74308"/>
 			<Orientation y="1.07587"/>
@@ -18952,7 +18951,7 @@
 			<Actor seed="21179"/>
 		</Entity>
 		<Entity uid="3767">
-			<Template>other/palisades_rocks_gate</Template>
+			<Template>structures/palisades_gate</Template>
 			<Player>2</Player>
 			<Position x="1159.78052" z="950.23652"/>
 			<Orientation y="0.973"/>
@@ -18975,7 +18974,7 @@
 			<Actor seed="55721"/>
 		</Entity>
 		<Entity uid="3770">
-			<Template>other/palisades_rocks_long</Template>
+			<Template>structures/palisades_long</Template>
 			<Player>2</Player>
 			<Position x="1173.96216" z="937.60315"/>
 			<Orientation y="6.4468"/>
@@ -18983,7 +18982,7 @@
 			<Actor seed="18268"/>
 		</Entity>
 		<Entity uid="3771">
-			<Template>other/palisades_rocks_long</Template>
+			<Template>structures/palisades_long</Template>
 			<Player>2</Player>
 			<Position x="1155.91944" z="967.09058"/>
 			<Orientation y="8.06116"/>
@@ -19295,7 +19294,7 @@
 			<Actor seed="21257"/>
 		</Entity>
 		<Entity uid="3819">
-			<Template>other/palisades_rocks_gate</Template>
+			<Template>structures/palisades_gate</Template>
 			<Player>2</Player>
 			<Position x="1445.60486" z="995.02784"/>
 			<Orientation y="2.89161"/>
@@ -19569,28 +19568,28 @@
 			<Actor seed="7056"/>
 		</Entity>
 		<Entity uid="3864">
-			<Template>units/mace_mechanical_siege_oxybeles_unpacked</Template>
+			<Template>units/mace/siege_oxybeles_unpacked</Template>
 			<Player>1</Player>
 			<Position x="182.91602" z="344.05918"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="46499"/>
 		</Entity>
 		<Entity uid="3865">
-			<Template>units/mace_mechanical_siege_oxybeles_unpacked</Template>
+			<Template>units/mace/siege_oxybeles_unpacked</Template>
 			<Player>5</Player>
 			<Position x="45.49724" z="949.20136"/>
 			<Orientation y="1.84955"/>
 			<Actor seed="45904"/>
 		</Entity>
 		<Entity uid="3866">
-			<Template>units/mace_mechanical_siege_oxybeles_unpacked</Template>
+			<Template>units/mace/siege_oxybeles_unpacked</Template>
 			<Player>5</Player>
 			<Position x="46.32663" z="962.29938"/>
 			<Orientation y="1.79496"/>
 			<Actor seed="9999"/>
 		</Entity>
 		<Entity uid="3867">
-			<Template>units/mace_mechanical_siege_oxybeles_unpacked</Template>
+			<Template>units/mace/siege_oxybeles_unpacked</Template>
 			<Player>5</Player>
 			<Position x="48.282" z="974.35505"/>
 			<Orientation y="1.77761"/>

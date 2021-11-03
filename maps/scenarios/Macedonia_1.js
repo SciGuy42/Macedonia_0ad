@@ -96,8 +96,8 @@ Trigger.prototype.IntervalActionCavAttack = function(data)
 
 
 	//spawn attacking party
-	var ents1 = TriggerHelper.SpawnUnits(2911,"units/mace_cavalry_spearman_a",this.spawnCavCount,3);
-	var ents2 = TriggerHelper.SpawnUnits(2911,"units/mace_cavalry_javelinist_a",this.spawnCavCount,3);
+	var ents1 = TriggerHelper.SpawnUnits(2911,"units/mace/cavalry_spearman_a",this.spawnCavCount,3);
+	var ents2 = TriggerHelper.SpawnUnits(2911,"units/mace/cavalry_javelineer_a",this.spawnCavCount,3);
 	var full_list = ents1.concat(ents2);
 
 	//warn(uneval(full_list));
@@ -220,9 +220,9 @@ Trigger.prototype.IntervalAction = function(data)
 
 
 	//spawn attacking party
-	var ents1 = TriggerHelper.SpawnUnits(2906,"units/mace_infantry_pikeman_b",this.spawnInfCount+3,3);
-	var ents2 = TriggerHelper.SpawnUnits(2906,"units/mace_infantry_javelinist_b",this.spawnInfCount+3,3);
-	var ents3 = TriggerHelper.SpawnUnits(2906,"units/mace_infantry_archer_b",this.spawnInfCount+3,3);
+	var ents1 = TriggerHelper.SpawnUnits(2906,"units/mace/infantry_pikeman_b",this.spawnInfCount+3,3);
+	var ents2 = TriggerHelper.SpawnUnits(2906,"units/mace/infantry_javelineer_b",this.spawnInfCount+3,3);
+	var ents3 = TriggerHelper.SpawnUnits(2906,"units/mace/infantry_archer_b",this.spawnInfCount+3,3);
 	var full_list = ents1.concat(ents2,ents3);
 
 	//warn(uneval(full_list));
@@ -374,7 +374,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	let towers_p = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(2), "GarrisonTower").filter(TriggerHelper.IsInWorld);
 	for (let e of towers_p)
 	{
-		let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",tower_garrison_count,2);
+		let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",tower_garrison_count,2);
 			
 		for (let a of archers_e)
 		{
@@ -387,7 +387,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	for (let e of towers_w)
 	{
 		//spawn the garrison inside the tower
-		let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",walltower_garrison_count,2);
+		let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",walltower_garrison_count,2);
 			
 		for (let a of archers_e)
 		{

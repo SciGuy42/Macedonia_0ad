@@ -468,7 +468,7 @@ Trigger.prototype.SpawnInterevalMutineersPatrol = function(data)
 	
 	if (units_p.length < 30)
 	{
-		let templates = ["units/athen_champion_ranged","units/athen_champion_marine","units/mace_champion_infantry_a","units/mace_champion_infantry_e","units/mace_thorakites","units/mace_thureophoros"];
+		let templates = ["units/athen/champion_ranged","units/athen/champion_marine","units/mace/champion_infantry_spearman","units/mace/champion_infantry_spearman_02","units/mace_thorakites","units/mace_thureophoros"];
 	
 		//pick patrol sites
 		let sites = [pickRandom(patrol_sites),pickRandom(patrol_sites),pickRandom(patrol_sites)];

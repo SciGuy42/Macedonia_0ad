@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Scenario version="6">
+<Scenario version="7">
 	<Environment>
 		<SkySet>default</SkySet>
 		<SunColor r="0.87451" g="0.847059" b="0.647059"/>
 		<SunElevation angle="0.785398"/>
 		<SunRotation angle="-0.785396"/>
-		<TerrainAmbientColor r="0.447059" g="0.509804" b="0.54902"/>
-		<UnitsAmbientColor r="0.564706" g="0.576471" b="0.54902"/>
+		<AmbientColor r="0.564706" g="0.576471" b="0.54902"/>
 		<Fog>
 			<FogFactor>0.00149414</FogFactor>
 			<FogThickness>0.351562</FogThickness>
@@ -8331,151 +8330,151 @@
 			<Orientation y="0.40448"/>
 		</Entity>
 		<Entity uid="1908">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1093.37305" z="1406.7909"/>
 			<Orientation y="-1.35174"/>
 		</Entity>
 		<Entity uid="1909">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1086.89264" z="1406.82752"/>
 			<Orientation y="-2.58835"/>
 		</Entity>
 		<Entity uid="1910">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1082.11738" z="1416.9397"/>
 			<Orientation y="-4.64039"/>
 		</Entity>
 		<Entity uid="1911">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1086.17371" z="1414.0583"/>
 			<Orientation y="-3.29728"/>
 		</Entity>
 		<Entity uid="1912">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1081.03803" z="1405.89942"/>
 			<Orientation y="-3.69631"/>
 		</Entity>
 		<Entity uid="1913">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="924.81464" z="1172.81495"/>
 			<Orientation y="1.26629"/>
 		</Entity>
 		<Entity uid="1914">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="925.35065" z="1162.14722"/>
 			<Orientation y="-4.48641"/>
 		</Entity>
 		<Entity uid="1915">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="932.24396" z="1165.3791"/>
 			<Orientation y="-3.67858"/>
 		</Entity>
 		<Entity uid="1916">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="929.68537" z="1013.2458"/>
 			<Orientation y="-2.5364"/>
 		</Entity>
 		<Entity uid="1917">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="926.30225" z="1166.65546"/>
 			<Orientation y="-4.52401"/>
 		</Entity>
 		<Entity uid="1918">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="931.25532" z="1007.08606"/>
 			<Orientation y="1.60729"/>
 		</Entity>
 		<Entity uid="1919">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="935.16077" z="1012.04212"/>
 			<Orientation y="-3.84072"/>
 		</Entity>
 		<Entity uid="1920">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="175.23069" z="417.10352"/>
 			<Orientation y="1.2656"/>
 		</Entity>
 		<Entity uid="1921">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="154.87754" z="424.99555"/>
 			<Orientation y="0.07753"/>
 		</Entity>
 		<Entity uid="1922">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="155.61057" z="420.45307"/>
 			<Orientation y="-0.12883"/>
 		</Entity>
 		<Entity uid="1923">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="166.44034" z="410.9402"/>
 			<Orientation y="-1.77964"/>
 		</Entity>
 		<Entity uid="1924">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="163.74137" z="420.90925"/>
 			<Orientation y="1.37296"/>
 		</Entity>
 		<Entity uid="1925">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="166.14493" z="425.37085"/>
 			<Orientation y="-0.40827"/>
 		</Entity>
 		<Entity uid="1926">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="159.1096" z="432.96845"/>
 			<Orientation y="-2.86149"/>
 		</Entity>
 		<Entity uid="1927">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="976.15937" z="386.44239"/>
 			<Orientation y="1.00527"/>
 		</Entity>
 		<Entity uid="1928">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="978.01355" z="390.17365"/>
 			<Orientation y="-3.67568"/>
 		</Entity>
 		<Entity uid="1929">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="971.56159" z="390.86365"/>
 			<Orientation y="-0.43589"/>
 		</Entity>
 		<Entity uid="1930">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="973.19666" z="380.88752"/>
 			<Orientation y="0.31992"/>
 		</Entity>
 		<Entity uid="1931">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="984.9615" z="386.31702"/>
 			<Orientation y="-2.86878"/>
 		</Entity>
 		<Entity uid="1932">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="984.1537" z="391.94703"/>
 			<Orientation y="-1.1835"/>
@@ -25601,70 +25600,70 @@
 			<Actor seed="50964"/>
 		</Entity>
 		<Entity uid="5152">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="568.99506" z="559.1731"/>
 			<Orientation y="3.86387"/>
 			<Actor seed="50252"/>
 		</Entity>
 		<Entity uid="5153">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="567.74128" z="560.43903"/>
 			<Orientation y="3.86387"/>
 			<Actor seed="5717"/>
 		</Entity>
 		<Entity uid="5154">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="566.46924" z="561.82093"/>
 			<Orientation y="3.86387"/>
 			<Actor seed="60601"/>
 		</Entity>
 		<Entity uid="5155">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="565.09797" z="563.03156"/>
 			<Orientation y="3.86387"/>
 			<Actor seed="63567"/>
 		</Entity>
 		<Entity uid="5156">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="563.6294" z="564.25507"/>
 			<Orientation y="3.86387"/>
 			<Actor seed="6660"/>
 		</Entity>
 		<Entity uid="5157">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="562.31098" z="565.45392"/>
 			<Orientation y="3.86387"/>
 			<Actor seed="22861"/>
 		</Entity>
 		<Entity uid="5158">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="570.30048" z="557.90784"/>
 			<Orientation y="3.86387"/>
 			<Actor seed="45696"/>
 		</Entity>
 		<Entity uid="5159">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="571.70392" z="556.71766"/>
 			<Orientation y="3.86387"/>
 			<Actor seed="54889"/>
 		</Entity>
 		<Entity uid="5160">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="560.95325" z="566.52143"/>
 			<Orientation y="3.86387"/>
 			<Actor seed="6660"/>
 		</Entity>
 		<Entity uid="5161">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="572.9618" z="555.38483"/>
 			<Orientation y="3.86387"/>
@@ -25944,28 +25943,28 @@
 			<Actor seed="32217"/>
 		</Entity>
 		<Entity uid="5205">
-			<Template>other/stall_small_a</Template>
+			<Template>structures/stall_small_a</Template>
 			<Player>4</Player>
 			<Position x="684.02222" z="1442.41626"/>
 			<Orientation y="1.48047"/>
 			<Actor seed="56349"/>
 		</Entity>
 		<Entity uid="5206">
-			<Template>other/stall_small_b</Template>
+			<Template>structures/stall_small_b</Template>
 			<Player>4</Player>
 			<Position x="708.07404" z="1470.37073"/>
 			<Orientation y="-3.09795"/>
 			<Actor seed="12733"/>
 		</Entity>
 		<Entity uid="5207">
-			<Template>other/stall_med</Template>
+			<Template>structures/stall_med</Template>
 			<Player>4</Player>
 			<Position x="727.8484" z="1420.09607"/>
 			<Orientation y="-0.82235"/>
 			<Actor seed="43903"/>
 		</Entity>
 		<Entity uid="5208">
-			<Template>other/stall_big</Template>
+			<Template>structures/stall_big</Template>
 			<Player>4</Player>
 			<Position x="689.66596" z="1422.35401"/>
 			<Orientation y="-0.01116"/>

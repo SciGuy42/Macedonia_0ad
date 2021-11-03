@@ -439,13 +439,13 @@ Trigger.prototype.GarrisonEntities = function(data)
 	
 	for (let ship of biremes)
 	{
-		TriggerHelper.SpawnGarrisonedUnits(ship, "units/mace_champion_infantry_a",20,1);
+		TriggerHelper.SpawnGarrisonedUnits(ship, "units/mace/champion_infantry_spearman",20,1);
 	}
 	
 	
 	for (let ship of triremes)
 	{
-		TriggerHelper.SpawnGarrisonedUnits(ship, "units/mace_champion_infantry_a",5,1);
+		TriggerHelper.SpawnGarrisonedUnits(ship, "units/mace/champion_infantry_spearman",5,1);
 		TriggerHelper.SpawnGarrisonedUnits(ship, "units/mace_champion_cavalry",15,1);
 		TriggerHelper.SpawnGarrisonedUnits(ship, "units/mace_thureophoros",9,1);
 		TriggerHelper.SpawnGarrisonedUnits(ship, "units/athen_hero_themistocles",1,1);
@@ -453,9 +453,9 @@ Trigger.prototype.GarrisonEntities = function(data)
 	
 	for (let ship of trade_ships)
 	{
-		TriggerHelper.SpawnGarrisonedUnits(ship, "units/mace_support_female_citizen",5,1);
+		TriggerHelper.SpawnGarrisonedUnits(ship, "units/mace/support_female_citizen",5,1);
 		TriggerHelper.SpawnGarrisonedUnits(ship, "units/mace_infantry_pikeman_e",5,1);
-		TriggerHelper.SpawnGarrisonedUnits(ship, "units/mace_infantry_archer_e",5,1);
+		TriggerHelper.SpawnGarrisonedUnits(ship, "units/mace/infantry_archer_e",5,1);
 	}
 	
 	
@@ -1379,33 +1379,33 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 			}
 			
 		}
-		else if (template == "units/mace_cavalry_javelinist_b" || template == "units/mace_cavalry_javelinist_a")
+		else if (template == "units/mace_cavalry_javelinist_b" || template == "units/mace/cavalry_javelineer_a")
 		{
 			template = "units/mace_cavalry_javelinist_e";
 		}
-		else if (template == "units/mace_cavalry_spearman_b" || template == "units/mace_cavalry_spearman_a")
+		else if (template == "units/mace/cavalry_spearman_b" || template == "units/mace/cavalry_spearman_a")
 		{
 			template = "units/mace_cavalry_spearman_e";
 		}
-		else if (template == "units/mace_infantry_archer_b" || template == "units/mace_infantry_archer_a")
+		else if (template == "units/mace/infantry_archer_b" || template == "units/mace/infantry_archer_a")
 		{
-			template = "units/mace_infantry_archer_e";
+			template = "units/mace/infantry_archer_e";
 		}
-		else if (template == "units/mace_infantry_javelinist_b" || template == "units/mace_infantry_javelinist_a")
+		else if (template == "units/mace/infantry_javelineer_b" || template == "units/mace/infantry_javelineer_a")
 		{
 			template = "units/mace_infantry_javelinist_e";
 		}
-		else if (template == "units/mace_infantry_pikeman_b" || template == "units/mace_infantry_pikeman_a")
+		else if (template == "units/mace/infantry_pikeman_b" || template == "units/mace/infantry_pikeman_a")
 		{
 			template = "units/mace_infantry_pikeman_e";
 		}
-		else if (template == "units/mace_infantry_slinger_b" || template == "units/mace_infantry_slinger_a")
+		else if (template == "units/mace_infantry_slinger_b" || template == "units/mace/infantry_slinger_a")
 		{
-			template = "units/mace_infantry_slinger_e";
+			template = "units/mace/infantry_slinger_e";
 		}
-		else if (template == "units/mace_champion_infantry_a")
+		else if (template == "units/mace/champion_infantry_spearman")
 		{
-			template = "units/mace_champion_infantry_e";
+			template = "units/mace/champion_infantry_spearman_02";
 		}
 		
 		
@@ -1524,7 +1524,7 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 			
 		if (p == 1)
 		{
-			disTemplates = disTemplates.concat(["units/mace_hero_alexander","units/mace_hero_craterus","units/mace_hero_philip","units/mace_hero_demetrius","units/mace_hero_pyrhus"]);
+			disTemplates = disTemplates.concat(["units/mace_hero_alexander","units/mace_hero_craterus","units/mace/hero_philip_ii","units/mace_hero_demetrius","units/mace_hero_pyrhus"]);
 			cmpPlayer.SetDisabledTemplates(disTemplates);
 		}
 		else if (p == 4 || p == 5 || p == 6)

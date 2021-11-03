@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Scenario version="6">
+<Scenario version="7">
 	<Environment>
 		<SkySet>cumulus</SkySet>
 		<SunColor r="1" g="0.792157" b="0.364706"/>
 		<SunElevation angle="0.521553"/>
 		<SunRotation angle="-1.86532"/>
-		<TerrainAmbientColor r="0.501961" g="0.501961" b="0.501961"/>
-		<UnitsAmbientColor r="0.564706" g="0.576471" b="0.54902"/>
+		<AmbientColor r="0.564706" g="0.576471" b="0.54902"/>
 		<Fog>
 			<FogFactor>0.000986328</FogFactor>
 			<FogThickness>0.402344</FogThickness>
@@ -59449,85 +59448,85 @@
 			<Orientation y="-0.82616"/>
 		</Entity>
 		<Entity uid="11397">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="608.88727" z="171.04407"/>
 			<Orientation y="1.25066"/>
 		</Entity>
 		<Entity uid="11398">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="608.70667" z="165.69355"/>
 			<Orientation y="-1.06354"/>
 		</Entity>
 		<Entity uid="11402">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1925.45014" z="641.90162"/>
 			<Orientation y="-2.70041"/>
 		</Entity>
 		<Entity uid="11403">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1921.12623" z="636.42408"/>
 			<Orientation y="-1.91926"/>
 		</Entity>
 		<Entity uid="11404">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1929.4162" z="646.83368"/>
 			<Orientation y="-3.92005"/>
 		</Entity>
 		<Entity uid="11405">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1932.02222" z="636.87238"/>
 			<Orientation y="1.0902"/>
 		</Entity>
 		<Entity uid="11406">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1938.24994" z="638.30658"/>
 			<Orientation y="-2.10238"/>
 		</Entity>
 		<Entity uid="11407">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1929.48591" z="640.19861"/>
 			<Orientation y="-3.66367"/>
 		</Entity>
 		<Entity uid="11408">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1605.77558" z="547.80201"/>
 			<Orientation y="-4.40012"/>
 		</Entity>
 		<Entity uid="11409">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1637.16114" z="586.2309"/>
 			<Orientation y="-4.46805"/>
 		</Entity>
 		<Entity uid="11410">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1650.09937" z="596.78241"/>
 			<Orientation y="0.68267"/>
 		</Entity>
 		<Entity uid="11411">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1656.92212" z="592.63367"/>
 			<Orientation y="1.17801"/>
 		</Entity>
 		<Entity uid="11412">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1650.96973" z="584.24628"/>
 			<Orientation y="1.25162"/>
 		</Entity>
 		<Entity uid="11413">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="1655.15162" z="584.37366"/>
 			<Orientation y="-3.29046"/>
@@ -61492,28 +61491,28 @@
 			<Actor seed="35026"/>
 		</Entity>
 		<Entity uid="11827">
-			<Template>structures/mace_barracks</Template>
+			<Template>structures/mace/barracks</Template>
 			<Player>1</Player>
 			<Position x="1354.22022" z="307.5586"/>
 			<Orientation y="8.58606"/>
 			<Actor seed="45812"/>
 		</Entity>
 		<Entity uid="11828">
-			<Template>structures/mace_market</Template>
+			<Template>structures/mace/market</Template>
 			<Player>1</Player>
 			<Position x="1483.04053" z="211.86985"/>
 			<Orientation y="-6.84835"/>
 			<Actor seed="5383"/>
 		</Entity>
 		<Entity uid="11829">
-			<Template>structures/mace_royal_stoa</Template>
+			<Template>structures/mace/royal_stoa</Template>
 			<Player>1</Player>
 			<Position x="1385.80835" z="274.30265"/>
 			<Orientation y="5.4391"/>
 			<Actor seed="56581"/>
 		</Entity>
 		<Entity uid="11830">
-			<Template>structures/mace_fortress</Template>
+			<Template>structures/mace/fortress</Template>
 			<Player>1</Player>
 			<Position x="1393.62488" z="341.75281"/>
 			<Orientation y="2.37516"/>
@@ -63403,28 +63402,28 @@
 			<Actor seed="53733"/>
 		</Entity>
 		<Entity uid="12168">
-			<Template>other/stall_big</Template>
+			<Template>structures/stall_big</Template>
 			<Player>5</Player>
 			<Position x="280.01157" z="1289.5547"/>
 			<Orientation y="0.70438"/>
 			<Actor seed="16196"/>
 		</Entity>
 		<Entity uid="12169">
-			<Template>other/stall_med</Template>
+			<Template>structures/stall_med</Template>
 			<Player>5</Player>
 			<Position x="316.45539" z="1293.8152"/>
 			<Orientation y="-0.82103"/>
 			<Actor seed="21423"/>
 		</Entity>
 		<Entity uid="12170">
-			<Template>other/stall_small_b</Template>
+			<Template>structures/stall_small_b</Template>
 			<Player>5</Player>
 			<Position x="271.9933" z="1320.53846"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="13278"/>
 		</Entity>
 		<Entity uid="12171">
-			<Template>other/stall_small_a</Template>
+			<Template>structures/stall_small_a</Template>
 			<Player>5</Player>
 			<Position x="277.6283" z="1327.77149"/>
 			<Orientation y="2.35621"/>
@@ -63942,49 +63941,49 @@
 			<Actor seed="4420"/>
 		</Entity>
 		<Entity uid="12245">
-			<Template>other/stall_med</Template>
+			<Template>structures/stall_med</Template>
 			<Player>3</Player>
 			<Position x="1098.46326" z="410.04123"/>
 			<Orientation y="0.6429"/>
 			<Actor seed="42920"/>
 		</Entity>
 		<Entity uid="12246">
-			<Template>other/stall_small_a</Template>
+			<Template>structures/stall_small_a</Template>
 			<Player>3</Player>
 			<Position x="1110.48487" z="403.39496"/>
 			<Orientation y="0.52988"/>
 			<Actor seed="20264"/>
 		</Entity>
 		<Entity uid="12247">
-			<Template>other/stall_small_b</Template>
+			<Template>structures/stall_small_b</Template>
 			<Player>3</Player>
 			<Position x="1130.57618" z="404.64692"/>
 			<Orientation y="-0.81882"/>
 			<Actor seed="21649"/>
 		</Entity>
 		<Entity uid="12248">
-			<Template>other/stall_big</Template>
+			<Template>structures/stall_big</Template>
 			<Player>3</Player>
 			<Position x="1439.25892" z="370.69977"/>
 			<Orientation y="-0.85996"/>
 			<Actor seed="58625"/>
 		</Entity>
 		<Entity uid="12249">
-			<Template>other/stall_small_a</Template>
+			<Template>structures/stall_small_a</Template>
 			<Player>3</Player>
 			<Position x="1412.2339" z="364.73728"/>
 			<Orientation y="0.81399"/>
 			<Actor seed="8311"/>
 		</Entity>
 		<Entity uid="12250">
-			<Template>other/stall_small_b</Template>
+			<Template>structures/stall_small_b</Template>
 			<Player>3</Player>
 			<Position x="1397.13465" z="380.3046"/>
 			<Orientation y="0.73331"/>
 			<Actor seed="27873"/>
 		</Entity>
 		<Entity uid="12251">
-			<Template>other/stall_med</Template>
+			<Template>structures/stall_med</Template>
 			<Player>3</Player>
 			<Position x="1398.14283" z="409.62903"/>
 			<Orientation y="2.35621"/>
@@ -69867,7 +69866,7 @@
 			<Actor seed="54487"/>
 		</Entity>
 		<Entity uid="13124">
-			<Template>structures/mace_farmstead</Template>
+			<Template>structures/mace/farmstead</Template>
 			<Player>1</Player>
 			<Position x="1462.24927" z="235.0849"/>
 			<Orientation y="2.47619"/>
@@ -71239,21 +71238,21 @@
 			<Actor seed="4397"/>
 		</Entity>
 		<Entity uid="13321">
-			<Template>gaia/flora_tree_apple</Template>
+			<Template>gaia/fruit/apple</Template>
 			<Player>1</Player>
 			<Position x="442.6757" z="270.56922"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="16629"/>
 		</Entity>
 		<Entity uid="13322">
-			<Template>gaia/flora_tree_apple</Template>
+			<Template>gaia/fruit/apple</Template>
 			<Player>1</Player>
 			<Position x="445.15519" z="274.5918"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="44309"/>
 		</Entity>
 		<Entity uid="13323">
-			<Template>gaia/flora_tree_apple</Template>
+			<Template>gaia/fruit/apple</Template>
 			<Player>1</Player>
 			<Position x="449.38071" z="278.25821"/>
 			<Orientation y="2.35621"/>
@@ -72352,7 +72351,7 @@
 			<Actor seed="55302"/>
 		</Entity>
 		<Entity uid="13485">
-			<Template>units/mace_hero_philip</Template>
+			<Template>units/mace/hero_philip_ii</Template>
 			<Player>1</Player>
 			<Position x="1361.82044" z="280.63059"/>
 			<Orientation y="-0.77047"/>

@@ -138,26 +138,26 @@ Trigger.prototype.SpawnSiegeEquipment = function(data)
 		units.push("units/athen_mechanical_siege_oxybeles_packed");
 	}
 	else {
-		units.push("units/mace_mechanical_siege_tower");
-		units.push("units/mace_mechanical_siege_tower");
+		units.push("units/mace/siege_tower");
+		units.push("units/mace/siege_tower");
 	}
 	
 	if (this.dialogAnswers[1] == 1)
 	{
-		units.push("units/mace_mechanical_siege_ram");
-		units.push("units/mace_mechanical_siege_ram");
-		units.push("units/mace_mechanical_siege_ram");
+		units.push("units/mace/siege_ram");
+		units.push("units/mace/siege_ram");
+		units.push("units/mace/siege_ram");
 	}
 	else {
-		units.push("units/mace_mechanical_siege_lithobolos_packed");
-		units.push("units/mace_mechanical_siege_lithobolos_packed");
-		units.push("units/mace_mechanical_siege_lithobolos_packed");
+		units.push("units/mace/siege_lithobolos_packed");
+		units.push("units/mace/siege_lithobolos_packed");
+		units.push("units/mace/siege_lithobolos_packed");
 	}
 	
 	if (this.dialogAnswers[2] == 1)
 	{
-		units.push("units/mace_mechanical_siege_lithobolos_packed");
-		units.push("units/mace_mechanical_siege_lithobolos_packed");
+		units.push("units/mace/siege_lithobolos_packed");
+		units.push("units/mace/siege_lithobolos_packed");
 	}
 	else {
 		units.push("units/athen_mechanical_siege_oxybeles_packed");
@@ -513,7 +513,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 			for (let c of camps_p)
 			{
 				//spawn the garrison inside the tower
-				let archers_e = TriggerHelper.SpawnUnits(c, "units/athen_champion_ranged",1,p);
+				let archers_e = TriggerHelper.SpawnUnits(c, "units/athen/champion_ranged",1,p);
 				
 				for (let a of archers_e)
 				{

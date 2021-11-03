@@ -88,7 +88,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		TriggerHelper.SpawnUnits(7889,"units/gaul_ship_trireme",1,1);
 		
 		//spawn some villagers
-		TriggerHelper.SpawnUnits(7889,"units/mace_support_female_citizen",5,1);
+		TriggerHelper.SpawnUnits(7889,"units/mace/support_female_citizen",5,1);
 		
 		//trigger cavalry attacks
 		if (this.gaul_cavalary_started == false)
@@ -322,7 +322,7 @@ Trigger.prototype.SpawnInvasionShip = function()
 	let ship_garrison = [];
 	
 	//spawn the garrison inside the ship
-	ship_garrison = ship_garrison.concat(TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/athen_champion_ranged",6,7));
+	ship_garrison = ship_garrison.concat(TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/athen/champion_ranged",6,7));
 	
 	ship_garrison = ship_garrison.concat(TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/thebes_sacred_band_hoplitai",6,7));
 	

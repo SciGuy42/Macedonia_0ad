@@ -658,7 +658,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 			else
 			{
 				//spawn the garrison inside the tower
-				let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",5,p);
+				let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",5,p);
 				
 				for (let a of archers_e)
 				{
@@ -676,7 +676,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		{
 			//spawn the garrison inside the tower
 			
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",fort_size,p);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",fort_size,p);
 			
 			for (let a of archers_e)
 			{
@@ -690,7 +690,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let e of towers_w)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",2,p);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",2,p);
 				
 			for (let a of archers_e)
 			{
@@ -866,7 +866,7 @@ Trigger.prototype.SpawnInitialPatrol = function(data)
 	let num_patrols = 26;
 	let patrol_size = 4;
 	
-	let inf_templates = ["units/mace_champion_infantry_e", "units/mace_champion_infantry_a","units/mace_champion_infantry_e","units/mace_infantry_archer_e","units/mace_infantry_javelinist_e","units/mace_infantry_pikeman_e","units/mace_infantry_slinger_e","units/mace_thorakites", "units/mace_thureophoros","units/athen_champion_ranged","units/athen_champion_marine"];
+	let inf_templates = ["units/mace/champion_infantry_spearman_02", "units/mace/champion_infantry_spearman","units/mace_champion_infantry_e","units/mace/infantry_archer_e","units/mace_infantry_javelinist_e","units/mace_infantry_pikeman_e","units/mace/infantry_slinger_e","units/mace_thorakites", "units/mace_thureophoros","units/athen/champion_ranged","units/athen/champion_marine"];
 	
 	//spawn infantry
 	for (let j = 0; j < num_patrols; j++)
@@ -1005,7 +1005,7 @@ Trigger.prototype.QuestFieldBattleReward = function(data)
 	let spawn_site = 6404; //alexander
 	
 	//spawn some special guards
-	TriggerHelper.SpawnUnits(spawn_site,"units/mace_champion_infantry_e",8,1);
+	TriggerHelper.SpawnUnits(spawn_site,"units/mace/champion_infantry_spearman_02",8,1);
 	TriggerHelper.SpawnUnits(spawn_site,"units/mace_thureophoros",8,1);
 	
 	//some priests

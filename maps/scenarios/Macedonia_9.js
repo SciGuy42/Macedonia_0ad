@@ -147,7 +147,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			if (this.captured_shop == false)
 			{
 				//spawn some siege catapults
-				TriggerHelper.SpawnUnits(12602,"units/mace_mechanical_siege_lithobolos_packed",3,1);
+				TriggerHelper.SpawnUnits(12602,"units/mace/siege_lithobolos_packed",3,1);
 				
 				//we get some siege tech
 				let cmpPlayer = QueryPlayerIDInterface(1);
@@ -263,7 +263,7 @@ Trigger.prototype.RangeAction = function(data)
 		this.spawnedBigShip = true;
 		
 		let big_ships = TriggerHelper.SpawnUnits(12170,"units/ptol_ship_quinquereme",1,1);
-		TriggerHelper.SpawnUnits(12170,"units/mace_mechanical_siege_lithobolos_packed",2,1);
+		TriggerHelper.SpawnUnits(12170,"units/mace/siege_lithobolos_packed",2,1);
 		
 		this.big_ship = big_ships[0];
 		this.DoAfterDelay(this.catapultShipAttackInterval,"spawnCatapultShipAttack",null);
@@ -331,7 +331,7 @@ Trigger.prototype.spawnShipEscort = function(data)
 		let ship_spawned = TriggerHelper.SpawnUnits(spawn_site,pickRandom(shipTypes),1,random_enemy);
 		
 		//spawn the garrison inside the ship
-		TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/athen_champion_ranged",this.escortShipGarrison,random_enemy);
+		TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/athen/champion_ranged",this.escortShipGarrison,random_enemy);
 		
 		let cmpUnitAI = Engine.QueryInterface(ship_spawned[0], IID_UnitAI);
 		cmpUnitAI.orderQueue = [];
@@ -369,7 +369,7 @@ Trigger.prototype.spawnCatapultShipAttack = function(data)
 			let ship_spawned = TriggerHelper.SpawnUnits(spawn_site,"units/pers_ship_bireme",1,random_enemy);
 			
 			//spawn the garrison inside the ship
-			TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/athen_champion_ranged",garrisonCount,random_enemy);
+			TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/athen/champion_ranged",garrisonCount,random_enemy);
 			
 			//make sure the unit has no orders, for some reason after garissoning, the order queue is full of pick up orders
 			let cmpUnitAI = Engine.QueryInterface(ship_spawned[0], IID_UnitAI);
@@ -410,7 +410,7 @@ Trigger.prototype.spawnInvasionAttack = function(data)
 	warn("spawned invasion ship");
 	
 	//spawn the garrison inside the ship
-	TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/athen_champion_ranged",10,random_enemy);
+	TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/athen/champion_ranged",10,random_enemy);
 	TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/thebes_sacred_band_hoplitai",10,random_enemy);
 			
 	
@@ -483,7 +483,7 @@ Trigger.prototype.specialShipAttack = function(data)
 			let ship_spawned = TriggerHelper.SpawnUnits(spawn_site,pickRandom(shipTypes),1,random_enemy);
 
 			//spawn the garrison inside the ship
-			TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/athen_champion_ranged",10,random_enemy);
+			TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/athen/champion_ranged",10,random_enemy);
 			
 			//make sure the unit has no orders, for some reason after garissoning, the order queue is full of pick up orders
 			let cmpUnitAI = Engine.QueryInterface(ship_spawned[0], IID_UnitAI);
@@ -552,7 +552,7 @@ Trigger.prototype.spawnShipAttack = function(data)
 			let ship_spawned = TriggerHelper.SpawnUnits(spawn_site,pickRandom(shipTypes),1,random_enemy);
 
 			//spawn the garrison inside the ship
-			TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/athen_champion_ranged",garrisonCount,random_enemy);
+			TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/athen/champion_ranged",garrisonCount,random_enemy);
 			
 			//make sure the unit has no orders, for some reason after garissoning, the order queue is full of pick up orders
 			let cmpUnitAI = Engine.QueryInterface(ship_spawned[0], IID_UnitAI);
@@ -708,7 +708,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let e of towers_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",size,p);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",size,p);
 			
 			for (let a of archers_e)
 			{
@@ -723,7 +723,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let e of forts_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",20,p);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",20,p);
 			
 			for (let a of archers_e)
 			{
@@ -791,7 +791,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 	
 	//restrict techs by ally
 	cmpPlayer = QueryPlayerIDInterface(5);
-	cmpPlayer.SetDisabledTemplates(["units/mace_support_female_citizen","units/sele_support_female_citizen"]);
+	cmpPlayer.SetDisabledTemplates(["units/mace/support_female_citizen","units/sele_support_female_citizen"]);
 	
 	//some constants
 	cmpTrigger.enemy_players = [2,3,4];

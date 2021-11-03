@@ -332,7 +332,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of outposts_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/mace_champion_infantry_a",1,p);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/mace/champion_infantry_spearman",1,p);
 			
 			for (let a of archers_e)
 			{
@@ -542,7 +542,7 @@ Trigger.prototype.SpawnInitialPatrol = function(data)
 Trigger.prototype.SpawnIntervalPtolemyAttack = function(data)
 {
 	//templates
-	let templates = ["units/athen_champion_ranged","units/athen_champion_marine","units/athen_champion_marine","units/mace_champion_infantry_a","units/mace_champion_infantry_e","units/mace_thorakites","units/mace_thureophoros"];
+	let templates = ["units/athen/champion_ranged","units/athen/champion_marine","units/athen/champion_marine","units/mace/champion_infantry_spearman","units/mace/champion_infantry_spearman_02","units/mace_thorakites","units/mace_thureophoros"];
 
 	//how big each squad
 	let squad_size = this.ptolAttackSize;

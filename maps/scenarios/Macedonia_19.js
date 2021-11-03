@@ -247,7 +247,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let e of towers_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",5,p);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",5,p);
 			
 			for (let a of archers_e)
 			{
@@ -264,7 +264,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		{
 			//spawn the garrison inside the tower
 			
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",fort_size,p);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",fort_size,p);
 			
 			for (let a of archers_e)
 			{
@@ -280,7 +280,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 			for (let e of towers_w)
 			{
 				//spawn the garrison inside the tower
-				let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",2,p);
+				let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",2,p);
 					
 				for (let a of archers_e)
 				{
@@ -295,7 +295,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of camps_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen_champion_ranged",10,p);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen/champion_ranged",10,p);
 			
 			for (let a of archers_e)
 			{
@@ -460,7 +460,7 @@ Trigger.prototype.StartNextAttack = function(data)
 	
 	if (this.attack_index == 2)
 	{
-		this.pers_siege_templates.push("units/mace_mechanical_siege_lithobolos_packed");
+		this.pers_siege_templates.push("units/mace/siege_lithobolos_packed");
 	}
 	
 	if (this.attack_index < 3)
