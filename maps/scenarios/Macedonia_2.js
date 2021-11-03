@@ -124,7 +124,7 @@ Trigger.prototype.RangeAction = function(data)
 	{
 		this.spawnedTraders = true;
 		
-		TriggerHelper.SpawnUnits(8153,"units/mace_support_trader",5,1);
+		TriggerHelper.SpawnUnits(8153,"units/mace/support_trader",5,1);
 	}
 };
 
@@ -162,7 +162,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	for (let e of ships)
 	{
 		//spawn the garrison inside the ship
-		TriggerHelper.SpawnGarrisonedUnits(e, "units/athen_champion_ranged",ship_garrison_count,4);	
+		TriggerHelper.SpawnGarrisonedUnits(e, "units/athen/champion_ranged",ship_garrison_count,4);	
 	}
 }
 

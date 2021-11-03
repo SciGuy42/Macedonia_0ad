@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Scenario version="6">
+<Scenario version="7">
 	<Environment>
 		<SkySet>cumulus</SkySet>
 		<SunColor r="0.729412" g="0.737255" b="0.564706"/>
 		<SunElevation angle="0.502655"/>
 		<SunRotation angle="-3.14159"/>
-		<TerrainAmbientColor r="0.513726" g="0.47451" b="0.321569"/>
-		<UnitsAmbientColor r="0.564706" g="0.576471" b="0.54902"/>
+		<AmbientColor r="0.564706" g="0.576471" b="0.54902"/>
 		<Fog>
 			<FogFactor>0</FogFactor>
 			<FogThickness>0</FogThickness>
@@ -10500,487 +10499,487 @@
 			<Orientation y="1.15218"/>
 		</Entity>
 		<Entity uid="2332">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="679.02027" z="432.5962"/>
 			<Orientation y="-0.27576"/>
 		</Entity>
 		<Entity uid="2333">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="671.41395" z="420.9278"/>
 			<Orientation y="-1.65879"/>
 		</Entity>
 		<Entity uid="2334">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="677.58405" z="424.63447"/>
 			<Orientation y="0.43503"/>
 		</Entity>
 		<Entity uid="2335">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="730.84083" z="1476.99238"/>
 			<Orientation y="0.69938"/>
 		</Entity>
 		<Entity uid="2336">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="756.63837" z="1475.48353"/>
 			<Orientation y="-1.164"/>
 		</Entity>
 		<Entity uid="2337">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="731.30231" z="1484.72297"/>
 			<Orientation y="0.0521"/>
 		</Entity>
 		<Entity uid="2338">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1882.66126" z="1337.44941"/>
 			<Orientation y="-1.4586"/>
 		</Entity>
 		<Entity uid="2339">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1878.17847" z="1340.55475"/>
 			<Orientation y="-2.38506"/>
 		</Entity>
 		<Entity uid="2340">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1893.86762" z="1367.3689"/>
 			<Orientation y="-4.08594"/>
 		</Entity>
 		<Entity uid="2341">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="482.50733" z="1634.45191"/>
 			<Orientation y="-3.7818"/>
 		</Entity>
 		<Entity uid="2342">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="487.44428" z="1633.49512"/>
 			<Orientation y="0.39502"/>
 		</Entity>
 		<Entity uid="2343">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="467.50831" z="1629.07392"/>
 			<Orientation y="-2.97101"/>
 		</Entity>
 		<Entity uid="2344">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="458.45801" z="1626.71607"/>
 			<Orientation y="-3.57808"/>
 		</Entity>
 		<Entity uid="2345">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1020.04267" z="378.38764"/>
 			<Orientation y="-2.32781"/>
 		</Entity>
 		<Entity uid="2346">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1025.19764" z="378.34253"/>
 			<Orientation y="1.01226"/>
 		</Entity>
 		<Entity uid="2347">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1105.86329" z="526.63953"/>
 			<Orientation y="-3.41955"/>
 		</Entity>
 		<Entity uid="2348">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1132.0431" z="534.83918"/>
 			<Orientation y="-0.34565"/>
 		</Entity>
 		<Entity uid="2349">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1106.42542" z="536.5121"/>
 			<Orientation y="-2.03042"/>
 		</Entity>
 		<Entity uid="2350">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1132.84351" z="539.00245"/>
 			<Orientation y="0.34168"/>
 		</Entity>
 		<Entity uid="2351">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1855.71808" z="463.19709"/>
 			<Orientation y="-4.05021"/>
 		</Entity>
 		<Entity uid="2352">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1850.15894" z="473.06"/>
 			<Orientation y="-0.13093"/>
 		</Entity>
 		<Entity uid="2353">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1846.70545" z="486.67072"/>
 			<Orientation y="-4.48214"/>
 		</Entity>
 		<Entity uid="2354">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1863.76648" z="489.59357"/>
 			<Orientation y="-2.65"/>
 		</Entity>
 		<Entity uid="2355">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="947.53327" z="741.60407"/>
 			<Orientation y="-2.25245"/>
 		</Entity>
 		<Entity uid="2356">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="932.12702" z="721.30799"/>
 			<Orientation y="-2.40404"/>
 		</Entity>
 		<Entity uid="2357">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="811.03455" z="337.27851"/>
 			<Orientation y="-3.94353"/>
 		</Entity>
 		<Entity uid="2358">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="811.6673" z="332.09089"/>
 			<Orientation y="-4.21659"/>
 		</Entity>
 		<Entity uid="2359">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="805.87812" z="330.51911"/>
 			<Orientation y="-4.62031"/>
 		</Entity>
 		<Entity uid="2360">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="397.26771" z="987.98267"/>
 			<Orientation y="-0.65476"/>
 		</Entity>
 		<Entity uid="2361">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="413.44501" z="994.9715"/>
 			<Orientation y="0.41626"/>
 		</Entity>
 		<Entity uid="2362">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="421.85132" z="986.09321"/>
 			<Orientation y="-4.44704"/>
 		</Entity>
 		<Entity uid="2363">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="415.84968" z="1005.82142"/>
 			<Orientation y="-2.26326"/>
 		</Entity>
 		<Entity uid="2364">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="423.62159" z="1030.1471"/>
 			<Orientation y="-1.97097"/>
 		</Entity>
 		<Entity uid="2365">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="407.77912" z="1026.31672"/>
 			<Orientation y="1.05921"/>
 		</Entity>
 		<Entity uid="2366">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1369.29261" z="1824.1988"/>
 			<Orientation y="-3.07615"/>
 		</Entity>
 		<Entity uid="2367">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1447.19611" z="1840.01087"/>
 			<Orientation y="-4.0348"/>
 		</Entity>
 		<Entity uid="2368">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1462.64338" z="1836.472"/>
 			<Orientation y="0.45258"/>
 		</Entity>
 		<Entity uid="2369">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1467.44672" z="1839.29554"/>
 			<Orientation y="-1.39773"/>
 		</Entity>
 		<Entity uid="2370">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="566.19935" z="1557.81067"/>
 			<Orientation y="0.4418"/>
 		</Entity>
 		<Entity uid="2371">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1036.21637" z="498.35676"/>
 			<Orientation y="0.80013"/>
 		</Entity>
 		<Entity uid="2372">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="366.51764" z="1754.22529"/>
 			<Orientation y="-2.42875"/>
 		</Entity>
 		<Entity uid="2373">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="366.26679" z="1729.77271"/>
 			<Orientation y="-3.57802"/>
 		</Entity>
 		<Entity uid="2374">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="814.5467" z="311.43335"/>
 			<Orientation y="0.74083"/>
 		</Entity>
 		<Entity uid="2375">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="587.27448" z="1278.34192"/>
 			<Orientation y="-2.32789"/>
 		</Entity>
 		<Entity uid="2376">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="593.51697" z="1287.41468"/>
 			<Orientation y="-4.04946"/>
 		</Entity>
 		<Entity uid="2377">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="210.39942" z="741.25684"/>
 			<Orientation y="0.44745"/>
 		</Entity>
 		<Entity uid="2378">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="194.9148" z="729.53168"/>
 			<Orientation y="-1.30738"/>
 		</Entity>
 		<Entity uid="2379">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="207.32203" z="729.44465"/>
 			<Orientation y="0.2034"/>
 		</Entity>
 		<Entity uid="2380">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1676.19208" z="1115.26417"/>
 			<Orientation y="-1.25618"/>
 		</Entity>
 		<Entity uid="2381">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1666.7057" z="1139.78644"/>
 			<Orientation y="0.5939"/>
 		</Entity>
 		<Entity uid="2382">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1844.37629" z="1389.71045"/>
 			<Orientation y="0.05465"/>
 		</Entity>
 		<Entity uid="2383">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="982.9629" z="148.16883"/>
 			<Orientation y="-1.28862"/>
 		</Entity>
 		<Entity uid="2384">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1831.73462" z="900.64954"/>
 			<Orientation y="1.27881"/>
 		</Entity>
 		<Entity uid="2385">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1881.62256" z="1026.39478"/>
 			<Orientation y="-2.57833"/>
 		</Entity>
 		<Entity uid="2386">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1324.03522" z="214.19599"/>
 			<Orientation y="0.71055"/>
 		</Entity>
 		<Entity uid="2387">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="956.65143" z="1231.71985"/>
 			<Orientation y="-0.14861"/>
 		</Entity>
 		<Entity uid="2388">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="160.15357" z="1007.79358"/>
 			<Orientation y="-2.30135"/>
 		</Entity>
 		<Entity uid="2389">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1541.78565" z="462.08301"/>
 			<Orientation y="-3.94045"/>
 		</Entity>
 		<Entity uid="2390">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="870.31098" z="1440.63251"/>
 			<Orientation y="-0.1783"/>
 		</Entity>
 		<Entity uid="2391">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="730.73157" z="1970.899"/>
 			<Orientation y="-2.90098"/>
 		</Entity>
 		<Entity uid="2392">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="669.35914" z="920.71863"/>
 			<Orientation y="-4.4362"/>
 		</Entity>
 		<Entity uid="2393">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="677.16034" z="948.43201"/>
 			<Orientation y="-4.52265"/>
 		</Entity>
 		<Entity uid="2394">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1323.32538" z="1872.28443"/>
 			<Orientation y="-0.21822"/>
 		</Entity>
 		<Entity uid="2395">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1328.18586" z="1873.32862"/>
 			<Orientation y="-3.887"/>
 		</Entity>
 		<Entity uid="2396">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1914.37513" z="1278.36811"/>
 			<Orientation y="-4.60639"/>
 		</Entity>
 		<Entity uid="2397">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1720.27369" z="1214.53028"/>
 			<Orientation y="-2.79908"/>
 		</Entity>
 		<Entity uid="2398">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1711.93976" z="1206.71503"/>
 			<Orientation y="-2.16259"/>
 		</Entity>
 		<Entity uid="2399">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1732.26252" z="1218.27985"/>
 			<Orientation y="-4.46744"/>
 		</Entity>
 		<Entity uid="2400">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="313.6128" z="700.79474"/>
 			<Orientation y="1.40122"/>
 		</Entity>
 		<Entity uid="2401">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="312.74128" z="692.9466"/>
 			<Orientation y="1.3416"/>
 		</Entity>
 		<Entity uid="2402">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="714.37494" z="1604.01319"/>
 			<Orientation y="-1.4498"/>
 		</Entity>
 		<Entity uid="2403">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1753.74189" z="1045.03785"/>
 			<Orientation y="-1.9531"/>
 		</Entity>
 		<Entity uid="2404">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1774.33503" z="1047.15088"/>
 			<Orientation y="-0.21854"/>
 		</Entity>
 		<Entity uid="2405">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1250.14478" z="1263.3891"/>
 			<Orientation y="-0.22129"/>
 		</Entity>
 		<Entity uid="2406">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="1235.90754" z="1262.23304"/>
 			<Orientation y="1.33895"/>
 		</Entity>
 		<Entity uid="2407">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="949.33252" z="705.67133"/>
 			<Orientation y="0.28406"/>
 		</Entity>
 		<Entity uid="2408">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="946.12238" z="696.23121"/>
 			<Orientation y="0.7326"/>
 		</Entity>
 		<Entity uid="2409">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="941.34864" z="707.9278"/>
 			<Orientation y="-2.24541"/>
 		</Entity>
 		<Entity uid="2410">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="993.19434" z="302.19416"/>
 			<Orientation y="-3.85471"/>
 		</Entity>
 		<Entity uid="2411">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="997.66846" z="282.35444"/>
 			<Orientation y="1.33948"/>
 		</Entity>
 		<Entity uid="2412">
-			<Template>gaia/flora_tree_dead</Template>
+			<Template>gaia/tree/dead</Template>
 			<Player>0</Player>
 			<Position x="995.71741" z="306.30677"/>
 			<Orientation y="-3.16953"/>
@@ -11231,21 +11230,21 @@
 			<Actor seed="52653"/>
 		</Entity>
 		<Entity uid="2481">
-			<Template>structures/mace_outpost</Template>
+			<Template>structures/mace/outpost</Template>
 			<Player>3</Player>
 			<Position x="1700.56983" z="1747.19788"/>
 			<Orientation y="0.47674"/>
 			<Actor seed="42476"/>
 		</Entity>
 		<Entity uid="2482">
-			<Template>structures/mace_outpost</Template>
+			<Template>structures/mace/outpost</Template>
 			<Player>3</Player>
 			<Position x="1727.08851" z="1725.23719"/>
 			<Orientation y="0.58465"/>
 			<Actor seed="33669"/>
 		</Entity>
 		<Entity uid="2483">
-			<Template>structures/ptol_mercenary_camp</Template>
+			<Template>structures/ptol/mercenary_camp</Template>
 			<Player>2</Player>
 			<Position x="1456.69373" z="1915.4944"/>
 			<Orientation y="-3.00817"/>
@@ -11371,70 +11370,70 @@
 			<Actor seed="6753"/>
 		</Entity>
 		<Entity uid="2501">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="596.52271" z="185.82966"/>
 			<Orientation y="0.14611"/>
 			<Actor seed="64751"/>
 		</Entity>
 		<Entity uid="2502">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="594.59345" z="186.43186"/>
 			<Orientation y="0.14611"/>
 			<Actor seed="638"/>
 		</Entity>
 		<Entity uid="2503">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="592.66272" z="187.04096"/>
 			<Orientation y="0.14611"/>
 			<Actor seed="42425"/>
 		</Entity>
 		<Entity uid="2504">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="590.79084" z="187.68857"/>
 			<Orientation y="0.14611"/>
 			<Actor seed="57756"/>
 		</Entity>
 		<Entity uid="2505">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="588.83088" z="188.12256"/>
 			<Orientation y="0.14611"/>
 			<Actor seed="52061"/>
 		</Entity>
 		<Entity uid="2506">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="600.19111" z="184.54502"/>
 			<Orientation y="0.14611"/>
 			<Actor seed="53398"/>
 		</Entity>
 		<Entity uid="2507">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="602.11915" z="184.23246"/>
 			<Orientation y="0.14611"/>
 			<Actor seed="37547"/>
 		</Entity>
 		<Entity uid="2508">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="603.78602" z="183.85471"/>
 			<Orientation y="0.14611"/>
 			<Actor seed="11952"/>
 		</Entity>
 		<Entity uid="2509">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="605.68665" z="183.05436"/>
 			<Orientation y="0.14611"/>
 			<Actor seed="44393"/>
 		</Entity>
 		<Entity uid="2510">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="607.52863" z="182.34449"/>
 			<Orientation y="0.14611"/>
@@ -11483,42 +11482,42 @@
 			<Actor seed="9430"/>
 		</Entity>
 		<Entity uid="2517">
-			<Template>units/athen_champion_ranged</Template>
+			<Template>units/athen/champion_ranged</Template>
 			<Player>1</Player>
 			<Position x="590.4214" z="178.19239"/>
 			<Orientation y="0.35213"/>
 			<Actor seed="20942"/>
 		</Entity>
 		<Entity uid="2518">
-			<Template>units/athen_champion_ranged</Template>
+			<Template>units/athen/champion_ranged</Template>
 			<Player>1</Player>
 			<Position x="592.62037" z="177.5756"/>
 			<Orientation y="0.35213"/>
 			<Actor seed="41142"/>
 		</Entity>
 		<Entity uid="2519">
-			<Template>units/athen_champion_ranged</Template>
+			<Template>units/athen/champion_ranged</Template>
 			<Player>1</Player>
 			<Position x="595.15662" z="177.08863"/>
 			<Orientation y="0.35213"/>
 			<Actor seed="32589"/>
 		</Entity>
 		<Entity uid="2520">
-			<Template>units/athen_champion_ranged</Template>
+			<Template>units/athen/champion_ranged</Template>
 			<Player>1</Player>
 			<Position x="597.63727" z="176.35401"/>
 			<Orientation y="0.35213"/>
 			<Actor seed="23820"/>
 		</Entity>
 		<Entity uid="2521">
-			<Template>units/athen_champion_ranged</Template>
+			<Template>units/athen/champion_ranged</Template>
 			<Player>1</Player>
 			<Position x="599.7425" z="175.50126"/>
 			<Orientation y="0.35213"/>
 			<Actor seed="42861"/>
 		</Entity>
 		<Entity uid="2522">
-			<Template>units/athen_champion_ranged</Template>
+			<Template>units/athen/champion_ranged</Template>
 			<Player>1</Player>
 			<Position x="601.78193" z="174.78891"/>
 			<Orientation y="0.35213"/>
@@ -11532,7 +11531,7 @@
 			<Actor seed="41984"/>
 		</Entity>
 		<Entity uid="2528">
-			<Template>structures/ptol_mercenary_camp</Template>
+			<Template>structures/ptol/mercenary_camp</Template>
 			<Player>3</Player>
 			<Position x="574.64881" z="154.94327"/>
 			<Orientation y="-0.19166"/>
@@ -12062,14 +12061,14 @@
 			<Actor seed="23249"/>
 		</Entity>
 		<Entity uid="2671">
-			<Template>other/stall_med</Template>
+			<Template>structures/stall_med</Template>
 			<Player>4</Player>
 			<Position x="1135.71045" z="551.77204"/>
 			<Orientation y="5.74604"/>
 			<Actor seed="51256"/>
 		</Entity>
 		<Entity uid="2672">
-			<Template>other/stall_big</Template>
+			<Template>structures/stall_big</Template>
 			<Player>4</Player>
 			<Position x="1130.27247" z="568.93293"/>
 			<Orientation y="2.6865"/>
@@ -12167,77 +12166,77 @@
 			<Actor seed="10694"/>
 		</Entity>
 		<Entity uid="2695">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="91.14394" z="722.45746"/>
 			<Orientation y="0.91041"/>
 			<Actor seed="28933"/>
 		</Entity>
 		<Entity uid="2696">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="79.53647" z="736.46094"/>
 			<Orientation y="1.35105"/>
 			<Actor seed="25049"/>
 		</Entity>
 		<Entity uid="2697">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="71.50773" z="752.82874"/>
 			<Orientation y="1.45047"/>
 			<Actor seed="32989"/>
 		</Entity>
 		<Entity uid="2698">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="143.55906" z="790.77833"/>
 			<Orientation y="-2.36957"/>
 			<Actor seed="8307"/>
 		</Entity>
 		<Entity uid="2699">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="134.73121" z="803.34833"/>
 			<Orientation y="-2.46735"/>
 			<Actor seed="52009"/>
 		</Entity>
 		<Entity uid="2700">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="128.21857" z="819.35834"/>
 			<Orientation y="-2.22428"/>
 			<Actor seed="26624"/>
 		</Entity>
 		<Entity uid="2701">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="68.51958" z="771.49048"/>
 			<Orientation y="1.28902"/>
 			<Actor seed="65248"/>
 		</Entity>
 		<Entity uid="2702">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="141.41684" z="712.27619"/>
 			<Orientation y="2.31313"/>
 			<Actor seed="56387"/>
 		</Entity>
 		<Entity uid="2703">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="153.14954" z="695.85297"/>
 			<Orientation y="-0.46607"/>
 			<Actor seed="54433"/>
 		</Entity>
 		<Entity uid="2704">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="165.53748" z="708.23188"/>
 			<Orientation y="-1.56887"/>
 			<Actor seed="60713"/>
 		</Entity>
 		<Entity uid="2705">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="156.04618" z="724.72461"/>
 			<Orientation y="3.12548"/>
@@ -12251,52 +12250,52 @@
 			<Actor seed="27825"/>
 		</Entity>
 		<Entity uid="2708">
-			<Template>structures/brit_rotarymill</Template>
+			<Template>structures/brit/rotarymill</Template>
 			<Player>5</Player>
 			<Position x="61.52743" z="817.02076"/>
 			<Orientation y="1.58521"/>
 			<Actor seed="11439"/>
 		</Entity>
 		<Entity uid="2709">
-			<Template>structures/brit_corral</Template>
+			<Template>structures/brit/corral</Template>
 			<Player>5</Player>
 			<Position x="54.30565" z="887.34516"/>
 			<Orientation y="1.41994"/>
 			<Actor seed="27202"/>
 		</Entity>
 		<Entity uid="2710">
-			<Template>other/palisades_rocks_long</Template>
+			<Template>structures/palisades_long</Template>
 			<Player>5</Player>
 			<Position x="58.52372" z="915.11353"/>
 			<Orientation y="-0.3329"/>
 		</Entity>
 		<Entity uid="2711">
-			<Template>other/palisades_rocks_long</Template>
+			<Template>structures/palisades_long</Template>
 			<Player>5</Player>
 			<Position x="63.17681" z="923.91877"/>
 			<Orientation y="-1.8493"/>
 		</Entity>
 		<Entity uid="2712">
-			<Template>other/palisades_rocks_long</Template>
+			<Template>structures/palisades_long</Template>
 			<Player>5</Player>
 			<Position x="49.85112" z="919.87146"/>
 			<Orientation y="1.3175"/>
 		</Entity>
 		<Entity uid="2713">
-			<Template>other/palisades_rocks_long</Template>
+			<Template>structures/palisades_long</Template>
 			<Player>5</Player>
 			<Position x="54.72455" z="928.55671"/>
 			<Orientation y="2.8339"/>
 		</Entity>
 		<Entity uid="2737">
-			<Template>structures/brit_corral</Template>
+			<Template>structures/brit/corral</Template>
 			<Player>5</Player>
 			<Position x="58.07883" z="871.33765"/>
 			<Orientation y="1.41994"/>
 			<Actor seed="27202"/>
 		</Entity>
 		<Entity uid="2738">
-			<Template>structures/brit_corral</Template>
+			<Template>structures/brit/corral</Template>
 			<Player>5</Player>
 			<Position x="60.30691" z="856.45978"/>
 			<Orientation y="1.41994"/>
@@ -12513,49 +12512,49 @@
 			<Actor seed="57870"/>
 		</Entity>
 		<Entity uid="2769">
-			<Template>structures/brit_barracks</Template>
+			<Template>structures/brit/barracks</Template>
 			<Player>5</Player>
 			<Position x="106.60181" z="787.6634"/>
 			<Orientation y="1.16506"/>
 			<Actor seed="13679"/>
 		</Entity>
 		<Entity uid="2770">
-			<Template>structures/brit_market</Template>
+			<Template>structures/brit/market</Template>
 			<Player>5</Player>
 			<Position x="125.41704" z="747.21015"/>
 			<Orientation y="1.07401"/>
 			<Actor seed="12019"/>
 		</Entity>
 		<Entity uid="2771">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="152.33075" z="779.11438"/>
 			<Orientation y="-2.82227"/>
 			<Actor seed="18637"/>
 		</Entity>
 		<Entity uid="2772">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="165.3072" z="777.58497"/>
 			<Orientation y="3.09411"/>
 			<Actor seed="7078"/>
 		</Entity>
 		<Entity uid="2773">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="133.6125" z="835.51282"/>
 			<Orientation y="-1.37923"/>
 			<Actor seed="45103"/>
 		</Entity>
 		<Entity uid="2774">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="89.05164" z="683.96473"/>
 			<Orientation y="0.71486"/>
 			<Actor seed="2041"/>
 		</Entity>
 		<Entity uid="2775">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="99.83445" z="674.9632"/>
 			<Orientation y="0.55056"/>
@@ -12611,42 +12610,42 @@
 			<Actor seed="25297"/>
 		</Entity>
 		<Entity uid="2786">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="141.04554" z="682.35651"/>
 			<Orientation y="0.31095"/>
 			<Actor seed="54433"/>
 		</Entity>
 		<Entity uid="2787">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="129.2938" z="697.63514"/>
 			<Orientation y="1.30727"/>
 			<Actor seed="56387"/>
 		</Entity>
 		<Entity uid="2788">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="174.83008" z="745.73127"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="63144"/>
 		</Entity>
 		<Entity uid="2789">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="184.5448" z="754.4253"/>
 			<Orientation y="2.408"/>
 			<Actor seed="15213"/>
 		</Entity>
 		<Entity uid="2790">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="195.74436" z="760.41095"/>
 			<Orientation y="2.83637"/>
 			<Actor seed="48359"/>
 		</Entity>
 		<Entity uid="2791">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>5</Player>
 			<Position x="209.30744" z="764.73212"/>
 			<Orientation y="-2.98644"/>
@@ -12744,14 +12743,14 @@
 			<Actor seed="25574"/>
 		</Entity>
 		<Entity uid="2822">
-			<Template>units/athen_champion_ranged</Template>
+			<Template>units/athen/champion_ranged</Template>
 			<Player>1</Player>
 			<Position x="605.71735" z="173.83378"/>
 			<Orientation y="0.35213"/>
 			<Actor seed="31329"/>
 		</Entity>
 		<Entity uid="2823">
-			<Template>units/athen_champion_ranged</Template>
+			<Template>units/athen/champion_ranged</Template>
 			<Player>1</Player>
 			<Position x="603.67792" z="174.54615"/>
 			<Orientation y="0.35213"/>
@@ -12772,14 +12771,14 @@
 			<Actor seed="12778"/>
 		</Entity>
 		<Entity uid="2826">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="609.46491" z="181.83979"/>
 			<Orientation y="0.14612"/>
 			<Actor seed="22387"/>
 		</Entity>
 		<Entity uid="2827">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="598.45899" z="185.32493"/>
 			<Orientation y="0.14612"/>

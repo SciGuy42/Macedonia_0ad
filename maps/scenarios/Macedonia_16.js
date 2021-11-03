@@ -36,7 +36,7 @@ var disabledTemplates = (civ) => [
 
 	// Shoreline
 	"structures/" + civ + "_dock",
-	"structures/brit_crannog",
+	"structures/brit/crannog",
 	"structures/cart_super_dock",
 	"structures/ptol_lighthouse",
 	
@@ -165,7 +165,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			this.num_docks_captured += 1;
 			warn("dock captured");
 			
-			TriggerHelper.SpawnUnits(data.entity,"units/mace_ship_merchant",2,1);
+			TriggerHelper.SpawnUnits(data.entity,"units/mace/ship_merchant",2,1);
 		}
 		else if (id.classesList.indexOf("Blacksmith") >= 0)
 		{
@@ -220,7 +220,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let e of towers_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",5,p);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",5,p);
 			
 			for (let a of archers_e)
 			{
@@ -237,7 +237,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		{
 			//spawn the garrison inside the tower
 			
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",fort_size,p);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",fort_size,p);
 			
 			for (let a of archers_e)
 			{
@@ -251,7 +251,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let e of towers_w)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",2,p);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",2,p);
 				
 			for (let a of archers_e)
 			{
@@ -265,7 +265,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of camps_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen_champion_ranged",10,p);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen/champion_ranged",10,p);
 			
 			for (let a of archers_e)
 			{
@@ -782,8 +782,8 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	cmpTrigger.pers_elite_templates = ["units/pers_arstibara","units/pers_champion_infantry","units/pers_kardakes_hoplite", "units/pers_kardakes_skirmisher","units/pers_infantry_archer_e","units/pers_cavalry_archer_e","units/pers_champion_cavalry_archer","units/pers_champion_cavalry","units/pers_cavalry_swordsman_e"];
 	
 	//macedonian
-	cmpTrigger.mace_inf_templates = ["units/mace_champion_infantry_a", "units/mace_champion_infantry_a","units/mace_champion_infantry_e","units/mace_infantry_archer_b","units/mace_infantry_javelinist_b","units/mace_infantry_pikeman_a","units/mace_infantry_slinger_b","units/mace_thorakites", "units/mace_thureophoros","units/athen_champion_ranged","units/athen_champion_marine","units/athen_champion_marine"];
-	cmpTrigger.mace_cav_templates = ["units/mace_champion_cavalry", "units/mace_cavalry_spearman_a","units/mace_cavalry_javelinist_a"];
+	cmpTrigger.mace_inf_templates = ["units/mace/champion_infantry_spearman", "units/mace_champion_infantry_a","units/mace/champion_infantry_spearman_02","units/mace/infantry_archer_b","units/mace/infantry_javelineer_b","units/mace/infantry_pikeman_a","units/mace_infantry_slinger_b","units/mace_thorakites", "units/mace_thureophoros","units/athen/champion_ranged","units/athen/champion_marine","units/athen/champion_marine"];
+	cmpTrigger.mace_cav_templates = ["units/mace_champion_cavalry", "units/mace/cavalry_spearman_a","units/mace/cavalry_javelineer_a"];
 	cmpTrigger.mace_siege_templates = ["units/mace_mechanical_siege_oxybeles_packed"];
 	
 	//some constants

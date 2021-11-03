@@ -50,7 +50,7 @@ var disabledTemplates = (civ) => [
 
 	// Shoreline
 	"structures/" + civ + "_dock",
-	"structures/brit_crannog",
+	"structures/brit/crannog",
 	"structures/cart_super_dock",
 	"structures/ptol_lighthouse",
 	
@@ -525,7 +525,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of camps_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen_champion_ranged",5,p);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen/champion_ranged",5,p);
 			
 			for (let a of archers_e)
 			{

@@ -47,7 +47,7 @@ var disabledTemplatesCCs = (civ) => [
 	"structures/" + civ + "_military_colony",
 
 	// Shoreline
-	"structures/brit_crannog"
+	"structures/brit/crannog"
 ];
 
 var disabledTemplatesDocksCCs = (civ) => [
@@ -59,7 +59,7 @@ var disabledTemplatesDocksCCs = (civ) => [
 
 	// Shoreline
 	"structures/" + civ + "_dock",
-	"structures/brit_crannog",
+	"structures/brit/crannog",
 	"structures/cart_super_dock",
 	"structures/ptol_lighthouse"
 ];
@@ -86,7 +86,7 @@ var disabledTemplates = (civ) => [
 
 	// Shoreline
 	"structures/" + civ + "_dock",
-	"structures/brit_crannog",
+	"structures/brit/crannog",
 	"structures/cart_super_dock",
 	"structures/ptol_lighthouse",
 	
@@ -418,7 +418,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of outposts)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen_champion_ranged",1,p);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen/champion_ranged",1,p);
 			
 			for (let a of archers_e)
 			{
@@ -438,7 +438,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of turrets)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen_champion_ranged",2,p);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen/champion_ranged",2,p);
 			
 			for (let a of archers_e)
 			{
@@ -452,7 +452,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of forts_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen_champion_ranged",10,owner);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen/champion_ranged",10,owner);
 			
 			for (let a of archers_e)
 			{
@@ -537,7 +537,7 @@ Trigger.prototype.SpawnInterevalPatrol = function(data)
 	
 	if (units_p.length < 30)
 	{
-		let templates = ["units/athen_champion_ranged"];
+		let templates = ["units/athen/champion_ranged"];
 	
 		let trigger_sites = this.GetTriggerPoints(triggerPointsPatrol);
 
@@ -1057,7 +1057,7 @@ Trigger.prototype.LevelAdvance = function(data)
 	else {
 		squad_templates = ["units/maur_champion_infantry","units/maur_infantry_spearman_e","units/maur_infantry_swordsman_e","units/maur_champion_maiden","units/maur_infantry_archer_e","units/maur_champion_maiden","units/maur_champion_infantry","units/maur_champion_maiden_archer","units/maur_elephant_archer_e","units/maur_champion_elephant","units/maur_cavalry_javelinist_e","units/maur_cavalry_swordsman_e","units/maur_champion_chariot","units/maur_champion_chariot"];
 		wave_templates = squad_templates;
-		siege_templates = ["units/maur_champion_elephant","units/mace_mechanical_siege_oxybeles_packed","units/pers_mechanical_siege_ram","units/mace_mechanical_siege_lithobolos_packed"];
+		siege_templates = ["units/maur_champion_elephant","units/mace_mechanical_siege_oxybeles_packed","units/pers_mechanical_siege_ram","units/mace/siege_lithobolos_packed"];
 	}
 	
 	//step 3 -- decide spawn sites

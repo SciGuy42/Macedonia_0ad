@@ -43,7 +43,7 @@ var disabledTemplates = (civ) => [
 
 	// Shoreline
 	"structures/" + civ + "_dock",
-	"structures/brit_crannog",
+	"structures/brit/crannog",
 	"structures/cart_super_dock",
 	"structures/ptol_lighthouse",
 	
@@ -371,7 +371,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		{
 			//spawn the garrison inside the tower
 			
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",fort_size,owner);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",fort_size,owner);
 			
 			for (let a of archers_e)
 			{
@@ -386,7 +386,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let e of towers_w)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",2,owner);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",2,owner);
 					
 			for (let a of archers_e)
 			{
@@ -401,7 +401,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of camps_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen_champion_ranged",5,p);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen/champion_ranged",5,p);
 			
 			for (let a of archers_e)
 			{
@@ -594,7 +594,7 @@ Trigger.prototype.ArcadianAttack = function(data)
 		else 
 		{
 			//siege
-			let units_i = TriggerHelper.SpawnUnits(spawn_site,"units/mace_mechanical_siege_lithobolos_packed",1,p);
+			let units_i = TriggerHelper.SpawnUnits(spawn_site,"units/mace/siege_lithobolos_packed",1,p);
 			attackers.push(units_i[0]);
 		}
 	}
@@ -885,7 +885,7 @@ Trigger.prototype.SpawnMercenarySquad = function(data)
 
 
 	//some templates
-	cmpTrigger.squadTemplates = ["units/athen_champion_ranged","units/athen_black_cloak","units/athen_champion_marine","units/athen_champion_infantry","units/athen_thureophoros"];
+	cmpTrigger.squadTemplates = ["units/athen/champion_ranged","units/athen_black_cloak","units/athen/champion_marine","units/athen_champion_infantry","units/athen_thureophoros"];
 
 	//some variables
 	cmpTrigger.mercSpawnProb = 0.95; //probability that mercs are spawned when you destroy an enemy structure

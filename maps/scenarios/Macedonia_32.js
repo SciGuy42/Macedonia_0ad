@@ -49,7 +49,7 @@ var disabledTemplates = (civ) => [
 
 	// Shoreline
 	"structures/" + civ + "_dock",
-	"structures/brit_crannog",
+	"structures/brit/crannog",
 	"structures/cart_super_dock",
 	"structures/ptol_lighthouse",
 	
@@ -251,7 +251,7 @@ Trigger.prototype.SpawnAssaultSquad = function(data)
 	let squad_size = 14;
 	
 	//what kinds
-	let templates = ["units/athen_champion_ranged","units/athen_champion_marine","units/mace_champion_infantry_a","units/mace_champion_infantry_e","units/mace_thorakites","units/mace_thureophoros"];
+	let templates = ["units/athen/champion_ranged","units/athen/champion_marine","units/mace/champion_infantry_spearman","units/mace/champion_infantry_spearman_02","units/mace_thorakites","units/mace_thureophoros"];
 	
 	let attackers = [];
 	for (let i = 0; i < squad_size; i++)
@@ -1161,7 +1161,7 @@ Trigger.prototype.QuestTradePostComplete = function(data)
 	//spawn a trade boat
 	let docks = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(6),"Dock").filter(TriggerHelper.IsInWorld);
 	
-	let unit_i = TriggerHelper.SpawnUnits(docks[0],"units/mace_ship_merchant",1,1);
+	let unit_i = TriggerHelper.SpawnUnits(docks[0],"units/mace/ship_merchant",1,1);
 	
 	this.ShowText("Thanks for taking care of our problem! Here, perhaps this boat will be useful to you.","Thanks!","I hate the water...");
 	

@@ -84,11 +84,11 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	if (data.entity == 7889 && data.from == 0 && data.to == 1) //captured fishing village
 	{
 		//spawn some support units
-		TriggerHelper.SpawnUnits(7889,"units/gaul_ship_fishing",3,1);
-		TriggerHelper.SpawnUnits(7889,"units/gaul_ship_trireme",1,1);
+		TriggerHelper.SpawnUnits(7889,"units/gaul/ship_fishing",3,1);
+		TriggerHelper.SpawnUnits(7889,"units/gaul/ship_trireme",1,1);
 		
 		//spawn some villagers
-		TriggerHelper.SpawnUnits(7889,"units/mace_support_female_citizen",5,1);
+		TriggerHelper.SpawnUnits(7889,"units/mace/support_female_citizen",5,1);
 		
 		//trigger cavalry attacks
 		if (this.gaul_cavalary_started == false)
@@ -97,12 +97,12 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		}
 	}
 	else if (data.entity == 7890 && data.from == 0 && data.to == 1){ //captured docks
-		TriggerHelper.SpawnUnits(7890,"units/gaul_ship_fishing",3,1);
-		TriggerHelper.SpawnUnits(7890,"units/gaul_ship_merchant",1,1);
+		TriggerHelper.SpawnUnits(7890,"units/gaul/ship_fishing",3,1);
+		TriggerHelper.SpawnUnits(7890,"units/gaul/ship_merchant",1,1);
 	}
 	else if (data.entity == 7903 && data.from == 0 && data.to == 1){
-		TriggerHelper.SpawnUnits(7903,"units/gaul_ship_fishing",3,1);
-		TriggerHelper.SpawnUnits(7903,"units/gaul_ship_merchant",1,1);
+		TriggerHelper.SpawnUnits(7903,"units/gaul/ship_fishing",3,1);
+		TriggerHelper.SpawnUnits(7903,"units/gaul/ship_merchant",1,1);
 	}
 	else if (data.entity == 8013 && data.from == 0 && data.to == 1){
 		//trigger cavalry attacks
@@ -322,7 +322,7 @@ Trigger.prototype.SpawnInvasionShip = function()
 	let ship_garrison = [];
 	
 	//spawn the garrison inside the ship
-	ship_garrison = ship_garrison.concat(TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/athen_champion_ranged",6,7));
+	ship_garrison = ship_garrison.concat(TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/athen/champion_ranged",6,7));
 	
 	ship_garrison = ship_garrison.concat(TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/thebes_sacred_band_hoplitai",6,7));
 	
@@ -691,7 +691,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	cmpTrigger.DoAfterDelay(cmpTrigger.invasionAttackDelay,"SpawnInvasionShip",null);
 
 	//cavalry attack variables
-	cmpTrigger.gaul_cavalry_types = ["units/gaul_cavalry_swordsman_a","units/gaul_cavalry_javelinist_a","units/gaul_cavalry_swordsman_b","units/gaul_cavalry_javelinist_b","units/brit_champion_cavalry"];
+	cmpTrigger.gaul_cavalry_types = ["units/gaul_cavalry_swordsman_a","units/gaul_cavalry_javelinist_a","units/gaul_cavalry_swordsman_b","units/gaul_cavalry_javelinist_b","units/brit/champion_chariot"];
 	cmpTrigger.gaul_cavalry_interval = 130 * 1000;
 	cmpTrigger.gaul_cavalary_started = false;
 

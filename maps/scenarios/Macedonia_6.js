@@ -90,11 +90,11 @@ Trigger.prototype.SpawnAndStartCavalryAttack = function()
 	}
 	else if (this.gaul_cav_attack_counter == 4)
 	{
-		this.gaul_cavalry_types = ["units/gaul_cavalry_swordsman_e","units/gaul_cavalry_javelinist_e","units/brit_war_dog_e","units/gaul_champion_cavalry"];
+		this.gaul_cavalry_types = ["units/gaul_cavalry_swordsman_e","units/gaul_cavalry_javelinist_e","units/brit_war_dog_e","units/gaul/champion_cavalry"];
 	}
 	else if (this.gaul_cav_attack_counter == 5)
 	{
-		this.gaul_cavalry_types = ["units/gaul_cavalry_swordsman_e","units/gaul_cavalry_javelinist_e","units/brit_war_dog_e","units/gaul_champion_cavalry","units/brit_champion_cavalry"];
+		this.gaul_cavalry_types = ["units/gaul_cavalry_swordsman_e","units/gaul_cavalry_javelinist_e","units/brit_war_dog_e","units/gaul/champion_cavalry","units/brit/champion_chariot"];
 	}
 	
 	//get list of barracks barracks
@@ -385,7 +385,7 @@ Trigger.prototype.GarrisonAction = function(data)
 	for (let camp_id of this.greek_camps)
 	{	
 		//spawn the garrison inside the tower
-		let archers_e = TriggerHelper.SpawnUnits(camp_id, "units/athen_champion_ranged",10,7);
+		let archers_e = TriggerHelper.SpawnUnits(camp_id, "units/athen/champion_ranged",10,7);
 				
 		for (let a of archers_e)
 		{
@@ -427,14 +427,14 @@ Trigger.prototype.GarrisonAction = function(data)
 	
 	//cavalry attack variables
 	cmpTrigger.gaul_cavalry_types = ["units/gaul_cavalry_swordsman_a","units/gaul_cavalry_javelinist_a","units/brit_war_dog_a"];
-	cmpTrigger.gaul_cavalry_types_all = ["units/gaul_cavalry_swordsman_a","units/gaul_cavalry_javelinist_a","units/gaul_cavalry_swordsman_b","units/gaul_cavalry_javelinist_b","units/brit_champion_cavalry","units/brit_war_dog_e"];
+	cmpTrigger.gaul_cavalry_types_all = ["units/gaul_cavalry_swordsman_a","units/gaul_cavalry_javelinist_a","units/gaul_cavalry_swordsman_b","units/gaul_cavalry_javelinist_b","units/brit/champion_chariot","units/brit_war_dog_e"];
 	cmpTrigger.gaul_cavalry_interval = 200 * 1000;
 	cmpTrigger.gaul_cav_attack_counter = 0;
 	cmpTrigger.spawn_attack_bonus = 2;
 	
 	//greek mercenaries variables
-	cmpTrigger.greekInfTypes = ["units/athen_cavalry_javelinist_a","units/athen_cavalry_swordsman_a","units/athen_champion_ranged","units/athen_champion_marine","units/athen_champion_infantry","units/athen_champion_ranged_gastraphetes","units/thebes_sacred_band_hoplitai"];
-	cmpTrigger.greekSiegeTypes = ["units/athen_mechanical_siege_oxybeles_packed","units/mace_mechanical_siege_lithobolos_packed"];
+	cmpTrigger.greekInfTypes = ["units/athen_cavalry_javelinist_a","units/athen_cavalry_swordsman_a","units/athen/champion_ranged","units/athen/champion_marine","units/athen_champion_infantry","units/athen_champion_ranged_gastraphetes","units/thebes_sacred_band_hoplitai"];
+	cmpTrigger.greekSiegeTypes = ["units/athen_mechanical_siege_oxybeles_packed","units/mace/siege_lithobolos_packed"];
 	
 	cmpTrigger.greek_camps = [3802,4578];
 	cmpTrigger.siege_prob = 0.1;

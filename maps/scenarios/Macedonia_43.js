@@ -54,7 +54,7 @@ var disabledTemplatesCCs = (civ) => [
 	"structures/" + civ + "_military_colony",
 
 	// Shoreline
-	"structures/brit_crannog"
+	"structures/brit/crannog"
 ];
 
 var disabledTemplatesDocksCCs = (civ) => [
@@ -66,7 +66,7 @@ var disabledTemplatesDocksCCs = (civ) => [
 
 	// Shoreline
 	"structures/" + civ + "_dock",
-	"structures/brit_crannog",
+	"structures/brit/crannog",
 	"structures/cart_super_dock",
 	"structures/ptol_lighthouse"
 ];
@@ -93,7 +93,7 @@ var disabledTemplates = (civ) => [
 
 	// Shoreline
 	"structures/" + civ + "_dock",
-	"structures/brit_crannog",
+	"structures/brit/crannog",
 	"structures/cart_super_dock",
 	"structures/ptol_lighthouse",
 	
@@ -1969,12 +1969,12 @@ Trigger.prototype.SpawnTravelingArmySquad = function(data)
 	let squad_units = [];
 			
 	//melee
-	let melee_template = pickRandom(["units/mace_infantry_pikeman_e","units/mace_champion_infantry_a","units/mace_thorakites"]);		
+	let melee_template = pickRandom(["units/mace_infantry_pikeman_e","units/mace/champion_infantry_spearman","units/mace_thorakites"]);		
 	let units_melee = TriggerHelper.SpawnUnits(site,melee_template,10,p);
 	squad_units = squad_units.concat(units_melee);
 	
 	//ranged
-	let ranged_template = pickRandom(["units/mace_infantry_slinger_e","units/mace_infantry_javelinist_e","units/mace_infantry_archer_e"]);		
+	let ranged_template = pickRandom(["units/mace/infantry_slinger_e","units/mace_infantry_javelinist_e","units/mace/infantry_archer_e"]);		
 	let units_ranged= TriggerHelper.SpawnUnits(site,ranged_template,10,p);
 	squad_units = squad_units.concat(units_ranged);
 	
@@ -2163,7 +2163,7 @@ Trigger.prototype.FlipSlaveOwnership = function(data)
 		
 		if (p == 1)
 		{
-			disTemplates = disTemplates.concat(["units/mace_hero_alexander","units/mace_hero_craterus","units/mace_hero_philip","units/mace_hero_demetrius","units/mace_hero_pyrhus"]);
+			disTemplates = disTemplates.concat(["units/mace_hero_alexander","units/mace_hero_craterus","units/mace/hero_philip_ii","units/mace_hero_demetrius","units/mace_hero_pyrhus"]);
 		}
 			
 		cmpPlayer.SetDisabledTemplates(disTemplates);

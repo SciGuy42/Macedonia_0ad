@@ -44,7 +44,7 @@ var disabledTemplatesCCs = (civ) => [
 	"structures/" + civ + "_military_colony",
 
 	// Shoreline
-	"structures/brit_crannog"
+	"structures/brit/crannog"
 ];
 
 var disabledTemplatesDocksCCs = (civ) => [
@@ -56,7 +56,7 @@ var disabledTemplatesDocksCCs = (civ) => [
 
 	// Shoreline
 	"structures/" + civ + "_dock",
-	"structures/brit_crannog",
+	"structures/brit/crannog",
 	"structures/cart_super_dock",
 	"structures/ptol_lighthouse"
 ];
@@ -83,7 +83,7 @@ var disabledTemplates = (civ) => [
 
 	// Shoreline
 	"structures/" + civ + "_dock",
-	"structures/brit_crannog",
+	"structures/brit/crannog",
 	"structures/cart_super_dock",
 	"structures/ptol_lighthouse",
 	
@@ -433,7 +433,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of camps_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen_champion_ranged",5,owner);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen/champion_ranged",5,owner);
 			
 			for (let a of archers_e)
 			{
@@ -448,7 +448,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of forts_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen_champion_ranged",20,owner);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen/champion_ranged",20,owner);
 			
 			for (let a of archers_e)
 			{
@@ -463,7 +463,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of towers_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen_champion_ranged",5,owner);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen/champion_ranged",5,owner);
 			
 			for (let a of archers_e)
 			{
@@ -478,7 +478,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of outposts_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/mace_champion_infantry_a",1,owner);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/mace/champion_infantry_spearman",1,owner);
 			
 			for (let a of archers_e)
 			{
@@ -509,7 +509,7 @@ Trigger.prototype.SpawnInterevalMutineersPatrol = function(data)
 	
 	if (units_p.length < 30)
 	{
-		let templates = ["units/athen_champion_ranged","units/athen_champion_marine","units/mace_champion_infantry_a","units/mace_champion_infantry_e","units/mace_thorakites","units/mace_thureophoros"];
+		let templates = ["units/athen/champion_ranged","units/athen/champion_marine","units/mace/champion_infantry_spearman","units/mace/champion_infantry_spearman_02","units/mace_thorakites","units/mace_thureophoros"];
 	
 		//pick patrol sites
 		let sites = [pickRandom(patrol_sites),pickRandom(patrol_sites),pickRandom(patrol_sites)];
@@ -641,7 +641,7 @@ Trigger.prototype.SpawnInterevalPatrol = function(data)
 Trigger.prototype.SpawnIntervalPtolemyAttack = function(data)
 {
 	//templates
-	let templates = ["units/athen_champion_ranged","units/athen_champion_marine","units/athen_champion_marine","units/mace_champion_infantry_a","units/mace_champion_infantry_e","units/mace_thorakites","units/mace_thureophoros"];
+	let templates = ["units/athen/champion_ranged","units/athen/champion_marine","units/athen/champion_marine","units/mace/champion_infantry_spearman","units/mace/champion_infantry_spearman_02","units/mace_thorakites","units/mace_thureophoros"];
 
 	//how big each squad
 	let squad_size = this.ptolAttackSize;
@@ -1228,7 +1228,7 @@ Trigger.prototype.SpawnMutinyInsurrectionSquad = function(data)
 	let site = sites[0];
 	
 	//templates
-	let templates = ["units/athen_champion_ranged","units/athen_champion_ranged","units/athen_champion_marine","units/athen_champion_marine","units/mace_champion_infantry_a","units/mace_champion_infantry_e","units/mace_thorakites","units/mace_thureophoros","units/spart_black_cloak","units/spart_champion_infantry_sword","units/mace_cavalry_javelinist_a"];
+	let templates = ["units/athen/champion_ranged","units/athen_champion_ranged","units/athen/champion_marine","units/athen/champion_marine","units/mace/champion_infantry_spearman","units/mace/champion_infantry_spearman_02","units/mace_thorakites","units/mace_thureophoros","units/spart_black_cloak","units/spart_champion_infantry_sword","units/mace/cavalry_javelineer_a"];
 	
 	//spawn
 	let size = 20;
@@ -1242,7 +1242,7 @@ Trigger.prototype.SpawnMutinyInsurrectionSquad = function(data)
 	}
 	
 	//decide whether to include siege
-	let siege_templates = ["units/mace_mechanical_siege_ram","units/mace_mechanical_siege_lithobolos_packed","units/mace_mechanical_siege_oxybeles_packed"];
+	let siege_templates = ["units/mace/siege_ram","units/mace/siege_lithobolos_packed","units/mace_mechanical_siege_oxybeles_packed"];
 	
 	//set formation
 	//TriggerHelper.SetUnitFormation(p, attackers, pickRandom(unitFormations));

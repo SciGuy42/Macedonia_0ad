@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Scenario version="6">
+<Scenario version="7">
 	<Environment>
 		<SkySet>sunny</SkySet>
 		<SunColor r="0.737255" g="0.713726" b="0.537255"/>
 		<SunElevation angle="0.785398"/>
 		<SunRotation angle="-0.785396"/>
-		<TerrainAmbientColor r="0.501961" g="0.501961" b="0.501961"/>
-		<UnitsAmbientColor r="0.501961" g="0.501961" b="0.501961"/>
+		<AmbientColor r="0.501961" g="0.501961" b="0.501961"/>
 		<Fog>
 			<FogFactor>0</FogFactor>
 			<FogThickness>0.5</FogThickness>
@@ -177,19 +176,19 @@
 			<Orientation y="-4.12706"/>
 		</Entity>
 		<Entity uid="247">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="662.3714" z="448.85798"/>
 			<Orientation y="-1.34339"/>
 		</Entity>
 		<Entity uid="249">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="663.49726" z="453.44483"/>
 			<Orientation y="-4.40581"/>
 		</Entity>
 		<Entity uid="251">
-			<Template>gaia/flora_bush_grapes</Template>
+			<Template>gaia/fruit/grapes</Template>
 			<Player>0</Player>
 			<Position x="666.55494" z="445.90204"/>
 			<Orientation y="1.53338"/>
@@ -6914,112 +6913,112 @@
 			<Actor seed="30757"/>
 		</Entity>
 		<Entity uid="1667">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="1433.57886" z="1431.4828"/>
 			<Orientation y="4.09806"/>
 			<Actor seed="35737"/>
 		</Entity>
 		<Entity uid="1668">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="1435.25232" z="1429.99891"/>
 			<Orientation y="4.09806"/>
 			<Actor seed="34035"/>
 		</Entity>
 		<Entity uid="1669">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="1436.91712" z="1428.61194"/>
 			<Orientation y="4.09806"/>
 			<Actor seed="33932"/>
 		</Entity>
 		<Entity uid="1670">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="1438.63501" z="1427.03162"/>
 			<Orientation y="4.09806"/>
 			<Actor seed="16016"/>
 		</Entity>
 		<Entity uid="1671">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="1440.04334" z="1425.38563"/>
 			<Orientation y="4.09806"/>
 			<Actor seed="25908"/>
 		</Entity>
 		<Entity uid="1672">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="1441.80457" z="1423.6615"/>
 			<Orientation y="4.09806"/>
 			<Actor seed="4532"/>
 		</Entity>
 		<Entity uid="1673">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="1443.61963" z="1421.8014"/>
 			<Orientation y="4.09806"/>
 			<Actor seed="38975"/>
 		</Entity>
 		<Entity uid="1674">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="1445.71875" z="1419.99402"/>
 			<Orientation y="4.09806"/>
 			<Actor seed="13188"/>
 		</Entity>
 		<Entity uid="1675">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="1431.44312" z="1429.72022"/>
 			<Orientation y="4.09806"/>
 			<Actor seed="46386"/>
 		</Entity>
 		<Entity uid="1676">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="1433.04297" z="1428.35865"/>
 			<Orientation y="4.09806"/>
 			<Actor seed="61033"/>
 		</Entity>
 		<Entity uid="1677">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="1434.95447" z="1427.12"/>
 			<Orientation y="4.09806"/>
 			<Actor seed="32156"/>
 		</Entity>
 		<Entity uid="1678">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="1436.58936" z="1425.4679"/>
 			<Orientation y="4.09806"/>
 			<Actor seed="16245"/>
 		</Entity>
 		<Entity uid="1679">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="1438.03382" z="1423.86377"/>
 			<Orientation y="4.09806"/>
 			<Actor seed="6262"/>
 		</Entity>
 		<Entity uid="1680">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="1439.96412" z="1422.08802"/>
 			<Orientation y="4.09806"/>
 			<Actor seed="52103"/>
 		</Entity>
 		<Entity uid="1681">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="1441.70203" z="1420.4585"/>
 			<Orientation y="4.09806"/>
 			<Actor seed="50905"/>
 		</Entity>
 		<Entity uid="1682">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="1443.92396" z="1418.58118"/>
 			<Orientation y="4.09806"/>
@@ -7362,21 +7361,21 @@
 			<Actor seed="57089"/>
 		</Entity>
 		<Entity uid="1746">
-			<Template>other/stall_big</Template>
+			<Template>structures/stall_big</Template>
 			<Player>1</Player>
 			<Position x="1495.37403" z="1617.85071"/>
 			<Orientation y="2.25472"/>
 			<Actor seed="29473"/>
 		</Entity>
 		<Entity uid="1747">
-			<Template>other/stall_big</Template>
+			<Template>structures/stall_big</Template>
 			<Player>1</Player>
 			<Position x="1536.73523" z="1628.90345"/>
 			<Orientation y="-2.47837"/>
 			<Actor seed="38299"/>
 		</Entity>
 		<Entity uid="1748">
-			<Template>other/stall_med</Template>
+			<Template>structures/stall_med</Template>
 			<Player>1</Player>
 			<Position x="1553.73804" z="1616.02479"/>
 			<Orientation y="-2.46326"/>
@@ -7418,56 +7417,56 @@
 			<Actor seed="37858"/>
 		</Entity>
 		<Entity uid="1758">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1266.77784" z="1419.31568"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="23777"/>
 		</Entity>
 		<Entity uid="1759">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1284.27442" z="1442.85108"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="1162"/>
 		</Entity>
 		<Entity uid="1760">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1325.3097" z="1400.93116"/>
 			<Orientation y="6.67753"/>
 			<Actor seed="23777"/>
 		</Entity>
 		<Entity uid="1761">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1296.88172" z="1408.13501"/>
 			<Orientation y="6.67753"/>
 			<Actor seed="1162"/>
 		</Entity>
 		<Entity uid="1762">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1286.28162" z="1392.03064"/>
 			<Orientation y="4.92492"/>
 			<Actor seed="23777"/>
 		</Entity>
 		<Entity uid="1763">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1284.33704" z="1362.76868"/>
 			<Orientation y="4.92492"/>
 			<Actor seed="1162"/>
 		</Entity>
 		<Entity uid="1764">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1312.01368" z="1413.86231"/>
 			<Orientation y="4.92493"/>
 			<Actor seed="23777"/>
 		</Entity>
 		<Entity uid="1765">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1310.0691" z="1384.60035"/>
 			<Orientation y="4.92493"/>
@@ -7656,21 +7655,21 @@
 			<Actor seed="2419"/>
 		</Entity>
 		<Entity uid="1792">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1335.47522" z="1375.83924"/>
 			<Orientation y="4.92493"/>
 			<Actor seed="1162"/>
 		</Entity>
 		<Entity uid="1793">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1310.47193" z="1363.43055"/>
 			<Orientation y="6.67754"/>
 			<Actor seed="23777"/>
 		</Entity>
 		<Entity uid="1794">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1268.6797" z="1393.92188"/>
 			<Orientation y="6.67754"/>
@@ -7985,14 +7984,14 @@
 			<Actor seed="44087"/>
 		</Entity>
 		<Entity uid="1840">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="1429.64161" z="1431.34644"/>
 			<Orientation y="4.09806"/>
 			<Actor seed="46386"/>
 		</Entity>
 		<Entity uid="1841">
-			<Template>units/mace_champion_infantry_e</Template>
+			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
 			<Position x="1431.77735" z="1433.10901"/>
 			<Orientation y="4.09806"/>
@@ -8300,42 +8299,42 @@
 			<Actor seed="51085"/>
 		</Entity>
 		<Entity uid="1890">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1298.11353" z="1363.19251"/>
 			<Orientation y="4.92493"/>
 			<Actor seed="1162"/>
 		</Entity>
 		<Entity uid="1891">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1300.05811" z="1392.45447"/>
 			<Orientation y="4.92493"/>
 			<Actor seed="23777"/>
 		</Entity>
 		<Entity uid="1892">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1323.84559" z="1385.02417"/>
 			<Orientation y="4.92493"/>
 			<Actor seed="1162"/>
 		</Entity>
 		<Entity uid="1893">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1324.24842" z="1363.85438"/>
 			<Orientation y="6.67754"/>
 			<Actor seed="23777"/>
 		</Entity>
 		<Entity uid="1894">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1278.72571" z="1409.49134"/>
 			<Orientation y="2.35622"/>
 			<Actor seed="23777"/>
 		</Entity>
 		<Entity uid="1895">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1288.34412" z="1417.36622"/>
 			<Orientation y="2.35622"/>
@@ -9588,56 +9587,56 @@
 			<Actor seed="3729"/>
 		</Entity>
 		<Entity uid="2074">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1237.40455" z="1415.10633"/>
 			<Orientation y="1.16463"/>
 			<Actor seed="1162"/>
 		</Entity>
 		<Entity uid="2075">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1226.42762" z="1406.77088"/>
 			<Orientation y="1.16463"/>
 			<Actor seed="1162"/>
 		</Entity>
 		<Entity uid="2076">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1252.792" z="1390.14087"/>
 			<Orientation y="1.16463"/>
 			<Actor seed="23777"/>
 		</Entity>
 		<Entity uid="2077">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1241.81507" z="1381.80542"/>
 			<Orientation y="1.16463"/>
 			<Actor seed="23777"/>
 		</Entity>
 		<Entity uid="2078">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1259.0652" z="1361.34339"/>
 			<Orientation y="4.05488"/>
 			<Actor seed="23777"/>
 		</Entity>
 		<Entity uid="2079">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1248.12281" z="1338.34937"/>
 			<Orientation y="-0.26647"/>
 			<Actor seed="23777"/>
 		</Entity>
 		<Entity uid="2080">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1230.36243" z="1350.7378"/>
 			<Orientation y="-0.26647"/>
 			<Actor seed="1162"/>
 		</Entity>
 		<Entity uid="2081">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1227.52686" z="1362.98792"/>
 			<Orientation y="4.05488"/>
@@ -10092,14 +10091,14 @@
 			<Actor seed="1571"/>
 		</Entity>
 		<Entity uid="2146">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1207.13086" z="1359.46412"/>
 			<Orientation y="4.0549"/>
 			<Actor seed="23777"/>
 		</Entity>
 		<Entity uid="2147">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1200.85767" z="1388.2616"/>
 			<Orientation y="1.16463"/>
@@ -10180,14 +10179,14 @@
 			<Actor seed="35201"/>
 		</Entity>
 		<Entity uid="2171">
-			<Template>other/stall_big</Template>
+			<Template>structures/stall_big</Template>
 			<Player>1</Player>
 			<Position x="1546.21668" z="1586.32801"/>
 			<Orientation y="-0.85251"/>
 			<Actor seed="15488"/>
 		</Entity>
 		<Entity uid="2172">
-			<Template>other/stall_small_a</Template>
+			<Template>structures/stall_small_a</Template>
 			<Player>1</Player>
 			<Position x="1533.56458" z="1575.87903"/>
 			<Orientation y="-0.82866"/>

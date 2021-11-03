@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Scenario version="6">
+<Scenario version="7">
 	<Environment>
 		<SkySet>cirrus</SkySet>
 		<SunColor r="0.74902" g="0.74902" b="0.74902"/>
 		<SunElevation angle="0.785398"/>
 		<SunRotation angle="-0.785396"/>
-		<TerrainAmbientColor r="0.501961" g="0.501961" b="0.501961"/>
-		<UnitsAmbientColor r="0.501961" g="0.501961" b="0.501961"/>
+		<AmbientColor r="0.501961" g="0.501961" b="0.501961"/>
 		<Fog>
 			<FogFactor>0</FogFactor>
 			<FogThickness>0.5</FogThickness>
@@ -25871,397 +25870,397 @@
 			<Orientation y="1.15268"/>
 		</Entity>
 		<Entity uid="8232">
-			<Template>gaia/geology_stonemine_temperate_quarry</Template>
+			<Template>gaia/rock/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="1154.64771" z="262.68268"/>
 			<Orientation y="-4.14715"/>
 		</Entity>
 		<Entity uid="8233">
-			<Template>gaia/geology_stonemine_temperate_quarry</Template>
+			<Template>gaia/rock/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="1393.60633" z="1345.61146"/>
 			<Orientation y="-3.90262"/>
 		</Entity>
 		<Entity uid="8234">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="711.40162" z="1462.84888"/>
 			<Orientation y="0.73917"/>
 		</Entity>
 		<Entity uid="8235">
-			<Template>gaia/geology_stonemine_temperate_quarry</Template>
+			<Template>gaia/rock/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="702.13837" z="1444.73975"/>
 			<Orientation y="-2.0786"/>
 		</Entity>
 		<Entity uid="8236">
-			<Template>gaia/geology_stonemine_temperate_quarry</Template>
+			<Template>gaia/rock/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="672.68244" z="1006.70191"/>
 			<Orientation y="-4.67968"/>
 		</Entity>
 		<Entity uid="8237">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="434.54804" z="1812.23395"/>
 			<Orientation y="-4.3866"/>
 		</Entity>
 		<Entity uid="8238">
-			<Template>gaia/geology_stonemine_temperate_quarry</Template>
+			<Template>gaia/rock/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="449.06366" z="1801.64777"/>
 			<Orientation y="-3.41312"/>
 		</Entity>
 		<Entity uid="8239">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="1568.56702" z="1163.44086"/>
 			<Orientation y="0.01684"/>
 		</Entity>
 		<Entity uid="8240">
-			<Template>gaia/geology_stonemine_temperate_quarry</Template>
+			<Template>gaia/rock/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="1545.36182" z="1166.8725"/>
 			<Orientation y="0.79502"/>
 		</Entity>
 		<Entity uid="8241">
-			<Template>gaia/geology_stonemine_temperate_quarry</Template>
+			<Template>gaia/rock/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="1826.4225" z="472.80896"/>
 			<Orientation y="-4.4042"/>
 		</Entity>
 		<Entity uid="8242">
-			<Template>gaia/geology_stonemine_temperate_quarry</Template>
+			<Template>gaia/rock/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="766.5716" z="544.28174"/>
 			<Orientation y="0.39576"/>
 		</Entity>
 		<Entity uid="8243">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="365.06415" z="700.56391"/>
 			<Orientation y="0.70804"/>
 		</Entity>
 		<Entity uid="8244">
-			<Template>gaia/geology_stonemine_temperate_quarry</Template>
+			<Template>gaia/rock/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="373.9397" z="717.78467"/>
 			<Orientation y="0.11326"/>
 		</Entity>
 		<Entity uid="8245">
-			<Template>gaia/geology_stonemine_temperate_quarry</Template>
+			<Template>gaia/rock/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="1119.67695" z="1990.34656"/>
 			<Orientation y="-2.67196"/>
 		</Entity>
 		<Entity uid="8246">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="1464.19501" z="160.43042"/>
 			<Orientation y="0.14419"/>
 		</Entity>
 		<Entity uid="8247">
-			<Template>gaia/geology_stonemine_temperate_quarry</Template>
+			<Template>gaia/rock/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="1465.19312" z="177.0658"/>
 			<Orientation y="-4.3485"/>
 		</Entity>
 		<Entity uid="8248">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="1343.1095" z="630.41382"/>
 			<Orientation y="-4.58313"/>
 		</Entity>
 		<Entity uid="8249">
-			<Template>gaia/geology_stonemine_temperate_quarry</Template>
+			<Template>gaia/rock/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="1342.96357" z="612.43409"/>
 			<Orientation y="0.1944"/>
 		</Entity>
 		<Entity uid="8250">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="711.8719" z="1024.70063"/>
 			<Orientation y="-1.03791"/>
 		</Entity>
 		<Entity uid="8251">
-			<Template>gaia/geology_stonemine_temperate_quarry</Template>
+			<Template>gaia/rock/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="507.35227" z="885.54358"/>
 			<Orientation y="-0.10125"/>
 		</Entity>
 		<Entity uid="8253">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="848.23096" z="664.79212"/>
 			<Orientation y="-3.57554"/>
 		</Entity>
 		<Entity uid="8254">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="845.62562" z="669.46064"/>
 			<Orientation y="-3.48008"/>
 		</Entity>
 		<Entity uid="8255">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="841.99128" z="657.89222"/>
 			<Orientation y="-0.48899"/>
 		</Entity>
 		<Entity uid="8256">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="974.94947" z="2025.57563"/>
 			<Orientation y="-3.4764"/>
 		</Entity>
 		<Entity uid="8257">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="986.5" z="2028.6308"/>
 			<Orientation y="0.2827"/>
 		</Entity>
 		<Entity uid="8258">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="697.40699" z="720.91077"/>
 			<Orientation y="-3.261"/>
 		</Entity>
 		<Entity uid="8259">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="682.39271" z="720.14875"/>
 			<Orientation y="-0.85363"/>
 		</Entity>
 		<Entity uid="8260">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="685.01923" z="725.20368"/>
 			<Orientation y="-0.1791"/>
 		</Entity>
 		<Entity uid="8262">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="115.20417" z="1432.47101"/>
 			<Orientation y="0.97843"/>
 		</Entity>
 		<Entity uid="8263">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="106.64063" z="1423.64386"/>
 			<Orientation y="0.91176"/>
 		</Entity>
 		<Entity uid="8264">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="113.7638" z="1426.94459"/>
 			<Orientation y="-0.6631"/>
 		</Entity>
 		<Entity uid="8265">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="111.81855" z="1434.7032"/>
 			<Orientation y="-3.71485"/>
 		</Entity>
 		<Entity uid="8266">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="1719.27155" z="515.72205"/>
 			<Orientation y="-4.3762"/>
 		</Entity>
 		<Entity uid="8267">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="1736.85303" z="520.83112"/>
 			<Orientation y="-3.91654"/>
 		</Entity>
 		<Entity uid="8268">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="1727.16175" z="512.77723"/>
 			<Orientation y="-4.15284"/>
 		</Entity>
 		<Entity uid="8269">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="1739.51972" z="516.91462"/>
 			<Orientation y="-1.42391"/>
 		</Entity>
 		<Entity uid="8270">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="1732.4286" z="510.20008"/>
 			<Orientation y="0.61553"/>
 		</Entity>
 		<Entity uid="8271">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="130.5918" z="1160.5619"/>
 			<Orientation y="1.16187"/>
 		</Entity>
 		<Entity uid="8272">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="118.31507" z="1147.21326"/>
 			<Orientation y="1.05712"/>
 		</Entity>
 		<Entity uid="8273">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="119.14991" z="1158.75196"/>
 			<Orientation y="-2.94393"/>
 		</Entity>
 		<Entity uid="8274">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="586.1266" z="1244.943"/>
 			<Orientation y="0.58079"/>
 		</Entity>
 		<Entity uid="8275">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="596.62366" z="1232.17438"/>
 			<Orientation y="-1.6421"/>
 		</Entity>
 		<Entity uid="8276">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="585.06983" z="1235.12958"/>
 			<Orientation y="1.05681"/>
 		</Entity>
 		<Entity uid="8277">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="1010.2176" z="1166.99"/>
 			<Orientation y="-0.01705"/>
 		</Entity>
 		<Entity uid="8278">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="1009.54175" z="1171.90803"/>
 			<Orientation y="-1.78269"/>
 		</Entity>
 		<Entity uid="8279">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="1008.2707" z="1160.5058"/>
 			<Orientation y="-3.61925"/>
 		</Entity>
 		<Entity uid="8284">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="536.87037" z="1838.16187"/>
 			<Orientation y="-0.68383"/>
 		</Entity>
 		<Entity uid="8285">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="523.49158" z="1843.68989"/>
 			<Orientation y="-4.65378"/>
 		</Entity>
 		<Entity uid="8286">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="1363.69941" z="1098.39509"/>
 			<Orientation y="-1.63793"/>
 		</Entity>
 		<Entity uid="8287">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="1356.8462" z="1109.46204"/>
 			<Orientation y="0.78841"/>
 		</Entity>
 		<Entity uid="8288">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="1359.41419" z="1100.40992"/>
 			<Orientation y="0.26288"/>
 		</Entity>
 		<Entity uid="8294">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="782.67756" z="993.495"/>
 			<Orientation y="-3.5946"/>
 		</Entity>
 		<Entity uid="8295">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="788.84125" z="998.11231"/>
 			<Orientation y="-3.73098"/>
 		</Entity>
 		<Entity uid="8296">
-			<Template>gaia/geology_stone_temperate</Template>
+			<Template>gaia/rock/temperate_small</Template>
 			<Player>0</Player>
 			<Position x="784.76984" z="1005.2397"/>
 			<Orientation y="1.25367"/>
 		</Entity>
 		<Entity uid="8297">
-			<Template>gaia/geology_metal_temperate_slabs</Template>
+			<Template>gaia/ore/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="1389.05518" z="1389.71521"/>
 			<Orientation y="-3.87768"/>
 		</Entity>
 		<Entity uid="8298">
-			<Template>gaia/geology_metal_temperate_slabs</Template>
+			<Template>gaia/ore/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="1249.10535" z="80.98957"/>
 			<Orientation y="-1.95746"/>
 		</Entity>
 		<Entity uid="8299">
-			<Template>gaia/geology_metal_temperate_slabs</Template>
+			<Template>gaia/ore/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="557.9621" z="1556.11219"/>
 			<Orientation y="-0.28907"/>
 		</Entity>
 		<Entity uid="8301">
-			<Template>gaia/geology_metal_temperate_slabs</Template>
+			<Template>gaia/ore/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="1476.10743" z="1474.56971"/>
 			<Orientation y="-5.54441"/>
 		</Entity>
 		<Entity uid="8302">
-			<Template>gaia/geology_metal_temperate_slabs</Template>
+			<Template>gaia/ore/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="902.52991" z="735.81293"/>
 			<Orientation y="1.55164"/>
 		</Entity>
 		<Entity uid="8304">
-			<Template>gaia/geology_metal_temperate_slabs</Template>
+			<Template>gaia/ore/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="857.17823" z="235.4102"/>
 			<Orientation y="-0.17515"/>
 		</Entity>
 		<Entity uid="8305">
-			<Template>gaia/geology_metal_temperate_slabs</Template>
+			<Template>gaia/ore/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="642.5564" z="1881.42646"/>
 			<Orientation y="0.7504"/>
 		</Entity>
 		<Entity uid="8306">
-			<Template>gaia/geology_metal_temperate_slabs</Template>
+			<Template>gaia/ore/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="1775.1695" z="440.4264"/>
 			<Orientation y="-3.45804"/>
 		</Entity>
 		<Entity uid="8307">
-			<Template>gaia/geology_metal_temperate_slabs</Template>
+			<Template>gaia/ore/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="1133.00623" z="1800.35828"/>
 			<Orientation y="1.40539"/>
 		</Entity>
 		<Entity uid="8308">
-			<Template>gaia/geology_metal_temperate_slabs</Template>
+			<Template>gaia/ore/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="1397.78113" z="118.91218"/>
 			<Orientation y="0.60261"/>
 		</Entity>
 		<Entity uid="8309">
-			<Template>gaia/geology_metal_temperate_slabs</Template>
+			<Template>gaia/ore/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="1660.23841" z="325.41724"/>
 			<Orientation y="-1.79366"/>
 		</Entity>
 		<Entity uid="8310">
-			<Template>gaia/geology_metal_temperate_slabs</Template>
+			<Template>gaia/ore/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="1904.76563" z="1477.25416"/>
 			<Orientation y="1.1588"/>
@@ -29597,67 +29596,67 @@
 			<Orientation y="-1.33959"/>
 		</Entity>
 		<Entity uid="8989">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1300.21418" z="178.55042"/>
 			<Orientation y="1.23823"/>
 		</Entity>
 		<Entity uid="8990">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1305.91675" z="183.37879"/>
 			<Orientation y="-1.4564"/>
 		</Entity>
 		<Entity uid="8991">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1297.15101" z="186.65436"/>
 			<Orientation y="0.53704"/>
 		</Entity>
 		<Entity uid="8992">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1320.06183" z="187.13508"/>
 			<Orientation y="0.02155"/>
 		</Entity>
 		<Entity uid="8993">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1315.54578" z="184.40015"/>
 			<Orientation y="-1.04925"/>
 		</Entity>
 		<Entity uid="8994">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1310.06501" z="185.31525"/>
 			<Orientation y="1.44144"/>
 		</Entity>
 		<Entity uid="8995">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1763.61255" z="450.95295"/>
 			<Orientation y="0.45475"/>
 		</Entity>
 		<Entity uid="8996">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1749.05982" z="451.70771"/>
 			<Orientation y="-1.51391"/>
 		</Entity>
 		<Entity uid="8997">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1754.2558" z="447.3907"/>
 			<Orientation y="-3.1075"/>
 		</Entity>
 		<Entity uid="8998">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1749.2555" z="441.47541"/>
 			<Orientation y="0.16277"/>
 		</Entity>
 		<Entity uid="8999">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1739.31141" z="458.2818"/>
 			<Orientation y="-0.6668"/>
@@ -41459,1211 +41458,1211 @@
 			<Orientation y="1.13427"/>
 		</Entity>
 		<Entity uid="11458">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1182.73829" z="636.42652"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="24779"/>
 		</Entity>
 		<Entity uid="11459">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1176.70325" z="619.20936"/>
 			<Orientation y="-1.64922"/>
 			<Actor seed="10625"/>
 		</Entity>
 		<Entity uid="11460">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1169.61048" z="677.0677"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="59223"/>
 		</Entity>
 		<Entity uid="11461">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1288.39673" z="856.64344"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="44301"/>
 		</Entity>
 		<Entity uid="11462">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1281.0121" z="835.27442"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="37583"/>
 		</Entity>
 		<Entity uid="11463">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1255.99561" z="808.50232"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="19855"/>
 		</Entity>
 		<Entity uid="11464">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1244.86646" z="805.07386"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="32040"/>
 		</Entity>
 		<Entity uid="11465">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1283.65308" z="896.71839"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="26438"/>
 		</Entity>
 		<Entity uid="11466">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1274.91041" z="941.85444"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="31241"/>
 		</Entity>
 		<Entity uid="11467">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1267.32105" z="890.52466"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="34407"/>
 		</Entity>
 		<Entity uid="11468">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1260.52393" z="855.97846"/>
 			<Orientation y="-2.4528"/>
 			<Actor seed="40559"/>
 		</Entity>
 		<Entity uid="11469">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1523.46802" z="904.69361"/>
 			<Orientation y="-2.60654"/>
 			<Actor seed="54982"/>
 		</Entity>
 		<Entity uid="11470">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1511.65064" z="871.23609"/>
 			<Orientation y="-1.95948"/>
 			<Actor seed="15661"/>
 		</Entity>
 		<Entity uid="11471">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1489.08399" z="850.88703"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="13351"/>
 		</Entity>
 		<Entity uid="11472">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1482.00232" z="866.45313"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="53976"/>
 		</Entity>
 		<Entity uid="11473">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1660.19935" z="881.5608"/>
 			<Orientation y="-2.12642"/>
 			<Actor seed="6713"/>
 		</Entity>
 		<Entity uid="11474">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1644.77417" z="871.78998"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="44343"/>
 		</Entity>
 		<Entity uid="11475">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1633.22657" z="872.4032"/>
 			<Orientation y="-1.83175"/>
 			<Actor seed="18835"/>
 		</Entity>
 		<Entity uid="11476">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1617.96583" z="874.60926"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="9301"/>
 		</Entity>
 		<Entity uid="11477">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1637.32996" z="962.83631"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="50579"/>
 		</Entity>
 		<Entity uid="11478">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1625.51807" z="941.35682"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="36878"/>
 		</Entity>
 		<Entity uid="11479">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1705.08448" z="925.61048"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="20611"/>
 		</Entity>
 		<Entity uid="11480">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1718.52405" z="932.67847"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="63986"/>
 		</Entity>
 		<Entity uid="11481">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1733.30079" z="938.2837"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="36998"/>
 		</Entity>
 		<Entity uid="11482">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1795.40625" z="899.50226"/>
 			<Orientation y="2.01893"/>
 			<Actor seed="57633"/>
 		</Entity>
 		<Entity uid="11483">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1827.29163" z="878.2787"/>
 			<Orientation y="2.37134"/>
 			<Actor seed="45036"/>
 		</Entity>
 		<Entity uid="11484">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1846.98462" z="851.54365"/>
 			<Orientation y="-2.05707"/>
 			<Actor seed="2720"/>
 		</Entity>
 		<Entity uid="11485">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1822.05835" z="851.45002"/>
 			<Orientation y="-1.7685"/>
 			<Actor seed="37841"/>
 		</Entity>
 		<Entity uid="11486">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1888.50196" z="882.94092"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="59758"/>
 		</Entity>
 		<Entity uid="11487">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1902.86902" z="883.8484"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="38600"/>
 		</Entity>
 		<Entity uid="11488">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1912.22181" z="864.75355"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="965"/>
 		</Entity>
 		<Entity uid="11489">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1954.59607" z="900.98548"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="60275"/>
 		</Entity>
 		<Entity uid="11490">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1976.9076" z="929.65027"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="1292"/>
 		</Entity>
 		<Entity uid="11491">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1955.69361" z="917.34827"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="61569"/>
 		</Entity>
 		<Entity uid="11492">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1937.85975" z="911.92182"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="39558"/>
 		</Entity>
 		<Entity uid="11493">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1925.38965" z="910.71344"/>
 			<Orientation y="-1.89058"/>
 			<Actor seed="59587"/>
 		</Entity>
 		<Entity uid="11494">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1953.86768" z="944.12012"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="24001"/>
 		</Entity>
 		<Entity uid="11495">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1996.47205" z="1047.55799"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="31824"/>
 		</Entity>
 		<Entity uid="11496">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="2002.30103" z="1081.47791"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="1629"/>
 		</Entity>
 		<Entity uid="11497">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="2015.51417" z="1100.33472"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="22819"/>
 		</Entity>
 		<Entity uid="11498">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1967.08411" z="1049.85914"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="48202"/>
 		</Entity>
 		<Entity uid="11499">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1940.84766" z="1047.52344"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="28606"/>
 		</Entity>
 		<Entity uid="11500">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1912.37354" z="1052.33118"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="11987"/>
 		</Entity>
 		<Entity uid="11501">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1826.77503" z="1070.42151"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="38039"/>
 		</Entity>
 		<Entity uid="11502">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1834.48572" z="1084.20313"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="149"/>
 		</Entity>
 		<Entity uid="11503">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1824.4502" z="1116.20118"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="33276"/>
 		</Entity>
 		<Entity uid="11504">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1839.72706" z="1145.8495"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="12019"/>
 		</Entity>
 		<Entity uid="11505">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1837.40418" z="1131.16749"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="56024"/>
 		</Entity>
 		<Entity uid="11506">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1914.26905" z="1164.7688"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="2861"/>
 		</Entity>
 		<Entity uid="11507">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1886.4524" z="1145.33008"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="60051"/>
 		</Entity>
 		<Entity uid="11508">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1904.39917" z="1159.66614"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="2428"/>
 		</Entity>
 		<Entity uid="11509">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1987.66822" z="1152.18555"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="31092"/>
 		</Entity>
 		<Entity uid="11510">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="2005.74036" z="1121.94874"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="63211"/>
 		</Entity>
 		<Entity uid="11511">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="2024.71851" z="1105.7511"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="57818"/>
 		</Entity>
 		<Entity uid="11512">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1788.13001" z="1369.71241"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="22402"/>
 		</Entity>
 		<Entity uid="11513">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1784.26441" z="1352.29688"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="60318"/>
 		</Entity>
 		<Entity uid="11514">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1777.14722" z="1362.5763"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="42514"/>
 		</Entity>
 		<Entity uid="11515">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1795.31934" z="1364.07471"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="48209"/>
 		</Entity>
 		<Entity uid="11516">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1753.28248" z="1323.70228"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="10981"/>
 		</Entity>
 		<Entity uid="11517">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1657.74036" z="1252.65772"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="36695"/>
 		</Entity>
 		<Entity uid="11518">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1683.93812" z="1257.89283"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="34236"/>
 		</Entity>
 		<Entity uid="11519">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1657.49781" z="1276.22754"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="39539"/>
 		</Entity>
 		<Entity uid="11520">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1642.98646" z="1303.33985"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="41270"/>
 		</Entity>
 		<Entity uid="11521">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1619.5204" z="1324.32667"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="58946"/>
 		</Entity>
 		<Entity uid="11522">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1883.79126" z="1483.68091"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="9019"/>
 		</Entity>
 		<Entity uid="11523">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1875.2168" z="1467.80335"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="4048"/>
 		</Entity>
 		<Entity uid="11524">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1871.0022" z="1442.01465"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="52088"/>
 		</Entity>
 		<Entity uid="11525">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1467.65821" z="1499.77588"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="20604"/>
 		</Entity>
 		<Entity uid="11526">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1455.39185" z="1491.0796"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="57683"/>
 		</Entity>
 		<Entity uid="11527">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1441.96521" z="1486.18091"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="35850"/>
 		</Entity>
 		<Entity uid="11528">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1430.96558" z="1485.32068"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="32589"/>
 		</Entity>
 		<Entity uid="11529">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1511.71302" z="1453.03895"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="15918"/>
 		</Entity>
 		<Entity uid="11530">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1312.22181" z="1368.79444"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="3412"/>
 		</Entity>
 		<Entity uid="11531">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1309.34034" z="1354.2068"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="36302"/>
 		</Entity>
 		<Entity uid="11532">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1275.69825" z="1406.49805"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="8352"/>
 		</Entity>
 		<Entity uid="11533">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1266.7975" z="1397.52515"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="27795"/>
 		</Entity>
 		<Entity uid="11534">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1251.16675" z="1399.1454"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="38410"/>
 		</Entity>
 		<Entity uid="11535">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1285.05408" z="1300.58252"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="35189"/>
 		</Entity>
 		<Entity uid="11536">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1281.90516" z="1294.3484"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="29402"/>
 		</Entity>
 		<Entity uid="11537">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1365.36805" z="1270.27906"/>
 			<Orientation y="-2.02666"/>
 			<Actor seed="43407"/>
 		</Entity>
 		<Entity uid="11538">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1424.26368" z="1301.04456"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="56591"/>
 		</Entity>
 		<Entity uid="11539">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1437.29676" z="1307.36756"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="43609"/>
 		</Entity>
 		<Entity uid="11540">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1448.37122" z="1302.0625"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="53761"/>
 		</Entity>
 		<Entity uid="11541">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1418.35315" z="1304.6886"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="5505"/>
 		</Entity>
 		<Entity uid="11542">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1402.85608" z="1300.31275"/>
 			<Orientation y="-0.71836"/>
 			<Actor seed="57241"/>
 		</Entity>
 		<Entity uid="11543">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1394.35657" z="1316.05396"/>
 			<Orientation y="-1.99238"/>
 			<Actor seed="3192"/>
 		</Entity>
 		<Entity uid="11544">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1438.52076" z="1335.68311"/>
 			<Orientation y="1.59736"/>
 			<Actor seed="56858"/>
 		</Entity>
 		<Entity uid="11545">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1050.70105" z="1258.91529"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="17767"/>
 		</Entity>
 		<Entity uid="11546">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1041.86475" z="1255.68482"/>
 			<Orientation y="-0.69927"/>
 			<Actor seed="49273"/>
 		</Entity>
 		<Entity uid="11547">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1033.37427" z="1266.55591"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="17951"/>
 		</Entity>
 		<Entity uid="11548">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1038.06775" z="1276.34412"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="25956"/>
 		</Entity>
 		<Entity uid="11549">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1072.48926" z="1303.79883"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="62967"/>
 		</Entity>
 		<Entity uid="11550">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1059.83033" z="1328.45435"/>
 			<Orientation y="-2.33506"/>
 			<Actor seed="10976"/>
 		</Entity>
 		<Entity uid="11551">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1046.20093" z="1312.08631"/>
 			<Orientation y="-1.90139"/>
 			<Actor seed="64133"/>
 		</Entity>
 		<Entity uid="11552">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1034.99817" z="1230.44495"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="12240"/>
 		</Entity>
 		<Entity uid="11553">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1028.53235" z="1219.97779"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="35526"/>
 		</Entity>
 		<Entity uid="11554">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="944.5431" z="1260.97388"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="43622"/>
 		</Entity>
 		<Entity uid="11555">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="938.91297" z="1269.65601"/>
 			<Orientation y="-2.28151"/>
 			<Actor seed="44737"/>
 		</Entity>
 		<Entity uid="11556">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="927.7284" z="1252.51832"/>
 			<Orientation y="-2.81511"/>
 			<Actor seed="12371"/>
 		</Entity>
 		<Entity uid="11557">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="924.24177" z="1212.47571"/>
 			<Orientation y="2.90142"/>
 			<Actor seed="8529"/>
 		</Entity>
 		<Entity uid="11558">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="931.75428" z="1189.40284"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="46683"/>
 		</Entity>
 		<Entity uid="11559">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="919.47913" z="1162.31507"/>
 			<Orientation y="-2.131"/>
 			<Actor seed="54877"/>
 		</Entity>
 		<Entity uid="11560">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="894.46344" z="1152.14075"/>
 			<Orientation y="-2.00428"/>
 			<Actor seed="40343"/>
 		</Entity>
 		<Entity uid="11561">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="876.65894" z="1141.01075"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="9452"/>
 		</Entity>
 		<Entity uid="11562">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="861.8125" z="1125.72291"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="61025"/>
 		</Entity>
 		<Entity uid="11563">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="885.04474" z="1121.13843"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="11295"/>
 		</Entity>
 		<Entity uid="11564">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="894.01587" z="1116.85303"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="11089"/>
 		</Entity>
 		<Entity uid="11565">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="888.59076" z="1131.8086"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="11582"/>
 		</Entity>
 		<Entity uid="11566">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="887.0478" z="1144.1128"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="30544"/>
 		</Entity>
 		<Entity uid="11567">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="886.20112" z="1169.26429"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="52075"/>
 		</Entity>
 		<Entity uid="11568">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="893.14515" z="1196.28003"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="6158"/>
 		</Entity>
 		<Entity uid="11569">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="900.31739" z="1217.43433"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="33981"/>
 		</Entity>
 		<Entity uid="11570">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="910.35975" z="1194.2621"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="9911"/>
 		</Entity>
 		<Entity uid="11571">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="897.31391" z="1193.83545"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="11456"/>
 		</Entity>
 		<Entity uid="11572">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="881.93171" z="1200.9751"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="42934"/>
 		</Entity>
 		<Entity uid="11573">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="875.5879" z="1187.6532"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="13515"/>
 		</Entity>
 		<Entity uid="11574">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="868.5138" z="1173.00135"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="15658"/>
 		</Entity>
 		<Entity uid="11575">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="859.68122" z="1160.65821"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="13680"/>
 		</Entity>
 		<Entity uid="11576">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="850.54297" z="1141.11988"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="30359"/>
 		</Entity>
 		<Entity uid="11577">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="848.20875" z="1131.19166"/>
 			<Orientation y="2.24837"/>
 			<Actor seed="28414"/>
 		</Entity>
 		<Entity uid="11578">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="862.58869" z="1122.49183"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="4128"/>
 		</Entity>
 		<Entity uid="11579">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="873.2118" z="1114.75477"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="25956"/>
 		</Entity>
 		<Entity uid="11580">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="870.22706" z="1130.39014"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="16358"/>
 		</Entity>
 		<Entity uid="11581">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="860.47437" z="1138.52381"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="47214"/>
 		</Entity>
 		<Entity uid="11582">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="816.42457" z="1137.05262"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="39138"/>
 		</Entity>
 		<Entity uid="11583">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="835.7862" z="1148.72364"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="53301"/>
 		</Entity>
 		<Entity uid="11584">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="814.01374" z="1122.74805"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="4622"/>
 		</Entity>
 		<Entity uid="11585">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="805.72803" z="1113.8147"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="46802"/>
 		</Entity>
 		<Entity uid="11586">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="785.44813" z="1094.943"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="60640"/>
 		</Entity>
 		<Entity uid="11587">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="798.32313" z="1079.28089"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="19976"/>
 		</Entity>
 		<Entity uid="11588">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="821.14856" z="1028.98792"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="7083"/>
 		</Entity>
 		<Entity uid="11589">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="883.59498" z="971.61146"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="4572"/>
 		</Entity>
 		<Entity uid="11590">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="795.92438" z="1007.6399"/>
 			<Orientation y="-2.00922"/>
 			<Actor seed="25576"/>
 		</Entity>
 		<Entity uid="11591">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="684.44178" z="1028.10682"/>
 			<Orientation y="-2.24549"/>
 			<Actor seed="6828"/>
 		</Entity>
 		<Entity uid="11592">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="677.18604" z="1025.34925"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="9410"/>
 		</Entity>
 		<Entity uid="11593">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="670.94587" z="983.96375"/>
 			<Orientation y="-1.54426"/>
 			<Actor seed="37339"/>
 		</Entity>
 		<Entity uid="11594">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="646.38038" z="909.57422"/>
 			<Orientation y="-2.7014"/>
 			<Actor seed="27914"/>
 		</Entity>
 		<Entity uid="11595">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="634.10328" z="892.5066"/>
 			<Orientation y="-1.93796"/>
 			<Actor seed="40713"/>
 		</Entity>
 		<Entity uid="11596">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="613.60242" z="873.72815"/>
 			<Orientation y="-2.08294"/>
 			<Actor seed="45935"/>
 		</Entity>
 		<Entity uid="11597">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="603.25263" z="866.23603"/>
 			<Orientation y="-2.047"/>
 			<Actor seed="25140"/>
 		</Entity>
 		<Entity uid="11598">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="591.65375" z="859.20057"/>
 			<Orientation y="-2.01652"/>
 			<Actor seed="11854"/>
 		</Entity>
 		<Entity uid="11599">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="520.49756" z="877.98743"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="44595"/>
 		</Entity>
 		<Entity uid="11600">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="531.50959" z="897.95307"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="12732"/>
 		</Entity>
 		<Entity uid="11601">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="444.63584" z="873.54719"/>
 			<Orientation y="-1.9499"/>
 			<Actor seed="50665"/>
 		</Entity>
 		<Entity uid="11602">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="406.38193" z="834.03364"/>
 			<Orientation y="-2.13314"/>
 			<Actor seed="30384"/>
 		</Entity>
 		<Entity uid="11603">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="390.82987" z="781.44648"/>
 			<Orientation y="-2.49242"/>
 			<Actor seed="53627"/>
 		</Entity>
 		<Entity uid="11604">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="350.70456" z="721.39087"/>
 			<Orientation y="-2.74421"/>
 			<Actor seed="59726"/>
 		</Entity>
 		<Entity uid="11605">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="350.28657" z="709.82447"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="26965"/>
 		</Entity>
 		<Entity uid="11606">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="353.53657" z="699.88672"/>
 			<Orientation y="1.92278"/>
 			<Actor seed="63623"/>
 		</Entity>
 		<Entity uid="11607">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="385.09733" z="703.1756"/>
 			<Orientation y="-1.8083"/>
 			<Actor seed="38572"/>
 		</Entity>
 		<Entity uid="11608">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="373.0431" z="691.02472"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="42945"/>
 		</Entity>
 		<Entity uid="11609">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="267.2793" z="635.81434"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="59998"/>
 		</Entity>
 		<Entity uid="11610">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="281.59156" z="625.28962"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="17691"/>
 		</Entity>
 		<Entity uid="11611">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="294.48261" z="642.58631"/>
 			<Orientation y="-2.08574"/>
 			<Actor seed="6699"/>
 		</Entity>
 		<Entity uid="11612">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="284.35581" z="647.44007"/>
 			<Orientation y="-1.89222"/>
 			<Actor seed="48170"/>
 		</Entity>
 		<Entity uid="11613">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="333.46491" z="616.49872"/>
 			<Orientation y="-2.17956"/>
 			<Actor seed="23687"/>
 		</Entity>
 		<Entity uid="11614">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="354.31812" z="613.31257"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="54069"/>
 		</Entity>
 		<Entity uid="11615">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="384.94581" z="633.2555"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="52390"/>
 		</Entity>
 		<Entity uid="11616">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="424.54642" z="655.71412"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="13028"/>
 		</Entity>
 		<Entity uid="11617">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="443.99158" z="674.44788"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="28511"/>
 		</Entity>
 		<Entity uid="11618">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="504.40232" z="661.96937"/>
 			<Orientation y="-1.96937"/>
 			<Actor seed="39157"/>
 		</Entity>
 		<Entity uid="11619">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="486.03214" z="674.52302"/>
 			<Orientation y="-1.49701"/>
 			<Actor seed="33747"/>
 		</Entity>
 		<Entity uid="11620">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="468.7771" z="671.32123"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="49710"/>
 		</Entity>
 		<Entity uid="11621">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="550.74915" z="640.92237"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="37084"/>
 		</Entity>
 		<Entity uid="11622">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="566.896" z="653.36268"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="17622"/>
 		</Entity>
 		<Entity uid="11623">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="604.80781" z="714.48774"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="21938"/>
 		</Entity>
 		<Entity uid="11624">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="585.81043" z="741.25501"/>
 			<Orientation y="-1.08782"/>
 			<Actor seed="53699"/>
 		</Entity>
 		<Entity uid="11625">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="596.98273" z="580.50068"/>
 			<Orientation y="-1.77659"/>
 			<Actor seed="22395"/>
 		</Entity>
 		<Entity uid="11626">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="580.43018" z="579.23145"/>
 			<Orientation y="2.03217"/>
 			<Actor seed="24989"/>
 		</Entity>
 		<Entity uid="11627">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="589.19263" z="591.41553"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="53071"/>
 		</Entity>
 		<Entity uid="11628">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="740.12208" z="499.78757"/>
 			<Orientation y="1.9966"/>
 			<Actor seed="2716"/>
 		</Entity>
 		<Entity uid="11629">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="762.23963" z="484.70063"/>
 			<Orientation y="-0.52108"/>
 			<Actor seed="54095"/>
 		</Entity>
 		<Entity uid="11630">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="792.87531" z="503.02753"/>
 			<Orientation y="-1.03583"/>
@@ -42671,14 +42670,14 @@
 			<Actor seed="47752"/>
 		</Entity>
 		<Entity uid="11631">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="783.938" z="509.6237"/>
 			<Orientation y="-0.8353"/>
 			<Actor seed="43456"/>
 		</Entity>
 		<Entity uid="11632">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="839.10596" z="508.3378"/>
 			<Orientation y="-1.38952"/>
@@ -42686,7 +42685,7 @@
 			<Actor seed="21930"/>
 		</Entity>
 		<Entity uid="11633">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="876.45386" z="519.3932"/>
 			<Orientation y="-1.68104"/>
@@ -42694,119 +42693,119 @@
 			<Actor seed="49499"/>
 		</Entity>
 		<Entity uid="11634">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="824.64771" z="573.99036"/>
 			<Orientation y="-1.52718"/>
 			<Actor seed="28982"/>
 		</Entity>
 		<Entity uid="11635">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="905.53669" z="514.849"/>
 			<Orientation y="-1.4189"/>
 			<Actor seed="32386"/>
 		</Entity>
 		<Entity uid="11636">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="927.64161" z="509.79163"/>
 			<Orientation y="-1.22031"/>
 			<Actor seed="5420"/>
 		</Entity>
 		<Entity uid="11637">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="996.2309" z="546.5384"/>
 			<Orientation y="-1.67202"/>
 			<Actor seed="60731"/>
 		</Entity>
 		<Entity uid="11638">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1020.93403" z="528.85364"/>
 			<Orientation y="-1.56507"/>
 			<Actor seed="35310"/>
 		</Entity>
 		<Entity uid="11639">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1010.3454" z="538.84516"/>
 			<Orientation y="-1.79491"/>
 			<Actor seed="64651"/>
 		</Entity>
 		<Entity uid="11640">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1035.89673" z="557.99805"/>
 			<Orientation y="-1.97728"/>
 			<Actor seed="3348"/>
 		</Entity>
 		<Entity uid="11641">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1052.91419" z="562.4646"/>
 			<Orientation y="-2.10068"/>
 			<Actor seed="60552"/>
 		</Entity>
 		<Entity uid="11642">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1078.34998" z="572.39716"/>
 			<Orientation y="-2.04384"/>
 			<Actor seed="42266"/>
 		</Entity>
 		<Entity uid="11643">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1082.39393" z="611.51575"/>
 			<Orientation y="-2.60882"/>
 			<Actor seed="27531"/>
 		</Entity>
 		<Entity uid="11644">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1103.61475" z="649.99305"/>
 			<Orientation y="-2.25425"/>
 			<Actor seed="29476"/>
 		</Entity>
 		<Entity uid="11645">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1092.07081" z="639.49335"/>
 			<Orientation y="-2.15188"/>
 			<Actor seed="60523"/>
 		</Entity>
 		<Entity uid="11646">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1155.02686" z="719.3733"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="13184"/>
 		</Entity>
 		<Entity uid="11647">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1166.60157" z="731.62269"/>
 			<Orientation y="-2.28959"/>
 			<Actor seed="55700"/>
 		</Entity>
 		<Entity uid="11648">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1162.26075" z="703.38672"/>
 			<Orientation y="-2.86338"/>
 			<Actor seed="1204"/>
 		</Entity>
 		<Entity uid="11649">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1174.68848" z="666.30988"/>
 			<Orientation y="-2.0362"/>
 			<Actor seed="46915"/>
 		</Entity>
 		<Entity uid="11650">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1164.96412" z="679.96613"/>
 			<Orientation y="-1.07802"/>
@@ -44252,35 +44251,35 @@
 			<Actor seed="3694"/>
 		</Entity>
 		<Entity uid="11866">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1381.05994" z="508.30594"/>
 			<Orientation y="-5.01427"/>
 			<Actor seed="8994"/>
 		</Entity>
 		<Entity uid="11867">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1386.61622" z="508.34516"/>
 			<Orientation y="-7.50496"/>
 			<Actor seed="8993"/>
 		</Entity>
 		<Entity uid="11868">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1368.10767" z="507.4083"/>
 			<Orientation y="-5.91868"/>
 			<Actor seed="8991"/>
 		</Entity>
 		<Entity uid="11869">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1377.30555" z="505.68607"/>
 			<Orientation y="-7.91211"/>
 			<Actor seed="8990"/>
 		</Entity>
 		<Entity uid="11870">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1372.51648" z="499.95054"/>
 			<Orientation y="-5.21747"/>
@@ -44616,14 +44615,14 @@
 			<Actor seed="420"/>
 		</Entity>
 		<Entity uid="11918">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1079.95887" z="494.08588"/>
 			<Orientation y="-3.205"/>
 			<Actor seed="43456"/>
 		</Entity>
 		<Entity uid="11919">
-			<Template>gaia/flora_bush_badlands</Template>
+			<Template>gaia/tree/bush_badlands</Template>
 			<Player>0</Player>
 			<Position x="1078.15552" z="505.04642"/>
 			<Orientation y="-3.40552"/>
@@ -44707,91 +44706,91 @@
 			<Actor seed="1187"/>
 		</Entity>
 		<Entity uid="11932">
-			<Template>structures/mace_dock</Template>
+			<Template>structures/mace/dock</Template>
 			<Player>1</Player>
 			<Position x="1682.04957" z="1694.55665"/>
 			<Orientation y="-2.82937"/>
 			<Actor seed="43416"/>
 		</Entity>
 		<Entity uid="11933">
-			<Template>units/mace_infantry_archer_e</Template>
+			<Template>units/mace/infantry_archer_e</Template>
 			<Player>1</Player>
 			<Position x="1258.06019" z="1630.86976"/>
 			<Orientation y="-3.10393"/>
 			<Actor seed="62727"/>
 		</Entity>
 		<Entity uid="11934">
-			<Template>units/mace_infantry_archer_e</Template>
+			<Template>units/mace/infantry_archer_e</Template>
 			<Player>1</Player>
 			<Position x="1261.14991" z="1631.26966"/>
 			<Orientation y="-3.10393"/>
 			<Actor seed="44462"/>
 		</Entity>
 		<Entity uid="11935">
-			<Template>units/mace_infantry_archer_e</Template>
+			<Template>units/mace/infantry_archer_e</Template>
 			<Player>1</Player>
 			<Position x="1264.28736" z="1631.43152"/>
 			<Orientation y="-3.10393"/>
 			<Actor seed="8816"/>
 		</Entity>
 		<Entity uid="11936">
-			<Template>units/mace_infantry_archer_e</Template>
+			<Template>units/mace/infantry_archer_e</Template>
 			<Player>1</Player>
 			<Position x="1267.47474" z="1631.74268"/>
 			<Orientation y="-3.10393"/>
 			<Actor seed="3189"/>
 		</Entity>
 		<Entity uid="11937">
-			<Template>units/mace_infantry_archer_e</Template>
+			<Template>units/mace/infantry_archer_e</Template>
 			<Player>1</Player>
 			<Position x="1270.93628" z="1632.34021"/>
 			<Orientation y="-3.10393"/>
 			<Actor seed="3653"/>
 		</Entity>
 		<Entity uid="11938">
-			<Template>units/mace_infantry_archer_e</Template>
+			<Template>units/mace/infantry_archer_e</Template>
 			<Player>1</Player>
 			<Position x="1274.82923" z="1633.1432"/>
 			<Orientation y="-3.10393"/>
 			<Actor seed="65087"/>
 		</Entity>
 		<Entity uid="11939">
-			<Template>units/mace_infantry_archer_e</Template>
+			<Template>units/mace/infantry_archer_e</Template>
 			<Player>1</Player>
 			<Position x="1258.50098" z="1627.58545"/>
 			<Orientation y="-3.10393"/>
 			<Actor seed="61027"/>
 		</Entity>
 		<Entity uid="11940">
-			<Template>units/mace_infantry_archer_e</Template>
+			<Template>units/mace/infantry_archer_e</Template>
 			<Player>1</Player>
 			<Position x="1261.47657" z="1627.65198"/>
 			<Orientation y="-3.10393"/>
 			<Actor seed="60020"/>
 		</Entity>
 		<Entity uid="11941">
-			<Template>units/mace_infantry_archer_e</Template>
+			<Template>units/mace/infantry_archer_e</Template>
 			<Player>1</Player>
 			<Position x="1264.7433" z="1627.95899"/>
 			<Orientation y="-3.10393"/>
 			<Actor seed="61952"/>
 		</Entity>
 		<Entity uid="11942">
-			<Template>units/mace_infantry_archer_e</Template>
+			<Template>units/mace/infantry_archer_e</Template>
 			<Player>1</Player>
 			<Position x="1267.59571" z="1628.81727"/>
 			<Orientation y="-3.10393"/>
 			<Actor seed="19544"/>
 		</Entity>
 		<Entity uid="11943">
-			<Template>units/mace_infantry_archer_e</Template>
+			<Template>units/mace/infantry_archer_e</Template>
 			<Player>1</Player>
 			<Position x="1270.97315" z="1628.75196"/>
 			<Orientation y="-3.10393"/>
 			<Actor seed="49271"/>
 		</Entity>
 		<Entity uid="11944">
-			<Template>units/mace_infantry_archer_e</Template>
+			<Template>units/mace/infantry_archer_e</Template>
 			<Player>1</Player>
 			<Position x="1275.0564" z="1629.33692"/>
 			<Orientation y="-3.10393"/>
@@ -45099,42 +45098,42 @@
 			<Actor seed="5781"/>
 		</Entity>
 		<Entity uid="11988">
-			<Template>units/athen_support_slave</Template>
+			<Template>units/athen/support_slave</Template>
 			<Player>3</Player>
 			<Position x="1133.32728" z="1913.08912"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="34572"/>
 		</Entity>
 		<Entity uid="11989">
-			<Template>units/athen_support_slave</Template>
+			<Template>units/athen/support_slave</Template>
 			<Player>3</Player>
 			<Position x="1135.52613" z="1915.09595"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="58567"/>
 		</Entity>
 		<Entity uid="11990">
-			<Template>units/athen_support_slave</Template>
+			<Template>units/athen/support_slave</Template>
 			<Player>3</Player>
 			<Position x="1137.58765" z="1916.87708"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="11756"/>
 		</Entity>
 		<Entity uid="11991">
-			<Template>units/athen_support_slave</Template>
+			<Template>units/athen/support_slave</Template>
 			<Player>3</Player>
 			<Position x="1139.53357" z="1918.87793"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="43094"/>
 		</Entity>
 		<Entity uid="11992">
-			<Template>units/athen_support_slave</Template>
+			<Template>units/athen/support_slave</Template>
 			<Player>3</Player>
 			<Position x="1141.65052" z="1920.78895"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="3062"/>
 		</Entity>
 		<Entity uid="11993">
-			<Template>units/athen_support_slave</Template>
+			<Template>units/athen/support_slave</Template>
 			<Player>3</Player>
 			<Position x="1143.60499" z="1922.09571"/>
 			<Orientation y="2.35621"/>
@@ -45183,7 +45182,7 @@
 			<Actor seed="4297"/>
 		</Entity>
 		<Entity uid="12000">
-			<Template>gaia/geology_metal_tropic_slabs</Template>
+			<Template>gaia/ore/tropical_large</Template>
 			<Player>0</Player>
 			<Position x="1096.17823" z="1983.54261"/>
 			<Orientation y="0.81691"/>
@@ -45260,7 +45259,7 @@
 			<Actor seed="54247"/>
 		</Entity>
 		<Entity uid="12011">
-			<Template>structures/ptol_mercenary_camp</Template>
+			<Template>structures/ptol/mercenary_camp</Template>
 			<Player>3</Player>
 			<Position x="1175.2909" z="1918.95667"/>
 			<Orientation y="2.0147"/>
@@ -45302,7 +45301,7 @@
 			<Actor seed="18954"/>
 		</Entity>
 		<Entity uid="12017">
-			<Template>structures/ptol_mercenary_camp</Template>
+			<Template>structures/ptol/mercenary_camp</Template>
 			<Player>1</Player>
 			<Position x="1174.297" z="1878.45398"/>
 			<Orientation y="1.41417"/>
@@ -45540,7 +45539,7 @@
 			<Actor seed="30978"/>
 		</Entity>
 		<Entity uid="12051">
-			<Template>gaia/geology_metal_tropic_slabs</Template>
+			<Template>gaia/ore/tropical_large</Template>
 			<Player>1</Player>
 			<Position x="960.57483" z="233.67923"/>
 			<Orientation y="2.35621"/>
@@ -46135,7 +46134,7 @@
 			<Actor seed="52058"/>
 		</Entity>
 		<Entity uid="12137">
-			<Template>other/palisades_rocks_gate</Template>
+			<Template>structures/palisades_gate</Template>
 			<Player>3</Player>
 			<Position x="1200.55518" z="1979.9203"/>
 			<Orientation y="-2.5724"/>
@@ -46143,7 +46142,7 @@
 			<Actor seed="40929"/>
 		</Entity>
 		<Entity uid="12140">
-			<Template>other/palisades_rocks_long</Template>
+			<Template>structures/palisades_long</Template>
 			<Player>3</Player>
 			<Position x="1220.53455" z="1986.64942"/>
 			<Orientation y="-4.47403"/>
@@ -46151,7 +46150,7 @@
 			<Actor seed="63989"/>
 		</Entity>
 		<Entity uid="12141">
-			<Template>other/palisades_rocks_long</Template>
+			<Template>structures/palisades_long</Template>
 			<Player>3</Player>
 			<Position x="1194.8971" z="2001.38013"/>
 			<Orientation y="2.29122"/>
@@ -46159,7 +46158,7 @@
 			<Actor seed="63989"/>
 		</Entity>
 		<Entity uid="12142">
-			<Template>other/palisades_rocks_long</Template>
+			<Template>structures/palisades_long</Template>
 			<Player>3</Player>
 			<Position x="1213.83985" z="2006.03724"/>
 			<Orientation y="3.63439"/>
@@ -46167,7 +46166,7 @@
 			<Actor seed="63989"/>
 		</Entity>
 		<Entity uid="12143">
-			<Template>other/palisades_rocks_medium</Template>
+			<Template>structures/palisades_medium</Template>
 			<Player>3</Player>
 			<Position x="1203.5044" z="2007.82789"/>
 			<Orientation y="2.85718"/>
@@ -46175,7 +46174,7 @@
 			<Actor seed="3558"/>
 		</Entity>
 		<Entity uid="12144">
-			<Template>other/palisades_rocks_medium</Template>
+			<Template>structures/palisades_medium</Template>
 			<Player>3</Player>
 			<Position x="1220.98194" z="1998.13257"/>
 			<Orientation y="1.30855"/>
@@ -47054,763 +47053,763 @@
 			<Actor seed="2471"/>
 		</Entity>
 		<Entity uid="12271">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1647.8567" z="1673.37793"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="8809"/>
 		</Entity>
 		<Entity uid="12272">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1716.66346" z="1657.719"/>
 			<Orientation y="-1.19951"/>
 			<Actor seed="45893"/>
 		</Entity>
 		<Entity uid="12273">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1765.50245" z="1659.24122"/>
 			<Orientation y="-2.09421"/>
 			<Actor seed="62430"/>
 		</Entity>
 		<Entity uid="12274">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1702.53834" z="1661.90052"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="45798"/>
 		</Entity>
 		<Entity uid="12275">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1604.65455" z="1666.71985"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="11577"/>
 		</Entity>
 		<Entity uid="12276">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1579.26172" z="1674.92554"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="40446"/>
 		</Entity>
 		<Entity uid="12277">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1552.0514" z="1656.66565"/>
 			<Orientation y="-2.51343"/>
 			<Actor seed="23543"/>
 		</Entity>
 		<Entity uid="12278">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1516.11133" z="1622.33863"/>
 			<Orientation y="-2.51351"/>
 			<Actor seed="59856"/>
 		</Entity>
 		<Entity uid="12279">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1479.20618" z="1615.29798"/>
 			<Orientation y="-2.50437"/>
 			<Actor seed="22951"/>
 		</Entity>
 		<Entity uid="12280">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1442.79944" z="1616.83606"/>
 			<Orientation y="-3.01882"/>
 			<Actor seed="4718"/>
 		</Entity>
 		<Entity uid="12281">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1463.33667" z="1587.23353"/>
 			<Orientation y="-2.15653"/>
 			<Actor seed="14349"/>
 		</Entity>
 		<Entity uid="12282">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1400.35853" z="1594.44263"/>
 			<Orientation y="-2.21937"/>
 			<Actor seed="22567"/>
 		</Entity>
 		<Entity uid="12283">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1346.47547" z="1607.25953"/>
 			<Orientation y="-1.9295"/>
 			<Actor seed="5062"/>
 		</Entity>
 		<Entity uid="12284">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1328.3954" z="1592.01746"/>
 			<Orientation y="-2.21158"/>
 			<Actor seed="37297"/>
 		</Entity>
 		<Entity uid="12285">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1313.15931" z="1576.48462"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="25076"/>
 		</Entity>
 		<Entity uid="12286">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1297.90967" z="1597.3147"/>
 			<Orientation y="-1.4416"/>
 			<Actor seed="60177"/>
 		</Entity>
 		<Entity uid="12287">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1280.89051" z="1570.19678"/>
 			<Orientation y="-2.51453"/>
 			<Actor seed="49274"/>
 		</Entity>
 		<Entity uid="12288">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1249.74915" z="1568.9745"/>
 			<Orientation y="-2.3209"/>
 			<Actor seed="14021"/>
 		</Entity>
 		<Entity uid="12289">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1208.70936" z="1635.65406"/>
 			<Orientation y="-3.0683"/>
 			<Actor seed="61894"/>
 		</Entity>
 		<Entity uid="12290">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1206.27186" z="1591.14283"/>
 			<Orientation y="-2.995"/>
 			<Actor seed="14228"/>
 		</Entity>
 		<Entity uid="12291">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1208.66712" z="1552.69239"/>
 			<Orientation y="3.02533"/>
 			<Actor seed="25689"/>
 		</Entity>
 		<Entity uid="12292">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1294.52894" z="1561.50977"/>
 			<Orientation y="-2.41968"/>
 			<Actor seed="13358"/>
 		</Entity>
 		<Entity uid="12293">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1243.08338" z="1723.95325"/>
 			<Orientation y="-2.47324"/>
 			<Actor seed="48084"/>
 		</Entity>
 		<Entity uid="12294">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1225.23511" z="1698.70484"/>
 			<Orientation y="-2.88802"/>
 			<Actor seed="65025"/>
 		</Entity>
 		<Entity uid="12295">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1211.2765" z="1670.98682"/>
 			<Orientation y="2.38865"/>
 			<Actor seed="33258"/>
 		</Entity>
 		<Entity uid="12296">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1223.66944" z="1735.14393"/>
 			<Orientation y="1.67447"/>
 			<Actor seed="4105"/>
 		</Entity>
 		<Entity uid="12297">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1241.5724" z="1796.37855"/>
 			<Orientation y="-2.91462"/>
 			<Actor seed="13343"/>
 		</Entity>
 		<Entity uid="12298">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1252.22242" z="1832.37562"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="1474"/>
 		</Entity>
 		<Entity uid="12299">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1233.53064" z="1860.35279"/>
 			<Orientation y="0.01267"/>
 			<Actor seed="32278"/>
 		</Entity>
 		<Entity uid="12300">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1243.74988" z="1916.10914"/>
 			<Orientation y="2.87082"/>
 			<Actor seed="57327"/>
 		</Entity>
 		<Entity uid="12301">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1279.06641" z="1966.22852"/>
 			<Orientation y="-2.51383"/>
 			<Actor seed="61638"/>
 		</Entity>
 		<Entity uid="12302">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1253.27942" z="1955.69397"/>
 			<Orientation y="-3.11672"/>
 			<Actor seed="38519"/>
 		</Entity>
 		<Entity uid="12303">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1266.01734" z="1928.70081"/>
 			<Orientation y="-3.08013"/>
 			<Actor seed="53280"/>
 		</Entity>
 		<Entity uid="12304">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1258.05567" z="1854.19263"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="20033"/>
 		</Entity>
 		<Entity uid="12305">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1184.4795" z="1512.19507"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="22965"/>
 		</Entity>
 		<Entity uid="12306">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1159.80091" z="1472.9524"/>
 			<Orientation y="-2.69848"/>
 			<Actor seed="41462"/>
 		</Entity>
 		<Entity uid="12307">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1136.32874" z="1467.94751"/>
 			<Orientation y="-1.60421"/>
 			<Actor seed="47758"/>
 		</Entity>
 		<Entity uid="12308">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1134.26111" z="1445.21033"/>
 			<Orientation y="-2.9128"/>
 			<Actor seed="62750"/>
 		</Entity>
 		<Entity uid="12309">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1088.1443" z="1432.2964"/>
 			<Orientation y="-0.47904"/>
 			<Actor seed="25913"/>
 		</Entity>
 		<Entity uid="12310">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1028.48938" z="1406.24878"/>
 			<Orientation y="-2.90745"/>
 			<Actor seed="62977"/>
 		</Entity>
 		<Entity uid="12311">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1020.59455" z="1381.0453"/>
 			<Orientation y="-2.76671"/>
 			<Actor seed="56285"/>
 		</Entity>
 		<Entity uid="12312">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="993.0882" z="1406.72876"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="38100"/>
 		</Entity>
 		<Entity uid="12313">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="950.36408" z="1375.16724"/>
 			<Orientation y="-2.47619"/>
 			<Actor seed="23087"/>
 		</Entity>
 		<Entity uid="12314">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="920.89234" z="1362.60303"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="50897"/>
 		</Entity>
 		<Entity uid="12315">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="901.30646" z="1337.81605"/>
 			<Orientation y="-1.10442"/>
 			<Actor seed="11349"/>
 		</Entity>
 		<Entity uid="12316">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="873.51142" z="1345.06397"/>
 			<Orientation y="0.43065"/>
 			<Actor seed="36114"/>
 		</Entity>
 		<Entity uid="12317">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="846.82514" z="1312.63209"/>
 			<Orientation y="-2.22608"/>
 			<Actor seed="61239"/>
 		</Entity>
 		<Entity uid="12318">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="816.07209" z="1226.43104"/>
 			<Orientation y="-2.18915"/>
 			<Actor seed="47127"/>
 		</Entity>
 		<Entity uid="12319">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="790.01838" z="1209.1742"/>
 			<Orientation y="-2.47873"/>
 			<Actor seed="7563"/>
 		</Entity>
 		<Entity uid="12320">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="750.41749" z="1154.04163"/>
 			<Orientation y="-2.47648"/>
 			<Actor seed="15455"/>
 		</Entity>
 		<Entity uid="12321">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="691.60303" z="1146.78064"/>
 			<Orientation y="2.40583"/>
 			<Actor seed="1748"/>
 		</Entity>
 		<Entity uid="12322">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="666.08545" z="1114.28016"/>
 			<Orientation y="-0.99996"/>
 			<Actor seed="29689"/>
 		</Entity>
 		<Entity uid="12323">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="634.44697" z="1111.67286"/>
 			<Orientation y="-2.97585"/>
 			<Actor seed="13310"/>
 		</Entity>
 		<Entity uid="12324">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="592.43787" z="1100.2522"/>
 			<Orientation y="-2.34141"/>
 			<Actor seed="59077"/>
 		</Entity>
 		<Entity uid="12325">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="536.0229" z="1094.15821"/>
 			<Orientation y="-2.42791"/>
 			<Actor seed="28951"/>
 		</Entity>
 		<Entity uid="12326">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="501.4405" z="1068.55677"/>
 			<Orientation y="-2.7167"/>
 			<Actor seed="38826"/>
 		</Entity>
 		<Entity uid="12327">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="480.98404" z="1046.33887"/>
 			<Orientation y="-2.7045"/>
 			<Actor seed="38547"/>
 		</Entity>
 		<Entity uid="12328">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="475.39136" z="1082.44556"/>
 			<Orientation y="-2.96665"/>
 			<Actor seed="63640"/>
 		</Entity>
 		<Entity uid="12329">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="421.78855" z="1003.88318"/>
 			<Orientation y="-2.26146"/>
 			<Actor seed="48196"/>
 		</Entity>
 		<Entity uid="12330">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="362.82902" z="995.2204"/>
 			<Orientation y="-2.38266"/>
 			<Actor seed="31589"/>
 		</Entity>
 		<Entity uid="12331">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="350.2266" z="974.76795"/>
 			<Orientation y="-2.877"/>
 			<Actor seed="54549"/>
 		</Entity>
 		<Entity uid="12332">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="317.64515" z="953.36243"/>
 			<Orientation y="-3.0035"/>
 			<Actor seed="40414"/>
 		</Entity>
 		<Entity uid="12333">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="315.198" z="970.03553"/>
 			<Orientation y="2.95347"/>
 			<Actor seed="32285"/>
 		</Entity>
 		<Entity uid="12334">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="289.6059" z="847.7804"/>
 			<Orientation y="2.68085"/>
 			<Actor seed="23777"/>
 		</Entity>
 		<Entity uid="12335">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="297.15601" z="816.7635"/>
 			<Orientation y="2.93985"/>
 			<Actor seed="37803"/>
 		</Entity>
 		<Entity uid="12336">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="282.79789" z="793.30073"/>
 			<Orientation y="-2.03124"/>
 			<Actor seed="7124"/>
 		</Entity>
 		<Entity uid="12337">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="265.30802" z="785.21485"/>
 			<Orientation y="-2.55596"/>
 			<Actor seed="35180"/>
 		</Entity>
 		<Entity uid="12338">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="250.88077" z="746.56611"/>
 			<Orientation y="-2.43964"/>
 			<Actor seed="14253"/>
 		</Entity>
 		<Entity uid="12339">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="225.75208" z="752.20386"/>
 			<Orientation y="-2.60631"/>
 			<Actor seed="21701"/>
 		</Entity>
 		<Entity uid="12340">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="208.54969" z="715.96412"/>
 			<Orientation y="2.45865"/>
 			<Actor seed="7154"/>
 		</Entity>
 		<Entity uid="12341">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="227.97892" z="694.93921"/>
 			<Orientation y="-0.93006"/>
 			<Actor seed="45743"/>
 		</Entity>
 		<Entity uid="12342">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="129.24729" z="660.40534"/>
 			<Orientation y="-3.04267"/>
 			<Actor seed="8503"/>
 		</Entity>
 		<Entity uid="12343">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="145.46888" z="645.52222"/>
 			<Orientation y="1.52965"/>
 			<Actor seed="6496"/>
 		</Entity>
 		<Entity uid="12344">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="110.9724" z="642.4892"/>
 			<Orientation y="-3.11918"/>
 			<Actor seed="63920"/>
 		</Entity>
 		<Entity uid="12345">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="184.4438" z="622.76996"/>
 			<Orientation y="-2.5424"/>
 			<Actor seed="38028"/>
 		</Entity>
 		<Entity uid="12346">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="195.95685" z="606.16712"/>
 			<Orientation y="-2.24474"/>
 			<Actor seed="47338"/>
 		</Entity>
 		<Entity uid="12347">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="286.3819" z="558.75092"/>
 			<Orientation y="-2.18255"/>
 			<Actor seed="28380"/>
 		</Entity>
 		<Entity uid="12348">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="269.97376" z="554.5481"/>
 			<Orientation y="-2.47645"/>
 			<Actor seed="23105"/>
 		</Entity>
 		<Entity uid="12349">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="314.97794" z="551.7845"/>
 			<Orientation y="-2.18747"/>
 			<Actor seed="34141"/>
 		</Entity>
 		<Entity uid="12350">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="361.82926" z="500.60047"/>
 			<Orientation y="3.0764"/>
 			<Actor seed="58650"/>
 		</Entity>
 		<Entity uid="12351">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="377.78943" z="413.80716"/>
 			<Orientation y="-2.22515"/>
 			<Actor seed="4343"/>
 		</Entity>
 		<Entity uid="12352">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="435.30738" z="488.74549"/>
 			<Orientation y="-2.29975"/>
 			<Actor seed="32223"/>
 		</Entity>
 		<Entity uid="12353">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="559.42603" z="476.55271"/>
 			<Orientation y="-2.26226"/>
 			<Actor seed="2426"/>
 		</Entity>
 		<Entity uid="12354">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="599.49494" z="474.98163"/>
 			<Orientation y="-2.18761"/>
 			<Actor seed="7885"/>
 		</Entity>
 		<Entity uid="12355">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="646.68458" z="457.4881"/>
 			<Orientation y="-2.37426"/>
 			<Actor seed="13826"/>
 		</Entity>
 		<Entity uid="12356">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="681.5923" z="425.5622"/>
 			<Orientation y="2.51575"/>
 			<Actor seed="42453"/>
 		</Entity>
 		<Entity uid="12357">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="748.00983" z="366.36432"/>
 			<Orientation y="2.82227"/>
 			<Actor seed="45679"/>
 		</Entity>
 		<Entity uid="12358">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="722.6662" z="400.10102"/>
 			<Orientation y="-2.41408"/>
 			<Actor seed="142"/>
 		</Entity>
 		<Entity uid="12359">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="793.53681" z="358.23337"/>
 			<Orientation y="-2.62183"/>
 			<Actor seed="13696"/>
 		</Entity>
 		<Entity uid="12360">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="777.10846" z="243.20228"/>
 			<Orientation y="-2.6836"/>
 			<Actor seed="46955"/>
 		</Entity>
 		<Entity uid="12361">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="742.35871" z="175.49033"/>
 			<Orientation y="-2.48642"/>
 			<Actor seed="40822"/>
 		</Entity>
 		<Entity uid="12362">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="673.4986" z="135.47312"/>
 			<Orientation y="-1.46587"/>
 			<Actor seed="10888"/>
 		</Entity>
 		<Entity uid="12363">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="585.89515" z="169.2605"/>
 			<Orientation y="-1.93363"/>
 			<Actor seed="52249"/>
 		</Entity>
 		<Entity uid="12364">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="515.39576" z="213.95221"/>
 			<Orientation y="-2.13695"/>
 			<Actor seed="3496"/>
 		</Entity>
 		<Entity uid="12365">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="431.35871" z="298.16742"/>
 			<Orientation y="2.52271"/>
 			<Actor seed="65097"/>
 		</Entity>
 		<Entity uid="12366">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1116.24585" z="425.42621"/>
 			<Orientation y="-2.25077"/>
 			<Actor seed="4834"/>
 		</Entity>
 		<Entity uid="12367">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1162.45301" z="453.18201"/>
 			<Orientation y="-2.34224"/>
 			<Actor seed="25563"/>
 		</Entity>
 		<Entity uid="12368">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1278.3462" z="441.82602"/>
 			<Orientation y="1.60747"/>
 			<Actor seed="51834"/>
 		</Entity>
 		<Entity uid="12369">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1364.72632" z="458.63282"/>
 			<Orientation y="-2.29921"/>
 			<Actor seed="60502"/>
 		</Entity>
 		<Entity uid="12370">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1425.71631" z="475.34098"/>
 			<Orientation y="-2.82938"/>
 			<Actor seed="51359"/>
 		</Entity>
 		<Entity uid="12371">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1455.54505" z="499.41364"/>
 			<Orientation y="-2.5613"/>
 			<Actor seed="56431"/>
 		</Entity>
 		<Entity uid="12372">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1522.18885" z="502.35572"/>
 			<Orientation y="-2.60442"/>
 			<Actor seed="27461"/>
 		</Entity>
 		<Entity uid="12373">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1625.77833" z="556.32386"/>
 			<Orientation y="-2.2142"/>
 			<Actor seed="34567"/>
 		</Entity>
 		<Entity uid="12374">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1691.34937" z="613.21662"/>
 			<Orientation y="-2.31017"/>
 			<Actor seed="20327"/>
 		</Entity>
 		<Entity uid="12375">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1799.36011" z="691.56214"/>
 			<Orientation y="-2.5873"/>
 			<Actor seed="7454"/>
 		</Entity>
 		<Entity uid="12376">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1753.72864" z="643.3042"/>
 			<Orientation y="-2.3475"/>
 			<Actor seed="37077"/>
 		</Entity>
 		<Entity uid="12377">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1591.86048" z="535.97284"/>
 			<Orientation y="-3.08765"/>
 			<Actor seed="16276"/>
 		</Entity>
 		<Entity uid="12378">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1608.81165" z="560.09687"/>
 			<Orientation y="-2.85178"/>
 			<Actor seed="48578"/>
 		</Entity>
 		<Entity uid="12379">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1636.3141" z="575.07056"/>
 			<Orientation y="-2.70083"/>
@@ -48328,7 +48327,7 @@
 			<Actor seed="3924"/>
 		</Entity>
 		<Entity uid="12457">
-			<Template>other/palisades_rocks_gate</Template>
+			<Template>structures/palisades_gate</Template>
 			<Player>3</Player>
 			<Position x="1212.93238" z="1978.15125"/>
 			<Orientation y="-3.4655"/>
@@ -48336,7 +48335,7 @@
 			<Actor seed="40929"/>
 		</Entity>
 		<Entity uid="12458">
-			<Template>other/palisades_rocks_gate</Template>
+			<Template>structures/palisades_gate</Template>
 			<Player>3</Player>
 			<Position x="1192.03638" z="1989.58167"/>
 			<Orientation y="-1.94744"/>

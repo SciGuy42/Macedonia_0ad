@@ -62,7 +62,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				//give reward to human player for killing trader
 				let ccs = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(1), "CivilCentre").filter(TriggerHelper.IsInWorld);
 				
-				TriggerHelper.SpawnUnits(pickRandom(ccs),"units/mace_support_trader",1,1);
+				TriggerHelper.SpawnUnits(pickRandom(ccs),"units/mace/support_trader",1,1);
 			}
 			else if (this.crannog_ids.indexOf(data.entity) >= 0 || data.entity == 7176 || data.entity == 7177) //if pl2 or pl4 lose a civic center
 			{
@@ -92,7 +92,7 @@ Trigger.prototype.SpawnAndStartCavalryAttack = function()
 	}
 	
 	
-	this.gaul_cavalry_types = ["units/gaul_cavalry_swordsman_e","units/gaul_cavalry_javelinist_e","units/brit_war_dog_e","units/gaul_champion_cavalry","units/brit_champion_cavalry"];
+	this.gaul_cavalry_types = ["units/gaul_cavalry_swordsman_e","units/gaul_cavalry_javelinist_e","units/brit_war_dog_e","units/gaul/champion_cavalry","units/brit/champion_chariot"];
 	
 	
 	//get list of barracks
@@ -186,7 +186,7 @@ Trigger.prototype.IntervalActionSpawnTraders = function(data)
 				let site = pickRandom(markets_e);
 				
 				warn("Spawning trader for player "+this.enemies[e]+" at site = " + site);
-				let trader_i = TriggerHelper.SpawnUnits(site,"units/brit_support_trader",1,this.enemies[e]);
+				let trader_i = TriggerHelper.SpawnUnits(site,"units/brit/support_trader",1,this.enemies[e]);
 				//warn("Spawning trader for player "+this.enemies[e]);
 			}
 		}
@@ -285,7 +285,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	{
 		this.spawn_cav_bonus = 4;
 		this.spawn_crannog_bonus = 1;
-		this.infantryTypesSpawn = ["units/brit_infantry_javelinist_a","units/brit_infantry_slinger_a","units/brit_infantry_spearman_a"];
+		this.infantryTypesSpawn = ["units/brit_infantry_javelinist_a","units/brit/infantry_slinger_a","units/brit/infantry_spearman_a"];
 	
 	}
 	else if (difficulty == 2)
@@ -320,7 +320,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	//list of crannogs of player 4
 	//we randomly spawn units near them just to help the AI of player 4
 	cmpTrigger.crannog_ids = [7366,7371,7382];
-	cmpTrigger.infantryTypesSpawn = ["units/brit_infantry_javelinist_b","units/brit_infantry_slinger_b","units/brit_infantry_spearman_b"];
+	cmpTrigger.infantryTypesSpawn = ["units/brit_infantry_javelinist_b","units/brit/infantry_slinger_b","units/brit_infantry_spearman_b"];
 	
 	cmpTrigger.spawn_cav_bonus = 0;
 	cmpTrigger.spawn_crannog_bonus = 0;

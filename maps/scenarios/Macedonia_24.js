@@ -43,7 +43,7 @@ var disabledTemplates = (civ) => [
 
 	// Shoreline
 	"structures/" + civ + "_dock",
-	"structures/brit_crannog",
+	"structures/brit/crannog",
 	"structures/cart_super_dock",
 	"structures/ptol_lighthouse",
 	
@@ -440,7 +440,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		{
 			//spawn the garrison inside the tower
 			
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",fort_size,p);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",fort_size,p);
 			
 			for (let a of archers_e)
 			{
@@ -456,7 +456,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 			for (let e of towers_w)
 			{
 				//spawn the garrison inside the tower
-				let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_ranged",2,p);
+				let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",2,p);
 					
 				for (let a of archers_e)
 				{
@@ -471,7 +471,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of camps_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen_champion_ranged",5,p);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen/champion_ranged",5,p);
 			
 			for (let a of archers_e)
 			{
@@ -486,7 +486,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of outposts_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen_champion_ranged",1,p);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen/champion_ranged",1,p);
 				
 			for (let a of archers_e)
 			{
@@ -900,7 +900,7 @@ Trigger.prototype.ArcadianAttack = function(data)
 		else 
 		{
 			//siege
-			let units_i = TriggerHelper.SpawnUnits(spawn_site,"units/mace_mechanical_siege_lithobolos_packed",1,p);
+			let units_i = TriggerHelper.SpawnUnits(spawn_site,"units/mace/siege_lithobolos_packed",1,p);
 			attackers.push(units_i[0]);
 		}
 	}

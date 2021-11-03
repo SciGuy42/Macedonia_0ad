@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Scenario version="6">
+<Scenario version="7">
 	<Environment>
 		<SkySet>sunny</SkySet>
 		<SunColor r="0.729412" g="0.737255" b="0.564706"/>
 		<SunElevation angle="0.502655"/>
 		<SunRotation angle="0.16567"/>
-		<TerrainAmbientColor r="0.513726" g="0.47451" b="0.321569"/>
-		<UnitsAmbientColor r="0.564706" g="0.576471" b="0.54902"/>
+		<AmbientColor r="0.564706" g="0.576471" b="0.54902"/>
 		<Fog>
 			<FogFactor>0</FogFactor>
 			<FogThickness>0</FogThickness>
@@ -65380,7 +65379,7 @@
 			<Orientation y="-0.12348"/>
 		</Entity>
 		<Entity uid="11840">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="539.23926" z="911.46985"/>
 			<Orientation y="-0.61721"/>
@@ -65392,7 +65391,7 @@
 			<Orientation y="0.33986"/>
 		</Entity>
 		<Entity uid="11842">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="206.44214" z="878.24128"/>
 			<Orientation y="-3.25597"/>
@@ -65404,7 +65403,7 @@
 			<Orientation y="0.43041"/>
 		</Entity>
 		<Entity uid="11844">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="559.71106" z="569.08997"/>
 			<Orientation y="0.00057"/>
@@ -65416,13 +65415,13 @@
 			<Orientation y="-3.7432"/>
 		</Entity>
 		<Entity uid="11846">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="589.2074" z="1684.06849"/>
 			<Orientation y="-1.23331"/>
 		</Entity>
 		<Entity uid="11847">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="568.57538" z="1669.14875"/>
 			<Orientation y="-1.63225"/>
@@ -65434,7 +65433,7 @@
 			<Orientation y="-3.68297"/>
 		</Entity>
 		<Entity uid="11849">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="1747.27027" z="994.86084"/>
 			<Orientation y="-1.94268"/>
@@ -65446,13 +65445,13 @@
 			<Orientation y="-3.19419"/>
 		</Entity>
 		<Entity uid="11851">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="910.0312" z="196.51648"/>
 			<Orientation y="-2.22222"/>
 		</Entity>
 		<Entity uid="11852">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="899.17786" z="207.51423"/>
 			<Orientation y="0.85743"/>
@@ -65464,13 +65463,13 @@
 			<Orientation y="-3.04352"/>
 		</Entity>
 		<Entity uid="11854">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="390.7765" z="289.29697"/>
 			<Orientation y="-0.60512"/>
 		</Entity>
 		<Entity uid="11855">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="397.06861" z="293.35648"/>
 			<Orientation y="1.12572"/>
@@ -65482,13 +65481,13 @@
 			<Orientation y="0.53251"/>
 		</Entity>
 		<Entity uid="11857">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="1284.52161" z="325.90061"/>
 			<Orientation y="-1.19492"/>
 		</Entity>
 		<Entity uid="11858">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="1291.68128" z="322.81745"/>
 			<Orientation y="1.72031"/>
@@ -65506,7 +65505,7 @@
 			<Orientation y="-2.35726"/>
 		</Entity>
 		<Entity uid="11861">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="754.19074" z="1849.2209"/>
 			<Orientation y="-3.82451"/>
@@ -65530,13 +65529,13 @@
 			<Orientation y="-0.9085"/>
 		</Entity>
 		<Entity uid="11865">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="2014.76545" z="1050.49238"/>
 			<Orientation y="-2.70386"/>
 		</Entity>
 		<Entity uid="11866">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="2021.77082" z="1042.80573"/>
 			<Orientation y="-1.14307"/>
@@ -65560,7 +65559,7 @@
 			<Orientation y="0.83764"/>
 		</Entity>
 		<Entity uid="11870">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="1010.32081" z="612.59821"/>
 			<Orientation y="-4.41083"/>
@@ -65572,7 +65571,7 @@
 			<Orientation y="-3.83059"/>
 		</Entity>
 		<Entity uid="11872">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="1455.54261" z="1238.57862"/>
 			<Orientation y="-0.09528"/>
@@ -65584,7 +65583,7 @@
 			<Orientation y="-1.66514"/>
 		</Entity>
 		<Entity uid="11874">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="1608.597" z="1735.6446"/>
 			<Orientation y="0.57941"/>
@@ -65596,109 +65595,109 @@
 			<Orientation y="-4.67205"/>
 		</Entity>
 		<Entity uid="11876">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="140.22584" z="1296.32093"/>
 			<Orientation y="1.26655"/>
 		</Entity>
 		<Entity uid="11877">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="147.89191" z="1300.44404"/>
 			<Orientation y="-3.98696"/>
 		</Entity>
 		<Entity uid="11878">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="141.11371" z="1291.8061"/>
 			<Orientation y="-3.80172"/>
 		</Entity>
 		<Entity uid="11879">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="1619.01575" z="503.0326"/>
 			<Orientation y="-2.13115"/>
 		</Entity>
 		<Entity uid="11880">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="1601.15271" z="495.99466"/>
 			<Orientation y="1.74392"/>
 		</Entity>
 		<Entity uid="11881">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="1597.88355" z="503.99073"/>
 			<Orientation y="1.57067"/>
 		</Entity>
 		<Entity uid="11882">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="1606.60792" z="508.88209"/>
 			<Orientation y="-1.82494"/>
 		</Entity>
 		<Entity uid="11883">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="1617.97754" z="498.42383"/>
 			<Orientation y="1.59107"/>
 		</Entity>
 		<Entity uid="11884">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="1287.58619" z="1264.29236"/>
 			<Orientation y="-4.05514"/>
 		</Entity>
 		<Entity uid="11885">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="1298.589" z="1252.26343"/>
 			<Orientation y="-2.72715"/>
 		</Entity>
 		<Entity uid="11886">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="1287.78553" z="1253.82831"/>
 			<Orientation y="-4.51856"/>
 		</Entity>
 		<Entity uid="11887">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="517.97333" z="1162.01148"/>
 			<Orientation y="-3.65842"/>
 		</Entity>
 		<Entity uid="11888">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="523.08802" z="1154.50379"/>
 			<Orientation y="-2.39055"/>
 		</Entity>
 		<Entity uid="11889">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="528.29108" z="1151.1349"/>
 			<Orientation y="-1.06788"/>
 		</Entity>
 		<Entity uid="11890">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="1896.88843" z="1156.5459"/>
 			<Orientation y="0.43233"/>
 		</Entity>
 		<Entity uid="11891">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="1899.9568" z="1165.89722"/>
 			<Orientation y="0.14721"/>
 		</Entity>
 		<Entity uid="11892">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="1896.33558" z="1247.36146"/>
 			<Orientation y="1.14916"/>
 		</Entity>
 		<Entity uid="11893">
-			<Template>gaia/geology_stone_mediterranean</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="1892.69947" z="1161.38843"/>
 			<Orientation y="2.03055"/>
@@ -73078,841 +73077,841 @@
 			<Orientation y="-1.50144"/>
 		</Entity>
 		<Entity uid="13123">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1955.94874" z="1079.06153"/>
 			<Orientation y="-4.53757"/>
 		</Entity>
 		<Entity uid="13124">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1961.69214" z="1091.82801"/>
 			<Orientation y="-1.35483"/>
 		</Entity>
 		<Entity uid="13125">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1966.23652" z="1073.70105"/>
 			<Orientation y="-0.8976"/>
 		</Entity>
 		<Entity uid="13126">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1952.90381" z="1073.61603"/>
 			<Orientation y="-2.62838"/>
 		</Entity>
 		<Entity uid="13127">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1951.92426" z="1085.732"/>
 			<Orientation y="-0.33266"/>
 		</Entity>
 		<Entity uid="13128">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="55.41639" z="975.88605"/>
 			<Orientation y="-3.7691"/>
 		</Entity>
 		<Entity uid="13129">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="54.55884" z="982.4181"/>
 			<Orientation y="-0.23153"/>
 		</Entity>
 		<Entity uid="13130">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="53.60541" z="969.42493"/>
 			<Orientation y="-3.28588"/>
 		</Entity>
 		<Entity uid="13131">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="52.2079" z="979.09058"/>
 			<Orientation y="-0.20714"/>
 		</Entity>
 		<Entity uid="13132">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="49.54535" z="975.6999"/>
 			<Orientation y="-4.41434"/>
 		</Entity>
 		<Entity uid="13133">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1874.63233" z="1215.31812"/>
 			<Orientation y="0.68303"/>
 		</Entity>
 		<Entity uid="13134">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1869.34711" z="1214.63904"/>
 			<Orientation y="0.77726"/>
 		</Entity>
 		<Entity uid="13135">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1868.36805" z="1224.83808"/>
 			<Orientation y="-4.70034"/>
 		</Entity>
 		<Entity uid="13136">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1861.39521" z="1211.18372"/>
 			<Orientation y="-0.81235"/>
 		</Entity>
 		<Entity uid="13137">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1874.9231" z="1222.33332"/>
 			<Orientation y="-4.12731"/>
 		</Entity>
 		<Entity uid="13138">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="981.42273" z="1039.65198"/>
 			<Orientation y="-1.86394"/>
 		</Entity>
 		<Entity uid="13139">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="979.40687" z="1043.46937"/>
 			<Orientation y="1.54398"/>
 		</Entity>
 		<Entity uid="13140">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="989.06507" z="1042.78675"/>
 			<Orientation y="-0.57074"/>
 		</Entity>
 		<Entity uid="13141">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="977.06788" z="1038.45911"/>
 			<Orientation y="-1.97498"/>
 		</Entity>
 		<Entity uid="13142">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="986.35193" z="1035.57789"/>
 			<Orientation y="-2.26043"/>
 		</Entity>
 		<Entity uid="13143">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1387.79645" z="1730.95545"/>
 			<Orientation y="-0.7116"/>
 		</Entity>
 		<Entity uid="13144">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1387.3224" z="1726.24946"/>
 			<Orientation y="-1.55907"/>
 		</Entity>
 		<Entity uid="13145">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1396.14173" z="1725.34595"/>
 			<Orientation y="-1.18499"/>
 		</Entity>
 		<Entity uid="13146">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1389.34443" z="1719.2375"/>
 			<Orientation y="0.819"/>
 		</Entity>
 		<Entity uid="13147">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1400.45893" z="1726.4256"/>
 			<Orientation y="0.35267"/>
 		</Entity>
 		<Entity uid="13148">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1148.68396" z="1306.42914"/>
 			<Orientation y="1.46082"/>
 		</Entity>
 		<Entity uid="13149">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1143.6089" z="1310.63251"/>
 			<Orientation y="1.39721"/>
 		</Entity>
 		<Entity uid="13150">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1150.55713" z="1300.50458"/>
 			<Orientation y="-1.27385"/>
 		</Entity>
 		<Entity uid="13151">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1151.64106" z="1310.02155"/>
 			<Orientation y="-4.66341"/>
 		</Entity>
 		<Entity uid="13152">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1152.62067" z="1304.51081"/>
 			<Orientation y="-1.94253"/>
 		</Entity>
 		<Entity uid="13153">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1230.02033" z="1467.67042"/>
 			<Orientation y="0.77672"/>
 		</Entity>
 		<Entity uid="13154">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1233.82844" z="1471.03144"/>
 			<Orientation y="-1.87728"/>
 		</Entity>
 		<Entity uid="13155">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1233.24756" z="1459.5818"/>
 			<Orientation y="-0.94314"/>
 		</Entity>
 		<Entity uid="13156">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1241.08771" z="1473.59327"/>
 			<Orientation y="1.2501"/>
 		</Entity>
 		<Entity uid="13157">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1223.4563" z="1472.81971"/>
 			<Orientation y="-0.6922"/>
 		</Entity>
 		<Entity uid="13158">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="871.23328" z="182.49396"/>
 			<Orientation y="-3.73124"/>
 		</Entity>
 		<Entity uid="13159">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="870.53241" z="192.90937"/>
 			<Orientation y="-1.3664"/>
 		</Entity>
 		<Entity uid="13160">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="876.16834" z="170.50959"/>
 			<Orientation y="-2.61178"/>
 		</Entity>
 		<Entity uid="13161">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="869.37085" z="176.9969"/>
 			<Orientation y="-4.7046"/>
 		</Entity>
 		<Entity uid="13162">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="863.2693" z="186.87354"/>
 			<Orientation y="-0.59974"/>
 		</Entity>
 		<Entity uid="13163">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="275.40223" z="442.75284"/>
 			<Orientation y="-3.50661"/>
 		</Entity>
 		<Entity uid="13164">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="282.76874" z="442.02988"/>
 			<Orientation y="-0.94306"/>
 		</Entity>
 		<Entity uid="13165">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="278.4336" z="439.31424"/>
 			<Orientation y="-1.47181"/>
 		</Entity>
 		<Entity uid="13166">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="261.95722" z="444.10013"/>
 			<Orientation y="-2.49866"/>
 		</Entity>
 		<Entity uid="13167">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="274.98267" z="436.01438"/>
 			<Orientation y="-1.72173"/>
 		</Entity>
 		<Entity uid="13168">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1557.20325" z="1682.70203"/>
 			<Orientation y="-3.21166"/>
 		</Entity>
 		<Entity uid="13169">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1553.90174" z="1688.68848"/>
 			<Orientation y="0.93235"/>
 		</Entity>
 		<Entity uid="13170">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1559.18824" z="1674.56464"/>
 			<Orientation y="-2.84824"/>
 		</Entity>
 		<Entity uid="13171">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1556.12262" z="1677.43879"/>
 			<Orientation y="-2.44776"/>
 		</Entity>
 		<Entity uid="13172">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1552.30335" z="1672.29389"/>
 			<Orientation y="-4.28968"/>
 		</Entity>
 		<Entity uid="13173">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="203.8584" z="768.43824"/>
 			<Orientation y="-0.26713"/>
 		</Entity>
 		<Entity uid="13174">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="196.93891" z="774.83063"/>
 			<Orientation y="-0.12085"/>
 		</Entity>
 		<Entity uid="13175">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="195.25385" z="768.98151"/>
 			<Orientation y="-0.01182"/>
 		</Entity>
 		<Entity uid="13176">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="191.79126" z="783.23945"/>
 			<Orientation y="-2.2466"/>
 		</Entity>
 		<Entity uid="13177">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="201.83533" z="775.72254"/>
 			<Orientation y="0.21912"/>
 		</Entity>
 		<Entity uid="13178">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1154.5691" z="203.03156"/>
 			<Orientation y="0.36612"/>
 		</Entity>
 		<Entity uid="13179">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1163.4198" z="206.54365"/>
 			<Orientation y="0.24477"/>
 		</Entity>
 		<Entity uid="13180">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1154.98145" z="208.06263"/>
 			<Orientation y="-3.74593"/>
 		</Entity>
 		<Entity uid="13181">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1162.66053" z="199.05988"/>
 			<Orientation y="-2.83475"/>
 		</Entity>
 		<Entity uid="13182">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1162.55494" z="210.5857"/>
 			<Orientation y="-2.73104"/>
 		</Entity>
 		<Entity uid="13183">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="422.57276" z="565.41028"/>
 			<Orientation y="-0.61437"/>
 		</Entity>
 		<Entity uid="13184">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="433.29957" z="562.11762"/>
 			<Orientation y="0.35277"/>
 		</Entity>
 		<Entity uid="13185">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="434.41962" z="571.5959"/>
 			<Orientation y="-4.69034"/>
 		</Entity>
 		<Entity uid="13186">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="427.32721" z="559.31806"/>
 			<Orientation y="-1.03507"/>
 		</Entity>
 		<Entity uid="13187">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="431.45795" z="566.0821"/>
 			<Orientation y="-1.28116"/>
 		</Entity>
 		<Entity uid="13188">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="187.99781" z="994.09015"/>
 			<Orientation y="-4.36268"/>
 		</Entity>
 		<Entity uid="13189">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="195.86799" z="987.77338"/>
 			<Orientation y="-3.373"/>
 		</Entity>
 		<Entity uid="13190">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="196.61353" z="996.04163"/>
 			<Orientation y="-2.30611"/>
 		</Entity>
 		<Entity uid="13191">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="195" z="981.94239"/>
 			<Orientation y="-0.86924"/>
 		</Entity>
 		<Entity uid="13192">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="192.61786" z="992.32972"/>
 			<Orientation y="-3.40015"/>
 		</Entity>
 		<Entity uid="13193">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="958.97181" z="882.784"/>
 			<Orientation y="-1.98725"/>
 		</Entity>
 		<Entity uid="13194">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="960.62842" z="878.15461"/>
 			<Orientation y="-2.34408"/>
 		</Entity>
 		<Entity uid="13195">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="966.65632" z="881.74451"/>
 			<Orientation y="-2.72065"/>
 		</Entity>
 		<Entity uid="13196">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="954.90412" z="882.55738"/>
 			<Orientation y="-2.13257"/>
 		</Entity>
 		<Entity uid="13197">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="956.43049" z="890.33167"/>
 			<Orientation y="0.41515"/>
 		</Entity>
 		<Entity uid="13198">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="418.15265" z="1795.74018"/>
 			<Orientation y="-2.91192"/>
 		</Entity>
 		<Entity uid="13199">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="414.2439" z="1797.00037"/>
 			<Orientation y="-3.46964"/>
 		</Entity>
 		<Entity uid="13200">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="411.23591" z="1801.11304"/>
 			<Orientation y="-4.6781"/>
 		</Entity>
 		<Entity uid="13201">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="418.34882" z="1780.3437"/>
 			<Orientation y="-2.40705"/>
 		</Entity>
 		<Entity uid="13202">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="421.27454" z="1788.99274"/>
 			<Orientation y="-3.17273"/>
 		</Entity>
 		<Entity uid="13203">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="888.33167" z="1243.17646"/>
 			<Orientation y="-0.64779"/>
 		</Entity>
 		<Entity uid="13204">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="895.2787" z="1241.95118"/>
 			<Orientation y="-1.7127"/>
 		</Entity>
 		<Entity uid="13205">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="889.22162" z="1237.90412"/>
 			<Orientation y="0.0216"/>
 		</Entity>
 		<Entity uid="13206">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="897.76465" z="1233.13373"/>
 			<Orientation y="-0.47965"/>
 		</Entity>
 		<Entity uid="13207">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="900.58613" z="1240.55207"/>
 			<Orientation y="-0.19327"/>
 		</Entity>
 		<Entity uid="13208">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1108.74524" z="1848.97291"/>
 			<Orientation y="0.1719"/>
 		</Entity>
 		<Entity uid="13209">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1113.18934" z="1856.25025"/>
 			<Orientation y="-1.70646"/>
 		</Entity>
 		<Entity uid="13210">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1103.00501" z="1855.47242"/>
 			<Orientation y="0.13968"/>
 		</Entity>
 		<Entity uid="13211">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1096.86121" z="1852.818"/>
 			<Orientation y="0.8064"/>
 		</Entity>
 		<Entity uid="13212">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1093.73597" z="1855.95875"/>
 			<Orientation y="-4.03165"/>
 		</Entity>
 		<Entity uid="13213">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="305.30591" z="1069.09339"/>
 			<Orientation y="-3.48278"/>
 		</Entity>
 		<Entity uid="13214">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="315.47248" z="1072.10462"/>
 			<Orientation y="-3.14351"/>
 		</Entity>
 		<Entity uid="13215">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="310.32911" z="1072.8061"/>
 			<Orientation y="-1.72056"/>
 		</Entity>
 		<Entity uid="13216">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="296.89496" z="1077.71613"/>
 			<Orientation y="-1.3647"/>
 		</Entity>
 		<Entity uid="13217">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="305.95344" z="1064.0854"/>
 			<Orientation y="0.95536"/>
 		</Entity>
 		<Entity uid="13218">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1619.12678" z="274.09064"/>
 			<Orientation y="-3.93323"/>
 		</Entity>
 		<Entity uid="13219">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1629.32563" z="288.55933"/>
 			<Orientation y="1.02977"/>
 		</Entity>
 		<Entity uid="13220">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1615.41144" z="278.46009"/>
 			<Orientation y="-0.43523"/>
 		</Entity>
 		<Entity uid="13221">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1625.09827" z="281.16651"/>
 			<Orientation y="-1.77088"/>
 		</Entity>
 		<Entity uid="13222">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1619.34791" z="283.2165"/>
 			<Orientation y="-4.05942"/>
 		</Entity>
 		<Entity uid="13223">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="513.1438" z="1136.081"/>
 			<Orientation y="-3.26635"/>
 		</Entity>
 		<Entity uid="13224">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="501.19001" z="1134.63227"/>
 			<Orientation y="-1.04651"/>
 		</Entity>
 		<Entity uid="13225">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="498.73975" z="1141.19355"/>
 			<Orientation y="-4.57532"/>
 		</Entity>
 		<Entity uid="13226">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="497.41511" z="1133.2674"/>
 			<Orientation y="-4.41462"/>
 		</Entity>
 		<Entity uid="13227">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="505.89051" z="1133.60993"/>
 			<Orientation y="-3.27802"/>
 		</Entity>
 		<Entity uid="13228">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="474.75934" z="312.41858"/>
 			<Orientation y="-4.44472"/>
 		</Entity>
 		<Entity uid="13229">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="474.42646" z="319.85743"/>
 			<Orientation y="-1.79981"/>
 		</Entity>
 		<Entity uid="13230">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="469.9549" z="313.92927"/>
 			<Orientation y="-4.21363"/>
 		</Entity>
 		<Entity uid="13231">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="465.36744" z="310.39643"/>
 			<Orientation y="-3.78158"/>
 		</Entity>
 		<Entity uid="13232">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="474.50019" z="306.94263"/>
 			<Orientation y="-3.26067"/>
 		</Entity>
 		<Entity uid="13233">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1032.4961" z="1214.18238"/>
 			<Orientation y="-1.07534"/>
 		</Entity>
 		<Entity uid="13234">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1021.00434" z="1202.45093"/>
 			<Orientation y="-0.96622"/>
 		</Entity>
 		<Entity uid="13235">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1029.21814" z="1211.0973"/>
 			<Orientation y="0.24292"/>
 		</Entity>
 		<Entity uid="13236">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1025.8921" z="1215.39612"/>
 			<Orientation y="0.4746"/>
 		</Entity>
 		<Entity uid="13237">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1030.48353" z="1218.37537"/>
 			<Orientation y="-3.67403"/>
 		</Entity>
 		<Entity uid="13238">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1527.50898" z="957.77991"/>
 			<Orientation y="1.2559"/>
 		</Entity>
 		<Entity uid="13239">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1529.33478" z="949.70807"/>
 			<Orientation y="-3.53997"/>
 		</Entity>
 		<Entity uid="13240">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1525.08313" z="961.2574"/>
 			<Orientation y="0.56775"/>
 		</Entity>
 		<Entity uid="13241">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1529.0528" z="963.47712"/>
 			<Orientation y="-2.43685"/>
 		</Entity>
 		<Entity uid="13242">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1532.35492" z="953.80738"/>
 			<Orientation y="-3.58246"/>
 		</Entity>
 		<Entity uid="13243">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="730.56812" z="1109.85651"/>
 			<Orientation y="-2.77257"/>
 		</Entity>
 		<Entity uid="13244">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="733.63056" z="1113.66565"/>
 			<Orientation y="-3.16007"/>
 		</Entity>
 		<Entity uid="13245">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="741.96473" z="1111.27582"/>
 			<Orientation y="1.16723"/>
 		</Entity>
 		<Entity uid="13246">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="744.93738" z="1107.43671"/>
 			<Orientation y="0.18343"/>
 		</Entity>
 		<Entity uid="13247">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="739.18238" z="1115.4314"/>
 			<Orientation y="-1.78518"/>
 		</Entity>
 		<Entity uid="13248">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="619.13941" z="1439.5077"/>
 			<Orientation y="-0.03466"/>
 		</Entity>
 		<Entity uid="13249">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="634.09107" z="1429.45441"/>
 			<Orientation y="-4.68377"/>
 		</Entity>
 		<Entity uid="13250">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="629.98798" z="1437.89936"/>
 			<Orientation y="0.0156"/>
 		</Entity>
 		<Entity uid="13251">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="635.40827" z="1440.82972"/>
 			<Orientation y="-2.21035"/>
 		</Entity>
 		<Entity uid="13252">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="629.74262" z="1432.46503"/>
 			<Orientation y="-0.36361"/>
 		</Entity>
 		<Entity uid="13253">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1572.54542" z="1459.06116"/>
 			<Orientation y="-1.37528"/>
 		</Entity>
 		<Entity uid="13254">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1566.12812" z="1450.31128"/>
 			<Orientation y="-1.4817"/>
 		</Entity>
 		<Entity uid="13255">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1569.40888" z="1447.95667"/>
 			<Orientation y="-0.05286"/>
 		</Entity>
 		<Entity uid="13256">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1561.07685" z="1445.7953"/>
 			<Orientation y="-3.45972"/>
 		</Entity>
 		<Entity uid="13257">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1561.49122" z="1455.6377"/>
 			<Orientation y="-3.87327"/>
 		</Entity>
 		<Entity uid="13258">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1260.64161" z="1817.66858"/>
 			<Orientation y="0.7619"/>
 		</Entity>
 		<Entity uid="13259">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1274.53394" z="1815.19947"/>
 			<Orientation y="-2.1133"/>
 		</Entity>
 		<Entity uid="13260">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1278.90772" z="1806.77137"/>
 			<Orientation y="-0.88216"/>
 		</Entity>
 		<Entity uid="13261">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1270.43738" z="1817.21778"/>
 			<Orientation y="-0.06177"/>
 		</Entity>
 		<Entity uid="13262">
-			<Template>gaia/flora_bush_berry</Template>
+			<Template>gaia/fruit/berry_01</Template>
 			<Player>0</Player>
 			<Position x="1265.85499" z="1816.0647"/>
 			<Orientation y="-3.26911"/>
@@ -116821,98 +116820,98 @@
 			<Actor seed="37400"/>
 		</Entity>
 		<Entity uid="21806">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>0</Player>
 			<Position x="797.10169" z="1011.44111"/>
 			<Orientation y="1.95136"/>
 			<Actor seed="48406"/>
 		</Entity>
 		<Entity uid="21807">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>0</Player>
 			<Position x="803.89966" z="1023.25245"/>
 			<Orientation y="1.87226"/>
 			<Actor seed="34417"/>
 		</Entity>
 		<Entity uid="21808">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>0</Player>
 			<Position x="811.98743" z="1036.47571"/>
 			<Orientation y="2.55916"/>
 			<Actor seed="51075"/>
 		</Entity>
 		<Entity uid="21809">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>0</Player>
 			<Position x="835.00995" z="1023.82093"/>
 			<Orientation y="-1.37319"/>
 			<Actor seed="52825"/>
 		</Entity>
 		<Entity uid="21810">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>0</Player>
 			<Position x="826.4214" z="1010.85303"/>
 			<Orientation y="-1.32816"/>
 			<Actor seed="52005"/>
 		</Entity>
 		<Entity uid="21811">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>0</Player>
 			<Position x="816.11365" z="999.32068"/>
 			<Orientation y="-0.6931"/>
 			<Actor seed="37171"/>
 		</Entity>
 		<Entity uid="21812">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>0</Player>
 			<Position x="863.9145" z="1121.05848"/>
 			<Orientation y="2.71875"/>
 			<Actor seed="63532"/>
 		</Entity>
 		<Entity uid="21813">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>0</Player>
 			<Position x="877.70856" z="1124.40857"/>
 			<Orientation y="2.97258"/>
 			<Actor seed="19273"/>
 		</Entity>
 		<Entity uid="21814">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>0</Player>
 			<Position x="891.48902" z="1129.17957"/>
 			<Orientation y="-3.50582"/>
 			<Actor seed="58664"/>
 		</Entity>
 		<Entity uid="21815">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>0</Player>
 			<Position x="851.5788" z="1115.26978"/>
 			<Orientation y="2.212"/>
 			<Actor seed="43310"/>
 		</Entity>
 		<Entity uid="21816">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>0</Player>
 			<Position x="888.55585" z="1056.78919"/>
 			<Orientation y="-0.57367"/>
 			<Actor seed="64481"/>
 		</Entity>
 		<Entity uid="21817">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>0</Player>
 			<Position x="900.62836" z="1063.64588"/>
 			<Orientation y="-0.44938"/>
 			<Actor seed="56233"/>
 		</Entity>
 		<Entity uid="21818">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>0</Player>
 			<Position x="912.5257" z="1069.31641"/>
 			<Orientation y="-0.30303"/>
 			<Actor seed="36237"/>
 		</Entity>
 		<Entity uid="21819">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>0</Player>
 			<Position x="950.05256" z="1073.56165"/>
 			<Orientation y="-0.33783"/>
@@ -117069,35 +117068,35 @@
 			<Actor seed="58223"/>
 		</Entity>
 		<Entity uid="21851">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>0</Player>
 			<Position x="904.92798" z="1132.62269"/>
 			<Orientation y="2.58072"/>
 			<Actor seed="43310"/>
 		</Entity>
 		<Entity uid="21852">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>0</Player>
 			<Position x="918.52094" z="1133.57642"/>
 			<Orientation y="3.08747"/>
 			<Actor seed="63532"/>
 		</Entity>
 		<Entity uid="21853">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>0</Player>
 			<Position x="932.5954" z="1131.72974"/>
 			<Orientation y="3.3413"/>
 			<Actor seed="19273"/>
 		</Entity>
 		<Entity uid="21854">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>0</Player>
 			<Position x="945.36933" z="1131.13392"/>
 			<Orientation y="3.59115"/>
 			<Actor seed="19273"/>
 		</Entity>
 		<Entity uid="21855">
-			<Template>structures/brit_house</Template>
+			<Template>structures/brit/house</Template>
 			<Player>0</Player>
 			<Position x="957.30036" z="1127.22706"/>
 			<Orientation y="-2.80903"/>
