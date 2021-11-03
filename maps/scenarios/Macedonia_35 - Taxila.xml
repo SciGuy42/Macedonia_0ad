@@ -25971,14 +25971,14 @@
 			<Actor seed="42531"/>
 		</Entity>
 		<Entity uid="5209">
-			<Template>structures/ptol_mercenary_camp</Template>
+			<Template>structures/ptol/mercenary_camp</Template>
 			<Player>4</Player>
 			<Position x="770.63605" z="1446.82874"/>
 			<Orientation y="-3.10013"/>
 			<Actor seed="64772"/>
 		</Entity>
 		<Entity uid="5211">
-			<Template>structures/ptol_mercenary_camp</Template>
+			<Template>structures/ptol/mercenary_camp</Template>
 			<Player>3</Player>
 			<Position x="804.19434" z="288.73301"/>
 			<Orientation y="1.57081"/>
@@ -26179,7 +26179,7 @@
 			<Actor seed="23215"/>
 		</Entity>
 		<Entity uid="5254">
-			<Template>structures/ptol_mercenary_camp</Template>
+			<Template>structures/ptol/mercenary_camp</Template>
 			<Player>6</Player>
 			<Position x="1308.14917" z="1277.27454"/>
 			<Orientation y="2.35621"/>

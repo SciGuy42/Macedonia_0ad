@@ -123,55 +123,55 @@
 			<Orientation y="-3.01304"/>
 		</Entity>
 		<Entity uid="151">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>4</Player>
 			<Position x="1628.87861" z="1075.85969"/>
 			<Orientation y="-5.54567"/>
 		</Entity>
 		<Entity uid="152">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>4</Player>
 			<Position x="1637.48853" z="1072.33625"/>
 			<Orientation y="-6.24381"/>
 		</Entity>
 		<Entity uid="153">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>4</Player>
 			<Position x="1646.34888" z="1075.1714"/>
 			<Orientation y="-6.94195"/>
 		</Entity>
 		<Entity uid="154">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>4</Player>
 			<Position x="1651.31397" z="1083.03858"/>
 			<Orientation y="-7.64008"/>
 		</Entity>
 		<Entity uid="155">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>4</Player>
 			<Position x="1650.06043" z="1092.25672"/>
 			<Orientation y="-8.3382"/>
 		</Entity>
 		<Entity uid="156">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>4</Player>
 			<Position x="1643.17493" z="1098.51246"/>
 			<Orientation y="-9.03634"/>
 		</Entity>
 		<Entity uid="157">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>4</Player>
 			<Position x="1633.87922" z="1098.87873"/>
 			<Orientation y="-9.73447"/>
 		</Entity>
 		<Entity uid="158">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>4</Player>
 			<Position x="1626.52283" z="1093.18409"/>
 			<Orientation y="-10.43261"/>
 		</Entity>
 		<Entity uid="159">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>4</Player>
 			<Position x="1624.54792" z="1084.09321"/>
 			<Orientation y="-11.13073"/>
@@ -404,55 +404,55 @@
 			<Orientation y="-0.00745"/>
 		</Entity>
 		<Entity uid="302">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="448.94172" z="972.30408"/>
 			<Orientation y="-5.54567"/>
 		</Entity>
 		<Entity uid="303">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="457.55158" z="968.78058"/>
 			<Orientation y="-6.24381"/>
 		</Entity>
 		<Entity uid="304">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="466.412" z="971.61579"/>
 			<Orientation y="-6.94195"/>
 		</Entity>
 		<Entity uid="305">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="471.37702" z="979.48298"/>
 			<Orientation y="-7.64008"/>
 		</Entity>
 		<Entity uid="306">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="470.12354" z="988.70112"/>
 			<Orientation y="-8.3382"/>
 		</Entity>
 		<Entity uid="307">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="463.23798" z="994.95685"/>
 			<Orientation y="-9.03634"/>
 		</Entity>
 		<Entity uid="308">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="453.94227" z="995.32306"/>
 			<Orientation y="-9.73447"/>
 		</Entity>
 		<Entity uid="309">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="446.58588" z="989.62848"/>
 			<Orientation y="-10.43261"/>
 		</Entity>
 		<Entity uid="310">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="444.61103" z="980.53754"/>
 			<Orientation y="-11.13073"/>
@@ -28595,42 +28595,42 @@
 			<Orientation y="-1.67566"/>
 		</Entity>
 		<Entity uid="5241">
-			<Template>gaia/fauna_hawk</Template>
+			<Template>birds/buzzard</Template>
 			<Position x="1377.46344" z="732.82868"/>
 			<Orientation y="-3.46793"/>
 		</Entity>
 		<Entity uid="5242">
-			<Template>gaia/fauna_hawk</Template>
+			<Template>birds/buzzard</Template>
 			<Position x="987.61158" z="581.19568"/>
 			<Orientation y="-3.96328"/>
 		</Entity>
 		<Entity uid="5243">
-			<Template>gaia/fauna_hawk</Template>
+			<Template>birds/buzzard</Template>
 			<Position x="1651.266" z="939.22785"/>
 			<Orientation y="0.64107"/>
 		</Entity>
 		<Entity uid="5244">
-			<Template>gaia/fauna_hawk</Template>
+			<Template>birds/buzzard</Template>
 			<Position x="98.98395" z="816.91041"/>
 			<Orientation y="-4.60761"/>
 		</Entity>
 		<Entity uid="5245">
-			<Template>gaia/fauna_hawk</Template>
+			<Template>birds/buzzard</Template>
 			<Position x="1713.76294" z="1076.11"/>
 			<Orientation y="-1.7172"/>
 		</Entity>
 		<Entity uid="5246">
-			<Template>gaia/fauna_hawk</Template>
+			<Template>birds/buzzard</Template>
 			<Position x="1112.21326" z="414.06531"/>
 			<Orientation y="-0.89263"/>
 		</Entity>
 		<Entity uid="5247">
-			<Template>gaia/fauna_hawk</Template>
+			<Template>birds/buzzard</Template>
 			<Position x="1201.3719" z="648.87421"/>
 			<Orientation y="-1.16468"/>
 		</Entity>
 		<Entity uid="5248">
-			<Template>gaia/fauna_hawk</Template>
+			<Template>birds/buzzard</Template>
 			<Position x="1178.77222" z="1487.79542"/>
 			<Orientation y="-3.59731"/>
 		</Entity>
@@ -40090,7 +40090,7 @@
 			<Orientation y="-2.40409"/>
 		</Entity>
 		<Entity uid="7173">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40108,7 +40108,7 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7176">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40126,7 +40126,7 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7179">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40162,7 +40162,7 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7185">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40180,7 +40180,7 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7188">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40216,13 +40216,13 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7194">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7195">
-			<Template>units/gaul_support_female_citizen_house</Template>
+			<Template>units/gaul/support_female_citizen_house</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40234,7 +40234,7 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7197">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40252,13 +40252,13 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7200">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7201">
-			<Template>units/gaul_support_female_citizen_house</Template>
+			<Template>units/gaul/support_female_citizen_house</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40270,13 +40270,13 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7203">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7204">
-			<Template>units/gaul_support_female_citizen_house</Template>
+			<Template>units/gaul/support_female_citizen_house</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40288,7 +40288,7 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7206">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40306,7 +40306,7 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7209">
-			<Template>units/gaul_support_female_citizen_house</Template>
+			<Template>units/gaul/support_female_citizen_house</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40324,13 +40324,13 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7212">
-			<Template>units/gaul_support_female_citizen_house</Template>
+			<Template>units/gaul/support_female_citizen_house</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7213">
-			<Template>units/gaul_support_female_citizen_house</Template>
+			<Template>units/gaul/support_female_citizen_house</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40342,7 +40342,7 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7215">
-			<Template>units/gaul_support_female_citizen_house</Template>
+			<Template>units/gaul/support_female_citizen_house</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40360,7 +40360,7 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7218">
-			<Template>units/gaul_support_female_citizen_house</Template>
+			<Template>units/gaul/support_female_citizen_house</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40378,79 +40378,79 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7221">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7222">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7223">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7224">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7225">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7226">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7227">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7228">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7229">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7230">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7231">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7232">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7233">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40498,55 +40498,55 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7241">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7242">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7243">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7244">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7245">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7246">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7247">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7248">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7249">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40618,91 +40618,91 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7261">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7262">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7263">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7264">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7265">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7266">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7267">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7268">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7269">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7270">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7271">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7272">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7273">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7274">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7275">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40738,43 +40738,43 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7281">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7282">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7283">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7284">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7285">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7286">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7287">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40858,49 +40858,49 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7301">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7302">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7303">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7304">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7305">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7306">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7307">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7308">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40978,25 +40978,25 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7321">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7322">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7323">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7324">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -42134,14 +42134,14 @@
 			<Actor seed="39264"/>
 		</Entity>
 		<Entity uid="7889">
-			<Template>structures/brit_crannog</Template>
+			<Template>structures/brit/crannog</Template>
 			<Player>0</Player>
 			<Position x="545.83216" z="252.98343"/>
 			<Orientation y="2.00597"/>
 			<Actor seed="43487"/>
 		</Entity>
 		<Entity uid="7890">
-			<Template>structures/brit_dock</Template>
+			<Template>structures/brit/dock</Template>
 			<Player>0</Player>
 			<Position x="585.68067" z="540.91858"/>
 			<Orientation y="-1.57091"/>
@@ -42204,7 +42204,7 @@
 			<Actor seed="14949"/>
 		</Entity>
 		<Entity uid="7903">
-			<Template>structures/brit_dock</Template>
+			<Template>structures/brit/dock</Template>
 			<Player>0</Player>
 			<Position x="441.81485" z="170.01713"/>
 			<Orientation y="-0.7256"/>
@@ -42218,7 +42218,7 @@
 			<Actor seed="59408"/>
 		</Entity>
 		<Entity uid="7905">
-			<Template>structures/brit_storehouse</Template>
+			<Template>structures/brit/storehouse</Template>
 			<Player>0</Player>
 			<Position x="563.17316" z="153.55076"/>
 			<Orientation y="-0.1207"/>
@@ -42239,7 +42239,7 @@
 			<Actor seed="20495"/>
 		</Entity>
 		<Entity uid="7908">
-			<Template>structures/brit_wall_gate</Template>
+			<Template>structures/brit/wall_gate</Template>
 			<Player>4</Player>
 			<Position x="1420.28077" z="264.42804"/>
 			<Orientation y="-2.42205"/>
@@ -42247,7 +42247,7 @@
 			<Actor seed="26812"/>
 		</Entity>
 		<Entity uid="7909">
-			<Template>structures/brit_wall_long</Template>
+			<Template>structures/brit/wall_long</Template>
 			<Player>4</Player>
 			<Position x="1450.94825" z="237.33921"/>
 			<Orientation y="3.86884"/>
@@ -42255,7 +42255,7 @@
 			<Actor seed="40115"/>
 		</Entity>
 		<Entity uid="7910">
-			<Template>structures/brit_wall_long</Template>
+			<Template>structures/brit/wall_long</Template>
 			<Player>4</Player>
 			<Position x="1400.54395" z="299.6521"/>
 			<Orientation y="4.54007"/>
@@ -42263,7 +42263,7 @@
 			<Actor seed="19197"/>
 		</Entity>
 		<Entity uid="7911">
-			<Template>structures/brit_wall_long</Template>
+			<Template>structures/brit/wall_long</Template>
 			<Player>4</Player>
 			<Position x="1474.07703" z="215.82013"/>
 			<Orientation y="3.86884"/>
@@ -42300,7 +42300,7 @@
 			<Actor seed="33049"/>
 		</Entity>
 		<Entity uid="7916">
-			<Template>structures/brit_wall_long</Template>
+			<Template>structures/brit/wall_long</Template>
 			<Player>4</Player>
 			<Position x="1414.70948" z="331.79633"/>
 			<Orientation y="5.63225"/>
@@ -42315,7 +42315,7 @@
 			<Actor seed="33049"/>
 		</Entity>
 		<Entity uid="7918">
-			<Template>structures/brit_wall_gate</Template>
+			<Template>structures/brit/wall_gate</Template>
 			<Player>4</Player>
 			<Position x="1450.3141" z="357.57386"/>
 			<Orientation y="-6.93163"/>
@@ -42330,7 +42330,7 @@
 			<Actor seed="33049"/>
 		</Entity>
 		<Entity uid="7920">
-			<Template>structures/brit_wall_long</Template>
+			<Template>structures/brit/wall_long</Template>
 			<Player>4</Player>
 			<Position x="1489.54603" z="362.0506"/>
 			<Orientation y="6.70032"/>
@@ -42345,7 +42345,7 @@
 			<Actor seed="33049"/>
 		</Entity>
 		<Entity uid="7922">
-			<Template>structures/brit_wall_gate</Template>
+			<Template>structures/brit/wall_gate</Template>
 			<Player>4</Player>
 			<Position x="1520.80481" z="334.08243"/>
 			<Orientation y="-5.32453"/>
@@ -42360,7 +42360,7 @@
 			<Actor seed="33049"/>
 		</Entity>
 		<Entity uid="7924">
-			<Template>structures/brit_wall_long</Template>
+			<Template>structures/brit/wall_long</Template>
 			<Player>4</Player>
 			<Position x="1536.93738" z="294.0102"/>
 			<Orientation y="7.65503"/>
@@ -42417,7 +42417,7 @@
 			<Actor seed="26070"/>
 		</Entity>
 		<Entity uid="7932">
-			<Template>structures/brit_range</Template>
+			<Template>structures/brit/range</Template>
 			<Player>4</Player>
 			<Position x="1473.8595" z="248.58484"/>
 			<Orientation y="2.32303"/>
@@ -42466,7 +42466,7 @@
 			<Actor seed="9705"/>
 		</Entity>
 		<Entity uid="7939">
-			<Template>structures/brit_farmstead</Template>
+			<Template>structures/brit/farmstead</Template>
 			<Player>4</Player>
 			<Position x="1525.4773" z="392.56086"/>
 			<Orientation y="2.35621"/>
@@ -42648,7 +42648,7 @@
 			<Actor seed="20932"/>
 		</Entity>
 		<Entity uid="7968">
-			<Template>structures/brit_crannog</Template>
+			<Template>structures/brit/crannog</Template>
 			<Player>4</Player>
 			<Position x="1363.18091" z="1229.51673"/>
 			<Orientation y="0.32842"/>
@@ -42683,14 +42683,14 @@
 			<Actor seed="4572"/>
 		</Entity>
 		<Entity uid="7978">
-			<Template>units/brit_ship_fishing</Template>
+			<Template>units/brit/ship_fishing</Template>
 			<Player>4</Player>
 			<Position x="1354.40662" z="1172.12427"/>
 			<Orientation y="-2.16123"/>
 			<Actor seed="24648"/>
 		</Entity>
 		<Entity uid="7979">
-			<Template>units/brit_ship_fishing</Template>
+			<Template>units/brit/ship_fishing</Template>
 			<Player>4</Player>
 			<Position x="1362.91211" z="1154.68226"/>
 			<Orientation y="-1.76531"/>
@@ -43119,98 +43119,98 @@
 			<Actor seed="33080"/>
 		</Entity>
 		<Entity uid="8060">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="328.86191" z="1485.34693"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="49719"/>
 		</Entity>
 		<Entity uid="8061">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="331.48505" z="1482.3473"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="13525"/>
 		</Entity>
 		<Entity uid="8062">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="334.14621" z="1479.83826"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="17528"/>
 		</Entity>
 		<Entity uid="8063">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="336.33045" z="1477.54859"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="49218"/>
 		</Entity>
 		<Entity uid="8064">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="338.5041" z="1475.77942"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="40517"/>
 		</Entity>
 		<Entity uid="8065">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="340.74412" z="1473.44776"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="30774"/>
 		</Entity>
 		<Entity uid="8066">
-			<Template>units/gaul_infantry_javelinist_a</Template>
+			<Template>units/gaul/infantry_javelineer_a</Template>
 			<Player>2</Player>
 			<Position x="372.50608" z="1488.45972"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="43200"/>
 		</Entity>
 		<Entity uid="8067">
-			<Template>units/gaul_infantry_javelinist_a</Template>
+			<Template>units/gaul/infantry_javelineer_a</Template>
 			<Player>2</Player>
 			<Position x="368.44074" z="1484.97181"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="2397"/>
 		</Entity>
 		<Entity uid="8068">
-			<Template>units/gaul_infantry_javelinist_a</Template>
+			<Template>units/gaul/infantry_javelineer_a</Template>
 			<Player>2</Player>
 			<Position x="365.17917" z="1481.76111"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="1409"/>
 		</Entity>
 		<Entity uid="8069">
-			<Template>units/gaul_infantry_javelinist_a</Template>
+			<Template>units/gaul/infantry_javelineer_a</Template>
 			<Player>2</Player>
 			<Position x="361.40253" z="1478.66004"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="45957"/>
 		</Entity>
 		<Entity uid="8070">
-			<Template>units/gaul_infantry_javelinist_a</Template>
+			<Template>units/gaul/infantry_javelineer_a</Template>
 			<Player>2</Player>
 			<Position x="358.2765" z="1475.22889"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="61039"/>
 		</Entity>
 		<Entity uid="8071">
-			<Template>units/gaul_infantry_javelinist_a</Template>
+			<Template>units/gaul/infantry_javelineer_a</Template>
 			<Player>2</Player>
 			<Position x="354.28486" z="1472.12806"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="1441"/>
 		</Entity>
 		<Entity uid="8073">
-			<Template>units/gaul_infantry_javelinist_a</Template>
+			<Template>units/gaul/infantry_javelineer_a</Template>
 			<Player>2</Player>
 			<Position x="1200.6305" z="1424.31971"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="20072"/>
 		</Entity>
 		<Entity uid="8074">
-			<Template>structures/brit_crannog</Template>
+			<Template>structures/brit/crannog</Template>
 			<Player>5</Player>
 			<Position x="1286.82532" z="1580.46229"/>
 			<Orientation y="-1.0788"/>
@@ -43252,63 +43252,63 @@
 			<Actor seed="19071"/>
 		</Entity>
 		<Entity uid="8080">
-			<Template>structures/brit_dock</Template>
+			<Template>structures/brit/dock</Template>
 			<Player>6</Player>
 			<Position x="1331.15174" z="1621.87464"/>
 			<Orientation y="2.27457"/>
 			<Actor seed="20175"/>
 		</Entity>
 		<Entity uid="8081">
-			<Template>structures/brit_defense_tower</Template>
+			<Template>structures/brit/defense_tower</Template>
 			<Player>5</Player>
 			<Position x="1303.3003" z="1615.48584"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="60549"/>
 		</Entity>
 		<Entity uid="8082">
-			<Template>structures/brit_defense_tower</Template>
+			<Template>structures/brit/defense_tower</Template>
 			<Player>5</Player>
 			<Position x="1201.20508" z="1504.05457"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="37791"/>
 		</Entity>
 		<Entity uid="8083">
-			<Template>structures/brit_fortress</Template>
+			<Template>structures/brit/fortress</Template>
 			<Player>5</Player>
 			<Position x="1221.37354" z="1550.23035"/>
 			<Orientation y="-3.02797"/>
 			<Actor seed="10948"/>
 		</Entity>
 		<Entity uid="8084">
-			<Template>structures/brit_storehouse</Template>
+			<Template>structures/brit/storehouse</Template>
 			<Player>5</Player>
 			<Position x="1174.11219" z="1621.31568"/>
 			<Orientation y="1.9126"/>
 			<Actor seed="38295"/>
 		</Entity>
 		<Entity uid="8085">
-			<Template>units/brit_ship_fishing</Template>
+			<Template>units/brit/ship_fishing</Template>
 			<Player>5</Player>
 			<Position x="1368.19263" z="1589.5265"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="44234"/>
 		</Entity>
 		<Entity uid="8086">
-			<Template>units/brit_ship_fishing</Template>
+			<Template>units/brit/ship_fishing</Template>
 			<Player>5</Player>
 			<Position x="1352.91736" z="1585.39551"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="49873"/>
 		</Entity>
 		<Entity uid="8087">
-			<Template>units/brit_ship_fishing</Template>
+			<Template>units/brit/ship_fishing</Template>
 			<Player>5</Player>
 			<Position x="1346.61866" z="1572.51661"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="48835"/>
 		</Entity>
 		<Entity uid="8088">
-			<Template>units/brit_ship_fishing</Template>
+			<Template>units/brit/ship_fishing</Template>
 			<Player>5</Player>
 			<Position x="1329.50916" z="1573.38038"/>
 			<Orientation y="2.35621"/>
@@ -43622,14 +43622,14 @@
 			<Actor seed="43968"/>
 		</Entity>
 		<Entity uid="8136">
-			<Template>structures/brit_dock</Template>
+			<Template>structures/brit/dock</Template>
 			<Player>4</Player>
 			<Position x="1376.344" z="1170.90088"/>
 			<Orientation y="-1.72851"/>
 			<Actor seed="56451"/>
 		</Entity>
 		<Entity uid="8138">
-			<Template>structures/brit_dock</Template>
+			<Template>structures/brit/dock</Template>
 			<Player>5</Player>
 			<Position x="1255.42066" z="1532.86841"/>
 			<Orientation y="2.29906"/>
@@ -43895,7 +43895,7 @@
 			<Actor seed="28189"/>
 		</Entity>
 		<Entity uid="8181">
-			<Template>structures/brit_defense_tower</Template>
+			<Template>structures/brit/defense_tower</Template>
 			<Player>5</Player>
 			<Position x="1150.62964" z="1594.73938"/>
 			<Orientation y="2.35622"/>
@@ -43951,7 +43951,7 @@
 			<Actor seed="4921"/>
 		</Entity>
 		<Entity uid="8189">
-			<Template>units/brit_infantry_slinger_a</Template>
+			<Template>units/brit/infantry_slinger_a</Template>
 			<Player>0</Player>
 			<Position x="748.18775" z="88.05697"/>
 			<Orientation y="0.62774"/>
@@ -43965,7 +43965,7 @@
 			<Actor seed="3339"/>
 		</Entity>
 		<Entity uid="8191">
-			<Template>units/brit_infantry_slinger_a</Template>
+			<Template>units/brit/infantry_slinger_a</Template>
 			<Player>0</Player>
 			<Position x="987.68274" z="495.44758"/>
 			<Orientation y="-3.868"/>
@@ -44028,7 +44028,7 @@
 			<Actor seed="3339"/>
 		</Entity>
 		<Entity uid="8200">
-			<Template>units/brit_infantry_slinger_a</Template>
+			<Template>units/brit/infantry_slinger_a</Template>
 			<Player>0</Player>
 			<Position x="286.55118" z="733.27173"/>
 			<Orientation y="1.69207"/>
@@ -44266,14 +44266,14 @@
 			<Actor seed="52839"/>
 		</Entity>
 		<Entity uid="8235">
-			<Template>units/brit_infantry_slinger_a</Template>
+			<Template>units/brit/infantry_slinger_a</Template>
 			<Player>0</Player>
 			<Position x="319.45246" z="740.77546"/>
 			<Orientation y="1.69208"/>
 			<Actor seed="36622"/>
 		</Entity>
 		<Entity uid="8236">
-			<Template>structures/brit_defense_tower</Template>
+			<Template>structures/brit/defense_tower</Template>
 			<Player>0</Player>
 			<Position x="294.21604" z="745.28254"/>
 			<Orientation y="2.35621"/>
@@ -44336,14 +44336,14 @@
 			<Actor seed="52839"/>
 		</Entity>
 		<Entity uid="8245">
-			<Template>units/brit_infantry_slinger_a</Template>
+			<Template>units/brit/infantry_slinger_a</Template>
 			<Player>0</Player>
 			<Position x="135.32294" z="757.11896"/>
 			<Orientation y="1.16021"/>
 			<Actor seed="36622"/>
 		</Entity>
 		<Entity uid="8246">
-			<Template>units/brit_infantry_slinger_a</Template>
+			<Template>units/brit/infantry_slinger_a</Template>
 			<Player>0</Player>
 			<Position x="159.87378" z="780.27192"/>
 			<Orientation y="1.16021"/>

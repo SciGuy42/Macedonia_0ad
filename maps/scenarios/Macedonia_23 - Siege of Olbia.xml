@@ -41434,28 +41434,28 @@
 			<Actor seed="962"/>
 		</Entity>
 		<Entity uid="8995">
-			<Template>structures/ptol_mercenary_camp</Template>
+			<Template>structures/ptol/mercenary_camp</Template>
 			<Player>3</Player>
 			<Position x="352.04917" z="755.00245"/>
 			<Orientation y="-6.4914"/>
 			<Actor seed="3838"/>
 		</Entity>
 		<Entity uid="8996">
-			<Template>structures/ptol_mercenary_camp</Template>
+			<Template>structures/ptol/mercenary_camp</Template>
 			<Player>3</Player>
 			<Position x="362.34766" z="699.93824"/>
 			<Orientation y="-6.51642"/>
 			<Actor seed="6857"/>
 		</Entity>
 		<Entity uid="8997">
-			<Template>structures/ptol_mercenary_camp</Template>
+			<Template>structures/ptol/mercenary_camp</Template>
 			<Player>3</Player>
 			<Position x="346.21393" z="866.63349"/>
 			<Orientation y="-6.38228"/>
 			<Actor seed="34833"/>
 		</Entity>
 		<Entity uid="9002">
-			<Template>structures/ptol_mercenary_camp</Template>
+			<Template>structures/ptol/mercenary_camp</Template>
 			<Player>1</Player>
 			<Position x="304.67219" z="381.44892"/>
 			<Orientation y="2.90531"/>
@@ -41689,7 +41689,7 @@
 			<Actor seed="18762"/>
 		</Entity>
 		<Entity uid="9056">
-			<Template>structures/ptol_mercenary_camp</Template>
+			<Template>structures/ptol/mercenary_camp</Template>
 			<Player>3</Player>
 			<Position x="345.55283" z="813.41987"/>
 			<Orientation y="-7.94506"/>
@@ -42429,7 +42429,7 @@
 			<Actor seed="21792"/>
 		</Entity>
 		<Entity uid="9167">
-			<Template>structures/ptol_mercenary_camp</Template>
+			<Template>structures/ptol/mercenary_camp</Template>
 			<Player>4</Player>
 			<Position x="905.07654" z="1729.32996"/>
 			<Orientation y="-3.00797"/>
@@ -42450,7 +42450,7 @@
 			<Actor seed="41586"/>
 		</Entity>
 		<Entity uid="9194">
-			<Template>structures/brit_crannog</Template>
+			<Template>structures/brit/crannog</Template>
 			<Player>5</Player>
 			<Position x="1672.37952" z="473.26417"/>
 			<Orientation y="-1.77097"/>
@@ -42725,7 +42725,7 @@
 			<Actor seed="26638"/>
 		</Entity>
 		<Entity uid="9249">
-			<Template>structures/brit_fortress</Template>
+			<Template>structures/brit/fortress</Template>
 			<Player>5</Player>
 			<Position x="1673.34668" z="512.24811"/>
 			<Orientation y="0.41381"/>

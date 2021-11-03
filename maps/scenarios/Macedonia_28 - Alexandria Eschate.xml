@@ -39561,7 +39561,7 @@
 			<Actor seed="41571"/>
 		</Entity>
 		<Entity uid="7418">
-			<Template>structures/ptol_mercenary_camp</Template>
+			<Template>structures/ptol/mercenary_camp</Template>
 			<Player>6</Player>
 			<Position x="1678.53248" z="270.35926"/>
 			<Orientation y="-0.74955"/>

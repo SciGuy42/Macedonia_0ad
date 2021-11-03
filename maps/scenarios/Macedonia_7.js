@@ -691,7 +691,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	cmpTrigger.DoAfterDelay(cmpTrigger.invasionAttackDelay,"SpawnInvasionShip",null);
 
 	//cavalry attack variables
-	cmpTrigger.gaul_cavalry_types = ["units/gaul_cavalry_swordsman_a","units/gaul_cavalry_javelinist_a","units/gaul_cavalry_swordsman_b","units/gaul_cavalry_javelinist_b","units/brit_champion_cavalry"];
+	cmpTrigger.gaul_cavalry_types = ["units/gaul_cavalry_swordsman_a","units/gaul_cavalry_javelinist_a","units/gaul_cavalry_swordsman_b","units/gaul_cavalry_javelinist_b","units/brit/champion_chariot"];
 	cmpTrigger.gaul_cavalry_interval = 130 * 1000;
 	cmpTrigger.gaul_cavalary_started = false;
 

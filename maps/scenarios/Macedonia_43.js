@@ -54,7 +54,7 @@ var disabledTemplatesCCs = (civ) => [
 	"structures/" + civ + "_military_colony",
 
 	// Shoreline
-	"structures/brit_crannog"
+	"structures/brit/crannog"
 ];
 
 var disabledTemplatesDocksCCs = (civ) => [
@@ -66,7 +66,7 @@ var disabledTemplatesDocksCCs = (civ) => [
 
 	// Shoreline
 	"structures/" + civ + "_dock",
-	"structures/brit_crannog",
+	"structures/brit/crannog",
 	"structures/cart_super_dock",
 	"structures/ptol_lighthouse"
 ];
@@ -93,7 +93,7 @@ var disabledTemplates = (civ) => [
 
 	// Shoreline
 	"structures/" + civ + "_dock",
-	"structures/brit_crannog",
+	"structures/brit/crannog",
 	"structures/cart_super_dock",
 	"structures/ptol_lighthouse",
 	

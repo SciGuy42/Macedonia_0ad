@@ -71239,7 +71239,7 @@
 			<Actor seed="26252"/>
 		</Entity>
 		<Entity uid="12579">
-			<Template>structures/ptol_mercenary_camp</Template>
+			<Template>structures/ptol/mercenary_camp</Template>
 			<Player>3</Player>
 			<Position x="74.24793" z="853.98304"/>
 			<Orientation y="3.03904"/>
@@ -73605,7 +73605,7 @@
 			<Actor seed="13066"/>
 		</Entity>
 		<Entity uid="12936">
-			<Template>structures/ptol_mercenary_camp</Template>
+			<Template>structures/ptol/mercenary_camp</Template>
 			<Player>7</Player>
 			<Position x="1741.76294" z="1594.84607"/>
 			<Orientation y="-2.59325"/>

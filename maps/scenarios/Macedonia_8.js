@@ -92,7 +92,7 @@ Trigger.prototype.SpawnAndStartCavalryAttack = function()
 	}
 	
 	
-	this.gaul_cavalry_types = ["units/gaul_cavalry_swordsman_e","units/gaul_cavalry_javelinist_e","units/brit_war_dog_e","units/gaul_champion_cavalry","units/brit_champion_cavalry"];
+	this.gaul_cavalry_types = ["units/gaul_cavalry_swordsman_e","units/gaul_cavalry_javelinist_e","units/brit_war_dog_e","units/gaul/champion_cavalry","units/brit/champion_chariot"];
 	
 	
 	//get list of barracks
@@ -285,7 +285,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	{
 		this.spawn_cav_bonus = 4;
 		this.spawn_crannog_bonus = 1;
-		this.infantryTypesSpawn = ["units/brit_infantry_javelinist_a","units/brit_infantry_slinger_a","units/brit/infantry_spearman_a"];
+		this.infantryTypesSpawn = ["units/brit_infantry_javelinist_a","units/brit/infantry_slinger_a","units/brit/infantry_spearman_a"];
 	
 	}
 	else if (difficulty == 2)

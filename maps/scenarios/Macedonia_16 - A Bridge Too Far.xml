@@ -154,13 +154,13 @@
 			<Orientation y="6.9744"/>
 		</Entity>
 		<Entity uid="198">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="290.71003" z="75.77692"/>
 			<Orientation y="0.76598"/>
 		</Entity>
 		<Entity uid="199">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="274.38373" z="67.27924"/>
 			<Orientation y="-1.65302"/>
@@ -282,19 +282,19 @@
 			<Orientation y="5.39953"/>
 		</Entity>
 		<Entity uid="261">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="374" z="74"/>
 			<Orientation y="1.91279"/>
 		</Entity>
 		<Entity uid="262">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="378" z="82"/>
 			<Orientation y="4.27681"/>
 		</Entity>
 		<Entity uid="263">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="382" z="78"/>
 			<Orientation y="6.174"/>
@@ -324,7 +324,7 @@
 			<Orientation y="5.42798"/>
 		</Entity>
 		<Entity uid="268">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="370" z="86"/>
 			<Orientation y="0.96662"/>
@@ -360,13 +360,13 @@
 			<Orientation y="5.35361"/>
 		</Entity>
 		<Entity uid="274">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="378" z="90"/>
 			<Orientation y="1.85878"/>
 		</Entity>
 		<Entity uid="275">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="362" z="66"/>
 			<Orientation y="5.08504"/>
@@ -378,13 +378,13 @@
 			<Orientation y="5.59577"/>
 		</Entity>
 		<Entity uid="277">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="358" z="70"/>
 			<Orientation y="2.83274"/>
 		</Entity>
 		<Entity uid="278">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="366" z="58"/>
 			<Orientation y="4.18134"/>
@@ -396,7 +396,7 @@
 			<Orientation y="0.71741"/>
 		</Entity>
 		<Entity uid="280">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="370" z="62"/>
 			<Orientation y="4.52819"/>
@@ -408,13 +408,13 @@
 			<Orientation y="2.16337"/>
 		</Entity>
 		<Entity uid="282">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="362" z="54"/>
 			<Orientation y="1.28132"/>
 		</Entity>
 		<Entity uid="283">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="366" z="54"/>
 			<Orientation y="3.23545"/>
@@ -426,7 +426,7 @@
 			<Orientation y="1.28403"/>
 		</Entity>
 		<Entity uid="285">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="358" z="82"/>
 			<Orientation y="5.4139"/>
@@ -444,19 +444,19 @@
 			<Orientation y="5.1715"/>
 		</Entity>
 		<Entity uid="288">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="390" z="90"/>
 			<Orientation y="2.67916"/>
 		</Entity>
 		<Entity uid="305">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="14" z="102"/>
 			<Orientation y="6.15018"/>
 		</Entity>
 		<Entity uid="306">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="18" z="106"/>
 			<Orientation y="5.78972"/>
@@ -474,7 +474,7 @@
 			<Orientation y="0.01777"/>
 		</Entity>
 		<Entity uid="309">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="18" z="114"/>
 			<Orientation y="1.29316"/>
@@ -486,7 +486,7 @@
 			<Orientation y="1.01873"/>
 		</Entity>
 		<Entity uid="311">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="22" z="106"/>
 			<Orientation y="4.49062"/>
@@ -510,7 +510,7 @@
 			<Orientation y="1.87214"/>
 		</Entity>
 		<Entity uid="315">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="30" z="102"/>
 			<Orientation y="4.75518"/>
@@ -522,19 +522,19 @@
 			<Orientation y="5.72973"/>
 		</Entity>
 		<Entity uid="317">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="34" z="94"/>
 			<Orientation y="3.32271"/>
 		</Entity>
 		<Entity uid="318">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="34" z="106"/>
 			<Orientation y="2.59553"/>
 		</Entity>
 		<Entity uid="319">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="34" z="110"/>
 			<Orientation y="0.67231"/>
@@ -564,7 +564,7 @@
 			<Orientation y="5.21073"/>
 		</Entity>
 		<Entity uid="341">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="738" z="166"/>
 			<Orientation y="3.90041"/>
@@ -582,7 +582,7 @@
 			<Orientation y="2.46901"/>
 		</Entity>
 		<Entity uid="346">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="602" z="162"/>
 			<Orientation y="3.71381"/>
@@ -618,13 +618,13 @@
 			<Orientation y="2.58413"/>
 		</Entity>
 		<Entity uid="352">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="594" z="150"/>
 			<Orientation y="4.33066"/>
 		</Entity>
 		<Entity uid="353">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="598" z="150"/>
 			<Orientation y="3.56351"/>
@@ -642,7 +642,7 @@
 			<Orientation y="2.78226"/>
 		</Entity>
 		<Entity uid="356">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="610" z="150"/>
 			<Orientation y="0.84391"/>
@@ -696,13 +696,13 @@
 			<Orientation y="3.85575"/>
 		</Entity>
 		<Entity uid="365">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="614" z="162"/>
 			<Orientation y="2.21282"/>
 		</Entity>
 		<Entity uid="366">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="598" z="142"/>
 			<Orientation y="5.43227"/>
@@ -750,19 +750,19 @@
 			<Orientation y="5.58138"/>
 		</Entity>
 		<Entity uid="374">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="614" z="130"/>
 			<Orientation y="0.09757"/>
 		</Entity>
 		<Entity uid="375">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="618" z="130"/>
 			<Orientation y="6.28212"/>
 		</Entity>
 		<Entity uid="376">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="618" z="138"/>
 			<Orientation y="0.67492"/>
@@ -774,19 +774,19 @@
 			<Orientation y="5.65368"/>
 		</Entity>
 		<Entity uid="378">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="614" z="158"/>
 			<Orientation y="5.19594"/>
 		</Entity>
 		<Entity uid="379">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="622" z="142"/>
 			<Orientation y="2.08918"/>
 		</Entity>
 		<Entity uid="403">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="658" z="50"/>
 			<Orientation y="3.6707"/>
@@ -798,7 +798,7 @@
 			<Orientation y="3.75501"/>
 		</Entity>
 		<Entity uid="405">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="662" z="38"/>
 			<Orientation y="6.26088"/>
@@ -846,7 +846,7 @@
 			<Orientation y="4.40978"/>
 		</Entity>
 		<Entity uid="413">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="678" z="46"/>
 			<Orientation y="5.20731"/>
@@ -864,7 +864,7 @@
 			<Orientation y="3.72576"/>
 		</Entity>
 		<Entity uid="416">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="662" z="34"/>
 			<Orientation y="1.84852"/>
@@ -900,19 +900,19 @@
 			<Orientation y="4.12409"/>
 		</Entity>
 		<Entity uid="489">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="562" z="18"/>
 			<Orientation y="1.67508"/>
 		</Entity>
 		<Entity uid="490">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="566" z="18"/>
 			<Orientation y="5.07744"/>
 		</Entity>
 		<Entity uid="491">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="558" z="22"/>
 			<Orientation y="3.69581"/>
@@ -1870,91 +1870,91 @@
 			<Orientation y="0.88274"/>
 		</Entity>
 		<Entity uid="773">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="16.19117" z="41.36091"/>
 			<Orientation y="1.01731"/>
 		</Entity>
 		<Entity uid="775">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="96.12836" z="178.35425"/>
 			<Orientation y="-1.58242"/>
 		</Entity>
 		<Entity uid="780">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="363.39435" z="110.6894"/>
 			<Orientation y="-3.48584"/>
 		</Entity>
 		<Entity uid="781">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="102.93317" z="179.47504"/>
 			<Orientation y="0.28754"/>
 		</Entity>
 		<Entity uid="782">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="562.43042" z="79.18403"/>
 			<Orientation y="1.4267"/>
 		</Entity>
 		<Entity uid="783">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="729.02271" z="155.10584"/>
 			<Orientation y="-2.1716"/>
 		</Entity>
 		<Entity uid="786">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="725.75965" z="125.16132"/>
 			<Orientation y="-0.04947"/>
 		</Entity>
 		<Entity uid="787">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="203.8487" z="29.94446"/>
 			<Orientation y="-4.69692"/>
 		</Entity>
 		<Entity uid="792">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="374.42188" z="189.03553"/>
 			<Orientation y="-0.23707"/>
 		</Entity>
 		<Entity uid="793">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="82.47992" z="80.70777"/>
 			<Orientation y="-1.38222"/>
 		</Entity>
 		<Entity uid="794">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="21.00086" z="26.81623"/>
 			<Orientation y="-2.05085"/>
 		</Entity>
 		<Entity uid="795">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="591.86573" z="161.23005"/>
 			<Orientation y="-1.19315"/>
 		</Entity>
 		<Entity uid="799">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="490.24311" z="18.05188"/>
 			<Orientation y="-1.65722"/>
 		</Entity>
 		<Entity uid="802">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="704.00245" z="167.96753"/>
 			<Orientation y="-3.73612"/>
 		</Entity>
 		<Entity uid="803">
-			<Template>gaia/flora_tree_carob</Template>
+			<Template>gaia/tree/carob</Template>
 			<Player>0</Player>
 			<Position x="557.0171" z="61.49427"/>
 			<Orientation y="0.90841"/>
@@ -2851,7 +2851,7 @@
 			<Actor seed="64156"/>
 		</Entity>
 		<Entity uid="1053">
-			<Template>structures/ptol_mercenary_camp</Template>
+			<Template>structures/ptol/mercenary_camp</Template>
 			<Player>1</Player>
 			<Position x="418.12507" z="133.90082"/>
 			<Orientation y="1.41118"/>
@@ -3285,7 +3285,7 @@
 			<Actor seed="54090"/>
 		</Entity>
 		<Entity uid="1122">
-			<Template>structures/ptol_mercenary_camp</Template>
+			<Template>structures/ptol/mercenary_camp</Template>
 			<Player>3</Player>
 			<Position x="437.77024" z="55.58194"/>
 			<Orientation y="-3.10105"/>

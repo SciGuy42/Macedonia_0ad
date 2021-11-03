@@ -144,7 +144,7 @@
 			<Orientation y="0.7201"/>
 		</Entity>
 		<Entity uid="166">
-			<Template>gaia/geology_stonemine_alpine_quarry</Template>
+			<Template>gaia/rock/alpine_large</Template>
 			<Player>0</Player>
 			<Position x="1364.32728" z="536.62067"/>
 			<Orientation y="1.38486"/>
@@ -304,7 +304,7 @@
 			<Orientation y="0.63151"/>
 		</Entity>
 		<Entity uid="212">
-			<Template>gaia/geology_stonemine_alpine_quarry</Template>
+			<Template>gaia/rock/alpine_large</Template>
 			<Player>0</Player>
 			<Position x="838.99708" z="1326.78443"/>
 			<Orientation y="-2.96505"/>
@@ -421,7 +421,7 @@
 			<Orientation y="-1.30317"/>
 		</Entity>
 		<Entity uid="253">
-			<Template>gaia/geology_stonemine_alpine_quarry</Template>
+			<Template>gaia/rock/alpine_large</Template>
 			<Player>0</Player>
 			<Position x="414.82615" z="121.37844"/>
 			<Orientation y="-0.16713"/>
@@ -27762,7 +27762,7 @@
 			<Orientation y="2.31102"/>
 		</Entity>
 		<Entity uid="4819">
-			<Template>gaia/geology_stonemine_alpine_quarry</Template>
+			<Template>gaia/rock/alpine_large</Template>
 			<Player>0</Player>
 			<Position x="546.1432" z="1164.62195"/>
 			<Orientation y="-3.2363"/>
@@ -27774,7 +27774,7 @@
 			<Orientation y="0.87577"/>
 		</Entity>
 		<Entity uid="4821">
-			<Template>gaia/geology_stonemine_alpine_quarry</Template>
+			<Template>gaia/rock/alpine_large</Template>
 			<Player>0</Player>
 			<Position x="970.9485" z="1308.55414"/>
 			<Orientation y="0.3258"/>
@@ -27786,7 +27786,7 @@
 			<Orientation y="-4.2162"/>
 		</Entity>
 		<Entity uid="4823">
-			<Template>gaia/geology_stonemine_alpine_quarry</Template>
+			<Template>gaia/rock/alpine_large</Template>
 			<Player>0</Player>
 			<Position x="639.32703" z="1485.12586"/>
 			<Orientation y="-3.37415"/>
@@ -27798,13 +27798,13 @@
 			<Orientation y="-2.02724"/>
 		</Entity>
 		<Entity uid="4825">
-			<Template>gaia/geology_stonemine_alpine_quarry</Template>
+			<Template>gaia/rock/alpine_large</Template>
 			<Player>0</Player>
 			<Position x="1190.27137" z="652.86768"/>
 			<Orientation y="-3.81057"/>
 		</Entity>
 		<Entity uid="4826">
-			<Template>gaia/geology_stonemine_alpine_quarry</Template>
+			<Template>gaia/rock/alpine_large</Template>
 			<Player>0</Player>
 			<Position x="511.41837" z="1113.92811"/>
 			<Orientation y="-0.77915"/>
@@ -27816,25 +27816,25 @@
 			<Orientation y="-4.51346"/>
 		</Entity>
 		<Entity uid="4828">
-			<Template>gaia/geology_stonemine_alpine_quarry</Template>
+			<Template>gaia/rock/alpine_large</Template>
 			<Player>0</Player>
 			<Position x="132.49741" z="959.24762"/>
 			<Orientation y="-2.18676"/>
 		</Entity>
 		<Entity uid="4829">
-			<Template>gaia/geology_stonemine_alpine_quarry</Template>
+			<Template>gaia/rock/alpine_large</Template>
 			<Player>0</Player>
 			<Position x="239.94837" z="620.1855"/>
 			<Orientation y="0.22063"/>
 		</Entity>
 		<Entity uid="4830">
-			<Template>gaia/geology_stonemine_alpine_quarry</Template>
+			<Template>gaia/rock/alpine_large</Template>
 			<Player>0</Player>
 			<Position x="978.91865" z="698.52918"/>
 			<Orientation y="-0.34984"/>
 		</Entity>
 		<Entity uid="4831">
-			<Template>gaia/geology_stonemine_alpine_quarry</Template>
+			<Template>gaia/rock/alpine_large</Template>
 			<Player>0</Player>
 			<Position x="496.6764" z="1367.52137"/>
 			<Orientation y="-0.37085"/>
@@ -39871,14 +39871,14 @@
 			<Orientation y="-3.30506"/>
 		</Entity>
 		<Entity uid="7170">
-			<Template>other/bridge_wooden</Template>
+			<Template>structures/bridge_wooden</Template>
 			<Player>0</Player>
 			<Position x="234.18113" z="815.52851"/>
 			<Orientation y="2.2959"/>
 			<Actor seed="43374"/>
 		</Entity>
 		<Entity uid="7175">
-			<Template>other/bridge_wooden</Template>
+			<Template>structures/bridge_wooden</Template>
 			<Player>0</Player>
 			<Position x="221.32721" z="820.79133"/>
 			<Orientation y="-0.85209"/>
@@ -39892,14 +39892,14 @@
 			<Actor seed="61094"/>
 		</Entity>
 		<Entity uid="7177">
-			<Template>structures/brit_crannog</Template>
+			<Template>structures/brit/crannog</Template>
 			<Player>2</Player>
 			<Position x="245.25623" z="745.95228"/>
 			<Orientation y="-2.17673"/>
 			<Actor seed="33458"/>
 		</Entity>
 		<Entity uid="7180">
-			<Template>structures/brit_fortress</Template>
+			<Template>structures/brit/fortress</Template>
 			<Player>2</Player>
 			<Position x="361.22751" z="846.84852"/>
 			<Orientation y="2.35621"/>
@@ -40265,77 +40265,77 @@
 			<Actor seed="19626"/>
 		</Entity>
 		<Entity uid="7229">
-			<Template>structures/brit_defense_tower</Template>
+			<Template>structures/brit/defense_tower</Template>
 			<Player>2</Player>
 			<Position x="266.49598" z="687.92994"/>
 			<Orientation y="-2.19552"/>
 			<Actor seed="37881"/>
 		</Entity>
 		<Entity uid="7230">
-			<Template>structures/brit_defense_tower</Template>
+			<Template>structures/brit/defense_tower</Template>
 			<Player>2</Player>
 			<Position x="232.03415" z="685.36115"/>
 			<Orientation y="1.74985"/>
 			<Actor seed="63696"/>
 		</Entity>
 		<Entity uid="7231">
-			<Template>structures/brit_defense_tower</Template>
+			<Template>structures/brit/defense_tower</Template>
 			<Player>2</Player>
 			<Position x="201.30628" z="708.37391"/>
 			<Orientation y="1.6608"/>
 			<Actor seed="46258"/>
 		</Entity>
 		<Entity uid="7232">
-			<Template>structures/brit_defense_tower</Template>
+			<Template>structures/brit/defense_tower</Template>
 			<Player>2</Player>
 			<Position x="184.92756" z="738.6103"/>
 			<Orientation y="0.79125"/>
 			<Actor seed="957"/>
 		</Entity>
 		<Entity uid="7233">
-			<Template>structures/brit_defense_tower</Template>
+			<Template>structures/brit/defense_tower</Template>
 			<Player>2</Player>
 			<Position x="333.31788" z="758.70307"/>
 			<Orientation y="-1.02242"/>
 			<Actor seed="19533"/>
 		</Entity>
 		<Entity uid="7234">
-			<Template>structures/brit_defense_tower</Template>
+			<Template>structures/brit/defense_tower</Template>
 			<Player>2</Player>
 			<Position x="363.24204" z="786.33875"/>
 			<Orientation y="-0.836"/>
 			<Actor seed="13317"/>
 		</Entity>
 		<Entity uid="7235">
-			<Template>structures/brit_defense_tower</Template>
+			<Template>structures/brit/defense_tower</Template>
 			<Player>2</Player>
 			<Position x="393.97767" z="811.9375"/>
 			<Orientation y="-1.28161"/>
 			<Actor seed="33222"/>
 		</Entity>
 		<Entity uid="7236">
-			<Template>structures/brit_defense_tower</Template>
+			<Template>structures/brit/defense_tower</Template>
 			<Player>2</Player>
 			<Position x="402.03116" z="849.19666"/>
 			<Orientation y="-1.61371"/>
 			<Actor seed="27473"/>
 		</Entity>
 		<Entity uid="7237">
-			<Template>structures/brit_defense_tower</Template>
+			<Template>structures/brit/defense_tower</Template>
 			<Player>2</Player>
 			<Position x="406.1659" z="890.21412"/>
 			<Orientation y="-1.80314"/>
 			<Actor seed="50157"/>
 		</Entity>
 		<Entity uid="7238">
-			<Template>structures/brit_defense_tower</Template>
+			<Template>structures/brit/defense_tower</Template>
 			<Player>2</Player>
 			<Position x="396.25617" z="924.61457"/>
 			<Orientation y="-1.98166"/>
 			<Actor seed="6803"/>
 		</Entity>
 		<Entity uid="7239">
-			<Template>structures/brit_defense_tower</Template>
+			<Template>structures/brit/defense_tower</Template>
 			<Player>2</Player>
 			<Position x="409.55262" z="888.64643"/>
 			<Orientation y="-0.85965"/>
@@ -40343,28 +40343,28 @@
 			<Actor seed="26356"/>
 		</Entity>
 		<Entity uid="7240">
-			<Template>structures/brit_defense_tower</Template>
+			<Template>structures/brit/defense_tower</Template>
 			<Player>2</Player>
 			<Position x="356.79261" z="993.34375"/>
 			<Orientation y="-2.83313"/>
 			<Actor seed="26825"/>
 		</Entity>
 		<Entity uid="7241">
-			<Template>structures/brit_defense_tower</Template>
+			<Template>structures/brit/defense_tower</Template>
 			<Player>2</Player>
 			<Position x="321.17246" z="1013.20838"/>
 			<Orientation y="-3.06072"/>
 			<Actor seed="31803"/>
 		</Entity>
 		<Entity uid="7242">
-			<Template>structures/brit_defense_tower</Template>
+			<Template>structures/brit/defense_tower</Template>
 			<Player>2</Player>
 			<Position x="221.59159" z="972.66114"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="43600"/>
 		</Entity>
 		<Entity uid="7243">
-			<Template>structures/brit_defense_tower</Template>
+			<Template>structures/brit/defense_tower</Template>
 			<Player>2</Player>
 			<Position x="253.90522" z="999.44196"/>
 			<Orientation y="2.35621"/>
@@ -40987,28 +40987,28 @@
 			<Actor seed="32680"/>
 		</Entity>
 		<Entity uid="7336">
-			<Template>units/gaul_infantry_slinger_a</Template>
+			<Template>units/gaul/infantry_slinger_a</Template>
 			<Player>2</Player>
 			<Position x="289.97516" z="916.86988"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="48393"/>
 		</Entity>
 		<Entity uid="7337">
-			<Template>units/gaul_infantry_slinger_a</Template>
+			<Template>units/gaul/infantry_slinger_a</Template>
 			<Player>2</Player>
 			<Position x="291.75364" z="918.75397"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="26470"/>
 		</Entity>
 		<Entity uid="7340">
-			<Template>units/gaul_infantry_javelinist_a</Template>
+			<Template>units/gaul/infantry_javelineer_a</Template>
 			<Player>2</Player>
 			<Position x="292.24546" z="914.60389"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="10531"/>
 		</Entity>
 		<Entity uid="7341">
-			<Template>units/gaul_infantry_javelinist_a</Template>
+			<Template>units/gaul/infantry_javelineer_a</Template>
 			<Player>2</Player>
 			<Position x="294.09498" z="916.33497"/>
 			<Orientation y="2.35621"/>
@@ -41071,35 +41071,35 @@
 			<Actor seed="5276"/>
 		</Entity>
 		<Entity uid="7350">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="179.1514" z="999.05738"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="13174"/>
 		</Entity>
 		<Entity uid="7351">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="178.96256" z="1001.39258"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="61949"/>
 		</Entity>
 		<Entity uid="7352">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="177.89377" z="1006.56006"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="64613"/>
 		</Entity>
 		<Entity uid="7353">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="174.40497" z="1008.74341"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="19151"/>
 		</Entity>
 		<Entity uid="7354">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="171.10926" z="1012.27887"/>
 			<Orientation y="2.35621"/>
@@ -41148,28 +41148,28 @@
 			<Actor seed="5470"/>
 		</Entity>
 		<Entity uid="7366">
-			<Template>structures/brit_crannog</Template>
+			<Template>structures/brit/crannog</Template>
 			<Player>4</Player>
 			<Position x="1318.76417" z="399.00141"/>
 			<Orientation y="-1.39373"/>
 			<Actor seed="61779"/>
 		</Entity>
 		<Entity uid="7367">
-			<Template>structures/brit_defense_tower</Template>
+			<Template>structures/brit/defense_tower</Template>
 			<Player>4</Player>
 			<Position x="1335.84095" z="428.52363"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="35968"/>
 		</Entity>
 		<Entity uid="7368">
-			<Template>structures/brit_storehouse</Template>
+			<Template>structures/brit/storehouse</Template>
 			<Player>4</Player>
 			<Position x="1260.93763" z="436.38654"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="37854"/>
 		</Entity>
 		<Entity uid="7369">
-			<Template>structures/brit_storehouse</Template>
+			<Template>structures/brit/storehouse</Template>
 			<Player>4</Player>
 			<Position x="1338.68555" z="338.87436"/>
 			<Orientation y="2.03354"/>
@@ -41183,7 +41183,7 @@
 			<Actor seed="19491"/>
 		</Entity>
 		<Entity uid="7371">
-			<Template>structures/brit_crannog</Template>
+			<Template>structures/brit/crannog</Template>
 			<Player>4</Player>
 			<Position x="1285.06324" z="1138.65491"/>
 			<Orientation y="1.44964"/>
@@ -41197,7 +41197,7 @@
 			<Actor seed="37557"/>
 		</Entity>
 		<Entity uid="7373">
-			<Template>structures/brit_defense_tower</Template>
+			<Template>structures/brit/defense_tower</Template>
 			<Player>4</Player>
 			<Position x="1246.76233" z="1131.69605"/>
 			<Orientation y="1.12665"/>
@@ -41260,21 +41260,21 @@
 			<Actor seed="6611"/>
 		</Entity>
 		<Entity uid="7382">
-			<Template>structures/brit_crannog</Template>
+			<Template>structures/brit/crannog</Template>
 			<Player>4</Player>
 			<Position x="617.56995" z="1380.6344"/>
 			<Orientation y="2.6805"/>
 			<Actor seed="32356"/>
 		</Entity>
 		<Entity uid="7383">
-			<Template>structures/brit_defense_tower</Template>
+			<Template>structures/brit/defense_tower</Template>
 			<Player>4</Player>
 			<Position x="589.02906" z="1398.58191"/>
 			<Orientation y="0.05832"/>
 			<Actor seed="24019"/>
 		</Entity>
 		<Entity uid="7384">
-			<Template>structures/brit_fortress</Template>
+			<Template>structures/brit/fortress</Template>
 			<Player>4</Player>
 			<Position x="579.61323" z="1349.00928"/>
 			<Orientation y="2.6061"/>
@@ -41323,7 +41323,7 @@
 			<Actor seed="56356"/>
 		</Entity>
 		<Entity uid="7391">
-			<Template>structures/brit_farmstead</Template>
+			<Template>structures/brit/farmstead</Template>
 			<Player>4</Player>
 			<Position x="628.49988" z="1281.1576"/>
 			<Orientation y="2.35621"/>
@@ -41456,21 +41456,21 @@
 			<Actor seed="27492"/>
 		</Entity>
 		<Entity uid="7422">
-			<Template>structures/brit_storehouse</Template>
+			<Template>structures/brit/storehouse</Template>
 			<Player>0</Player>
 			<Position x="1298.56482" z="1218.11182"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="51712"/>
 		</Entity>
 		<Entity uid="7423">
-			<Template>structures/brit_defense_tower</Template>
+			<Template>structures/brit/defense_tower</Template>
 			<Player>0</Player>
 			<Position x="1323.55665" z="1123.15638"/>
 			<Orientation y="-1.13372"/>
 			<Actor seed="17982"/>
 		</Entity>
 		<Entity uid="7424">
-			<Template>structures/brit_stable</Template>
+			<Template>structures/brit/stable</Template>
 			<Player>2</Player>
 			<Position x="288.80002" z="1007.05927"/>
 			<Orientation y="2.85335"/>
@@ -41736,7 +41736,7 @@
 			<Actor seed="39999"/>
 		</Entity>
 		<Entity uid="7464">
-			<Template>structures/brit_storehouse</Template>
+			<Template>structures/brit/storehouse</Template>
 			<Player>1</Player>
 			<Position x="859.10755" z="60.1502"/>
 			<Orientation y="2.1465"/>
@@ -41792,7 +41792,7 @@
 			<Actor seed="1864"/>
 		</Entity>
 		<Entity uid="7472">
-			<Template>structures/brit_farmstead</Template>
+			<Template>structures/brit/farmstead</Template>
 			<Player>1</Player>
 			<Position x="737.6009" z="58.30727"/>
 			<Orientation y="3.00881"/>
@@ -42744,7 +42744,7 @@
 			<Actor seed="21837"/>
 		</Entity>
 		<Entity uid="7609">
-			<Template>gaia/geology_metal_alpine</Template>
+			<Template>gaia/ore/alpine_small</Template>
 			<Player>0</Player>
 			<Position x="861.49054" z="42.61733"/>
 			<Orientation y="2.35621"/>
@@ -43437,7 +43437,7 @@
 			<Actor seed="11820"/>
 		</Entity>
 		<Entity uid="7718">
-			<Template>units/gaul_support_female_citizen</Template>
+			<Template>units/gaul/support_female_citizen</Template>
 			<Player>5</Player>
 			<Position x="38.2972" z="945.38154"/>
 			<Orientation y="2.35621"/>

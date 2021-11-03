@@ -32752,21 +32752,21 @@
 			<Actor seed="56272"/>
 		</Entity>
 		<Entity uid="6614">
-			<Template>structures/ptol_mercenary_camp</Template>
+			<Template>structures/ptol/mercenary_camp</Template>
 			<Player>1</Player>
 			<Position x="1368.11036" z="136.06772"/>
 			<Orientation y="-2.03893"/>
 			<Actor seed="13438"/>
 		</Entity>
 		<Entity uid="6615">
-			<Template>structures/ptol_mercenary_camp</Template>
+			<Template>structures/ptol/mercenary_camp</Template>
 			<Player>1</Player>
 			<Position x="1349.43787" z="169.05524"/>
 			<Orientation y="-2.15224"/>
 			<Actor seed="54861"/>
 		</Entity>
 		<Entity uid="6616">
-			<Template>structures/ptol_mercenary_camp</Template>
+			<Template>structures/ptol/mercenary_camp</Template>
 			<Player>1</Player>
 			<Position x="1326.82544" z="201.36411"/>
 			<Orientation y="-2.2037"/>

@@ -44,7 +44,7 @@ var disabledTemplates = (civ) => [
 
 	// Shoreline
 	"structures/" + civ + "_dock",
-	"structures/brit_crannog",
+	"structures/brit/crannog",
 	"structures/cart_super_dock",
 	"structures/ptol_lighthouse",
 	
@@ -1930,7 +1930,7 @@ Trigger.prototype.PointIncrement = function(data)
 	cmpTrigger.patrolTemplates = ["units/athen/champion_ranged","units/athen_black_cloak","units/athen/champion_marine","units/athen_champion_infantry","units/athen_thureophoros"];
 	
 	cmpTrigger.repairTemplates = ["units/athen_infantry_spearman_a","units/athen_infantry_slinger_a","units/athen_infantry_javelinist_a"];
-	cmpTrigger.slaveTemplates = ["units/gaul_infantry_spearman_a","units/gaul_infantry_spearman_e","units/gaul_infantry_slinger_a","units/gaul_infantry_javelinist_a","units/cart_infantry_swordsman_gaul_a","units/cart_infantry_swordsman_gaul_b","units/brit_war_dog_e"];
+	cmpTrigger.slaveTemplates = ["units/gaul_infantry_spearman_a","units/gaul_infantry_spearman_e","units/gaul/infantry_slinger_a","units/gaul/infantry_javelineer_a","units/cart_infantry_swordsman_gaul_a","units/cart_infantry_swordsman_gaul_b","units/brit_war_dog_e"];
 	cmpTrigger.slaveMaxPopulation = 300;
 	cmpTrigger.slaveAssaultInterval = 15;
 	

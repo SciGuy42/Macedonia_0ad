@@ -10651,21 +10651,21 @@
 			<Actor seed="59400"/>
 		</Entity>
 		<Entity uid="2155">
-			<Template>structures/ptol_mercenary_camp</Template>
+			<Template>structures/ptol/mercenary_camp</Template>
 			<Player>1</Player>
 			<Position x="196.93454" z="236.69367"/>
 			<Orientation y="-2.59444"/>
 			<Actor seed="9913"/>
 		</Entity>
 		<Entity uid="2156">
-			<Template>structures/ptol_mercenary_camp</Template>
+			<Template>structures/ptol/mercenary_camp</Template>
 			<Player>1</Player>
 			<Position x="263.90516" z="195.6493"/>
 			<Orientation y="-2.56635"/>
 			<Actor seed="56092"/>
 		</Entity>
 		<Entity uid="2157">
-			<Template>structures/ptol_mercenary_camp</Template>
+			<Template>structures/ptol/mercenary_camp</Template>
 			<Player>1</Player>
 			<Position x="329.16401" z="152.32694"/>
 			<Orientation y="-2.29746"/>
@@ -11442,14 +11442,14 @@
 			<Actor seed="25434"/>
 		</Entity>
 		<Entity uid="2344">
-			<Template>structures/ptol_mercenary_camp</Template>
+			<Template>structures/ptol/mercenary_camp</Template>
 			<Player>1</Player>
 			<Position x="212.78696" z="182.89744"/>
 			<Orientation y="3.7021"/>
 			<Actor seed="18689"/>
 		</Entity>
 		<Entity uid="2345">
-			<Template>structures/ptol_mercenary_camp</Template>
+			<Template>structures/ptol/mercenary_camp</Template>
 			<Player>1</Player>
 			<Position x="273.27594" z="144.08948"/>
 			<Orientation y="3.70211"/>
@@ -12016,14 +12016,14 @@
 			<Actor seed="49648"/>
 		</Entity>
 		<Entity uid="2448">
-			<Template>structures/ptol_mercenary_camp</Template>
+			<Template>structures/ptol/mercenary_camp</Template>
 			<Player>5</Player>
 			<Position x="399.23661" z="694.625"/>
 			<Orientation y="0.10611"/>
 			<Actor seed="19954"/>
 		</Entity>
 		<Entity uid="2449">
-			<Template>structures/ptol_mercenary_camp</Template>
+			<Template>structures/ptol/mercenary_camp</Template>
 			<Player>5</Player>
 			<Position x="605.41138" z="614.5788"/>
 			<Orientation y="0.76546"/>

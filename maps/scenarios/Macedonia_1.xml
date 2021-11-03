@@ -12870,21 +12870,21 @@
 			<Actor seed="58729"/>
 		</Entity>
 		<Entity uid="2741">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>2</Player>
 			<Position x="672.98481" z="732.88166"/>
 			<Orientation y="1.76609"/>
 			<Actor seed="40908"/>
 		</Entity>
 		<Entity uid="2742">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>2</Player>
 			<Position x="674.63904" z="724.70398"/>
 			<Orientation y="1.22255"/>
 			<Actor seed="11767"/>
 		</Entity>
 		<Entity uid="2743">
-			<Template>units/gaul_champion_cavalry</Template>
+			<Template>units/gaul/champion_cavalry</Template>
 			<Player>2</Player>
 			<Position x="681.01508" z="727.12873"/>
 			<Orientation y="2.35621"/>

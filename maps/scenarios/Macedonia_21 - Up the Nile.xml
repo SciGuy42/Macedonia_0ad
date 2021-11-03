@@ -38886,12 +38886,12 @@
 			<Orientation y="-1.07226"/>
 		</Entity>
 		<Entity uid="6704">
-			<Template>gaia/fauna_hawk</Template>
+			<Template>birds/buzzard</Template>
 			<Position x="1024" z="1024"/>
 			<Orientation y="-0.53953"/>
 		</Entity>
 		<Entity uid="6705">
-			<Template>gaia/fauna_hawk</Template>
+			<Template>birds/buzzard</Template>
 			<Position x="1024" z="1024"/>
 			<Orientation y="0.04616"/>
 		</Entity>

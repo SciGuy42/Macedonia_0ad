@@ -90,11 +90,11 @@ Trigger.prototype.SpawnAndStartCavalryAttack = function()
 	}
 	else if (this.gaul_cav_attack_counter == 4)
 	{
-		this.gaul_cavalry_types = ["units/gaul_cavalry_swordsman_e","units/gaul_cavalry_javelinist_e","units/brit_war_dog_e","units/gaul_champion_cavalry"];
+		this.gaul_cavalry_types = ["units/gaul_cavalry_swordsman_e","units/gaul_cavalry_javelinist_e","units/brit_war_dog_e","units/gaul/champion_cavalry"];
 	}
 	else if (this.gaul_cav_attack_counter == 5)
 	{
-		this.gaul_cavalry_types = ["units/gaul_cavalry_swordsman_e","units/gaul_cavalry_javelinist_e","units/brit_war_dog_e","units/gaul_champion_cavalry","units/brit_champion_cavalry"];
+		this.gaul_cavalry_types = ["units/gaul_cavalry_swordsman_e","units/gaul_cavalry_javelinist_e","units/brit_war_dog_e","units/gaul/champion_cavalry","units/brit/champion_chariot"];
 	}
 	
 	//get list of barracks barracks
@@ -427,7 +427,7 @@ Trigger.prototype.GarrisonAction = function(data)
 	
 	//cavalry attack variables
 	cmpTrigger.gaul_cavalry_types = ["units/gaul_cavalry_swordsman_a","units/gaul_cavalry_javelinist_a","units/brit_war_dog_a"];
-	cmpTrigger.gaul_cavalry_types_all = ["units/gaul_cavalry_swordsman_a","units/gaul_cavalry_javelinist_a","units/gaul_cavalry_swordsman_b","units/gaul_cavalry_javelinist_b","units/brit_champion_cavalry","units/brit_war_dog_e"];
+	cmpTrigger.gaul_cavalry_types_all = ["units/gaul_cavalry_swordsman_a","units/gaul_cavalry_javelinist_a","units/gaul_cavalry_swordsman_b","units/gaul_cavalry_javelinist_b","units/brit/champion_chariot","units/brit_war_dog_e"];
 	cmpTrigger.gaul_cavalry_interval = 200 * 1000;
 	cmpTrigger.gaul_cav_attack_counter = 0;
 	cmpTrigger.spawn_attack_bonus = 2;
