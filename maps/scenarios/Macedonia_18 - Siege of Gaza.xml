@@ -25063,182 +25063,182 @@
 			<Actor seed="49395"/>
 		</Entity>
 		<Entity uid="5684">
-			<Template>structures/mace_dock</Template>
+			<Template>structures/mace/dock</Template>
 			<Player>1</Player>
 			<Position x="65.39608" z="1038.43006"/>
 			<Orientation y="-0.19358"/>
 			<Actor seed="3720"/>
 		</Entity>
 		<Entity uid="5685">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="53.03458" z="1105.78528"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="26526"/>
 		</Entity>
 		<Entity uid="5686">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="80.65442" z="1109.17334"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="10312"/>
 		</Entity>
 		<Entity uid="5687">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="50.98923" z="1150.75965"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="4399"/>
 		</Entity>
 		<Entity uid="5688">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="53.74766" z="1210.20044"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="59451"/>
 		</Entity>
 		<Entity uid="5689">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="87.09003" z="1248.4557"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="8387"/>
 		</Entity>
 		<Entity uid="5690">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="73.89576" z="1183.67908"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="42909"/>
 		</Entity>
 		<Entity uid="5691">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="196.46" z="1255.83118"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="58771"/>
 		</Entity>
 		<Entity uid="5692">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="150.88407" z="1276.63184"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="2401"/>
 		</Entity>
 		<Entity uid="5693">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="342.18805" z="1628.52271"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="51443"/>
 		</Entity>
 		<Entity uid="5694">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="269.4308" z="1578.45521"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="65217"/>
 		</Entity>
 		<Entity uid="5695">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="210.8498" z="1470.05518"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="35064"/>
 		</Entity>
 		<Entity uid="5696">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="254.06308" z="1383.36487"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="60743"/>
 		</Entity>
 		<Entity uid="5697">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="372.17365" z="1520.85084"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="7592"/>
 		</Entity>
 		<Entity uid="5698">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="409.1214" z="1643.55445"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="64794"/>
 		</Entity>
 		<Entity uid="5699">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="571.66254" z="1819.08155"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="29647"/>
 		</Entity>
 		<Entity uid="5700">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="729.12031" z="1914.9762"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="53694"/>
 		</Entity>
 		<Entity uid="5701">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="577.66742" z="1703.4629"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="25070"/>
 		</Entity>
 		<Entity uid="5702">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="466.33667" z="1595.24085"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="36338"/>
 		</Entity>
 		<Entity uid="5703">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="404.89081" z="1501.41126"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="58516"/>
 		</Entity>
 		<Entity uid="5704">
-			<Template>gaia/fauna_fish_tuna</Template>
+			<Template>gaia/fish/generic_tuna</Template>
 			<Player>0</Player>
 			<Position x="121.38569" z="1399.2245"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="6086"/>
 		</Entity>
 		<Entity uid="5705">
-			<Template>gaia/fauna_fish_tuna</Template>
+			<Template>gaia/fish/generic_tuna</Template>
 			<Player>0</Player>
 			<Position x="95.72056" z="1344.12159"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="54321"/>
 		</Entity>
 		<Entity uid="5706">
-			<Template>gaia/fauna_fish_tuna</Template>
+			<Template>gaia/fish/generic_tuna</Template>
 			<Player>0</Player>
 			<Position x="183.67957" z="1394.81238"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="51505"/>
 		</Entity>
 		<Entity uid="5707">
-			<Template>gaia/fauna_fish_tuna</Template>
+			<Template>gaia/fish/generic_tuna</Template>
 			<Player>0</Player>
 			<Position x="209.76365" z="1349.0569"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="51209"/>
 		</Entity>
 		<Entity uid="5708">
-			<Template>gaia/fauna_fish_tuna</Template>
+			<Template>gaia/fish/generic_tuna</Template>
 			<Player>0</Player>
 			<Position x="211.68061" z="1311.28174"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="50911"/>
 		</Entity>
 		<Entity uid="5709">
-			<Template>gaia/fauna_fish_tuna</Template>
+			<Template>gaia/fish/generic_tuna</Template>
 			<Player>0</Player>
 			<Position x="100.35157" z="1292.2627"/>
 			<Orientation y="2.35621"/>
@@ -25266,21 +25266,21 @@
 			<Actor seed="2989"/>
 		</Entity>
 		<Entity uid="5714">
-			<Template>units/mace_ship_fishing</Template>
+			<Template>units/mace/ship_fishing</Template>
 			<Player>1</Player>
 			<Position x="38.54337" z="1077.974"/>
 			<Orientation y="-2.76427"/>
 			<Actor seed="24005"/>
 		</Entity>
 		<Entity uid="5715">
-			<Template>units/mace_ship_fishing</Template>
+			<Template>units/mace/ship_fishing</Template>
 			<Player>1</Player>
 			<Position x="62.60209" z="1084.56348"/>
 			<Orientation y="-2.5146"/>
 			<Actor seed="38497"/>
 		</Entity>
 		<Entity uid="5716">
-			<Template>units/mace_ship_merchant</Template>
+			<Template>units/mace/ship_merchant</Template>
 			<Player>1</Player>
 			<Position x="52.99036" z="1104.65345"/>
 			<Orientation y="0.93647"/>
@@ -25399,28 +25399,28 @@
 			<Actor seed="639"/>
 		</Entity>
 		<Entity uid="5733">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="23.73783" z="1103.8982"/>
 			<Orientation y="2.35622"/>
 			<Actor seed="10312"/>
 		</Entity>
 		<Entity uid="5734">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="108.64393" z="1155.56885"/>
 			<Orientation y="2.35622"/>
 			<Actor seed="59451"/>
 		</Entity>
 		<Entity uid="5735">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="85.38537" z="1144.64966"/>
 			<Orientation y="2.35622"/>
 			<Actor seed="4399"/>
 		</Entity>
 		<Entity uid="5736">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="96.84067" z="1092.50562"/>
 			<Orientation y="2.35622"/>
@@ -25595,14 +25595,14 @@
 			<Actor seed="32872"/>
 		</Entity>
 		<Entity uid="5761">
-			<Template>units/cart_infantry_archer_b</Template>
+			<Template>units/cart/infantry_archer_b</Template>
 			<Player>0</Player>
 			<Position x="398.80387" z="1414.36011"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="4351"/>
 		</Entity>
 		<Entity uid="5762">
-			<Template>units/cart_infantry_archer_b</Template>
+			<Template>units/cart/infantry_archer_b</Template>
 			<Player>0</Player>
 			<Position x="403.41434" z="1417.06019"/>
 			<Orientation y="-3.06867"/>

@@ -186,7 +186,7 @@ Trigger.prototype.IntervalActionSpawnTraders = function(data)
 				let site = pickRandom(markets_e);
 				
 				warn("Spawning trader for player "+this.enemies[e]+" at site = " + site);
-				let trader_i = TriggerHelper.SpawnUnits(site,"units/brit_support_trader",1,this.enemies[e]);
+				let trader_i = TriggerHelper.SpawnUnits(site,"units/brit/support_trader",1,this.enemies[e]);
 				//warn("Spawning trader for player "+this.enemies[e]);
 			}
 		}
@@ -285,7 +285,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	{
 		this.spawn_cav_bonus = 4;
 		this.spawn_crannog_bonus = 1;
-		this.infantryTypesSpawn = ["units/brit_infantry_javelinist_a","units/brit_infantry_slinger_a","units/brit_infantry_spearman_a"];
+		this.infantryTypesSpawn = ["units/brit_infantry_javelinist_a","units/brit_infantry_slinger_a","units/brit/infantry_spearman_a"];
 	
 	}
 	else if (difficulty == 2)
@@ -320,7 +320,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	//list of crannogs of player 4
 	//we randomly spawn units near them just to help the AI of player 4
 	cmpTrigger.crannog_ids = [7366,7371,7382];
-	cmpTrigger.infantryTypesSpawn = ["units/brit_infantry_javelinist_b","units/brit_infantry_slinger_b","units/brit_infantry_spearman_b"];
+	cmpTrigger.infantryTypesSpawn = ["units/brit_infantry_javelinist_b","units/brit/infantry_slinger_b","units/brit_infantry_spearman_b"];
 	
 	cmpTrigger.spawn_cav_bonus = 0;
 	cmpTrigger.spawn_crannog_bonus = 0;

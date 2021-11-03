@@ -1161,7 +1161,7 @@ Trigger.prototype.QuestTradePostComplete = function(data)
 	//spawn a trade boat
 	let docks = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(6),"Dock").filter(TriggerHelper.IsInWorld);
 	
-	let unit_i = TriggerHelper.SpawnUnits(docks[0],"units/mace_ship_merchant",1,1);
+	let unit_i = TriggerHelper.SpawnUnits(docks[0],"units/mace/ship_merchant",1,1);
 	
 	this.ShowText("Thanks for taking care of our problem! Here, perhaps this boat will be useful to you.","Thanks!","I hate the water...");
 	

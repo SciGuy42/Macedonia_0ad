@@ -53105,7 +53105,7 @@
 			<Orientation y="-3.44547"/>
 		</Entity>
 		<Entity uid="8978">
-			<Template>gaia/geology_stonemine_temperate_quarry</Template>
+			<Template>gaia/rock/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="1228.74665" z="625.16968"/>
 			<Orientation y="-2.6652"/>
@@ -53117,7 +53117,7 @@
 			<Orientation y="-0.12563"/>
 		</Entity>
 		<Entity uid="8980">
-			<Template>gaia/geology_stonemine_temperate_quarry</Template>
+			<Template>gaia/rock/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="351.77955" z="491.15589"/>
 			<Orientation y="-4.50968"/>
@@ -53141,7 +53141,7 @@
 			<Orientation y="-0.62708"/>
 		</Entity>
 		<Entity uid="8985">
-			<Template>gaia/geology_stonemine_temperate_quarry</Template>
+			<Template>gaia/rock/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="1639.53064" z="423.32294"/>
 			<Orientation y="-4.26955"/>
@@ -53159,13 +53159,13 @@
 			<Orientation y="-0.3368"/>
 		</Entity>
 		<Entity uid="8988">
-			<Template>gaia/geology_stonemine_temperate_quarry</Template>
+			<Template>gaia/rock/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="807.21503" z="1575.83686"/>
 			<Orientation y="-3.2749"/>
 		</Entity>
 		<Entity uid="8990">
-			<Template>gaia/geology_stonemine_temperate_quarry</Template>
+			<Template>gaia/rock/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="707.26935" z="1800.91712"/>
 			<Orientation y="1.0615"/>
@@ -53177,7 +53177,7 @@
 			<Orientation y="-0.40671"/>
 		</Entity>
 		<Entity uid="8992">
-			<Template>gaia/geology_stonemine_temperate_quarry</Template>
+			<Template>gaia/rock/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="1284.11084" z="1300.90088"/>
 			<Orientation y="-4.62095"/>
@@ -53459,67 +53459,67 @@
 			<Orientation y="-3.85578"/>
 		</Entity>
 		<Entity uid="9039">
-			<Template>gaia/ore/temperate_small_slabs</Template>
+			<Template>gaia/ore/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="542.753" z="805.00788"/>
 			<Orientation y="1.41318"/>
 		</Entity>
 		<Entity uid="9041">
-			<Template>gaia/ore/temperate_small_slabs</Template>
+			<Template>gaia/ore/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="1031.73835" z="1121.98182"/>
 			<Orientation y="-0.54171"/>
 		</Entity>
 		<Entity uid="9042">
-			<Template>gaia/ore/temperate_small_slabs</Template>
+			<Template>gaia/ore/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="1875.85169" z="851.14338"/>
 			<Orientation y="0.11393"/>
 		</Entity>
 		<Entity uid="9043">
-			<Template>gaia/ore/temperate_small_slabs</Template>
+			<Template>gaia/ore/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="582.99555" z="1347.35865"/>
 			<Orientation y="-2.88756"/>
 		</Entity>
 		<Entity uid="9044">
-			<Template>gaia/ore/temperate_small_slabs</Template>
+			<Template>gaia/ore/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="806.58814" z="1229.1344"/>
 			<Orientation y="-3.38859"/>
 		</Entity>
 		<Entity uid="9045">
-			<Template>gaia/ore/temperate_small_slabs</Template>
+			<Template>gaia/ore/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="1319.29755" z="1207.68641"/>
 			<Orientation y="-2.68813"/>
 		</Entity>
 		<Entity uid="9046">
-			<Template>gaia/ore/temperate_small_slabs</Template>
+			<Template>gaia/ore/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="1106.45868" z="1419.9596"/>
 			<Orientation y="-2.85004"/>
 		</Entity>
 		<Entity uid="9047">
-			<Template>gaia/ore/temperate_small_slabs</Template>
+			<Template>gaia/ore/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="878.9444" z="82.36701"/>
 			<Orientation y="0.67624"/>
 		</Entity>
 		<Entity uid="9048">
-			<Template>gaia/ore/temperate_small_slabs</Template>
+			<Template>gaia/ore/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="1649.32178" z="1549.60547"/>
 			<Orientation y="-3.91041"/>
 		</Entity>
 		<Entity uid="9049">
-			<Template>gaia/ore/temperate_small_slabs</Template>
+			<Template>gaia/ore/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="1067.25544" z="634.10926"/>
 			<Orientation y="-1.48418"/>
 		</Entity>
 		<Entity uid="9050">
-			<Template>gaia/ore/temperate_small_slabs</Template>
+			<Template>gaia/ore/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="288.71973" z="1334.3274"/>
 			<Orientation y="0.66646"/>
@@ -73346,21 +73346,21 @@
 			<Actor seed="54668"/>
 		</Entity>
 		<Entity uid="12895">
-			<Template>gaia/geology_stonemine_temperate_quarry</Template>
+			<Template>gaia/rock/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="1680.5608" z="1404.51795"/>
 			<Orientation y="-4.62096"/>
 			<Actor seed="8992"/>
 		</Entity>
 		<Entity uid="12896">
-			<Template>gaia/geology_stonemine_temperate_quarry</Template>
+			<Template>gaia/rock/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="1930.16431" z="836.85273"/>
 			<Orientation y="-8.84298"/>
 			<Actor seed="8992"/>
 		</Entity>
 		<Entity uid="12897">
-			<Template>gaia/ore/temperate_small_slabs</Template>
+			<Template>gaia/ore/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="1824.65125" z="496.07493"/>
 			<Orientation y="-6.20582"/>

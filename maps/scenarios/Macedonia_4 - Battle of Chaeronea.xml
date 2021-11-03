@@ -213,37 +213,37 @@
 			<Orientation y="-1.02172"/>
 		</Entity>
 		<Entity uid="227">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="659.63862" z="922.37977"/>
 			<Orientation y="-0.63151"/>
 		</Entity>
 		<Entity uid="228">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="662.07136" z="928.62153"/>
 			<Orientation y="-1.8373"/>
 		</Entity>
 		<Entity uid="229">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="666.39502" z="928.62433"/>
 			<Orientation y="-3.27306"/>
 		</Entity>
 		<Entity uid="234">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="877.98786" z="566.50654"/>
 			<Orientation y="-3.7328"/>
 		</Entity>
 		<Entity uid="235">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="873.74256" z="562.7132"/>
 			<Orientation y="0.72535"/>
 		</Entity>
 		<Entity uid="236">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="878.20423" z="558.26172"/>
 			<Orientation y="-2.08153"/>
@@ -1677,1669 +1677,1669 @@
 			<Orientation y="2.8578"/>
 		</Entity>
 		<Entity uid="691">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="650" z="106"/>
 			<Orientation y="2.28905"/>
 		</Entity>
 		<Entity uid="692">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="650" z="110"/>
 			<Orientation y="2.99704"/>
 		</Entity>
 		<Entity uid="693">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="666" z="90"/>
 			<Orientation y="4.98061"/>
 		</Entity>
 		<Entity uid="702">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="230" z="230"/>
 			<Orientation y="4.30207"/>
 		</Entity>
 		<Entity uid="703">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="238" z="226"/>
 			<Orientation y="2.78928"/>
 		</Entity>
 		<Entity uid="704">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="218" z="214"/>
 			<Orientation y="6.04793"/>
 		</Entity>
 		<Entity uid="705">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="238" z="214"/>
 			<Orientation y="2.63283"/>
 		</Entity>
 		<Entity uid="706">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="238" z="222"/>
 			<Orientation y="6.25301"/>
 		</Entity>
 		<Entity uid="707">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="242" z="222"/>
 			<Orientation y="1.66695"/>
 		</Entity>
 		<Entity uid="708">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="230" z="222"/>
 			<Orientation y="4.9253"/>
 		</Entity>
 		<Entity uid="714">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="314" z="886"/>
 			<Orientation y="1.94976"/>
 		</Entity>
 		<Entity uid="715">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="318" z="894"/>
 			<Orientation y="2.30724"/>
 		</Entity>
 		<Entity uid="716">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="318" z="878"/>
 			<Orientation y="4.10404"/>
 		</Entity>
 		<Entity uid="742">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="386" z="226"/>
 			<Orientation y="1.30077"/>
 		</Entity>
 		<Entity uid="743">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="370" z="222"/>
 			<Orientation y="1.1688"/>
 		</Entity>
 		<Entity uid="744">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="374" z="218"/>
 			<Orientation y="2.5798"/>
 		</Entity>
 		<Entity uid="745">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="390" z="218"/>
 			<Orientation y="5.74561"/>
 		</Entity>
 		<Entity uid="746">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="390" z="226"/>
 			<Orientation y="2.83454"/>
 		</Entity>
 		<Entity uid="747">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="378" z="222"/>
 			<Orientation y="3.74906"/>
 		</Entity>
 		<Entity uid="748">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="46" z="530"/>
 			<Orientation y="3.93001"/>
 		</Entity>
 		<Entity uid="749">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="34" z="506"/>
 			<Orientation y="2.85756"/>
 		</Entity>
 		<Entity uid="750">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="38" z="506"/>
 			<Orientation y="4.8558"/>
 		</Entity>
 		<Entity uid="751">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="50" z="506"/>
 			<Orientation y="3.01731"/>
 		</Entity>
 		<Entity uid="752">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="54" z="506"/>
 			<Orientation y="4.40499"/>
 		</Entity>
 		<Entity uid="753">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="42" z="514"/>
 			<Orientation y="1.55777"/>
 		</Entity>
 		<Entity uid="754">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="42" z="518"/>
 			<Orientation y="4.96181"/>
 		</Entity>
 		<Entity uid="755">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="42" z="506"/>
 			<Orientation y="3.92536"/>
 		</Entity>
 		<Entity uid="756">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="46" z="510"/>
 			<Orientation y="1.50878"/>
 		</Entity>
 		<Entity uid="757">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="242" z="402"/>
 			<Orientation y="1.0617"/>
 		</Entity>
 		<Entity uid="758">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="242" z="398"/>
 			<Orientation y="2.10311"/>
 		</Entity>
 		<Entity uid="759">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="238" z="398"/>
 			<Orientation y="4.15201"/>
 		</Entity>
 		<Entity uid="760">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="254" z="498"/>
 			<Orientation y="5.45186"/>
 		</Entity>
 		<Entity uid="761">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="250" z="502"/>
 			<Orientation y="1.16526"/>
 		</Entity>
 		<Entity uid="762">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="258" z="486"/>
 			<Orientation y="2.04671"/>
 		</Entity>
 		<Entity uid="763">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="262" z="490"/>
 			<Orientation y="2.1984"/>
 		</Entity>
 		<Entity uid="764">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="266" z="510"/>
 			<Orientation y="3.9874"/>
 		</Entity>
 		<Entity uid="768">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="426" z="238"/>
 			<Orientation y="1.6178"/>
 		</Entity>
 		<Entity uid="769">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="442" z="226"/>
 			<Orientation y="1.81975"/>
 		</Entity>
 		<Entity uid="770">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="446" z="226"/>
 			<Orientation y="1.76041"/>
 		</Entity>
 		<Entity uid="771">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="446" z="230"/>
 			<Orientation y="3.2491"/>
 		</Entity>
 		<Entity uid="772">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="438" z="238"/>
 			<Orientation y="1.78498"/>
 		</Entity>
 		<Entity uid="773">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="430" z="230"/>
 			<Orientation y="2.1296"/>
 		</Entity>
 		<Entity uid="774">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="766" z="90"/>
 			<Orientation y="3.60904"/>
 		</Entity>
 		<Entity uid="775">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="446" z="102"/>
 			<Orientation y="3.42582"/>
 		</Entity>
 		<Entity uid="776">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="446" z="114"/>
 			<Orientation y="5.6763"/>
 		</Entity>
 		<Entity uid="777">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="434" z="86"/>
 			<Orientation y="3.55063"/>
 		</Entity>
 		<Entity uid="778">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="442" z="86"/>
 			<Orientation y="1.06815"/>
 		</Entity>
 		<Entity uid="779">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="458" z="94"/>
 			<Orientation y="1.40899"/>
 		</Entity>
 		<Entity uid="780">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="446" z="94"/>
 			<Orientation y="3.91536"/>
 		</Entity>
 		<Entity uid="781">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="378" z="354"/>
 			<Orientation y="1.0997"/>
 		</Entity>
 		<Entity uid="782">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="382" z="354"/>
 			<Orientation y="2.30231"/>
 		</Entity>
 		<Entity uid="783">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="374" z="354"/>
 			<Orientation y="3.2182"/>
 		</Entity>
 		<Entity uid="784">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="374" z="346"/>
 			<Orientation y="6.10207"/>
 		</Entity>
 		<Entity uid="785">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="390" z="350"/>
 			<Orientation y="6.01427"/>
 		</Entity>
 		<Entity uid="786">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="378" z="350"/>
 			<Orientation y="4.11916"/>
 		</Entity>
 		<Entity uid="787">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="386" z="342"/>
 			<Orientation y="1.92713"/>
 		</Entity>
 		<Entity uid="788">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="210" z="242"/>
 			<Orientation y="2.19901"/>
 		</Entity>
 		<Entity uid="789">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="206" z="234"/>
 			<Orientation y="1.0559"/>
 		</Entity>
 		<Entity uid="790">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="218" z="230"/>
 			<Orientation y="2.71244"/>
 		</Entity>
 		<Entity uid="791">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="334" z="350"/>
 			<Orientation y="2.35001"/>
 		</Entity>
 		<Entity uid="792">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="342" z="362"/>
 			<Orientation y="5.58507"/>
 		</Entity>
 		<Entity uid="793">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="334" z="358"/>
 			<Orientation y="2.13271"/>
 		</Entity>
 		<Entity uid="794">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="338" z="358"/>
 			<Orientation y="6.10528"/>
 		</Entity>
 		<Entity uid="797">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="82" z="506"/>
 			<Orientation y="3.70664"/>
 		</Entity>
 		<Entity uid="798">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="86" z="502"/>
 			<Orientation y="1.17302"/>
 		</Entity>
 		<Entity uid="799">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="238" z="466"/>
 			<Orientation y="4.33425"/>
 		</Entity>
 		<Entity uid="800">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="234" z="470"/>
 			<Orientation y="1.24737"/>
 		</Entity>
 		<Entity uid="801">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="238" z="458"/>
 			<Orientation y="3.18209"/>
 		</Entity>
 		<Entity uid="802">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="242" z="454"/>
 			<Orientation y="3.81402"/>
 		</Entity>
 		<Entity uid="803">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="250" z="462"/>
 			<Orientation y="1.72884"/>
 		</Entity>
 		<Entity uid="804">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="238" z="462"/>
 			<Orientation y="1.90333"/>
 		</Entity>
 		<Entity uid="805">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="142" z="658"/>
 			<Orientation y="6.10729"/>
 		</Entity>
 		<Entity uid="806">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="138" z="670"/>
 			<Orientation y="1.00258"/>
 		</Entity>
 		<Entity uid="807">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="130" z="658"/>
 			<Orientation y="2.4315"/>
 		</Entity>
 		<Entity uid="808">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="130" z="650"/>
 			<Orientation y="4.406"/>
 		</Entity>
 		<Entity uid="809">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="142" z="642"/>
 			<Orientation y="1.21843"/>
 		</Entity>
 		<Entity uid="810">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="142" z="646"/>
 			<Orientation y="0.22791"/>
 		</Entity>
 		<Entity uid="811">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="138" z="650"/>
 			<Orientation y="3.18754"/>
 		</Entity>
 		<Entity uid="819">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="170" z="342"/>
 			<Orientation y="3.86864"/>
 		</Entity>
 		<Entity uid="820">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="174" z="318"/>
 			<Orientation y="0.00565"/>
 		</Entity>
 		<Entity uid="821">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="182" z="318"/>
 			<Orientation y="3.99791"/>
 		</Entity>
 		<Entity uid="822">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="178" z="330"/>
 			<Orientation y="5.48853"/>
 		</Entity>
 		<Entity uid="823">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="182" z="326"/>
 			<Orientation y="5.25585"/>
 		</Entity>
 		<Entity uid="824">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="182" z="322"/>
 			<Orientation y="4.76508"/>
 		</Entity>
 		<Entity uid="825">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="170" z="334"/>
 			<Orientation y="3.50812"/>
 		</Entity>
 		<Entity uid="826">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="170" z="326"/>
 			<Orientation y="6.173"/>
 		</Entity>
 		<Entity uid="827">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="174" z="330"/>
 			<Orientation y="5.13984"/>
 		</Entity>
 		<Entity uid="828">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="162" z="226"/>
 			<Orientation y="4.841"/>
 		</Entity>
 		<Entity uid="829">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="162" z="222"/>
 			<Orientation y="3.4786"/>
 		</Entity>
 		<Entity uid="830">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="182" z="214"/>
 			<Orientation y="3.42203"/>
 		</Entity>
 		<Entity uid="831">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="166" z="222"/>
 			<Orientation y="3.54354"/>
 		</Entity>
 		<Entity uid="832">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="162" z="218"/>
 			<Orientation y="1.47695"/>
 		</Entity>
 		<Entity uid="833">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="170" z="218"/>
 			<Orientation y="6.20015"/>
 		</Entity>
 		<Entity uid="834">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="174" z="222"/>
 			<Orientation y="1.83866"/>
 		</Entity>
 		<Entity uid="844">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="306" z="262"/>
 			<Orientation y="3.66781"/>
 		</Entity>
 		<Entity uid="845">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="298" z="258"/>
 			<Orientation y="1.28515"/>
 		</Entity>
 		<Entity uid="846">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="318" z="250"/>
 			<Orientation y="0.69011"/>
 		</Entity>
 		<Entity uid="847">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="318" z="258"/>
 			<Orientation y="4.17582"/>
 		</Entity>
 		<Entity uid="848">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="322" z="262"/>
 			<Orientation y="5.46605"/>
 		</Entity>
 		<Entity uid="849">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="314" z="258"/>
 			<Orientation y="1.73359"/>
 		</Entity>
 		<Entity uid="850">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="82" z="450"/>
 			<Orientation y="4.18577"/>
 		</Entity>
 		<Entity uid="851">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="66" z="442"/>
 			<Orientation y="0.80103"/>
 		</Entity>
 		<Entity uid="852">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="62" z="434"/>
 			<Orientation y="6.17977"/>
 		</Entity>
 		<Entity uid="853">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="66" z="430"/>
 			<Orientation y="4.59113"/>
 		</Entity>
 		<Entity uid="854">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="82" z="442"/>
 			<Orientation y="2.3034"/>
 		</Entity>
 		<Entity uid="855">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="74" z="446"/>
 			<Orientation y="5.13573"/>
 		</Entity>
 		<Entity uid="856">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="74" z="442"/>
 			<Orientation y="3.7731"/>
 		</Entity>
 		<Entity uid="865">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="494" z="226"/>
 			<Orientation y="1.36118"/>
 		</Entity>
 		<Entity uid="866">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="478" z="230"/>
 			<Orientation y="2.58803"/>
 		</Entity>
 		<Entity uid="867">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="474" z="226"/>
 			<Orientation y="5.89779"/>
 		</Entity>
 		<Entity uid="868">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="478" z="214"/>
 			<Orientation y="5.64173"/>
 		</Entity>
 		<Entity uid="869">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="490" z="214"/>
 			<Orientation y="2.7596"/>
 		</Entity>
 		<Entity uid="870">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="482" z="222"/>
 			<Orientation y="5.90127"/>
 		</Entity>
 		<Entity uid="871">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="490" z="222"/>
 			<Orientation y="3.49625"/>
 		</Entity>
 		<Entity uid="879">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="486" z="94"/>
 			<Orientation y="1.86866"/>
 		</Entity>
 		<Entity uid="880">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="482" z="94"/>
 			<Orientation y="0.44571"/>
 		</Entity>
 		<Entity uid="881">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="470" z="82"/>
 			<Orientation y="4.8702"/>
 		</Entity>
 		<Entity uid="882">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="406" z="186"/>
 			<Orientation y="0.58843"/>
 		</Entity>
 		<Entity uid="883">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="398" z="194"/>
 			<Orientation y="6.1204"/>
 		</Entity>
 		<Entity uid="884">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="398" z="170"/>
 			<Orientation y="0.4884"/>
 		</Entity>
 		<Entity uid="885">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="398" z="174"/>
 			<Orientation y="4.48893"/>
 		</Entity>
 		<Entity uid="886">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="402" z="170"/>
 			<Orientation y="3.96283"/>
 		</Entity>
 		<Entity uid="887">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="406" z="170"/>
 			<Orientation y="1.57346"/>
 		</Entity>
 		<Entity uid="888">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="506" z="150"/>
 			<Orientation y="5.21688"/>
 		</Entity>
 		<Entity uid="889">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="502" z="154"/>
 			<Orientation y="1.25086"/>
 		</Entity>
 		<Entity uid="890">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="506" z="154"/>
 			<Orientation y="4.76748"/>
 		</Entity>
 		<Entity uid="891">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="494" z="134"/>
 			<Orientation y="3.46325"/>
 		</Entity>
 		<Entity uid="892">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="502" z="134"/>
 			<Orientation y="3.9827"/>
 		</Entity>
 		<Entity uid="893">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="502" z="138"/>
 			<Orientation y="5.42606"/>
 		</Entity>
 		<Entity uid="894">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="498" z="138"/>
 			<Orientation y="2.94295"/>
 		</Entity>
 		<Entity uid="898">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="138" z="438"/>
 			<Orientation y="6.20618"/>
 		</Entity>
 		<Entity uid="899">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="134" z="426"/>
 			<Orientation y="5.98378"/>
 		</Entity>
 		<Entity uid="900">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="146" z="426"/>
 			<Orientation y="5.68635"/>
 		</Entity>
 		<Entity uid="901">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="142" z="434"/>
 			<Orientation y="4.45008"/>
 		</Entity>
 		<Entity uid="902">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="122" z="426"/>
 			<Orientation y="3.68587"/>
 		</Entity>
 		<Entity uid="903">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="478" z="958"/>
 			<Orientation y="2.89985"/>
 		</Entity>
 		<Entity uid="904">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="478" z="950"/>
 			<Orientation y="3.60567"/>
 		</Entity>
 		<Entity uid="905">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="474" z="942"/>
 			<Orientation y="3.22124"/>
 		</Entity>
 		<Entity uid="906">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="486" z="946"/>
 			<Orientation y="5.13837"/>
 		</Entity>
 		<Entity uid="907">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="518" z="134"/>
 			<Orientation y="1.70772"/>
 		</Entity>
 		<Entity uid="908">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="518" z="126"/>
 			<Orientation y="3.1372"/>
 		</Entity>
 		<Entity uid="909">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="522" z="122"/>
 			<Orientation y="3.87894"/>
 		</Entity>
 		<Entity uid="910">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="538" z="126"/>
 			<Orientation y="2.1896"/>
 		</Entity>
 		<Entity uid="911">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="538" z="130"/>
 			<Orientation y="4.91851"/>
 		</Entity>
 		<Entity uid="912">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="666" z="130"/>
 			<Orientation y="1.55991"/>
 		</Entity>
 		<Entity uid="913">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="686" z="114"/>
 			<Orientation y="2.01499"/>
 		</Entity>
 		<Entity uid="914">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="686" z="118"/>
 			<Orientation y="2.25036"/>
 		</Entity>
 		<Entity uid="915">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="670" z="122"/>
 			<Orientation y="1.9034"/>
 		</Entity>
 		<Entity uid="916">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="82" z="386"/>
 			<Orientation y="4.90352"/>
 		</Entity>
 		<Entity uid="917">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="74" z="370"/>
 			<Orientation y="5.88962"/>
 		</Entity>
 		<Entity uid="918">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="94" z="382"/>
 			<Orientation y="2.49192"/>
 		</Entity>
 		<Entity uid="919">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="94" z="386"/>
 			<Orientation y="2.4052"/>
 		</Entity>
 		<Entity uid="920">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="78" z="382"/>
 			<Orientation y="5.98911"/>
 		</Entity>
 		<Entity uid="921">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="82" z="382"/>
 			<Orientation y="6.0777"/>
 		</Entity>
 		<Entity uid="929">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="374" z="42"/>
 			<Orientation y="2.29517"/>
 		</Entity>
 		<Entity uid="930">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="190" z="642"/>
 			<Orientation y="0.27416"/>
 		</Entity>
 		<Entity uid="931">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="202" z="634"/>
 			<Orientation y="6.0353"/>
 		</Entity>
 		<Entity uid="936">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="166" z="406"/>
 			<Orientation y="2.33223"/>
 		</Entity>
 		<Entity uid="937">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="182" z="390"/>
 			<Orientation y="2.22286"/>
 		</Entity>
 		<Entity uid="938">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="186" z="398"/>
 			<Orientation y="5.32076"/>
 		</Entity>
 		<Entity uid="939">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="174" z="402"/>
 			<Orientation y="0.0203"/>
 		</Entity>
 		<Entity uid="940">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="178" z="402"/>
 			<Orientation y="3.43409"/>
 		</Entity>
 		<Entity uid="941">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="178" z="398"/>
 			<Orientation y="3.76177"/>
 		</Entity>
 		<Entity uid="953">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="202" z="842"/>
 			<Orientation y="2.58912"/>
 		</Entity>
 		<Entity uid="954">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="198" z="846"/>
 			<Orientation y="2.31881"/>
 		</Entity>
 		<Entity uid="955">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="190" z="850"/>
 			<Orientation y="1.68248"/>
 		</Entity>
 		<Entity uid="956">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="210" z="518"/>
 			<Orientation y="5.16439"/>
 		</Entity>
 		<Entity uid="957">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="202" z="522"/>
 			<Orientation y="2.98565"/>
 		</Entity>
 		<Entity uid="958">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="206" z="522"/>
 			<Orientation y="4.60286"/>
 		</Entity>
 		<Entity uid="959">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="202" z="514"/>
 			<Orientation y="4.8561"/>
 		</Entity>
 		<Entity uid="960">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="194" z="506"/>
 			<Orientation y="4.3179"/>
 		</Entity>
 		<Entity uid="975">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="198" z="402"/>
 			<Orientation y="1.01763"/>
 		</Entity>
 		<Entity uid="976">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="202" z="406"/>
 			<Orientation y="3.66004"/>
 		</Entity>
 		<Entity uid="977">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="194" z="382"/>
 			<Orientation y="1.08625"/>
 		</Entity>
 		<Entity uid="978">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="206" z="394"/>
 			<Orientation y="4.23514"/>
 		</Entity>
 		<Entity uid="979">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="206" z="398"/>
 			<Orientation y="1.1351"/>
 		</Entity>
 		<Entity uid="980">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="206" z="386"/>
 			<Orientation y="4.24753"/>
 		</Entity>
 		<Entity uid="981">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="518" z="222"/>
 			<Orientation y="3.63134"/>
 		</Entity>
 		<Entity uid="982">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="518" z="218"/>
 			<Orientation y="5.16533"/>
 		</Entity>
 		<Entity uid="983">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="518" z="210"/>
 			<Orientation y="3.55494"/>
 		</Entity>
 		<Entity uid="984">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="514" z="202"/>
 			<Orientation y="3.44021"/>
 		</Entity>
 		<Entity uid="985">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="534" z="214"/>
 			<Orientation y="6.06633"/>
 		</Entity>
 		<Entity uid="986">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="170" z="582"/>
 			<Orientation y="1.01024"/>
 		</Entity>
 		<Entity uid="987">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="174" z="578"/>
 			<Orientation y="4.5371"/>
 		</Entity>
 		<Entity uid="988">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="182" z="578"/>
 			<Orientation y="0.69663"/>
 		</Entity>
 		<Entity uid="989">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="182" z="574"/>
 			<Orientation y="0.01546"/>
 		</Entity>
 		<Entity uid="998">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="178" z="174"/>
 			<Orientation y="4.13317"/>
 		</Entity>
 		<Entity uid="999">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="186" z="170"/>
 			<Orientation y="3.5406"/>
 		</Entity>
 		<Entity uid="1000">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="470" z="26"/>
 			<Orientation y="3.2179"/>
 		</Entity>
 		<Entity uid="1007">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="846" z="166"/>
 			<Orientation y="1.47059"/>
 		</Entity>
 		<Entity uid="1008">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="858" z="162"/>
 			<Orientation y="5.6272"/>
 		</Entity>
 		<Entity uid="1036">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="530" z="782"/>
 			<Orientation y="4.72304"/>
 		</Entity>
 		<Entity uid="1037">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="518" z="782"/>
 			<Orientation y="3.82645"/>
 		</Entity>
 		<Entity uid="1039">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="122" z="570"/>
 			<Orientation y="5.77773"/>
 		</Entity>
 		<Entity uid="1040">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="130" z="558"/>
 			<Orientation y="2.05417"/>
 		</Entity>
 		<Entity uid="1041">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="138" z="562"/>
 			<Orientation y="3.95572"/>
 		</Entity>
 		<Entity uid="1042">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="290" z="382"/>
 			<Orientation y="4.3655"/>
 		</Entity>
 		<Entity uid="1043">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="290" z="366"/>
 			<Orientation y="4.00661"/>
 		</Entity>
 		<Entity uid="1044">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="298" z="386"/>
 			<Orientation y="0.39895"/>
 		</Entity>
 		<Entity uid="1045">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="74" z="618"/>
 			<Orientation y="4.04755"/>
 		</Entity>
 		<Entity uid="1046">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="82" z="614"/>
 			<Orientation y="1.43363"/>
 		</Entity>
 		<Entity uid="1047">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="82" z="618"/>
 			<Orientation y="1.77077"/>
 		</Entity>
 		<Entity uid="1048">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="58" z="610"/>
 			<Orientation y="4.07222"/>
 		</Entity>
 		<Entity uid="1049">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="62" z="610"/>
 			<Orientation y="3.65548"/>
 		</Entity>
 		<Entity uid="1050">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="62" z="618"/>
 			<Orientation y="5.07229"/>
 		</Entity>
 		<Entity uid="1051">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="70" z="602"/>
 			<Orientation y="3.65606"/>
 		</Entity>
 		<Entity uid="1052">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="74" z="602"/>
 			<Orientation y="2.25863"/>
 		</Entity>
 		<Entity uid="1053">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="82" z="602"/>
 			<Orientation y="0.33991"/>
 		</Entity>
 		<Entity uid="1054">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="82" z="610"/>
 			<Orientation y="1.02886"/>
 		</Entity>
 		<Entity uid="1055">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="78" z="606"/>
 			<Orientation y="0.15683"/>
 		</Entity>
 		<Entity uid="1056">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="210" z="698"/>
 			<Orientation y="3.2427"/>
 		</Entity>
 		<Entity uid="1057">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="210" z="702"/>
 			<Orientation y="1.46949"/>
 		</Entity>
 		<Entity uid="1058">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="234" z="266"/>
 			<Orientation y="2.62583"/>
 		</Entity>
 		<Entity uid="1059">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="254" z="262"/>
 			<Orientation y="1.41477"/>
 		</Entity>
 		<Entity uid="1060">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="234" z="254"/>
 			<Orientation y="2.02573"/>
 		</Entity>
 		<Entity uid="1061">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="238" z="250"/>
 			<Orientation y="4.95263"/>
 		</Entity>
 		<Entity uid="1062">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="242" z="254"/>
 			<Orientation y="5.25974"/>
 		</Entity>
 		<Entity uid="1063">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="250" z="270"/>
 			<Orientation y="5.57734"/>
 		</Entity>
 		<Entity uid="1064">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="238" z="262"/>
 			<Orientation y="3.92083"/>
 		</Entity>
 		<Entity uid="1065">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="242" z="258"/>
 			<Orientation y="4.58307"/>
 		</Entity>
 		<Entity uid="1066">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="250" z="266"/>
 			<Orientation y="2.86915"/>
 		</Entity>
 		<Entity uid="1067">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="222" z="658"/>
 			<Orientation y="2.71267"/>
 		</Entity>
 		<Entity uid="1068">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="226" z="658"/>
 			<Orientation y="4.76522"/>
 		</Entity>
 		<Entity uid="1069">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="178" z="682"/>
 			<Orientation y="2.26597"/>
 		</Entity>
 		<Entity uid="1070">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="174" z="678"/>
 			<Orientation y="3.88497"/>
 		</Entity>
 		<Entity uid="1071">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="170" z="674"/>
 			<Orientation y="3.9678"/>
 		</Entity>
 		<Entity uid="1072">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="170" z="666"/>
 			<Orientation y="2.93572"/>
 		</Entity>
 		<Entity uid="1073">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="174" z="666"/>
 			<Orientation y="2.5546"/>
 		</Entity>
 		<Entity uid="1074">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="174" z="674"/>
 			<Orientation y="2.50052"/>
 		</Entity>
 		<Entity uid="1075">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="186" z="670"/>
 			<Orientation y="3.06992"/>
 		</Entity>
 		<Entity uid="1076">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="186" z="674"/>
 			<Orientation y="6.16327"/>
 		</Entity>
 		<Entity uid="1077">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="186" z="678"/>
 			<Orientation y="1.4347"/>
 		</Entity>
 		<Entity uid="1078">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="190" z="682"/>
 			<Orientation y="5.19776"/>
 		</Entity>
 		<Entity uid="1079">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="378" z="170"/>
 			<Orientation y="5.07569"/>
 		</Entity>
 		<Entity uid="1080">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="370" z="174"/>
 			<Orientation y="2.36217"/>
 		</Entity>
 		<Entity uid="1081">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="370" z="158"/>
 			<Orientation y="2.74451"/>
 		</Entity>
 		<Entity uid="1082">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="374" z="166"/>
 			<Orientation y="4.1006"/>
 		</Entity>
 		<Entity uid="1085">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="250" z="218"/>
 			<Orientation y="0.15647"/>
 		</Entity>
 		<Entity uid="1086">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="250" z="230"/>
 			<Orientation y="2.49029"/>
 		</Entity>
 		<Entity uid="1087">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="254" z="210"/>
 			<Orientation y="2.07752"/>
 		</Entity>
 		<Entity uid="1088">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="262" z="214"/>
 			<Orientation y="3.78469"/>
 		</Entity>
 		<Entity uid="1104">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="558" z="858"/>
 			<Orientation y="4.55282"/>
 		</Entity>
 		<Entity uid="1105">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="550" z="854"/>
 			<Orientation y="0.91115"/>
 		</Entity>
 		<Entity uid="1106">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="566" z="842"/>
 			<Orientation y="2.64985"/>
 		</Entity>
 		<Entity uid="1107">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="574" z="866"/>
 			<Orientation y="2.97571"/>
 		</Entity>
 		<Entity uid="1108">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="558" z="850"/>
 			<Orientation y="2.84226"/>
 		</Entity>
 		<Entity uid="1109">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="558" z="822"/>
 			<Orientation y="0.40604"/>
 		</Entity>
 		<Entity uid="1110">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="546" z="802"/>
 			<Orientation y="1.11767"/>
 		</Entity>
 		<Entity uid="1111">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="554" z="802"/>
 			<Orientation y="3.28811"/>
 		</Entity>
 		<Entity uid="1112">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="554" z="818"/>
 			<Orientation y="1.25463"/>
 		</Entity>
 		<Entity uid="1113">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="558" z="814"/>
 			<Orientation y="4.81768"/>
 		</Entity>
 		<Entity uid="1114">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="218" z="878"/>
 			<Orientation y="4.8414"/>
 		</Entity>
 		<Entity uid="1115">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="202" z="878"/>
 			<Orientation y="1.27884"/>
 		</Entity>
 		<Entity uid="1116">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="202" z="870"/>
 			<Orientation y="4.84624"/>
 		</Entity>
 		<Entity uid="1117">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="214" z="866"/>
 			<Orientation y="4.0998"/>
 		</Entity>
 		<Entity uid="1118">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="386" z="762"/>
 			<Orientation y="4.65188"/>
 		</Entity>
 		<Entity uid="1119">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="386" z="766"/>
 			<Orientation y="5.65928"/>
 		</Entity>
 		<Entity uid="1124">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="30" z="426"/>
 			<Orientation y="3.42661"/>
 		</Entity>
 		<Entity uid="1125">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="38" z="438"/>
 			<Orientation y="0.78815"/>
 		</Entity>
 		<Entity uid="1126">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="42" z="430"/>
 			<Orientation y="5.39574"/>
 		</Entity>
 		<Entity uid="1127">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="46" z="426"/>
 			<Orientation y="5.65371"/>
 		</Entity>
 		<Entity uid="1128">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="522" z="974"/>
 			<Orientation y="0.60965"/>
 		</Entity>
 		<Entity uid="1129">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="518" z="970"/>
 			<Orientation y="0.23548"/>
 		</Entity>
 		<Entity uid="1130">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="510" z="966"/>
 			<Orientation y="5.55707"/>
 		</Entity>
 		<Entity uid="1131">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="510" z="950"/>
 			<Orientation y="4.84128"/>
 		</Entity>
 		<Entity uid="1132">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="518" z="946"/>
 			<Orientation y="0.05373"/>
 		</Entity>
 		<Entity uid="1133">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="518" z="958"/>
 			<Orientation y="0.91134"/>
 		</Entity>
 		<Entity uid="1134">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="522" z="958"/>
 			<Orientation y="2.87386"/>
 		</Entity>
 		<Entity uid="1135">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="294" z="126"/>
 			<Orientation y="5.56695"/>
 		</Entity>
 		<Entity uid="1136">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="286" z="114"/>
 			<Orientation y="5.027"/>
 		</Entity>
 		<Entity uid="1137">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="302" z="110"/>
 			<Orientation y="2.84505"/>
 		</Entity>
 		<Entity uid="1138">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="302" z="126"/>
 			<Orientation y="3.37941"/>
 		</Entity>
 		<Entity uid="1139">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="294" z="122"/>
 			<Orientation y="4.35904"/>
 		</Entity>
 		<Entity uid="1140">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="250" z="430"/>
 			<Orientation y="3.66543"/>
 		</Entity>
 		<Entity uid="1141">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="254" z="430"/>
 			<Orientation y="1.10431"/>
 		</Entity>
 		<Entity uid="1142">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="254" z="434"/>
 			<Orientation y="2.70006"/>
 		</Entity>
 		<Entity uid="1143">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="258" z="446"/>
 			<Orientation y="5.1951"/>
 		</Entity>
 		<Entity uid="1144">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="242" z="434"/>
 			<Orientation y="2.94365"/>
@@ -3357,13 +3357,13 @@
 			<Orientation y="-1.87066"/>
 		</Entity>
 		<Entity uid="1156">
-			<Template>gaia/geology_stonemine_temperate_quarry</Template>
+			<Template>gaia/rock/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="154.58277" z="273.0879"/>
 			<Orientation y="0.34124"/>
 		</Entity>
 		<Entity uid="1157">
-			<Template>gaia/geology_stonemine_temperate_quarry</Template>
+			<Template>gaia/rock/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="417.68757" z="85.79157"/>
 			<Orientation y="0.49068"/>
@@ -3375,7 +3375,7 @@
 			<Orientation y="-4.16262"/>
 		</Entity>
 		<Entity uid="1159">
-			<Template>gaia/geology_stonemine_temperate_quarry</Template>
+			<Template>gaia/rock/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="391.59284" z="201.85602"/>
 			<Orientation y="-1.3922"/>
@@ -3423,25 +3423,25 @@
 			<Orientation y="-3.23943"/>
 		</Entity>
 		<Entity uid="1180">
-			<Template>gaia/ore/temperate_small_slabs</Template>
+			<Template>gaia/ore/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="289.52295" z="484.18525"/>
 			<Orientation y="-4.3487"/>
 		</Entity>
 		<Entity uid="1181">
-			<Template>gaia/ore/temperate_small_slabs</Template>
+			<Template>gaia/ore/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="186.54365" z="145.82398"/>
 			<Orientation y="0.24473"/>
 		</Entity>
 		<Entity uid="1182">
-			<Template>gaia/ore/temperate_small_slabs</Template>
+			<Template>gaia/ore/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="38.41767" z="584.18378"/>
 			<Orientation y="-1.40061"/>
 		</Entity>
 		<Entity uid="1183">
-			<Template>gaia/ore/temperate_small_slabs</Template>
+			<Template>gaia/ore/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="195.7223" z="651.94721"/>
 			<Orientation y="-0.81267"/>
@@ -9110,119 +9110,119 @@
 			<Actor seed="1480"/>
 		</Entity>
 		<Entity uid="2522">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="899.99634" z="693.55256"/>
 			<Orientation y="2.87386"/>
 			<Actor seed="1134"/>
 		</Entity>
 		<Entity uid="2523">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="895.99634" z="693.55256"/>
 			<Orientation y="0.91135"/>
 			<Actor seed="1133"/>
 		</Entity>
 		<Entity uid="2524">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="895.99634" z="681.55256"/>
 			<Orientation y="0.05373"/>
 			<Actor seed="1132"/>
 		</Entity>
 		<Entity uid="2525">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="887.99634" z="685.55256"/>
 			<Orientation y="4.84128"/>
 			<Actor seed="1131"/>
 		</Entity>
 		<Entity uid="2526">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="887.99634" z="701.55256"/>
 			<Orientation y="5.55707"/>
 			<Actor seed="1130"/>
 		</Entity>
 		<Entity uid="2527">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="895.99634" z="705.55256"/>
 			<Orientation y="0.23548"/>
 			<Actor seed="1129"/>
 		</Entity>
 		<Entity uid="2528">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="899.99634" z="709.55256"/>
 			<Orientation y="0.60965"/>
 			<Actor seed="1128"/>
 		</Entity>
 		<Entity uid="2529">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="860.51044" z="824.01185"/>
 			<Orientation y="2.97571"/>
 			<Actor seed="1107"/>
 		</Entity>
 		<Entity uid="2530">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="852.51044" z="800.01185"/>
 			<Orientation y="2.64986"/>
 			<Actor seed="1106"/>
 		</Entity>
 		<Entity uid="2531">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="836.51044" z="812.01185"/>
 			<Orientation y="0.91115"/>
 			<Actor seed="1105"/>
 		</Entity>
 		<Entity uid="2532">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="844.51044" z="816.01185"/>
 			<Orientation y="4.55283"/>
 			<Actor seed="1104"/>
 		</Entity>
 		<Entity uid="2533">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="804.51044" z="740.01185"/>
 			<Orientation y="3.82645"/>
 			<Actor seed="1037"/>
 		</Entity>
 		<Entity uid="2534">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="816.51044" z="740.01185"/>
 			<Orientation y="4.72304"/>
 			<Actor seed="1036"/>
 		</Entity>
 		<Entity uid="2535">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="370.21644" z="849.84131"/>
 			<Orientation y="5.13837"/>
 			<Actor seed="906"/>
 		</Entity>
 		<Entity uid="2536">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="358.21644" z="845.84131"/>
 			<Orientation y="3.22124"/>
 			<Actor seed="905"/>
 		</Entity>
 		<Entity uid="2537">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="362.21644" z="853.84131"/>
 			<Orientation y="3.60567"/>
 			<Actor seed="904"/>
 		</Entity>
 		<Entity uid="2538">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="362.21644" z="861.84131"/>
 			<Orientation y="2.89986"/>
@@ -9236,21 +9236,21 @@
 			<Actor seed="561"/>
 		</Entity>
 		<Entity uid="2540">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="844.51044" z="772.01185"/>
 			<Orientation y="4.81768"/>
 			<Actor seed="1113"/>
 		</Entity>
 		<Entity uid="2541">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="840.51044" z="776.01185"/>
 			<Orientation y="1.25463"/>
 			<Actor seed="1112"/>
 		</Entity>
 		<Entity uid="2542">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="840.51044" z="760.01185"/>
 			<Orientation y="3.28812"/>
@@ -9334,21 +9334,21 @@
 			<Actor seed="288"/>
 		</Entity>
 		<Entity uid="2554">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="832.51044" z="760.01185"/>
 			<Orientation y="1.11768"/>
 			<Actor seed="1110"/>
 		</Entity>
 		<Entity uid="2555">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="844.51044" z="780.01185"/>
 			<Orientation y="0.40604"/>
 			<Actor seed="1109"/>
 		</Entity>
 		<Entity uid="2556">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="844.51044" z="808.01185"/>
 			<Orientation y="2.84226"/>
@@ -9376,49 +9376,49 @@
 			<Actor seed="561"/>
 		</Entity>
 		<Entity uid="2560">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="944.84076" z="681.47547"/>
 			<Orientation y="0.60965"/>
 			<Actor seed="1128"/>
 		</Entity>
 		<Entity uid="2561">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="940.84076" z="677.47547"/>
 			<Orientation y="0.23548"/>
 			<Actor seed="1129"/>
 		</Entity>
 		<Entity uid="2562">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="932.84076" z="673.47547"/>
 			<Orientation y="5.55707"/>
 			<Actor seed="1130"/>
 		</Entity>
 		<Entity uid="2563">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="932.84076" z="657.47547"/>
 			<Orientation y="4.84128"/>
 			<Actor seed="1131"/>
 		</Entity>
 		<Entity uid="2564">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="940.84076" z="653.47547"/>
 			<Orientation y="0.05373"/>
 			<Actor seed="1132"/>
 		</Entity>
 		<Entity uid="2565">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="940.84076" z="665.47547"/>
 			<Orientation y="0.91135"/>
 			<Actor seed="1133"/>
 		</Entity>
 		<Entity uid="2566">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="944.84076" z="665.47547"/>
 			<Orientation y="2.87386"/>
@@ -9544,49 +9544,49 @@
 			<Actor seed="561"/>
 		</Entity>
 		<Entity uid="2584">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="940.98621" z="600.53931"/>
 			<Orientation y="1.04192"/>
 			<Actor seed="1128"/>
 		</Entity>
 		<Entity uid="2585">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="935.67841" z="598.5829"/>
 			<Orientation y="0.66774"/>
 			<Actor seed="1129"/>
 		</Entity>
 		<Entity uid="2586">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="926.7386" z="598.30225"/>
 			<Orientation y="5.98934"/>
 			<Actor seed="1130"/>
 		</Entity>
 		<Entity uid="2587">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="920.03577" z="583.77393"/>
 			<Orientation y="5.27355"/>
 			<Actor seed="1131"/>
 		</Entity>
 		<Entity uid="2588">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="925.62421" z="576.79041"/>
 			<Orientation y="0.486"/>
 			<Actor seed="1132"/>
 		</Entity>
 		<Entity uid="2589">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="930.65131" z="587.68665"/>
 			<Orientation y="1.34362"/>
 			<Actor seed="1133"/>
 		</Entity>
 		<Entity uid="2590">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="934.2834" z="586.01093"/>
 			<Orientation y="3.30613"/>

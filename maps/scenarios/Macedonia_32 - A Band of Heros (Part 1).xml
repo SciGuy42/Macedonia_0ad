@@ -19109,7 +19109,7 @@
 			<Actor seed="44609"/>
 		</Entity>
 		<Entity uid="3790">
-			<Template>structures/gaul_wall_gate</Template>
+			<Template>structures/gaul/wall_gate</Template>
 			<Player>2</Player>
 			<Position x="1287.46106" z="1014.26606"/>
 			<Orientation y="7.48934"/>
@@ -19131,7 +19131,7 @@
 			<Actor seed="30852"/>
 		</Entity>
 		<Entity uid="3793">
-			<Template>structures/gaul_wall_short</Template>
+			<Template>structures/gaul/wall_short</Template>
 			<Player>2</Player>
 			<Position x="1297.89124" z="989.01832"/>
 			<Orientation y="3.90084"/>
@@ -19146,7 +19146,7 @@
 			<Actor seed="30852"/>
 		</Entity>
 		<Entity uid="3795">
-			<Template>structures/gaul_wall_short</Template>
+			<Template>structures/gaul/wall_short</Template>
 			<Player>2</Player>
 			<Position x="1276.19837" z="1041.78663"/>
 			<Orientation y="4.34264"/>

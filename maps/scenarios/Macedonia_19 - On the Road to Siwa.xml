@@ -7417,56 +7417,56 @@
 			<Actor seed="37858"/>
 		</Entity>
 		<Entity uid="1758">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1266.77784" z="1419.31568"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="23777"/>
 		</Entity>
 		<Entity uid="1759">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1284.27442" z="1442.85108"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="1162"/>
 		</Entity>
 		<Entity uid="1760">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1325.3097" z="1400.93116"/>
 			<Orientation y="6.67753"/>
 			<Actor seed="23777"/>
 		</Entity>
 		<Entity uid="1761">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1296.88172" z="1408.13501"/>
 			<Orientation y="6.67753"/>
 			<Actor seed="1162"/>
 		</Entity>
 		<Entity uid="1762">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1286.28162" z="1392.03064"/>
 			<Orientation y="4.92492"/>
 			<Actor seed="23777"/>
 		</Entity>
 		<Entity uid="1763">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1284.33704" z="1362.76868"/>
 			<Orientation y="4.92492"/>
 			<Actor seed="1162"/>
 		</Entity>
 		<Entity uid="1764">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1312.01368" z="1413.86231"/>
 			<Orientation y="4.92493"/>
 			<Actor seed="23777"/>
 		</Entity>
 		<Entity uid="1765">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1310.0691" z="1384.60035"/>
 			<Orientation y="4.92493"/>
@@ -7655,21 +7655,21 @@
 			<Actor seed="2419"/>
 		</Entity>
 		<Entity uid="1792">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1335.47522" z="1375.83924"/>
 			<Orientation y="4.92493"/>
 			<Actor seed="1162"/>
 		</Entity>
 		<Entity uid="1793">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1310.47193" z="1363.43055"/>
 			<Orientation y="6.67754"/>
 			<Actor seed="23777"/>
 		</Entity>
 		<Entity uid="1794">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1268.6797" z="1393.92188"/>
 			<Orientation y="6.67754"/>
@@ -8299,42 +8299,42 @@
 			<Actor seed="51085"/>
 		</Entity>
 		<Entity uid="1890">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1298.11353" z="1363.19251"/>
 			<Orientation y="4.92493"/>
 			<Actor seed="1162"/>
 		</Entity>
 		<Entity uid="1891">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1300.05811" z="1392.45447"/>
 			<Orientation y="4.92493"/>
 			<Actor seed="23777"/>
 		</Entity>
 		<Entity uid="1892">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1323.84559" z="1385.02417"/>
 			<Orientation y="4.92493"/>
 			<Actor seed="1162"/>
 		</Entity>
 		<Entity uid="1893">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1324.24842" z="1363.85438"/>
 			<Orientation y="6.67754"/>
 			<Actor seed="23777"/>
 		</Entity>
 		<Entity uid="1894">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1278.72571" z="1409.49134"/>
 			<Orientation y="2.35622"/>
 			<Actor seed="23777"/>
 		</Entity>
 		<Entity uid="1895">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1288.34412" z="1417.36622"/>
 			<Orientation y="2.35622"/>
@@ -9587,56 +9587,56 @@
 			<Actor seed="3729"/>
 		</Entity>
 		<Entity uid="2074">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1237.40455" z="1415.10633"/>
 			<Orientation y="1.16463"/>
 			<Actor seed="1162"/>
 		</Entity>
 		<Entity uid="2075">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1226.42762" z="1406.77088"/>
 			<Orientation y="1.16463"/>
 			<Actor seed="1162"/>
 		</Entity>
 		<Entity uid="2076">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1252.792" z="1390.14087"/>
 			<Orientation y="1.16463"/>
 			<Actor seed="23777"/>
 		</Entity>
 		<Entity uid="2077">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1241.81507" z="1381.80542"/>
 			<Orientation y="1.16463"/>
 			<Actor seed="23777"/>
 		</Entity>
 		<Entity uid="2078">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1259.0652" z="1361.34339"/>
 			<Orientation y="4.05488"/>
 			<Actor seed="23777"/>
 		</Entity>
 		<Entity uid="2079">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1248.12281" z="1338.34937"/>
 			<Orientation y="-0.26647"/>
 			<Actor seed="23777"/>
 		</Entity>
 		<Entity uid="2080">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1230.36243" z="1350.7378"/>
 			<Orientation y="-0.26647"/>
 			<Actor seed="1162"/>
 		</Entity>
 		<Entity uid="2081">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1227.52686" z="1362.98792"/>
 			<Orientation y="4.05488"/>
@@ -10091,14 +10091,14 @@
 			<Actor seed="1571"/>
 		</Entity>
 		<Entity uid="2146">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1207.13086" z="1359.46412"/>
 			<Orientation y="4.0549"/>
 			<Actor seed="23777"/>
 		</Entity>
 		<Entity uid="2147">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1200.85767" z="1388.2616"/>
 			<Orientation y="1.16463"/>

@@ -186,7 +186,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			this.num_docks_captured += 1;
 			warn("dock captured");
 			
-			TriggerHelper.SpawnUnits(data.entity,"units/mace_ship_fishing",3,1);
+			TriggerHelper.SpawnUnits(data.entity,"units/mace/ship_fishing",3,1);
 			
 			this.DoAfterDelay(2 * 1000,"DockPersianAttack",null);
 	

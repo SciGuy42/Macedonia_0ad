@@ -96,8 +96,8 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			this.DoAfterDelay(60 * 1000,"spawnShipAttack",null);
 			
 			//spawn some support units
-			TriggerHelper.SpawnUnits(data.entity,"units/mace_ship_fishing",2,1);
-			TriggerHelper.SpawnUnits(data.entity,"units/mace_ship_merchant",2,1);	
+			TriggerHelper.SpawnUnits(data.entity,"units/mace/ship_fishing",2,1);
+			TriggerHelper.SpawnUnits(data.entity,"units/mace/ship_merchant",2,1);	
 			
 			this.escortShipGarrison += 1;
 		}

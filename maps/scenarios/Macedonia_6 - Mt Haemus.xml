@@ -23063,7 +23063,7 @@
 			<Actor seed="44955"/>
 		</Entity>
 		<Entity uid="3342">
-			<Template>structures/brit_civil_centre</Template>
+			<Template>structures/brit/civil_centre</Template>
 			<Player>0</Player>
 			<Position x="549.41712" z="1743.26856"/>
 			<Orientation y="0.38497"/>
@@ -23084,7 +23084,7 @@
 			<Actor seed="3579"/>
 		</Entity>
 		<Entity uid="3346">
-			<Template>structures/brit_barracks</Template>
+			<Template>structures/brit/barracks</Template>
 			<Player>0</Player>
 			<Position x="528.3299" z="1785.57203"/>
 			<Orientation y="2.16381"/>
@@ -24088,14 +24088,14 @@
 			<Actor seed="62932"/>
 		</Entity>
 		<Entity uid="3523">
-			<Template>structures/brit_civil_centre</Template>
+			<Template>structures/brit/civil_centre</Template>
 			<Player>3</Player>
 			<Position x="1246.35816" z="1699.40284"/>
 			<Orientation y="-0.74044"/>
 			<Actor seed="26627"/>
 		</Entity>
 		<Entity uid="3524">
-			<Template>structures/brit_barracks</Template>
+			<Template>structures/brit/barracks</Template>
 			<Player>3</Player>
 			<Position x="1275.92603" z="1729.90857"/>
 			<Orientation y="-1.00383"/>
@@ -24137,35 +24137,35 @@
 			<Actor seed="7699"/>
 		</Entity>
 		<Entity uid="3530">
-			<Template>structures/brit_field</Template>
+			<Template>structures/brit/field</Template>
 			<Player>3</Player>
 			<Position x="1214.32447" z="1755.87781"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="36911"/>
 		</Entity>
 		<Entity uid="3531">
-			<Template>structures/brit_field</Template>
+			<Template>structures/brit/field</Template>
 			<Player>3</Player>
 			<Position x="1185.2555" z="1773.0995"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="40172"/>
 		</Entity>
 		<Entity uid="3532">
-			<Template>structures/brit_field</Template>
+			<Template>structures/brit/field</Template>
 			<Player>3</Player>
 			<Position x="1162.47461" z="1750.76026"/>
 			<Orientation y="-0.84165"/>
 			<Actor seed="63293"/>
 		</Entity>
 		<Entity uid="3533">
-			<Template>structures/brit_field</Template>
+			<Template>structures/brit/field</Template>
 			<Player>3</Player>
 			<Position x="1183.50709" z="1725.4336"/>
 			<Orientation y="2.04583"/>
 			<Actor seed="51506"/>
 		</Entity>
 		<Entity uid="3534">
-			<Template>structures/brit_corral</Template>
+			<Template>structures/brit/corral</Template>
 			<Player>3</Player>
 			<Position x="1154.51661" z="1727.75281"/>
 			<Orientation y="-0.86902"/>
@@ -24214,7 +24214,7 @@
 			<Actor seed="12074"/>
 		</Entity>
 		<Entity uid="3541">
-			<Template>structures/brit_market</Template>
+			<Template>structures/brit/market</Template>
 			<Player>3</Player>
 			<Position x="1330.09217" z="1743.27149"/>
 			<Orientation y="-2.20958"/>
@@ -24270,168 +24270,168 @@
 			<Actor seed="28243"/>
 		</Entity>
 		<Entity uid="3549">
-			<Template>structures/brit_field</Template>
+			<Template>structures/brit/field</Template>
 			<Player>3</Player>
 			<Position x="1228.07593" z="1735.37305"/>
 			<Orientation y="-2.18401"/>
 			<Actor seed="52427"/>
 		</Entity>
 		<Entity uid="3550">
-			<Template>structures/brit_field</Template>
+			<Template>structures/brit/field</Template>
 			<Player>3</Player>
 			<Position x="1210.61768" z="1714.43287"/>
 			<Orientation y="-1.04101"/>
 			<Actor seed="19600"/>
 		</Entity>
 		<Entity uid="3551">
-			<Template>structures/brit_barracks</Template>
+			<Template>structures/brit/barracks</Template>
 			<Player>3</Player>
 			<Position x="1252.31275" z="1818.1067"/>
 			<Orientation y="-2.52205"/>
 			<Actor seed="41934"/>
 		</Entity>
 		<Entity uid="3552">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>3</Player>
 			<Position x="1175.78016" z="1740.07654"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="22071"/>
 		</Entity>
 		<Entity uid="3553">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>3</Player>
 			<Position x="1178.42359" z="1734.36426"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="51459"/>
 		</Entity>
 		<Entity uid="3554">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>3</Player>
 			<Position x="1184.04029" z="1730.7527"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="32382"/>
 		</Entity>
 		<Entity uid="3555">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>3</Player>
 			<Position x="1173.15772" z="1748.516"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="45411"/>
 		</Entity>
 		<Entity uid="3556">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>3</Player>
 			<Position x="1185.53675" z="1762.72864"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="34881"/>
 		</Entity>
 		<Entity uid="3557">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>3</Player>
 			<Position x="1197.24622" z="1764.6615"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="47650"/>
 		</Entity>
 		<Entity uid="3558">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>3</Player>
 			<Position x="1204.89124" z="1760.1366"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="11529"/>
 		</Entity>
 		<Entity uid="3559">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>3</Player>
 			<Position x="1210.6233" z="1756.3075"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="15359"/>
 		</Entity>
 		<Entity uid="3560">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>3</Player>
 			<Position x="1214.72974" z="1749.32117"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="42321"/>
 		</Entity>
 		<Entity uid="3561">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>3</Player>
 			<Position x="1249.95765" z="1720.61878"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="9395"/>
 		</Entity>
 		<Entity uid="3562">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>3</Player>
 			<Position x="1243.68702" z="1720.72364"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="64731"/>
 		</Entity>
 		<Entity uid="3563">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>3</Player>
 			<Position x="1222.47791" z="1698.60425"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="58062"/>
 		</Entity>
 		<Entity uid="3564">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>3</Player>
 			<Position x="1220.9037" z="1696.27552"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="21054"/>
 		</Entity>
 		<Entity uid="3565">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>3</Player>
 			<Position x="1181.08985" z="1705.86902"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="57434"/>
 		</Entity>
 		<Entity uid="3566">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>3</Player>
 			<Position x="1177.089" z="1706.07886"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="283"/>
 		</Entity>
 		<Entity uid="3567">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>3</Player>
 			<Position x="1249.26917" z="1752.66773"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="52246"/>
 		</Entity>
 		<Entity uid="3568">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>3</Player>
 			<Position x="1256.7787" z="1754.05713"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="9070"/>
 		</Entity>
 		<Entity uid="3569">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>3</Player>
 			<Position x="1248.99671" z="1758.77906"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="57160"/>
 		</Entity>
 		<Entity uid="3570">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>3</Player>
 			<Position x="1291.0121" z="1704.10535"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="26269"/>
 		</Entity>
 		<Entity uid="3571">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>3</Player>
 			<Position x="1285.20447" z="1701.80164"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="28780"/>
 		</Entity>
 		<Entity uid="3572">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>3</Player>
 			<Position x="1290.05408" z="1698.01514"/>
 			<Orientation y="2.35621"/>
@@ -24494,21 +24494,21 @@
 			<Actor seed="7344"/>
 		</Entity>
 		<Entity uid="3581">
-			<Template>units/brit_infantry_spearman_a</Template>
+			<Template>units/brit/infantry_spearman_a</Template>
 			<Player>3</Player>
 			<Position x="1261.74781" z="1670.00562"/>
 			<Orientation y="-0.54465"/>
 			<Actor seed="1785"/>
 		</Entity>
 		<Entity uid="3582">
-			<Template>units/brit_infantry_spearman_a</Template>
+			<Template>units/brit/infantry_spearman_a</Template>
 			<Player>3</Player>
 			<Position x="1262.31275" z="1675.74317"/>
 			<Orientation y="-0.80674"/>
 			<Actor seed="56181"/>
 		</Entity>
 		<Entity uid="3583">
-			<Template>units/brit_infantry_spearman_a</Template>
+			<Template>units/brit/infantry_spearman_a</Template>
 			<Player>3</Player>
 			<Position x="1256.40394" z="1668.39222"/>
 			<Orientation y="-1.10262"/>
@@ -24851,28 +24851,28 @@
 			<Actor seed="53076"/>
 		</Entity>
 		<Entity uid="3633">
-			<Template>structures/brit_field</Template>
+			<Template>structures/brit/field</Template>
 			<Player>0</Player>
 			<Position x="677.53754" z="1792.0442"/>
 			<Orientation y="-0.54387"/>
 			<Actor seed="10031"/>
 		</Entity>
 		<Entity uid="3634">
-			<Template>structures/brit_field</Template>
+			<Template>structures/brit/field</Template>
 			<Player>0</Player>
 			<Position x="687.38074" z="1768.67774"/>
 			<Orientation y="-0.31646"/>
 			<Actor seed="49775"/>
 		</Entity>
 		<Entity uid="3635">
-			<Template>structures/brit_field</Template>
+			<Template>structures/brit/field</Template>
 			<Player>0</Player>
 			<Position x="664.71436" z="1745.73353"/>
 			<Orientation y="-1.85277"/>
 			<Actor seed="20776"/>
 		</Entity>
 		<Entity uid="3636">
-			<Template>structures/brit_field</Template>
+			<Template>structures/brit/field</Template>
 			<Player>0</Player>
 			<Position x="693.4892" z="1746.11683"/>
 			<Orientation y="-0.3462"/>
@@ -25033,7 +25033,7 @@
 			<Actor seed="55557"/>
 		</Entity>
 		<Entity uid="3662">
-			<Template>structures/gaul_civil_centre</Template>
+			<Template>structures/gaul/civil_centre</Template>
 			<Player>2</Player>
 			<Position x="949.318" z="706.33393"/>
 			<Orientation y="-2.32393"/>
@@ -25082,14 +25082,14 @@
 			<Actor seed="36247"/>
 		</Entity>
 		<Entity uid="3669">
-			<Template>structures/gaul_barracks</Template>
+			<Template>structures/gaul/barracks</Template>
 			<Player>2</Player>
 			<Position x="932.24024" z="748.1521"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="28337"/>
 		</Entity>
 		<Entity uid="3670">
-			<Template>structures/gaul_market</Template>
+			<Template>structures/gaul/market</Template>
 			<Player>2</Player>
 			<Position x="1010.97522" z="729.9242"/>
 			<Orientation y="2.35621"/>
@@ -25103,35 +25103,35 @@
 			<Actor seed="23770"/>
 		</Entity>
 		<Entity uid="3672">
-			<Template>structures/gaul_field</Template>
+			<Template>structures/gaul/field</Template>
 			<Player>2</Player>
 			<Position x="920.69306" z="690.4831"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="26363"/>
 		</Entity>
 		<Entity uid="3673">
-			<Template>structures/gaul_field</Template>
+			<Template>structures/gaul/field</Template>
 			<Player>2</Player>
 			<Position x="945.90754" z="668.72333"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="1690"/>
 		</Entity>
 		<Entity uid="3674">
-			<Template>structures/gaul_field</Template>
+			<Template>structures/gaul/field</Template>
 			<Player>2</Player>
 			<Position x="969.88233" z="685.08906"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="58832"/>
 		</Entity>
 		<Entity uid="3675">
-			<Template>structures/gaul_field</Template>
+			<Template>structures/gaul/field</Template>
 			<Player>2</Player>
 			<Position x="976.13386" z="716.92084"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="8637"/>
 		</Entity>
 		<Entity uid="3676">
-			<Template>structures/gaul_wall_gate</Template>
+			<Template>structures/gaul/wall_gate</Template>
 			<Player>2</Player>
 			<Position x="860.7845" z="622.98261"/>
 			<Orientation y="0.82934"/>
@@ -25153,7 +25153,7 @@
 			<Actor seed="40103"/>
 		</Entity>
 		<Entity uid="3679">
-			<Template>structures/gaul_wall_long</Template>
+			<Template>structures/gaul/wall_long</Template>
 			<Player>2</Player>
 			<Position x="890.87678" z="597.60273"/>
 			<Orientation y="3.5763"/>
@@ -25168,7 +25168,7 @@
 			<Actor seed="48428"/>
 		</Entity>
 		<Entity uid="3681">
-			<Template>structures/gaul_wall_long</Template>
+			<Template>structures/gaul/wall_long</Template>
 			<Player>2</Player>
 			<Position x="927.18769" z="579.14972"/>
 			<Orientation y="3.5763"/>
@@ -25176,7 +25176,7 @@
 			<Actor seed="54805"/>
 		</Entity>
 		<Entity uid="3682">
-			<Template>structures/gaul_wall_long</Template>
+			<Template>structures/gaul/wall_long</Template>
 			<Player>2</Player>
 			<Position x="834.22016" z="655.31965"/>
 			<Orientation y="4.1441"/>
@@ -25198,7 +25198,7 @@
 			<Actor seed="40103"/>
 		</Entity>
 		<Entity uid="3686">
-			<Template>structures/gaul_wall_long</Template>
+			<Template>structures/gaul/wall_long</Template>
 			<Player>2</Player>
 			<Position x="820.4256" z="693.41102"/>
 			<Orientation y="4.61435"/>
@@ -25234,14 +25234,14 @@
 			<Actor seed="59300"/>
 		</Entity>
 		<Entity uid="3691">
-			<Template>structures/gaul_farmstead</Template>
+			<Template>structures/gaul/farmstead</Template>
 			<Player>2</Player>
 			<Position x="969.48151" z="656.36518"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="45539"/>
 		</Entity>
 		<Entity uid="3692">
-			<Template>structures/gaul_corral</Template>
+			<Template>structures/gaul/corral</Template>
 			<Player>2</Player>
 			<Position x="993.67322" z="695.18226"/>
 			<Orientation y="-0.93978"/>
@@ -25493,168 +25493,168 @@
 			<Actor seed="33509"/>
 		</Entity>
 		<Entity uid="3728">
-			<Template>structures/brit_civil_centre</Template>
+			<Template>structures/brit/civil_centre</Template>
 			<Player>4</Player>
 			<Position x="478.25165" z="1379.14356"/>
 			<Orientation y="-0.79267"/>
 			<Actor seed="44608"/>
 		</Entity>
 		<Entity uid="3729">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>4</Player>
 			<Position x="473.95661" z="1400.94349"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="14450"/>
 		</Entity>
 		<Entity uid="3730">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>4</Player>
 			<Position x="480.28174" z="1401.12684"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="39526"/>
 		</Entity>
 		<Entity uid="3731">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>4</Player>
 			<Position x="486.86738" z="1400.3567"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="17863"/>
 		</Entity>
 		<Entity uid="3732">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>4</Player>
 			<Position x="492.01514" z="1397.84339"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="46899"/>
 		</Entity>
 		<Entity uid="3733">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>4</Player>
 			<Position x="496.59443" z="1394.84363"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="5558"/>
 		</Entity>
 		<Entity uid="3734">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>4</Player>
 			<Position x="500.76789" z="1391.01307"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="51266"/>
 		</Entity>
 		<Entity uid="3735">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>4</Player>
 			<Position x="456.0352" z="1374.25086"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="27434"/>
 		</Entity>
 		<Entity uid="3736">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>4</Player>
 			<Position x="458.89411" z="1367.9275"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="47103"/>
 		</Entity>
 		<Entity uid="3737">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>4</Player>
 			<Position x="464.83097" z="1363.37537"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="54202"/>
 		</Entity>
 		<Entity uid="3738">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>4</Player>
 			<Position x="472.17035" z="1359.51038"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="59357"/>
 		</Entity>
 		<Entity uid="3739">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>4</Player>
 			<Position x="477.64893" z="1358.75635"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="53749"/>
 		</Entity>
 		<Entity uid="3740">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>4</Player>
 			<Position x="483.84766" z="1358.89307"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="22706"/>
 		</Entity>
 		<Entity uid="3741">
-			<Template>structures/brit_civil_centre</Template>
+			<Template>structures/brit/civil_centre</Template>
 			<Player>4</Player>
 			<Position x="250.51642" z="1251.29065"/>
 			<Orientation y="-2.27472"/>
 			<Actor seed="13494"/>
 		</Entity>
 		<Entity uid="3742">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>4</Player>
 			<Position x="225.5507" z="1252.90516"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="48139"/>
 		</Entity>
 		<Entity uid="3743">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>4</Player>
 			<Position x="227.19156" z="1257.85267"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="20687"/>
 		</Entity>
 		<Entity uid="3744">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>4</Player>
 			<Position x="228.85651" z="1263.52442"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="3694"/>
 		</Entity>
 		<Entity uid="3745">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>4</Player>
 			<Position x="230.72846" z="1269.22486"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="59009"/>
 		</Entity>
 		<Entity uid="3746">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>4</Player>
 			<Position x="236.7357" z="1274.90198"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="6943"/>
 		</Entity>
 		<Entity uid="3747">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>4</Player>
 			<Position x="245.85163" z="1221.2323"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="61140"/>
 		</Entity>
 		<Entity uid="3748">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>4</Player>
 			<Position x="253.90348" z="1223.74341"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="52779"/>
 		</Entity>
 		<Entity uid="3749">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>4</Player>
 			<Position x="260.23243" z="1227.8932"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="40454"/>
 		</Entity>
 		<Entity uid="3750">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>4</Player>
 			<Position x="267.46302" z="1235.6493"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="22174"/>
 		</Entity>
 		<Entity uid="3751">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>4</Player>
 			<Position x="268.21879" z="1243.84192"/>
 			<Orientation y="2.35621"/>
@@ -25675,14 +25675,14 @@
 			<Actor seed="51583"/>
 		</Entity>
 		<Entity uid="3754">
-			<Template>gaia/geology_stonemine_temperate_quarry</Template>
+			<Template>gaia/rock/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="535.00928" z="1354.15992"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="41571"/>
 		</Entity>
 		<Entity uid="3755">
-			<Template>gaia/geology_stonemine_temperate_quarry</Template>
+			<Template>gaia/rock/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="263.06861" z="1287.70044"/>
 			<Orientation y="2.73467"/>
@@ -25710,7 +25710,7 @@
 			<Actor seed="61648"/>
 		</Entity>
 		<Entity uid="3759">
-			<Template>gaia/geology_stonemine_temperate_quarry</Template>
+			<Template>gaia/rock/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="1327.42176" z="1674.3545"/>
 			<Orientation y="-0.8285"/>
@@ -26788,14 +26788,14 @@
 			<Actor seed="18218"/>
 		</Entity>
 		<Entity uid="3934">
-			<Template>structures/brit_corral</Template>
+			<Template>structures/brit/corral</Template>
 			<Player>6</Player>
 			<Position x="1352.5" z="534.5495"/>
 			<Orientation y="-2.18351"/>
 			<Actor seed="59481"/>
 		</Entity>
 		<Entity uid="3935">
-			<Template>structures/brit_barracks</Template>
+			<Template>structures/brit/barracks</Template>
 			<Player>6</Player>
 			<Position x="1336.86292" z="600.03919"/>
 			<Orientation y="1.86664"/>
@@ -26935,14 +26935,14 @@
 			<Actor seed="36207"/>
 		</Entity>
 		<Entity uid="3955">
-			<Template>gaia/ore/temperate_small_slabs</Template>
+			<Template>gaia/ore/temperate_large</Template>
 			<Player>6</Player>
 			<Position x="662.61597" z="532.48096"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="12484"/>
 		</Entity>
 		<Entity uid="3956">
-			<Template>gaia/ore/temperate_small_slabs</Template>
+			<Template>gaia/ore/temperate_large</Template>
 			<Player>0</Player>
 			<Position x="617.11506" z="354.79276"/>
 			<Orientation y="2.35621"/>
@@ -28069,49 +28069,49 @@
 			<Actor seed="42175"/>
 		</Entity>
 		<Entity uid="4117">
-			<Template>structures/brit_field</Template>
+			<Template>structures/brit/field</Template>
 			<Player>6</Player>
 			<Position x="1721.88587" z="638.88007"/>
 			<Orientation y="2.17193"/>
 			<Actor seed="32807"/>
 		</Entity>
 		<Entity uid="4118">
-			<Template>structures/brit_field</Template>
+			<Template>structures/brit/field</Template>
 			<Player>6</Player>
 			<Position x="1727.62269" z="594.89692"/>
 			<Orientation y="2.38144"/>
 			<Actor seed="58708"/>
 		</Entity>
 		<Entity uid="4119">
-			<Template>structures/brit_field</Template>
+			<Template>structures/brit/field</Template>
 			<Player>6</Player>
 			<Position x="1697.77735" z="579.54212"/>
 			<Orientation y="2.29865"/>
 			<Actor seed="3368"/>
 		</Entity>
 		<Entity uid="4120">
-			<Template>structures/brit_field</Template>
+			<Template>structures/brit/field</Template>
 			<Player>6</Player>
 			<Position x="1691.08704" z="646.95582"/>
 			<Orientation y="2.01227"/>
 			<Actor seed="27552"/>
 		</Entity>
 		<Entity uid="4121">
-			<Template>structures/brit_field</Template>
+			<Template>structures/brit/field</Template>
 			<Player>6</Player>
 			<Position x="1705.4209" z="616.63892"/>
 			<Orientation y="-2.33996"/>
 			<Actor seed="19262"/>
 		</Entity>
 		<Entity uid="4122">
-			<Template>structures/brit_field</Template>
+			<Template>structures/brit/field</Template>
 			<Player>6</Player>
 			<Position x="1673.49097" z="602.75696"/>
 			<Orientation y="2.35695"/>
 			<Actor seed="11203"/>
 		</Entity>
 		<Entity uid="4123">
-			<Template>structures/brit_field</Template>
+			<Template>structures/brit/field</Template>
 			<Player>6</Player>
 			<Position x="1654.14026" z="630.34394"/>
 			<Orientation y="2.16334"/>
@@ -28146,7 +28146,7 @@
 			<Actor seed="61240"/>
 		</Entity>
 		<Entity uid="4128">
-			<Template>structures/brit_civil_centre</Template>
+			<Template>structures/brit/civil_centre</Template>
 			<Player>6</Player>
 			<Position x="1759.07618" z="663.79871"/>
 			<Orientation y="-2.36852"/>
@@ -29784,28 +29784,28 @@
 			<Actor seed="51894"/>
 		</Entity>
 		<Entity uid="4391">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>6</Player>
 			<Position x="1762.35926" z="626.82428"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="12748"/>
 		</Entity>
 		<Entity uid="4392">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>6</Player>
 			<Position x="1759.52076" z="629.46338"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="54955"/>
 		</Entity>
 		<Entity uid="4393">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>6</Player>
 			<Position x="1757.25745" z="632.24646"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="61706"/>
 		</Entity>
 		<Entity uid="4394">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>6</Player>
 			<Position x="1754.589" z="635.14661"/>
 			<Orientation y="2.35621"/>
@@ -29826,7 +29826,7 @@
 			<Actor seed="6264"/>
 		</Entity>
 		<Entity uid="4397">
-			<Template>structures/brit_barracks</Template>
+			<Template>structures/brit/barracks</Template>
 			<Player>6</Player>
 			<Position x="1729.48731" z="693.33198"/>
 			<Orientation y="3.3266"/>
@@ -30358,7 +30358,7 @@
 			<Actor seed="3376"/>
 		</Entity>
 		<Entity uid="4474">
-			<Template>units/brit_support_female_citizen</Template>
+			<Template>units/brit/support_female_citizen</Template>
 			<Player>1</Player>
 			<Position x="1167.99354" z="1766.17383"/>
 			<Orientation y="2.35621"/>

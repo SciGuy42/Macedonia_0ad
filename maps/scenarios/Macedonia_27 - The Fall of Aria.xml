@@ -10782,63 +10782,63 @@
 			<Actor seed="4358"/>
 		</Entity>
 		<Entity uid="2585">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="61.18104" z="603.97651"/>
 			<Orientation y="-2.37836"/>
 			<Actor seed="2668"/>
 		</Entity>
 		<Entity uid="2586">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="41.09978" z="608.52857"/>
 			<Orientation y="-2.57355"/>
 			<Actor seed="33170"/>
 		</Entity>
 		<Entity uid="2587">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="29.89095" z="627.3072"/>
 			<Orientation y="-2.7989"/>
 			<Actor seed="30611"/>
 		</Entity>
 		<Entity uid="2588">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="42.89748" z="583.57587"/>
 			<Orientation y="-1.73227"/>
 			<Actor seed="61280"/>
 		</Entity>
 		<Entity uid="2589">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="22.92454" z="589.03626"/>
 			<Orientation y="-1.41161"/>
 			<Actor seed="15614"/>
 		</Entity>
 		<Entity uid="2590">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="69.1913" z="584.2198"/>
 			<Orientation y="-2.07813"/>
 			<Actor seed="39709"/>
 		</Entity>
 		<Entity uid="2591">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="53.49868" z="533.0782"/>
 			<Orientation y="-2.15627"/>
 			<Actor seed="30607"/>
 		</Entity>
 		<Entity uid="2592">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="39.66138" z="557.20887"/>
 			<Orientation y="-1.94571"/>
 			<Actor seed="19887"/>
 		</Entity>
 		<Entity uid="2593">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="22.57554" z="537.49354"/>
 			<Orientation y="-2.62623"/>

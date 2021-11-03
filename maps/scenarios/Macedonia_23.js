@@ -291,7 +291,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				if (this.numDocksCaptured == 1)
 				{
 					//we get some fishing ships
-					TriggerHelper.SpawnUnits(data.entity,"units/mace_ship_fishing",5,1);
+					TriggerHelper.SpawnUnits(data.entity,"units/mace/ship_fishing",5,1);
 					
 					//we ge some traders
 					
@@ -303,7 +303,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				else if (this.numDocksCaptured == 2)
 				{
 					//we get some trade ships
-					TriggerHelper.SpawnUnits(data.entity,"units/mace_ship_merchant",3,1);
+					TriggerHelper.SpawnUnits(data.entity,"units/mace/ship_merchant",3,1);
 					
 					this.ShowText("Nice find! We can now generate more income by using this dock as a trading base! We also found a few trade ships!","Glad to help!","Oh boy..");
 				}
@@ -1311,7 +1311,7 @@ Trigger.prototype.SpawnTradeShip = function(data)
 			let site = pickRandom(docks);
 					
 			//warn("Spawning trader for crete");
-			let trader = TriggerHelper.SpawnUnits(site,"units/mace_ship_merchant",1,e);
+			let trader = TriggerHelper.SpawnUnits(site,"units/mace/ship_merchant",1,e);
 			
 		}
 	}
@@ -1356,7 +1356,7 @@ Trigger.prototype.SpawnScyhianTrader = function(data)
 				let site = pickRandom(docks);
 					
 				//warn("Spawning trader for crete");
-				let trader = TriggerHelper.SpawnUnits(site,"units/gaul_ship_merchant",1,e);
+				let trader = TriggerHelper.SpawnUnits(site,"units/gaul/ship_merchant",1,e);
 					
 				let cmpUnitAI = Engine.QueryInterface(trader[0], IID_UnitAI);
 				
@@ -2096,7 +2096,7 @@ Trigger.prototype.PointIncrement = function(data)
 		}
 		else if (p == 1)
 		{
-			disTemplates.push("units/mace_ship_merchant");
+			disTemplates.push("units/mace/ship_merchant");
 		}
 		
 		cmpPlayer.SetDisabledTemplates(disTemplates);

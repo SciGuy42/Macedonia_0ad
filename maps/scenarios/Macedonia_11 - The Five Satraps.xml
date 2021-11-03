@@ -10730,7 +10730,7 @@
 			<Actor seed="55072"/>
 		</Entity>
 		<Entity uid="2403">
-			<Template>structures/mace_dock</Template>
+			<Template>structures/mace/dock</Template>
 			<Player>1</Player>
 			<Position x="1032.60084" z="1712.78687"/>
 			<Orientation y="0.36495"/>
@@ -11003,623 +11003,623 @@
 			<Actor seed="64014"/>
 		</Entity>
 		<Entity uid="2443">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="754.4563" z="1752.96851"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="55616"/>
 		</Entity>
 		<Entity uid="2445">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="765.66828" z="1745.49854"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="28977"/>
 		</Entity>
 		<Entity uid="2446">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="768.00733" z="1755.23694"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="54932"/>
 		</Entity>
 		<Entity uid="2447">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="777.84205" z="1747.99097"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="53847"/>
 		</Entity>
 		<Entity uid="2448">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="767.89454" z="1741.90186"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="1608"/>
 		</Entity>
 		<Entity uid="2449">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="758.59192" z="1736.93555"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="56803"/>
 		</Entity>
 		<Entity uid="2450">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="756.04755" z="1748.24073"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="51724"/>
 		</Entity>
 		<Entity uid="2454">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="763.11548" z="1734.49598"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="37205"/>
 		</Entity>
 		<Entity uid="2455">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="759.0171" z="1746.5276"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="5188"/>
 		</Entity>
 		<Entity uid="2456">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="771.42206" z="1743.44971"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="37780"/>
 		</Entity>
 		<Entity uid="2470">
-			<Template>gaia/flora_tree_oak_aut</Template>
+			<Template>gaia/tree/oak_aut</Template>
 			<Player>0</Player>
 			<Position x="761.85431" z="1719.41272"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="13347"/>
 		</Entity>
 		<Entity uid="2472">
-			<Template>gaia/flora_tree_oak_aut</Template>
+			<Template>gaia/tree/oak_aut</Template>
 			<Player>0</Player>
 			<Position x="777.66047" z="1754.30384"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="6652"/>
 		</Entity>
 		<Entity uid="2473">
-			<Template>gaia/flora_tree_oak_aut</Template>
+			<Template>gaia/tree/oak_aut</Template>
 			<Player>0</Player>
 			<Position x="770.02259" z="1757.34449"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="15361"/>
 		</Entity>
 		<Entity uid="2519">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="750.57996" z="1736.87525"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="64629"/>
 		</Entity>
 		<Entity uid="2520">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="748.69513" z="1746.5448"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="23958"/>
 		</Entity>
 		<Entity uid="2521">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="742.91242" z="1725.67164"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="44634"/>
 		</Entity>
 		<Entity uid="2522">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="756.17975" z="1722.2682"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="38922"/>
 		</Entity>
 		<Entity uid="2523">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="750.03968" z="1705.22584"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="62864"/>
 		</Entity>
 		<Entity uid="2524">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="743.39637" z="1699.8722"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="44030"/>
 		</Entity>
 		<Entity uid="2525">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="733.09424" z="1704.96253"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="50601"/>
 		</Entity>
 		<Entity uid="2526">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="746.3589" z="1714.89454"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="60800"/>
 		</Entity>
 		<Entity uid="2527">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="733.61335" z="1723.23646"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="8092"/>
 		</Entity>
 		<Entity uid="2528">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="744.70563" z="1736.82667"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="58901"/>
 		</Entity>
 		<Entity uid="2529">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="739.18537" z="1754.50586"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="12557"/>
 		</Entity>
 		<Entity uid="2530">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="745.9112" z="1759.03211"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="57510"/>
 		</Entity>
 		<Entity uid="2531">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="755.4654" z="1764.84168"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="49374"/>
 		</Entity>
 		<Entity uid="2532">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="745.04493" z="1743.4917"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="24504"/>
 		</Entity>
 		<Entity uid="2533">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="726.6424" z="1741.01319"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="15424"/>
 		</Entity>
 		<Entity uid="2534">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="720.98151" z="1721.09156"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="783"/>
 		</Entity>
 		<Entity uid="2535">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="713.27582" z="1713.74097"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="1032"/>
 		</Entity>
 		<Entity uid="2536">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="717.82251" z="1694.5514"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="11459"/>
 		</Entity>
 		<Entity uid="2537">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="729.17579" z="1685.12537"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="44547"/>
 		</Entity>
 		<Entity uid="2538">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="744.80225" z="1687.70704"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="8038"/>
 		</Entity>
 		<Entity uid="2539">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="731.56159" z="1701.00965"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="2932"/>
 		</Entity>
 		<Entity uid="2540">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="721.50123" z="1706.15052"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="47630"/>
 		</Entity>
 		<Entity uid="2541">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="725.25397" z="1721.86878"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="47235"/>
 		</Entity>
 		<Entity uid="2542">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="735.20252" z="1687.5796"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="35382"/>
 		</Entity>
 		<Entity uid="2543">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="723.69324" z="1673.55127"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="4139"/>
 		</Entity>
 		<Entity uid="2544">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="720.22431" z="1653.78199"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="7303"/>
 		</Entity>
 		<Entity uid="2545">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="717.18494" z="1652.12122"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="58262"/>
 		</Entity>
 		<Entity uid="2546">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="709.3183" z="1672.65601"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="24772"/>
 		</Entity>
 		<Entity uid="2547">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="719.34565" z="1663.67127"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="24116"/>
 		</Entity>
 		<Entity uid="2548">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="733.42811" z="1653.52173"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="45057"/>
 		</Entity>
 		<Entity uid="2549">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="739.4405" z="1666.72828"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="36135"/>
 		</Entity>
 		<Entity uid="2550">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="739.73841" z="1677.33985"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="18303"/>
 		</Entity>
 		<Entity uid="2551">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="752.78248" z="1671.26624"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="60791"/>
 		</Entity>
 		<Entity uid="2552">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="711.1966" z="1684.5005"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="12856"/>
 		</Entity>
 		<Entity uid="2553">
-			<Template>gaia/flora_tree_oak_aut</Template>
+			<Template>gaia/tree/oak_aut</Template>
 			<Player>0</Player>
 			<Position x="740.93488" z="1662.68274"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="62860"/>
 		</Entity>
 		<Entity uid="2554">
-			<Template>gaia/flora_tree_oak_aut</Template>
+			<Template>gaia/tree/oak_aut</Template>
 			<Player>0</Player>
 			<Position x="730.0157" z="1668.88831"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="38949"/>
 		</Entity>
 		<Entity uid="2555">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="750.26215" z="1694.90833"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="49986"/>
 		</Entity>
 		<Entity uid="2556">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="755.30524" z="1713.23902"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="23589"/>
 		</Entity>
 		<Entity uid="2557">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="707.13343" z="1709.0116"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="14104"/>
 		</Entity>
 		<Entity uid="2558">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="707.58344" z="1701.52735"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="29382"/>
 		</Entity>
 		<Entity uid="2559">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="706.12269" z="1690.75977"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="47066"/>
 		</Entity>
 		<Entity uid="2560">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="703.52149" z="1668.73292"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="64808"/>
 		</Entity>
 		<Entity uid="2561">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="708.4115" z="1654.25098"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="12961"/>
 		</Entity>
 		<Entity uid="2562">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="710.08027" z="1640.96473"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="51438"/>
 		</Entity>
 		<Entity uid="2563">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="722.35401" z="1639.65516"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="4018"/>
 		</Entity>
 		<Entity uid="2564">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="728.3313" z="1644.64417"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="29896"/>
 		</Entity>
 		<Entity uid="2565">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="742.48633" z="1646.09668"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="47995"/>
 		</Entity>
 		<Entity uid="2566">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="746.84375" z="1657.40503"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="52301"/>
 		</Entity>
 		<Entity uid="2567">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="736.52845" z="1736.54139"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="20597"/>
 		</Entity>
 		<Entity uid="2568">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="728.33893" z="1749.7516"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="28873"/>
 		</Entity>
 		<Entity uid="2569">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="761.80158" z="1692.94105"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="45978"/>
 		</Entity>
 		<Entity uid="2570">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="757.11243" z="1687.38062"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="53872"/>
 		</Entity>
 		<Entity uid="2571">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="712.47803" z="1636.73597"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="42630"/>
 		</Entity>
 		<Entity uid="2572">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="703.73963" z="1632.96216"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="39674"/>
 		</Entity>
 		<Entity uid="2573">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="700.45972" z="1630.54065"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="26066"/>
 		</Entity>
 		<Entity uid="2574">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="697.62226" z="1642.00074"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="6396"/>
 		</Entity>
 		<Entity uid="2575">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="704.4209" z="1648.68555"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="3507"/>
 		</Entity>
 		<Entity uid="2576">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="699.10456" z="1659.865"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="6230"/>
 		</Entity>
 		<Entity uid="2577">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="693.87232" z="1676.2815"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="48462"/>
 		</Entity>
 		<Entity uid="2578">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="691.72834" z="1694.47596"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="6130"/>
 		</Entity>
 		<Entity uid="2579">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="685.37415" z="1703.0608"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="52727"/>
 		</Entity>
 		<Entity uid="2580">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="681.55353" z="1715.90601"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="43585"/>
 		</Entity>
 		<Entity uid="2581">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="695.07746" z="1708.54285"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="57970"/>
 		</Entity>
 		<Entity uid="2582">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="695.80463" z="1697.18042"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="15109"/>
 		</Entity>
 		<Entity uid="2583">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="691.71314" z="1700.78296"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="57244"/>
 		</Entity>
 		<Entity uid="2584">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="711.26355" z="1735.224"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="10408"/>
 		</Entity>
 		<Entity uid="2585">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="704.2527" z="1725.4795"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="1014"/>
 		</Entity>
 		<Entity uid="2586">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="766.7057" z="1678.2262"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="43625"/>
 		</Entity>
 		<Entity uid="2587">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="758.10553" z="1662.19568"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="39842"/>
 		</Entity>
 		<Entity uid="2588">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="677.81775" z="1673.3108"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="26994"/>
 		</Entity>
 		<Entity uid="2589">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="693.67322" z="1687.67237"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="35174"/>
 		</Entity>
 		<Entity uid="2590">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="675.8534" z="1652.88062"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="14455"/>
 		</Entity>
 		<Entity uid="2591">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="676.34662" z="1638.89002"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="16391"/>
 		</Entity>
 		<Entity uid="2592">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="691.57142" z="1652.62586"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="61356"/>
 		</Entity>
 		<Entity uid="2593">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="688.99274" z="1635.14917"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="55267"/>
 		</Entity>
 		<Entity uid="2594">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="683.25318" z="1626.92298"/>
 			<Orientation y="2.35621"/>
@@ -12697,84 +12697,84 @@
 			<Actor seed="12677"/>
 		</Entity>
 		<Entity uid="2748">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="532.12226" z="225.9846"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="38354"/>
 		</Entity>
 		<Entity uid="2749">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="439.7967" z="240.8777"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="64710"/>
 		</Entity>
 		<Entity uid="2750">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="529.17261" z="263.54212"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="13246"/>
 		</Entity>
 		<Entity uid="2751">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="446.16504" z="199.5033"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="55645"/>
 		</Entity>
 		<Entity uid="2752">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="526.41016" z="162.2688"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="14278"/>
 		</Entity>
 		<Entity uid="2753">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="567.43488" z="162.16956"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="9671"/>
 		</Entity>
 		<Entity uid="2754">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="575.45588" z="169.31656"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="20101"/>
 		</Entity>
 		<Entity uid="2755">
-			<Template>gaia/flora_tree_oak_new</Template>
+			<Template>gaia/tree/oak_new</Template>
 			<Player>0</Player>
 			<Position x="565.55292" z="191.63837"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="47040"/>
 		</Entity>
 		<Entity uid="2756">
-			<Template>gaia/flora_tree_oak_new</Template>
+			<Template>gaia/tree/oak_new</Template>
 			<Player>0</Player>
 			<Position x="549.88636" z="232.64594"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="44761"/>
 		</Entity>
 		<Entity uid="2757">
-			<Template>gaia/flora_tree_oak_new</Template>
+			<Template>gaia/tree/oak_new</Template>
 			<Player>0</Player>
 			<Position x="520.78278" z="236.71283"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="23591"/>
 		</Entity>
 		<Entity uid="2758">
-			<Template>gaia/flora_tree_oak_new</Template>
+			<Template>gaia/tree/oak_new</Template>
 			<Player>0</Player>
 			<Position x="474.00428" z="281.22608"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="9615"/>
 		</Entity>
 		<Entity uid="2759">
-			<Template>gaia/flora_tree_oak_new</Template>
+			<Template>gaia/tree/oak_new</Template>
 			<Player>0</Player>
 			<Position x="616.09833" z="443.74189"/>
 			<Orientation y="7.10534"/>
@@ -14027,56 +14027,56 @@
 			<Actor seed="2017"/>
 		</Entity>
 		<Entity uid="2938">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="1143.22107" z="1568.33448"/>
 			<Orientation y="2.35622"/>
 			<Actor seed="27080"/>
 		</Entity>
 		<Entity uid="2939">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="1148.96058" z="1576.56067"/>
 			<Orientation y="2.35622"/>
 			<Actor seed="55267"/>
 		</Entity>
 		<Entity uid="2940">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="1151.53931" z="1594.03736"/>
 			<Orientation y="2.35622"/>
 			<Actor seed="61356"/>
 		</Entity>
 		<Entity uid="2941">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="1136.31458" z="1580.30152"/>
 			<Orientation y="2.35622"/>
 			<Actor seed="16391"/>
 		</Entity>
 		<Entity uid="2942">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="1135.8213" z="1594.29212"/>
 			<Orientation y="2.35622"/>
 			<Actor seed="14455"/>
 		</Entity>
 		<Entity uid="2943">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="1168.4524" z="1582.95496"/>
 			<Orientation y="2.35622"/>
 			<Actor seed="26994"/>
 		</Entity>
 		<Entity uid="2944">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="1157.59021" z="1583.41224"/>
 			<Orientation y="2.35622"/>
 			<Actor seed="6396"/>
 		</Entity>
 		<Entity uid="2945">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="1160.42762" z="1571.95215"/>
 			<Orientation y="2.35622"/>
@@ -14097,77 +14097,77 @@
 			<Actor seed="2106"/>
 		</Entity>
 		<Entity uid="2948">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="1124.21888" z="1610.1504"/>
 			<Orientation y="-2.53052"/>
 			<Actor seed="6396"/>
 		</Entity>
 		<Entity uid="2949">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="1144.75171" z="1609.83387"/>
 			<Orientation y="-2.53052"/>
 			<Actor seed="26994"/>
 		</Entity>
 		<Entity uid="2950">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="1133.17664" z="1621.83118"/>
 			<Orientation y="-2.53052"/>
 			<Actor seed="14455"/>
 		</Entity>
 		<Entity uid="2951">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="1121.41114" z="1628.28834"/>
 			<Orientation y="-2.53052"/>
 			<Actor seed="16391"/>
 		</Entity>
 		<Entity uid="2952">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="1126.76612" z="1592.70069"/>
 			<Orientation y="-2.53052"/>
 			<Actor seed="61356"/>
 		</Entity>
 		<Entity uid="2953">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="1108.13233" z="1635.01038"/>
 			<Orientation y="2.35622"/>
 			<Actor seed="26066"/>
 		</Entity>
 		<Entity uid="2954">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="1134.70142" z="1605.65516"/>
 			<Orientation y="2.35622"/>
 			<Actor seed="26066"/>
 		</Entity>
 		<Entity uid="2955">
-			<Template>gaia/flora_tree_oak</Template>
+			<Template>gaia/tree/oak</Template>
 			<Player>0</Player>
 			<Position x="1116.02308" z="1615.15015"/>
 			<Orientation y="2.35622"/>
 			<Actor seed="26066"/>
 		</Entity>
 		<Entity uid="2956">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="1109.74817" z="1614.85328"/>
 			<Orientation y="-2.53052"/>
 			<Actor seed="26994"/>
 		</Entity>
 		<Entity uid="2957">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="1119.92432" z="1589.02881"/>
 			<Orientation y="-2.53052"/>
 			<Actor seed="26994"/>
 		</Entity>
 		<Entity uid="2958">
-			<Template>gaia/flora_tree_oak_large</Template>
+			<Template>gaia/tree/oak_large</Template>
 			<Player>0</Player>
 			<Position x="1148.08399" z="1539.40174"/>
 			<Orientation y="-2.53052"/>
@@ -23047,392 +23047,392 @@
 			<Actor seed="1043"/>
 		</Entity>
 		<Entity uid="4225">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1145.88086" z="1792.62244"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="2679"/>
 		</Entity>
 		<Entity uid="4226">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1173.76001" z="1774.74537"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="19562"/>
 		</Entity>
 		<Entity uid="4227">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1189.82837" z="1802.19105"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="61006"/>
 		</Entity>
 		<Entity uid="4228">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1171.36622" z="1806.49988"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="56737"/>
 		</Entity>
 		<Entity uid="4229">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1018.15735" z="1856.60413"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="4749"/>
 		</Entity>
 		<Entity uid="4230">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="953.67536" z="1870.7168"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="40203"/>
 		</Entity>
 		<Entity uid="4231">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="979.07813" z="1897.92164"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="35170"/>
 		</Entity>
 		<Entity uid="4232">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1047.21558" z="1879.75684"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="13066"/>
 		</Entity>
 		<Entity uid="4233">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1027.2151" z="1805.43372"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="8318"/>
 		</Entity>
 		<Entity uid="4234">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1065.6388" z="1780.35987"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="61487"/>
 		</Entity>
 		<Entity uid="4235">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="900.67554" z="1904.8573"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="64453"/>
 		</Entity>
 		<Entity uid="4236">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="939.53034" z="1936.75379"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="3556"/>
 		</Entity>
 		<Entity uid="4237">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1027.86963" z="1943.92054"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="13454"/>
 		</Entity>
 		<Entity uid="4238">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1067.20008" z="1962.25062"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="4606"/>
 		</Entity>
 		<Entity uid="4239">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1091.136" z="1943.21167"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="46376"/>
 		</Entity>
 		<Entity uid="4240">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1461.69031" z="1283.26014"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="41061"/>
 		</Entity>
 		<Entity uid="4241">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1504.66944" z="1265.78138"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="6453"/>
 		</Entity>
 		<Entity uid="4242">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1536.67457" z="1301.44385"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="53636"/>
 		</Entity>
 		<Entity uid="4243">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1580.17603" z="1266.55726"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="4144"/>
 		</Entity>
 		<Entity uid="4244">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1612.60962" z="1303.09205"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="15262"/>
 		</Entity>
 		<Entity uid="4245">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1656.69239" z="1264.58912"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="31667"/>
 		</Entity>
 		<Entity uid="4246">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1719.30567" z="1307.45801"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="64046"/>
 		</Entity>
 		<Entity uid="4247">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1780.40784" z="1326.04712"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="41945"/>
 		</Entity>
 		<Entity uid="4248">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1824.64234" z="1315.56678"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="5222"/>
 		</Entity>
 		<Entity uid="4249">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1877.81727" z="1339.35242"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="42565"/>
 		</Entity>
 		<Entity uid="4250">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1921.0326" z="1348.25538"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="11254"/>
 		</Entity>
 		<Entity uid="4251">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1967.12244" z="1337.38563"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="21564"/>
 		</Entity>
 		<Entity uid="4252">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1955.18873" z="1358.1438"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="62355"/>
 		</Entity>
 		<Entity uid="4253">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1920.9734" z="1368.0691"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="41221"/>
 		</Entity>
 		<Entity uid="4254">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1893.05518" z="1378.9712"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="54168"/>
 		</Entity>
 		<Entity uid="4255">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1896.54151" z="1393.5221"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="24864"/>
 		</Entity>
 		<Entity uid="4256">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1855.02112" z="1400.36536"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="20117"/>
 		</Entity>
 		<Entity uid="4257">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1799.3169" z="1401.80738"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="22038"/>
 		</Entity>
 		<Entity uid="4258">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1866.50696" z="1417.047"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="36851"/>
 		</Entity>
 		<Entity uid="4259">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1924.14856" z="1402.78553"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="44443"/>
 		</Entity>
 		<Entity uid="4260">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1865.0586" z="1449.88257"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="34977"/>
 		</Entity>
 		<Entity uid="4261">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1824.65723" z="1462.88343"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="20853"/>
 		</Entity>
 		<Entity uid="4262">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1781.65882" z="1431.61756"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="60500"/>
 		</Entity>
 		<Entity uid="4263">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1732.57447" z="1417.30225"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="143"/>
 		</Entity>
 		<Entity uid="4264">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1484.80298" z="1512.56959"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="8958"/>
 		</Entity>
 		<Entity uid="4265">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1405.2638" z="1522.8501"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="58974"/>
 		</Entity>
 		<Entity uid="4266">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1405.63794" z="1454.88209"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="58507"/>
 		</Entity>
 		<Entity uid="4267">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1354.40113" z="1406.2024"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="59344"/>
 		</Entity>
 		<Entity uid="4268">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1250.03309" z="1404.26771"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="47172"/>
 		</Entity>
 		<Entity uid="4269">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1201.77967" z="1358.28821"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="17789"/>
 		</Entity>
 		<Entity uid="4270">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1247.11548" z="1312.77002"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="25014"/>
 		</Entity>
 		<Entity uid="4271">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1183.03296" z="1429.1366"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="61149"/>
 		</Entity>
 		<Entity uid="4272">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1238.2776" z="1507.85792"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="33856"/>
 		</Entity>
 		<Entity uid="4273">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1332.83814" z="1616.66688"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="65213"/>
 		</Entity>
 		<Entity uid="4274">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1428.47022" z="1632.52222"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="28893"/>
 		</Entity>
 		<Entity uid="4275">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1519.96082" z="1685.37732"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="399"/>
 		</Entity>
 		<Entity uid="4276">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1570.41358" z="1645.71058"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="1110"/>
 		</Entity>
 		<Entity uid="4277">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1469.70582" z="1618.95862"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="25062"/>
 		</Entity>
 		<Entity uid="4278">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1392.4231" z="1564.4795"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="6801"/>
 		</Entity>
 		<Entity uid="4279">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1491.67261" z="1570.81104"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="28050"/>
 		</Entity>
 		<Entity uid="4280">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="1596.62452" z="1623.81495"/>
 			<Orientation y="2.35621"/>
@@ -23728,7 +23728,7 @@
 			<Actor seed="44110"/>
 		</Entity>
 		<Entity uid="4439">
-			<Template>other/palisades_rocks_medium</Template>
+			<Template>structures/palisades_medium</Template>
 			<Player>6</Player>
 			<Position x="696.80652" z="202.62952"/>
 			<Orientation y="2.22664"/>
@@ -24076,91 +24076,91 @@
 			<Actor seed="7898"/>
 		</Entity>
 		<Entity uid="4489">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>5</Player>
 			<Position x="1309.16431" z="114.56829"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="48022"/>
 		</Entity>
 		<Entity uid="4490">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>5</Player>
 			<Position x="1305.60511" z="118.37621"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="49419"/>
 		</Entity>
 		<Entity uid="4491">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>5</Player>
 			<Position x="1303.16858" z="121.47071"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="43608"/>
 		</Entity>
 		<Entity uid="4492">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>5</Player>
 			<Position x="1299.66346" z="125.82282"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="24192"/>
 		</Entity>
 		<Entity uid="4493">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>5</Player>
 			<Position x="1295.05811" z="130.71769"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="40873"/>
 		</Entity>
 		<Entity uid="4494">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>5</Player>
 			<Position x="1290.13501" z="135.49662"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="10335"/>
 		</Entity>
 		<Entity uid="4495">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>5</Player>
 			<Position x="1301.93885" z="112.98704"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="59433"/>
 		</Entity>
 		<Entity uid="4496">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>5</Player>
 			<Position x="1298.56617" z="116.45646"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="50971"/>
 		</Entity>
 		<Entity uid="4497">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>5</Player>
 			<Position x="1294.6908" z="121.59638"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="27585"/>
 		</Entity>
 		<Entity uid="4498">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>5</Player>
 			<Position x="1289.72999" z="125.65464"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="11243"/>
 		</Entity>
 		<Entity uid="4499">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>5</Player>
 			<Position x="1287.8075" z="128.70191"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="12794"/>
 		</Entity>
 		<Entity uid="4500">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>5</Player>
 			<Position x="1285.42176" z="132.8643"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="53025"/>
 		</Entity>
 		<Entity uid="4501">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>5</Player>
 			<Position x="1615.15052" z="999.88794"/>
 			<Orientation y="2.35621"/>
@@ -24650,7 +24650,7 @@
 			<Actor seed="44442"/>
 		</Entity>
 		<Entity uid="4572">
-			<Template>units/mace_ship_merchant</Template>
+			<Template>units/mace/ship_merchant</Template>
 			<Player>1</Player>
 			<Position x="1021.96973" z="1773.51136"/>
 			<Orientation y="-0.10392"/>
@@ -24671,7 +24671,7 @@
 			<Actor seed="26925"/>
 		</Entity>
 		<Entity uid="4575">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1885.21534" z="1373.39136"/>
 			<Orientation y="2.35621"/>
@@ -25588,7 +25588,7 @@
 			<Actor seed="22599"/>
 		</Entity>
 		<Entity uid="4707">
-			<Template>gaia/geology_metal_greek</Template>
+			<Template>gaia/ore/greece_small</Template>
 			<Player>0</Player>
 			<Position x="1679.53138" z="1733.0641"/>
 			<Orientation y="0.62812"/>
@@ -25602,126 +25602,126 @@
 			<Actor seed="59993"/>
 		</Entity>
 		<Entity uid="4709">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="678.78498" z="1846.65455"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="59868"/>
 		</Entity>
 		<Entity uid="4710">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="682.28016" z="1883.45667"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="24413"/>
 		</Entity>
 		<Entity uid="4711">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="736.53711" z="1855.45594"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="17311"/>
 		</Entity>
 		<Entity uid="4712">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="741.80384" z="1911.22425"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="4065"/>
 		</Entity>
 		<Entity uid="4713">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="768.09772" z="1877.97706"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="25785"/>
 		</Entity>
 		<Entity uid="4714">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="802.4325" z="1919.93787"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="42686"/>
 		</Entity>
 		<Entity uid="4715">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="866.78888" z="1889.69324"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="17802"/>
 		</Entity>
 		<Entity uid="4716">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="891.42823" z="1853.76026"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="27069"/>
 		</Entity>
 		<Entity uid="4717">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="995.82947" z="1955.01026"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="12002"/>
 		</Entity>
 		<Entity uid="4718">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="151.44092" z="1436.4408"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="44012"/>
 		</Entity>
 		<Entity uid="4719">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="140.1743" z="1417.57667"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="7303"/>
 		</Entity>
 		<Entity uid="4720">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="111.28107" z="1301.21241"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="34001"/>
 		</Entity>
 		<Entity uid="4721">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="99.92089" z="1255.09131"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="42844"/>
 		</Entity>
 		<Entity uid="4722">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="119.11509" z="1254.95044"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="53357"/>
 		</Entity>
 		<Entity uid="4723">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="66.54068" z="1215.96778"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="15619"/>
 		</Entity>
 		<Entity uid="4724">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="89.47011" z="1199.6786"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="20783"/>
 		</Entity>
 		<Entity uid="4725">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="86.07244" z="1216.13428"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="30617"/>
 		</Entity>
 		<Entity uid="4726">
-			<Template>gaia/fauna_fish</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="74.2702" z="1255.28968"/>
 			<Orientation y="2.35621"/>
@@ -27843,49 +27843,49 @@
 			<Actor seed="40936"/>
 		</Entity>
 		<Entity uid="5050">
-			<Template>gaia/fauna_bear</Template>
+			<Template>gaia/fauna_bear_brown</Template>
 			<Player>0</Player>
 			<Position x="770.28858" z="1200.18323"/>
 			<Orientation y="0.75881"/>
 			<Actor seed="47295"/>
 		</Entity>
 		<Entity uid="5051">
-			<Template>gaia/fauna_bear</Template>
+			<Template>gaia/fauna_bear_brown</Template>
 			<Player>0</Player>
 			<Position x="584.60041" z="1573.667"/>
 			<Orientation y="1.30842"/>
 			<Actor seed="44974"/>
 		</Entity>
 		<Entity uid="5052">
-			<Template>gaia/fauna_bear</Template>
+			<Template>gaia/fauna_bear_brown</Template>
 			<Player>0</Player>
 			<Position x="690.16584" z="1670.43641"/>
 			<Orientation y="1.70159"/>
 			<Actor seed="54098"/>
 		</Entity>
 		<Entity uid="5053">
-			<Template>gaia/fauna_bear</Template>
+			<Template>gaia/fauna_bear_brown</Template>
 			<Player>0</Player>
 			<Position x="1108.04139" z="997.55768"/>
 			<Orientation y="1.28768"/>
 			<Actor seed="17168"/>
 		</Entity>
 		<Entity uid="5054">
-			<Template>gaia/fauna_bear</Template>
+			<Template>gaia/fauna_bear_brown</Template>
 			<Player>0</Player>
 			<Position x="922.56482" z="592.86792"/>
 			<Orientation y="2.76124"/>
 			<Actor seed="854"/>
 		</Entity>
 		<Entity uid="5055">
-			<Template>gaia/fauna_bear</Template>
+			<Template>gaia/fauna_bear_brown</Template>
 			<Player>0</Player>
 			<Position x="1272.74854" z="675.39905"/>
 			<Orientation y="-0.39603"/>
 			<Actor seed="48966"/>
 		</Entity>
 		<Entity uid="5056">
-			<Template>gaia/fauna_bear</Template>
+			<Template>gaia/fauna_bear_brown</Template>
 			<Player>0</Player>
 			<Position x="1226.97034" z="503.21213"/>
 			<Orientation y="-2.93508"/>

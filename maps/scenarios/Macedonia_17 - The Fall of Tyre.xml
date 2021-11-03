@@ -16700,119 +16700,119 @@
 			<Actor seed="33274"/>
 		</Entity>
 		<Entity uid="5004">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="1118.71656" z="851.82844"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="15580"/>
 		</Entity>
 		<Entity uid="5005">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="1115.3368" z="851.34168"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="63069"/>
 		</Entity>
 		<Entity uid="5006">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="1111.56592" z="850.76502"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="58908"/>
 		</Entity>
 		<Entity uid="5007">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="1107.32227" z="849.94129"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="63860"/>
 		</Entity>
 		<Entity uid="5008">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="1102.50782" z="848.48774"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="58847"/>
 		</Entity>
 		<Entity uid="5009">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="1143.52698" z="855.9496"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="30632"/>
 		</Entity>
 		<Entity uid="5010">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="1147.23047" z="855.44727"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="64756"/>
 		</Entity>
 		<Entity uid="5011">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="1150.30347" z="856.04572"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="20584"/>
 		</Entity>
 		<Entity uid="5012">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="1154.16724" z="856.5536"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="1341"/>
 		</Entity>
 		<Entity uid="5013">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="1157.25074" z="857.14814"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="44261"/>
 		</Entity>
 		<Entity uid="5014">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="1126.91968" z="916.12201"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="18079"/>
 		</Entity>
 		<Entity uid="5015">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="1132.917" z="920.08857"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="48351"/>
 		</Entity>
 		<Entity uid="5016">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="1134.43616" z="924.26203"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="60822"/>
 		</Entity>
 		<Entity uid="5017">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="1129.41944" z="922.57227"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="25251"/>
 		</Entity>
 		<Entity uid="5018">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="1122.27222" z="918.71167"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="37138"/>
 		</Entity>
 		<Entity uid="5019">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="1127.1095" z="919.39399"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="655"/>
 		</Entity>
 		<Entity uid="5020">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="1131.55835" z="915.58161"/>
 			<Orientation y="2.35621"/>
@@ -16826,119 +16826,119 @@
 			<Actor seed="6431"/>
 		</Entity>
 		<Entity uid="5022">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="898.49549" z="1341.06214"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="945"/>
 		</Entity>
 		<Entity uid="5023">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="902.91034" z="1341.8578"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="16760"/>
 		</Entity>
 		<Entity uid="5024">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="906.45398" z="1342.67786"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="32973"/>
 		</Entity>
 		<Entity uid="5025">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="910.27143" z="1342.7262"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="40069"/>
 		</Entity>
 		<Entity uid="5026">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="914.32612" z="1342.45557"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="55677"/>
 		</Entity>
 		<Entity uid="5027">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="880.59437" z="1374.6316"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="4778"/>
 		</Entity>
 		<Entity uid="5028">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="874.26636" z="1373.04114"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="25283"/>
 		</Entity>
 		<Entity uid="5029">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="868.62134" z="1371.83509"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="38130"/>
 		</Entity>
 		<Entity uid="5030">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="879.07697" z="1370.67371"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="14473"/>
 		</Entity>
 		<Entity uid="5031">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="875.448" z="1369.5719"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="43918"/>
 		</Entity>
 		<Entity uid="5032">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="869.71595" z="1368.47242"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="54664"/>
 		</Entity>
 		<Entity uid="5033">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="864.58118" z="1367.63196"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="10676"/>
 		</Entity>
 		<Entity uid="5034">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="863.03162" z="1371.26001"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="42295"/>
 		</Entity>
 		<Entity uid="5035">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="878.48334" z="1366.54834"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="1263"/>
 		</Entity>
 		<Entity uid="5036">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="873.00318" z="1364.51783"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="26456"/>
 		</Entity>
 		<Entity uid="5037">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="868.04456" z="1363.94166"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="62650"/>
 		</Entity>
 		<Entity uid="5038">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="862.5901" z="1362.95704"/>
 			<Orientation y="2.35621"/>
@@ -20760,21 +20760,21 @@
 			<Actor seed="22410"/>
 		</Entity>
 		<Entity uid="5586">
-			<Template>gaia/geology_metal_greek</Template>
+			<Template>gaia/ore/greece_small</Template>
 			<Player>0</Player>
 			<Position x="839.21753" z="1342.76722"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="42040"/>
 		</Entity>
 		<Entity uid="5587">
-			<Template>gaia/geology_metal_greek</Template>
+			<Template>gaia/ore/greece_small</Template>
 			<Player>0</Player>
 			<Position x="848.93964" z="1320.66358"/>
 			<Orientation y="-1.58184"/>
 			<Actor seed="34782"/>
 		</Entity>
 		<Entity uid="5588">
-			<Template>gaia/geology_metal_greek</Template>
+			<Template>gaia/ore/greece_small</Template>
 			<Player>0</Player>
 			<Position x="996.29053" z="1281.72144"/>
 			<Orientation y="-0.50718"/>
@@ -20886,7 +20886,7 @@
 			<Actor seed="9274"/>
 		</Entity>
 		<Entity uid="5609">
-			<Template>structures/mace_dock</Template>
+			<Template>structures/mace/dock</Template>
 			<Player>1</Player>
 			<Position x="1618.23902" z="584.88782"/>
 			<Orientation y="-2.08355"/>
@@ -21096,21 +21096,21 @@
 			<Actor seed="41884"/>
 		</Entity>
 		<Entity uid="5640">
-			<Template>units/mace_ship_merchant</Template>
+			<Template>units/mace/ship_merchant</Template>
 			<Player>1</Player>
 			<Position x="1590.23707" z="529.4469"/>
 			<Orientation y="-2.83294"/>
 			<Actor seed="49008"/>
 		</Entity>
 		<Entity uid="5641">
-			<Template>units/mace_ship_merchant</Template>
+			<Template>units/mace/ship_merchant</Template>
 			<Player>1</Player>
 			<Position x="1604.12427" z="505.73163"/>
 			<Orientation y="-2.4835"/>
 			<Actor seed="29845"/>
 		</Entity>
 		<Entity uid="5642">
-			<Template>units/mace_ship_merchant</Template>
+			<Template>units/mace/ship_merchant</Template>
 			<Player>1</Player>
 			<Position x="1593.61976" z="556.86286"/>
 			<Orientation y="-0.78295"/>
@@ -21852,322 +21852,322 @@
 			<Actor seed="6446"/>
 		</Entity>
 		<Entity uid="5748">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1168.6919" z="1301.47718"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="15444"/>
 		</Entity>
 		<Entity uid="5749">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1229.00501" z="1263.7461"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="3251"/>
 		</Entity>
 		<Entity uid="5750">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1250.20813" z="1162.3219"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="5968"/>
 		</Entity>
 		<Entity uid="5751">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1089.36805" z="1411.6725"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="14416"/>
 		</Entity>
 		<Entity uid="5752">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="986.78663" z="1616.3484"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="63648"/>
 		</Entity>
 		<Entity uid="5753">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="869.29712" z="1639.42518"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="16211"/>
 		</Entity>
 		<Entity uid="5754">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="910.29822" z="1730.74488"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="37272"/>
 		</Entity>
 		<Entity uid="5755">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="993.93274" z="1720.1698"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="20690"/>
 		</Entity>
 		<Entity uid="5756">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="954.18366" z="1764.1194"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="36439"/>
 		</Entity>
 		<Entity uid="5757">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1476.16175" z="664.1319"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="1697"/>
 		</Entity>
 		<Entity uid="5758">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1422.9928" z="615.06238"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="35110"/>
 		</Entity>
 		<Entity uid="5759">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1487.22303" z="508.68989"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="22025"/>
 		</Entity>
 		<Entity uid="5760">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1413.94239" z="394.59708"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="56737"/>
 		</Entity>
 		<Entity uid="5761">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1573.59144" z="483.18607"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="47640"/>
 		</Entity>
 		<Entity uid="5762">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1543.06031" z="434.7248"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="47945"/>
 		</Entity>
 		<Entity uid="5763">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1599.75098" z="354.85523"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="35619"/>
 		</Entity>
 		<Entity uid="5764">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1539.23145" z="260.74796"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="38114"/>
 		</Entity>
 		<Entity uid="5765">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1605.9198" z="224.41462"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="25013"/>
 		</Entity>
 		<Entity uid="5766">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1459.32056" z="127.3177"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="48758"/>
 		</Entity>
 		<Entity uid="5767">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1455.19678" z="80.44242"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="43608"/>
 		</Entity>
 		<Entity uid="5768">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1561.95972" z="174.94147"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="18014"/>
 		</Entity>
 		<Entity uid="5769">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1372.09156" z="136.18717"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="25082"/>
 		</Entity>
 		<Entity uid="5770">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1217.35828" z="194.51325"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="45344"/>
 		</Entity>
 		<Entity uid="5771">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1403.1543" z="310.38141"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="14801"/>
 		</Entity>
 		<Entity uid="5772">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="958.70038" z="78.3732"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="8475"/>
 		</Entity>
 		<Entity uid="5773">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1180.52784" z="71.83347"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="3015"/>
 		</Entity>
 		<Entity uid="5774">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1310.25782" z="97.62174"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="28485"/>
 		</Entity>
 		<Entity uid="5775">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1523.56421" z="1002.54834"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="18476"/>
 		</Entity>
 		<Entity uid="5776">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1481.50586" z="1207.2323"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="4332"/>
 		</Entity>
 		<Entity uid="5777">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1321.45813" z="1316.69129"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="10996"/>
 		</Entity>
 		<Entity uid="5778">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="906.19239" z="1621.84485"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="13661"/>
 		</Entity>
 		<Entity uid="5779">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="939.01368" z="1677.58277"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="25916"/>
 		</Entity>
 		<Entity uid="5780">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="494.94971" z="1191.87513"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="10893"/>
 		</Entity>
 		<Entity uid="5781">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="506.85077" z="1448.06263"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="19843"/>
 		</Entity>
 		<Entity uid="5782">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="572.7356" z="1618.26587"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="56374"/>
 		</Entity>
 		<Entity uid="5783">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="662.50818" z="1745.54578"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="49451"/>
 		</Entity>
 		<Entity uid="5784">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="708.12293" z="1627.14002"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="7669"/>
 		</Entity>
 		<Entity uid="5785">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="781.75086" z="1743.77698"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="64778"/>
 		</Entity>
 		<Entity uid="5786">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1545.87586" z="526.38691"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="6975"/>
 		</Entity>
 		<Entity uid="5787">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1527.14087" z="500.51752"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="29523"/>
 		</Entity>
 		<Entity uid="5788">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1617.90992" z="404.57282"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="42649"/>
 		</Entity>
 		<Entity uid="5789">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1707.57386" z="40.13387"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="64193"/>
 		</Entity>
 		<Entity uid="5790">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1603.14087" z="53.80817"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="13888"/>
 		</Entity>
 		<Entity uid="5791">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1647.193" z="116.49924"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="65030"/>
 		</Entity>
 		<Entity uid="5792">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1540.13477" z="101.14615"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="16185"/>
 		</Entity>
 		<Entity uid="5793">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>0</Player>
 			<Position x="1498.34607" z="207.20658"/>
 			<Orientation y="2.35621"/>
@@ -22202,245 +22202,245 @@
 			<Actor seed="35570"/>
 		</Entity>
 		<Entity uid="5798">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="1367.80005" z="416.87226"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="28953"/>
 		</Entity>
 		<Entity uid="5799">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="1376.02845" z="477.1366"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="37584"/>
 		</Entity>
 		<Entity uid="5800">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="1389.69678" z="544.34052"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="933"/>
 		</Entity>
 		<Entity uid="5801">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="1399.96155" z="595.69037"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="17840"/>
 		</Entity>
 		<Entity uid="5802">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="756.48273" z="479.87537"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="48681"/>
 		</Entity>
 		<Entity uid="5803">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="776.08625" z="391.3538"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="64857"/>
 		</Entity>
 		<Entity uid="5804">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="814.55481" z="322.98707"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="32052"/>
 		</Entity>
 		<Entity uid="5805">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="595.1637" z="670.43604"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="3892"/>
 		</Entity>
 		<Entity uid="5806">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="333.90687" z="615.98755"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="30928"/>
 		</Entity>
 		<Entity uid="5807">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="453.19324" z="502.00278"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="62632"/>
 		</Entity>
 		<Entity uid="5808">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="570.02173" z="413.86146"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="41211"/>
 		</Entity>
 		<Entity uid="5809">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="430.52393" z="857.469"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="34874"/>
 		</Entity>
 		<Entity uid="5810">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="292.22046" z="792.91193"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="13957"/>
 		</Entity>
 		<Entity uid="5811">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="562.19312" z="749.10425"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="56832"/>
 		</Entity>
 		<Entity uid="5812">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="484.83741" z="691.5044"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="63645"/>
 		</Entity>
 		<Entity uid="5813">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="1468.92127" z="765.43421"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="59113"/>
 		</Entity>
 		<Entity uid="5814">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="1471.3235" z="905.25678"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="11822"/>
 		</Entity>
 		<Entity uid="5815">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="1490.4745" z="935.67157"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="43609"/>
 		</Entity>
 		<Entity uid="5816">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="1441.60901" z="991.25214"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="23793"/>
 		</Entity>
 		<Entity uid="5817">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="1491.8921" z="993.32795"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="9870"/>
 		</Entity>
 		<Entity uid="5818">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="1474.11109" z="963.96766"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="39323"/>
 		</Entity>
 		<Entity uid="5819">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="1501.08216" z="714.7898"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="37894"/>
 		</Entity>
 		<Entity uid="5820">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="1468.92396" z="659.3188"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="46727"/>
 		</Entity>
 		<Entity uid="5821">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="1496.52259" z="638.22046"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="3233"/>
 		</Entity>
 		<Entity uid="5822">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="1549.27417" z="722.6244"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="60422"/>
 		</Entity>
 		<Entity uid="5823">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="1556.10645" z="751.44861"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="4401"/>
 		</Entity>
 		<Entity uid="5824">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="1563.70118" z="1163.3075"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="25356"/>
 		</Entity>
 		<Entity uid="5825">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="1580.99646" z="1180.91016"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="45778"/>
 		</Entity>
 		<Entity uid="5826">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="1605.85987" z="1226.56312"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="64188"/>
 		</Entity>
 		<Entity uid="5827">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="1608.9828" z="1262.92005"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="21597"/>
 		</Entity>
 		<Entity uid="5828">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="1589.97291" z="1303.7931"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="7367"/>
 		</Entity>
 		<Entity uid="5829">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="1569.29029" z="1326.6172"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="47204"/>
 		</Entity>
 		<Entity uid="5830">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="1542.4585" z="1349.50977"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="21272"/>
 		</Entity>
 		<Entity uid="5831">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="1584.09217" z="1379.0016"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="58625"/>
 		</Entity>
 		<Entity uid="5832">
-			<Template>gaia/fauna_fish_tilapia</Template>
+			<Template>gaia/fish/tilapia</Template>
 			<Player>2</Player>
 			<Position x="1508.13355" z="1293.60804"/>
 			<Orientation y="2.35621"/>
@@ -23028,42 +23028,42 @@
 			<Actor seed="29011"/>
 		</Entity>
 		<Entity uid="5918">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="1148.59253" z="812.59308"/>
 			<Orientation y="2.35622"/>
 			<Actor seed="15580"/>
 		</Entity>
 		<Entity uid="5919">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="1145.21277" z="812.10633"/>
 			<Orientation y="2.35622"/>
 			<Actor seed="63069"/>
 		</Entity>
 		<Entity uid="5920">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="1141.4419" z="811.52967"/>
 			<Orientation y="2.35622"/>
 			<Actor seed="58908"/>
 		</Entity>
 		<Entity uid="5921">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="1137.19825" z="810.70594"/>
 			<Orientation y="2.35622"/>
 			<Actor seed="63860"/>
 		</Entity>
 		<Entity uid="5922">
-			<Template>units/cart_support_female_citizen</Template>
+			<Template>units/cart/support_female_citizen</Template>
 			<Player>2</Player>
 			<Position x="1132.3838" z="809.25239"/>
 			<Orientation y="2.35622"/>
 			<Actor seed="58847"/>
 		</Entity>
 		<Entity uid="5923">
-			<Template>gaia/geology_metal_greek</Template>
+			<Template>gaia/ore/greece_small</Template>
 			<Player>0</Player>
 			<Position x="994.08783" z="1269.22864"/>
 			<Orientation y="-2.03898"/>

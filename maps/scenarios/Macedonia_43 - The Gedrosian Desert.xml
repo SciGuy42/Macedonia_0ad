@@ -12257,7 +12257,7 @@
 			<Actor seed="11439"/>
 		</Entity>
 		<Entity uid="2709">
-			<Template>structures/brit_corral</Template>
+			<Template>structures/brit/corral</Template>
 			<Player>5</Player>
 			<Position x="54.30565" z="887.34516"/>
 			<Orientation y="1.41994"/>
@@ -12288,14 +12288,14 @@
 			<Orientation y="2.8339"/>
 		</Entity>
 		<Entity uid="2737">
-			<Template>structures/brit_corral</Template>
+			<Template>structures/brit/corral</Template>
 			<Player>5</Player>
 			<Position x="58.07883" z="871.33765"/>
 			<Orientation y="1.41994"/>
 			<Actor seed="27202"/>
 		</Entity>
 		<Entity uid="2738">
-			<Template>structures/brit_corral</Template>
+			<Template>structures/brit/corral</Template>
 			<Player>5</Player>
 			<Position x="60.30691" z="856.45978"/>
 			<Orientation y="1.41994"/>
@@ -12512,14 +12512,14 @@
 			<Actor seed="57870"/>
 		</Entity>
 		<Entity uid="2769">
-			<Template>structures/brit_barracks</Template>
+			<Template>structures/brit/barracks</Template>
 			<Player>5</Player>
 			<Position x="106.60181" z="787.6634"/>
 			<Orientation y="1.16506"/>
 			<Actor seed="13679"/>
 		</Entity>
 		<Entity uid="2770">
-			<Template>structures/brit_market</Template>
+			<Template>structures/brit/market</Template>
 			<Player>5</Player>
 			<Position x="125.41704" z="747.21015"/>
 			<Orientation y="1.07401"/>

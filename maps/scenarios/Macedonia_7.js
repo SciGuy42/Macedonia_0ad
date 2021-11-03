@@ -84,8 +84,8 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	if (data.entity == 7889 && data.from == 0 && data.to == 1) //captured fishing village
 	{
 		//spawn some support units
-		TriggerHelper.SpawnUnits(7889,"units/gaul_ship_fishing",3,1);
-		TriggerHelper.SpawnUnits(7889,"units/gaul_ship_trireme",1,1);
+		TriggerHelper.SpawnUnits(7889,"units/gaul/ship_fishing",3,1);
+		TriggerHelper.SpawnUnits(7889,"units/gaul/ship_trireme",1,1);
 		
 		//spawn some villagers
 		TriggerHelper.SpawnUnits(7889,"units/mace/support_female_citizen",5,1);
@@ -97,12 +97,12 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		}
 	}
 	else if (data.entity == 7890 && data.from == 0 && data.to == 1){ //captured docks
-		TriggerHelper.SpawnUnits(7890,"units/gaul_ship_fishing",3,1);
-		TriggerHelper.SpawnUnits(7890,"units/gaul_ship_merchant",1,1);
+		TriggerHelper.SpawnUnits(7890,"units/gaul/ship_fishing",3,1);
+		TriggerHelper.SpawnUnits(7890,"units/gaul/ship_merchant",1,1);
 	}
 	else if (data.entity == 7903 && data.from == 0 && data.to == 1){
-		TriggerHelper.SpawnUnits(7903,"units/gaul_ship_fishing",3,1);
-		TriggerHelper.SpawnUnits(7903,"units/gaul_ship_merchant",1,1);
+		TriggerHelper.SpawnUnits(7903,"units/gaul/ship_fishing",3,1);
+		TriggerHelper.SpawnUnits(7903,"units/gaul/ship_merchant",1,1);
 	}
 	else if (data.entity == 8013 && data.from == 0 && data.to == 1){
 		//trigger cavalry attacks
