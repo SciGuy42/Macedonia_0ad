@@ -59,7 +59,7 @@ Trigger.prototype.PlayerCommandAction = function(data)
 };
 
 
-Trigger.prototype.IntervalActionCavAttack = function(data)
+Trigger.prototype.CavalryAttack = function(data)
 {
 	//check if player 3 is around
 	var all_ents = TriggerHelper.GetEntitiesByPlayer(3);	
@@ -69,17 +69,9 @@ Trigger.prototype.IntervalActionCavAttack = function(data)
 	}
 
 
-	//warn("The OnInterval event happened with the following data:");
-	//warn(uneval(data));
-	this.numberOfTimerTrigger++;
-	if (this.numberOfTimerTrigger >= this.maxNumberOfTimerTrigger)
-		this.DisableTrigger("OnInterval", "IntervalAction");
-
-
 	// get target position
 	var cmpTargetPosition = Engine.QueryInterface(2747, IID_Position).GetPosition2D();
 	
-
 	//check if any idle soldiers are around and ask them to attack
 	for (let i = 0; i < all_ents.length; ++i)
 	{
@@ -115,7 +107,7 @@ Trigger.prototype.IntervalActionCavAttack = function(data)
 		if (!TriggerHelper.IsInWorld(target))
 			continue;
 
-		let targetDistance = DistanceBetweenEntities(full_list[0], target);
+		let targetDistance = PositionHelper.DistanceBetweenEntities(full_list[0], target);
 		if (targetDistance < minDistance)
 		{
 			closestTarget = target;
@@ -183,7 +175,7 @@ Trigger.prototype.IntervalActionCavAttack = function(data)
 	});*/
 };
 
-Trigger.prototype.IntervalAction = function(data)
+Trigger.prototype.InfantryAttack = function(data)
 {
 	//check if player 3 is around
 	var all_ents = TriggerHelper.GetEntitiesByPlayer(3);	
@@ -191,19 +183,10 @@ Trigger.prototype.IntervalAction = function(data)
 	{
 		return;
 	}
-
-
-	//warn("The OnInterval event happened with the following data:");
-	//warn(uneval(data));
-	this.numberOfTimerTrigger++;
-	if (this.numberOfTimerTrigger >= this.maxNumberOfTimerTrigger)
-		this.DisableTrigger("OnInterval", "IntervalAction");
-
-
+	
 	// get target position
 	var cmpTargetPosition = Engine.QueryInterface(2747, IID_Position).GetPosition2D();
 	
-
 	//check if any idle soldiers are around and ask them to attack
 	for (let i = 0; i < all_ents.length; ++i)
 	{
@@ -240,7 +223,7 @@ Trigger.prototype.IntervalAction = function(data)
 		if (!TriggerHelper.IsInWorld(target))
 			continue;
 
-		let targetDistance = DistanceBetweenEntities(full_list[0], target);
+		let targetDistance = PositionHelper.DistanceBetweenEntities(full_list[0], target);
 		if (targetDistance < minDistance)
 		{
 			closestTarget = target;
@@ -315,10 +298,12 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	
 	//player 2
 	let cmpPlayer = QueryPlayerIDInterface(2);
-	let ai_mult = cmpPlayer.GetGatherRateMultiplier();
+
 	
 	let tower_garrison_count = 0;
 	let walltower_garrison_count = 0;
+	
+	/*let ai_mult = cmpPlayer.GetGatherRateMultiplier();
 	
 	let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 	
@@ -368,13 +353,13 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_02");
 		cmpTechnologyManager.ResearchTechnology("armor_infantry_01");
 		cmpTechnologyManager.ResearchTechnology("armor_infantry_02");
-	}
+	}*/
 	
 	//garrison towers
 	let towers_p = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(2), "GarrisonTower").filter(TriggerHelper.IsInWorld);
 	for (let e of towers_p)
 	{
-		let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",tower_garrison_count,2);
+		let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",5,2);
 			
 		for (let a of archers_e)
 		{
@@ -387,7 +372,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	for (let e of towers_w)
 	{
 		//spawn the garrison inside the tower
-		let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",walltower_garrison_count,2);
+		let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",2,2);
 			
 		for (let a of archers_e)
 		{
@@ -429,27 +414,33 @@ Trigger.prototype.RangeAction = function(data)
 
 	cmpTrigger.DoAfterDelay(5 * 1000,"SetDifficultyLevel",null);
 	
+	//schedule first attack
+	cmpTrigger.DoAfterDelay(30 * 1000,"InfantryAttack",null);
+	
+	//schedule cavalry attack
+	cmpTrigger.DoAfterDelay(50 * 1000,"CavalryAttack",null);
+	
 	
 
-	cmpTrigger.RegisterTrigger("OnInterval", "IntervalActionCavAttack", {
+	/*cmpTrigger.RegisterTrigger("OnInterval", "IntervalActionCavAttack", {
 		"enabled": true,
 		"delay": 45 * 1000,
 		"interval": 90 * 1000,
-	});
+	});*/
 
 
-	cmpTrigger.RegisterTrigger("OnInterval", "IntervalAction", {
+	/*cmpTrigger.RegisterTrigger("OnInterval", "IntervalAction", {
 		"enabled": true,
 		"delay": 30 * 1000,
 		"interval": 60 * 1000,
-	});
+	});*/
 
-	cmpTrigger.RegisterTrigger("OnRange", "RangeAction", {
+	/*cmpTrigger.RegisterTrigger("OnRange", "RangeAction", {
 		"entities": cmpTrigger.GetTriggerPoints("A"), // central points to calculate the range circles
 		"players": [1], // only count entities of player 1
 		"maxRange": 40,
 		"requiredComponent": IID_UnitAI, // only count units in range
 		"enabled": true,
-	});
+	});*/
 };
 
