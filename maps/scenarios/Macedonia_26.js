@@ -304,7 +304,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		if (id.classesList.indexOf("Embassy") >= 0)
 		{
 			//captured camp, spawn some balistas
-			TriggerHelper.SpawnUnits(data.entity,"units/mace_mechanical_siege_oxybeles_packed",8,1);
+			TriggerHelper.SpawnUnits(data.entity,"units/mace/siege_oxybeles_packed",8,1);
 			
 			//spawn the princess
 			TriggerHelper.SpawnUnits(data.entity,"units/kush_hero_amanirenas",1,1);
@@ -354,7 +354,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let e of towers_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_infantry",5,owner);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_infantry",5,owner);
 			
 			for (let a of archers_e)
 			{
@@ -653,7 +653,7 @@ Trigger.prototype.AchaeanAttack = function(data)
 		else 
 		{
 			//siege
-			let units_i = TriggerHelper.SpawnUnits(spawn_site,"units/athen_mechanical_siege_oxybeles_packed",1,p);
+			let units_i = TriggerHelper.SpawnUnits(spawn_site,"units/athen/siege_oxybeles_packed",1,p);
 			attackers.push(units_i[0]);
 		}
 	}
@@ -885,7 +885,7 @@ Trigger.prototype.SpawnMercenarySquad = function(data)
 
 
 	//some templates
-	cmpTrigger.squadTemplates = ["units/athen/champion_ranged","units/athen_black_cloak","units/athen/champion_marine","units/athen_champion_infantry","units/athen_thureophoros"];
+	cmpTrigger.squadTemplates = ["units/athen/champion_ranged","units/athen_black_cloak","units/athen/champion_marine","units/athen/champion_infantry","units/athen_thureophoros"];
 
 	//some variables
 	cmpTrigger.mercSpawnProb = 0.95; //probability that mercs are spawned when you destroy an enemy structure

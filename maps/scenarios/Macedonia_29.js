@@ -327,7 +327,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		if (id.classesList.indexOf("Embassy") >= 0)
 		{
 			//captured camp, spawn some balistas
-			TriggerHelper.SpawnUnits(data.entity,"units/mace_mechanical_siege_oxybeles_packed",8,1);
+			TriggerHelper.SpawnUnits(data.entity,"units/mace/siege_oxybeles_packed",8,1);
 			
 			//spawn the princess
 			TriggerHelper.SpawnUnits(data.entity,"units/kush_hero_amanirenas",1,1);
@@ -377,7 +377,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let e of towers_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_infantry",5,owner);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_infantry",5,owner);
 			
 			for (let a of archers_e)
 			{
@@ -804,7 +804,7 @@ Trigger.prototype.SpawnMaPatrol = function(data)
 	let site = pickRandom(structures);
 	
 	//templates, mostly archers
-	let cav_templates = ["units/pers_champion_cavalry","units/pers_champion_cavalry_archer","units/pers_champion_cavalry_archer"];
+	let cav_templates = ["units/pers/champion_cavalry","units/pers/champion_cavalry_archer","units/pers_champion_cavalry_archer"];
 	
 	//see if we have room to spawn more
 	let cmpPlayer = QueryPlayerIDInterface(p);
@@ -853,7 +853,7 @@ Trigger.prototype.SpawnApaPatrol = function(data)
 	let site = pickRandom(structures);
 	
 	//templates, mostly archers
-	let cav_templates = ["units/pers_champion_cavalry","units/pers_champion_cavalry_archer","units/pers_champion_cavalry_archer"];
+	let cav_templates = ["units/pers/champion_cavalry","units/pers/champion_cavalry_archer","units/pers_champion_cavalry_archer"];
 	
 	//see if we have room to spawn more
 	let cmpPlayer = QueryPlayerIDInterface(p);
@@ -914,7 +914,7 @@ Trigger.prototype.SpawnCavalryRaidSquad = function(data)
 	let spawn_site = pickRandom(this.GetTriggerPoints(triggerPointRaid));
 	
 	//templates
-	let cav_templates = ["units/pers_champion_cavalry","units/pers_champion_cavalry_archer","units/pers_champion_cavalry_archer","units/pers_cavalry_javelinist_e","units/pers_cavalry_swordsman_e"];
+	let cav_templates = ["units/pers/champion_cavalry","units/pers/champion_cavalry_archer","units/pers_champion_cavalry_archer","units/pers_cavalry_javelinist_e","units/pers_cavalry_swordsman_e"];
 	
 	let num_attackers = 8;
 	let attackers = [];
@@ -953,7 +953,7 @@ Trigger.prototype.SpawnCatapults = function(data)
 	let p = 1;
 	let spawn_site = pickRandom(this.GetTriggerPoints(triggerPointCatapultSpawn));
 	
-	let units_i = TriggerHelper.SpawnUnits(spawn_site,"units/mace_mechanical_siege_oxybeles_packed",4,p);
+	let units_i = TriggerHelper.SpawnUnits(spawn_site,"units/mace/siege_oxybeles_packed",4,p);
 	
 }
 
@@ -993,7 +993,7 @@ Trigger.prototype.SpawnCavalryAttack = function(data)
 	//warn("spawning num attackers = "+num_attackers);
 	
 	//types
-	let cav_templates = ["units/pers_champion_cavalry","units/pers_champion_cavalry_archer","units/pers_cavalry_javelinist_e","units/pers_cavalry_javelinist_a","units/pers_cavalry_swordsman_e","units/pers_cavalry_swordsman_a","units/pers_cavalry_spearman_e","units/pers_cavalry_spearman_a","units/pers_cavalry_spearman_b"];
+	let cav_templates = ["units/pers/champion_cavalry","units/pers/champion_cavalry_archer","units/pers_cavalry_javelinist_e","units/pers_cavalry_javelinist_a","units/pers_cavalry_swordsman_e","units/pers_cavalry_swordsman_a","units/pers_cavalry_spearman_e","units/pers_cavalry_spearman_a","units/pers_cavalry_spearman_b"];
 	
 	let attackers = [];
 	
@@ -1288,10 +1288,10 @@ Trigger.prototype.GarrisonShips = function(data)
 	for (let u of trade_ships)
 	{
 		//3 cavalry
-		TriggerHelper.SpawnGarrisonedUnits(u, "units/mace_champion_cavalry",3,1);
+		TriggerHelper.SpawnGarrisonedUnits(u, "units/mace/champion_cavalry",3,1);
 		
 		//2 javelin cavalry
-		TriggerHelper.SpawnGarrisonedUnits(u, "units/mace_cavalry_javelinist_e",2,1);
+		TriggerHelper.SpawnGarrisonedUnits(u, "units/mace/cavalry_javelineer_e",2,1);
 	}
 	
 	let fish_ships = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(1), "Ship+!Trader").filter(TriggerHelper.IsInWorld);
@@ -1299,7 +1299,7 @@ Trigger.prototype.GarrisonShips = function(data)
 	for (let u of fish_ships)
 	{
 		//1 infantry
-		TriggerHelper.SpawnGarrisonedUnits(u, "units/athen_champion_infantry",1,1);
+		TriggerHelper.SpawnGarrisonedUnits(u, "units/athen/champion_infantry",1,1);
 	}
 	
 }

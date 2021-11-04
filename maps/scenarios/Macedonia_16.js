@@ -776,15 +776,15 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	
 	
 	//persian soldier types
-	cmpTrigger.pers_inf_templates = ["units/pers_arstibara", "units/pers_champion_infantry","units/pers_champion_infantry", "units/pers_infantry_archer_a","units/pers_infantry_javelinist_a","units/pers_infantry_spearman_b","units/pers_infantry_spearman_a","units/pers_infantry_spearman_e","units/pers_kardakes_hoplite","units/pers_kardakes_hoplite", "units/pers_kardakes_skirmisher"];
-	cmpTrigger.pers_cav_templates = ["units/pers_cavalry_javelinist_a","units/pers_cavalry_spearman_a","units/pers_cavalry_swordsman_a","units/pers_champion_cavalry", "units/pers_champion_cavalry_archer"];
+	cmpTrigger.pers_inf_templates = ["units/pers/arstibara", "units/pers/champion_infantry","units/pers_champion_infantry", "units/pers_infantry_archer_a","units/pers_infantry_javelinist_a","units/pers_infantry_spearman_b","units/pers_infantry_spearman_a","units/pers_infantry_spearman_e","units/pers_kardakes_hoplite","units/pers_kardakes_hoplite", "units/pers/kardakes_skirmisher"];
+	cmpTrigger.pers_cav_templates = ["units/pers_cavalry_javelinist_a","units/pers_cavalry_spearman_a","units/pers_cavalry_swordsman_a","units/pers/champion_cavalry", "units/pers/champion_cavalry_archer"];
 	cmpTrigger.pers_ele_templates = TriggerHelper.GetTemplateNamesByClasses("Champion+Elephant+!Hero", "pers", undefined, undefined, true);
-	cmpTrigger.pers_elite_templates = ["units/pers_arstibara","units/pers_champion_infantry","units/pers_kardakes_hoplite", "units/pers_kardakes_skirmisher","units/pers_infantry_archer_e","units/pers_cavalry_archer_e","units/pers_champion_cavalry_archer","units/pers_champion_cavalry","units/pers_cavalry_swordsman_e"];
+	cmpTrigger.pers_elite_templates = ["units/pers/arstibara","units/pers/champion_infantry","units/pers_kardakes_hoplite", "units/pers/kardakes_skirmisher","units/pers_infantry_archer_e","units/pers_cavalry_archer_e","units/pers/champion_cavalry_archer","units/pers/champion_cavalry","units/pers_cavalry_swordsman_e"];
 	
 	//macedonian
 	cmpTrigger.mace_inf_templates = ["units/mace/champion_infantry_spearman", "units/mace_champion_infantry_a","units/mace/champion_infantry_spearman_02","units/mace/infantry_archer_b","units/mace/infantry_javelineer_b","units/mace/infantry_pikeman_a","units/mace_infantry_slinger_b","units/mace_thorakites", "units/mace_thureophoros","units/athen/champion_ranged","units/athen/champion_marine","units/athen/champion_marine"];
-	cmpTrigger.mace_cav_templates = ["units/mace_champion_cavalry", "units/mace/cavalry_spearman_a","units/mace/cavalry_javelineer_a"];
-	cmpTrigger.mace_siege_templates = ["units/mace_mechanical_siege_oxybeles_packed"];
+	cmpTrigger.mace_cav_templates = ["units/mace/champion_cavalry", "units/mace/cavalry_spearman_a","units/mace/cavalry_javelineer_a"];
+	cmpTrigger.mace_siege_templates = ["units/mace/siege_oxybeles_packed"];
 	
 	//some constants
 	cmpTrigger.persSpawnInterval = 5 * 1000;

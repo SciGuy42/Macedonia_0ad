@@ -1084,7 +1084,7 @@ Trigger.prototype.AchaeanAttack = function(data)
 		else 
 		{
 			//siege
-			let units_i = TriggerHelper.SpawnUnits(spawn_site,"units/athen_mechanical_siege_oxybeles_packed",1,p);
+			let units_i = TriggerHelper.SpawnUnits(spawn_site,"units/athen/siege_oxybeles_packed",1,p);
 			attackers.push(units_i[0]);
 		}
 	}
@@ -1400,7 +1400,7 @@ Trigger.prototype.SpawnAssault = function(data)
 		//spawn unit
 		let triggerPoint = pickRandom(this.GetTriggerPoints(triggerPointNorth));
 		
-		let units_i = TriggerHelper.SpawnUnits(triggerPoint, "units/spart_cavalry_spearman_a", 1, owner);
+		let units_i = TriggerHelper.SpawnUnits(triggerPoint, "units/spart/cavalry_spearman_a", 1, owner);
 		
 		//make it fight
 		this.WalkAndFightClosestTarget(units_i[0],target_player,"CivilCentre");
@@ -1411,7 +1411,7 @@ Trigger.prototype.SpawnAssault = function(data)
 		//spawn unit
 		let triggerPoint = pickRandom(this.GetTriggerPoints(triggerPointNorth));
 		
-		let units_i = TriggerHelper.SpawnUnits(triggerPoint, "units/athen_mechanical_siege_oxybeles_packed", 1, owner);
+		let units_i = TriggerHelper.SpawnUnits(triggerPoint, "units/athen/siege_oxybeles_packed", 1, owner);
 		
 		//make it fight
 		this.WalkAndFightClosestTarget(units_i[0],target_player,"CivilCentre");
@@ -1420,7 +1420,7 @@ Trigger.prototype.SpawnAssault = function(data)
 	//south side -- some infantry
 	let num_infantry = 30;
 	
-	let inf_templates = ["units/spart_champion_infantry_pike","units/spart_champion_infantry_sword", "units/spart_champion_infantry_spear","units/spart_infantry_javelinist_a"];
+	let inf_templates = ["units/spart/champion_infantry_pike","units/spart/champion_infantry_swordsman", "units/spart/champion_infantry_spear","units/spart/infantry_javelineer_a"];
 	
 	for (let i = 0; i < num_infantry; i ++)
 	{
@@ -1927,21 +1927,21 @@ Trigger.prototype.PointIncrement = function(data)
 	cmpTrigger.patrolSizeDefault = 6;
 	cmpTrigger.maxPatrolNumber = 300;
 	cmpTrigger.patrolSpawnTime = 15; //30 seconds
-	cmpTrigger.patrolTemplates = ["units/athen/champion_ranged","units/athen_black_cloak","units/athen/champion_marine","units/athen_champion_infantry","units/athen_thureophoros"];
+	cmpTrigger.patrolTemplates = ["units/athen/champion_ranged","units/athen_black_cloak","units/athen/champion_marine","units/athen/champion_infantry","units/athen_thureophoros"];
 	
-	cmpTrigger.repairTemplates = ["units/athen_infantry_spearman_a","units/athen_infantry_slinger_a","units/athen_infantry_javelinist_a"];
+	cmpTrigger.repairTemplates = ["units/athen/infantry_spearman_a","units/athen/infantry_slinger_a","units/athen/infantry_javelineer_a"];
 	cmpTrigger.slaveTemplates = ["units/gaul_infantry_spearman_a","units/gaul_infantry_spearman_e","units/gaul/infantry_slinger_a","units/gaul/infantry_javelineer_a","units/cart_infantry_swordsman_gaul_a","units/cart_infantry_swordsman_gaul_b","units/brit_war_dog_e"];
 	cmpTrigger.slaveMaxPopulation = 300;
 	cmpTrigger.slaveAssaultInterval = 15;
 	
 	//cavalry attack on siege if it exists
-	cmpTrigger.cavTemplates = ["units/spart_cavalry_spearman_e","units/athen_cavalry_swordsman_e","units/pers_champion_cavalry"];
+	cmpTrigger.cavTemplates = ["units/spart_cavalry_spearman_e","units/athen_cavalry_swordsman_e","units/pers/champion_cavalry"];
 	cmpTrigger.cavLimit = 20;
 	cmpTrigger.cavSquadSize = 6;
 	cmpTrigger.cavAttackInterval = 30;
 	
 	//scythian cavalry attack at the end
-	cmpTrigger.scythianCavTemplates = ["units/pers_cavalry_archer_a","units/pers_cavalry_archer_e","units/pers_cavalry_javelinist_e","units/pers_champion_cavalry","units/pers_champion_cavalry","units/pers_champion_cavalry_archer","units/pers_cavalry_spearman_a","units/pers_cavalry_spearman_e","units/pers_cavalry_swordsman_a","units/pers_cavalry_swordsman_e","units/pers_cavalry_swordsman_e"];
+	cmpTrigger.scythianCavTemplates = ["units/pers_cavalry_archer_a","units/pers_cavalry_archer_e","units/pers_cavalry_javelinist_e","units/pers/champion_cavalry","units/pers_champion_cavalry","units/pers/champion_cavalry_archer","units/pers_cavalry_spearman_a","units/pers_cavalry_spearman_e","units/pers_cavalry_swordsman_a","units/pers_cavalry_swordsman_e","units/pers_cavalry_swordsman_e"];
 	cmpTrigger.scythianWaveInterval = 20; //every 20 seconds
 	cmpTrigger.scythianWaveSize = 35;
 	cmpTrigger.scythianPopCap = 300;
@@ -1971,13 +1971,13 @@ Trigger.prototype.PointIncrement = function(data)
 	cmpTrigger.currentStone = 0;
 	cmpTrigger.currentMetal = 0;
 	
-	cmpTrigger.foodTemplates = ["units/athen_infantry_spearman_b","units/mace/infantry_pikeman_a","units/mace/cavalry_spearman_a","units/mace/infantry_pikeman_a","units/athen_infantry_spearman_a"];
+	cmpTrigger.foodTemplates = ["units/athen_infantry_spearman_b","units/mace/infantry_pikeman_a","units/mace/cavalry_spearman_a","units/mace/infantry_pikeman_a","units/athen/infantry_spearman_a"];
 	cmpTrigger.foodUnitPrice = 18;
 	cmpTrigger.woodTemplates = ["units/mace/infantry_javelineer_a","units/mace/cavalry_javelineer_a","units/mace/infantry_archer_b","units/mace/infantry_archer_a","units/mace/infantry_slinger_e","units/mace/infantry_slinger_a"];
 	cmpTrigger.woodUnitPrice = 25;
-	cmpTrigger.stoneTemplates = ["units/athen_mechanical_siege_oxybeles_packed","units/mace/siege_lithobolos_packed","units/mace/siege_ram"];
+	cmpTrigger.stoneTemplates = ["units/athen/siege_oxybeles_packed","units/mace/siege_lithobolos_packed","units/mace/siege_ram"];
 	cmpTrigger.stoneUnitPrice = 170;
-	cmpTrigger.metalTemplates = ["units/athen/champion_ranged","units/athen/champion_marine","units/mace/champion_infantry_spearman","units/mace/champion_infantry_spearman_02","units/mace_champion_cavalry","units/mace_thorakites","units/mace_thureophoros"];
+	cmpTrigger.metalTemplates = ["units/athen/champion_ranged","units/athen/champion_marine","units/mace/champion_infantry_spearman","units/mace/champion_infantry_spearman_02","units/mace/champion_cavalry","units/mace_thorakites","units/mace_thureophoros"];
 	cmpTrigger.metalUnitPrice = 40;
 	
 	//healer spawn probability

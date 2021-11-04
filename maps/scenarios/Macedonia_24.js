@@ -423,7 +423,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let e of towers_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_infantry",5,p);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_infantry",5,p);
 			
 			for (let a of archers_e)
 			{
@@ -978,7 +978,7 @@ Trigger.prototype.SpawnAssault = function(data)
 		//spawn unit
 		let triggerPoint = pickRandom(this.GetTriggerPoints(triggerPointNorth));
 		
-		let units_i = TriggerHelper.SpawnUnits(triggerPoint, "units/spart_cavalry_spearman_a", 1, owner);
+		let units_i = TriggerHelper.SpawnUnits(triggerPoint, "units/spart/cavalry_spearman_a", 1, owner);
 		
 		//make it fight
 		this.WalkAndFightClosestTarget(units_i[0],target_player,"CivilCentre");
@@ -989,7 +989,7 @@ Trigger.prototype.SpawnAssault = function(data)
 		//spawn unit
 		let triggerPoint = pickRandom(this.GetTriggerPoints(triggerPointNorth));
 		
-		let units_i = TriggerHelper.SpawnUnits(triggerPoint, "units/athen_mechanical_siege_oxybeles_packed", 1, owner);
+		let units_i = TriggerHelper.SpawnUnits(triggerPoint, "units/athen/siege_oxybeles_packed", 1, owner);
 		
 		//make it fight
 		this.WalkAndFightClosestTarget(units_i[0],target_player,"CivilCentre");
@@ -998,7 +998,7 @@ Trigger.prototype.SpawnAssault = function(data)
 	//south side -- some infantry
 	let num_infantry = 30;
 	
-	let inf_templates = ["units/spart_champion_infantry_pike","units/spart_champion_infantry_sword", "units/spart_champion_infantry_spear","units/spart_infantry_javelinist_a"];
+	let inf_templates = ["units/spart/champion_infantry_pike","units/spart/champion_infantry_swordsman", "units/spart/champion_infantry_spear","units/spart/infantry_javelineer_a"];
 	
 	for (let i = 0; i < num_infantry; i ++)
 	{

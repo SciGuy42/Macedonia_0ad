@@ -77448,49 +77448,49 @@
 			<Actor seed="43870"/>
 		</Entity>
 		<Entity uid="13611">
-			<Template>units/mace_hero_alexander</Template>
+			<Template>units/mace/hero_alexander_iii</Template>
 			<Player>1</Player>
 			<Position x="208.87778" z="672.26429"/>
 			<Orientation y="-0.61773"/>
 			<Actor seed="4370"/>
 		</Entity>
 		<Entity uid="13620">
-			<Template>units/mace_cavalry_javelinist_e</Template>
+			<Template>units/mace/cavalry_javelineer_e</Template>
 			<Player>1</Player>
 			<Position x="191.23606" z="670.3266"/>
 			<Orientation y="-0.5066"/>
 			<Actor seed="32982"/>
 		</Entity>
 		<Entity uid="13621">
-			<Template>units/mace_cavalry_javelinist_e</Template>
+			<Template>units/mace/cavalry_javelineer_e</Template>
 			<Player>1</Player>
 			<Position x="193.18235" z="671.46674"/>
 			<Orientation y="-0.5066"/>
 			<Actor seed="56217"/>
 		</Entity>
 		<Entity uid="13622">
-			<Template>units/mace_cavalry_javelinist_e</Template>
+			<Template>units/mace/cavalry_javelineer_e</Template>
 			<Player>1</Player>
 			<Position x="195.12989" z="672.54987"/>
 			<Orientation y="-0.5066"/>
 			<Actor seed="38634"/>
 		</Entity>
 		<Entity uid="13623">
-			<Template>units/mace_cavalry_javelinist_e</Template>
+			<Template>units/mace/cavalry_javelineer_e</Template>
 			<Player>1</Player>
 			<Position x="197.16703" z="673.8874"/>
 			<Orientation y="-0.5066"/>
 			<Actor seed="18094"/>
 		</Entity>
 		<Entity uid="13624">
-			<Template>units/mace_cavalry_javelinist_e</Template>
+			<Template>units/mace/cavalry_javelineer_e</Template>
 			<Player>1</Player>
 			<Position x="199.05857" z="674.83423"/>
 			<Orientation y="-0.5066"/>
 			<Actor seed="10823"/>
 		</Entity>
 		<Entity uid="13625">
-			<Template>units/mace_cavalry_javelinist_e</Template>
+			<Template>units/mace/cavalry_javelineer_e</Template>
 			<Player>1</Player>
 			<Position x="200.93042" z="675.8216"/>
 			<Orientation y="-0.5066"/>

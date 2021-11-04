@@ -169,7 +169,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		if (id.classesList.indexOf("Embassy") >= 0)
 		{
 			//captured camp, spawn some balistas
-			TriggerHelper.SpawnUnits(data.entity,"units/mace_mechanical_siege_oxybeles_packed",8,1);
+			TriggerHelper.SpawnUnits(data.entity,"units/mace/siege_oxybeles_packed",8,1);
 			
 			//spawn the princess
 			TriggerHelper.SpawnUnits(data.entity,"units/kush_hero_amanirenas",1,1);

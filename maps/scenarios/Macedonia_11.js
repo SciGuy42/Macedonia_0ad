@@ -947,7 +947,7 @@ Trigger.prototype.SpecialGreekAttack = function(data)
 	let num_siege = Math.floor(num_attackers/6.0)+1;
 	for (let i = 0; i < num_siege; ++i)
 	{
-		let units_i = TriggerHelper.SpawnUnits(triggerPoint,"units/athen_mechanical_siege_oxybeles_packed",1,6);
+		let units_i = TriggerHelper.SpawnUnits(triggerPoint,"units/athen/siege_oxybeles_packed",1,6);
 		attackers.push(units_i[0]);
 	}
 	
@@ -1149,10 +1149,10 @@ Trigger.prototype.UpdatePoints = function(data)
 	cmpTrigger.garrisonCount = 5;
 	cmpTrigger.points_trickle = 100;
 	
-	cmpTrigger.persianCavTypes = ["units/pers_cavalry_spearman_a","units/pers_cavalry_javelinist_a","units/pers_champion_cavalry_archer","units/pers_cavalry_archer_a","units/sele_champion_cavalry"];
+	cmpTrigger.persianCavTypes = ["units/pers_cavalry_spearman_a","units/pers_cavalry_javelinist_a","units/pers/champion_cavalry_archer","units/pers_cavalry_archer_a","units/sele_champion_cavalry"];
 
-	cmpTrigger.greekInfTypes = ["units/athen/champion_ranged","units/athen/champion_marine","units/athen_champion_infantry","units/athen_champion_ranged_gastraphetes","units/thebes_sacred_band_hoplitai"];
-	cmpTrigger.greekSiegeTypes = ["units/athen_mechanical_siege_oxybeles_packed","units/athen_mechanical_siege_oxybeles_packed","units/mace/siege_lithobolos_packed"];
+	cmpTrigger.greekInfTypes = ["units/athen/champion_ranged","units/athen/champion_marine","units/athen/champion_infantry","units/athen_champion_ranged_gastraphetes","units/thebes_sacred_band_hoplitai"];
+	cmpTrigger.greekSiegeTypes = ["units/athen/siege_oxybeles_packed","units/athen_mechanical_siege_oxybeles_packed","units/mace/siege_lithobolos_packed"];
 
 	//list of enemy players and other constants
 	cmpTrigger.enemies = [2,3,4,5,6];

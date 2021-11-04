@@ -474,7 +474,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of forts_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/pers_arstibara",20,owner);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/pers/arstibara",20,owner);
 			
 			for (let a of archers_e)
 			{
@@ -489,7 +489,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of towers_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/pers_arstibara",5,owner);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/pers/arstibara",5,owner);
 			
 			for (let a of archers_e)
 			{
@@ -504,7 +504,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let e of towers_w)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/pers_arstibara",2,owner);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/pers/arstibara",2,owner);
 				
 			for (let a of archers_e)
 			{
@@ -1045,19 +1045,19 @@ Trigger.prototype.LevelAdvance = function(data)
 	{
 		squad_templates = ["units/maur_infantry_spearman_e","units/maur_infantry_spearman_e","units/maur_infantry_swordsman_e","units/maur_infantry_swordsman_e","units/maur_infantry_archer_e","units/maur_champion_maiden","units/maur_champion_infantry","units/maur_elephant_archer_e","units/maur_cavalry_javelinist_e"];
 		wave_templates = squad_templates;
-		siege_templates = ["units/maur_champion_elephant","units/maur_champion_elephant","units/mace_mechanical_siege_oxybeles_packed"];
+		siege_templates = ["units/maur_champion_elephant","units/maur_champion_elephant","units/mace/siege_oxybeles_packed"];
 		
 	}
 	else if (this.currentLevel == 3)
 	{
 		squad_templates = ["units/maur_champion_infantry","units/maur_infantry_spearman_e","units/maur_infantry_swordsman_e","units/maur_champion_maiden","units/maur_infantry_archer_e","units/maur_champion_maiden","units/maur_champion_infantry","units/maur_champion_maiden_archer","units/maur_elephant_archer_e","units/maur_champion_elephant","units/maur_cavalry_javelinist_e","units/maur_cavalry_swordsman_e"];
 		wave_templates = squad_templates;
-		siege_templates = ["units/maur_champion_elephant","units/mace_mechanical_siege_oxybeles_packed","units/pers_mechanical_siege_ram"];
+		siege_templates = ["units/maur_champion_elephant","units/mace/siege_oxybeles_packed","units/pers_mechanical_siege_ram"];
 	}
 	else {
 		squad_templates = ["units/maur_champion_infantry","units/maur_infantry_spearman_e","units/maur_infantry_swordsman_e","units/maur_champion_maiden","units/maur_infantry_archer_e","units/maur_champion_maiden","units/maur_champion_infantry","units/maur_champion_maiden_archer","units/maur_elephant_archer_e","units/maur_champion_elephant","units/maur_cavalry_javelinist_e","units/maur_cavalry_swordsman_e","units/maur_champion_chariot","units/maur_champion_chariot"];
 		wave_templates = squad_templates;
-		siege_templates = ["units/maur_champion_elephant","units/mace_mechanical_siege_oxybeles_packed","units/pers_mechanical_siege_ram","units/mace/siege_lithobolos_packed"];
+		siege_templates = ["units/maur_champion_elephant","units/mace/siege_oxybeles_packed","units/pers_mechanical_siege_ram","units/mace/siege_lithobolos_packed"];
 	}
 	
 	//step 3 -- decide spawn sites

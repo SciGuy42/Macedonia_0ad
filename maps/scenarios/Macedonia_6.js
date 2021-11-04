@@ -433,8 +433,8 @@ Trigger.prototype.GarrisonAction = function(data)
 	cmpTrigger.spawn_attack_bonus = 2;
 	
 	//greek mercenaries variables
-	cmpTrigger.greekInfTypes = ["units/athen_cavalry_javelinist_a","units/athen_cavalry_swordsman_a","units/athen/champion_ranged","units/athen/champion_marine","units/athen_champion_infantry","units/athen_champion_ranged_gastraphetes","units/thebes_sacred_band_hoplitai"];
-	cmpTrigger.greekSiegeTypes = ["units/athen_mechanical_siege_oxybeles_packed","units/mace/siege_lithobolos_packed"];
+	cmpTrigger.greekInfTypes = ["units/athen/cavalry_javelineer_a","units/athen/cavalry_swordsman_a","units/athen/champion_ranged","units/athen/champion_marine","units/athen/champion_infantry","units/athen_champion_ranged_gastraphetes","units/thebes_sacred_band_hoplitai"];
+	cmpTrigger.greekSiegeTypes = ["units/athen/siege_oxybeles_packed","units/mace/siege_lithobolos_packed"];
 	
 	cmpTrigger.greek_camps = [3802,4578];
 	cmpTrigger.siege_prob = 0.1;

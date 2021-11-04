@@ -839,7 +839,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	cmpTrigger.cavTypes = ["units/athen_cavalry_javelinist_e","units/athen/cavalry_swordsman_b","units/spart_cavalry_spearman_e"];
 	
 	//list of reinforcements
-	cmpTrigger.reinforceTypes = ["units/mace_champion_cavalry","units/athen_black_cloak","units/mace/champion_infantry_spearman","units/mace/infantry_archer_a","units/mace/infantry_slinger_a","units/mace/cavalry_javelineer_a"];
+	cmpTrigger.reinforceTypes = ["units/mace/champion_cavalry","units/athen_black_cloak","units/mace/champion_infantry_spearman","units/mace/infantry_archer_a","units/mace/infantry_slinger_a","units/mace/cavalry_javelineer_a"];
 	
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalDefenderSpawnAction", {
 		"enabled": true,

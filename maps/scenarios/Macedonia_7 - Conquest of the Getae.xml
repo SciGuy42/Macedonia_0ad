@@ -42050,7 +42050,7 @@
 			<Actor seed="49176"/>
 		</Entity>
 		<Entity uid="7872">
-			<Template>units/mace_hero_alexander</Template>
+			<Template>units/mace/hero_alexander_iii</Template>
 			<Player>1</Player>
 			<Position x="298.61963" z="422.68433"/>
 			<Orientation y="2.00635"/>
@@ -44476,7 +44476,7 @@
 			<Actor seed="62750"/>
 		</Entity>
 		<Entity uid="8266">
-			<Template>units/athen_champion_infantry</Template>
+			<Template>units/athen/champion_infantry</Template>
 			<Player>7</Player>
 			<Position x="617.63526" z="73.59128"/>
 			<Orientation y="2.35621"/>

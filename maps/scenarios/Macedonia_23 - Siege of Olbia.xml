@@ -40356,7 +40356,7 @@
 			<Actor seed="26770"/>
 		</Entity>
 		<Entity uid="8835">
-			<Template>structures/athen_workshop</Template>
+			<Template>structures/athen/arsenal</Template>
 			<Player>2</Player>
 			<Position x="1183.32972" z="1300.33252"/>
 			<Orientation y="-1.85225"/>
@@ -42122,35 +42122,35 @@
 			<Actor seed="24454"/>
 		</Entity>
 		<Entity uid="9119">
-			<Template>units/mace_champion_cavalry</Template>
+			<Template>units/mace/champion_cavalry</Template>
 			<Player>1</Player>
 			<Position x="314.18287" z="238.98563"/>
 			<Orientation y="1.83529"/>
 			<Actor seed="24426"/>
 		</Entity>
 		<Entity uid="9120">
-			<Template>units/mace_champion_cavalry</Template>
+			<Template>units/mace/champion_cavalry</Template>
 			<Player>1</Player>
 			<Position x="314.69101" z="241.32151"/>
 			<Orientation y="1.83529"/>
 			<Actor seed="13611"/>
 		</Entity>
 		<Entity uid="9121">
-			<Template>units/mace_champion_cavalry</Template>
+			<Template>units/mace/champion_cavalry</Template>
 			<Player>1</Player>
 			<Position x="315.44355" z="243.70664"/>
 			<Orientation y="1.83529"/>
 			<Actor seed="50112"/>
 		</Entity>
 		<Entity uid="9122">
-			<Template>units/mace_champion_cavalry</Template>
+			<Template>units/mace/champion_cavalry</Template>
 			<Player>1</Player>
 			<Position x="315.80799" z="246.49299"/>
 			<Orientation y="1.83529"/>
 			<Actor seed="1572"/>
 		</Entity>
 		<Entity uid="9123">
-			<Template>units/mace_champion_cavalry</Template>
+			<Template>units/mace/champion_cavalry</Template>
 			<Player>1</Player>
 			<Position x="315.9947" z="249.3964"/>
 			<Orientation y="1.83529"/>
@@ -42711,7 +42711,7 @@
 			<Actor seed="64252"/>
 		</Entity>
 		<Entity uid="9235">
-			<Template>structures/athen_gymnasion</Template>
+			<Template>structures/athen/gymnasium</Template>
 			<Player>2</Player>
 			<Position x="1403.38343" z="1147.82728"/>
 			<Orientation y="4.31456"/>

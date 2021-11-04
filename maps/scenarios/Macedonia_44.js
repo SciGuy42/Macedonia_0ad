@@ -803,7 +803,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 					
 					let site = pickRandom(ccs);
 					
-					let templates = ["units/pers_infantry_archer_e","units/pers_infantry_spearman_e","units/pers_champion_infantry","units/pers_kardakes_hoplite","units/pers_kardakes_skirmisher"];
+					let templates = ["units/pers_infantry_archer_e","units/pers_infantry_spearman_e","units/pers/champion_infantry","units/pers_kardakes_hoplite","units/pers/kardakes_skirmisher"];
 		
 					//warn(uneval(id.classesList));
 					
@@ -987,7 +987,7 @@ Trigger.prototype.IntervalSpawnPersianGuards = function(data)
 				if (patrol_sites.length >= 3)
 				{
 				
-					let inf_templates = ["units/pers_champion_infantry","units/pers_champion_elephant","units/pers_arstibara","units/pers_infantry_javelinist_e","units/pers_infantry_archer_e","units/pers_infantry_spearman_e","units/pers_kardakes_hoplite","units/pers_kardakes_skirmisher"];
+					let inf_templates = ["units/pers/champion_infantry","units/pers/champion_elephant","units/pers/arstibara","units/pers_infantry_javelinist_e","units/pers_infantry_archer_e","units/pers_infantry_spearman_e","units/pers_kardakes_hoplite","units/pers/kardakes_skirmisher"];
 			
 					
 					//pick patrol sites
@@ -1177,7 +1177,7 @@ Trigger.prototype.SpawnStructureDestroyedResponseAttack = function(target_pos)
 		for (let i = 0; i < num_waves; i ++)
 		{
 			
-			let templates = ["units/pers_champion_infantry","units/pers_infantry_archer_e","units/pers_infantry_javelinist_e","units/pers_kardakes_hoplite","units/pers_arstibara"];
+			let templates = ["units/pers/champion_infantry","units/pers_infantry_archer_e","units/pers_infantry_javelinist_e","units/pers_kardakes_hoplite","units/pers/arstibara"];
 			
 			let base_size = 18;
 			let size_increase = 5;
@@ -1250,16 +1250,16 @@ Trigger.prototype.IntervalSpawnGroundAttack = function(data)
 			}
 			else if (i == 1)
 			{
-				templates = ["units/pers_infantry_spearman_e","units/pers_infantry_javelinist_e","units/pers_infantry_archer_e","units/pers_cavalry_spearman_e","units/pers_cavalry_swordsman_e","units/pers_cavalry_javelinist_e","units/pers_champion_infantry","units/pers_champion_infantry","units/pers_cavalry_archer_a"];
+				templates = ["units/pers_infantry_spearman_e","units/pers_infantry_javelinist_e","units/pers_infantry_archer_e","units/pers_cavalry_spearman_e","units/pers_cavalry_swordsman_e","units/pers_cavalry_javelinist_e","units/pers/champion_infantry","units/pers_champion_infantry","units/pers_cavalry_archer_a"];
 				
-				siege_templates = ["units/pers_champion_elephant"];
+				siege_templates = ["units/pers/champion_elephant"];
 				
 			}
 			else if (i == 2)
 			{
-				templates = ["units/pers_kardakes_hoplite","units/pers_kardakes_skirmisher","units/pers_infantry_archer_e","units/pers_champion_cavalry","units/pers_cavalry_swordsman_e","units/pers_cavalry_javelinist_e","units/pers_champion_infantry","units/pers_cavalry_archer_e"];
+				templates = ["units/pers_kardakes_hoplite","units/pers/kardakes_skirmisher","units/pers_infantry_archer_e","units/pers/champion_cavalry","units/pers_cavalry_swordsman_e","units/pers_cavalry_javelinist_e","units/pers/champion_infantry","units/pers_cavalry_archer_e"];
 				
-				siege_templates = ["units/pers_champion_elephant","units/pers_mechanical_siege_ram"];
+				siege_templates = ["units/pers/champion_elephant","units/pers_mechanical_siege_ram"];
 			}
 			
 			templates = templates.concat(siege_templates);
@@ -1392,7 +1392,7 @@ Trigger.prototype.SpawnDesertRaiders = function(data)
 	let attackers = [];
 	for (let i = 0; i < 28; i ++)
 	{
-		let templates = ["units/pers_champion_infantry","units/pers_infantry_archer_a","units/pers_infantry_javelinist_a","units/pers_kardakes_hoplite","units/pers_infantry_spearman_e","units/pers_kardakes_skirmisher","units/pers_arstibara","units/pers_infantry_spearman_b"];
+		let templates = ["units/pers/champion_infantry","units/pers_infantry_archer_a","units/pers_infantry_javelinist_a","units/pers_kardakes_hoplite","units/pers_infantry_spearman_e","units/pers/kardakes_skirmisher","units/pers/arstibara","units/pers_infantry_spearman_b"];
 		
 		//spawn the unit
 		let unit_i = TriggerHelper.SpawnUnits(pickRandom(spawn_sites),pickRandom(templates),1,p);
@@ -1493,7 +1493,7 @@ Trigger.prototype.QuestBarracksCaptivesComplete = function(data)
 	
 
 	let unit1 = TriggerHelper.SpawnUnits(spawn_site,"units/pers_hero_xerxes",1,1);
-	let unit2= TriggerHelper.SpawnUnits(spawn_site,"units/ptol_hero_cleopatra",1,1);
+	let unit2= TriggerHelper.SpawnUnits(spawn_site,"units/ptol/hero_cleopatra_vii",1,1);
 	
 	//destroy barracks
 	let health_s = Engine.QueryInterface(site, IID_Health);
@@ -1565,7 +1565,7 @@ Trigger.prototype.RangeActionGreekColony = function(data)
 			let data = {};
 			data.p = 7;
 			data.site = spawn_site;
-			data.templates = ["units/pers_champion_infantry","units/pers_champion_elephant","units/pers_arstibara","units/pers_infantry_javelinist_e","units/pers_infantry_archer_e","units/pers_infantry_spearman_e","units/pers_kardakes_hoplite","units/pers_kardakes_skirmisher"];
+			data.templates = ["units/pers/champion_infantry","units/pers/champion_elephant","units/pers/arstibara","units/pers_infantry_javelinist_e","units/pers_infantry_archer_e","units/pers_infantry_spearman_e","units/pers_kardakes_hoplite","units/pers/kardakes_skirmisher"];
 			data.size = 12; 
 			data.target_class = "Unit";
 			data.target_player = 1;
@@ -1671,7 +1671,7 @@ Trigger.prototype.PlayerCommandAction = function(data)
 					//start attack
 					let site = this.GetTriggerPoints(triggerPointsBarracksCaptives)[0];
 	
-					let templates = ["units/pers_infantry_archer_e","units/pers_infantry_spearman_e","units/pers_champion_infantry","units/pers_kardakes_hoplite","units/pers_kardakes_skirmisher"];
+					let templates = ["units/pers_infantry_archer_e","units/pers_infantry_spearman_e","units/pers/champion_infantry","units/pers_kardakes_hoplite","units/pers/kardakes_skirmisher"];
 		
 					//warn(uneval(id.classesList));
 					
@@ -1799,7 +1799,7 @@ Trigger.prototype.SpawnElephantAmbush = function(data)
 	let k = 1;
 	let site = this.GetTriggerPoints(triggerPointsElephantAmbush)[0];
 		
-	let units = TriggerHelper.SpawnUnits(site,"units/pers_champion_elephant",k,p);
+	let units = TriggerHelper.SpawnUnits(site,"units/pers/champion_elephant",k,p);
 		
 	//make them attack
 	for (let u of units)
@@ -1917,7 +1917,7 @@ Trigger.prototype.RangeActionMercs = function(data)
 
 	if (this.mercsAvailable == true && data.added.length > 0)
 	{
-		let templates = ["units/pers_champion_cavalry_archer"];
+		let templates = ["units/pers/champion_cavalry_archer"];
 		
 	
 		//decide on offer
@@ -2039,7 +2039,7 @@ Trigger.prototype.SpawnPersianRebelGuards = function(data)
 			let patrol_sites = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p),"Structure").filter(TriggerHelper.IsInWorld);
 			let spawn_sites = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p),"MercenaryCamp").filter(TriggerHelper.IsInWorld);
 			
-			let inf_templates = ["units/pers_champion_infantry","units/pers_champion_elephant","units/pers_arstibara","units/pers_infantry_javelinist_e","units/pers_infantry_archer_e","units/pers_infantry_spearman_e","units/pers_kardakes_hoplite","units/pers_kardakes_skirmisher"];
+			let inf_templates = ["units/pers/champion_infantry","units/pers/champion_elephant","units/pers/arstibara","units/pers_infantry_javelinist_e","units/pers_infantry_archer_e","units/pers_infantry_spearman_e","units/pers_kardakes_hoplite","units/pers/kardakes_skirmisher"];
 			
 			//pick patrol sites
 			let sites = [pickRandom(patrol_sites),pickRandom(patrol_sites),pickRandom(patrol_sites),pickRandom(patrol_sites)];
@@ -2135,7 +2135,7 @@ Trigger.prototype.SpawnTowerGuards = function(data)
 			let patrol_sites = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p),"StoneTower").filter(TriggerHelper.IsInWorld);
 			
 		
-			let inf_templates = ["units/pers_champion_infantry"];
+			let inf_templates = ["units/pers/champion_infantry"];
 					
 			//pick patrol sites
 			let sites = [pickRandom(patrol_sites),pickRandom(patrol_sites),pickRandom(patrol_sites),pickRandom(patrol_sites),pickRandom(patrol_sites)];
@@ -2237,7 +2237,7 @@ Trigger.prototype.SpawnFortressAttack = function(data)
 		return;
 	}
 	
-	let templates = ["units/pers_infantry_archer_e","units/pers_infantry_spearman_e","units/pers_champion_infantry","units/pers_kardakes_hoplite","units/pers_kardakes_skirmisher"];
+	let templates = ["units/pers_infantry_archer_e","units/pers_infantry_spearman_e","units/pers/champion_infantry","units/pers_kardakes_hoplite","units/pers/kardakes_skirmisher"];
 	
 	let attackers = [];	
 	for (let i = 0; i < size; i++)
@@ -2480,12 +2480,12 @@ Trigger.prototype.SpawnTravelingArmySquad = function(data)
 	squad_units = squad_units.concat(units_melee);
 	
 	//ranged
-	let ranged_template = pickRandom(["units/mace/infantry_slinger_e","units/mace_infantry_javelinist_e","units/mace/infantry_archer_e"]);		
+	let ranged_template = pickRandom(["units/mace/infantry_slinger_e","units/mace/infantry_javelineer_e","units/mace/infantry_archer_e"]);		
 	let units_ranged= TriggerHelper.SpawnUnits(site,ranged_template,10,p);
 	squad_units = squad_units.concat(units_ranged);
 	
 	//cavalry
-	let cav_template = pickRandom(["units/mace_champion_cavalry","units/mace_cavalry_javelinist_e","units/mace_cavalry_spearman_e"]);		
+	let cav_template = pickRandom(["units/mace/champion_cavalry","units/mace/cavalry_javelineer_e","units/mace_cavalry_spearman_e"]);		
 	let units_cav= TriggerHelper.SpawnUnits(site,cav_template,6,p);
 	squad_units = squad_units.concat(units_cav);
 	

@@ -810,12 +810,12 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	cmpTrigger.DoAfterDelay(5 * 1000,"SpawnInitialPatrol",null);
 
 	
-	cmpTrigger.persianCavTypes = ["units/pers_cavalry_spearman_a","units/pers_cavalry_javelinist_a","units/pers_champion_cavalry_archer","units/pers_cavalry_archer_a","units/sele_champion_cavalry"];
+	cmpTrigger.persianCavTypes = ["units/pers_cavalry_spearman_a","units/pers_cavalry_javelinist_a","units/pers/champion_cavalry_archer","units/pers_cavalry_archer_a","units/sele_champion_cavalry"];
 	cmpTrigger.persAttackLevel = 15;
 	
 	
-	cmpTrigger.greekInfTypes = ["units/athen/champion_ranged","units/athen/champion_marine","units/athen/champion_marine","units/athen_champion_infantry","units/athen_champion_infantry","units/athen_champion_ranged_gastraphetes","units/thebes_sacred_band_hoplitai"];
-	cmpTrigger.greekSiegeTypes = ["units/athen_mechanical_siege_oxybeles_packed","units/athen_mechanical_siege_oxybeles_packed","units/mace/siege_lithobolos_packed"];
+	cmpTrigger.greekInfTypes = ["units/athen/champion_ranged","units/athen/champion_marine","units/athen/champion_marine","units/athen/champion_infantry","units/athen/champion_infantry","units/athen_champion_ranged_gastraphetes","units/thebes_sacred_band_hoplitai"];
+	cmpTrigger.greekSiegeTypes = ["units/athen/siege_oxybeles_packed","units/athen_mechanical_siege_oxybeles_packed","units/mace/siege_lithobolos_packed"];
 	cmpTrigger.spawn_ship_templates = TriggerHelper.GetTemplateNamesByClasses("Warship", "athen", undefined, undefined, true);
 
 	//whether allied inasion is under way

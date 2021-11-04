@@ -19818,7 +19818,7 @@
 			<Orientation y="-0.3746"/>
 		</Entity>
 		<Entity uid="4089">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="894.3797" z="1403.6692"/>
 			<Orientation y="-0.475"/>
@@ -19836,7 +19836,7 @@
 			<Orientation y="-0.3426"/>
 		</Entity>
 		<Entity uid="4092">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="882.34131" z="727.28016"/>
 			<Orientation y="-1.28396"/>
@@ -19848,7 +19848,7 @@
 			<Orientation y="0.65528"/>
 		</Entity>
 		<Entity uid="4094">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="1371.38636" z="234.92566"/>
 			<Orientation y="-1.54326"/>
@@ -19860,19 +19860,19 @@
 			<Orientation y="0.08866"/>
 		</Entity>
 		<Entity uid="4096">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="566.71607" z="923.59034"/>
 			<Orientation y="0.29888"/>
 		</Entity>
 		<Entity uid="4097">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="320.43744" z="395.35804"/>
 			<Orientation y="-3.80134"/>
 		</Entity>
 		<Entity uid="4098">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="912.13666" z="1510.27485"/>
 			<Orientation y="-0.19283"/>
@@ -19884,13 +19884,13 @@
 			<Orientation y="-3.01626"/>
 		</Entity>
 		<Entity uid="4100">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="1492.97608" z="645.78064"/>
 			<Orientation y="0.37632"/>
 		</Entity>
 		<Entity uid="4101">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="90.97614" z="1269.58466"/>
 			<Orientation y="-3.07102"/>
@@ -19908,7 +19908,7 @@
 			<Orientation y="1.35886"/>
 		</Entity>
 		<Entity uid="4104">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="309.37781" z="971.23841"/>
 			<Orientation y="0.23278"/>
@@ -19926,7 +19926,7 @@
 			<Orientation y="-0.06095"/>
 		</Entity>
 		<Entity uid="4107">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="1557.88074" z="1528.40473"/>
 			<Orientation y="-4.44591"/>
@@ -19944,13 +19944,13 @@
 			<Orientation y="-2.66587"/>
 		</Entity>
 		<Entity uid="4110">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="1791.91907" z="512.07667"/>
 			<Orientation y="-0.9737"/>
 		</Entity>
 		<Entity uid="4111">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="1204.2591" z="1616.4032"/>
 			<Orientation y="-2.25403"/>
@@ -19962,13 +19962,13 @@
 			<Orientation y="-4.30668"/>
 		</Entity>
 		<Entity uid="4113">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="351.3443" z="722.26557"/>
 			<Orientation y="-0.61197"/>
 		</Entity>
 		<Entity uid="4114">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="1976.70685" z="846.16486"/>
 			<Orientation y="-4.0828"/>
@@ -19980,7 +19980,7 @@
 			<Orientation y="-2.14889"/>
 		</Entity>
 		<Entity uid="4116">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="1310.62806" z="1688.95069"/>
 			<Orientation y="0.40477"/>
@@ -19998,13 +19998,13 @@
 			<Orientation y="-1.0341"/>
 		</Entity>
 		<Entity uid="4119">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="984.04621" z="1706.65741"/>
 			<Orientation y="-3.23446"/>
 		</Entity>
 		<Entity uid="4120">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="456.40754" z="1027.5481"/>
 			<Orientation y="-0.95424"/>
@@ -94875,7 +94875,7 @@
 			<Actor seed="5671"/>
 		</Entity>
 		<Entity uid="17582">
-			<Template>structures/pers_dock</Template>
+			<Template>structures/pers/dock</Template>
 			<Player>5</Player>
 			<Position x="607.65931" z="253.67624"/>
 			<Orientation y="0.00042"/>
@@ -94903,7 +94903,7 @@
 			<Actor seed="40340"/>
 		</Entity>
 		<Entity uid="17587">
-			<Template>structures/pers_dock</Template>
+			<Template>structures/pers/dock</Template>
 			<Player>5</Player>
 			<Position x="329.12107" z="1622.79151"/>
 			<Orientation y="-0.01253"/>
@@ -95260,7 +95260,7 @@
 			<Actor seed="57348"/>
 		</Entity>
 		<Entity uid="17642">
-			<Template>structures/pers_dock</Template>
+			<Template>structures/pers/dock</Template>
 			<Player>5</Player>
 			<Position x="1192.00831" z="533.45484"/>
 			<Orientation y="-2.34931"/>
@@ -95792,14 +95792,14 @@
 			<Actor seed="62110"/>
 		</Entity>
 		<Entity uid="17718">
-			<Template>structures/pers_dock</Template>
+			<Template>structures/pers/dock</Template>
 			<Player>3</Player>
 			<Position x="615.29053" z="211.98722"/>
 			<Orientation y="-0.14887"/>
 			<Actor seed="27956"/>
 		</Entity>
 		<Entity uid="17719">
-			<Template>structures/pers_dock</Template>
+			<Template>structures/pers/dock</Template>
 			<Player>3</Player>
 			<Position x="1221.92457" z="551.21961"/>
 			<Orientation y="-1.85958"/>

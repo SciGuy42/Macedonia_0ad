@@ -1130,7 +1130,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	/*if (data.from == 0 && data.to == 1) //we captured a gaia structure, there is only 1 so...
 	{
 		//spawn some bolt shooters
-		let siege = TriggerHelper.SpawnUnits(data.entity,"units/mace_mechanical_siege_oxybeles_packed",5,1);
+		let siege = TriggerHelper.SpawnUnits(data.entity,"units/mace/siege_oxybeles_packed",5,1);
 		
 		//warn("spawned siege");
 		//destroy building			
@@ -1228,7 +1228,7 @@ Trigger.prototype.SpawnMutinyInsurrectionSquad = function(data)
 	let site = sites[0];
 	
 	//templates
-	let templates = ["units/athen/champion_ranged","units/athen_champion_ranged","units/athen/champion_marine","units/athen/champion_marine","units/mace/champion_infantry_spearman","units/mace/champion_infantry_spearman_02","units/mace_thorakites","units/mace_thureophoros","units/spart_black_cloak","units/spart_champion_infantry_sword","units/mace/cavalry_javelineer_a"];
+	let templates = ["units/athen/champion_ranged","units/athen_champion_ranged","units/athen/champion_marine","units/athen/champion_marine","units/mace/champion_infantry_spearman","units/mace/champion_infantry_spearman_02","units/mace_thorakites","units/mace_thureophoros","units/spart_black_cloak","units/spart/champion_infantry_swordsman","units/mace/cavalry_javelineer_a"];
 	
 	//spawn
 	let size = 20;
@@ -1242,7 +1242,7 @@ Trigger.prototype.SpawnMutinyInsurrectionSquad = function(data)
 	}
 	
 	//decide whether to include siege
-	let siege_templates = ["units/mace/siege_ram","units/mace/siege_lithobolos_packed","units/mace_mechanical_siege_oxybeles_packed"];
+	let siege_templates = ["units/mace/siege_ram","units/mace/siege_lithobolos_packed","units/mace/siege_oxybeles_packed"];
 	
 	//set formation
 	//TriggerHelper.SetUnitFormation(p, attackers, pickRandom(unitFormations));

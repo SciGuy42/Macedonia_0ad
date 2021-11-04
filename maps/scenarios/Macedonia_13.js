@@ -985,7 +985,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	
 	cmpTrigger.pers_inf_templates = TriggerHelper.GetTemplateNamesByClasses("Infantry+!Hero", "pers", undefined, undefined, true);
 	//cmpTrigger.pers_cav_templates = TriggerHelper.GetTemplateNamesByClasses("Cavalry+!Hero", "pers", undefined, undefined, true);
-	cmpTrigger.pers_cav_templates = ["units/pers_cavalry_spearman_b","units/pers_cavalry_javelinist_b","units/pers_champion_cavalry_archer","units/pers_cavalry_archer_a","units/sele_champion_cavalry"];
+	cmpTrigger.pers_cav_templates = ["units/pers_cavalry_spearman_b","units/pers_cavalry_javelinist_b","units/pers/champion_cavalry_archer","units/pers_cavalry_archer_a","units/sele_champion_cavalry"];
 	
 	cmpTrigger.pers_siege_templates = TriggerHelper.GetTemplateNamesByClasses("Siege", "pers", undefined, undefined, true);
 	

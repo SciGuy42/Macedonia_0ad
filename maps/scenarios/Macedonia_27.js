@@ -222,7 +222,7 @@ Trigger.prototype.SpawnStructureResponseAttack = function(data)
 		//see if we add elephant
 		if (Math.random() < ele_prob)
 		{
-			let units_i = TriggerHelper.SpawnUnits(site,"units/pers_champion_elephant",1,p);
+			let units_i = TriggerHelper.SpawnUnits(site,"units/pers/champion_elephant",1,p);
 			attackers.push(units_i[0]);
 		}
 		
@@ -529,7 +529,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		if (id.classesList.indexOf("Embassy") >= 0)
 		{
 			//captured camp, spawn some balistas
-			TriggerHelper.SpawnUnits(data.entity,"units/mace_mechanical_siege_oxybeles_packed",8,1);
+			TriggerHelper.SpawnUnits(data.entity,"units/mace/siege_oxybeles_packed",8,1);
 			
 			//spawn the princess
 			TriggerHelper.SpawnUnits(data.entity,"units/kush_hero_amanirenas",1,1);
@@ -615,7 +615,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let e of towers_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/pers_champion_infantry",5,owner);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/pers/champion_infantry",5,owner);
 			
 			for (let a of archers_e)
 			{
@@ -630,7 +630,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let e of towers_s)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/pers_champion_infantry",3,owner);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/pers/champion_infantry",3,owner);
 			
 			for (let a of archers_e)
 			{
@@ -647,7 +647,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		{
 			//spawn the garrison inside the tower
 			
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/pers_champion_infantry",fort_size,owner);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/pers/champion_infantry",fort_size,owner);
 			
 			for (let a of archers_e)
 			{
@@ -662,7 +662,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let e of towers_w)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/pers_champion_infantry",2,owner);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/pers/champion_infantry",2,owner);
 					
 			for (let a of archers_e)
 			{
@@ -677,7 +677,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of camps_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/pers_champion_infantry",5,p);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/pers/champion_infantry",5,p);
 			
 			for (let a of archers_e)
 			{
@@ -797,7 +797,7 @@ Trigger.prototype.RangeActionAllies = function(data)
 		let site = pickRandom(this.GetTriggerPoints("C"));
 			
 		//spawn some allies
-		let units_javelin = TriggerHelper.SpawnUnits(site,"units/pers_kardakes_skirmisher",15,1);
+		let units_javelin = TriggerHelper.SpawnUnits(site,"units/pers/kardakes_skirmisher",15,1);
 	}
 	
 }
@@ -1170,7 +1170,7 @@ Trigger.prototype.AchaeanAttack = function(data)
 		else 
 		{
 			//siege
-			let units_i = TriggerHelper.SpawnUnits(spawn_site,"units/athen_mechanical_siege_oxybeles_packed",1,p);
+			let units_i = TriggerHelper.SpawnUnits(spawn_site,"units/athen/siege_oxybeles_packed",1,p);
 			attackers.push(units_i[0]);
 		}
 	}
@@ -1425,7 +1425,7 @@ Trigger.prototype.SetDiplomacy = function(data)
 
 
 	//some templates
-	cmpTrigger.patrolTemplates = ["units/pers_arstibara","units/pers_champion_infantry","units/pers_kardakes_hoplite", "units/pers_kardakes_skirmisher","units/pers_infantry_archer_e"];
+	cmpTrigger.patrolTemplates = ["units/pers/arstibara","units/pers/champion_infantry","units/pers_kardakes_hoplite", "units/pers/kardakes_skirmisher","units/pers_infantry_archer_e"];
 
 	//some variables
 	cmpTrigger.alliesEvent = false;

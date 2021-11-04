@@ -457,7 +457,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of forts_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/pers_arstibara",20,owner);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/pers/arstibara",20,owner);
 			
 			for (let a of archers_e)
 			{
@@ -472,7 +472,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of towers_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/pers_arstibara",5,owner);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/pers/arstibara",5,owner);
 			
 			for (let a of archers_e)
 			{
@@ -487,7 +487,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let e of towers_w)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/pers_arstibara",2,owner);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/pers/arstibara",2,owner);
 				
 			for (let a of archers_e)
 			{
@@ -891,7 +891,7 @@ Trigger.prototype.SpawnDesertRaiders = function(data)
 
 	for (let i = 0; i < 90; i ++)
 	{
-		let templates = ["units/pers_champion_infantry","units/pers_infantry_archer_e","units/pers_infantry_javelinist_e","units/pers_kardakes_hoplite"];
+		let templates = ["units/pers/champion_infantry","units/pers_infantry_archer_e","units/pers_infantry_javelinist_e","units/pers_kardakes_hoplite"];
 		
 		//pick patrol sites
 		let sites = [pickRandom(spawn_sites),pickRandom(spawn_sites),pickRandom(spawn_sites),pickRandom(spawn_sites)];
@@ -989,7 +989,7 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 		{
 			if (id.template.GenericName == "Bactrian Heavy Cavalry Archer")
 			{
-				template = "units/pers_champion_cavalry_archer";
+				template = "units/pers/champion_cavalry_archer";
 			}
 			else if (id.template.GenericName == "Armored Swordsman")
 			{
@@ -1003,7 +1003,7 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 		}
 		else if (template == "units/mace_cavalry_javelinist_b" || template == "units/mace/cavalry_javelineer_a")
 		{
-			template = "units/mace_cavalry_javelinist_e";
+			template = "units/mace/cavalry_javelineer_e";
 		}
 		else if (template == "units/mace/cavalry_spearman_b" || template == "units/mace/cavalry_spearman_a")
 		{
@@ -1015,7 +1015,7 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 		}
 		else if (template == "units/mace/infantry_javelineer_b" || template == "units/mace/infantry_javelineer_a")
 		{
-			template = "units/mace_infantry_javelinist_e";
+			template = "units/mace/infantry_javelineer_e";
 		}
 		else if (template == "units/mace/infantry_pikeman_b" || template == "units/mace/infantry_pikeman_a")
 		{
@@ -1042,7 +1042,7 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 		/*if (template == undefined)
 		{
 			warn("overriding template");
-			template = "units/pers_champion_cavalry_archer";
+			template = "units/pers/champion_cavalry_archer";
 		}*/
 		
 		//warn(template);
@@ -1084,7 +1084,7 @@ Trigger.prototype.RangeActionTeleportB = function(data)
 		{
 			if (id.template.GenericName == "Bactrian Heavy Cavalry Archer")
 			{
-				template = "units/pers_champion_cavalry_archer";
+				template = "units/pers/champion_cavalry_archer";
 			}
 			else if (id.template.GenericName == "Armored Swordsman")
 			{
@@ -1098,7 +1098,7 @@ Trigger.prototype.RangeActionTeleportB = function(data)
 		}
 		else if (template == "units/mace_cavalry_javelinist_b" || template == "units/mace/cavalry_javelineer_a")
 		{
-			template = "units/mace_cavalry_javelinist_e";
+			template = "units/mace/cavalry_javelineer_e";
 		}
 		else if (template == "units/mace/cavalry_spearman_b" || template == "units/mace/cavalry_spearman_a")
 		{
@@ -1110,7 +1110,7 @@ Trigger.prototype.RangeActionTeleportB = function(data)
 		}
 		else if (template == "units/mace/infantry_javelineer_b" || template == "units/mace/infantry_javelineer_a")
 		{
-			template = "units/mace_infantry_javelinist_e";
+			template = "units/mace/infantry_javelineer_e";
 		}
 		else if (template == "units/mace/infantry_pikeman_b" || template == "units/mace/infantry_pikeman_a")
 		{
@@ -1157,7 +1157,7 @@ Trigger.prototype.RangeActionTeleportC = function(data)
 		{
 			if (id.template.GenericName == "Bactrian Heavy Cavalry Archer")
 			{
-				template = "units/pers_champion_cavalry_archer";
+				template = "units/pers/champion_cavalry_archer";
 			}
 			else if (id.template.GenericName == "Armored Swordsman")
 			{
@@ -1171,7 +1171,7 @@ Trigger.prototype.RangeActionTeleportC = function(data)
 		}
 		else if (template == "units/mace_cavalry_javelinist_b" || template == "units/mace/cavalry_javelineer_a")
 		{
-			template = "units/mace_cavalry_javelinist_e";
+			template = "units/mace/cavalry_javelineer_e";
 		}
 		else if (template == "units/mace/cavalry_spearman_b" || template == "units/mace/cavalry_spearman_a")
 		{
@@ -1183,7 +1183,7 @@ Trigger.prototype.RangeActionTeleportC = function(data)
 		}
 		else if (template == "units/mace/infantry_javelineer_b" || template == "units/mace/infantry_javelineer_a")
 		{
-			template = "units/mace_infantry_javelinist_e";
+			template = "units/mace/infantry_javelineer_e";
 		}
 		else if (template == "units/mace/infantry_pikeman_b" || template == "units/mace/infantry_pikeman_a")
 		{
@@ -1229,7 +1229,7 @@ Trigger.prototype.RangeActionTeleportD = function(data)
 		{
 			if (id.template.GenericName == "Bactrian Heavy Cavalry Archer")
 			{
-				template = "units/pers_champion_cavalry_archer";
+				template = "units/pers/champion_cavalry_archer";
 			}
 			else if (id.template.GenericName == "Armored Swordsman")
 			{
@@ -1243,7 +1243,7 @@ Trigger.prototype.RangeActionTeleportD = function(data)
 		}
 		else if (template == "units/mace_cavalry_javelinist_b" || template == "units/mace/cavalry_javelineer_a")
 		{
-			template = "units/mace_cavalry_javelinist_e";
+			template = "units/mace/cavalry_javelineer_e";
 		}
 		else if (template == "units/mace/cavalry_spearman_b" || template == "units/mace/cavalry_spearman_a")
 		{
@@ -1255,7 +1255,7 @@ Trigger.prototype.RangeActionTeleportD = function(data)
 		}
 		else if (template == "units/mace/infantry_javelineer_b" || template == "units/mace/infantry_javelineer_a")
 		{
-			template = "units/mace_infantry_javelinist_e";
+			template = "units/mace/infantry_javelineer_e";
 		}
 		else if (template == "units/mace/infantry_pikeman_b" || template == "units/mace/infantry_pikeman_a")
 		{
@@ -1367,7 +1367,7 @@ Trigger.prototype.RangeActionTeleportD = function(data)
 			
 		if (p == 1)
 		{
-			disTemplates = disTemplates.concat(["units/mace_hero_alexander","units/mace_hero_craterus","units/mace/hero_philip_ii","units/mace_hero_demetrius","units/mace_hero_pyrhus"]);
+			disTemplates = disTemplates.concat(["units/mace/hero_alexander_iii","units/mace_hero_craterus","units/mace/hero_philip_ii","units/mace_hero_demetrius","units/mace_hero_pyrhus"]);
 			
 			
 		}
