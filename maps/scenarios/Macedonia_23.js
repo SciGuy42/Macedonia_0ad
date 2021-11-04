@@ -1872,7 +1872,7 @@ Trigger.prototype.PointIncrement = function(data)
 	//with small probability, add heaer
 	if (Math.random() < this.healerProb)
 	{
-		units_to_spawn.push("units/mace_support_healer_e");
+		units_to_spawn.push("units/mace/support_healer_e");
 		//warn("adding healer!");
 	}
 	

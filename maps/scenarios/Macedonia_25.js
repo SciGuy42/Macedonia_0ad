@@ -235,7 +235,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		cmpPlayer.SetPopulationBonuses(220);
 		
 		//spawn healers
-		let units_i = TriggerHelper.SpawnUnits(data.entity,"units/mace_support_healer_e",5, 1);
+		let units_i = TriggerHelper.SpawnUnits(data.entity,"units/mace/support_healer_e",5, 1);
 		
 		this.gaiaCampCaptured = true;
 	}

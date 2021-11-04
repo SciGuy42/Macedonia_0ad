@@ -60,7 +60,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		//big temple
 		if (data.entity == 2233){ //big temple
 			//spawn some healers
-			TriggerHelper.SpawnUnits(2014,"units/mace_support_healer_e",4,1);
+			TriggerHelper.SpawnUnits(2014,"units/mace/support_healer_e",4,1);
 		
 			//add some points 
 			this.current_points += 10;
@@ -79,7 +79,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		else if (data.entity == 2507) //little temple
 		{
 			//spawn some healers
-			TriggerHelper.SpawnUnits(2014,"units/mace_support_healer_e",2,1);
+			TriggerHelper.SpawnUnits(2014,"units/mace/support_healer_e",2,1);
 			//add some points 
 			this.current_points += 10;
 			

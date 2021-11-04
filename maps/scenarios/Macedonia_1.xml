@@ -12835,35 +12835,35 @@
 			<Actor seed="63882"/>
 		</Entity>
 		<Entity uid="2736">
-			<Template>units/gaul_champion_infantry</Template>
+			<Template>units/gaul/champion_infantry_swordsman</Template>
 			<Player>2</Player>
 			<Position x="667.08222" z="734.97974"/>
 			<Orientation y="1.6846"/>
 			<Actor seed="1976"/>
 		</Entity>
 		<Entity uid="2737">
-			<Template>units/gaul_champion_infantry</Template>
+			<Template>units/gaul/champion_infantry_swordsman</Template>
 			<Player>2</Player>
 			<Position x="667.17743" z="742.37952"/>
 			<Orientation y="1.08768"/>
 			<Actor seed="4052"/>
 		</Entity>
 		<Entity uid="2738">
-			<Template>units/gaul_champion_infantry</Template>
+			<Template>units/gaul/champion_infantry_swordsman</Template>
 			<Player>2</Player>
 			<Position x="666.58265" z="752.51636"/>
 			<Orientation y="1.21604"/>
 			<Actor seed="58509"/>
 		</Entity>
 		<Entity uid="2739">
-			<Template>units/gaul_champion_infantry</Template>
+			<Template>units/gaul/champion_infantry_swordsman</Template>
 			<Player>2</Player>
 			<Position x="680.60279" z="735.48987"/>
 			<Orientation y="-1.72606"/>
 			<Actor seed="35833"/>
 		</Entity>
 		<Entity uid="2740">
-			<Template>units/gaul_champion_infantry</Template>
+			<Template>units/gaul/champion_infantry_swordsman</Template>
 			<Player>2</Player>
 			<Position x="675.7928" z="742.84278"/>
 			<Orientation y="-2.37537"/>
@@ -13416,7 +13416,7 @@
 			<Actor seed="17981"/>
 		</Entity>
 		<Entity uid="2822">
-			<Template>units/mace_support_healer_e</Template>
+			<Template>units/mace/support_healer_e</Template>
 			<Player>1</Player>
 			<Position x="351.31791" z="198.9224"/>
 			<Orientation y="2.35621"/>

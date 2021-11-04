@@ -80154,35 +80154,35 @@
 			<Actor seed="49293"/>
 		</Entity>
 		<Entity uid="14064">
-			<Template>units/mace_support_healer_e</Template>
+			<Template>units/mace/support_healer_e</Template>
 			<Player>1</Player>
 			<Position x="224.09617" z="637.89533"/>
 			<Orientation y="5.84675"/>
 			<Actor seed="14733"/>
 		</Entity>
 		<Entity uid="14065">
-			<Template>units/mace_support_healer_e</Template>
+			<Template>units/mace/support_healer_e</Template>
 			<Player>1</Player>
 			<Position x="221.92902" z="636.89008"/>
 			<Orientation y="5.84675"/>
 			<Actor seed="40117"/>
 		</Entity>
 		<Entity uid="14066">
-			<Template>units/mace_support_healer_e</Template>
+			<Template>units/mace/support_healer_e</Template>
 			<Player>1</Player>
 			<Position x="219.79566" z="635.75678"/>
 			<Orientation y="5.84675"/>
 			<Actor seed="47212"/>
 		</Entity>
 		<Entity uid="14067">
-			<Template>units/mace_support_healer_e</Template>
+			<Template>units/mace/support_healer_e</Template>
 			<Player>1</Player>
 			<Position x="217.5832" z="634.85981"/>
 			<Orientation y="5.84675"/>
 			<Actor seed="40329"/>
 		</Entity>
 		<Entity uid="14068">
-			<Template>units/mace_support_healer_e</Template>
+			<Template>units/mace/support_healer_e</Template>
 			<Player>1</Player>
 			<Position x="214.8747" z="633.79218"/>
 			<Orientation y="5.84675"/>

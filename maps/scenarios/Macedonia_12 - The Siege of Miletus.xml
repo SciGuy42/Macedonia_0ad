@@ -7832,14 +7832,14 @@
 			<Actor seed="1154"/>
 		</Entity>
 		<Entity uid="1728">
-			<Template>units/mace_support_healer_e</Template>
+			<Template>units/mace/support_healer_e</Template>
 			<Player>1</Player>
 			<Position x="59.62298" z="52.23444"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="61883"/>
 		</Entity>
 		<Entity uid="1729">
-			<Template>units/mace_support_healer_e</Template>
+			<Template>units/mace/support_healer_e</Template>
 			<Player>1</Player>
 			<Position x="58.22416" z="50.24355"/>
 			<Orientation y="2.35621"/>

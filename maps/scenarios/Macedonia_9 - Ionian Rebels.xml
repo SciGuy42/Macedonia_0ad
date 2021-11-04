@@ -58711,7 +58711,7 @@
 			<Actor seed="39558"/>
 		</Entity>
 		<Entity uid="12464">
-			<Template>structures/gaul_blacksmith</Template>
+			<Template>structures/gaul/forge</Template>
 			<Player>0</Player>
 			<Position x="2579.37159" z="834.68061"/>
 			<Orientation y="-2.93749"/>
