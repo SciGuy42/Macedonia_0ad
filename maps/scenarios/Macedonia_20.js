@@ -251,7 +251,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			if (this.ballistaCaptured == false)
 			{
 				let spawn_site = 6404; //alexander
-				TriggerHelper.SpawnUnits(6839,"units/mace_mechanical_siege_oxybeles_packed",4,1);
+				TriggerHelper.SpawnUnits(6839,"units/mace/siege_oxybeles_packed",4,1);
 				this.ballistaCaptured = true;
 			}
 			
@@ -349,7 +349,7 @@ Trigger.prototype.SpawnSquad = function(data)
 	let ccs = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p), "Outpost").filter(TriggerHelper.IsInWorld);
 	let site_j = pickRandom(ccs);
 	
-	let pers_inf_templates = ["units/pers_arstibara","units/pers_champion_infantry","units/pers_kardakes_hoplite", "units/pers_kardakes_skirmisher","units/pers_infantry_archer_b"];
+	let pers_inf_templates = ["units/pers/arstibara","units/pers/champion_infantry","units/pers_kardakes_hoplite", "units/pers/kardakes_skirmisher","units/pers_infantry_archer_b"];
 	
 	let pers_ele_templates = TriggerHelper.GetTemplateNamesByClasses("Champion+Elephant+!Hero", "pers", undefined, undefined, true);
 	
@@ -405,7 +405,7 @@ Trigger.prototype.SpawnCavalrySquad = function(data)
 	let ccs = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p), "Outpost").filter(TriggerHelper.IsInWorld);
 	let site_j = pickRandom(ccs);
 	
-	let pers_cav_templates = ["units/pers_cavalry_javelinist_a","units/pers_cavalry_spearman_a","units/pers_cavalry_swordsman_a","units/pers_champion_cavalry", "units/pers_champion_cavalry_archer"];
+	let pers_cav_templates = ["units/pers_cavalry_javelinist_a","units/pers_cavalry_spearman_a","units/pers_cavalry_swordsman_a","units/pers/champion_cavalry", "units/pers/champion_cavalry_archer"];
 	
 	let pers_ele_templates = TriggerHelper.GetTemplateNamesByClasses("Champion+Elephant+!Hero", "pers", undefined, undefined, true);
 	
@@ -524,8 +524,8 @@ Trigger.prototype.SpawnFieldAttack = function(data)
 	let num_squads_cav = 5;
 	let ele_prob = 0.5; //probability of a squad having an elephant
 	
-	let pers_inf_templates = ["units/pers_arstibara","units/pers_champion_infantry","units/pers_kardakes_hoplite", "units/pers_kardakes_skirmisher","units/pers_infantry_archer_b"];
-	let pers_cav_templates = ["units/pers_cavalry_javelinist_a","units/pers_cavalry_spearman_a","units/pers_cavalry_swordsman_a","units/pers_champion_cavalry", "units/pers_champion_cavalry_archer"];
+	let pers_inf_templates = ["units/pers/arstibara","units/pers/champion_infantry","units/pers_kardakes_hoplite", "units/pers/kardakes_skirmisher","units/pers_infantry_archer_b"];
+	let pers_cav_templates = ["units/pers_cavalry_javelinist_a","units/pers_cavalry_spearman_a","units/pers_cavalry_swordsman_a","units/pers/champion_cavalry", "units/pers/champion_cavalry_archer"];
 	let pers_ele_templates = TriggerHelper.GetTemplateNamesByClasses("Champion+Elephant+!Hero", "pers", undefined, undefined, true);
 	
 	//spawn infantry
@@ -793,7 +793,7 @@ Trigger.prototype.RangeActionTriggerAttack = function(data)
 		for (let i = 0; i < spawn_size; i++)
 		{
 			//decide what to spawn
-			let unit_type = pickRandom(["units/pers_arstibara","units/pers_champion_infantry","units/pers_kardakes_hoplite", "units/pers_kardakes_skirmisher","units/pers_infantry_archer_e","units/pers_infantry_spearman_a", "units/pers_infantry_spearman_a","units/pers_infantry_spearman_a","units/pers_infantry_javelinist_a","units/pers_infantry_javelinist_a",]);
+			let unit_type = pickRandom(["units/pers/arstibara","units/pers/champion_infantry","units/pers_kardakes_hoplite", "units/pers/kardakes_skirmisher","units/pers_infantry_archer_e","units/pers_infantry_spearman_a", "units/pers_infantry_spearman_a","units/pers_infantry_spearman_a","units/pers_infantry_javelinist_a","units/pers_infantry_javelinist_a",]);
 			let spawned_units = TriggerHelper.SpawnUnits(spawn_site,unit_type,1,owner);
 			
 			//issue orders
@@ -866,7 +866,7 @@ Trigger.prototype.SpawnInitialPatrol = function(data)
 	let num_patrols = 26;
 	let patrol_size = 4;
 	
-	let inf_templates = ["units/mace/champion_infantry_spearman_02", "units/mace/champion_infantry_spearman","units/mace_champion_infantry_e","units/mace/infantry_archer_e","units/mace_infantry_javelinist_e","units/mace_infantry_pikeman_e","units/mace/infantry_slinger_e","units/mace_thorakites", "units/mace_thureophoros","units/athen/champion_ranged","units/athen/champion_marine"];
+	let inf_templates = ["units/mace/champion_infantry_spearman_02", "units/mace/champion_infantry_spearman","units/mace_champion_infantry_e","units/mace/infantry_archer_e","units/mace/infantry_javelineer_e","units/mace_infantry_pikeman_e","units/mace/infantry_slinger_e","units/mace_thorakites", "units/mace_thureophoros","units/athen/champion_ranged","units/athen/champion_marine"];
 	
 	//spawn infantry
 	for (let j = 0; j < num_patrols; j++)
@@ -1042,7 +1042,7 @@ Trigger.prototype.QuestSiegeReward = function(data)
 	if (this.ballistaCaptured == false)
 	{
 		let spawn_site = 6404; //alexander
-		TriggerHelper.SpawnUnits(6404,"units/mace_mechanical_siege_oxybeles_packed",4,1);
+		TriggerHelper.SpawnUnits(6404,"units/mace/siege_oxybeles_packed",4,1);
 		this.ballistaCaptured = true;
 	}
 

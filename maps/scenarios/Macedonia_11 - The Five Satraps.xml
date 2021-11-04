@@ -459,7 +459,7 @@
 			<Orientation y="-2.47443"/>
 		</Entity>
 		<Entity uid="239">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="884.22883" z="1558.00501"/>
 			<Orientation y="0.6123"/>
@@ -4126,7 +4126,7 @@
 			<Orientation y="3.83964"/>
 		</Entity>
 		<Entity uid="1026">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="266.49466" z="1235.01368"/>
 			<Orientation y="1.23018"/>
@@ -4144,7 +4144,7 @@
 			<Orientation y="-2.82844"/>
 		</Entity>
 		<Entity uid="1029">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="2007.53089" z="1046.59241"/>
 			<Orientation y="-1.32099"/>
@@ -10583,7 +10583,7 @@
 			<Actor seed="4766"/>
 		</Entity>
 		<Entity uid="2382">
-			<Template>structures/pers_dock</Template>
+			<Template>structures/pers/dock</Template>
 			<Player>4</Player>
 			<Position x="1971.54883" z="1267.15162"/>
 			<Orientation y="-1.98304"/>
@@ -10709,7 +10709,7 @@
 			<Actor seed="48650"/>
 		</Entity>
 		<Entity uid="2400">
-			<Template>structures/pers_dock</Template>
+			<Template>structures/pers/dock</Template>
 			<Player>2</Player>
 			<Position x="1417.9076" z="1207.52076"/>
 			<Orientation y="4.835"/>
@@ -14356,14 +14356,14 @@
 			<Actor seed="778"/>
 		</Entity>
 		<Entity uid="2985">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="299.2826" z="597.01746"/>
 			<Orientation y="0.61231"/>
 			<Actor seed="239"/>
 		</Entity>
 		<Entity uid="2986">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="690.08362" z="464.12964"/>
 			<Orientation y="0.61231"/>
@@ -23537,7 +23537,7 @@
 			<Actor seed="1046"/>
 		</Entity>
 		<Entity uid="4411">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="414.511" z="699.8357"/>
 			<Orientation y="0.61231"/>
@@ -24244,7 +24244,7 @@
 			<Actor seed="18009"/>
 		</Entity>
 		<Entity uid="4513">
-			<Template>units/mace_hero_alexander</Template>
+			<Template>units/mace/hero_alexander_iii</Template>
 			<Player>1</Player>
 			<Position x="949.52363" z="1687.3462"/>
 			<Orientation y="2.35621"/>
@@ -24503,84 +24503,84 @@
 			<Actor seed="45885"/>
 		</Entity>
 		<Entity uid="4550">
-			<Template>units/athen_infantry_javelinist_a</Template>
+			<Template>units/athen/infantry_javelineer_a</Template>
 			<Player>7</Player>
 			<Position x="297.05439" z="1336.68897"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="50461"/>
 		</Entity>
 		<Entity uid="4551">
-			<Template>units/athen_infantry_javelinist_a</Template>
+			<Template>units/athen/infantry_javelineer_a</Template>
 			<Player>7</Player>
 			<Position x="294.76575" z="1335.17164"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="19966"/>
 		</Entity>
 		<Entity uid="4552">
-			<Template>units/athen_infantry_javelinist_a</Template>
+			<Template>units/athen/infantry_javelineer_a</Template>
 			<Player>7</Player>
 			<Position x="292.77955" z="1334.05506"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="27438"/>
 		</Entity>
 		<Entity uid="4553">
-			<Template>units/athen_infantry_javelinist_a</Template>
+			<Template>units/athen/infantry_javelineer_a</Template>
 			<Player>7</Player>
 			<Position x="290.65897" z="1332.92627"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="47289"/>
 		</Entity>
 		<Entity uid="4554">
-			<Template>units/athen_infantry_javelinist_a</Template>
+			<Template>units/athen/infantry_javelineer_a</Template>
 			<Player>7</Player>
 			<Position x="288.4863" z="1331.43165"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="9098"/>
 		</Entity>
 		<Entity uid="4555">
-			<Template>units/athen_infantry_javelinist_a</Template>
+			<Template>units/athen/infantry_javelineer_a</Template>
 			<Player>7</Player>
 			<Position x="286.25004" z="1330.14002"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="52735"/>
 		</Entity>
 		<Entity uid="4556">
-			<Template>units/athen_infantry_spearman_a</Template>
+			<Template>units/athen/infantry_spearman_a</Template>
 			<Player>7</Player>
 			<Position x="288.41361" z="1327.75318"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="36374"/>
 		</Entity>
 		<Entity uid="4557">
-			<Template>units/athen_infantry_spearman_a</Template>
+			<Template>units/athen/infantry_spearman_a</Template>
 			<Player>7</Player>
 			<Position x="290.20981" z="1328.38245"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="3219"/>
 		</Entity>
 		<Entity uid="4558">
-			<Template>units/athen_infantry_spearman_a</Template>
+			<Template>units/athen/infantry_spearman_a</Template>
 			<Player>7</Player>
 			<Position x="292.22403" z="1329.73572"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="33705"/>
 		</Entity>
 		<Entity uid="4559">
-			<Template>units/athen_infantry_spearman_a</Template>
+			<Template>units/athen/infantry_spearman_a</Template>
 			<Player>7</Player>
 			<Position x="294.21872" z="1330.71363"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="60874"/>
 		</Entity>
 		<Entity uid="4560">
-			<Template>units/athen_infantry_spearman_a</Template>
+			<Template>units/athen/infantry_spearman_a</Template>
 			<Player>7</Player>
 			<Position x="296.04801" z="1331.47388"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="29971"/>
 		</Entity>
 		<Entity uid="4561">
-			<Template>units/athen_infantry_spearman_a</Template>
+			<Template>units/athen/infantry_spearman_a</Template>
 			<Player>7</Player>
 			<Position x="297.89332" z="1333.01221"/>
 			<Orientation y="2.35621"/>

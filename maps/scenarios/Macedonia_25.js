@@ -235,7 +235,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		cmpPlayer.SetPopulationBonuses(220);
 		
 		//spawn healers
-		let units_i = TriggerHelper.SpawnUnits(data.entity,"units/mace_support_healer_e",5, 1);
+		let units_i = TriggerHelper.SpawnUnits(data.entity,"units/mace/support_healer_e",5, 1);
 		
 		this.gaiaCampCaptured = true;
 	}
@@ -292,7 +292,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		if (id.classesList.indexOf("Embassy") >= 0)
 		{
 			//captured camp, spawn some balistas
-			TriggerHelper.SpawnUnits(data.entity,"units/mace_mechanical_siege_oxybeles_packed",8,1);
+			TriggerHelper.SpawnUnits(data.entity,"units/mace/siege_oxybeles_packed",8,1);
 			
 			//spawn the princess
 			TriggerHelper.SpawnUnits(data.entity,"units/kush_hero_amanirenas",1,1);
@@ -761,7 +761,7 @@ Trigger.prototype.SpawnAssault = function(data)
 		//spawn unit
 		let triggerPoint = pickRandom(this.GetTriggerPoints(triggerPointNorth));
 		
-		let units_i = TriggerHelper.SpawnUnits(triggerPoint, "units/spart_cavalry_spearman_a", 1, owner);
+		let units_i = TriggerHelper.SpawnUnits(triggerPoint, "units/spart/cavalry_spearman_a", 1, owner);
 		
 		//make it fight
 		this.WalkAndFightClosestTarget(units_i[0],target_player,"CivilCentre");
@@ -772,7 +772,7 @@ Trigger.prototype.SpawnAssault = function(data)
 		//spawn unit
 		let triggerPoint = pickRandom(this.GetTriggerPoints(triggerPointNorth));
 		
-		let units_i = TriggerHelper.SpawnUnits(triggerPoint, "units/athen_mechanical_siege_oxybeles_packed", 1, owner);
+		let units_i = TriggerHelper.SpawnUnits(triggerPoint, "units/athen/siege_oxybeles_packed", 1, owner);
 		
 		//make it fight
 		this.WalkAndFightClosestTarget(units_i[0],target_player,"CivilCentre");
@@ -781,7 +781,7 @@ Trigger.prototype.SpawnAssault = function(data)
 	//south side -- some infantry
 	let num_infantry = 30;
 	
-	let inf_templates = ["units/spart_champion_infantry_pike","units/spart_champion_infantry_sword", "units/spart_champion_infantry_spear","units/spart_infantry_javelinist_a"];
+	let inf_templates = ["units/spart/champion_infantry_pike","units/spart/champion_infantry_swordsman", "units/spart/champion_infantry_spear","units/spart/infantry_javelineer_a"];
 	
 	for (let i = 0; i < num_infantry; i ++)
 	{
@@ -902,7 +902,7 @@ Trigger.prototype.SpawnFortressAttack = function(data)
 	size += Math.round(pop*0.5); //pretty big attack
 	
 	//templatets
-	let templates = ["units/pers_arstibara","units/pers_champion_infantry","units/pers_kardakes_hoplite", "units/pers_kardakes_skirmisher","units/pers_infantry_archer_b","units/pers_infantry_spearman_e","units/pers_infantry_spearman_a","units/pers_infantry_archer_a","units/pers_infantry_spearman_b"];
+	let templates = ["units/pers/arstibara","units/pers/champion_infantry","units/pers_kardakes_hoplite", "units/pers/kardakes_skirmisher","units/pers_infantry_archer_b","units/pers_infantry_spearman_e","units/pers_infantry_spearman_a","units/pers_infantry_archer_a","units/pers_infantry_spearman_b"];
 	
 	let ele_templates = TriggerHelper.GetTemplateNamesByClasses("Champion+Elephant+!Hero", "pers", undefined, undefined, true);
 	templates.push(ele_templates[0]);
@@ -966,7 +966,7 @@ Trigger.prototype.SpawnPassAttack = function(data)
 	size += Math.round(pop*0.8); //pretty big attack
 	
 	//templatets
-	let templates = ["units/pers_arstibara","units/pers_arstibara","units/pers_champion_infantry","units/pers_champion_infantry","units/pers_kardakes_hoplite", "units/pers_kardakes_skirmisher","units/pers_infantry_archer_e","units/pers_infantry_spearman_e","units/pers_infantry_spearman_e","units/pers_infantry_archer_e","units/pers_infantry_archer_a","units/pers_infantry_archer_b","units/pers_infantry_spearman_e","units/pers_champion_cavalry","units/pers_champion_cavalry_archer","units/pers_cavalry_swordsman_e","units/pers_cavalry_spearman_e"];
+	let templates = ["units/pers/arstibara","units/pers_arstibara","units/pers/champion_infantry","units/pers_champion_infantry","units/pers_kardakes_hoplite", "units/pers/kardakes_skirmisher","units/pers_infantry_archer_e","units/pers_infantry_spearman_e","units/pers_infantry_spearman_e","units/pers_infantry_archer_e","units/pers_infantry_archer_a","units/pers_infantry_archer_b","units/pers_infantry_spearman_e","units/pers/champion_cavalry","units/pers/champion_cavalry_archer","units/pers_cavalry_swordsman_e","units/pers_cavalry_spearman_e"];
 	
 	let ele_templates = TriggerHelper.GetTemplateNamesByClasses("Champion+Elephant+!Hero", "pers", undefined, undefined, true);
 	templates.push(ele_templates[0]);
@@ -1041,7 +1041,7 @@ Trigger.prototype.SpawnAlexnaderAmbush = function(data)
 	//spawn some ranged units
 	let ranged_site = this.GetTriggerPoints("I")[0];
 	
-	let units_r = TriggerHelper.SpawnUnits(ranged_site,"units/pers_kardakes_skirmisher",num_ranged,p);
+	let units_r = TriggerHelper.SpawnUnits(ranged_site,"units/pers/kardakes_skirmisher",num_ranged,p);
 	
 	//spawn some additional attackers based on number of units	
 		
@@ -1050,7 +1050,7 @@ Trigger.prototype.SpawnAlexnaderAmbush = function(data)
 	let size = Math.round(pop*this.ambushAssasinsRatio);
 	//warn("Spawning additional "+size+" attackers");
 	let units = [];
-	let templates = ["units/pers_infantry_spearman_e","units/pers_infantry_spearman_a","units/pers_kardakes_skirmisher"];
+	let templates = ["units/pers_infantry_spearman_e","units/pers_infantry_spearman_a","units/pers/kardakes_skirmisher"];
 	for (let i = 0; i < size; i ++)
 	{
 		let units_i = TriggerHelper.SpawnUnits(ranged_site,pickRandom(templates),1,p);
@@ -1087,7 +1087,7 @@ Trigger.prototype.SpawnTraderAttack = function(data)
 	let p = 0;
 	
 	let attack_size = 25;
-	let templates = ["units/pers_cavalry_spearman_a","units/pers_cavalry_swordsman_a","units/pers_cavalry_javelinist_a","units/pers_champion_cavalry_archer","units/pers_champion_cavalry"];
+	let templates = ["units/pers_cavalry_spearman_a","units/pers_cavalry_swordsman_a","units/pers_cavalry_javelinist_a","units/pers/champion_cavalry_archer","units/pers/champion_cavalry"];
 	
 	let attackers = [];
 	
@@ -1177,7 +1177,7 @@ Trigger.prototype.RangeActionBanditAttack = function(data)
 		let attackers = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Cavalry").filter(TriggerHelper.IsInWorld);
 		
 		//spawn some additional attackers based on number of units
-		let templates = ["units/pers_cavalry_spearman_b","units/pers_cavalry_spearman_a","units/pers_cavalry_swordsman_a","units/pers_cavalry_javelinist_b","units/pers_champion_cavalry_archer","units/pers_champion_cavalry"];
+		let templates = ["units/pers_cavalry_spearman_b","units/pers_cavalry_spearman_a","units/pers_cavalry_swordsman_a","units/pers_cavalry_javelinist_b","units/pers/champion_cavalry_archer","units/pers/champion_cavalry"];
 	
 		let cmpPlayer = QueryPlayerIDInterface(1);
 		let pop = cmpPlayer.GetPopulationCount();

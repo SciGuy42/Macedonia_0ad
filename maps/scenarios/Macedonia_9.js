@@ -787,7 +787,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 	
 	//restrict units for one of the enemies
 	cmpPlayer = QueryPlayerIDInterface(4);
-	cmpPlayer.SetDisabledTemplates(["units/athen_support_female_citizen","units/sele_support_female_citizen","units/athen_infantry_javelinist_b","units/athen_infantry_spearman_b","units/athen_infantry_slinger_b","units/athen_cavalry_javelinist_b"]);
+	cmpPlayer.SetDisabledTemplates(["units/athen_support_female_citizen","units/sele_support_female_citizen","units/athen_infantry_javelinist_b","units/athen_infantry_spearman_b","units/athen_infantry_slinger_b","units/athen/cavalry_javelineer_b"]);
 	
 	//restrict techs by ally
 	cmpPlayer = QueryPlayerIDInterface(5);

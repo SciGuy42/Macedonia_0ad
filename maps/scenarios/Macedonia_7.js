@@ -391,7 +391,7 @@ Trigger.prototype.SpawnShip = function()
 		let ship_spawned = TriggerHelper.SpawnUnits(pickRandom(sites),pickRandom(this.gaul_ships),1,6);
 
 		//spawn the garrison inside the ship
-		TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/gaul_champion_infantry",this.ship_garrison_size,6);
+		TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/gaul/champion_infantry_swordsman",this.ship_garrison_size,6);
 		
 		//make sure the unit has no orders, for some reason after garissoning, the order queue is full of pick up orders
 		let cmpUnitAI = Engine.QueryInterface(ship_spawned[0], IID_UnitAI);

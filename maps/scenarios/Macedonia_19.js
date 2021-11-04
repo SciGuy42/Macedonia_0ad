@@ -200,7 +200,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		if (id.classesList.indexOf("Embassy") >= 0)
 		{
 			//captured camp, spawn some balistas
-			TriggerHelper.SpawnUnits(data.entity,"units/mace_mechanical_siege_oxybeles_packed",8,1);
+			TriggerHelper.SpawnUnits(data.entity,"units/mace/siege_oxybeles_packed",8,1);
 			
 			//spawn the princess
 			TriggerHelper.SpawnUnits(data.entity,"units/kush_hero_amanirenas",1,1);
@@ -486,9 +486,9 @@ Trigger.prototype.StartNextAttack = function(data)
 	
 
 	
-	cmpTrigger.pers_inf_templates = ["units/pers_arstibara", "units/pers_champion_infantry","units/pers_infantry_archer_a", "units/pers_infantry_javelinist_a","units/pers_infantry_spearman_a", "units/pers_kardakes_hoplite", "units/pers_kardakes_skirmisher"]
+	cmpTrigger.pers_inf_templates = ["units/pers/arstibara", "units/pers/champion_infantry","units/pers_infantry_archer_a", "units/pers_infantry_javelinist_a","units/pers_infantry_spearman_a", "units/pers_kardakes_hoplite", "units/pers/kardakes_skirmisher"]
 	
-	cmpTrigger.pers_cav_templates = ["units/pers_cavalry_archer_a","units/pers_cavalry_javelinist_a", "units/pers_cavalry_spearman_a", "units/pers_cavalry_swordsman_a","units/pers_champion_cavalry", "units/pers_champion_cavalry_archer"];
+	cmpTrigger.pers_cav_templates = ["units/pers_cavalry_archer_a","units/pers_cavalry_javelinist_a", "units/pers_cavalry_spearman_a", "units/pers_cavalry_swordsman_a","units/pers/champion_cavalry", "units/pers/champion_cavalry_archer"];
 	
 	cmpTrigger.pers_siege_templates = TriggerHelper.GetTemplateNamesByClasses("Siege", "pers", undefined, undefined, true);
 	

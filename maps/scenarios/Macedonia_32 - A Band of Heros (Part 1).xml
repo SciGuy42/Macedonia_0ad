@@ -17495,7 +17495,7 @@
 			<Actor seed="32306"/>
 		</Entity>
 		<Entity uid="3457">
-			<Template>units/ptol_hero_cleopatra</Template>
+			<Template>units/ptol/hero_cleopatra_vii</Template>
 			<Player>1</Player>
 			<Position x="211.01609" z="311.27161"/>
 			<Orientation y="0.91755"/>
@@ -18321,7 +18321,7 @@
 			<Actor seed="24753"/>
 		</Entity>
 		<Entity uid="3663">
-			<Template>structures/pers_dock</Template>
+			<Template>structures/pers/dock</Template>
 			<Player>6</Player>
 			<Position x="643.48664" z="149.96048"/>
 			<Orientation y="2.7395"/>

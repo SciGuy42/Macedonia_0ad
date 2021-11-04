@@ -41183,7 +41183,7 @@
 			<Actor seed="21555"/>
 		</Entity>
 		<Entity uid="7803">
-			<Template>structures/gaul_blacksmith</Template>
+			<Template>structures/gaul/forge</Template>
 			<Player>2</Player>
 			<Position x="474.86564" z="179.97175"/>
 			<Orientation y="2.35621"/>

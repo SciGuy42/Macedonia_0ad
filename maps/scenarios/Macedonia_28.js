@@ -296,7 +296,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		if (id.classesList.indexOf("Embassy") >= 0)
 		{
 			//captured camp, spawn some balistas
-			TriggerHelper.SpawnUnits(data.entity,"units/mace_mechanical_siege_oxybeles_packed",8,1);
+			TriggerHelper.SpawnUnits(data.entity,"units/mace/siege_oxybeles_packed",8,1);
 			
 			//spawn the princess
 			TriggerHelper.SpawnUnits(data.entity,"units/kush_hero_amanirenas",1,1);
@@ -346,7 +346,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let e of towers_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_infantry",5,owner);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_infantry",5,owner);
 			
 			for (let a of archers_e)
 			{
@@ -811,7 +811,7 @@ Trigger.prototype.SpawnMaPatrol = function(data)
 	let site = pickRandom(structures);
 	
 	//templates, mostly archers
-	let cav_templates = ["units/pers_champion_cavalry","units/pers_champion_cavalry_archer","units/pers_champion_cavalry_archer"];
+	let cav_templates = ["units/pers/champion_cavalry","units/pers/champion_cavalry_archer","units/pers_champion_cavalry_archer"];
 	
 	//see if we have room to spawn more
 	let cmpPlayer = QueryPlayerIDInterface(p);
@@ -860,7 +860,7 @@ Trigger.prototype.SpawnApaPatrol = function(data)
 	let site = pickRandom(structures);
 	
 	//templates, mostly archers
-	let cav_templates = ["units/pers_champion_cavalry","units/pers_champion_cavalry_archer","units/pers_champion_cavalry_archer"];
+	let cav_templates = ["units/pers/champion_cavalry","units/pers/champion_cavalry_archer","units/pers_champion_cavalry_archer"];
 	
 	//see if we have room to spawn more
 	let cmpPlayer = QueryPlayerIDInterface(p);
@@ -921,7 +921,7 @@ Trigger.prototype.SpawnCavalryRaidSquad = function(data)
 	let spawn_site = pickRandom(this.GetTriggerPoints(triggerPointRaid));
 	
 	//templates
-	let cav_templates = ["units/pers_champion_cavalry","units/pers_champion_cavalry_archer","units/pers_champion_cavalry_archer","units/pers_cavalry_javelinist_e","units/pers_cavalry_swordsman_e"];
+	let cav_templates = ["units/pers/champion_cavalry","units/pers/champion_cavalry_archer","units/pers_champion_cavalry_archer","units/pers_cavalry_javelinist_e","units/pers_cavalry_swordsman_e"];
 	
 	let num_attackers = 8;
 	let attackers = [];

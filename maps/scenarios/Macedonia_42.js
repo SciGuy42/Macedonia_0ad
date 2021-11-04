@@ -811,16 +811,16 @@ Trigger.prototype.IntervalSpawnGroundAttack = function(data)
 			}
 			else if (i == 1)
 			{
-				templates = ["units/pers_infantry_spearman_e","units/pers_infantry_javelinist_e","units/pers_infantry_archer_e","units/pers_cavalry_spearman_e","units/pers_cavalry_swordsman_e","units/pers_cavalry_javelinist_e","units/pers_champion_infantry","units/pers_champion_infantry","units/pers_cavalry_archer_a"];
+				templates = ["units/pers_infantry_spearman_e","units/pers_infantry_javelinist_e","units/pers_infantry_archer_e","units/pers_cavalry_spearman_e","units/pers_cavalry_swordsman_e","units/pers_cavalry_javelinist_e","units/pers/champion_infantry","units/pers_champion_infantry","units/pers_cavalry_archer_a"];
 				
-				siege_templates = ["units/pers_champion_elephant"];
+				siege_templates = ["units/pers/champion_elephant"];
 				
 			}
 			else if (i == 2)
 			{
-				templates = ["units/pers_kardakes_hoplite","units/pers_kardakes_skirmisher","units/pers_infantry_archer_e","units/pers_champion_cavalry","units/pers_cavalry_swordsman_e","units/pers_cavalry_javelinist_e","units/pers_champion_infantry","units/pers_cavalry_archer_e"];
+				templates = ["units/pers_kardakes_hoplite","units/pers/kardakes_skirmisher","units/pers_infantry_archer_e","units/pers/champion_cavalry","units/pers_cavalry_swordsman_e","units/pers_cavalry_javelinist_e","units/pers/champion_infantry","units/pers_cavalry_archer_e"];
 				
-				siege_templates = ["units/pers_champion_elephant","units/pers_mechanical_siege_ram"];
+				siege_templates = ["units/pers/champion_elephant","units/pers_mechanical_siege_ram"];
 			}
 			
 			templates = templates.concat(siege_templates);
@@ -1228,7 +1228,7 @@ Trigger.prototype.SpawnDesertRaiders = function(data)
 
 	for (let i = 0; i < 90; i ++)
 	{
-		let templates = ["units/pers_champion_infantry","units/pers_infantry_archer_e","units/pers_infantry_javelinist_e","units/pers_kardakes_hoplite"];
+		let templates = ["units/pers/champion_infantry","units/pers_infantry_archer_e","units/pers_infantry_javelinist_e","units/pers_kardakes_hoplite"];
 		
 		//pick patrol sites
 		let sites = [pickRandom(spawn_sites),pickRandom(spawn_sites),pickRandom(spawn_sites),pickRandom(spawn_sites)];
@@ -1352,7 +1352,7 @@ Trigger.prototype.RangeActionMercs = function(data)
 	if (this.mercsAvailable == true && data.added.length > 0)
 	{
 		let sizes = [5,10];
-		let templates = ["units/pers_champion_cavalry_archer","units/pers_cavalry_archer_e","units/maur_champion_chariot"];
+		let templates = ["units/pers/champion_cavalry_archer","units/pers_cavalry_archer_e","units/maur_champion_chariot"];
 		
 		let costs_stone = [50,75,100];
 		let costs_food = [25,50,75];
@@ -1417,7 +1417,7 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 		{
 			if (id.template.GenericName == "Bactrian Heavy Cavalry Archer")
 			{
-				template = "units/pers_champion_cavalry_archer";
+				template = "units/pers/champion_cavalry_archer";
 			}
 			else if (id.template.GenericName == "Armored Swordsman")
 			{
@@ -1431,7 +1431,7 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 		}
 		else if (template == "units/mace_cavalry_javelinist_b" || template == "units/mace/cavalry_javelineer_a")
 		{
-			template = "units/mace_cavalry_javelinist_e";
+			template = "units/mace/cavalry_javelineer_e";
 		}
 		else if (template == "units/mace/cavalry_spearman_b" || template == "units/mace/cavalry_spearman_a")
 		{
@@ -1443,7 +1443,7 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 		}
 		else if (template == "units/mace/infantry_javelineer_b" || template == "units/mace/infantry_javelineer_a")
 		{
-			template = "units/mace_infantry_javelinist_e";
+			template = "units/mace/infantry_javelineer_e";
 		}
 		else if (template == "units/mace/infantry_pikeman_b" || template == "units/mace/infantry_pikeman_a")
 		{
@@ -1470,7 +1470,7 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 		/*if (template == undefined)
 		{
 			warn("overriding template");
-			template = "units/pers_champion_cavalry_archer";
+			template = "units/pers/champion_cavalry_archer";
 		}*/
 		
 		//warn(template);
@@ -1558,7 +1558,7 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 		
 		if (p == 1)
 		{
-			disTemplates = disTemplates.concat(["units/mace_hero_alexander","units/mace_hero_craterus","units/mace/hero_philip_ii","units/mace_hero_demetrius","units/mace_hero_pyrhus"]);
+			disTemplates = disTemplates.concat(["units/mace/hero_alexander_iii","units/mace_hero_craterus","units/mace/hero_philip_ii","units/mace_hero_demetrius","units/mace_hero_pyrhus"]);
 		}
 			
 		cmpPlayer.SetDisabledTemplates(disTemplates);

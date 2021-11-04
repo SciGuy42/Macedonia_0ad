@@ -182,7 +182,7 @@ Trigger.prototype.SpawnHorsemanPatrol = function(data)
 		if (units.length < 300 && camps.length > 1)
 		{
 			//templates, mostly archers
-			let cav_templates = ["units/pers_champion_cavalry","units/pers_champion_cavalry_archer","units/pers_cavalry_javelinist_e","units/pers_cavalry_javelinist_a","units/pers_cavalry_swordsman_e","units/pers_cavalry_swordsman_a","units/pers_cavalry_spearman_e","units/pers_cavalry_spearman_a","units/pers_cavalry_spearman_b"];
+			let cav_templates = ["units/pers/champion_cavalry","units/pers/champion_cavalry_archer","units/pers_cavalry_javelinist_e","units/pers_cavalry_javelinist_a","units/pers_cavalry_swordsman_e","units/pers_cavalry_swordsman_a","units/pers_cavalry_spearman_e","units/pers_cavalry_spearman_a","units/pers_cavalry_spearman_b"];
 		
 			let sites = this.GetTriggerPoints(triggerPointPatrol);
 			let sites_reversed = [];
@@ -224,7 +224,7 @@ Trigger.prototype.SpawnInitialPatrol = function(data)
 	}
 	
 	//templates, mostly archers
-	let cav_templates = ["units/pers_champion_cavalry","units/pers_champion_cavalry_archer","units/pers_cavalry_javelinist_e","units/pers_cavalry_javelinist_a","units/pers_cavalry_swordsman_e","units/pers_cavalry_swordsman_a","units/pers_cavalry_spearman_e","units/pers_cavalry_spearman_a","units/pers_cavalry_spearman_b"];
+	let cav_templates = ["units/pers/champion_cavalry","units/pers/champion_cavalry_archer","units/pers_cavalry_javelinist_e","units/pers_cavalry_javelinist_a","units/pers_cavalry_swordsman_e","units/pers_cavalry_swordsman_a","units/pers_cavalry_spearman_e","units/pers_cavalry_spearman_a","units/pers_cavalry_spearman_b"];
 	
 	for (let i = 0; i < num_horsemen; i ++)
 	{
@@ -410,7 +410,7 @@ Trigger.prototype.RebelAttack = function(data)
 	//spawn distractors
 	let num_squads_distractors = 3;
 	let squad_size_distractor = 3+Math.round(pop/25)+this.attackCounter;
-	let templates_distractor = ["units/pers_champion_cavalry_archer","units/pers_cavalry_javelinist_e","units/pers_cavalry_javelinist_a","units/pers_cavalry_swordsman_e","units/pers_cavalry_swordsman_a","units/pers_cavalry_spearman_e","units/pers_cavalry_spearman_a","units/pers_cavalry_spearman_b"];
+	let templates_distractor = ["units/pers/champion_cavalry_archer","units/pers_cavalry_javelinist_e","units/pers_cavalry_javelinist_a","units/pers_cavalry_swordsman_e","units/pers_cavalry_swordsman_a","units/pers_cavalry_spearman_e","units/pers_cavalry_spearman_a","units/pers_cavalry_spearman_b"];
 	
 	for (let i = 0; i < num_squads_distractors; i ++)
 	{
@@ -429,7 +429,7 @@ Trigger.prototype.RebelAttack = function(data)
 	let num_squads = 2;
 	let squad_size = 10+Math.round(pop/18)+2*this.attackCounter;
 	
-	let templates = ["units/pers_champion_cavalry_archer","units/pers_champion_cavalry_archer","units/pers_cavalry_javelinist_a","units/pers_cavalry_spearman_e","units/pers_champion_cavalry","units/pers_champion_cavalry","units/pers_cavalry_swordsman_e","units/pers_infantry_archer_e","units/pers_infantry_spearman_e","units/pers_infantry_archer_e","units/pers_champion_infantry","units/pers_champion_infantry","units/pers_infantry_javelinist_e","units/pers_infantry_spearman_b","units/pers_infantry_spearman_b","units/pers_mechanical_siege_ram"];
+	let templates = ["units/pers/champion_cavalry_archer","units/pers/champion_cavalry_archer","units/pers_cavalry_javelinist_a","units/pers_cavalry_spearman_e","units/pers_champion_cavalry","units/pers_champion_cavalry","units/pers_cavalry_swordsman_e","units/pers_infantry_archer_e","units/pers_infantry_spearman_e","units/pers_infantry_archer_e","units/pers/champion_infantry","units/pers_champion_infantry","units/pers_infantry_javelinist_e","units/pers_infantry_spearman_b","units/pers_infantry_spearman_b","units/pers_mechanical_siege_ram"];
 	
 	for (let i = 0; i < num_squads; i ++)
 	{

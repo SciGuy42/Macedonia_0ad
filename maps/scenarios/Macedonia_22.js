@@ -238,7 +238,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		if (id.classesList.indexOf("Embassy") >= 0)
 		{
 			//captured camp, spawn some balistas
-			TriggerHelper.SpawnUnits(data.entity,"units/mace_mechanical_siege_oxybeles_packed",8,1);
+			TriggerHelper.SpawnUnits(data.entity,"units/mace/siege_oxybeles_packed",8,1);
 			
 			//spawn the princess
 			TriggerHelper.SpawnUnits(data.entity,"units/kush_hero_amanirenas",1,1);
@@ -440,7 +440,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let e of towers_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_infantry",5,p);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_infantry",5,p);
 			
 			for (let a of archers_e)
 			{
@@ -740,7 +740,7 @@ Trigger.prototype.AchaeanAttack = function(data)
 		else 
 		{
 			//siege
-			let units_i = TriggerHelper.SpawnUnits(spawn_site,"units/athen_mechanical_siege_oxybeles_packed",1,p);
+			let units_i = TriggerHelper.SpawnUnits(spawn_site,"units/athen/siege_oxybeles_packed",1,p);
 			attackers.push(units_i[0]);
 		}
 	}
@@ -958,7 +958,7 @@ Trigger.prototype.SpawnCretanTraders = function(data)
 				{
 					for (let i = 0; i < this.tradeEscortSize; i ++)
 					{
-						let escort_i = TriggerHelper.SpawnUnits(site,"units/athen_cavalry_swordsman_a",1,e);
+						let escort_i = TriggerHelper.SpawnUnits(site,"units/athen/cavalry_swordsman_a",1,e);
 					
 					
 						let cmpUnitAI = Engine.QueryInterface(escort_i[0], IID_UnitAI);
@@ -1092,7 +1092,7 @@ Trigger.prototype.SpawnAssault = function(data)
 		//spawn unit
 		let triggerPoint = pickRandom(this.GetTriggerPoints(triggerPointNorth));
 		
-		let units_i = TriggerHelper.SpawnUnits(triggerPoint, "units/spart_cavalry_spearman_a", 1, owner);
+		let units_i = TriggerHelper.SpawnUnits(triggerPoint, "units/spart/cavalry_spearman_a", 1, owner);
 		
 		//make it fight
 		this.WalkAndFightClosestTarget(units_i[0],target_player,"CivilCentre");
@@ -1103,7 +1103,7 @@ Trigger.prototype.SpawnAssault = function(data)
 		//spawn unit
 		let triggerPoint = pickRandom(this.GetTriggerPoints(triggerPointNorth));
 		
-		let units_i = TriggerHelper.SpawnUnits(triggerPoint, "units/athen_mechanical_siege_oxybeles_packed", 1, owner);
+		let units_i = TriggerHelper.SpawnUnits(triggerPoint, "units/athen/siege_oxybeles_packed", 1, owner);
 		
 		//make it fight
 		this.WalkAndFightClosestTarget(units_i[0],target_player,"CivilCentre");
@@ -1112,7 +1112,7 @@ Trigger.prototype.SpawnAssault = function(data)
 	//south side -- some infantry
 	let num_infantry = 30;
 	
-	let inf_templates = ["units/spart_champion_infantry_pike","units/spart_champion_infantry_sword", "units/spart_champion_infantry_spear","units/spart_infantry_javelinist_a"];
+	let inf_templates = ["units/spart/champion_infantry_pike","units/spart/champion_infantry_swordsman", "units/spart/champion_infantry_spear","units/spart/infantry_javelineer_a"];
 	
 	for (let i = 0; i < num_infantry; i ++)
 	{
@@ -1155,19 +1155,19 @@ Trigger.prototype.SpawnAssault = function(data)
 	cmpTrigger.escortProb = 0.3;
 	cmpTrigger.maxNumArcadianTraders = 6;
 	
-	cmpTrigger.patrolTemplates = ["units/athen/champion_ranged","units/athen/champion_marine","units/athen_champion_infantry","units/athen_champion_ranged_gastraphetes"];
+	cmpTrigger.patrolTemplates = ["units/athen/champion_ranged","units/athen/champion_marine","units/athen/champion_infantry","units/athen_champion_ranged_gastraphetes"];
 	
 	//some variables that change over time
 	cmpTrigger.arcadiaAttackLevel = 20;
 	cmpTrigger.arcadiaAttackInterval = 540; 
 	cmpTrigger.arcadiaSiegeProb = 0.05;
-	cmpTrigger.arcadiaAttackTemplates = ["units/athen/champion_ranged","units/athen/champion_marine","units/athen_champion_infantry","units/athen_champion_ranged_gastraphetes","units/athen_infantry_javelinist_a","units/athen_infantry_slinger_a","units/athen_infantry_spearman_a","units/athen_infantry_spearman_a"];
+	cmpTrigger.arcadiaAttackTemplates = ["units/athen/champion_ranged","units/athen/champion_marine","units/athen/champion_infantry","units/athen_champion_ranged_gastraphetes","units/athen/infantry_javelineer_a","units/athen/infantry_slinger_a","units/athen/infantry_spearman_a","units/athen_infantry_spearman_a"];
 	
 	//some variables that change over time
 	cmpTrigger.achaeanAttackLevel = 30;
 	cmpTrigger.achaeanAttackInterval = 720; 
 	cmpTrigger.achaeanSiegeProb = 0.05;
-	cmpTrigger.achaeanAttackTemplates = ["units/athen_cavalry_swordsman_a","units/athen_cavalry_javelinist_a","units/athen_infantry_javelinist_a","units/athen_infantry_slinger_a","units/athen_infantry_spearman_a","units/athen_infantry_spearman_a"];
+	cmpTrigger.achaeanAttackTemplates = ["units/athen/cavalry_swordsman_a","units/athen/cavalry_javelineer_a","units/athen/infantry_javelineer_a","units/athen/infantry_slinger_a","units/athen/infantry_spearman_a","units/athen_infantry_spearman_a"];
 	
 	//whether the special attack has happened
 	cmpTrigger.specialAttackTriggered = false;

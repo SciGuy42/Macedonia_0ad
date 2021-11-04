@@ -15295,7 +15295,7 @@
 			<Actor seed="57980"/>
 		</Entity>
 		<Entity uid="2971">
-			<Template>units/mace_hero_alexander</Template>
+			<Template>units/mace/hero_alexander_iii</Template>
 			<Player>1</Player>
 			<Position x="742.67072" z="155.31077"/>
 			<Orientation y="-7.23401"/>
@@ -15960,70 +15960,70 @@
 			<Actor seed="57980"/>
 		</Entity>
 		<Entity uid="3069">
-			<Template>units/mace_champion_cavalry</Template>
+			<Template>units/mace/champion_cavalry</Template>
 			<Player>3</Player>
 			<Position x="97.8441" z="719.04627"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="2568"/>
 		</Entity>
 		<Entity uid="3070">
-			<Template>units/mace_champion_cavalry</Template>
+			<Template>units/mace/champion_cavalry</Template>
 			<Player>3</Player>
 			<Position x="100.14283" z="721.88782"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="34328"/>
 		</Entity>
 		<Entity uid="3071">
-			<Template>units/mace_champion_cavalry</Template>
+			<Template>units/mace/champion_cavalry</Template>
 			<Player>3</Player>
 			<Position x="102.32926" z="724.65857"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="39554"/>
 		</Entity>
 		<Entity uid="3072">
-			<Template>units/mace_champion_cavalry</Template>
+			<Template>units/mace/champion_cavalry</Template>
 			<Player>3</Player>
 			<Position x="104.76355" z="727.68757"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="1901"/>
 		</Entity>
 		<Entity uid="3073">
-			<Template>units/mace_champion_cavalry</Template>
+			<Template>units/mace/champion_cavalry</Template>
 			<Player>3</Player>
 			<Position x="106.77683" z="730.32758"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="10571"/>
 		</Entity>
 		<Entity uid="3074">
-			<Template>units/mace_champion_cavalry</Template>
+			<Template>units/mace/champion_cavalry</Template>
 			<Player>3</Player>
 			<Position x="102.4644" z="734.237"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="22752"/>
 		</Entity>
 		<Entity uid="3075">
-			<Template>units/mace_champion_cavalry</Template>
+			<Template>units/mace/champion_cavalry</Template>
 			<Player>3</Player>
 			<Position x="100.35659" z="731.72626"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="64925"/>
 		</Entity>
 		<Entity uid="3076">
-			<Template>units/mace_champion_cavalry</Template>
+			<Template>units/mace/champion_cavalry</Template>
 			<Player>3</Player>
 			<Position x="97.86098" z="728.79847"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="20427"/>
 		</Entity>
 		<Entity uid="3077">
-			<Template>units/mace_champion_cavalry</Template>
+			<Template>units/mace/champion_cavalry</Template>
 			<Player>3</Player>
 			<Position x="95.63712" z="725.96186"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="25526"/>
 		</Entity>
 		<Entity uid="3078">
-			<Template>units/mace_champion_cavalry</Template>
+			<Template>units/mace/champion_cavalry</Template>
 			<Player>3</Player>
 			<Position x="93.75188" z="723.26746"/>
 			<Orientation y="2.35621"/>

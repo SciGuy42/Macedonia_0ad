@@ -320,7 +320,7 @@ Trigger.prototype.SpawnAssaultSquad = function(data)
 		{
 			//warn("spawning siege");
 			
-			let unit_i = TriggerHelper.SpawnUnits(spawn_sites[0],"units/mace_mechanical_siege_oxybeles_packed",1,p);
+			let unit_i = TriggerHelper.SpawnUnits(spawn_sites[0],"units/mace/siege_oxybeles_packed",1,p);
 	
 			this.WalkAndFightClosestTarget(unit_i[0],2,unitTargetClass);
 					
@@ -388,7 +388,7 @@ Trigger.prototype.SpawnHorsemanPatrol = function(data)
 		if (units.length < 300 && camps.length > 1)
 		{
 			//templates, mostly archers
-			let cav_templates = ["units/pers_champion_cavalry","units/pers_champion_cavalry_archer","units/pers_cavalry_javelinist_e","units/pers_cavalry_javelinist_a","units/pers_cavalry_swordsman_e","units/pers_cavalry_swordsman_a","units/pers_cavalry_spearman_e","units/pers_cavalry_spearman_a","units/pers_cavalry_spearman_b"];
+			let cav_templates = ["units/pers/champion_cavalry","units/pers/champion_cavalry_archer","units/pers_cavalry_javelinist_e","units/pers_cavalry_javelinist_a","units/pers_cavalry_swordsman_e","units/pers_cavalry_swordsman_a","units/pers_cavalry_spearman_e","units/pers_cavalry_spearman_a","units/pers_cavalry_spearman_b"];
 		
 			let sites = this.GetTriggerPoints(triggerPointPatrol);
 			let sites_reversed = [];
@@ -460,7 +460,7 @@ Trigger.prototype.SpawnIntervalGuardPatrol = function(data)
 		
 		
 			//templates
-			let patrol_templates = ["units/pers_champion_infantry","units/pers_kardakes_hoplite","units/pers_kardakes_skirmisher","units/pers_arstibara","units/pers_infantry_archer_e","units/pers_infantry_archer_e"];
+			let patrol_templates = ["units/pers/champion_infantry","units/pers_kardakes_hoplite","units/pers/kardakes_skirmisher","units/pers/arstibara","units/pers_infantry_archer_e","units/pers_infantry_archer_e"];
 
 			
 			if (spawn_sites.length > 0)
@@ -524,7 +524,7 @@ Trigger.prototype.SpawnIntervalPatrol = function(data)
 		let sentry_towers = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p),"SentryTower").filter(TriggerHelper.IsInWorld);
 		
 		//templates
-		let patrol_templates = ["units/pers_champion_infantry","units/pers_kardakes_hoplite","units/pers_kardakes_skirmisher","units/pers_arstibara","units/pers_infantry_archer_e","units/pers_infantry_archer_e"];
+		let patrol_templates = ["units/pers/champion_infantry","units/pers_kardakes_hoplite","units/pers/kardakes_skirmisher","units/pers/arstibara","units/pers_infantry_archer_e","units/pers_infantry_archer_e"];
 
 		
 		if (outposts.length > 0 && sentry_towers.length > 0)
@@ -552,7 +552,7 @@ Trigger.prototype.SpawnInitialPatrol = function(data)
 	let num_patrols = this.enemyCampPatrolSize;
 	
 	//templates
-	let patrol_templates = ["units/pers_champion_infantry","units/pers_kardakes_hoplite","units/pers_kardakes_skirmisher","units/pers_arstibara","units/pers_infantry_archer_e","units/pers_infantry_archer_e"];
+	let patrol_templates = ["units/pers/champion_infantry","units/pers_kardakes_hoplite","units/pers/kardakes_skirmisher","units/pers/arstibara","units/pers_infantry_archer_e","units/pers_infantry_archer_e"];
 
 	
 	// sites
@@ -620,7 +620,7 @@ Trigger.prototype.SpawnElephantBandits = function(data)
 	let site = pickRandom(this.GetTriggerPoints(triggerPointStables));
 		
 	//spawn elephant
-	let templates = ["units/pers_champion_elephant"];
+	let templates = ["units/pers/champion_elephant"];
 	let p = 0;
 	let units_i = TriggerHelper.SpawnUnits(site,pickRandom(templates),1,p);
 	
@@ -690,7 +690,7 @@ Trigger.prototype.SpawnTradersAmbush = function(data)
 {
 	let sites = this.GetTriggerPoints(triggerPointTraderAmbush);
 	
-	let templates = ["units/pers_champion_infantry","units/pers_kardakes_hoplite","units/pers_kardakes_skirmisher","units/pers_arstibara"];
+	let templates = ["units/pers/champion_infantry","units/pers_kardakes_hoplite","units/pers/kardakes_skirmisher","units/pers/arstibara"];
 	
 	let size = 30;
 	
@@ -909,7 +909,7 @@ Trigger.prototype.RebelAttack = function(data)
 	//spawn distractors
 	let num_squads_distractors = 3;
 	let squad_size_distractor = 3+Math.round(pop/25)+this.attackCounter;
-	let templates_distractor = ["units/pers_champion_cavalry_archer","units/pers_cavalry_javelinist_e","units/pers_cavalry_javelinist_a","units/pers_cavalry_swordsman_e","units/pers_cavalry_swordsman_a","units/pers_cavalry_spearman_e","units/pers_cavalry_spearman_a","units/pers_cavalry_spearman_b"];
+	let templates_distractor = ["units/pers/champion_cavalry_archer","units/pers_cavalry_javelinist_e","units/pers_cavalry_javelinist_a","units/pers_cavalry_swordsman_e","units/pers_cavalry_swordsman_a","units/pers_cavalry_spearman_e","units/pers_cavalry_spearman_a","units/pers_cavalry_spearman_b"];
 	
 	for (let i = 0; i < num_squads_distractors; i ++)
 	{
@@ -928,7 +928,7 @@ Trigger.prototype.RebelAttack = function(data)
 	let num_squads = 2;
 	let squad_size = 10+Math.round(pop/18)+2*this.attackCounter;
 	
-	let templates = ["units/pers_champion_cavalry_archer","units/pers_champion_cavalry_archer","units/pers_cavalry_javelinist_a","units/pers_cavalry_spearman_e","units/pers_champion_cavalry","units/pers_champion_cavalry","units/pers_cavalry_swordsman_e","units/pers_infantry_archer_e","units/pers_infantry_spearman_e","units/pers_infantry_archer_e","units/pers_champion_infantry","units/pers_champion_infantry","units/pers_infantry_javelinist_e","units/pers_infantry_spearman_b","units/pers_infantry_spearman_b","units/pers_mechanical_siege_ram"];
+	let templates = ["units/pers/champion_cavalry_archer","units/pers/champion_cavalry_archer","units/pers_cavalry_javelinist_a","units/pers_cavalry_spearman_e","units/pers_champion_cavalry","units/pers_champion_cavalry","units/pers_cavalry_swordsman_e","units/pers_infantry_archer_e","units/pers_infantry_spearman_e","units/pers_infantry_archer_e","units/pers/champion_infantry","units/pers_champion_infantry","units/pers_infantry_javelinist_e","units/pers_infantry_spearman_b","units/pers_infantry_spearman_b","units/pers_mechanical_siege_ram"];
 	
 	for (let i = 0; i < num_squads; i ++)
 	{
@@ -1226,7 +1226,7 @@ Trigger.prototype.QuestSiegeEnginesCapturedComplete = function(data)
 	
 	let num_siege = 6; //how many to spawn
 	
-	//let unit_i = TriggerHelper.SpawnUnits(camps_p[0],"units/mace_mechanical_siege_oxybeles_packed",num_siege,1);
+	//let unit_i = TriggerHelper.SpawnUnits(camps_p[0],"units/mace/siege_oxybeles_packed",num_siege,1);
 	
 	//destroy all siege by player 1
 	let siege_p = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(1),"Siege").filter(TriggerHelper.IsInWorld);
@@ -1347,7 +1347,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		warn("Alex tent captured!");
 		
 		//spawn alexander
-		let unit_i = TriggerHelper.SpawnUnits(data.entity,"units/mace_hero_alexander",1,1);
+		let unit_i = TriggerHelper.SpawnUnits(data.entity,"units/mace/hero_alexander_iii",1,1);
 		
 		this.alexRescued = true;
 		
@@ -1514,7 +1514,7 @@ Trigger.prototype.SpawnSiegeAttackers = function(data)
 	
 	//spawn some units next to each siege unit
 	let squad_size = 9;
-	let templates = ["units/pers_champion_infantry","units/pers_kardakes_hoplite","units/pers_kardakes_skirmisher","units/pers_arstibara"];
+	let templates = ["units/pers/champion_infantry","units/pers_kardakes_hoplite","units/pers/kardakes_skirmisher","units/pers/arstibara"];
 	for (let site of siege)
 	{
 		for (let i = 0; i < squad_size; i ++)
@@ -1683,7 +1683,7 @@ Trigger.prototype.SpawnCityKidnappers = function(data)
 	let size = this.sizeCityKidnappers;
 	
 	
-	let templates = ["units/pers_champion_infantry","units/pers_kardakes_hoplite","units/pers_kardakes_skirmisher","units/pers_arstibara"];
+	let templates = ["units/pers/champion_infantry","units/pers_kardakes_hoplite","units/pers/kardakes_skirmisher","units/pers/arstibara"];
 	
 	let sites = this.GetTriggerPoints(triggerCityKidnappers);
 	

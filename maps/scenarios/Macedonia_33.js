@@ -625,7 +625,7 @@ Trigger.prototype.SpawnInitialPatrol = function(data)
 Trigger.prototype.SpawnIntervalCavalryAttack = function(data)
 {
 	//templates -- mostly far east horsemen
-	let templates = ["units/pers_cavalry_javelinist_e","units/pers_cavalry_spearman_e","units/pers_cavalry_swordsman_e","units/pers_champion_cavalry","units/pers_champion_cavalry_archer"];
+	let templates = ["units/pers_cavalry_javelinist_e","units/pers_cavalry_spearman_e","units/pers_cavalry_swordsman_e","units/pers/champion_cavalry","units/pers/champion_cavalry_archer"];
 	
 	
 	//how big each squad

@@ -405,7 +405,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of forts_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/pers_arstibara",20,owner);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/pers/arstibara",20,owner);
 			
 			for (let a of archers_e)
 			{
@@ -420,7 +420,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of towers_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/pers_arstibara",5,owner);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/pers/arstibara",5,owner);
 			
 			for (let a of archers_e)
 			{
@@ -435,7 +435,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let e of towers_w)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/pers_arstibara",2,owner);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/pers/arstibara",2,owner);
 				
 			for (let a of archers_e)
 			{
@@ -544,7 +544,7 @@ Trigger.prototype.SpawnInterevalPatrol = function(data)
 	
 	if (units_p.length < 100)
 	{
-		let templates = ["units/pers_infantry_archer_e","units/pers_infantry_spearman_e","units/pers_arstibara","units/pers_kardakes_hoplite","units/pers_kardakes_skirmisher"];
+		let templates = ["units/pers_infantry_archer_e","units/pers_infantry_spearman_e","units/pers/arstibara","units/pers_kardakes_hoplite","units/pers/kardakes_skirmisher"];
 	
 		
 		let trigger_sites = this.GetTriggerPoints(triggerPointsPatrol);
@@ -848,7 +848,7 @@ Trigger.prototype.SpawnStructureResponseAttack = function(data)
 	let site = sites[index];
 			
 	//templates
-	let templates = ["units/pers_cavalry_archer_a","units/pers_cavalry_javelinist_e","units/pers_cavalry_swordsman_a","units/pers_cavalry_swordsman_e","units/pers_champion_cavalry","units/pers_champion_cavalry_archer","units/pers_cavalry_spearman_a","units/pers_cavalry_spearman_e"];
+	let templates = ["units/pers_cavalry_archer_a","units/pers_cavalry_javelinist_e","units/pers_cavalry_swordsman_a","units/pers_cavalry_swordsman_e","units/pers/champion_cavalry","units/pers/champion_cavalry_archer","units/pers_cavalry_spearman_a","units/pers_cavalry_spearman_e"];
 			
 	let attackers = [];
 	let p = 8;
@@ -990,7 +990,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	/*if (data.from == 0 && data.to == 1) //we captured a gaia structure, there is only 1 so...
 	{
 		//spawn some bolt shooters
-		let siege = TriggerHelper.SpawnUnits(data.entity,"units/mace_mechanical_siege_oxybeles_packed",5,1);
+		let siege = TriggerHelper.SpawnUnits(data.entity,"units/mace/siege_oxybeles_packed",5,1);
 		
 		//warn("spawned siege");
 		//destroy building			

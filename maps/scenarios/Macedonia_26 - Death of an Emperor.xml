@@ -2203,85 +2203,85 @@
 			<Orientation y="-2.11986"/>
 		</Entity>
 		<Entity uid="454">
-			<Template>gaia/flora_tree_cretan_date_palm_short</Template>
+			<Template>gaia/tree/cretan_date_palm_short</Template>
 			<Player>0</Player>
 			<Position x="467.80954" z="149.17945"/>
 			<Orientation y="2.35621"/>
 		</Entity>
 		<Entity uid="455">
-			<Template>gaia/flora_tree_cretan_date_palm_short</Template>
+			<Template>gaia/tree/cretan_date_palm_short</Template>
 			<Player>0</Player>
 			<Position x="486.22599" z="147.62165"/>
 			<Orientation y="-1.49531"/>
 		</Entity>
 		<Entity uid="456">
-			<Template>gaia/flora_tree_cretan_date_palm_short</Template>
+			<Template>gaia/tree/cretan_date_palm_short</Template>
 			<Player>0</Player>
 			<Position x="545.57734" z="196.66553"/>
 			<Orientation y="-1.22936"/>
 		</Entity>
 		<Entity uid="457">
-			<Template>gaia/flora_tree_cretan_date_palm_tall</Template>
+			<Template>gaia/tree/cretan_date_palm_tall</Template>
 			<Player>0</Player>
 			<Position x="469.36689" z="157.11182"/>
 			<Orientation y="2.35621"/>
 		</Entity>
 		<Entity uid="458">
-			<Template>gaia/flora_tree_cretan_date_palm_tall</Template>
+			<Template>gaia/tree/cretan_date_palm_tall</Template>
 			<Player>0</Player>
 			<Position x="550.81977" z="180.2509"/>
 			<Orientation y="-0.17502"/>
 		</Entity>
 		<Entity uid="459">
-			<Template>gaia/flora_tree_cretan_date_palm_tall</Template>
+			<Template>gaia/tree/cretan_date_palm_tall</Template>
 			<Player>0</Player>
 			<Position x="527.08777" z="214.56417"/>
 			<Orientation y="0.3049"/>
 		</Entity>
 		<Entity uid="460">
-			<Template>gaia/flora_tree_cretan_date_palm_tall</Template>
+			<Template>gaia/tree/cretan_date_palm_tall</Template>
 			<Player>0</Player>
 			<Position x="124.12218" z="498.32251"/>
 			<Orientation y="-0.11551"/>
 		</Entity>
 		<Entity uid="461">
-			<Template>gaia/flora_tree_cretan_date_palm_tall</Template>
+			<Template>gaia/tree/cretan_date_palm_tall</Template>
 			<Player>0</Player>
 			<Position x="199.87711" z="513.53541"/>
 			<Orientation y="2.35621"/>
 		</Entity>
 		<Entity uid="462">
-			<Template>gaia/flora_tree_cretan_date_palm_tall</Template>
+			<Template>gaia/tree/cretan_date_palm_tall</Template>
 			<Player>0</Player>
 			<Position x="260.02808" z="416.82627"/>
 			<Orientation y="-0.20691"/>
 		</Entity>
 		<Entity uid="463">
-			<Template>gaia/flora_tree_cretan_date_palm_short</Template>
+			<Template>gaia/tree/cretan_date_palm_short</Template>
 			<Player>0</Player>
 			<Position x="173.85032" z="386.86747"/>
 			<Orientation y="-1.06823"/>
 		</Entity>
 		<Entity uid="464">
-			<Template>gaia/flora_tree_cretan_date_palm_short</Template>
+			<Template>gaia/tree/cretan_date_palm_short</Template>
 			<Player>0</Player>
 			<Position x="165.37403" z="390.4636"/>
 			<Orientation y="0.59838"/>
 		</Entity>
 		<Entity uid="465">
-			<Template>gaia/flora_tree_cretan_date_palm_short</Template>
+			<Template>gaia/tree/cretan_date_palm_short</Template>
 			<Player>0</Player>
 			<Position x="239.03037" z="475.12034"/>
 			<Orientation y="2.38282"/>
 		</Entity>
 		<Entity uid="466">
-			<Template>gaia/flora_tree_cretan_date_palm_patch</Template>
+			<Template>gaia/tree/cretan_date_palm_patch</Template>
 			<Player>0</Player>
 			<Position x="208.03405" z="392.56617"/>
 			<Orientation y="2.35621"/>
 		</Entity>
 		<Entity uid="467">
-			<Template>gaia/flora_tree_cretan_date_palm_patch</Template>
+			<Template>gaia/tree/cretan_date_palm_patch</Template>
 			<Player>0</Player>
 			<Position x="542.9372" z="121.29679"/>
 			<Orientation y="-0.47947"/>
@@ -5977,49 +5977,49 @@
 			<Orientation y="0.71322"/>
 		</Entity>
 		<Entity uid="1233">
-			<Template>gaia/flora_tree_cretan_date_palm_tall</Template>
+			<Template>gaia/tree/cretan_date_palm_tall</Template>
 			<Player>0</Player>
 			<Position x="880.68787" z="758.27417"/>
 			<Orientation y="-1.52987"/>
 		</Entity>
 		<Entity uid="1234">
-			<Template>gaia/flora_tree_cretan_date_palm_tall</Template>
+			<Template>gaia/tree/cretan_date_palm_tall</Template>
 			<Player>0</Player>
 			<Position x="921.0688" z="559.98133"/>
 			<Orientation y="0.74131"/>
 		</Entity>
 		<Entity uid="1235">
-			<Template>gaia/flora_tree_cretan_date_palm_tall</Template>
+			<Template>gaia/tree/cretan_date_palm_tall</Template>
 			<Player>0</Player>
 			<Position x="900.68097" z="568.60035"/>
 			<Orientation y="-1.09577"/>
 		</Entity>
 		<Entity uid="1257">
-			<Template>gaia/flora_tree_cretan_date_palm_patch</Template>
+			<Template>gaia/tree/cretan_date_palm_patch</Template>
 			<Player>0</Player>
 			<Position x="905.52515" z="493.57587"/>
 			<Orientation y="1.05718"/>
 		</Entity>
 		<Entity uid="1258">
-			<Template>gaia/flora_tree_cretan_date_palm_patch</Template>
+			<Template>gaia/tree/cretan_date_palm_patch</Template>
 			<Player>0</Player>
 			<Position x="1071.94214" z="214.54712"/>
 			<Orientation y="2.35621"/>
 		</Entity>
 		<Entity uid="1262">
-			<Template>gaia/flora_tree_cretan_date_palm_tall</Template>
+			<Template>gaia/tree/cretan_date_palm_tall</Template>
 			<Player>0</Player>
 			<Position x="993.21821" z="733.93409"/>
 			<Orientation y="1.10125"/>
 		</Entity>
 		<Entity uid="1263">
-			<Template>gaia/flora_tree_cretan_date_palm_tall</Template>
+			<Template>gaia/tree/cretan_date_palm_tall</Template>
 			<Player>0</Player>
 			<Position x="939.1537" z="381.24033"/>
 			<Orientation y="2.35621"/>
 		</Entity>
 		<Entity uid="1264">
-			<Template>gaia/flora_tree_cretan_date_palm_tall</Template>
+			<Template>gaia/tree/cretan_date_palm_tall</Template>
 			<Player>0</Player>
 			<Position x="710.7591" z="255.661"/>
 			<Orientation y="0.44736"/>
@@ -11207,37 +11207,37 @@
 			<Orientation y="2.35621"/>
 		</Entity>
 		<Entity uid="2489">
-			<Template>gaia/flora_tree_cretan_date_palm_patch</Template>
+			<Template>gaia/tree/cretan_date_palm_patch</Template>
 			<Player>0</Player>
 			<Position x="225.51465" z="862.78486"/>
 			<Orientation y="0.65262"/>
 		</Entity>
 		<Entity uid="2490">
-			<Template>gaia/flora_tree_cretan_date_palm_short</Template>
+			<Template>gaia/tree/cretan_date_palm_short</Template>
 			<Player>0</Player>
 			<Position x="201.95066" z="890.58356"/>
 			<Orientation y="1.12473"/>
 		</Entity>
 		<Entity uid="2492">
-			<Template>gaia/flora_tree_cretan_date_palm_short</Template>
+			<Template>gaia/tree/cretan_date_palm_short</Template>
 			<Player>0</Player>
 			<Position x="279.16157" z="928.31891"/>
 			<Orientation y="-2.21254"/>
 		</Entity>
 		<Entity uid="2493">
-			<Template>gaia/flora_tree_cretan_date_palm_tall</Template>
+			<Template>gaia/tree/cretan_date_palm_tall</Template>
 			<Player>0</Player>
 			<Position x="232.5716" z="918.79712"/>
 			<Orientation y="2.35621"/>
 		</Entity>
 		<Entity uid="2494">
-			<Template>gaia/flora_tree_cretan_date_palm_tall</Template>
+			<Template>gaia/tree/cretan_date_palm_tall</Template>
 			<Player>0</Player>
 			<Position x="270.18555" z="935.29645"/>
 			<Orientation y="-0.53129"/>
 		</Entity>
 		<Entity uid="2495">
-			<Template>gaia/flora_tree_cretan_date_palm_tall</Template>
+			<Template>gaia/tree/cretan_date_palm_tall</Template>
 			<Player>0</Player>
 			<Position x="289.7027" z="861.10792"/>
 			<Orientation y="-1.38668"/>
@@ -11291,43 +11291,43 @@
 			<Orientation y="-1.24972"/>
 		</Entity>
 		<Entity uid="2504">
-			<Template>gaia/flora_tree_cretan_date_palm_patch</Template>
+			<Template>gaia/tree/cretan_date_palm_patch</Template>
 			<Player>0</Player>
 			<Position x="528.50525" z="1054.41517"/>
 			<Orientation y="2.35621"/>
 		</Entity>
 		<Entity uid="2505">
-			<Template>gaia/flora_tree_cretan_date_palm_short</Template>
+			<Template>gaia/tree/cretan_date_palm_short</Template>
 			<Player>0</Player>
 			<Position x="573.98176" z="1023.89368"/>
 			<Orientation y="0.82554"/>
 		</Entity>
 		<Entity uid="2506">
-			<Template>gaia/flora_tree_cretan_date_palm_short</Template>
+			<Template>gaia/tree/cretan_date_palm_short</Template>
 			<Player>0</Player>
 			<Position x="614.13416" z="1072.52637"/>
 			<Orientation y="-1.58495"/>
 		</Entity>
 		<Entity uid="2507">
-			<Template>gaia/flora_tree_cretan_date_palm_short</Template>
+			<Template>gaia/tree/cretan_date_palm_short</Template>
 			<Player>0</Player>
 			<Position x="540.20179" z="1149.63453"/>
 			<Orientation y="0.19755"/>
 		</Entity>
 		<Entity uid="2508">
-			<Template>gaia/flora_tree_cretan_date_palm_tall</Template>
+			<Template>gaia/tree/cretan_date_palm_tall</Template>
 			<Player>0</Player>
 			<Position x="519.56196" z="1105.35901"/>
 			<Orientation y="2.35621"/>
 		</Entity>
 		<Entity uid="2509">
-			<Template>gaia/flora_tree_cretan_date_palm_tall</Template>
+			<Template>gaia/tree/cretan_date_palm_tall</Template>
 			<Player>0</Player>
 			<Position x="601.89063" z="1040.15174"/>
 			<Orientation y="-0.8869"/>
 		</Entity>
 		<Entity uid="2510">
-			<Template>gaia/flora_tree_cretan_date_palm_tall</Template>
+			<Template>gaia/tree/cretan_date_palm_tall</Template>
 			<Player>0</Player>
 			<Position x="606.19928" z="1118.594"/>
 			<Orientation y="2.35621"/>
@@ -14743,119 +14743,119 @@
 			<Actor seed="37236"/>
 		</Entity>
 		<Entity uid="3286">
-			<Template>structures/pers_dock</Template>
+			<Template>structures/pers/dock</Template>
 			<Player>4</Player>
 			<Position x="338.53385" z="115.57859"/>
 			<Orientation y="0.89834"/>
 			<Actor seed="44958"/>
 		</Entity>
 		<Entity uid="3287">
-			<Template>units/mace_hero_alexander</Template>
+			<Template>units/mace/hero_alexander_iii</Template>
 			<Player>1</Player>
 			<Position x="1236.19349" z="617.02411"/>
 			<Orientation y="-1.94637"/>
 			<Actor seed="22650"/>
 		</Entity>
 		<Entity uid="3288">
-			<Template>units/mace_champion_cavalry</Template>
+			<Template>units/mace/champion_cavalry</Template>
 			<Player>1</Player>
 			<Position x="1242.96436" z="633.78089"/>
 			<Orientation y="4.26931"/>
 			<Actor seed="44338"/>
 		</Entity>
 		<Entity uid="3289">
-			<Template>units/mace_champion_cavalry</Template>
+			<Template>units/mace/champion_cavalry</Template>
 			<Player>1</Player>
 			<Position x="1243.71973" z="631.25959"/>
 			<Orientation y="4.26931"/>
 			<Actor seed="45684"/>
 		</Entity>
 		<Entity uid="3290">
-			<Template>units/mace_champion_cavalry</Template>
+			<Template>units/mace/champion_cavalry</Template>
 			<Player>1</Player>
 			<Position x="1244.19105" z="628.58808"/>
 			<Orientation y="4.26931"/>
 			<Actor seed="52389"/>
 		</Entity>
 		<Entity uid="3291">
-			<Template>units/mace_champion_cavalry</Template>
+			<Template>units/mace/champion_cavalry</Template>
 			<Player>1</Player>
 			<Position x="1244.7002" z="625.85676"/>
 			<Orientation y="4.26931"/>
 			<Actor seed="26539"/>
 		</Entity>
 		<Entity uid="3292">
-			<Template>units/mace_champion_cavalry</Template>
+			<Template>units/mace/champion_cavalry</Template>
 			<Player>1</Player>
 			<Position x="1245.08252" z="623.40803"/>
 			<Orientation y="4.26931"/>
 			<Actor seed="15789"/>
 		</Entity>
 		<Entity uid="3293">
-			<Template>units/mace_champion_cavalry</Template>
+			<Template>units/mace/champion_cavalry</Template>
 			<Player>1</Player>
 			<Position x="1245.66468" z="620.7511"/>
 			<Orientation y="4.26931"/>
 			<Actor seed="59697"/>
 		</Entity>
 		<Entity uid="3294">
-			<Template>units/mace_champion_cavalry</Template>
+			<Template>units/mace/champion_cavalry</Template>
 			<Player>1</Player>
 			<Position x="1246.5409" z="618.33259"/>
 			<Orientation y="4.26931"/>
 			<Actor seed="50629"/>
 		</Entity>
 		<Entity uid="3295">
-			<Template>units/mace_champion_cavalry</Template>
+			<Template>units/mace/champion_cavalry</Template>
 			<Player>1</Player>
 			<Position x="1247.3047" z="615.83216"/>
 			<Orientation y="4.26931"/>
 			<Actor seed="5757"/>
 		</Entity>
 		<Entity uid="3296">
-			<Template>units/mace_champion_cavalry</Template>
+			<Template>units/mace/champion_cavalry</Template>
 			<Player>1</Player>
 			<Position x="1248.65564" z="613.62928"/>
 			<Orientation y="4.26931"/>
 			<Actor seed="16196"/>
 		</Entity>
 		<Entity uid="3297">
-			<Template>units/mace_champion_cavalry</Template>
+			<Template>units/mace/champion_cavalry</Template>
 			<Player>1</Player>
 			<Position x="1249.68238" z="611.09986"/>
 			<Orientation y="4.26931"/>
 			<Actor seed="15053"/>
 		</Entity>
 		<Entity uid="3298">
-			<Template>units/mace_cavalry_javelinist_e</Template>
+			<Template>units/mace/cavalry_javelineer_e</Template>
 			<Player>1</Player>
 			<Position x="1257.09534" z="619.97181"/>
 			<Orientation y="-1.94637"/>
 			<Actor seed="18670"/>
 		</Entity>
 		<Entity uid="3299">
-			<Template>units/mace_cavalry_javelinist_e</Template>
+			<Template>units/mace/cavalry_javelineer_e</Template>
 			<Player>1</Player>
 			<Position x="1257.62269" z="616.82953"/>
 			<Orientation y="-1.94637"/>
 			<Actor seed="47039"/>
 		</Entity>
 		<Entity uid="3300">
-			<Template>units/mace_cavalry_javelinist_e</Template>
+			<Template>units/mace/cavalry_javelineer_e</Template>
 			<Player>1</Player>
 			<Position x="1258.22815" z="614.0077"/>
 			<Orientation y="-1.94637"/>
 			<Actor seed="20577"/>
 		</Entity>
 		<Entity uid="3301">
-			<Template>units/mace_cavalry_javelinist_e</Template>
+			<Template>units/mace/cavalry_javelineer_e</Template>
 			<Player>1</Player>
 			<Position x="1258.71167" z="611.07935"/>
 			<Orientation y="-1.94637"/>
 			<Actor seed="23339"/>
 		</Entity>
 		<Entity uid="3302">
-			<Template>units/mace_cavalry_javelinist_e</Template>
+			<Template>units/mace/cavalry_javelineer_e</Template>
 			<Player>1</Player>
 			<Position x="1259.78504" z="608.18274"/>
 			<Orientation y="-1.94637"/>
@@ -15044,35 +15044,35 @@
 			<Actor seed="1303"/>
 		</Entity>
 		<Entity uid="3344">
-			<Template>units/pers_kardakes_skirmisher</Template>
+			<Template>units/pers/kardakes_skirmisher</Template>
 			<Player>5</Player>
 			<Position x="1186.58338" z="595.96045"/>
 			<Orientation y="7.05544"/>
 			<Actor seed="2629"/>
 		</Entity>
 		<Entity uid="3345">
-			<Template>units/pers_kardakes_skirmisher</Template>
+			<Template>units/pers/kardakes_skirmisher</Template>
 			<Player>5</Player>
 			<Position x="1185.13172" z="598.45215"/>
 			<Orientation y="7.2466"/>
 			<Actor seed="62863"/>
 		</Entity>
 		<Entity uid="3346">
-			<Template>units/pers_kardakes_skirmisher</Template>
+			<Template>units/pers/kardakes_skirmisher</Template>
 			<Player>5</Player>
 			<Position x="1184.41663" z="601.57367"/>
 			<Orientation y="7.295"/>
 			<Actor seed="19542"/>
 		</Entity>
 		<Entity uid="3347">
-			<Template>units/pers_kardakes_skirmisher</Template>
+			<Template>units/pers/kardakes_skirmisher</Template>
 			<Player>5</Player>
 			<Position x="1182.7433" z="604.69397"/>
 			<Orientation y="7.22689"/>
 			<Actor seed="1747"/>
 		</Entity>
 		<Entity uid="3348">
-			<Template>units/pers_kardakes_skirmisher</Template>
+			<Template>units/pers/kardakes_skirmisher</Template>
 			<Player>5</Player>
 			<Position x="1187.59986" z="592.8711"/>
 			<Orientation y="7.2165"/>
@@ -15388,84 +15388,84 @@
 			<Actor seed="6742"/>
 		</Entity>
 		<Entity uid="3396">
-			<Template>units/pers_arstibara</Template>
+			<Template>units/pers/arstibara</Template>
 			<Player>5</Player>
 			<Position x="1197.2157" z="595.02143"/>
 			<Orientation y="0.52558"/>
 			<Actor seed="49905"/>
 		</Entity>
 		<Entity uid="3397">
-			<Template>units/pers_arstibara</Template>
+			<Template>units/pers/arstibara</Template>
 			<Player>5</Player>
 			<Position x="1200.67518" z="595.62177"/>
 			<Orientation y="-0.24125"/>
 			<Actor seed="3339"/>
 		</Entity>
 		<Entity uid="3398">
-			<Template>units/pers_arstibara</Template>
+			<Template>units/pers/arstibara</Template>
 			<Player>5</Player>
 			<Position x="1203.79725" z="596.14881"/>
 			<Orientation y="-0.51168"/>
 			<Actor seed="34982"/>
 		</Entity>
 		<Entity uid="3399">
-			<Template>units/pers_arstibara</Template>
+			<Template>units/pers/arstibara</Template>
 			<Player>5</Player>
 			<Position x="1207.1709" z="596.79511"/>
 			<Orientation y="-0.46544"/>
 			<Actor seed="62384"/>
 		</Entity>
 		<Entity uid="3400">
-			<Template>units/pers_arstibara</Template>
+			<Template>units/pers/arstibara</Template>
 			<Player>5</Player>
 			<Position x="1210.83814" z="601.19123"/>
 			<Orientation y="-1.31379"/>
 			<Actor seed="11649"/>
 		</Entity>
 		<Entity uid="3401">
-			<Template>units/pers_arstibara</Template>
+			<Template>units/pers/arstibara</Template>
 			<Player>5</Player>
 			<Position x="1209.95057" z="604.63465"/>
 			<Orientation y="-1.23401"/>
 			<Actor seed="57744"/>
 		</Entity>
 		<Entity uid="3402">
-			<Template>units/pers_arstibara</Template>
+			<Template>units/pers/arstibara</Template>
 			<Player>5</Player>
 			<Position x="1207.78272" z="608.41163"/>
 			<Orientation y="-2.48195"/>
 			<Actor seed="28336"/>
 		</Entity>
 		<Entity uid="3403">
-			<Template>units/pers_arstibara</Template>
+			<Template>units/pers/arstibara</Template>
 			<Player>5</Player>
 			<Position x="1203.59253" z="610.00464"/>
 			<Orientation y="2.75887"/>
 			<Actor seed="53909"/>
 		</Entity>
 		<Entity uid="3404">
-			<Template>units/pers_arstibara</Template>
+			<Template>units/pers/arstibara</Template>
 			<Player>5</Player>
 			<Position x="1193.63526" z="598.04371"/>
 			<Orientation y="1.39965"/>
 			<Actor seed="51656"/>
 		</Entity>
 		<Entity uid="3405">
-			<Template>units/pers_arstibara</Template>
+			<Template>units/pers/arstibara</Template>
 			<Player>5</Player>
 			<Position x="1191.78687" z="601.45636"/>
 			<Orientation y="1.84289"/>
 			<Actor seed="48602"/>
 		</Entity>
 		<Entity uid="3406">
-			<Template>units/pers_arstibara</Template>
+			<Template>units/pers/arstibara</Template>
 			<Player>5</Player>
 			<Position x="1191.27808" z="605.27332"/>
 			<Orientation y="2.18586"/>
 			<Actor seed="37076"/>
 		</Entity>
 		<Entity uid="3407">
-			<Template>units/pers_arstibara</Template>
+			<Template>units/pers/arstibara</Template>
 			<Player>5</Player>
 			<Position x="1195.46094" z="606.78364"/>
 			<Orientation y="2.49877"/>
@@ -15723,7 +15723,7 @@
 			<Actor seed="1224"/>
 		</Entity>
 		<Entity uid="3464">
-			<Template>units/pers_arstibara</Template>
+			<Template>units/pers/arstibara</Template>
 			<Player>5</Player>
 			<Position x="1199.51343" z="608.47352"/>
 			<Orientation y="2.71903"/>

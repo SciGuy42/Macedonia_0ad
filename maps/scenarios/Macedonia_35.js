@@ -618,7 +618,7 @@ Trigger.prototype.SpawnMaceAttackInterval = function(data)
 	let sites = this.GetTriggerPoints(triggerPointsMace);
 	
 	//templates
-	let templates = ["units/mace_champion_cavalry","units/mace_cavalry_javelinist_e","units/mace_cavalry_spearman_e","units/athen_cavalry_swordsman_e"];
+	let templates = ["units/mace/champion_cavalry","units/mace/cavalry_javelineer_e","units/mace_cavalry_spearman_e","units/athen_cavalry_swordsman_e"];
 	
 	//spawn
 	let attackers = TriggerHelper.SpawnUnits(pickRandom(sites),pickRandom(templates),1,p);
@@ -959,7 +959,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	if (data.from == 0 && data.to == 1) //we captured a gaia structure, there is only 1 so...
 	{
 		//spawn some bolt shooters
-		let siege = TriggerHelper.SpawnUnits(data.entity,"units/mace_mechanical_siege_oxybeles_packed",5,1);
+		let siege = TriggerHelper.SpawnUnits(data.entity,"units/mace/siege_oxybeles_packed",5,1);
 		
 		//warn("spawned siege");
 		//destroy building			

@@ -65385,7 +65385,7 @@
 			<Orientation y="-0.61721"/>
 		</Entity>
 		<Entity uid="11841">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="802.4853" z="583.17853"/>
 			<Orientation y="0.33986"/>
@@ -65397,7 +65397,7 @@
 			<Orientation y="-3.25597"/>
 		</Entity>
 		<Entity uid="11843">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="251.22086" z="910.33149"/>
 			<Orientation y="0.43041"/>
@@ -65409,7 +65409,7 @@
 			<Orientation y="0.00057"/>
 		</Entity>
 		<Entity uid="11845">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="559.383" z="575.56263"/>
 			<Orientation y="-3.7432"/>
@@ -65427,7 +65427,7 @@
 			<Orientation y="-1.63225"/>
 		</Entity>
 		<Entity uid="11848">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="577.51203" z="1677.74897"/>
 			<Orientation y="-3.68297"/>
@@ -65439,7 +65439,7 @@
 			<Orientation y="-1.94268"/>
 		</Entity>
 		<Entity uid="11850">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="1739.83613" z="993.80341"/>
 			<Orientation y="-3.19419"/>
@@ -65457,7 +65457,7 @@
 			<Orientation y="0.85743"/>
 		</Entity>
 		<Entity uid="11853">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="916.50477" z="180.80799"/>
 			<Orientation y="-3.04352"/>
@@ -65475,7 +65475,7 @@
 			<Orientation y="1.12572"/>
 		</Entity>
 		<Entity uid="11856">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="460.79242" z="423.07123"/>
 			<Orientation y="0.53251"/>
@@ -65493,13 +65493,13 @@
 			<Orientation y="1.72031"/>
 		</Entity>
 		<Entity uid="11859">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="1299.42811" z="313.73539"/>
 			<Orientation y="2.55781"/>
 		</Entity>
 		<Entity uid="11860">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="1034.48011" z="735.27765"/>
 			<Orientation y="-2.35726"/>
@@ -65511,19 +65511,19 @@
 			<Orientation y="-3.82451"/>
 		</Entity>
 		<Entity uid="11862">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="764.13044" z="1840.13672"/>
 			<Orientation y="-0.39885"/>
 		</Entity>
 		<Entity uid="11863">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="1470.43018" z="1517.6988"/>
 			<Orientation y="1.34231"/>
 		</Entity>
 		<Entity uid="11864">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="116.36603" z="1087.40107"/>
 			<Orientation y="-0.9085"/>
@@ -65541,19 +65541,19 @@
 			<Orientation y="-1.14307"/>
 		</Entity>
 		<Entity uid="11867">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="2021.22077" z="1047.36377"/>
 			<Orientation y="-3.56919"/>
 		</Entity>
 		<Entity uid="11868">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="235.29877" z="1201.19587"/>
 			<Orientation y="-1.0676"/>
 		</Entity>
 		<Entity uid="11869">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="1418.12891" z="1816.45643"/>
 			<Orientation y="0.83764"/>
@@ -65565,7 +65565,7 @@
 			<Orientation y="-4.41083"/>
 		</Entity>
 		<Entity uid="11871">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="1017.33155" z="477.111"/>
 			<Orientation y="-3.83059"/>
@@ -65577,7 +65577,7 @@
 			<Orientation y="-0.09528"/>
 		</Entity>
 		<Entity uid="11873">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="1466.77784" z="1233.6095"/>
 			<Orientation y="-1.66514"/>
@@ -65589,7 +65589,7 @@
 			<Orientation y="0.57941"/>
 		</Entity>
 		<Entity uid="11875">
-			<Template>gaia/geology_stonemine_medit_quarry</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>0</Player>
 			<Position x="1593.57136" z="1743.4897"/>
 			<Orientation y="-4.67205"/>
@@ -115045,7 +115045,7 @@
 			<Orientation y="0.62465"/>
 		</Entity>
 		<Entity uid="21498">
-			<Template>units/mace_hero_alexander</Template>
+			<Template>units/mace/hero_alexander_iii</Template>
 			<Player>1</Player>
 			<Position x="1410.59266" z="103.04043"/>
 			<Orientation y="-4.59668"/>
@@ -115171,7 +115171,7 @@
 			<Actor seed="35004"/>
 		</Entity>
 		<Entity uid="21517">
-			<Template>structures/pers_dock</Template>
+			<Template>structures/pers/dock</Template>
 			<Player>2</Player>
 			<Position x="1856.00281" z="947.81641"/>
 			<Orientation y="-3.00795"/>
@@ -115784,7 +115784,7 @@
 			<Actor seed="30916"/>
 		</Entity>
 		<Entity uid="21621">
-			<Template>structures/pers_dock</Template>
+			<Template>structures/pers/dock</Template>
 			<Player>3</Player>
 			<Position x="1361.41602" z="1613.54554"/>
 			<Orientation y="2.83141"/>
@@ -115839,7 +115839,7 @@
 			<Actor seed="10336"/>
 		</Entity>
 		<Entity uid="21632">
-			<Template>structures/pers_dock</Template>
+			<Template>structures/pers/dock</Template>
 			<Player>5</Player>
 			<Position x="1517.27942" z="667.47663"/>
 			<Orientation y="-1.55445"/>
@@ -117218,84 +117218,84 @@
 			<Actor seed="61528"/>
 		</Entity>
 		<Entity uid="21882">
-			<Template>units/pers_champion_infantry</Template>
+			<Template>units/pers/champion_infantry</Template>
 			<Player>0</Player>
 			<Position x="1188.37867" z="2012.62537"/>
 			<Orientation y="2.57541"/>
 			<Actor seed="44299"/>
 		</Entity>
 		<Entity uid="21883">
-			<Template>units/pers_champion_infantry</Template>
+			<Template>units/pers/champion_infantry</Template>
 			<Player>0</Player>
 			<Position x="1188.20142" z="2009.31165"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="38667"/>
 		</Entity>
 		<Entity uid="21884">
-			<Template>units/pers_champion_infantry</Template>
+			<Template>units/pers/champion_infantry</Template>
 			<Player>0</Player>
 			<Position x="1187.7981" z="2006.51502"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="28169"/>
 		</Entity>
 		<Entity uid="21885">
-			<Template>units/pers_champion_infantry</Template>
+			<Template>units/pers/champion_infantry</Template>
 			<Player>0</Player>
 			<Position x="1187.31995" z="2003.75123"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="52856"/>
 		</Entity>
 		<Entity uid="21886">
-			<Template>units/pers_champion_infantry</Template>
+			<Template>units/pers/champion_infantry</Template>
 			<Player>0</Player>
 			<Position x="1187.06177" z="2001.323"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="15826"/>
 		</Entity>
 		<Entity uid="21887">
-			<Template>units/pers_champion_infantry</Template>
+			<Template>units/pers/champion_infantry</Template>
 			<Player>0</Player>
 			<Position x="1186.27027" z="1999.07911"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="9769"/>
 		</Entity>
 		<Entity uid="21888">
-			<Template>units/pers_champion_infantry</Template>
+			<Template>units/pers/champion_infantry</Template>
 			<Player>0</Player>
 			<Position x="1189.97535" z="1998.349"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="13391"/>
 		</Entity>
 		<Entity uid="21889">
-			<Template>units/pers_champion_infantry</Template>
+			<Template>units/pers/champion_infantry</Template>
 			<Player>0</Player>
 			<Position x="1190.52076" z="2000.67078"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="58796"/>
 		</Entity>
 		<Entity uid="21890">
-			<Template>units/pers_champion_infantry</Template>
+			<Template>units/pers/champion_infantry</Template>
 			<Player>0</Player>
 			<Position x="1191.22608" z="2003.32105"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="4357"/>
 		</Entity>
 		<Entity uid="21891">
-			<Template>units/pers_champion_infantry</Template>
+			<Template>units/pers/champion_infantry</Template>
 			<Player>0</Player>
 			<Position x="1191.67811" z="2005.82679"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="20145"/>
 		</Entity>
 		<Entity uid="21892">
-			<Template>units/pers_champion_infantry</Template>
+			<Template>units/pers/champion_infantry</Template>
 			<Player>0</Player>
 			<Position x="1191.80054" z="2008.84693"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="40495"/>
 		</Entity>
 		<Entity uid="21893">
-			<Template>units/pers_champion_infantry</Template>
+			<Template>units/pers/champion_infantry</Template>
 			<Player>0</Player>
 			<Position x="1192.34046" z="2011.99878"/>
 			<Orientation y="2.35621"/>
@@ -117400,42 +117400,42 @@
 			<Actor seed="47192"/>
 		</Entity>
 		<Entity uid="21910">
-			<Template>units/pers_champion_infantry</Template>
+			<Template>units/pers/champion_infantry</Template>
 			<Player>0</Player>
 			<Position x="1156.26575" z="2001.96424"/>
 			<Orientation y="5.39214"/>
 			<Actor seed="6288"/>
 		</Entity>
 		<Entity uid="21911">
-			<Template>units/pers_champion_infantry</Template>
+			<Template>units/pers/champion_infantry</Template>
 			<Player>0</Player>
 			<Position x="1156.4701" z="2005.1554"/>
 			<Orientation y="5.39214"/>
 			<Actor seed="40495"/>
 		</Entity>
 		<Entity uid="21912">
-			<Template>units/pers_champion_infantry</Template>
+			<Template>units/pers/champion_infantry</Template>
 			<Player>0</Player>
 			<Position x="1156.2732" z="2008.17164"/>
 			<Orientation y="5.39214"/>
 			<Actor seed="20145"/>
 		</Entity>
 		<Entity uid="21913">
-			<Template>units/pers_champion_infantry</Template>
+			<Template>units/pers/champion_infantry</Template>
 			<Player>0</Player>
 			<Position x="1156.4585" z="2010.71119"/>
 			<Orientation y="5.39214"/>
 			<Actor seed="4357"/>
 		</Entity>
 		<Entity uid="21914">
-			<Template>units/pers_champion_infantry</Template>
+			<Template>units/pers/champion_infantry</Template>
 			<Player>0</Player>
 			<Position x="1156.88038" z="2013.4209"/>
 			<Orientation y="5.39214"/>
 			<Actor seed="58796"/>
 		</Entity>
 		<Entity uid="21915">
-			<Template>units/pers_champion_infantry</Template>
+			<Template>units/pers/champion_infantry</Template>
 			<Player>0</Player>
 			<Position x="1157.17774" z="2015.78736"/>
 			<Orientation y="5.39214"/>
@@ -117569,7 +117569,7 @@
 			<Actor seed="34641"/>
 		</Entity>
 		<Entity uid="21937">
-			<Template>structures/pers_dock</Template>
+			<Template>structures/pers/dock</Template>
 			<Player>8</Player>
 			<Position x="1301.88477" z="72.56215"/>
 			<Orientation y="-1.39916"/>

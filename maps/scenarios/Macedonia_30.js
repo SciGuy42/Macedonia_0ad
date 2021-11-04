@@ -299,7 +299,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		if (id.classesList.indexOf("Embassy") >= 0)
 		{
 			//captured camp, spawn some balistas
-			TriggerHelper.SpawnUnits(data.entity,"units/mace_mechanical_siege_oxybeles_packed",8,1);
+			TriggerHelper.SpawnUnits(data.entity,"units/mace/siege_oxybeles_packed",8,1);
 			
 			//spawn the princess
 			TriggerHelper.SpawnUnits(data.entity,"units/kush_hero_amanirenas",1,1);
@@ -400,7 +400,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let e of towers_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen_champion_infantry",5,owner);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_infantry",5,owner);
 			
 			for (let a of archers_e)
 			{
@@ -809,7 +809,7 @@ Trigger.prototype.SpawnTraders = function(data)
 					{
 						for (let i = 0; i < this.tradeEscortSize; i ++)
 						{
-							let escort_i = TriggerHelper.SpawnUnits(site,"units/athen_cavalry_swordsman_a",1,e);
+							let escort_i = TriggerHelper.SpawnUnits(site,"units/athen/cavalry_swordsman_a",1,e);
 						
 						
 							let cmpUnitAI = Engine.QueryInterface(escort_i[0], IID_UnitAI);
@@ -882,7 +882,7 @@ Trigger.prototype.RangeActionWorkshop = function(data)
 		if (resources.food > cost && resources.metal > Math.round(cost*0.5))
 		{
 			//select random template
-			let templates = ["units/mace/siege_ram","units/mace/siege_lithobolos_packed","units/mace_mechanical_siege_oxybeles_packed"];
+			let templates = ["units/mace/siege_ram","units/mace/siege_lithobolos_packed","units/mace/siege_oxybeles_packed"];
 			let names = ["Siege Ram","Catapult","Bolt Shooter"];
 			let piece = pickRandom(templates);
 			let name =  names[templates.indexOf(piece)];
