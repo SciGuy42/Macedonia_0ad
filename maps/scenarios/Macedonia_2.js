@@ -58,14 +58,17 @@ Trigger.prototype.IntervalActionCavAttack = function(data)
 {
 
 	//warn("The OnInterval event happened with the following data:");
-	warn(uneval(data));
-	this.numberOfTimerTrigger++;
-	if (this.numberOfTimerTrigger >= this.maxNumberOfTimerTrigger)
-		this.DisableTrigger("OnInterval", "IntervalAction");
 
 };
 
+
 Trigger.prototype.IntervalAction = function(data)
+{
+	warn("The OnInterval event happened with the following data:");
+	warn(uneval(data));
+};
+
+Trigger.prototype.IntervalActionTraders = function(data)
 {
 	
 	//warn("The OnInterval event happened with the following data:");
@@ -117,8 +120,8 @@ Trigger.prototype.IntervalAction = function(data)
 
 Trigger.prototype.RangeAction = function(data)
 {
-	//warn("The OnRange event happened with the following data:");
-	//warn(uneval(data));
+	warn("The OnRange event happened with the following data:");
+	warn(uneval(data));
 	
 	if (this.spawnedTraders == false)
 	{
@@ -129,40 +132,15 @@ Trigger.prototype.RangeAction = function(data)
 };
 
 
-Trigger.prototype.SetDifficultyLevel = function(data)
+Trigger.prototype.GarrisonShips = function(data)
 {
-	//player 4
-	let cmpPlayer = QueryPlayerIDInterface(4);
-	let ai_mult = cmpPlayer.GetGatherRateMultiplier();
-	let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
-	
-	let ship_garrison_count = 3;
-
-	//process difficulty levels
-	if (ai_mult == 1.25)
-	{
-		ship_garrison_count = 6;
-		
-		//add some tech
-		cmpTechnologyManager.ResearchTechnology("armor_ship_reinforcedhull");
-	
-	}
-	else if (ai_mult >= 1.5)
-	{
-		ship_garrison_count = 10;
-		
-		//add some tech
-		cmpTechnologyManager.ResearchTechnology("armor_ship_reinforcedhull");
-		cmpTechnologyManager.ResearchTechnology("armor_ship_hypozomata");
-	
-	}
 	
 	//garrison ships
 	let ships = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(4), "Warship").filter(TriggerHelper.IsInWorld);
 	for (let e of ships)
 	{
 		//spawn the garrison inside the ship
-		TriggerHelper.SpawnGarrisonedUnits(e, "units/athen/champion_ranged",ship_garrison_count,4);	
+		TriggerHelper.SpawnGarrisonedUnits(e, "units/athen/champion_ranged",4,4);	
 	}
 }
 
@@ -186,25 +164,13 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 
 	cmpTrigger.spawnedTraders = false;
 
-	cmpTrigger.DoAfterDelay(5 * 1000,"SetDifficultyLevel",null);
-	
-
-	/*cmpTrigger.RegisterTrigger("OnInterval", "IntervalActionCavAttack", {
-		"enabled": true,
-		"delay": 45 * 1000,
-		"interval": 90 * 1000,
-	});*/
+	//garrison ships
+	cmpTrigger.DoAfterDelay(5 * 1000,"GarrisonShips",null);
 	
 	let cmpPlayer = QueryPlayerIDInterface(1);
-	cmpPlayer.AddStartingTechnology("unlock_shared_los");
-	
+	let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
+	cmpTechnologyManager.ResearchTechnology("unlock_shared_los");
 
-
-	cmpTrigger.RegisterTrigger("OnInterval", "IntervalAction", {
-		"enabled": true,
-		"delay": 1 * 1000,
-		"interval": 60 * 1000,
-	});
 
 	//make traders trade
 	//var all_ents = TriggerHelper.GetEntitiesByPlayer(2);
@@ -219,13 +185,28 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 			if (cmpUnitAI
 		}
 	}	*/
-
+	
+	
 	cmpTrigger.RegisterTrigger("OnRange", "RangeAction", {
 		"entities": cmpTrigger.GetTriggerPoints("A"), // central points to calculate the range circles
 		"players": [1], // only count entities of player 1
 		"maxRange": 40,
 		"requiredComponent": IID_UnitAI, // only count units in range
-		"enabled": true
+		"enabled": true,
 	});
+	
+	/*cmpTrigger.RegisterTrigger("OnInterval", "IntervalAction", {
+		"enabled": true,
+		"delay": 10 * 1000,
+		"interval": 5 * 1000,
+	});*/
+
+	/*cmpTrigger.RegisterTrigger("OnRange", "RangeAction", {
+		"entities": cmpTrigger.GetTriggerPoints("A"), // central points to calculate the range circles
+		"players": [1], // only count entities of player 1
+		"maxRange": 40,
+		"requiredComponent": IID_UnitAI, // only count units in range
+		"enabled": true
+	});*/
 };
 

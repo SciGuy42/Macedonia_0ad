@@ -32,7 +32,7 @@
 		</Postproc>
 	</Environment>
 	<Camera>
-		<Position x="1686.05" y="90.0328" z="699.268"/>
+		<Position x="647.731" y="165.983" z="1316.25"/>
 		<Rotation angle="0"/>
 		<Declination angle="0.610865"/>
 	</Camera>
@@ -41294,13 +41294,6 @@
 			<Orientation y="0.66424"/>
 			<Actor seed="33577"/>
 		</Entity>
-		<Entity uid="7819">
-			<Template>structures/brit_kennel</Template>
-			<Player>2</Player>
-			<Position x="560.34015" z="119.44532"/>
-			<Orientation y="-2.38497"/>
-			<Actor seed="27826"/>
-		</Entity>
 		<Entity uid="7820">
 			<Template>structures/brit/house</Template>
 			<Player>2</Player>
@@ -43598,6 +43591,13 @@
 			<Position x="1639.87122" z="845.72553"/>
 			<Orientation y="-1.05353"/>
 			<Actor seed="64783"/>
+		</Entity>
+		<Entity uid="8165">
+			<Template>units/mace/champion_cavalry</Template>
+			<Player>1</Player>
+			<Position x="1148.26319" z="1572.56946"/>
+			<Orientation y="2.35621"/>
+			<Actor seed="9567"/>
 		</Entity>
 	</Entities>
 	<Paths/>
