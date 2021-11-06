@@ -32,8 +32,8 @@
 		</Postproc>
 	</Environment>
 	<Camera>
-		<Position x="528.907" y="389.143" z="33.3464"/>
-		<Rotation angle="-0.244675"/>
+		<Position x="112.889" y="292.675" z="83.66"/>
+		<Rotation angle="0"/>
 		<Declination angle="0.610865"/>
 	</Camera>
 	<ScriptSettings><![CDATA[
@@ -13503,13 +13503,6 @@
 			<Position x="620.7497" z="315.39396"/>
 			<Orientation y="-1.66982"/>
 			<Actor seed="1976"/>
-		</Entity>
-		<Entity uid="2360">
-			<Template>structures/brit_kennel</Template>
-			<Player>2</Player>
-			<Position x="722.9095" z="261.12513"/>
-			<Orientation y="-2.53043"/>
-			<Actor seed="26081"/>
 		</Entity>
 		<Entity uid="2361">
 			<Template>structures/brit/house</Template>
