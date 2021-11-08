@@ -32,7 +32,7 @@
 		</Postproc>
 	</Environment>
 	<Camera>
-		<Position x="597.92" y="89.8292" z="523.495"/>
+		<Position x="653.707" y="125.5" z="377.153"/>
 		<Rotation angle="0"/>
 		<Declination angle="0.610865"/>
 	</Camera>
@@ -46,6 +46,7 @@
   "Name": "Macedonia 4 - Battle of Chaeronea (338 BC)",
   "Nomad": false,
   "PlayerData": [
+    null,
     {
       "Civ": "mace",
       "Color": {
@@ -10860,42 +10861,42 @@
 			<Actor seed="8164"/>
 		</Entity>
 		<Entity uid="2794">
-			<Template>units/spart_black_cloak</Template>
+			<Template>units/merc_black_cloak</Template>
 			<Player>3</Player>
 			<Position x="724.45685" z="513.48249"/>
 			<Orientation y="-0.7947"/>
 			<Actor seed="11128"/>
 		</Entity>
 		<Entity uid="2795">
-			<Template>units/spart_black_cloak</Template>
+			<Template>units/merc_black_cloak</Template>
 			<Player>3</Player>
 			<Position x="722.51734" z="512.13581"/>
 			<Orientation y="-0.7947"/>
 			<Actor seed="35029"/>
 		</Entity>
 		<Entity uid="2796">
-			<Template>units/spart_black_cloak</Template>
+			<Template>units/merc_black_cloak</Template>
 			<Player>3</Player>
 			<Position x="720.95752" z="510.6186"/>
 			<Orientation y="-0.7947"/>
 			<Actor seed="16766"/>
 		</Entity>
 		<Entity uid="2797">
-			<Template>units/spart_black_cloak</Template>
+			<Template>units/merc_black_cloak</Template>
 			<Player>3</Player>
 			<Position x="719.38471" z="509.21457"/>
 			<Orientation y="-0.7947"/>
 			<Actor seed="27400"/>
 		</Entity>
 		<Entity uid="2798">
-			<Template>units/spart_black_cloak</Template>
+			<Template>units/merc_black_cloak</Template>
 			<Player>3</Player>
 			<Position x="717.84046" z="508.09269"/>
 			<Orientation y="-0.7947"/>
 			<Actor seed="62857"/>
 		</Entity>
 		<Entity uid="2799">
-			<Template>units/spart_black_cloak</Template>
+			<Template>units/merc_black_cloak</Template>
 			<Player>3</Player>
 			<Position x="716.27771" z="506.61222"/>
 			<Orientation y="-0.7947"/>
@@ -11728,105 +11729,105 @@
 			<Actor seed="35922"/>
 		</Entity>
 		<Entity uid="2920">
-			<Template>units/mace_thorakites</Template>
+			<Template>units/merc_thorakites</Template>
 			<Player>1</Player>
 			<Position x="605.9491" z="642.56281"/>
 			<Orientation y="2.2889"/>
 			<Actor seed="10193"/>
 		</Entity>
 		<Entity uid="2921">
-			<Template>units/mace_thorakites</Template>
+			<Template>units/merc_thorakites</Template>
 			<Player>1</Player>
 			<Position x="620.79786" z="647.03852"/>
 			<Orientation y="2.2889"/>
 			<Actor seed="26326"/>
 		</Entity>
 		<Entity uid="2922">
-			<Template>units/mace_thorakites</Template>
+			<Template>units/merc_thorakites</Template>
 			<Player>1</Player>
 			<Position x="618.8274" z="646.17524"/>
 			<Orientation y="2.2889"/>
 			<Actor seed="11786"/>
 		</Entity>
 		<Entity uid="2923">
-			<Template>units/mace_thorakites</Template>
+			<Template>units/merc_thorakites</Template>
 			<Player>1</Player>
 			<Position x="616.46949" z="644.96106"/>
 			<Orientation y="2.2889"/>
 			<Actor seed="10036"/>
 		</Entity>
 		<Entity uid="2924">
-			<Template>units/mace_thorakites</Template>
+			<Template>units/merc_thorakites</Template>
 			<Player>1</Player>
 			<Position x="614.27955" z="643.86536"/>
 			<Orientation y="2.2889"/>
 			<Actor seed="60800"/>
 		</Entity>
 		<Entity uid="2925">
-			<Template>units/mace_thorakites</Template>
+			<Template>units/merc_thorakites</Template>
 			<Player>1</Player>
 			<Position x="612.29468" z="642.80347"/>
 			<Orientation y="2.2889"/>
 			<Actor seed="48374"/>
 		</Entity>
 		<Entity uid="2926">
-			<Template>units/mace_thorakites</Template>
+			<Template>units/merc_thorakites</Template>
 			<Player>1</Player>
 			<Position x="610.10505" z="641.79297"/>
 			<Orientation y="2.2889"/>
 			<Actor seed="28482"/>
 		</Entity>
 		<Entity uid="2927">
-			<Template>units/mace_thorakites</Template>
+			<Template>units/merc_thorakites</Template>
 			<Player>1</Player>
 			<Position x="607.61292" z="640.6844"/>
 			<Orientation y="2.2889"/>
 			<Actor seed="54274"/>
 		</Entity>
 		<Entity uid="2928">
-			<Template>units/mace_thorakites</Template>
+			<Template>units/merc_thorakites</Template>
 			<Player>1</Player>
 			<Position x="620.2334" z="649.93213"/>
 			<Orientation y="2.2889"/>
 			<Actor seed="26129"/>
 		</Entity>
 		<Entity uid="2929">
-			<Template>units/mace_thorakites</Template>
+			<Template>units/merc_thorakites</Template>
 			<Player>1</Player>
 			<Position x="617.9831" z="649.07264"/>
 			<Orientation y="2.2889"/>
 			<Actor seed="6778"/>
 		</Entity>
 		<Entity uid="2930">
-			<Template>units/mace_thorakites</Template>
+			<Template>units/merc_thorakites</Template>
 			<Player>1</Player>
 			<Position x="615.7909" z="648.01453"/>
 			<Orientation y="2.2889"/>
 			<Actor seed="47516"/>
 		</Entity>
 		<Entity uid="2931">
-			<Template>units/mace_thorakites</Template>
+			<Template>units/merc_thorakites</Template>
 			<Player>1</Player>
 			<Position x="613.73047" z="646.73493"/>
 			<Orientation y="2.2889"/>
 			<Actor seed="9421"/>
 		</Entity>
 		<Entity uid="2932">
-			<Template>units/mace_thorakites</Template>
+			<Template>units/merc_thorakites</Template>
 			<Player>1</Player>
 			<Position x="611.45258" z="646.03144"/>
 			<Orientation y="2.2889"/>
 			<Actor seed="24185"/>
 		</Entity>
 		<Entity uid="2933">
-			<Template>units/mace_thorakites</Template>
+			<Template>units/merc_thorakites</Template>
 			<Player>1</Player>
 			<Position x="609.56092" z="644.81727"/>
 			<Orientation y="2.2889"/>
 			<Actor seed="41569"/>
 		</Entity>
 		<Entity uid="2934">
-			<Template>units/mace_thorakites</Template>
+			<Template>units/merc_thorakites</Template>
 			<Player>1</Player>
 			<Position x="607.58863" z="643.53528"/>
 			<Orientation y="2.2889"/>
@@ -12239,42 +12240,42 @@
 			<Actor seed="16194"/>
 		</Entity>
 		<Entity uid="2995">
-			<Template>units/spart_black_cloak</Template>
+			<Template>units/merc_black_cloak</Template>
 			<Player>3</Player>
 			<Position x="718.95728" z="504.03461"/>
 			<Orientation y="-0.7947"/>
 			<Actor seed="4981"/>
 		</Entity>
 		<Entity uid="2996">
-			<Template>units/spart_black_cloak</Template>
+			<Template>units/merc_black_cloak</Template>
 			<Player>3</Player>
 			<Position x="720.52002" z="505.51508"/>
 			<Orientation y="-0.7947"/>
 			<Actor seed="62857"/>
 		</Entity>
 		<Entity uid="2997">
-			<Template>units/spart_black_cloak</Template>
+			<Template>units/merc_black_cloak</Template>
 			<Player>3</Player>
 			<Position x="722.06428" z="506.63697"/>
 			<Orientation y="-0.7947"/>
 			<Actor seed="27400"/>
 		</Entity>
 		<Entity uid="2998">
-			<Template>units/spart_black_cloak</Template>
+			<Template>units/merc_black_cloak</Template>
 			<Player>3</Player>
 			<Position x="723.6371" z="508.041"/>
 			<Orientation y="-0.7947"/>
 			<Actor seed="16766"/>
 		</Entity>
 		<Entity uid="2999">
-			<Template>units/spart_black_cloak</Template>
+			<Template>units/merc_black_cloak</Template>
 			<Player>3</Player>
 			<Position x="725.1969" z="509.5582"/>
 			<Orientation y="-0.7947"/>
 			<Actor seed="35029"/>
 		</Entity>
 		<Entity uid="3000">
-			<Template>units/spart_black_cloak</Template>
+			<Template>units/merc_black_cloak</Template>
 			<Player>3</Player>
 			<Position x="727.13642" z="510.90488"/>
 			<Orientation y="-0.7947"/>

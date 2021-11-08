@@ -130,21 +130,22 @@ Trigger.prototype.IntervalAction = function(data)
 Trigger.prototype.SetDifficultyLevel = function(data)
 {
 	//Very Hard: 1.56; Hard: 1.25; Medium 1
+	let difficulty = "easy";
+	
 	
 	for (let player of [2,3])
 	{
 		let cmpPlayer = QueryPlayerIDInterface(player);
-		let ai_mult = cmpPlayer.GetGatherRateMultiplier();
 		let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
 		//process difficulty levels
-		if (ai_mult == 1.25)
+		if (difficulty == "medium")
 		{
 			//add some tech
 			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
 			cmpTechnologyManager.ResearchTechnology("armor_infantry_01");
 		}
-		else if (ai_mult >= 1.5)
+		else if (difficulty == "hard")
 		{
 			//add some tech
 			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
