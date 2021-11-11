@@ -67,6 +67,46 @@ Trigger.prototype.PlayerCommandAction = function(data)
 };
 
 
+//garison AI entities with archers
+Trigger.prototype.GarrisonEntities = function(data)
+{
+	//garrrison towers with miltia folks
+	for (let p of [1])
+	{
+		let owner = 5;
+		
+		//big towers
+		let towers = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p),"StoneTower").filter(TriggerHelper.IsInWorld);
+		
+		for (let c of towers)
+		{
+			//spawn the garrison inside the tower
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen/infantry_slinger_e",5,owner);
+			
+			for (let a of archers_e)
+			{
+				let cmpUnitAI = Engine.QueryInterface(a, IID_UnitAI);
+				cmpUnitAI.Garrison(c,true);
+			}
+		}
+		
+		//wall towers
+		let wall_towers = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p),"WallTower").filter(TriggerHelper.IsInWorld);
+		//warn("found "+wall_towers.length+" wall towers.");
+		for (let c of wall_towers)
+		{
+			//spawn the garrison inside the tower
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/athen/infantry_slinger_e",4,owner);
+			
+			for (let a of archers_e)
+			{
+				let cmpUnitAI = Engine.QueryInterface(a, IID_UnitAI);
+				cmpUnitAI.Garrison(c,true);
+			}
+		}
+	}
+}	
+
 Trigger.prototype.PersianAttackCav = function(data)
 {
 	//warn("The PersianAttackCav event happened");
@@ -83,24 +123,26 @@ Trigger.prototype.PersianAttackCav = function(data)
 	
 	//spawn cavalry -- done later so cavalry catches up with infantry
 	if (this.numberOfTimerTriggerCav == 3){
-		this.persianCavTypes.push("units/pers_cavalry_archer_b");
+		this.persianCavTypes.push("units/pers/cavalry_archer_b");
 	}
 	else if (this.numberOfTimerTriggerCav == 5){
-		this.persianCavTypes.push("units/pers_cavalry_archer_e");
+		this.persianCavTypes.push("units/pers/cavalry_archer_e");
 	}
 	else if (this.numberOfTimerTriggerCav == 7){
 		this.persianCavTypes.push("units/pers/champion_cavalry_archer");
 	}
-	else if (this.numberOfTimerTriggerCav == 9){
-		this.persianCavTypes.push("units/sele_champion_cavalry");
-	}
 	
 	let attackers = [];
+	let spawn_site = pickRandom(this.persianSpawnSites);
 	
 	for (let i = 0; i < num_attackers; ++i)
 	{
 		temp_name = this.persianCavTypes[Math.floor(Math.random() * Math.floor(this.persianCavTypes.length))];
-		let units_i = TriggerHelper.SpawnUnits(this.persianSpawnSites[this.temp_site],temp_name,1,2);
+		
+		//warn(uneval(spawn_site));
+		//warn(uneval(temp_name));
+		
+		let units_i = TriggerHelper.SpawnUnits(spawn_site,temp_name,1,3);
 		attackers.push(units_i[0]);
 	}
 	
@@ -109,13 +151,13 @@ Trigger.prototype.PersianAttackCav = function(data)
 	for (let i = 0; i < num_attackers; ++i)
 	{
 		temp_name = this.persianInfTypes[Math.floor(Math.random() * Math.floor(this.persianInfTypes.length))];
-		let units_i = TriggerHelper.SpawnUnits(this.persianSpawnSites[this.temp_site],temp_name,1,2);
+		let units_i = TriggerHelper.SpawnUnits(spawn_site,temp_name,1,3);
 		
 		attackers.push(units_i[0]);
 	}
 	
 	//set formation
-	TriggerHelper.SetUnitFormation(2, attackers, pickRandom(unitFormations));
+	TriggerHelper.SetUnitFormation(3, attackers, pickRandom(unitFormations));
 
 	let targets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), unitTargetClass);
 	let closestTarget;
@@ -126,7 +168,7 @@ Trigger.prototype.PersianAttackCav = function(data)
 		if (!TriggerHelper.IsInWorld(target))
 			continue;
 
-		let targetDistance = DistanceBetweenEntities(attackers[0], target);
+		let targetDistance = PositionHelper.DistanceBetweenEntities(attackers[0], target);
 		if (targetDistance < minDistance)
 		{
 			closestTarget = target;
@@ -134,7 +176,7 @@ Trigger.prototype.PersianAttackCav = function(data)
 		}
 	}
 
-	ProcessCommand(2, {
+	ProcessCommand(3, {
 		"type": "attack",
 		"entities": attackers,
 		"target": closestTarget,
@@ -198,7 +240,7 @@ Trigger.prototype.PersianAttack = function(data)
 	else if (this.numberOfTimerTrigger == 7)
 	{
 		// add ram
-		this.persianSiegeTypes.push("units/pers_mechanical_siege_ram");
+		this.persianSiegeTypes.push("units/pers/siege_ram");
 	}
 	
 	let num_siege = Math.floor(this.siegeRatio*this.prog_seq[this.numberOfTimerTrigger]);
@@ -221,7 +263,7 @@ Trigger.prototype.PersianAttack = function(data)
 		if (!TriggerHelper.IsInWorld(target))
 			continue;
 
-		let targetDistance = DistanceBetweenEntities(attackers[0], target);
+		let targetDistance = PositionHelper.DistanceBetweenEntities(attackers[0], target);
 		if (targetDistance < minDistance)
 		{
 			closestTarget = target;
@@ -290,7 +332,7 @@ Trigger.prototype.PersianAttack = function(data)
 			if (!TriggerHelper.IsInWorld(target))
 				continue;
 
-			let targetDistance = DistanceBetweenEntities(sec_attackers[0], target);
+			let targetDistance = PositionHelper.DistanceBetweenEntities(sec_attackers[0], target);
 			if (targetDistance < minDistance)
 			{
 				closestTarget = target;
@@ -382,7 +424,7 @@ Trigger.prototype.IntervalAction = function(data)
 	
 	var enemy_players = [2,4];
 	
-	for (let p = 0; p < enemy_players.length; ++p)
+	/*for (let p = 0; p < enemy_players.length; ++p)
 	{
 	
 	
@@ -454,7 +496,7 @@ Trigger.prototype.IntervalAction = function(data)
 				best_index = -1
 			}
 		}
-	}
+	}*/
 };
 
 Trigger.prototype.TestAction = function(data)
@@ -467,15 +509,16 @@ Trigger.prototype.TestAction = function(data)
 Trigger.prototype.SetDifficultyLevel = function(data)
 {
 	//Very Hard: 1.56; Hard: 1.25; Medium 1
+	let difficulty = "easy";
+	
 	
 	for (let player of [2,4])
 	{
 		let cmpPlayer = QueryPlayerIDInterface(player);
-		let ai_mult = cmpPlayer.GetGatherRateMultiplier();
 		let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
 		//process difficulty levels
-		if (ai_mult == 1.25)
+		if (difficulty == "medium")
 		{
 			//add some tech
 			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
@@ -487,7 +530,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 				this.prog_seq[k] += 2
 			}
 		}
-		else if (ai_mult >= 1.5)
+		else if (difficulty == "hard")
 		{
 			//add some tech
 			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
@@ -508,8 +551,157 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 				this.prog_seq[k] += 4
 			}
 		}
+	}
+}
+
+
+Trigger.prototype.StructureDecayCheck = function(data)
+{
+	for (let p of [2,3,4,5])
+	{
+		let structs = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p),"Structure").filter(TriggerHelper.IsInWorld);
+
+		for (let s of structs)
+		{
+			var cmpCapt = Engine.QueryInterface(s, IID_Capturable);
+			if (cmpCapt)
+			{
+				let c_points = cmpCapt.GetCapturePoints();
+				
+				if (c_points[0] > 0)
+				{
+					c_points[p] += c_points[0];
+					c_points[0] = 0;
+					cmpCapt.SetCapturePoints(c_points);
+				}
+			}
+		}
+	}
+}
+
+
+Trigger.prototype.FindClosestTarget = function(attacker,target_player,target_class)
+{
+	
+	//let targets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(target_player), unitTargetClass);
+	
+	let targets = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(target_player), target_class).filter(TriggerHelper.IsInWorld);
+	
+	if (targets.length < 1)
+	{
+		//no targets, check if any unit is there
+		targets = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(target_player), "Unit").filter(TriggerHelper.IsInWorld);
+	
+	}
+	
+	//if still no targets return null
+	if (targets.length < 1)
+	{
+		warn("[ERROR] Could not find target!");
+		return null;
+	}
+	
+	let closestTarget;
+	let minDistance = Infinity;
+	
+	for (let target of targets)
+	{
+		if (!TriggerHelper.IsInWorld(target))
+			continue;
+
+		let targetDistance = PositionHelper.DistanceBetweenEntities(attacker, target);
+		if (targetDistance < minDistance)
+		{
+			closestTarget = target;
+			minDistance = targetDistance;
+		}
+	}
+	
+	return closestTarget;
+}
+
+Trigger.prototype.WalkAndFightClosestTarget = function(attacker,target_player,target_class)
+{
+	let target = this.FindClosestTarget(attacker,target_player,target_class);
+	if (!target)
+	{
+		target = this.FindClosestTarget(attacker,target_player,"Unit");
+	}
+	
+	
+	if (target)
+	{
+		// get target position
+		var cmpTargetPosition = Engine.QueryInterface(target, IID_Position).GetPosition2D();
 		
-		//warn(uneval(this.prog_seq));
+		//warn("sending troop to attack");
+		let cmpUnitAI = Engine.QueryInterface(attacker, IID_UnitAI);
+		cmpUnitAI.SwitchToStance("violent");
+		cmpUnitAI.WalkAndFight(cmpTargetPosition.x,cmpTargetPosition.y,null);
+	}
+	else //find a structure
+	{
+		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+	}
+	
+}
+
+Trigger.prototype.IdleUnitCheck = function(data)
+{
+	for (let p of [2,3,4])
+	{
+		//warn("idle unit check for player = "+p);
+		
+		//find all idle units
+		let units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p),"Unit").filter(TriggerHelper.IsInWorld);
+		
+		for (let u of units)
+		{
+			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
+			if (cmpUnitAI)
+			{
+				if (cmpUnitAI.IsIdle()){
+					//warn("Found idle unit.");
+					
+					let id = Engine.QueryInterface(u, IID_Identity);
+					//warn(uneval(id));
+					this.WalkAndFightClosestTarget(u,1,"Structure");
+				}
+			}
+		}
+	}
+}
+
+
+Trigger.prototype.VictoryTextFnEnemy = function(n)
+{
+	return markForPluralTranslation(
+          "You have lost too many troops! %(lastPlayer)s has won (game mode).",
+         "%(players)s and %(lastPlayer)s have won (game mode).",
+          n);
+}
+
+Trigger.prototype.VictoryTextFn = function(n)
+{
+	return markForPluralTranslation(
+          "%(lastPlayer)s has won (game mode).",
+         "%(players)s and %(lastPlayer)s have won (game mode).",
+          n);
+}
+ 
+Trigger.prototype.VictoryCheck = function(data)
+{
+
+	//check to see that player 2 has no units
+	let ccs_1 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1),"CivilCentre").filter(TriggerHelper.IsInWorld);
+	
+	if (ccs_1.length >= 2)
+	{
+		TriggerHelper.SetPlayerWon(1,this.VictoryTextFn,this.VictoryTextFn);	
+	}
+	else
+	{
+		TriggerHelper.SetPlayerWon(2,this.VictoryTextFn,this.VictoryTextFn);	
 	}
 }
 
@@ -540,32 +732,29 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	cmpTrigger.siegeRatio = 0.1;
 
 	//persion info
-	cmpTrigger.persianSpawnSites = [7647,7646,7645];
-	cmpTrigger.persianInfTypes = ["units/pers/champion_infantry","units/pers_kardakes_hoplite","units/pers/kardakes_skirmisher","units/athen/champion_ranged","units/pers/arstibara"];
+	//cmpTrigger.persianSpawnSites = [7647,7646,7645];
+	cmpTrigger.persianSpawnSites = cmpTrigger.GetTriggerPoints("A");
+	cmpTrigger.persianInfTypes = ["units/pers/champion_infantry","units/pers/kardakes_hoplite","units/pers/kardakes_skirmisher","units/athen/champion_ranged","units/pers/arstibara"];
 	
-	cmpTrigger.persianSiegeTypes = ["units/rome_mechanical_siege_scorpio_packed","units/rome_mechanical_siege_scorpio_packed"];
-	cmpTrigger.persianSiegeTypesAll = ["units/rome_mechanical_siege_scorpio_packed","units/pers/champion_elephant","units/pers_mechanical_siege_ram"];
+	cmpTrigger.persianSiegeTypes = ["units/athen/siege_oxybeles_packed","units/athen/siege_oxybeles_packed"];
+	cmpTrigger.persianSiegeTypesAll = ["units/athen/siege_oxybeles_packed","units/pers/champion_elephant","units/pers/siege_ram"];
 	
-	
-	cmpTrigger.persianCavTypes = ["units/pers_cavalry_spearman_b","units/pers_cavalry_javelinist_b"];
-
-	cmpTrigger.persianCavTypesAll = ["units/pers_cavalry_spearman_b","units/pers_cavalry_javelinist_b","units/pers/champion_cavalry_archer","units/pers_cavalry_archer_e","units/sele_champion_cavalry"];
+	cmpTrigger.persianCavTypes = ["units/pers/cavalry_spearman_b","units/pers/cavalry_javelineer_b"];
+	cmpTrigger.persianCavTypesAll = ["units/pers/cavalry_spearman_e","units/pers/cavalry_javelineer_e","units/pers/champion_cavalry_archer","units/pers/cavalry_archer_e","units/pers/cavalry_axeman_e"];
 
 
 	cmpTrigger.numberOfTimerTrigger = 0;
 	cmpTrigger.maxNumberOfTimerTrigger = 100; // execute it that many times
 	cmpTrigger.numberOfTimerTriggerCav = 0;
-	cmpTrigger.maxNumPersUnits = 70;
-	
+
 	//greek info
-	cmpTrigger.greekSpawnSites = [7670,7671,7672,7680];
-	cmpTrigger.greekInfTypes = ["units/athen/cavalry_javelineer_a","units/athen/cavalry_swordsman_a","units/athen/cavalry_javelineer_b","units/athen/cavalry_swordsman_b","units/athen/champion_ranged","units/athen/champion_marine","units/athen/champion_infantry","units/athen_champion_ranged_gastraphetes","units/thebes_sacred_band_hoplitai","units/athen_champion_ranged"];
-	cmpTrigger.greekSiegeTypes = ["units/rome_mechanical_siege_scorpio_packed","units/athen/siege_oxybeles_packed","units/mace/siege_lithobolos_packed", "units/rome_mechanical_siege_scorpio_packed"];
+	//cmpTrigger.greekSpawnSites = [7670,7671,7672,7680];
+	cmpTrigger.greekSpawnSites =  cmpTrigger.GetTriggerPoints("B");
+	cmpTrigger.greekInfTypes = ["units/athen/cavalry_javelineer_a","units/athen/cavalry_swordsman_a","units/athen/cavalry_javelineer_b","units/athen/cavalry_swordsman_b","units/athen/champion_ranged","units/athen/champion_marine","units/athen/champion_infantry","units/thebes_sacred_band_hoplitai","units/merc_black_cloak"];
+	cmpTrigger.greekSiegeTypes = ["units/athen/siege_oxybeles_packed","units/athen/siege_oxybeles_packed","units/athen/siege_lithobolos_packed","units/athen/siege_oxybeles_packed"];
 	
 	cmpTrigger.greekRatio = 0.85;
 	cmpTrigger.greekAttackCounter = 0;
-	cmpTrigger.maxNumGreekAttacks = 100;
-	cmpTrigger.maxNumGreekUnits = 70;
 	
 	/*cmpTrigger.RegisterTrigger("OnInterval", "PersianAttackCav", {
 		"enabled": true,
@@ -586,34 +775,43 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	});*/
 	
 
+	cmpTrigger.RegisterTrigger("OnInterval", "IdleUnitCheck", {
+		"enabled": true,
+		"delay": 120 * 1000,
+		"interval": 30 * 1000,
+	});
 
-	cmpTrigger.RegisterTrigger("OnInterval", "IntervalAction", {
+	/*cmpTrigger.RegisterTrigger("OnInterval", "IntervalAction", {
 		"enabled": true,
 		"delay": 3 * 1000,
 		"interval": 3 * 1000,
-	});
+	});*/
 	
 	cmpTrigger.persAttackInterval = 95 * 1000;
-	cmpTrigger.persAttackDelay = 35 * 1000;
-	cmpTrigger.persAttackDelayCav = 50 * 1000;
+	cmpTrigger.persAttackDelay = 95 * 1000;
+	cmpTrigger.persAttackDelayCav = 90 * 1000;
 	cmpTrigger.persGamma = 0.9825;
 	cmpTrigger.DoAfterDelay(cmpTrigger.persAttackDelay,"PersianAttack",null);
 	cmpTrigger.DoAfterDelay(cmpTrigger.persAttackDelayCav,"PersianAttackCav",null);
 
 	
 	cmpTrigger.greekAttackInterval = 75 * 1000;
-	cmpTrigger.greekAttackDelay = 65 * 1000;
+	cmpTrigger.greekAttackDelay = 125 * 1000;
 	cmpTrigger.greekGamma = 0.9825;
 	cmpTrigger.DoAfterDelay(cmpTrigger.greekAttackDelay,"GreekAttack",null);
 
 	cmpTrigger.DoAfterDelay(5 * 1000,"SetDifficultyLevel",null);
+	cmpTrigger.DoAfterDelay(3 * 1000,"GarrisonEntities",null);
 	
 
-	//make traders trade
-	//var all_ents = TriggerHelper.GetEntitiesByPlayer(2);
+	//schedule victory check
+	cmpTrigger.DoAfterDelay(45 * 60 * 1000,"VictoryCheck",null); //45 minutes, check if we still have 2 ccs
 	
-	
-
+	cmpTrigger.RegisterTrigger("OnInterval", "StructureDecayCheck", {
+		"enabled": true,
+		"delay": 10 * 1000,
+		"interval": 10 * 1000,
+	});
 		
 
 	
