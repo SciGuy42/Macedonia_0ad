@@ -78,23 +78,23 @@ Trigger.prototype.SpawnAndStartCavalryAttack = function()
 	//check to see if possible units to spawn need to change -- gets harder periodically
 	if (this.gaul_cav_attack_counter == 2)
 	{
-		this.gaul_cavalry_types = ["units/gaul_cavalry_swordsman_b","units/gaul_cavalry_javelinist_b","units/brit_war_dog_b"];
+		this.gaul_cavalry_types = ["units/gaul/cavalry_swordsman_b","units/gaul/cavalry_javelineer_b","units/brit/war_dog_b"];
 	}
 	else if (this.gaul_cav_attack_counter == 3)
 	{
-		this.gaul_cavalry_types = ["units/gaul_cavalry_swordsman_e","units/gaul_cavalry_javelinist_b","units/brit_war_dog_e"];
+		this.gaul_cavalry_types = ["units/gaul/cavalry_swordsman_e","units/gaul/cavalry_javelineer_b","units/brit/war_dog"];
 	}
 	else if (this.gaul_cav_attack_counter == 4)
 	{
-		this.gaul_cavalry_types = ["units/gaul_cavalry_swordsman_e","units/gaul_cavalry_javelinist_e","units/brit_war_dog_e"];
+		this.gaul_cavalry_types = ["units/gaul/cavalry_swordsman_e","units/gaul/cavalry_javelineer_e","units/brit/war_dog"];
 	}
 	else if (this.gaul_cav_attack_counter == 4)
 	{
-		this.gaul_cavalry_types = ["units/gaul_cavalry_swordsman_e","units/gaul_cavalry_javelinist_e","units/brit_war_dog_e","units/gaul/champion_cavalry"];
+		this.gaul_cavalry_types = ["units/gaul/cavalry_swordsman_e","units/gaul/cavalry_javelineer_e","units/brit/war_dog","units/gaul/champion_cavalry"];
 	}
 	else if (this.gaul_cav_attack_counter == 5)
 	{
-		this.gaul_cavalry_types = ["units/gaul_cavalry_swordsman_e","units/gaul_cavalry_javelinist_e","units/brit_war_dog_e","units/gaul/champion_cavalry","units/brit/champion_chariot"];
+		this.gaul_cavalry_types = ["units/gaul/cavalry_swordsman_e","units/gaul/cavalry_javelineer_e","units/brit/war_dog","units/gaul/champion_cavalry","units/brit/champion_chariot"];
 	}
 	
 	//get list of barracks barracks
@@ -136,7 +136,9 @@ Trigger.prototype.SpawnAndStartCavalryAttack = function()
 	warn(uneval(attackers));
 	
 	//set formation
-	TriggerHelper.SetUnitFormation(5, attackers, pickRandom(unitFormations));
+	let formation = pickRandom(unitFormations);
+	warn(formation);
+	TriggerHelper.SetUnitFormation(5, attackers,formation);
 
 	let targets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), unitTargetClass);
 	let closestTarget;
@@ -147,7 +149,7 @@ Trigger.prototype.SpawnAndStartCavalryAttack = function()
 		if (!TriggerHelper.IsInWorld(target))
 			continue;
 
-		let targetDistance = DistanceBetweenEntities(attackers[0], target);
+		let targetDistance = PositionHelper.DistanceBetweenEntities(attackers[0], target);
 		if (targetDistance < minDistance)
 		{
 			closestTarget = target;
@@ -360,7 +362,7 @@ Trigger.prototype.GreekAttackAction = function(data)
 		if (!TriggerHelper.IsInWorld(target))
 			continue;
 
-		let targetDistance = DistanceBetweenEntities(attackers[0], target);
+		let targetDistance = PositionHelper.DistanceBetweenEntities(attackers[0], target);
 		if (targetDistance < minDistance)
 		{
 			closestTarget = target;
@@ -409,114 +411,47 @@ Trigger.prototype.GarrisonAction = function(data)
 	cmpTrigger.RegisterTrigger("OnOwnershipChanged", "OwnershipChangedAction", data);
 	cmpTrigger.RegisterTrigger("OnPlayerCommand", "PlayerCommandAction", data);
 
-	//get list of possible gaul ships
-	/*cmpTrigger.gaul_ships = TriggerHelper.GetTemplateNamesByClasses("Warship", "gaul", undefined, undefined, true);
-	warn(uneval(cmpTrigger.gaul_ships));*/
 	
 	//list of enemy players
 	cmpTrigger.enemies = [2,4,5,6,7];
 	
-	
-	/*let structs_pl4 = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(4), "Structure").filter(TriggerHelper.IsInWorld);
-	let structs_pl2 = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(2), "Structure").filter(TriggerHelper.IsInWorld);
-	let structs_pl5 = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(5), "Structure").filter(TriggerHelper.IsInWorld);
-	let structs_pl6 = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(6), "Structure").filter(TriggerHelper.IsInWorld);
-	*/
-	//warn(uneval(docks_pl4));
-
-	
 	//cavalry attack variables
-	cmpTrigger.gaul_cavalry_types = ["units/gaul_cavalry_swordsman_a","units/gaul_cavalry_javelinist_a","units/brit_war_dog_a"];
-	cmpTrigger.gaul_cavalry_types_all = ["units/gaul_cavalry_swordsman_a","units/gaul_cavalry_javelinist_a","units/gaul_cavalry_swordsman_b","units/gaul_cavalry_javelinist_b","units/brit/champion_chariot","units/brit_war_dog_e"];
-	cmpTrigger.gaul_cavalry_interval = 200 * 1000;
+	cmpTrigger.gaul_cavalry_types = ["units/gaul/cavalry_swordsman_a","units/gaul/cavalry_javelineer_a","units/brit/war_dog"];
+	cmpTrigger.gaul_cavalry_types_all = ["units/gaul/cavalry_swordsman_a","units/gaul/cavalry_javelineer_a","units/gaul/cavalry_swordsman_b","units/gaul/cavalry_javelineer_b","units/brit/champion_chariot","units/brit/war_dog"];
+	cmpTrigger.gaul_cavalry_interval = 280 * 1000;
 	cmpTrigger.gaul_cav_attack_counter = 0;
 	cmpTrigger.spawn_attack_bonus = 2;
 	
 	//greek mercenaries variables
-	cmpTrigger.greekInfTypes = ["units/athen/cavalry_javelineer_a","units/athen/cavalry_swordsman_a","units/athen/champion_ranged","units/athen/champion_marine","units/athen/champion_infantry","units/athen_champion_ranged_gastraphetes","units/thebes_sacred_band_hoplitai"];
-	cmpTrigger.greekSiegeTypes = ["units/athen/siege_oxybeles_packed","units/mace/siege_lithobolos_packed"];
+	cmpTrigger.greekInfTypes = ["units/athen/cavalry_javelineer_a","units/athen/cavalry_swordsman_a","units/athen/champion_ranged","units/athen/champion_marine","units/athen/champion_infantry","units/thebes_sacred_band_hoplitai","units/merc_black_cloak"];
+	cmpTrigger.greekSiegeTypes =["units/athen/siege_oxybeles_packed","units/athen/siege_oxybeles_packed","units/athen/siege_lithobolos_packed","units/athen/siege_oxybeles_packed"];
 	
 	cmpTrigger.greek_camps = [3802,4578];
 	cmpTrigger.siege_prob = 0.1;
 	cmpTrigger.greek_merc_attack_counter = 0;
 	cmpTrigger.greek_spawn_attack_bonus = 2;
-	cmpTrigger.greek_merc_interval = 120 * 1000;
-	
-	cmpTrigger.DoAfterDelay(5 * 1000,"SetDifficultyLevel",null);
+	cmpTrigger.greek_merc_interval = 180 * 1000;
 	
 	//garrison for greek mercs
 	cmpTrigger.DoAfterDelay(5 * 1000,"GarrisonAction",null);
 	
 	//schedule greek
+	cmpTrigger.DoAfterDelay(360 * 1000 + cmpTrigger.greek_merc_interval,"GreekAttackAction",null);
 	//cmpTrigger.DoAfterDelay(6 * 1000,"GreekAttackAction",null);
-	cmpTrigger.DoAfterDelay(120 * 1000 + cmpTrigger.greek_merc_interval,"GreekAttackAction",null);
-	
-	
 	
 	//schedule next attack
-	cmpTrigger.DoAfterDelay(60 * 1000 + cmpTrigger.gaul_cavalry_interval, "SpawnAndStartCavalryAttack",null);
-	//cmpTrigger.DoAfterDelay(5 * 1000, "SpawnAndStartCavalryAttack",null);
+	cmpTrigger.DoAfterDelay(300 * 1000 + cmpTrigger.gaul_cavalry_interval, "SpawnAndStartCavalryAttack",null);
+	//cmpTrigger.DoAfterDelay(6 * 1000 , "SpawnAndStartCavalryAttack",null);
 	
 	let cmpPlayer = QueryPlayerIDInterface(1);
-	cmpPlayer.AddStartingTechnology("unlock_shared_los");
+	let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
+	cmpTechnologyManager.ResearchTechnology("unlock_shared_los");
 	
-	
-	/*cmpTrigger.RegisterTrigger("OnInterval", "PersianAttackCav", {
-		"enabled": true,
-		"delay": 45 * 1000,
-		"interval":  95 * 1000,
-	});
-	
-	cmpTrigger.RegisterTrigger("OnInterval", "PersianAttack", {
-		"enabled": true,
-		"delay": 30 * 1000,
-		"interval": 95 * 1000,
-	});*/
-	
-	/*cmpTrigger.RegisterTrigger("OnInterval", "GreekAttack", {
-		"enabled": true,
-		"delay": 55 * 1000,
-		"interval": 75 * 1000,
-	});*/
-	
-
-
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalAction", {
 		"enabled": true,
 		"delay": 6 * 1000,
 		"interval": 20 * 1000,
 	});
-	
-	/*cmpTrigger.RegisterTrigger("OnInterval", "IntervalActionTraders", {
-		"enabled": true,
-		"delay": 3 * 1000,
-		"interval": 200 * 1000,
-	});*/
-	
-	
-	/*let ents_5 = TriggerHelper.GetEntitiesByPlayer(5);
-	for (let e of ents_5)
-	{
-		let cmpBuildingAI = Engine.QueryInterface(e, IID_Identity);
-		if (cmpBuildingAI)
-		{
-			warn(uneval(cmpBuildingAI));
-		}
-		
-	}*/
-	
-	//make traders trade
-	//start ship traders
-	/*var traders_pl4 = [8114,8115,8116];
-	for (let i = 0; i < traders_pl4.length; ++i)
-	{
-		let cmpUnitAI = Engine.QueryInterface(traders_pl4[i], IID_UnitAI);
-		if (cmpUnitAI) {
-			warn("updating ship orders");
-			cmpUnitAI.UpdateWorkOrders("Trade");
-			cmpUnitAI.SetupTradeRoute(8037,7930,null,true);
-		}
-	}*/
 	
 };
 

@@ -32,20 +32,20 @@
 		</Postproc>
 	</Environment>
 	<Camera>
-		<Position x="1324.51" y="846.007" z="2478.3"/>
-		<Rotation angle="-2.88919"/>
+		<Position x="990.325" y="252.451" z="1420.55"/>
+		<Rotation angle="2.96182"/>
 		<Declination angle="0.610865"/>
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
   "AISeed": 0,
   "CircularMap": true,
-  "Description": "Before crossing to Asia, Alexander wanted to safeguard his northern borders and, in the spring of 335 BC, he advanced into Thrace to deal with the revolt, which was led by the Illyrians and Triballi. He was reinforced along the way by the Agriani, a Thracian tribe under the command of Alexander's friend, Langarus. The Macedonian army marched up to Mount Haemus, where they met a Thracian garrison manning the heights. \n\nYour intelligence reports suggest that a small settlemenths off the main road may serve as a good starting base. Your allies, the Agriani are under attack by raiders and are requesting immediate help. \n\nTo win, defeat the Illyrians and the Triballi. ",
+  "Description": "Before crossing to Asia, Alexander wanted to safeguard his northern borders and, in the spring of 335 BC, he advanced into Thrace to deal with the revolt, which was led by the Illyrians and Triballi. He was reinforced along the way by the Agriani, a Thracian tribe under the command of Alexander's friend, Langarus. The Macedonian army marched up to Mount Haemus, where they met a Thracian garrison manning the heights. \n\nYour intelligence reports suggest that a small settlemenths off the main road may serve as a good starting base. Your allies, the Agriani are under attack by raiders and are requesting immediate help. \n\nTo win, defeat all enemies.\n\nAI Settings: Triballi Hillside Defenders and Greek Mercs should be set to Sandbox. All others can be set with a difficulty level of your choice (Medium for enemies for casual play). ",
   "Keywords": [],
   "LockTeams": true,
   "Name": "Macedonia 6 - Mt Haemus (335 BC)",
   "PlayerData": [
-    "",
+    null,
     {
       "Civ": "mace",
       "Name": "Alexander",
@@ -57,13 +57,13 @@
       },
       "StartingCamera": {
         "Position": {
-          "x": 710.33,
-          "y": 18.8668,
-          "z": 1948.42
+          "x": 713.142,
+          "y": 17.8261,
+          "z": 1960.36
         },
         "Rotation": {
           "x": -145,
-          "y": 44.2894,
+          "y": 8.02983,
           "z": -180
         }
       },
@@ -23091,7 +23091,7 @@
 			<Actor seed="23161"/>
 		</Entity>
 		<Entity uid="3347">
-			<Template>other/palisades_rocks_curve</Template>
+			<Template>structures/palisades_curve</Template>
 			<Player>0</Player>
 			<Position x="516.7458" z="1801.84437"/>
 			<Orientation y="-2.25274"/>
@@ -23147,7 +23147,7 @@
 			<Actor seed="57665"/>
 		</Entity>
 		<Entity uid="3355">
-			<Template>other/palisades_rocks_curve</Template>
+			<Template>structures/palisades_curve</Template>
 			<Player>0</Player>
 			<Position x="603.52125" z="1755.46668"/>
 			<Orientation y="0.03486"/>
@@ -23182,7 +23182,7 @@
 			<Actor seed="57665"/>
 		</Entity>
 		<Entity uid="3360">
-			<Template>other/palisades_rocks_curve</Template>
+			<Template>structures/palisades_curve</Template>
 			<Player>0</Player>
 			<Position x="579.80402" z="1708.70179"/>
 			<Orientation y="1.47056"/>
@@ -23238,7 +23238,7 @@
 			<Actor seed="57665"/>
 		</Entity>
 		<Entity uid="3368">
-			<Template>other/palisades_rocks_curve</Template>
+			<Template>structures/palisades_curve</Template>
 			<Player>0</Player>
 			<Position x="509.4178" z="1758.94251"/>
 			<Orientation y="2.76314"/>
@@ -23259,14 +23259,14 @@
 			<Actor seed="57665"/>
 		</Entity>
 		<Entity uid="3371">
-			<Template>structures/gaul_defense_tower</Template>
+			<Template>structures/gaul/defense_tower</Template>
 			<Player>0</Player>
 			<Position x="573.01185" z="1778.3993"/>
 			<Orientation y="-2.6443"/>
 			<Actor seed="35668"/>
 		</Entity>
 		<Entity uid="3372">
-			<Template>structures/gaul_defense_tower</Template>
+			<Template>structures/gaul/defense_tower</Template>
 			<Player>0</Player>
 			<Position x="552.23237" z="1791.06775"/>
 			<Orientation y="-2.65815"/>
@@ -24242,21 +24242,21 @@
 			<Actor seed="27581"/>
 		</Entity>
 		<Entity uid="3545">
-			<Template>structures/brit_outpost</Template>
+			<Template>structures/brit/outpost</Template>
 			<Player>3</Player>
 			<Position x="1228.29908" z="1841.68921"/>
 			<Orientation y="2.34066"/>
 			<Actor seed="57916"/>
 		</Entity>
 		<Entity uid="3546">
-			<Template>structures/brit_outpost</Template>
+			<Template>structures/brit/outpost</Template>
 			<Player>3</Player>
 			<Position x="1141.39026" z="1778.41004"/>
 			<Orientation y="2.17037"/>
 			<Actor seed="62528"/>
 		</Entity>
 		<Entity uid="3547">
-			<Template>structures/brit_outpost</Template>
+			<Template>structures/brit/outpost</Template>
 			<Player>3</Player>
 			<Position x="1109.35364" z="1701.12525"/>
 			<Orientation y="1.78571"/>
@@ -24580,7 +24580,7 @@
 		<Entity uid="3593">
 			<Template>units/mace/hero_alexander_iii</Template>
 			<Player>1</Player>
-			<Position x="701.76581" z="1950.44031"/>
+			<Position x="703.18506" z="1947.12464"/>
 			<Orientation y="2.68056"/>
 			<Actor seed="40680"/>
 		</Entity>
@@ -24672,42 +24672,42 @@
 			<Template>units/mace/champion_cavalry</Template>
 			<Player>1</Player>
 			<Position x="709.23145" z="1950.99512"/>
-			<Orientation y="2.35621"/>
+			<Orientation y="2.7416"/>
 			<Actor seed="64254"/>
 		</Entity>
 		<Entity uid="3607">
 			<Template>units/mace/champion_cavalry</Template>
 			<Player>1</Player>
-			<Position x="712.70582" z="1952.0293"/>
+			<Position x="713.4798" z="1951.62195"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="1426"/>
 		</Entity>
 		<Entity uid="3608">
 			<Template>units/mace/champion_cavalry</Template>
 			<Player>1</Player>
-			<Position x="716.64441" z="1953.2577"/>
+			<Position x="717.35792" z="1954.89759"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="49931"/>
 		</Entity>
 		<Entity uid="3609">
 			<Template>units/mace/champion_cavalry</Template>
 			<Player>1</Player>
-			<Position x="693.77295" z="1950.40564"/>
-			<Orientation y="-2.47211"/>
+			<Position x="696.50281" z="1948.53614"/>
+			<Orientation y="-3.35383"/>
 			<Actor seed="38034"/>
 		</Entity>
 		<Entity uid="3610">
 			<Template>units/mace/champion_cavalry</Template>
 			<Player>1</Player>
-			<Position x="689.29969" z="1950.74244"/>
-			<Orientation y="-2.51774"/>
+			<Position x="692.14289" z="1946.79676"/>
+			<Orientation y="-3.54706"/>
 			<Actor seed="52291"/>
 		</Entity>
 		<Entity uid="3611">
 			<Template>units/mace/champion_cavalry</Template>
 			<Player>1</Player>
-			<Position x="686.70051" z="1952.27015"/>
-			<Orientation y="-2.77102"/>
+			<Position x="686.80683" z="1946.23707"/>
+			<Orientation y="-3.65069"/>
 			<Actor seed="8678"/>
 		</Entity>
 		<Entity uid="3612">
@@ -24807,41 +24807,6 @@
 			<Position x="739.03821" z="1959.33497"/>
 			<Orientation y="2.52529"/>
 			<Actor seed="24324"/>
-		</Entity>
-		<Entity uid="3627">
-			<Template>units/mace_cavalry_javelinist_b</Template>
-			<Player>1</Player>
-			<Position x="721.77131" z="1935.39454"/>
-			<Orientation y="2.35621"/>
-			<Actor seed="17255"/>
-		</Entity>
-		<Entity uid="3628">
-			<Template>units/mace_cavalry_javelinist_b</Template>
-			<Player>1</Player>
-			<Position x="705.2848" z="1930.43775"/>
-			<Orientation y="3.10831"/>
-			<Actor seed="9069"/>
-		</Entity>
-		<Entity uid="3629">
-			<Template>units/mace_cavalry_javelinist_b</Template>
-			<Player>1</Player>
-			<Position x="687.38819" z="1933.73658"/>
-			<Orientation y="-2.73684"/>
-			<Actor seed="36520"/>
-		</Entity>
-		<Entity uid="3630">
-			<Template>units/mace_cavalry_javelinist_b</Template>
-			<Player>1</Player>
-			<Position x="713.39478" z="1932.86109"/>
-			<Orientation y="2.68978"/>
-			<Actor seed="53272"/>
-		</Entity>
-		<Entity uid="3631">
-			<Template>units/mace_cavalry_javelinist_b</Template>
-			<Player>1</Player>
-			<Position x="694.64618" z="1931.40674"/>
-			<Orientation y="-3.04097"/>
-			<Actor seed="56701"/>
 		</Entity>
 		<Entity uid="3632">
 			<Template>structures/brit/farmstead</Template>
@@ -25096,7 +25061,7 @@
 			<Actor seed="20481"/>
 		</Entity>
 		<Entity uid="3671">
-			<Template>structures/gaul_range</Template>
+			<Template>structures/gaul/range</Template>
 			<Player>2</Player>
 			<Position x="901.13135" z="716.16218"/>
 			<Orientation y="2.35621"/>
@@ -25139,14 +25104,14 @@
 			<Actor seed="16978"/>
 		</Entity>
 		<Entity uid="3677">
-			<Template>structures/gaul_wall_tower</Template>
+			<Template>structures/gaul/wall_tower</Template>
 			<Player>2</Player>
 			<Position x="874.77778" z="606.38575"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="35611"/>
 		</Entity>
 		<Entity uid="3678">
-			<Template>structures/gaul_wall_tower</Template>
+			<Template>structures/gaul/wall_tower</Template>
 			<Player>2</Player>
 			<Position x="845.15741" z="638.1142"/>
 			<Orientation y="2.35621"/>
@@ -25161,7 +25126,7 @@
 			<Actor seed="54805"/>
 		</Entity>
 		<Entity uid="3680">
-			<Template>structures/gaul_wall_tower</Template>
+			<Template>structures/gaul/wall_tower</Template>
 			<Player>2</Player>
 			<Position x="909.52619" z="588.2079"/>
 			<Orientation y="1.97391"/>
@@ -25184,14 +25149,14 @@
 			<Actor seed="54805"/>
 		</Entity>
 		<Entity uid="3683">
-			<Template>structures/gaul_wall_tower</Template>
+			<Template>structures/gaul/wall_tower</Template>
 			<Player>2</Player>
 			<Position x="824.05671" z="673.41913"/>
 			<Orientation y="2.59992"/>
 			<Actor seed="40103"/>
 		</Entity>
 		<Entity uid="3684">
-			<Template>structures/gaul_wall_tower</Template>
+			<Template>structures/gaul/wall_tower</Template>
 			<Player>2</Player>
 			<Position x="819.73505" z="711.88917"/>
 			<Orientation y="2.99741"/>
@@ -25206,28 +25171,28 @@
 			<Actor seed="54805"/>
 		</Entity>
 		<Entity uid="3687">
-			<Template>structures/gaul_defense_tower</Template>
+			<Template>structures/gaul/defense_tower</Template>
 			<Player>2</Player>
 			<Position x="894.17341" z="605.13056"/>
 			<Orientation y="0.54642"/>
 			<Actor seed="59300"/>
 		</Entity>
 		<Entity uid="3688">
-			<Template>structures/gaul_defense_tower</Template>
+			<Template>structures/gaul/defense_tower</Template>
 			<Player>2</Player>
 			<Position x="841.4698" z="659.27271"/>
 			<Orientation y="0.8924"/>
 			<Actor seed="16457"/>
 		</Entity>
 		<Entity uid="3689">
-			<Template>structures/gaul_fortress</Template>
+			<Template>structures/gaul/fortress</Template>
 			<Player>2</Player>
 			<Position x="848.44819" z="694.23572"/>
 			<Orientation y="2.83193"/>
 			<Actor seed="12009"/>
 		</Entity>
 		<Entity uid="3690">
-			<Template>structures/gaul_defense_tower</Template>
+			<Template>structures/gaul/defense_tower</Template>
 			<Player>2</Player>
 			<Position x="933.24122" z="587.024"/>
 			<Orientation y="0.54642"/>
@@ -25248,21 +25213,21 @@
 			<Actor seed="54061"/>
 		</Entity>
 		<Entity uid="3693">
-			<Template>structures/gaul_temple</Template>
+			<Template>structures/gaul/temple</Template>
 			<Player>2</Player>
 			<Position x="1053.16492" z="737.22974"/>
 			<Orientation y="-1.82615"/>
 			<Actor seed="19552"/>
 		</Entity>
 		<Entity uid="3694">
-			<Template>structures/gaul_defense_tower</Template>
+			<Template>structures/gaul/defense_tower</Template>
 			<Player>2</Player>
 			<Position x="991.67005" z="650.01331"/>
 			<Orientation y="-0.63387"/>
 			<Actor seed="45460"/>
 		</Entity>
 		<Entity uid="3695">
-			<Template>structures/gaul_defense_tower</Template>
+			<Template>structures/gaul/defense_tower</Template>
 			<Player>2</Player>
 			<Position x="904.52991" z="663.49549"/>
 			<Orientation y="-2.3925"/>
@@ -25304,14 +25269,14 @@
 			<Actor seed="54412"/>
 		</Entity>
 		<Entity uid="3701">
-			<Template>structures/gaul_defense_tower</Template>
+			<Template>structures/gaul/defense_tower</Template>
 			<Player>2</Player>
 			<Position x="903.13569" z="755.21015"/>
 			<Orientation y="8.69356"/>
 			<Actor seed="9087"/>
 		</Entity>
 		<Entity uid="3702">
-			<Template>structures/gaul_stable</Template>
+			<Template>structures/gaul/stable</Template>
 			<Player>2</Player>
 			<Position x="919.57081" z="642.03571"/>
 			<Orientation y="-2.34556"/>
@@ -25423,70 +25388,70 @@
 			<Actor seed="31305"/>
 		</Entity>
 		<Entity uid="3718">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>2</Player>
 			<Position x="960.40442" z="615.6623"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="10036"/>
 		</Entity>
 		<Entity uid="3719">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>2</Player>
 			<Position x="962.31885" z="623.60468"/>
 			<Orientation y="1.5858"/>
 			<Actor seed="5976"/>
 		</Entity>
 		<Entity uid="3720">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>2</Player>
 			<Position x="970.68775" z="626.27527"/>
 			<Orientation y="2.80846"/>
 			<Actor seed="6294"/>
 		</Entity>
 		<Entity uid="3721">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>2</Player>
 			<Position x="962.80848" z="632.6941"/>
 			<Orientation y="1.33187"/>
 			<Actor seed="59428"/>
 		</Entity>
 		<Entity uid="3722">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>2</Player>
 			<Position x="1026.55958" z="760.84028"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="48110"/>
 		</Entity>
 		<Entity uid="3723">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>2</Player>
 			<Position x="1019.5373" z="767.7829"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="48672"/>
 		</Entity>
 		<Entity uid="3724">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>2</Player>
 			<Position x="1016.82386" z="759.59449"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="51713"/>
 		</Entity>
 		<Entity uid="3725">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>2</Player>
 			<Position x="953.81" z="792.00434"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="4131"/>
 		</Entity>
 		<Entity uid="3726">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>2</Player>
 			<Position x="942.84577" z="601.57691"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="11769"/>
 		</Entity>
 		<Entity uid="3727">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>2</Player>
 			<Position x="946.8985" z="608.38868"/>
 			<Orientation y="2.35621"/>
@@ -25689,7 +25654,7 @@
 			<Actor seed="40680"/>
 		</Entity>
 		<Entity uid="3756">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="615.4427" z="1678.7743"/>
 			<Orientation y="-0.95185"/>
@@ -25717,7 +25682,7 @@
 			<Actor seed="33809"/>
 		</Entity>
 		<Entity uid="3760">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="1110.21155" z="1377.54493"/>
 			<Orientation y="2.35621"/>
@@ -25773,203 +25738,203 @@
 			<Actor seed="46580"/>
 		</Entity>
 		<Entity uid="3768">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>4</Player>
 			<Position x="761.96528" z="583.31824"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="14341"/>
 		</Entity>
 		<Entity uid="3769">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>4</Player>
 			<Position x="764.14667" z="592.9275"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="53049"/>
 		</Entity>
 		<Entity uid="3770">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>4</Player>
 			<Position x="861.08124" z="488.468"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="31816"/>
 		</Entity>
 		<Entity uid="3771">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>4</Player>
 			<Position x="858.14106" z="496.76771"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="17717"/>
 		</Entity>
 		<Entity uid="3772">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>4</Player>
 			<Position x="1342.33362" z="312.39542"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="63421"/>
 		</Entity>
 		<Entity uid="3773">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>4</Player>
 			<Position x="1347.06141" z="317.89826"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="23433"/>
 		</Entity>
 		<Entity uid="3774">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="1513.62085" z="405.44773"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="5921"/>
 		</Entity>
 		<Entity uid="3775">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="1504.4607" z="399.54358"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="32689"/>
 		</Entity>
 		<Entity uid="3776">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="1503.48694" z="408.71674"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="48094"/>
 		</Entity>
 		<Entity uid="3777">
-			<Template>units/brit_cavalry_swordsman_a</Template>
+			<Template>units/brit/cavalry_swordsman_a</Template>
 			<Player>5</Player>
 			<Position x="1159.02723" z="1779.39844"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="51074"/>
 		</Entity>
 		<Entity uid="3778">
-			<Template>units/brit_cavalry_swordsman_a</Template>
+			<Template>units/brit/cavalry_swordsman_a</Template>
 			<Player>5</Player>
 			<Position x="1164.91395" z="1784.07593"/>
 			<Orientation y="2.75815"/>
 			<Actor seed="16150"/>
 		</Entity>
 		<Entity uid="3779">
-			<Template>units/brit_cavalry_swordsman_a</Template>
+			<Template>units/brit/cavalry_swordsman_a</Template>
 			<Player>5</Player>
 			<Position x="1142.0293" z="1758.8401"/>
 			<Orientation y="1.59081"/>
 			<Actor seed="1947"/>
 		</Entity>
 		<Entity uid="3780">
-			<Template>units/brit_cavalry_swordsman_a</Template>
+			<Template>units/brit/cavalry_swordsman_a</Template>
 			<Player>5</Player>
 			<Position x="1141.64588" z="1745.31385"/>
 			<Orientation y="1.5364"/>
 			<Actor seed="40356"/>
 		</Entity>
 		<Entity uid="3781">
-			<Template>units/brit_cavalry_swordsman_a</Template>
+			<Template>units/brit/cavalry_swordsman_a</Template>
 			<Player>5</Player>
 			<Position x="1162.20142" z="1672.10853"/>
 			<Orientation y="0.34238"/>
 			<Actor seed="27516"/>
 		</Entity>
 		<Entity uid="3782">
-			<Template>units/brit_cavalry_swordsman_a</Template>
+			<Template>units/brit/cavalry_swordsman_a</Template>
 			<Player>5</Player>
 			<Position x="1178.51648" z="1667.12098"/>
 			<Orientation y="-0.10703"/>
 			<Actor seed="45763"/>
 		</Entity>
 		<Entity uid="3783">
-			<Template>units/brit_cavalry_swordsman_a</Template>
+			<Template>units/brit/cavalry_swordsman_a</Template>
 			<Player>5</Player>
 			<Position x="1211.07776" z="1799.64185"/>
 			<Orientation y="-2.96265"/>
 			<Actor seed="40797"/>
 		</Entity>
 		<Entity uid="3784">
-			<Template>units/brit_cavalry_swordsman_a</Template>
+			<Template>units/brit/cavalry_swordsman_a</Template>
 			<Player>5</Player>
 			<Position x="1261.13111" z="1788.02466"/>
 			<Orientation y="-2.19498"/>
 			<Actor seed="10487"/>
 		</Entity>
 		<Entity uid="3785">
-			<Template>units/brit_cavalry_swordsman_a</Template>
+			<Template>units/brit/cavalry_swordsman_a</Template>
 			<Player>5</Player>
 			<Position x="1276.79664" z="1753.66187"/>
 			<Orientation y="-1.51943"/>
 			<Actor seed="28703"/>
 		</Entity>
 		<Entity uid="3786">
-			<Template>units/brit_cavalry_swordsman_a</Template>
+			<Template>units/brit/cavalry_swordsman_a</Template>
 			<Player>5</Player>
 			<Position x="1174.70606" z="1684.3147"/>
 			<Orientation y="0.20791"/>
 			<Actor seed="4828"/>
 		</Entity>
 		<Entity uid="3787">
-			<Template>units/brit_champion_infantry</Template>
+			<Template>units/brit/champion_infantry_swordsman</Template>
 			<Player>5</Player>
 			<Position x="1074.87183" z="1340.0005"/>
 			<Orientation y="-0.17493"/>
 			<Actor seed="54657"/>
 		</Entity>
 		<Entity uid="3788">
-			<Template>units/brit_champion_infantry</Template>
+			<Template>units/brit/champion_infantry_swordsman</Template>
 			<Player>5</Player>
 			<Position x="1070.41785" z="1338.80042"/>
 			<Orientation y="-0.57485"/>
 			<Actor seed="20248"/>
 		</Entity>
 		<Entity uid="3789">
-			<Template>units/brit_champion_infantry</Template>
+			<Template>units/brit/champion_infantry_swordsman</Template>
 			<Player>5</Player>
 			<Position x="1065.8191" z="1337.58021"/>
 			<Orientation y="-0.55617"/>
 			<Actor seed="62850"/>
 		</Entity>
 		<Entity uid="3790">
-			<Template>units/brit_champion_infantry</Template>
+			<Template>units/brit/champion_infantry_swordsman</Template>
 			<Player>5</Player>
 			<Position x="1071.23646" z="1342.43775"/>
 			<Orientation y="-0.5919"/>
 			<Actor seed="57105"/>
 		</Entity>
 		<Entity uid="3791">
-			<Template>units/brit_champion_infantry</Template>
+			<Template>units/brit/champion_infantry_swordsman</Template>
 			<Player>5</Player>
 			<Position x="1066.7992" z="1340.87781"/>
 			<Orientation y="-0.05507"/>
 			<Actor seed="57044"/>
 		</Entity>
 		<Entity uid="3792">
-			<Template>units/brit_cavalry_javelinist_a</Template>
+			<Template>units/brit/cavalry_javelineer_a</Template>
 			<Player>5</Player>
 			<Position x="1075.98145" z="1336.47059"/>
 			<Orientation y="-0.54552"/>
 			<Actor seed="7081"/>
 		</Entity>
 		<Entity uid="3793">
-			<Template>units/brit_cavalry_javelinist_a</Template>
+			<Template>units/brit/cavalry_javelineer_a</Template>
 			<Player>5</Player>
 			<Position x="1071.3335" z="1333.89466"/>
 			<Orientation y="-0.72503"/>
 			<Actor seed="31823"/>
 		</Entity>
 		<Entity uid="3794">
-			<Template>units/brit_cavalry_javelinist_a</Template>
+			<Template>units/brit/cavalry_javelineer_a</Template>
 			<Player>5</Player>
 			<Position x="1065.91443" z="1332.26343"/>
 			<Orientation y="-0.41752"/>
 			<Actor seed="51610"/>
 		</Entity>
 		<Entity uid="3795">
-			<Template>units/brit_cavalry_swordsman_a</Template>
+			<Template>units/brit/cavalry_swordsman_a</Template>
 			<Player>5</Player>
 			<Position x="1077.7577" z="1327.36683"/>
 			<Orientation y="-0.47701"/>
 			<Actor seed="61413"/>
 		</Entity>
 		<Entity uid="3796">
-			<Template>units/brit_cavalry_swordsman_a</Template>
+			<Template>units/brit/cavalry_swordsman_a</Template>
 			<Player>5</Player>
 			<Position x="1072.62903" z="1325.53101"/>
 			<Orientation y="-0.47701"/>
@@ -25990,21 +25955,21 @@
 			<Actor seed="35402"/>
 		</Entity>
 		<Entity uid="3799">
-			<Template>units/brit_war_dog_e</Template>
+			<Template>units/brit/war_dog</Template>
 			<Player>5</Player>
 			<Position x="1067.36756" z="1344.6095"/>
 			<Orientation y="-0.60917"/>
 			<Actor seed="42732"/>
 		</Entity>
 		<Entity uid="3800">
-			<Template>units/brit_war_dog_e</Template>
+			<Template>units/brit/war_dog</Template>
 			<Player>5</Player>
 			<Position x="1069.9513" z="1345.88831"/>
 			<Orientation y="-0.52166"/>
 			<Actor seed="5802"/>
 		</Entity>
 		<Entity uid="3801">
-			<Template>units/brit_war_dog_e</Template>
+			<Template>units/brit/war_dog</Template>
 			<Player>5</Player>
 			<Position x="1064.11878" z="1342.83338"/>
 			<Orientation y="-0.59061"/>
@@ -26802,49 +26767,49 @@
 			<Actor seed="9901"/>
 		</Entity>
 		<Entity uid="3936">
-			<Template>units/brit_infantry_javelinist_a</Template>
+			<Template>units/brit/infantry_javelineer_a</Template>
 			<Player>6</Player>
 			<Position x="1295.10193" z="513.48713"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="46159"/>
 		</Entity>
 		<Entity uid="3937">
-			<Template>units/brit_infantry_javelinist_a</Template>
+			<Template>units/brit/infantry_javelineer_a</Template>
 			<Player>6</Player>
 			<Position x="1301.06482" z="512.25763"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="25339"/>
 		</Entity>
 		<Entity uid="3938">
-			<Template>units/brit_infantry_javelinist_a</Template>
+			<Template>units/brit/infantry_javelineer_a</Template>
 			<Player>6</Player>
 			<Position x="1305.68018" z="511.25654"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="16993"/>
 		</Entity>
 		<Entity uid="3939">
-			<Template>units/brit_infantry_javelinist_a</Template>
+			<Template>units/brit/infantry_javelineer_a</Template>
 			<Player>6</Player>
 			<Position x="1330.41443" z="535.73108"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="51430"/>
 		</Entity>
 		<Entity uid="3940">
-			<Template>units/brit_infantry_javelinist_a</Template>
+			<Template>units/brit/infantry_javelineer_a</Template>
 			<Player>6</Player>
 			<Position x="1330.28138" z="531.21851"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="60312"/>
 		</Entity>
 		<Entity uid="3941">
-			<Template>units/brit_infantry_javelinist_a</Template>
+			<Template>units/brit/infantry_javelineer_a</Template>
 			<Player>6</Player>
 			<Position x="1329.14441" z="526.07837"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="2925"/>
 		</Entity>
 		<Entity uid="3942">
-			<Template>units/brit_cavalry_swordsman_a</Template>
+			<Template>units/brit/cavalry_swordsman_a</Template>
 			<Player>6</Player>
 			<Position x="1320.48951" z="514.74177"/>
 			<Orientation y="2.35621"/>
@@ -26872,63 +26837,63 @@
 			<Actor seed="32307"/>
 		</Entity>
 		<Entity uid="3946">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="957.29407" z="120.96871"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="25817"/>
 		</Entity>
 		<Entity uid="3947">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="958.36963" z="112.77071"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="32262"/>
 		</Entity>
 		<Entity uid="3948">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="972.20795" z="106.90293"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="38280"/>
 		</Entity>
 		<Entity uid="3949">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="966.68866" z="114.81849"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="41345"/>
 		</Entity>
 		<Entity uid="3950">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="962.61341" z="104.1396"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="29154"/>
 		</Entity>
 		<Entity uid="3951">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="1493.7776" z="630.81177"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="11478"/>
 		</Entity>
 		<Entity uid="3952">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="1484.23951" z="625.99543"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="59040"/>
 		</Entity>
 		<Entity uid="3953">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="1490.4629" z="613.98145"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="61829"/>
 		</Entity>
 		<Entity uid="3954">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="1479.91773" z="615.97254"/>
 			<Orientation y="2.35621"/>
@@ -26949,63 +26914,63 @@
 			<Actor seed="63308"/>
 		</Entity>
 		<Entity uid="3957">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="464.51084" z="537.85615"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="45458"/>
 		</Entity>
 		<Entity uid="3958">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="463.12006" z="531.45472"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="28003"/>
 		</Entity>
 		<Entity uid="3959">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="458.78782" z="548.44434"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="24698"/>
 		</Entity>
 		<Entity uid="3960">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="448.91285" z="553.88001"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="64899"/>
 		</Entity>
 		<Entity uid="3961">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>6</Player>
 			<Position x="1026.42542" z="484.46842"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="56159"/>
 		</Entity>
 		<Entity uid="3962">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>6</Player>
 			<Position x="1018.06379" z="487.64643"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="9569"/>
 		</Entity>
 		<Entity uid="3963">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>6</Player>
 			<Position x="1036.87806" z="484.65534"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="23006"/>
 		</Entity>
 		<Entity uid="3964">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="401.28476" z="820.40717"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="58940"/>
 		</Entity>
 		<Entity uid="3965">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="396.58878" z="813.68177"/>
 			<Orientation y="2.35621"/>
@@ -27040,28 +27005,28 @@
 			<Actor seed="35256"/>
 		</Entity>
 		<Entity uid="3970">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="695.92554" z="792.96961"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="9445"/>
 		</Entity>
 		<Entity uid="3971">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="724.8653" z="813.84632"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="35918"/>
 		</Entity>
 		<Entity uid="3972">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="906.4532" z="1021.75348"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="6801"/>
 		</Entity>
 		<Entity uid="3973">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="911.05884" z="1031.01136"/>
 			<Orientation y="2.35621"/>
@@ -27082,21 +27047,21 @@
 			<Actor seed="27127"/>
 		</Entity>
 		<Entity uid="3976">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="809.68763" z="1633.84705"/>
 			<Orientation y="-0.21714"/>
 			<Actor seed="16445"/>
 		</Entity>
 		<Entity uid="3977">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="814.87787" z="1633.82813"/>
 			<Orientation y="-0.63349"/>
 			<Actor seed="31862"/>
 		</Entity>
 		<Entity uid="3978">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="804.25458" z="1634.97925"/>
 			<Orientation y="0.1039"/>
@@ -27733,7 +27698,7 @@
 			<Actor seed="21976"/>
 		</Entity>
 		<Entity uid="4069">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="622.9339" z="1675.90809"/>
 			<Orientation y="-0.95185"/>
@@ -27747,21 +27712,21 @@
 			<Actor seed="31575"/>
 		</Entity>
 		<Entity uid="4071">
-			<Template>units/brit_war_dog_e</Template>
+			<Template>units/brit/war_dog</Template>
 			<Player>5</Player>
 			<Position x="964.3476" z="743.5625"/>
 			<Orientation y="3.57753"/>
 			<Actor seed="10994"/>
 		</Entity>
 		<Entity uid="4072">
-			<Template>units/brit_war_dog_e</Template>
+			<Template>units/brit/war_dog</Template>
 			<Player>5</Player>
 			<Position x="958.71412" z="746.97053"/>
 			<Orientation y="3.64647"/>
 			<Actor seed="5802"/>
 		</Entity>
 		<Entity uid="4073">
-			<Template>units/brit_war_dog_e</Template>
+			<Template>units/brit/war_dog</Template>
 			<Player>5</Player>
 			<Position x="961.14594" z="745.42225"/>
 			<Orientation y="3.55896"/>
@@ -27782,91 +27747,91 @@
 			<Actor seed="11035"/>
 		</Entity>
 		<Entity uid="4076">
-			<Template>units/brit_cavalry_swordsman_a</Template>
+			<Template>units/brit/cavalry_swordsman_a</Template>
 			<Player>5</Player>
 			<Position x="974.7436" z="759.80195"/>
 			<Orientation y="3.69114"/>
 			<Actor seed="61413"/>
 		</Entity>
 		<Entity uid="4077">
-			<Template>units/brit_cavalry_swordsman_a</Template>
+			<Template>units/brit/cavalry_swordsman_a</Template>
 			<Player>5</Player>
 			<Position x="970.51752" z="763.23902"/>
 			<Orientation y="3.69114"/>
 			<Actor seed="61413"/>
 		</Entity>
 		<Entity uid="4078">
-			<Template>units/brit_cavalry_javelinist_a</Template>
+			<Template>units/brit/cavalry_javelineer_a</Template>
 			<Player>5</Player>
 			<Position x="972.46058" z="750.5716"/>
 			<Orientation y="3.75062"/>
 			<Actor seed="51610"/>
 		</Entity>
 		<Entity uid="4079">
-			<Template>units/brit_cavalry_javelinist_a</Template>
+			<Template>units/brit/cavalry_javelineer_a</Template>
 			<Player>5</Player>
 			<Position x="968.25916" z="754.3631"/>
 			<Orientation y="3.4431"/>
 			<Actor seed="31823"/>
 		</Entity>
 		<Entity uid="4080">
-			<Template>units/brit_cavalry_javelinist_a</Template>
+			<Template>units/brit/cavalry_javelineer_a</Template>
 			<Player>5</Player>
 			<Position x="963.64881" z="757.00568"/>
 			<Orientation y="3.62262"/>
 			<Actor seed="7081"/>
 		</Entity>
 		<Entity uid="4081">
-			<Template>units/brit_champion_infantry</Template>
+			<Template>units/brit/champion_infantry_swordsman</Template>
 			<Player>5</Player>
 			<Position x="964.63276" z="746.86817"/>
 			<Orientation y="4.11307"/>
 			<Actor seed="57044"/>
 		</Entity>
 		<Entity uid="4082">
-			<Template>units/brit_champion_infantry</Template>
+			<Template>units/brit/champion_infantry_swordsman</Template>
 			<Player>5</Player>
 			<Position x="961.00068" z="749.85663"/>
 			<Orientation y="3.57624"/>
 			<Actor seed="57105"/>
 		</Entity>
 		<Entity uid="4083">
-			<Template>units/brit_champion_infantry</Template>
+			<Template>units/brit/champion_infantry_swordsman</Template>
 			<Player>5</Player>
 			<Position x="967.96137" z="747.73713"/>
 			<Orientation y="3.61197"/>
 			<Actor seed="62850"/>
 		</Entity>
 		<Entity uid="4084">
-			<Template>units/brit_champion_infantry</Template>
+			<Template>units/brit/champion_infantry_swordsman</Template>
 			<Player>5</Player>
 			<Position x="964.53632" z="751.03962"/>
 			<Orientation y="3.5933"/>
 			<Actor seed="20248"/>
 		</Entity>
 		<Entity uid="4085">
-			<Template>units/brit_champion_infantry</Template>
+			<Template>units/brit/champion_infantry_swordsman</Template>
 			<Player>5</Player>
 			<Position x="961.2035" z="754.2287"/>
 			<Orientation y="3.99321"/>
 			<Actor seed="54657"/>
 		</Entity>
 		<Entity uid="4086">
-			<Template>units/brit_war_dog_e</Template>
+			<Template>units/brit/war_dog</Template>
 			<Player>5</Player>
 			<Position x="883.74518" z="642.74634"/>
 			<Orientation y="3.75731"/>
 			<Actor seed="10994"/>
 		</Entity>
 		<Entity uid="4087">
-			<Template>units/brit_war_dog_e</Template>
+			<Template>units/brit/war_dog</Template>
 			<Player>5</Player>
 			<Position x="878.81183" z="647.1067"/>
 			<Orientation y="3.82625"/>
 			<Actor seed="5802"/>
 		</Entity>
 		<Entity uid="4088">
-			<Template>units/brit_war_dog_e</Template>
+			<Template>units/brit/war_dog</Template>
 			<Player>5</Player>
 			<Position x="880.92768" z="645.14856"/>
 			<Orientation y="3.73874"/>
@@ -27887,91 +27852,91 @@
 			<Actor seed="11035"/>
 		</Entity>
 		<Entity uid="4091">
-			<Template>units/brit_cavalry_swordsman_a</Template>
+			<Template>units/brit/cavalry_swordsman_a</Template>
 			<Player>5</Player>
 			<Position x="896.87732" z="656.86518"/>
 			<Orientation y="3.87092"/>
 			<Actor seed="61413"/>
 		</Entity>
 		<Entity uid="4092">
-			<Template>units/brit_cavalry_swordsman_a</Template>
+			<Template>units/brit/cavalry_swordsman_a</Template>
 			<Player>5</Player>
 			<Position x="893.33393" z="661.00257"/>
 			<Orientation y="3.87092"/>
 			<Actor seed="61413"/>
 		</Entity>
 		<Entity uid="4093">
-			<Template>units/brit_cavalry_javelinist_a</Template>
+			<Template>units/brit/cavalry_javelineer_a</Template>
 			<Player>5</Player>
 			<Position x="892.98066" z="648.19184"/>
 			<Orientation y="3.9304"/>
 			<Actor seed="51610"/>
 		</Entity>
 		<Entity uid="4094">
-			<Template>units/brit_cavalry_javelinist_a</Template>
+			<Template>units/brit/cavalry_javelineer_a</Template>
 			<Player>5</Player>
 			<Position x="889.52491" z="652.67341"/>
 			<Orientation y="3.62288"/>
 			<Actor seed="31823"/>
 		</Entity>
 		<Entity uid="4095">
-			<Template>units/brit_cavalry_javelinist_a</Template>
+			<Template>units/brit/cavalry_javelineer_a</Template>
 			<Player>5</Player>
 			<Position x="885.46137" z="656.09784"/>
 			<Orientation y="3.8024"/>
 			<Actor seed="7081"/>
 		</Entity>
 		<Entity uid="4096">
-			<Template>units/brit_champion_infantry</Template>
+			<Template>units/brit/champion_infantry_swordsman</Template>
 			<Player>5</Player>
 			<Position x="884.61683" z="645.94776"/>
 			<Orientation y="4.29285"/>
 			<Actor seed="57044"/>
 		</Entity>
 		<Entity uid="4097">
-			<Template>units/brit_champion_infantry</Template>
+			<Template>units/brit/champion_infantry_swordsman</Template>
 			<Player>5</Player>
 			<Position x="881.57764" z="649.53748"/>
 			<Orientation y="3.75602"/>
 			<Actor seed="57105"/>
 		</Entity>
 		<Entity uid="4098">
-			<Template>units/brit_champion_infantry</Template>
+			<Template>units/brit/champion_infantry_swordsman</Template>
 			<Player>5</Player>
 			<Position x="888.04719" z="646.20752"/>
 			<Orientation y="3.79175"/>
 			<Actor seed="62850"/>
 		</Entity>
 		<Entity uid="4099">
-			<Template>units/brit_champion_infantry</Template>
+			<Template>units/brit/champion_infantry_swordsman</Template>
 			<Player>5</Player>
 			<Position x="885.26783" z="650.06922"/>
 			<Orientation y="3.77308"/>
 			<Actor seed="20248"/>
 		</Entity>
 		<Entity uid="4100">
-			<Template>units/brit_champion_infantry</Template>
+			<Template>units/brit/champion_infantry_swordsman</Template>
 			<Player>5</Player>
 			<Position x="882.5589" z="653.8028"/>
 			<Orientation y="4.173"/>
 			<Actor seed="54657"/>
 		</Entity>
 		<Entity uid="4101">
-			<Template>units/brit_war_dog_e</Template>
+			<Template>units/brit/war_dog</Template>
 			<Player>5</Player>
 			<Position x="292.27512" z="1449.42066"/>
 			<Orientation y="-1.71712"/>
 			<Actor seed="10994"/>
 		</Entity>
 		<Entity uid="4102">
-			<Template>units/brit_war_dog_e</Template>
+			<Template>units/brit/war_dog</Template>
 			<Player>5</Player>
 			<Position x="292.02372" z="1456"/>
 			<Orientation y="-1.64818"/>
 			<Actor seed="5802"/>
 		</Entity>
 		<Entity uid="4103">
-			<Template>units/brit_war_dog_e</Template>
+			<Template>units/brit/war_dog</Template>
 			<Player>5</Player>
 			<Position x="292.06788" z="1453.11744"/>
 			<Orientation y="-1.7357"/>
@@ -27992,70 +27957,70 @@
 			<Actor seed="11035"/>
 		</Entity>
 		<Entity uid="4106">
-			<Template>units/brit_cavalry_swordsman_a</Template>
+			<Template>units/brit/cavalry_swordsman_a</Template>
 			<Player>5</Player>
 			<Position x="311.55567" z="1449.66773"/>
 			<Orientation y="-1.60352"/>
 			<Actor seed="61413"/>
 		</Entity>
 		<Entity uid="4107">
-			<Template>units/brit_cavalry_swordsman_a</Template>
+			<Template>units/brit/cavalry_swordsman_a</Template>
 			<Player>5</Player>
 			<Position x="312.10242" z="1455.08765"/>
 			<Orientation y="-1.60352"/>
 			<Actor seed="61413"/>
 		</Entity>
 		<Entity uid="4108">
-			<Template>units/brit_cavalry_javelinist_a</Template>
+			<Template>units/brit/cavalry_javelineer_a</Template>
 			<Player>5</Player>
 			<Position x="302.59073" z="1446.49878"/>
 			<Orientation y="-1.54404"/>
 			<Actor seed="51610"/>
 		</Entity>
 		<Entity uid="4109">
-			<Template>units/brit_cavalry_javelinist_a</Template>
+			<Template>units/brit/cavalry_javelineer_a</Template>
 			<Player>5</Player>
 			<Position x="303.44709" z="1452.0929"/>
 			<Orientation y="-1.85155"/>
 			<Actor seed="31823"/>
 		</Entity>
 		<Entity uid="4110">
-			<Template>units/brit_cavalry_javelinist_a</Template>
+			<Template>units/brit/cavalry_javelineer_a</Template>
 			<Player>5</Player>
 			<Position x="303.119" z="1457.39673"/>
 			<Orientation y="-1.67203"/>
 			<Actor seed="7081"/>
 		</Entity>
 		<Entity uid="4111">
-			<Template>units/brit_champion_infantry</Template>
+			<Template>units/brit/champion_infantry_swordsman</Template>
 			<Player>5</Player>
 			<Position x="295.193" z="1451.00025"/>
 			<Orientation y="-1.18158"/>
 			<Actor seed="57044"/>
 		</Entity>
 		<Entity uid="4112">
-			<Template>units/brit_champion_infantry</Template>
+			<Template>units/brit/champion_infantry_swordsman</Template>
 			<Player>5</Player>
 			<Position x="295.69166" z="1455.67725"/>
 			<Orientation y="-1.71842"/>
 			<Actor seed="57105"/>
 		</Entity>
 		<Entity uid="4113">
-			<Template>units/brit_champion_infantry</Template>
+			<Template>units/brit/champion_infantry_swordsman</Template>
 			<Player>5</Player>
 			<Position x="297.74924" z="1448.69788"/>
 			<Orientation y="-1.68268"/>
 			<Actor seed="62850"/>
 		</Entity>
 		<Entity uid="4114">
-			<Template>units/brit_champion_infantry</Template>
+			<Template>units/brit/champion_infantry_swordsman</Template>
 			<Player>5</Player>
 			<Position x="298.62409" z="1453.37464"/>
 			<Orientation y="-1.70136"/>
 			<Actor seed="20248"/>
 		</Entity>
 		<Entity uid="4115">
-			<Template>units/brit_champion_infantry</Template>
+			<Template>units/brit/champion_infantry_swordsman</Template>
 			<Player>5</Player>
 			<Position x="299.4549" z="1457.912"/>
 			<Orientation y="-1.30144"/>
@@ -28433,70 +28398,70 @@
 			<Actor seed="19229"/>
 		</Entity>
 		<Entity uid="4169">
-			<Template>units/brit_champion_infantry</Template>
+			<Template>units/brit/champion_infantry_swordsman</Template>
 			<Player>5</Player>
 			<Position x="70.26412" z="1330.1825"/>
 			<Orientation y="-3.18546"/>
 			<Actor seed="54657"/>
 		</Entity>
 		<Entity uid="4170">
-			<Template>units/brit_champion_infantry</Template>
+			<Template>units/brit/champion_infantry_swordsman</Template>
 			<Player>5</Player>
 			<Position x="74.83671" z="1330.79029"/>
 			<Orientation y="-3.58538"/>
 			<Actor seed="20248"/>
 		</Entity>
 		<Entity uid="4171">
-			<Template>units/brit_champion_infantry</Template>
+			<Template>units/brit/champion_infantry_swordsman</Template>
 			<Player>5</Player>
 			<Position x="79.55549" z="1331.39905"/>
 			<Orientation y="-3.56672"/>
 			<Actor seed="62850"/>
 		</Entity>
 		<Entity uid="4172">
-			<Template>units/brit_champion_infantry</Template>
+			<Template>units/brit/champion_infantry_swordsman</Template>
 			<Player>5</Player>
 			<Position x="73.54986" z="1327.29102"/>
 			<Orientation y="-3.60245"/>
 			<Actor seed="57105"/>
 		</Entity>
 		<Entity uid="4173">
-			<Template>units/brit_champion_infantry</Template>
+			<Template>units/brit/champion_infantry_swordsman</Template>
 			<Player>5</Player>
 			<Position x="78.15285" z="1328.2577"/>
 			<Orientation y="-3.06562"/>
 			<Actor seed="57044"/>
 		</Entity>
 		<Entity uid="4174">
-			<Template>units/brit_cavalry_javelinist_a</Template>
+			<Template>units/brit/cavalry_javelineer_a</Template>
 			<Player>5</Player>
 			<Position x="69.62534" z="1333.82703"/>
 			<Orientation y="-3.55605"/>
 			<Actor seed="7081"/>
 		</Entity>
 		<Entity uid="4175">
-			<Template>units/brit_cavalry_javelinist_a</Template>
+			<Template>units/brit/cavalry_javelineer_a</Template>
 			<Player>5</Player>
 			<Position x="74.57006" z="1335.77356"/>
 			<Orientation y="-3.73557"/>
 			<Actor seed="31823"/>
 		</Entity>
 		<Entity uid="4176">
-			<Template>units/brit_cavalry_javelinist_a</Template>
+			<Template>units/brit/cavalry_javelineer_a</Template>
 			<Player>5</Player>
 			<Position x="80.15578" z="1336.68262"/>
 			<Orientation y="-3.42806"/>
 			<Actor seed="51610"/>
 		</Entity>
 		<Entity uid="4177">
-			<Template>units/brit_cavalry_swordsman_a</Template>
+			<Template>units/brit/cavalry_swordsman_a</Template>
 			<Player>5</Player>
 			<Position x="69.05402" z="1343.08497"/>
 			<Orientation y="-3.48755"/>
 			<Actor seed="61413"/>
 		</Entity>
 		<Entity uid="4178">
-			<Template>units/brit_cavalry_swordsman_a</Template>
+			<Template>units/brit/cavalry_swordsman_a</Template>
 			<Player>5</Player>
 			<Position x="74.37862" z="1344.23487"/>
 			<Orientation y="-3.48755"/>
@@ -28517,21 +28482,21 @@
 			<Actor seed="35402"/>
 		</Entity>
 		<Entity uid="4181">
-			<Template>units/brit_war_dog_e</Template>
+			<Template>units/brit/war_dog</Template>
 			<Player>5</Player>
 			<Position x="77.10172" z="1324.63233"/>
 			<Orientation y="-3.61971"/>
 			<Actor seed="42732"/>
 		</Entity>
 		<Entity uid="4182">
-			<Template>units/brit_war_dog_e</Template>
+			<Template>units/brit/war_dog</Template>
 			<Player>5</Player>
 			<Position x="74.373" z="1323.70203"/>
 			<Orientation y="-3.53222"/>
 			<Actor seed="5802"/>
 		</Entity>
 		<Entity uid="4183">
-			<Template>units/brit_war_dog_e</Template>
+			<Template>units/brit/war_dog</Template>
 			<Player>5</Player>
 			<Position x="80.55472" z="1325.96863"/>
 			<Orientation y="-3.60116"/>
@@ -29833,7 +29798,7 @@
 			<Actor seed="38171"/>
 		</Entity>
 		<Entity uid="4398">
-			<Template>gaia/geology_stone_alpine_a</Template>
+			<Template>gaia/rock/mediterranean_small</Template>
 			<Player>0</Player>
 			<Position x="1118.45472" z="1365.67774"/>
 			<Orientation y="5.33204"/>
@@ -29861,28 +29826,28 @@
 			<Actor seed="53948"/>
 		</Entity>
 		<Entity uid="4402">
-			<Template>gaia/geology_stone_greek</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>5</Player>
 			<Position x="1459.7201" z="1427.16053"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="57478"/>
 		</Entity>
 		<Entity uid="4403">
-			<Template>gaia/geology_stone_greek</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>5</Player>
 			<Position x="1462.16407" z="1436.26941"/>
 			<Orientation y="1.69417"/>
 			<Actor seed="58353"/>
 		</Entity>
 		<Entity uid="4404">
-			<Template>gaia/geology_stone_greek</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>5</Player>
 			<Position x="1470.9115" z="1441.81397"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="8135"/>
 		</Entity>
 		<Entity uid="4405">
-			<Template>gaia/geology_stone_greek</Template>
+			<Template>gaia/rock/mediterranean_large</Template>
 			<Player>5</Player>
 			<Position x="1198.76331" z="1137.55042"/>
 			<Orientation y="2.35621"/>
@@ -30344,14 +30309,14 @@
 			<Actor seed="49147"/>
 		</Entity>
 		<Entity uid="4472">
-			<Template>structures/brit_blacksmith</Template>
+			<Template>structures/brit/forge</Template>
 			<Player>0</Player>
 			<Position x="522.11133" z="1762.91407"/>
 			<Orientation y="-0.89748"/>
 			<Actor seed="27277"/>
 		</Entity>
 		<Entity uid="4473">
-			<Template>structures/brit_temple</Template>
+			<Template>structures/brit/temple</Template>
 			<Player>0</Player>
 			<Position x="576.27558" z="1727.09131"/>
 			<Orientation y="0.48041"/>
@@ -30938,6 +30903,90 @@
 			<Position x="275.15735" z="379.90113"/>
 			<Orientation y="4.85459"/>
 			<Actor seed="10640"/>
+		</Entity>
+		<Entity uid="4579">
+			<Template>units/mace/cavalry_javelineer_a</Template>
+			<Player>1</Player>
+			<Position x="720.51301" z="1936.72413"/>
+			<Orientation y="2.35621"/>
+			<Obstruction group="3627"/>
+		</Entity>
+		<Entity uid="4580">
+			<Template>units/mace/cavalry_javelineer_a</Template>
+			<Player>1</Player>
+			<Position x="704.75733" z="1930.7649"/>
+			<Orientation y="3.10831"/>
+			<Obstruction group="3628"/>
+		</Entity>
+		<Entity uid="4581">
+			<Template>units/mace/cavalry_javelineer_a</Template>
+			<Player>1</Player>
+			<Position x="687.38819" z="1933.73658"/>
+			<Orientation y="-2.73684"/>
+			<Obstruction group="3629"/>
+		</Entity>
+		<Entity uid="4582">
+			<Template>units/mace/cavalry_javelineer_a</Template>
+			<Player>1</Player>
+			<Position x="713.39478" z="1932.86109"/>
+			<Orientation y="2.68978"/>
+			<Obstruction group="3630"/>
+		</Entity>
+		<Entity uid="4583">
+			<Template>units/mace/cavalry_javelineer_a</Template>
+			<Player>1</Player>
+			<Position x="695.7859" z="1931.32728"/>
+			<Orientation y="-3.04097"/>
+			<Obstruction group="3631"/>
+		</Entity>
+		<Entity uid="4584">
+			<Template>units/mace/cavalry_javelineer_e</Template>
+			<Player>1</Player>
+			<Position x="577.43921" z="1814.15931"/>
+			<Orientation y="-2.25588"/>
+			<Actor seed="39597"/>
+		</Entity>
+		<Entity uid="4585">
+			<Template>units/mace/infantry_javelineer_b</Template>
+			<Player>1</Player>
+			<Position x="700.77656" z="1974.43323"/>
+			<Orientation y="2.35621"/>
+			<Actor seed="20070"/>
+		</Entity>
+		<Entity uid="4586">
+			<Template>units/mace/infantry_javelineer_b</Template>
+			<Player>1</Player>
+			<Position x="698.45539" z="1973.62574"/>
+			<Orientation y="2.35621"/>
+			<Actor seed="15557"/>
+		</Entity>
+		<Entity uid="4587">
+			<Template>units/mace/infantry_javelineer_b</Template>
+			<Player>1</Player>
+			<Position x="696.09345" z="1972.71875"/>
+			<Orientation y="2.35621"/>
+			<Actor seed="11654"/>
+		</Entity>
+		<Entity uid="4588">
+			<Template>units/mace/infantry_javelineer_b</Template>
+			<Player>1</Player>
+			<Position x="693.6681" z="1972.06153"/>
+			<Orientation y="2.35621"/>
+			<Actor seed="58679"/>
+		</Entity>
+		<Entity uid="4589">
+			<Template>units/mace/infantry_javelineer_b</Template>
+			<Player>1</Player>
+			<Position x="691.24396" z="1971.69312"/>
+			<Orientation y="2.35621"/>
+			<Actor seed="62888"/>
+		</Entity>
+		<Entity uid="4590">
+			<Template>units/mace/infantry_javelineer_b</Template>
+			<Player>1</Player>
+			<Position x="688.64997" z="1971.0846"/>
+			<Orientation y="2.35621"/>
+			<Actor seed="14562"/>
 		</Entity>
 	</Entities>
 	<Paths/>
