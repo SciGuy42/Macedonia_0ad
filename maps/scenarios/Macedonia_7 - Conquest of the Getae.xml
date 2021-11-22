@@ -32,15 +32,15 @@
 		</Postproc>
 	</Environment>
 	<Camera>
-		<Position x="-25.3761" y="659.69" z="-29.0455"/>
-		<Rotation angle="0.781375"/>
+		<Position x="665.982" y="530.465" z="-274.616"/>
+		<Rotation angle="0"/>
 		<Declination angle="0.610865"/>
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
   "AISeed": 0,
   "CircularMap": true,
-  "Description": "To secure the northern border, the Macedonians marched to the Danube River where they encountered the Getae tribe on the opposite shore. You have arrived with a small detachment of troops with the objective of capturing a base and defeating the Getae tribes in the area. ",
+  "Description": "To secure the northern border, the Macedonians marched to the Danube River where they encountered the Getae tribe on the opposite shore. You have arrived with a small detachment of troops with the objective of capturing a base and defeating the Getae tribes in the area. On the southern shore, lies a small fishing village ripe for the taking. On a small island not too far from us, is another settlement with some foritifcations that may also serve as a good starting camp. Our ship carrying the battering ram, however, has crash landed nearby -- we need to look through any wreckage we find if we are to be able to break through fortifications any time soon!\n\nAI Settings: Player 3 (\"Friendly Traders\") and Player 6 (\"Getae Raiders\") should be on Sandbox. All others should be on a difficulty level of your choice. ",
   "DisabledTemplates": [
     "structures/ptol_lighthouse"
   ],
@@ -51,7 +51,6 @@
   "Name": "Macedonia 7 - Conquest of the Getae (335 BC)",
   "Nomad": false,
   "PlayerData": [
-    "",
     {
       "Civ": "mace",
       "Name": "Alexander",
@@ -85,24 +84,12 @@
     },
     {
       "Civ": "gaul",
-      "Name": "Pirates",
-      "Team": 1
-    },
-    {
-      "AI": "petra",
-      "Civ": "athen",
-      "Color": {
-        "b": 16,
-        "g": 115,
-        "r": 220
-      },
-      "Name": "Greek Mercenaries",
+      "Name": "Getae Raiders",
       "Team": 1
     }
   ],
-  "Preview": "danubius.png",
+  "Preview": "",
   "RevealMap": false,
-  "Script": "danubius.js",
   "Seed": 0,
   "Size": 448,
   "SupportedBiomes": "generic/",
@@ -111,7 +98,7 @@
     "scenarios/Macedonia_7.js"
   ],
   "VictoryConditions": [
-    "conquest_structures"
+    "conquest_units"
   ],
   "mapType": "random"
 }
@@ -177,91 +164,91 @@
 			<Orientation y="-11.13073"/>
 		</Entity>
 		<Entity uid="160">
-			<Template>units/gaul_support_healer_b</Template>
+			<Template>units/gaul/support_healer_b</Template>
 			<Player>4</Player>
 			<Position x="1625.83021" z="1072.5044"/>
 			<Orientation y="-5.54567"/>
 		</Entity>
 		<Entity uid="161">
-			<Template>units/gaul_support_healer_b</Template>
+			<Template>units/gaul/support_healer_b</Template>
 			<Player>4</Player>
 			<Position x="1632.34333" z="1068.70508"/>
 			<Orientation y="-5.96456"/>
 		</Entity>
 		<Entity uid="162">
-			<Template>units/gaul_infantry_javelinist_b</Template>
+			<Template>units/gaul/infantry_javelineer_b</Template>
 			<Player>4</Player>
 			<Position x="1639.83869" z="1067.88337"/>
 			<Orientation y="-6.38344"/>
 		</Entity>
 		<Entity uid="163">
-			<Template>units/gaul_infantry_javelinist_b</Template>
+			<Template>units/gaul/infantry_javelineer_b</Template>
 			<Player>4</Player>
 			<Position x="1647.02027" z="1070.18134"/>
 			<Orientation y="-1.95159"/>
 		</Entity>
 		<Entity uid="164">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>4</Player>
 			<Position x="1652.64631" z="1075.20167"/>
 			<Orientation y="-7.2212"/>
 		</Entity>
 		<Entity uid="165">
-			<Template>units/gaul_support_healer_b</Template>
+			<Template>units/gaul/support_healer_b</Template>
 			<Player>4</Player>
 			<Position x="1655.74396" z="1082.07624"/>
 			<Orientation y="-7.64008"/>
 		</Entity>
 		<Entity uid="166">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>4</Player>
 			<Position x="1655.77771" z="1089.61646"/>
 			<Orientation y="-8.05895"/>
 		</Entity>
 		<Entity uid="167">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>4</Player>
 			<Position x="1652.74164" z="1096.51844"/>
 			<Orientation y="-2.53498"/>
 		</Entity>
 		<Entity uid="168">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>4</Player>
 			<Position x="1647.16077" z="1101.58887"/>
 			<Orientation y="-2.25507"/>
 		</Entity>
 		<Entity uid="169">
-			<Template>units/gaul_infantry_javelinist_b</Template>
+			<Template>units/gaul/infantry_javelineer_b</Template>
 			<Player>4</Player>
 			<Position x="1640" z="1103.951"/>
 			<Orientation y="-9.31559"/>
 		</Entity>
 		<Entity uid="170">
-			<Template>units/gaul_infantry_javelinist_b</Template>
+			<Template>units/gaul/infantry_javelineer_b</Template>
 			<Player>4</Player>
 			<Position x="1632.49762" z="1103.19642"/>
 			<Orientation y="1.42725"/>
 		</Entity>
 		<Entity uid="171">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>4</Player>
 			<Position x="1625.95075" z="1099.45551"/>
 			<Orientation y="-10.15336"/>
 		</Entity>
 		<Entity uid="172">
-			<Template>units/gaul_infantry_javelinist_b</Template>
+			<Template>units/gaul/infantry_javelineer_b</Template>
 			<Player>4</Player>
 			<Position x="1621.49146" z="1093.37519"/>
 			<Orientation y="0.83008"/>
 		</Entity>
 		<Entity uid="173">
-			<Template>units/gaul_support_healer_b</Template>
+			<Template>units/gaul/support_healer_b</Template>
 			<Player>4</Player>
 			<Position x="1619.89075" z="1086.00678"/>
 			<Orientation y="-10.99111"/>
 		</Entity>
 		<Entity uid="174">
-			<Template>units/gaul_infantry_javelinist_b</Template>
+			<Template>units/gaul/infantry_javelineer_b</Template>
 			<Player>4</Player>
 			<Position x="1621.42548" z="1078.62433"/>
 			<Orientation y="0.00701"/>
@@ -458,91 +445,91 @@
 			<Orientation y="-11.13073"/>
 		</Entity>
 		<Entity uid="311">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>2</Player>
 			<Position x="445.89325" z="968.94874"/>
 			<Orientation y="0.74778"/>
 		</Entity>
 		<Entity uid="312">
-			<Template>units/gaul_support_healer_b</Template>
+			<Template>units/gaul/support_healer_b</Template>
 			<Player>2</Player>
 			<Position x="452.40638" z="965.14948"/>
 			<Orientation y="-5.96456"/>
 		</Entity>
 		<Entity uid="313">
-			<Template>units/gaul_infantry_javelinist_b</Template>
+			<Template>units/gaul/infantry_javelineer_b</Template>
 			<Player>2</Player>
 			<Position x="459.90174" z="964.32776"/>
 			<Orientation y="-1.41562"/>
 		</Entity>
 		<Entity uid="314">
-			<Template>units/gaul_infantry_javelinist_b</Template>
+			<Template>units/gaul/infantry_javelineer_b</Template>
 			<Player>2</Player>
 			<Position x="467.08332" z="966.62574"/>
 			<Orientation y="-1.95159"/>
 		</Entity>
 		<Entity uid="315">
-			<Template>units/gaul_infantry_javelinist_b</Template>
+			<Template>units/gaul/infantry_javelineer_b</Template>
 			<Player>2</Player>
 			<Position x="472.70936" z="971.64606"/>
 			<Orientation y="-2.31153"/>
 		</Entity>
 		<Entity uid="316">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>2</Player>
 			<Position x="475.80701" z="978.52063"/>
 			<Orientation y="-1.29047"/>
 		</Entity>
 		<Entity uid="317">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>2</Player>
 			<Position x="475.84076" z="986.0608"/>
 			<Orientation y="-8.05895"/>
 		</Entity>
 		<Entity uid="318">
-			<Template>units/gaul_infantry_javelinist_b</Template>
+			<Template>units/gaul/infantry_javelineer_b</Template>
 			<Player>2</Player>
 			<Position x="472.8047" z="992.96283"/>
 			<Orientation y="-3.1346"/>
 		</Entity>
 		<Entity uid="319">
-			<Template>units/gaul_infantry_javelinist_b</Template>
+			<Template>units/gaul/infantry_javelineer_b</Template>
 			<Player>2</Player>
 			<Position x="467.22382" z="998.03327"/>
 			<Orientation y="2.31856"/>
 		</Entity>
 		<Entity uid="320">
-			<Template>units/gaul_infantry_javelinist_b</Template>
+			<Template>units/gaul/infantry_javelineer_b</Template>
 			<Player>2</Player>
 			<Position x="460.06312" z="1000.3954"/>
 			<Orientation y="1.96044"/>
 		</Entity>
 		<Entity uid="321">
-			<Template>units/gaul_infantry_javelinist_b</Template>
+			<Template>units/gaul/infantry_javelineer_b</Template>
 			<Player>2</Player>
 			<Position x="452.56067" z="999.64075"/>
 			<Orientation y="1.42724"/>
 		</Entity>
 		<Entity uid="322">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>2</Player>
 			<Position x="446.0138" z="995.89991"/>
 			<Orientation y="-10.15336"/>
 		</Entity>
 		<Entity uid="323">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>2</Player>
 			<Position x="441.55451" z="989.81959"/>
 			<Orientation y="1.62829"/>
 		</Entity>
 		<Entity uid="324">
-			<Template>units/gaul_infantry_javelinist_b</Template>
+			<Template>units/gaul/infantry_javelineer_b</Template>
 			<Player>2</Player>
 			<Position x="439.95386" z="982.45118"/>
 			<Orientation y="0.66462"/>
 		</Entity>
 		<Entity uid="325">
-			<Template>units/gaul_infantry_javelinist_b</Template>
+			<Template>units/gaul/infantry_javelineer_b</Template>
 			<Player>2</Player>
 			<Position x="441.48853" z="975.06873"/>
 			<Orientation y="-0.27036"/>
@@ -21241,13 +21228,13 @@
 			<Orientation y="2.62288"/>
 		</Entity>
 		<Entity uid="3918">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1146" z="1710"/>
 			<Orientation y="5.95853"/>
 		</Entity>
 		<Entity uid="3919">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1150" z="1738"/>
 			<Orientation y="0.33408"/>
@@ -21259,7 +21246,7 @@
 			<Orientation y="6.19471"/>
 		</Entity>
 		<Entity uid="3921">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1170" z="1698"/>
 			<Orientation y="0.05295"/>
@@ -21277,7 +21264,7 @@
 			<Orientation y="3.13929"/>
 		</Entity>
 		<Entity uid="3924">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1190" z="1706"/>
 			<Orientation y="0.06025"/>
@@ -21343,7 +21330,7 @@
 			<Orientation y="3.4949"/>
 		</Entity>
 		<Entity uid="3935">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1182" z="1706"/>
 			<Orientation y="1.50121"/>
@@ -21433,7 +21420,7 @@
 			<Orientation y="2.58425"/>
 		</Entity>
 		<Entity uid="3950">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1198" z="1722"/>
 			<Orientation y="4.46866"/>
@@ -21505,7 +21492,7 @@
 			<Orientation y="3.86057"/>
 		</Entity>
 		<Entity uid="3962">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="54" z="1058"/>
 			<Orientation y="1.74972"/>
@@ -21547,7 +21534,7 @@
 			<Orientation y="2.59878"/>
 		</Entity>
 		<Entity uid="3969">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="918" z="582"/>
 			<Orientation y="6.16372"/>
@@ -21565,7 +21552,7 @@
 			<Orientation y="3.09157"/>
 		</Entity>
 		<Entity uid="3972">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="982" z="574"/>
 			<Orientation y="0.38895"/>
@@ -21667,19 +21654,19 @@
 			<Orientation y="0.9506"/>
 		</Entity>
 		<Entity uid="3989">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="938" z="578"/>
 			<Orientation y="4.23847"/>
 		</Entity>
 		<Entity uid="3990">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="942" z="582"/>
 			<Orientation y="5.43734"/>
 		</Entity>
 		<Entity uid="3991">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="930" z="574"/>
 			<Orientation y="5.94372"/>
@@ -21697,7 +21684,7 @@
 			<Orientation y="1.60317"/>
 		</Entity>
 		<Entity uid="3994">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="954" z="570"/>
 			<Orientation y="2.54961"/>
@@ -21739,7 +21726,7 @@
 			<Orientation y="3.67084"/>
 		</Entity>
 		<Entity uid="4001">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="938" z="574"/>
 			<Orientation y="5.64458"/>
@@ -21757,7 +21744,7 @@
 			<Orientation y="2.26095"/>
 		</Entity>
 		<Entity uid="4004">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="946" z="574"/>
 			<Orientation y="5.3246"/>
@@ -21775,7 +21762,7 @@
 			<Orientation y="0.17125"/>
 		</Entity>
 		<Entity uid="4007">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="970" z="570"/>
 			<Orientation y="2.23441"/>
@@ -21841,13 +21828,13 @@
 			<Orientation y="3.87705"/>
 		</Entity>
 		<Entity uid="4018">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="786" z="1582"/>
 			<Orientation y="0.18734"/>
 		</Entity>
 		<Entity uid="4019">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="786" z="1590"/>
 			<Orientation y="6.08338"/>
@@ -21859,13 +21846,13 @@
 			<Orientation y="5.20386"/>
 		</Entity>
 		<Entity uid="4021">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="790" z="1602"/>
 			<Orientation y="5.42492"/>
 		</Entity>
 		<Entity uid="4022">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="782" z="1594"/>
 			<Orientation y="3.41063"/>
@@ -21919,7 +21906,7 @@
 			<Orientation y="0.12714"/>
 		</Entity>
 		<Entity uid="4031">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="790" z="1598"/>
 			<Orientation y="2.0787"/>
@@ -21931,7 +21918,7 @@
 			<Orientation y="5.15947"/>
 		</Entity>
 		<Entity uid="4033">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="810" z="1578"/>
 			<Orientation y="2.99486"/>
@@ -21967,7 +21954,7 @@
 			<Orientation y="3.76005"/>
 		</Entity>
 		<Entity uid="4039">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="814" z="1598"/>
 			<Orientation y="2.30147"/>
@@ -21979,7 +21966,7 @@
 			<Orientation y="1.11875"/>
 		</Entity>
 		<Entity uid="4041">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="798" z="1570"/>
 			<Orientation y="5.16916"/>
@@ -22015,13 +22002,13 @@
 			<Orientation y="6.06901"/>
 		</Entity>
 		<Entity uid="4047">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="802" z="1586"/>
 			<Orientation y="5.94753"/>
 		</Entity>
 		<Entity uid="4048">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1454" z="398"/>
 			<Orientation y="3.48417"/>
@@ -22039,7 +22026,7 @@
 			<Orientation y="4.60351"/>
 		</Entity>
 		<Entity uid="4051">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1458" z="394"/>
 			<Orientation y="4.03132"/>
@@ -22051,13 +22038,13 @@
 			<Orientation y="6.0802"/>
 		</Entity>
 		<Entity uid="4053">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="350" z="1422"/>
 			<Orientation y="4.35286"/>
 		</Entity>
 		<Entity uid="4054">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="354" z="1422"/>
 			<Orientation y="3.16153"/>
@@ -22099,7 +22086,7 @@
 			<Orientation y="2.04984"/>
 		</Entity>
 		<Entity uid="4061">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="370" z="1422"/>
 			<Orientation y="2.01832"/>
@@ -22153,7 +22140,7 @@
 			<Orientation y="1.11736"/>
 		</Entity>
 		<Entity uid="4070">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="170" z="1026"/>
 			<Orientation y="3.17176"/>
@@ -22195,7 +22182,7 @@
 			<Orientation y="5.52045"/>
 		</Entity>
 		<Entity uid="4077">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="142" z="1002"/>
 			<Orientation y="4.37581"/>
@@ -22225,7 +22212,7 @@
 			<Orientation y="6.15804"/>
 		</Entity>
 		<Entity uid="4082">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="134" z="1038"/>
 			<Orientation y="2.95467"/>
@@ -22237,7 +22224,7 @@
 			<Orientation y="0.55968"/>
 		</Entity>
 		<Entity uid="4084">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="126" z="1002"/>
 			<Orientation y="5.93673"/>
@@ -22255,7 +22242,7 @@
 			<Orientation y="4.23653"/>
 		</Entity>
 		<Entity uid="4087">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="150" z="1006"/>
 			<Orientation y="4.80271"/>
@@ -22339,7 +22326,7 @@
 			<Orientation y="1.11413"/>
 		</Entity>
 		<Entity uid="4101">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="146" z="1026"/>
 			<Orientation y="0.94574"/>
@@ -22381,7 +22368,7 @@
 			<Orientation y="3.07018"/>
 		</Entity>
 		<Entity uid="4108">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="222" z="970"/>
 			<Orientation y="2.90186"/>
@@ -22483,7 +22470,7 @@
 			<Orientation y="3.61605"/>
 		</Entity>
 		<Entity uid="4125">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="626" z="226"/>
 			<Orientation y="3.34047"/>
@@ -22531,7 +22518,7 @@
 			<Orientation y="5.44513"/>
 		</Entity>
 		<Entity uid="4133">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="598" z="250"/>
 			<Orientation y="4.2332"/>
@@ -22555,7 +22542,7 @@
 			<Orientation y="5.58584"/>
 		</Entity>
 		<Entity uid="4137">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1554" z="370"/>
 			<Orientation y="2.06682"/>
@@ -22591,13 +22578,13 @@
 			<Orientation y="2.67508"/>
 		</Entity>
 		<Entity uid="4143">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1558" z="366"/>
 			<Orientation y="1.87717"/>
 		</Entity>
 		<Entity uid="4144">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1578" z="394"/>
 			<Orientation y="0.38242"/>
@@ -22621,7 +22608,7 @@
 			<Orientation y="5.09763"/>
 		</Entity>
 		<Entity uid="4148">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1598" z="378"/>
 			<Orientation y="0.00428"/>
@@ -22669,25 +22656,25 @@
 			<Orientation y="4.40218"/>
 		</Entity>
 		<Entity uid="4156">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1590" z="394"/>
 			<Orientation y="2.92473"/>
 		</Entity>
 		<Entity uid="4157">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1586" z="374"/>
 			<Orientation y="3.53821"/>
 		</Entity>
 		<Entity uid="4158">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1590" z="374"/>
 			<Orientation y="2.59583"/>
 		</Entity>
 		<Entity uid="4159">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1582" z="386"/>
 			<Orientation y="5.24341"/>
@@ -22717,7 +22704,7 @@
 			<Orientation y="2.54914"/>
 		</Entity>
 		<Entity uid="4164">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="634" z="1142"/>
 			<Orientation y="6.11118"/>
@@ -22729,7 +22716,7 @@
 			<Orientation y="3.59388"/>
 		</Entity>
 		<Entity uid="4166">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="606" z="1146"/>
 			<Orientation y="2.2422"/>
@@ -22771,7 +22758,7 @@
 			<Orientation y="2.23552"/>
 		</Entity>
 		<Entity uid="4173">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="630" z="1190"/>
 			<Orientation y="3.58544"/>
@@ -22795,13 +22782,13 @@
 			<Orientation y="2.58846"/>
 		</Entity>
 		<Entity uid="4177">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="622" z="1206"/>
 			<Orientation y="5.08709"/>
 		</Entity>
 		<Entity uid="4178">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="614" z="1166"/>
 			<Orientation y="0.72153"/>
@@ -22819,7 +22806,7 @@
 			<Orientation y="2.04743"/>
 		</Entity>
 		<Entity uid="4181">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="622" z="1158"/>
 			<Orientation y="3.36655"/>
@@ -22879,19 +22866,19 @@
 			<Orientation y="1.51441"/>
 		</Entity>
 		<Entity uid="4191">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="618" z="1170"/>
 			<Orientation y="6.089"/>
 		</Entity>
 		<Entity uid="4192">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="618" z="1174"/>
 			<Orientation y="0.17162"/>
 		</Entity>
 		<Entity uid="4193">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="618" z="1182"/>
 			<Orientation y="1.5629"/>
@@ -22993,57 +22980,45 @@
 			<Orientation y="1.23218"/>
 		</Entity>
 		<Entity uid="4210">
-			<Template>structures/gaul_defense_tower</Template>
+			<Template>structures/gaul/defense_tower</Template>
 			<Player>4</Player>
 			<Position x="1333.27417" z="1279.40992"/>
 			<Orientation y="-3.47034"/>
 		</Entity>
 		<Entity uid="4211">
-			<Template>structures/gaul_defense_tower</Template>
+			<Template>structures/gaul/defense_tower</Template>
 			<Player>0</Player>
 			<Position x="719.89106" z="800.81379"/>
 			<Orientation y="1.50405"/>
 		</Entity>
-		<Entity uid="4212">
-			<Template>structures/gaul_defense_tower</Template>
-			<Player>0</Player>
-			<Position x="947.20087" z="1116.55811"/>
-			<Orientation y="0.95026"/>
-		</Entity>
 		<Entity uid="4214">
-			<Template>structures/gaul_defense_tower</Template>
+			<Template>structures/gaul/defense_tower</Template>
 			<Player>0</Player>
 			<Position x="635.75916" z="536.19196"/>
 			<Orientation y="-2.4783"/>
 		</Entity>
 		<Entity uid="4215">
-			<Template>structures/gaul_defense_tower</Template>
+			<Template>structures/gaul/defense_tower</Template>
 			<Player>0</Player>
 			<Position x="686.90674" z="491.50727"/>
 			<Orientation y="-0.9111"/>
 		</Entity>
-		<Entity uid="4216">
-			<Template>structures/gaul_defense_tower</Template>
-			<Player>0</Player>
-			<Position x="975.4184" z="781.24341"/>
-			<Orientation y="1.56374"/>
-		</Entity>
 		<Entity uid="4217">
-			<Template>structures/gaul_defense_tower</Template>
+			<Template>structures/gaul/defense_tower</Template>
 			<Player>0</Player>
 			<Position x="681.0995" z="527.15424"/>
 			<Orientation y="-8.76758"/>
 		</Entity>
 		<Entity uid="4218">
-			<Template>structures/gaul_defense_tower</Template>
+			<Template>structures/gaul/defense_tower</Template>
 			<Player>0</Player>
 			<Position x="753.51545" z="872.46015"/>
 			<Orientation y="-0.9222"/>
 		</Entity>
 		<Entity uid="4219">
 			<Template>structures/gaul/outpost</Template>
-			<Player>0</Player>
-			<Position x="667.54053" z="449.23353"/>
+			<Player>1</Player>
+			<Position x="665.98151" z="447.40864"/>
 			<Orientation y="0.07592"/>
 		</Entity>
 		<Entity uid="4221">
@@ -23063,12 +23038,6 @@
 			<Player>0</Player>
 			<Position x="550.71656" z="491.23774"/>
 			<Orientation y="-0.97384"/>
-		</Entity>
-		<Entity uid="4226">
-			<Template>structures/gaul/outpost</Template>
-			<Player>0</Player>
-			<Position x="922.46125" z="1124.3603"/>
-			<Orientation y="-0.04085"/>
 		</Entity>
 		<Entity uid="4227">
 			<Template>structures/gaul/outpost</Template>
@@ -26533,8 +26502,8 @@
 		<Entity uid="4897">
 			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
-			<Position x="345.99354" z="224.23945"/>
-			<Orientation y="-0.7448"/>
+			<Position x="407.28754" z="174.12446"/>
+			<Orientation y="0.92786"/>
 		</Entity>
 		<Entity uid="4898">
 			<Template>gaia/fish/generic</Template>
@@ -26581,7 +26550,7 @@
 		<Entity uid="4905">
 			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
-			<Position x="446.82831" z="378.33619"/>
+			<Position x="465.70185" z="340.6172"/>
 			<Orientation y="-1.41871"/>
 		</Entity>
 		<Entity uid="4906">
@@ -26827,7 +26796,7 @@
 		<Entity uid="4946">
 			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
-			<Position x="495.45295" z="444.30011"/>
+			<Position x="451.86664" z="257.34672"/>
 			<Orientation y="-2.58707"/>
 		</Entity>
 		<Entity uid="4947">
@@ -31113,343 +31082,343 @@
 			<Orientation y="-3.9534"/>
 		</Entity>
 		<Entity uid="5663">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1363.10267" z="675.60016"/>
 			<Orientation y="-2.43113"/>
 		</Entity>
 		<Entity uid="5664">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="777.98011" z="1619.7411"/>
 			<Orientation y="-3.10024"/>
 		</Entity>
 		<Entity uid="5665">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1692.07392" z="994.57978"/>
 			<Orientation y="1.17795"/>
 		</Entity>
 		<Entity uid="5666">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1300.67017" z="419.4499"/>
 			<Orientation y="-0.47628"/>
 		</Entity>
 		<Entity uid="5667">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1293.12159" z="576.77216"/>
 			<Orientation y="-3.58141"/>
 		</Entity>
 		<Entity uid="5668">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="296.93482" z="1097.0282"/>
 			<Orientation y="-4.08529"/>
 		</Entity>
 		<Entity uid="5669">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1338.84772" z="248.8672"/>
 			<Orientation y="-1.43647"/>
 		</Entity>
 		<Entity uid="5670">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1627.35981" z="643.79804"/>
 			<Orientation y="-3.9227"/>
 		</Entity>
 		<Entity uid="5671">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1628.3227" z="1178.35987"/>
 			<Orientation y="-2.01195"/>
 		</Entity>
 		<Entity uid="5672">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1171.9806" z="500.26056"/>
 			<Orientation y="0.92051"/>
 		</Entity>
 		<Entity uid="5673">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="600.43012" z="1051.49543"/>
 			<Orientation y="-3.40844"/>
 		</Entity>
 		<Entity uid="5674">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1507.65894" z="876.07209"/>
 			<Orientation y="-3.60111"/>
 		</Entity>
 		<Entity uid="5675">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1187.8354" z="1596.63727"/>
 			<Orientation y="-2.46204"/>
 		</Entity>
 		<Entity uid="5676">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="691.21283" z="1201.7381"/>
 			<Orientation y="1.25492"/>
 		</Entity>
 		<Entity uid="5677">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1207.87171" z="1531.04914"/>
 			<Orientation y="-3.26464"/>
 		</Entity>
 		<Entity uid="5678">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="673.07892" z="1594.50617"/>
 			<Orientation y="-1.92467"/>
 		</Entity>
 		<Entity uid="5679">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="730.62452" z="1260.91254"/>
 			<Orientation y="-2.39957"/>
 		</Entity>
 		<Entity uid="5680">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1314.27338" z="752.09687"/>
 			<Orientation y="-2.36204"/>
 		</Entity>
 		<Entity uid="5681">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1478.3567" z="752.58564"/>
 			<Orientation y="-2.2713"/>
 		</Entity>
 		<Entity uid="5682">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="728.55634" z="1459.91651"/>
 			<Orientation y="-0.60283"/>
 		</Entity>
 		<Entity uid="5683">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="760.99897" z="1341.97651"/>
 			<Orientation y="0.08913"/>
 		</Entity>
 		<Entity uid="5684">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1038.94312" z="69.90912"/>
 			<Orientation y="-1.24441"/>
 		</Entity>
 		<Entity uid="5685">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1338.27558" z="529.36628"/>
 			<Orientation y="1.13369"/>
 		</Entity>
 		<Entity uid="5686">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="380.8714" z="1200.96717"/>
 			<Orientation y="0.00788"/>
 		</Entity>
 		<Entity uid="5687">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="452.93854" z="1485.66437"/>
 			<Orientation y="-2.79406"/>
 		</Entity>
 		<Entity uid="5688">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1169.14863" z="1648.42927"/>
 			<Orientation y="-4.33176"/>
 		</Entity>
 		<Entity uid="5689">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1052.13465" z="97.71711"/>
 			<Orientation y="-2.91076"/>
 		</Entity>
 		<Entity uid="5690">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="358.32612" z="1290.4856"/>
 			<Orientation y="-0.49881"/>
 		</Entity>
 		<Entity uid="5691">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1181.3755" z="362.72736"/>
 			<Orientation y="0.4913"/>
 		</Entity>
 		<Entity uid="5692">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="990.50306" z="1494.63093"/>
 			<Orientation y="-1.1626"/>
 		</Entity>
 		<Entity uid="5693">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="582.45392" z="1150.53443"/>
 			<Orientation y="0.66088"/>
 		</Entity>
 		<Entity uid="5694">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="928.11689" z="281.60114"/>
 			<Orientation y="-0.22452"/>
 		</Entity>
 		<Entity uid="5695">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1208.36866" z="600.99756"/>
 			<Orientation y="-3.63332"/>
 		</Entity>
 		<Entity uid="5696">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="472.50251" z="1579.03406"/>
 			<Orientation y="-4.51244"/>
 		</Entity>
 		<Entity uid="5697">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1715.2334" z="1101.55903"/>
 			<Orientation y="0.8604"/>
 		</Entity>
 		<Entity uid="5698">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="196.77845" z="1200.25452"/>
 			<Orientation y="-1.7028"/>
 		</Entity>
 		<Entity uid="5699">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="701.23444" z="1196.21985"/>
 			<Orientation y="0.08593"/>
 		</Entity>
 		<Entity uid="5700">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="740.01655" z="1597.20075"/>
 			<Orientation y="-2.7759"/>
 		</Entity>
 		<Entity uid="5701">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="282.11396" z="882.56476"/>
 			<Orientation y="1.17211"/>
 		</Entity>
 		<Entity uid="5702">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="783.79859" z="328.36933"/>
 			<Orientation y="-2.50779"/>
 		</Entity>
 		<Entity uid="5703">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1585.32746" z="719.15094"/>
 			<Orientation y="0.17768"/>
 		</Entity>
 		<Entity uid="5704">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="447.62757" z="1500.70002"/>
 			<Orientation y="-4.4094"/>
 		</Entity>
 		<Entity uid="5705">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="689.09076" z="1133.1584"/>
 			<Orientation y="-1.45313"/>
 		</Entity>
 		<Entity uid="5706">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="334.90412" z="807.7439"/>
 			<Orientation y="-2.02427"/>
 		</Entity>
 		<Entity uid="5707">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="766.83301" z="1605.99708"/>
 			<Orientation y="-0.66631"/>
 		</Entity>
 		<Entity uid="5708">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="711.09913" z="262.05372"/>
 			<Orientation y="-1.95807"/>
 		</Entity>
 		<Entity uid="5709">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1265.85334" z="107.07294"/>
 			<Orientation y="-1.27744"/>
 		</Entity>
 		<Entity uid="5710">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="948.08777" z="1536.8509"/>
 			<Orientation y="-4.58361"/>
 		</Entity>
 		<Entity uid="5711">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1110.11426" z="731.27765"/>
 			<Orientation y="-1.08527"/>
 		</Entity>
 		<Entity uid="5712">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1378.02637" z="846.00525"/>
 			<Orientation y="-1.54827"/>
 		</Entity>
 		<Entity uid="5713">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="485.29932" z="1454.26288"/>
 			<Orientation y="1.0889"/>
 		</Entity>
 		<Entity uid="5714">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1347.08338" z="158.47181"/>
 			<Orientation y="-0.70791"/>
 		</Entity>
 		<Entity uid="5715">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="412.66236" z="862.62024"/>
 			<Orientation y="-1.66971"/>
 		</Entity>
 		<Entity uid="5716">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="408.71753" z="1559.05225"/>
 			<Orientation y="0.94872"/>
 		</Entity>
 		<Entity uid="5717">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="47.03052" z="741.28156"/>
 			<Orientation y="0.66216"/>
 		</Entity>
 		<Entity uid="5718">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1113.41456" z="1481.71552"/>
 			<Orientation y="-4.5277"/>
 		</Entity>
 		<Entity uid="5719">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1285.16498" z="1677.3108"/>
 			<Orientation y="1.17631"/>
@@ -33459,349 +33428,349 @@
 			<Orientation y="-0.92806"/>
 		</Entity>
 		<Entity uid="6057">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="717.81727" z="941.04645"/>
 			<Orientation y="-0.2666"/>
 		</Entity>
 		<Entity uid="6058">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="296.54575" z="443.46528"/>
 			<Orientation y="-0.2432"/>
 		</Entity>
 		<Entity uid="6059">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="663.15741" z="564.37873"/>
 			<Orientation y="-1.00545"/>
 		</Entity>
 		<Entity uid="6060">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="637.70984" z="874.33735"/>
 			<Orientation y="0.82947"/>
 		</Entity>
 		<Entity uid="6061">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1032.94916" z="779.12446"/>
 			<Orientation y="-2.16189"/>
 		</Entity>
 		<Entity uid="6062">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1065.60853" z="949.91602"/>
 			<Orientation y="-2.89669"/>
 		</Entity>
 		<Entity uid="6063">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="200.59241" z="484.4781"/>
 			<Orientation y="-0.17113"/>
 		</Entity>
 		<Entity uid="6064">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1463.92188" z="1154.75422"/>
 			<Orientation y="0.42556"/>
 		</Entity>
 		<Entity uid="6065">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1005.97913" z="820.89911"/>
 			<Orientation y="-0.75995"/>
 		</Entity>
 		<Entity uid="6066">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="760.11542" z="923.89106"/>
 			<Orientation y="0.03585"/>
 		</Entity>
 		<Entity uid="6067">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1104.72004" z="922.61933"/>
 			<Orientation y="0.55614"/>
 		</Entity>
 		<Entity uid="6068">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="313.0926" z="544.86524"/>
 			<Orientation y="0.32007"/>
 		</Entity>
 		<Entity uid="6069">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="767.96467" z="926.00196"/>
 			<Orientation y="-1.67348"/>
 		</Entity>
 		<Entity uid="6070">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1467.57215" z="1157.74903"/>
 			<Orientation y="-3.70443"/>
 		</Entity>
 		<Entity uid="6071">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1439.19306" z="1207.94153"/>
 			<Orientation y="1.4921"/>
 		</Entity>
 		<Entity uid="6072">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="670.77521" z="863.6493"/>
 			<Orientation y="0.17885"/>
 		</Entity>
 		<Entity uid="6073">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="318.01441" z="542.31128"/>
 			<Orientation y="-0.77558"/>
 		</Entity>
 		<Entity uid="6074">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1415.94751" z="1209.17548"/>
 			<Orientation y="-0.01113"/>
 		</Entity>
 		<Entity uid="6075">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="619.68293" z="888.44501"/>
 			<Orientation y="1.26952"/>
 		</Entity>
 		<Entity uid="6076">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1039.82557" z="783.81861"/>
 			<Orientation y="-3.08504"/>
 		</Entity>
 		<Entity uid="6077">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="685.45215" z="559.46338"/>
 			<Orientation y="-2.4355"/>
 		</Entity>
 		<Entity uid="6078">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1051.10425" z="880.4839"/>
 			<Orientation y="-3.64322"/>
 		</Entity>
 		<Entity uid="6079">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="748.72748" z="813.63398"/>
 			<Orientation y="1.46724"/>
 		</Entity>
 		<Entity uid="6080">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="306.09791" z="601.03052"/>
 			<Orientation y="-0.9702"/>
 		</Entity>
 		<Entity uid="6081">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="768.93879" z="888.38465"/>
 			<Orientation y="0.22976"/>
 		</Entity>
 		<Entity uid="6082">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="692.78895" z="562.5365"/>
 			<Orientation y="-3.77004"/>
 		</Entity>
 		<Entity uid="6083">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="723.67591" z="535.3224"/>
 			<Orientation y="1.37436"/>
 		</Entity>
 		<Entity uid="6084">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1395.06434" z="1249.15644"/>
 			<Orientation y="-0.72797"/>
 		</Entity>
 		<Entity uid="6085">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1005.87647" z="1115.04706"/>
 			<Orientation y="-1.13857"/>
 		</Entity>
 		<Entity uid="6086">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="284.07337" z="520.92304"/>
 			<Orientation y="-4.1097"/>
 		</Entity>
 		<Entity uid="6087">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1025.82953" z="1133.02186"/>
 			<Orientation y="-2.48865"/>
 		</Entity>
 		<Entity uid="6088">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1495.4878" z="1188.91126"/>
 			<Orientation y="0.50588"/>
 		</Entity>
 		<Entity uid="6089">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1062.91675" z="1230.20539"/>
 			<Orientation y="1.11986"/>
 		</Entity>
 		<Entity uid="6090">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="254.02552" z="416.70948"/>
 			<Orientation y="-2.84992"/>
 		</Entity>
 		<Entity uid="6091">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1067.4607" z="830.44312"/>
 			<Orientation y="-4.5519"/>
 		</Entity>
 		<Entity uid="6092">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="621.30524" z="891.64423"/>
 			<Orientation y="-2.95878"/>
 		</Entity>
 		<Entity uid="6093">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1405.9159" z="1284.67774"/>
 			<Orientation y="-2.4017"/>
 		</Entity>
 		<Entity uid="6094">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1037.21961" z="823.88685"/>
 			<Orientation y="-3.21523"/>
 		</Entity>
 		<Entity uid="6095">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1426.22815" z="1184.21827"/>
 			<Orientation y="0.77521"/>
 		</Entity>
 		<Entity uid="6096">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="194.96381" z="492.30341"/>
 			<Orientation y="-1.05118"/>
 		</Entity>
 		<Entity uid="6097">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="744.24885" z="537.84205"/>
 			<Orientation y="-2.76545"/>
 		</Entity>
 		<Entity uid="6098">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1394.20374" z="1122.27704"/>
 			<Orientation y="-3.76313"/>
 		</Entity>
 		<Entity uid="6099">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="735.50141" z="839.49024"/>
 			<Orientation y="-2.30718"/>
 		</Entity>
 		<Entity uid="6100">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="671.15375" z="924.77845"/>
 			<Orientation y="-0.08716"/>
 		</Entity>
 		<Entity uid="6101">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1461.92157" z="1236.80567"/>
 			<Orientation y="-3.08777"/>
 		</Entity>
 		<Entity uid="6102">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="603.25293" z="563.29072"/>
 			<Orientation y="-2.2764"/>
 		</Entity>
 		<Entity uid="6103">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="590.51673" z="462.93659"/>
 			<Orientation y="-0.46482"/>
 		</Entity>
 		<Entity uid="6104">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1053.32471" z="1174.14148"/>
 			<Orientation y="-3.44709"/>
 		</Entity>
 		<Entity uid="6105">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="942.84809" z="1146.06452"/>
 			<Orientation y="0.39823"/>
 		</Entity>
 		<Entity uid="6106">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="981.10169" z="1097.4704"/>
 			<Orientation y="-3.68288"/>
 		</Entity>
 		<Entity uid="6107">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="970.5536" z="797.4159"/>
 			<Orientation y="-3.82374"/>
 		</Entity>
 		<Entity uid="6108">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="613.15705" z="439.8112"/>
 			<Orientation y="-4.01307"/>
 		</Entity>
 		<Entity uid="6109">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="603.35041" z="438.35468"/>
 			<Orientation y="-3.65363"/>
 		</Entity>
 		<Entity uid="6110">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1028.61921" z="829.33814"/>
 			<Orientation y="-1.32264"/>
 		</Entity>
 		<Entity uid="6111">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="729.9214" z="950.62836"/>
 			<Orientation y="-2.02446"/>
 		</Entity>
 		<Entity uid="6112">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="563.6656" z="500.00611"/>
 			<Orientation y="0.134"/>
 		</Entity>
 		<Entity uid="6113">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="1013.41767" z="1172.87116"/>
 			<Orientation y="0.0552"/>
 		</Entity>
 		<Entity uid="6114">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="706.69422" z="573.4043"/>
 			<Orientation y="-0.12768"/>
@@ -40096,13 +40065,13 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7174">
-			<Template>units/gaul_support_healer_a</Template>
+			<Template>units/gaul/support_healer_a</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7175">
-			<Template>units/gaul_support_healer_e</Template>
+			<Template>units/gaul/support_healer_e</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40114,13 +40083,13 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7177">
-			<Template>units/gaul_support_healer_a</Template>
+			<Template>units/gaul/support_healer_a</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7178">
-			<Template>units/gaul_support_healer_e</Template>
+			<Template>units/gaul/support_healer_e</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40132,31 +40101,31 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7180">
-			<Template>units/gaul_support_healer_a</Template>
+			<Template>units/gaul/support_healer_a</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7181">
-			<Template>units/gaul_support_healer_b</Template>
+			<Template>units/gaul/support_healer_b</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7182">
-			<Template>units/gaul_support_healer_b</Template>
+			<Template>units/gaul/support_healer_b</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7183">
-			<Template>units/gaul_support_healer_e</Template>
+			<Template>units/gaul/support_healer_e</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7184">
-			<Template>units/gaul_support_healer_e</Template>
+			<Template>units/gaul/support_healer_e</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40168,13 +40137,13 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7186">
-			<Template>units/gaul_support_healer_b</Template>
+			<Template>units/gaul/support_healer_b</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7187">
-			<Template>units/gaul_support_healer_e</Template>
+			<Template>units/gaul/support_healer_e</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40186,31 +40155,31 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7189">
-			<Template>units/gaul_support_healer_b</Template>
+			<Template>units/gaul/support_healer_b</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7190">
-			<Template>units/gaul_support_healer_e</Template>
+			<Template>units/gaul/support_healer_e</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7191">
-			<Template>units/gaul_support_healer_b</Template>
+			<Template>units/gaul/support_healer_b</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7192">
-			<Template>units/gaul_support_healer_e</Template>
+			<Template>units/gaul/support_healer_e</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7193">
-			<Template>units/gaul_support_healer_e</Template>
+			<Template>units/gaul/support_healer_e</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40228,7 +40197,7 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7196">
-			<Template>units/gaul_support_healer_a</Template>
+			<Template>units/gaul/support_healer_a</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40240,13 +40209,13 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7198">
-			<Template>units/gaul_support_healer_a</Template>
+			<Template>units/gaul/support_healer_a</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7199">
-			<Template>units/gaul_support_healer_e</Template>
+			<Template>units/gaul/support_healer_e</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40264,7 +40233,7 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7202">
-			<Template>units/gaul_support_healer_a</Template>
+			<Template>units/gaul/support_healer_a</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40282,7 +40251,7 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7205">
-			<Template>units/gaul_support_healer_a</Template>
+			<Template>units/gaul/support_healer_a</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40294,13 +40263,13 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7207">
-			<Template>units/gaul_support_healer_a</Template>
+			<Template>units/gaul/support_healer_a</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7208">
-			<Template>units/gaul_support_healer_e</Template>
+			<Template>units/gaul/support_healer_e</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40312,13 +40281,13 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7210">
-			<Template>units/gaul_support_healer_a</Template>
+			<Template>units/gaul/support_healer_a</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7211">
-			<Template>units/gaul_support_healer_e</Template>
+			<Template>units/gaul/support_healer_e</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40336,7 +40305,7 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7214">
-			<Template>units/gaul_support_healer_a</Template>
+			<Template>units/gaul/support_healer_a</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40348,13 +40317,13 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7216">
-			<Template>units/gaul_support_healer_a</Template>
+			<Template>units/gaul/support_healer_a</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7217">
-			<Template>units/gaul_support_healer_e</Template>
+			<Template>units/gaul/support_healer_e</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40366,13 +40335,13 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7219">
-			<Template>units/gaul_support_healer_a</Template>
+			<Template>units/gaul/support_healer_a</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7220">
-			<Template>units/gaul_support_healer_b</Template>
+			<Template>units/gaul/support_healer_b</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40456,13 +40425,13 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7234">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7235">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40552,61 +40521,61 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7250">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7251">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7252">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7253">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7254">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7255">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7256">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7257">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7258">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7259">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40708,13 +40677,13 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7276">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7277">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40780,13 +40749,13 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7288">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7289">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -40906,43 +40875,43 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7309">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7310">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7311">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7312">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7313">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7314">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7315">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -41002,55 +40971,55 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7325">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7326">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7327">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7328">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7329">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7330">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7331">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7332">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7333">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -41098,13 +41067,13 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7341">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7342">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -41128,25 +41097,25 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7346">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7347">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7348">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7349">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -41158,19 +41127,19 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7351">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7352">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7353">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -41188,19 +41157,19 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7356">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7357">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7358">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -41218,7 +41187,7 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7361">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -41248,19 +41217,19 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7366">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7367">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7368">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -41278,13 +41247,13 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7371">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7372">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -41308,13 +41277,13 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7376">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7377">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -41338,13 +41307,13 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7381">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7382">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -41368,19 +41337,19 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7386">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7387">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7388">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -41398,19 +41367,19 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7391">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7392">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7393">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -41428,19 +41397,19 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7396">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7397">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7398">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -41458,25 +41427,25 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7401">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7402">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7403">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7404">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -41488,13 +41457,13 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7406">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7407">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -41518,19 +41487,19 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7411">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7412">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7413">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -41548,13 +41517,13 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7416">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7417">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -41578,31 +41547,31 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7421">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7422">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7423">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7424">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7425">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -41632,31 +41601,31 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7430">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7431">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7432">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7433">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7434">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -41674,13 +41643,13 @@
 			<Orientation y="-0.56897"/>
 		</Entity>
 		<Entity uid="7725">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7726">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -41704,19 +41673,19 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7730">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7731">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7732">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -41734,7 +41703,7 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7735">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -41764,13 +41733,13 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7745">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7746">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -41794,25 +41763,25 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7750">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7751">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7752">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7753">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -41824,13 +41793,13 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7755">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7756">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -41914,25 +41883,25 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7770">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7771">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7772">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7773">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -41944,7 +41913,7 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7775">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -41962,7 +41931,7 @@
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="7778">
-			<Template>units/gaul_champion_fanatic</Template>
+			<Template>units/gaul/champion_fanatic</Template>
 			<Player>0</Player>
 			<Position x="0" z="0"/>
 			<Orientation y="0"/>
@@ -42045,14 +42014,14 @@
 		<Entity uid="7871">
 			<Template>units/mace/infantry_archer_e</Template>
 			<Player>1</Player>
-			<Position x="292.95795" z="426.2776"/>
+			<Position x="293.03156" z="426.33378"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="49176"/>
 		</Entity>
 		<Entity uid="7872">
 			<Template>units/mace/hero_alexander_iii</Template>
 			<Player>1</Player>
-			<Position x="298.61963" z="422.68433"/>
+			<Position x="301.33927" z="422.10737"/>
 			<Orientation y="2.00635"/>
 			<Actor seed="41161"/>
 		</Entity>
@@ -42094,7 +42063,7 @@
 		<Entity uid="7878">
 			<Template>units/mace/champion_infantry_spearman_02</Template>
 			<Player>1</Player>
-			<Position x="307.6034" z="435.98151"/>
+			<Position x="307.66041" z="436.05408"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="18957"/>
 		</Entity>
@@ -42157,19 +42126,19 @@
 		<Entity uid="7892">
 			<Template>structures/brit/house</Template>
 			<Player>0</Player>
-			<Position x="591.68323" z="224.16095"/>
+			<Position x="592.69745" z="224.70292"/>
 			<Orientation y="-3.95331"/>
 			<Actor seed="58599"/>
 		</Entity>
 		<Entity uid="7893">
-			<Template>gaia/fish/generic_tuna</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="189.61487" z="525.84076"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="4845"/>
 		</Entity>
 		<Entity uid="7894">
-			<Template>gaia/fish/generic_tuna</Template>
+			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
 			<Position x="201.2393" z="522.02228"/>
 			<Orientation y="2.35621"/>
@@ -42213,7 +42182,7 @@
 		<Entity uid="7904">
 			<Template>structures/brit/house</Template>
 			<Player>0</Player>
-			<Position x="590.57447" z="207.37064"/>
+			<Position x="592.86768" z="208.0164"/>
 			<Orientation y="1.27323"/>
 			<Actor seed="59408"/>
 		</Entity>
@@ -42271,7 +42240,7 @@
 			<Actor seed="40115"/>
 		</Entity>
 		<Entity uid="7912">
-			<Template>structures/brit_wall_short</Template>
+			<Template>structures/brit/wall_short</Template>
 			<Player>4</Player>
 			<Position x="1469.07374" z="221.88166"/>
 			<Orientation y="7.00681"/>
@@ -42279,21 +42248,21 @@
 			<Actor seed="62725"/>
 		</Entity>
 		<Entity uid="7913">
-			<Template>structures/brit_wall_tower</Template>
+			<Template>structures/brit/wall_tower</Template>
 			<Player>4</Player>
 			<Position x="1404.4474" z="278.8046"/>
 			<Orientation y="2.40813"/>
 			<Actor seed="33049"/>
 		</Entity>
 		<Entity uid="7914">
-			<Template>structures/brit_wall_tower</Template>
+			<Template>structures/brit/wall_tower</Template>
 			<Player>4</Player>
 			<Position x="1435.5962" z="249.15769"/>
 			<Orientation y="2.40813"/>
 			<Actor seed="33049"/>
 		</Entity>
 		<Entity uid="7915">
-			<Template>structures/brit_wall_tower</Template>
+			<Template>structures/brit/wall_tower</Template>
 			<Player>4</Player>
 			<Position x="1397.34876" z="317.57734"/>
 			<Orientation y="2.40813"/>
@@ -42308,7 +42277,7 @@
 			<Actor seed="19197"/>
 		</Entity>
 		<Entity uid="7917">
-			<Template>structures/brit_wall_tower</Template>
+			<Template>structures/brit/wall_tower</Template>
 			<Player>4</Player>
 			<Position x="1432.2815" z="344.8773"/>
 			<Orientation y="2.40813"/>
@@ -42323,7 +42292,7 @@
 			<Actor seed="26812"/>
 		</Entity>
 		<Entity uid="7919">
-			<Template>structures/brit_wall_tower</Template>
+			<Template>structures/brit/wall_tower</Template>
 			<Player>4</Player>
 			<Position x="1468.53431" z="370.26215"/>
 			<Orientation y="2.40813"/>
@@ -42338,7 +42307,7 @@
 			<Actor seed="19197"/>
 		</Entity>
 		<Entity uid="7921">
-			<Template>structures/brit_wall_tower</Template>
+			<Template>structures/brit/wall_tower</Template>
 			<Player>4</Player>
 			<Position x="1508.05054" z="351.10065"/>
 			<Orientation y="1.94996"/>
@@ -42353,7 +42322,7 @@
 			<Actor seed="26812"/>
 		</Entity>
 		<Entity uid="7923">
-			<Template>structures/brit_wall_tower</Template>
+			<Template>structures/brit/wall_tower</Template>
 			<Player>4</Player>
 			<Position x="1532.16102" z="315.86738"/>
 			<Orientation y="-2.3773"/>
@@ -42408,13 +42377,6 @@
 			<Position x="1513.75733" z="288.36677"/>
 			<Orientation y="-3.28612"/>
 			<Actor seed="48168"/>
-		</Entity>
-		<Entity uid="7931">
-			<Template>structures/brit_kennel</Template>
-			<Player>4</Player>
-			<Position x="1445.0835" z="341.52451"/>
-			<Orientation y="2.35621"/>
-			<Actor seed="26070"/>
 		</Entity>
 		<Entity uid="7932">
 			<Template>structures/brit/range</Template>
@@ -42613,35 +42575,35 @@
 			<Actor seed="43250"/>
 		</Entity>
 		<Entity uid="7961">
-			<Template>units/brit_infantry_javelinist_a</Template>
+			<Template>units/brit/infantry_javelineer_a</Template>
 			<Player>4</Player>
 			<Position x="1488.64222" z="285.58658"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="13371"/>
 		</Entity>
 		<Entity uid="7962">
-			<Template>units/brit_infantry_javelinist_a</Template>
+			<Template>units/brit/infantry_javelineer_a</Template>
 			<Player>4</Player>
 			<Position x="1488.23487" z="281.3306"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="41755"/>
 		</Entity>
 		<Entity uid="7963">
-			<Template>units/brit_infantry_javelinist_a</Template>
+			<Template>units/brit/infantry_javelineer_a</Template>
 			<Player>4</Player>
 			<Position x="1484.29456" z="279.57721"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="32668"/>
 		</Entity>
 		<Entity uid="7964">
-			<Template>units/brit_infantry_javelinist_a</Template>
+			<Template>units/brit/infantry_javelineer_a</Template>
 			<Player>4</Player>
 			<Position x="1479.68433" z="277.44492"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="12711"/>
 		</Entity>
 		<Entity uid="7965">
-			<Template>units/brit_infantry_javelinist_a</Template>
+			<Template>units/brit/infantry_javelineer_a</Template>
 			<Player>4</Player>
 			<Position x="1478.64759" z="272.93345"/>
 			<Orientation y="2.35621"/>
@@ -42699,7 +42661,7 @@
 		<Entity uid="7980">
 			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
-			<Position x="528.32691" z="286.92966"/>
+			<Position x="519.461" z="297.40394"/>
 			<Orientation y="0.44858"/>
 			<Actor seed="4918"/>
 		</Entity>
@@ -42825,14 +42787,14 @@
 		<Entity uid="8015">
 			<Template>structures/gaul/house</Template>
 			<Player>0</Player>
-			<Position x="481.6641" z="143.56653"/>
-			<Orientation y="-0.7749"/>
+			<Position x="480.46985" z="143.66276"/>
+			<Orientation y="-0.95945"/>
 			<Actor seed="43426"/>
 		</Entity>
 		<Entity uid="8016">
 			<Template>structures/brit/house</Template>
 			<Player>0</Player>
-			<Position x="577.00434" z="217.49466"/>
+			<Position x="577.87024" z="224.87964"/>
 			<Orientation y="1.27323"/>
 			<Actor seed="59408"/>
 		</Entity>
@@ -42866,7 +42828,7 @@
 			<Actor seed="21402"/>
 		</Entity>
 		<Entity uid="8023">
-			<Template>structures/gaul_wall_tower</Template>
+			<Template>structures/gaul/wall_tower</Template>
 			<Player>2</Player>
 			<Position x="327.89084" z="1445.4004"/>
 			<Orientation y="2.35622"/>
@@ -42881,7 +42843,7 @@
 			<Actor seed="25097"/>
 		</Entity>
 		<Entity uid="8025">
-			<Template>structures/gaul_wall_tower</Template>
+			<Template>structures/gaul/wall_tower</Template>
 			<Player>2</Player>
 			<Position x="295.7404" z="1474.89283"/>
 			<Orientation y="2.35622"/>
@@ -42896,7 +42858,7 @@
 			<Actor seed="21402"/>
 		</Entity>
 		<Entity uid="8027">
-			<Template>structures/gaul_wall_tower</Template>
+			<Template>structures/gaul/wall_tower</Template>
 			<Player>2</Player>
 			<Position x="265.43781" z="1503.01307"/>
 			<Orientation y="2.35622"/>
@@ -42919,7 +42881,7 @@
 			<Actor seed="23941"/>
 		</Entity>
 		<Entity uid="8030">
-			<Template>structures/gaul_wall_tower</Template>
+			<Template>structures/gaul/wall_tower</Template>
 			<Player>2</Player>
 			<Position x="338.91852" z="1572.34864"/>
 			<Orientation y="2.35622"/>
@@ -42934,7 +42896,7 @@
 			<Actor seed="21402"/>
 		</Entity>
 		<Entity uid="8032">
-			<Template>structures/gaul_wall_tower</Template>
+			<Template>structures/gaul/wall_tower</Template>
 			<Player>2</Player>
 			<Position x="369.2211" z="1544.2284"/>
 			<Orientation y="2.35622"/>
@@ -42949,7 +42911,7 @@
 			<Actor seed="25097"/>
 		</Entity>
 		<Entity uid="8034">
-			<Template>structures/gaul_wall_tower</Template>
+			<Template>structures/gaul/wall_tower</Template>
 			<Player>2</Player>
 			<Position x="401.37156" z="1514.73597"/>
 			<Orientation y="2.35622"/>
@@ -42992,21 +42954,21 @@
 			<Actor seed="933"/>
 		</Entity>
 		<Entity uid="8040">
-			<Template>structures/gaul_defense_tower</Template>
+			<Template>structures/gaul/defense_tower</Template>
 			<Player>2</Player>
 			<Position x="391.97361" z="1508.0243"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="49959"/>
 		</Entity>
 		<Entity uid="8041">
-			<Template>structures/gaul_defense_tower</Template>
+			<Template>structures/gaul/defense_tower</Template>
 			<Player>2</Player>
 			<Position x="333.36542" z="1453.48157"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="31335"/>
 		</Entity>
 		<Entity uid="8042">
-			<Template>structures/gaul_defense_tower</Template>
+			<Template>structures/gaul/defense_tower</Template>
 			<Player>2</Player>
 			<Position x="371.44526" z="1441.771"/>
 			<Orientation y="2.35622"/>
@@ -43014,7 +42976,7 @@
 			<Actor seed="31335"/>
 		</Entity>
 		<Entity uid="8043">
-			<Template>structures/gaul_defense_tower</Template>
+			<Template>structures/gaul/defense_tower</Template>
 			<Player>2</Player>
 			<Position x="400.0457" z="1470.78431"/>
 			<Orientation y="2.35622"/>
@@ -43043,7 +43005,7 @@
 		</Entity>
 		<Entity uid="8047">
 			<Template>structures/gaul/farmstead</Template>
-			<Player>0</Player>
+			<Player>2</Player>
 			<Position x="427.20063" z="1542.141"/>
 			<Orientation y="-0.09241"/>
 			<Actor seed="60231"/>
@@ -43057,14 +43019,14 @@
 		</Entity>
 		<Entity uid="8049">
 			<Template>structures/gaul/corral</Template>
-			<Player>0</Player>
+			<Player>2</Player>
 			<Position x="386.73115" z="1568.7389"/>
 			<Orientation y="2.32584"/>
 			<Actor seed="38212"/>
 		</Entity>
 		<Entity uid="8050">
 			<Template>structures/gaul/storehouse</Template>
-			<Player>0</Player>
+			<Player>2</Player>
 			<Position x="303.71048" z="1427.65601"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="36742"/>
@@ -43205,8 +43167,8 @@
 		<Entity uid="8073">
 			<Template>units/gaul/infantry_javelineer_a</Template>
 			<Player>2</Player>
-			<Position x="1200.6305" z="1424.31971"/>
-			<Orientation y="2.35621"/>
+			<Position x="1178.88123" z="1494.19397"/>
+			<Orientation y="3.78928"/>
 			<Actor seed="20072"/>
 		</Entity>
 		<Entity uid="8074">
@@ -43434,7 +43396,7 @@
 			<Actor seed="14407"/>
 		</Entity>
 		<Entity uid="8107">
-			<Template>structures/gaul_defense_tower</Template>
+			<Template>structures/gaul/defense_tower</Template>
 			<Player>0</Player>
 			<Position x="633.26661" z="505.79218"/>
 			<Orientation y="-5.17426"/>
@@ -43481,27 +43443,6 @@
 			<Position x="1230.95667" z="1681.41272"/>
 			<Orientation y="1.6697"/>
 			<Actor seed="50982"/>
-		</Entity>
-		<Entity uid="8114">
-			<Template>units/brit/support_trader</Template>
-			<Player>4</Player>
-			<Position x="1493.09742" z="307.49421"/>
-			<Orientation y="2.35621"/>
-			<Actor seed="216"/>
-		</Entity>
-		<Entity uid="8115">
-			<Template>units/brit/support_trader</Template>
-			<Player>4</Player>
-			<Position x="1492.8097" z="299.25187"/>
-			<Orientation y="1.85448"/>
-			<Actor seed="11398"/>
-		</Entity>
-		<Entity uid="8116">
-			<Template>units/brit/support_trader</Template>
-			<Player>4</Player>
-			<Position x="1499.56116" z="308.27634"/>
-			<Orientation y="-2.9396"/>
-			<Actor seed="43802"/>
 		</Entity>
 		<Entity uid="8118">
 			<Template>actor|props/special/eyecandy/shipwreck_sail_boat_cut.xml</Template>
@@ -43552,14 +43493,14 @@
 			<Actor seed="4854"/>
 		</Entity>
 		<Entity uid="8125">
-			<Template>units/brit_ship_trireme</Template>
+			<Template>units/brit/ship_trireme</Template>
 			<Player>5</Player>
 			<Position x="1391.46216" z="1587.6012"/>
 			<Orientation y="-2.83332"/>
 			<Actor seed="49291"/>
 		</Entity>
 		<Entity uid="8126">
-			<Template>units/brit_ship_trireme</Template>
+			<Template>units/brit/ship_trireme</Template>
 			<Player>5</Player>
 			<Position x="1321.34876" z="1537.0326"/>
 			<Orientation y="-2.20542"/>
@@ -43568,19 +43509,12 @@
 		<Entity uid="8128">
 			<Template>structures/gaul/outpost</Template>
 			<Player>0</Player>
-			<Position x="763.10785" z="524.32178"/>
+			<Position x="744.12177" z="513.49543"/>
 			<Orientation y="-1.45449"/>
 			<Actor seed="4219"/>
 		</Entity>
-		<Entity uid="8129">
-			<Template>units/mace/siege_lithobolos_packed</Template>
-			<Player>0</Player>
-			<Position x="348.503" z="550.01343"/>
-			<Orientation y="0.97791"/>
-			<Actor seed="37692"/>
-		</Entity>
 		<Entity uid="8130">
-			<Template>units/mace_ship_trireme</Template>
+			<Template>units/mace/ship_trireme</Template>
 			<Player>1</Player>
 			<Position x="337.23917" z="427.64457"/>
 			<Orientation y="0.3351"/>
@@ -43726,34 +43660,6 @@
 			<Orientation y="-1.29438"/>
 			<Actor seed="4886"/>
 		</Entity>
-		<Entity uid="8155">
-			<Template>units/brit/support_trader</Template>
-			<Player>5</Player>
-			<Position x="1233.37146" z="1660.46241"/>
-			<Orientation y="2.35621"/>
-			<Actor seed="42001"/>
-		</Entity>
-		<Entity uid="8156">
-			<Template>units/brit/support_trader</Template>
-			<Player>5</Player>
-			<Position x="1238.19593" z="1663.23365"/>
-			<Orientation y="3.11136"/>
-			<Actor seed="52443"/>
-		</Entity>
-		<Entity uid="8157">
-			<Template>units/brit/support_trader</Template>
-			<Player>5</Player>
-			<Position x="1253.56897" z="1676.50501"/>
-			<Orientation y="-2.83346"/>
-			<Actor seed="57492"/>
-		</Entity>
-		<Entity uid="8158">
-			<Template>units/brit/support_trader</Template>
-			<Player>5</Player>
-			<Position x="1251.77259" z="1665.29981"/>
-			<Orientation y="-2.94487"/>
-			<Actor seed="8463"/>
-		</Entity>
 		<Entity uid="8159">
 			<Template>gaia/fish/generic</Template>
 			<Player>0</Player>
@@ -43768,27 +43674,6 @@
 			<Orientation y="-1.29438"/>
 			<Actor seed="4886"/>
 		</Entity>
-		<Entity uid="8161">
-			<Template>units/gaul_support_trader</Template>
-			<Player>2</Player>
-			<Position x="306.73816" z="1520.18726"/>
-			<Orientation y="2.35621"/>
-			<Actor seed="41116"/>
-		</Entity>
-		<Entity uid="8162">
-			<Template>units/gaul_support_trader</Template>
-			<Player>2</Player>
-			<Position x="303.85984" z="1510.91468"/>
-			<Orientation y="1.4"/>
-			<Actor seed="61653"/>
-		</Entity>
-		<Entity uid="8163">
-			<Template>units/gaul_support_trader</Template>
-			<Player>2</Player>
-			<Position x="313.62726" z="1527.0243"/>
-			<Orientation y="2.13285"/>
-			<Actor seed="31522"/>
-		</Entity>
 		<Entity uid="8164">
 			<Template>units/mace/ship_fishing</Template>
 			<Player>3</Player>
@@ -43799,7 +43684,7 @@
 		<Entity uid="8165">
 			<Template>units/mace/ship_fishing</Template>
 			<Player>3</Player>
-			<Position x="149.81476" z="491.56745"/>
+			<Position x="149.98121" z="491.63953"/>
 			<Orientation y="2.02396"/>
 			<Actor seed="54522"/>
 		</Entity>
@@ -43813,82 +43698,61 @@
 		<Entity uid="8167">
 			<Template>units/mace/ship_fishing</Template>
 			<Player>3</Player>
-			<Position x="169.92557" z="510.55417"/>
+			<Position x="169.96595" z="510.45038"/>
 			<Orientation y="1.7657"/>
 			<Actor seed="32593"/>
 		</Entity>
-		<Entity uid="8168">
-			<Template>units/brit/support_trader</Template>
-			<Player>6</Player>
-			<Position x="1316.40845" z="1637.95105"/>
-			<Orientation y="2.35621"/>
-			<Actor seed="47935"/>
-		</Entity>
-		<Entity uid="8169">
-			<Template>units/brit/support_trader</Template>
-			<Player>6</Player>
-			<Position x="1315.00306" z="1630.27149"/>
-			<Orientation y="2.35621"/>
-			<Actor seed="22220"/>
-		</Entity>
-		<Entity uid="8170">
-			<Template>units/brit/support_trader</Template>
-			<Player>6</Player>
-			<Position x="1308.22632" z="1641.99463"/>
-			<Orientation y="-0.00544"/>
-			<Actor seed="12064"/>
-		</Entity>
 		<Entity uid="8171">
-			<Template>structures/gaul_defense_tower</Template>
+			<Template>structures/gaul/defense_tower</Template>
 			<Player>4</Player>
 			<Position x="1378.86548" z="1191.68958"/>
 			<Orientation y="-2.17263"/>
 			<Actor seed="4210"/>
 		</Entity>
 		<Entity uid="8172">
-			<Template>structures/gaul_defense_tower</Template>
+			<Template>structures/gaul/defense_tower</Template>
 			<Player>4</Player>
 			<Position x="1377.5973" z="1126.63636"/>
 			<Orientation y="-2.27714"/>
 			<Actor seed="4210"/>
 		</Entity>
 		<Entity uid="8175">
-			<Template>units/cart_mechanical_siege_oxybeles_unpacked</Template>
+			<Template>units/cart/siege_oxybeles_unpacked</Template>
 			<Player>6</Player>
 			<Position x="1366.68445" z="1558.60035"/>
 			<Orientation y="3.87688"/>
 			<Actor seed="28189"/>
 		</Entity>
 		<Entity uid="8176">
-			<Template>units/cart_mechanical_siege_oxybeles_unpacked</Template>
+			<Template>units/cart/siege_oxybeles_unpacked</Template>
 			<Player>6</Player>
 			<Position x="1374.00501" z="1553.12989"/>
 			<Orientation y="3.87688"/>
 			<Actor seed="28189"/>
 		</Entity>
 		<Entity uid="8177">
-			<Template>units/cart_mechanical_siege_oxybeles_unpacked</Template>
+			<Template>units/cart/siege_oxybeles_unpacked</Template>
 			<Player>6</Player>
 			<Position x="1161.80457" z="1307.02369"/>
 			<Orientation y="3.87688"/>
 			<Actor seed="28189"/>
 		</Entity>
 		<Entity uid="8178">
-			<Template>units/cart_mechanical_siege_oxybeles_unpacked</Template>
+			<Template>units/cart/siege_oxybeles_unpacked</Template>
 			<Player>6</Player>
 			<Position x="1167.7422" z="1296.76441"/>
 			<Orientation y="3.64344"/>
 			<Actor seed="28189"/>
 		</Entity>
 		<Entity uid="8179">
-			<Template>units/cart_mechanical_siege_oxybeles_unpacked</Template>
+			<Template>units/cart/siege_oxybeles_unpacked</Template>
 			<Player>6</Player>
 			<Position x="1333.08741" z="1314.93006"/>
 			<Orientation y="-1.08408"/>
 			<Actor seed="28189"/>
 		</Entity>
 		<Entity uid="8180">
-			<Template>units/cart_mechanical_siege_oxybeles_unpacked</Template>
+			<Template>units/cart/siege_oxybeles_unpacked</Template>
 			<Player>6</Player>
 			<Position x="1332.83704" z="1306.89795"/>
 			<Orientation y="-1.54371"/>
@@ -43958,7 +43822,7 @@
 			<Actor seed="36622"/>
 		</Entity>
 		<Entity uid="8190">
-			<Template>units/brit_champion_infantry</Template>
+			<Template>units/brit/champion_infantry_swordsman</Template>
 			<Player>0</Player>
 			<Position x="755.14655" z="80.14684"/>
 			<Orientation y="1.8878"/>
@@ -44021,7 +43885,7 @@
 			<Actor seed="959"/>
 		</Entity>
 		<Entity uid="8199">
-			<Template>units/brit_champion_infantry</Template>
+			<Template>units/brit/champion_infantry_swordsman</Template>
 			<Player>0</Player>
 			<Position x="978.46167" z="490.35175"/>
 			<Orientation y="-2.60795"/>
@@ -44084,7 +43948,7 @@
 			<Actor seed="959"/>
 		</Entity>
 		<Entity uid="8208">
-			<Template>units/brit_champion_infantry</Template>
+			<Template>units/brit/champion_infantry_swordsman</Template>
 			<Player>0</Player>
 			<Position x="283.00974" z="723.34937"/>
 			<Orientation y="2.95212"/>
@@ -44105,7 +43969,7 @@
 			<Actor seed="5887"/>
 		</Entity>
 		<Entity uid="8211">
-			<Template>gaia/flora_tree_acacia</Template>
+			<Template>gaia/tree/acacia</Template>
 			<Player>0</Player>
 			<Position x="616.94715" z="430.7841"/>
 			<Orientation y="-6.77126"/>
@@ -44149,7 +44013,7 @@
 		<Entity uid="8217">
 			<Template>gaia/treasure/shipwreck_debris</Template>
 			<Player>0</Player>
-			<Position x="742.00922" z="793.12867"/>
+			<Position x="742.12977" z="793.01777"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="49238"/>
 		</Entity>
@@ -44168,49 +44032,49 @@
 			<Actor seed="59530"/>
 		</Entity>
 		<Entity uid="8220">
-			<Template>units/cart_mechanical_siege_oxybeles_unpacked</Template>
+			<Template>units/cart/siege_oxybeles_unpacked</Template>
 			<Player>6</Player>
 			<Position x="1333.10499" z="1639.45667"/>
 			<Orientation y="3.37774"/>
 			<Actor seed="28189"/>
 		</Entity>
 		<Entity uid="8221">
-			<Template>units/cart_mechanical_siege_oxybeles_unpacked</Template>
+			<Template>units/cart/siege_oxybeles_unpacked</Template>
 			<Player>6</Player>
 			<Position x="1325.8556" z="1642.24903"/>
 			<Orientation y="3.63143"/>
 			<Actor seed="28189"/>
 		</Entity>
 		<Entity uid="8222">
-			<Template>units/cart_mechanical_siege_oxybeles_unpacked</Template>
+			<Template>units/cart/siege_oxybeles_unpacked</Template>
 			<Player>6</Player>
 			<Position x="1315.27076" z="1622.11341"/>
 			<Orientation y="9.16018"/>
 			<Actor seed="28189"/>
 		</Entity>
 		<Entity uid="8223">
-			<Template>units/athen_mechanical_siege_lithobolos_unpacked</Template>
+			<Template>units/athen/siege_lithobolos_unpacked</Template>
 			<Player>6</Player>
 			<Position x="1292.52491" z="1607.10926"/>
 			<Orientation y="2.27164"/>
 			<Actor seed="12363"/>
 		</Entity>
 		<Entity uid="8224">
-			<Template>units/athen_mechanical_siege_lithobolos_unpacked</Template>
+			<Template>units/athen/siege_lithobolos_unpacked</Template>
 			<Player>6</Player>
 			<Position x="1261.15613" z="1574.22718"/>
 			<Orientation y="2.7458"/>
 			<Actor seed="50409"/>
 		</Entity>
 		<Entity uid="8226">
-			<Template>structures/gaul_defense_tower</Template>
+			<Template>structures/gaul/defense_tower</Template>
 			<Player>2</Player>
 			<Position x="337.39695" z="1531.75855"/>
 			<Orientation y="2.35622"/>
 			<Actor seed="49959"/>
 		</Entity>
 		<Entity uid="8227">
-			<Template>units/brit_champion_infantry</Template>
+			<Template>units/brit/champion_infantry_swordsman</Template>
 			<Player>0</Player>
 			<Position x="315.91102" z="730.8531"/>
 			<Orientation y="2.95212"/>
@@ -44280,7 +44144,7 @@
 			<Actor seed="37715"/>
 		</Entity>
 		<Entity uid="8237">
-			<Template>units/brit_champion_infantry</Template>
+			<Template>units/brit/champion_infantry_swordsman</Template>
 			<Player>0</Player>
 			<Position x="137.30286" z="746.77125"/>
 			<Orientation y="2.42025"/>
@@ -44399,7 +44263,7 @@
 			<Actor seed="959"/>
 		</Entity>
 		<Entity uid="8254">
-			<Template>units/brit_champion_infantry</Template>
+			<Template>units/brit/champion_infantry_swordsman</Template>
 			<Player>0</Player>
 			<Position x="161.85367" z="769.9242"/>
 			<Orientation y="2.42025"/>
@@ -44475,12 +44339,103 @@
 			<Orientation y="-0.36854"/>
 			<Actor seed="62750"/>
 		</Entity>
-		<Entity uid="8266">
-			<Template>units/athen/champion_infantry</Template>
-			<Player>7</Player>
-			<Position x="617.63526" z="73.59128"/>
-			<Orientation y="2.35621"/>
-			<Actor seed="58669"/>
+		<Entity uid="8290">
+			<Template>structures/brit/house</Template>
+			<Player>0</Player>
+			<Position x="578.45472" z="209.81321"/>
+			<Orientation y="-2.82444"/>
+			<Actor seed="59408"/>
+		</Entity>
+		<Entity uid="8291">
+			<Template>structures/brit/house</Template>
+			<Player>0</Player>
+			<Position x="500.1887" z="179.13523"/>
+			<Orientation y="-0.3537"/>
+			<Actor seed="59408"/>
+		</Entity>
+		<Entity uid="8292">
+			<Template>structures/brit/house</Template>
+			<Player>0</Player>
+			<Position x="514.08954" z="186.12473"/>
+			<Orientation y="-0.24437"/>
+			<Actor seed="59408"/>
+		</Entity>
+		<Entity uid="8293">
+			<Template>structures/brit/house</Template>
+			<Player>0</Player>
+			<Position x="523.47553" z="195.4351"/>
+			<Orientation y="-7.94211"/>
+			<Actor seed="59408"/>
+		</Entity>
+		<Entity uid="8294">
+			<Template>units/mace/champion_infantry_swordsman</Template>
+			<Player>1</Player>
+			<Position x="294.1485" z="420.6988"/>
+			<Orientation y="1.71016"/>
+			<Actor seed="3825"/>
+		</Entity>
+		<Entity uid="8295">
+			<Template>units/mace/champion_infantry_swordsman</Template>
+			<Player>1</Player>
+			<Position x="291.749" z="420.6688"/>
+			<Orientation y="1.69533"/>
+			<Actor seed="40560"/>
+		</Entity>
+		<Entity uid="8296">
+			<Template>units/mace/champion_infantry_swordsman</Template>
+			<Player>1</Player>
+			<Position x="291.50892" z="417.97571"/>
+			<Orientation y="1.05762"/>
+			<Actor seed="12544"/>
+		</Entity>
+		<Entity uid="8297">
+			<Template>units/mace/champion_infantry_swordsman</Template>
+			<Player>1</Player>
+			<Position x="294.41697" z="417.63538"/>
+			<Orientation y="0.72155"/>
+			<Actor seed="51776"/>
+		</Entity>
+		<Entity uid="8298">
+			<Template>units/mace/champion_infantry_swordsman</Template>
+			<Player>1</Player>
+			<Position x="297.26325" z="417.80005"/>
+			<Orientation y="1.73293"/>
+			<Actor seed="35683"/>
+		</Entity>
+		<Entity uid="8299">
+			<Template>units/mace/champion_infantry_swordsman</Template>
+			<Player>1</Player>
+			<Position x="297.27463" z="421.09635"/>
+			<Orientation y="1.69105"/>
+			<Actor seed="39414"/>
+		</Entity>
+		<Entity uid="8300">
+			<Template>structures/gaul/outpost</Template>
+			<Player>1</Player>
+			<Position x="576.25843" z="283.64182"/>
+			<Orientation y="-0.50728"/>
+			<Actor seed="4219"/>
+		</Entity>
+		<Entity uid="8303">
+			<Template>gaia/treasure/shipwreck</Template>
+			<Player>0</Player>
+			<Position x="362.82844" z="555.63465"/>
+			<Orientation y="2.42923"/>
+			<Actor seed="1169"/>
+		</Entity>
+		<Entity uid="8305">
+			<Template>structures/gaul/house</Template>
+			<Player>0</Player>
+			<Position x="468.71668" z="133.26297"/>
+			<Orientation y="-0.56084"/>
+			<Actor seed="43426"/>
+		</Entity>
+		<Entity uid="8306">
+			<Template>structures/gaul/house</Template>
+			<Player>0</Player>
+			<Position x="452.82828" z="144.64658"/>
+			<Orientation y="0.97506"/>
+			<Actor seed="43426"/>
 		</Entity>
 	</Entities>
 	<Paths/>
