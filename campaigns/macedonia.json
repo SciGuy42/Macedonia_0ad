@@ -27,6 +27,56 @@
 			"Map": "scenarios/Macedonia_5 - Magnesia.xml",
 			"MapType": "scenario",
 			"Requires": "Macedonia_4"
+		},
+		"Macedonia_6": {
+			"Map": "scenarios/Macedonia_6 - Mt Haemus.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_5"
+		},
+		"Macedonia_7": {
+			"Map": "scenarios/Macedonia_7 - Conquest of the Getae.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_6"
+		},
+		"Macedonia_8": {
+			"Map": "scenarios/Macedonia_8 - Pelium.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_7"
+		},
+		"Macedonia_9": {
+			"Map": "scenarios/Macedonia_9 - Ionian Rebels.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_8"
+		},
+		"Macedonia_10": {
+			"Map": "scenarios/Macedonia_10 - Sacking of Thebes.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_9"
+		},
+		"Macedonia_11": {
+			"Map": "scenarios/Macedonia_11 - The Five Satraps.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_10"
+		},
+		"Macedonia_12": {
+			"Map": "scenarios/Macedonia_12 - The Siege of Miletus.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_11"
+		},
+		"Macedonia_13": {
+			"Map": "scenarios/Macedonia_13 - Caria.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_12"
+		},
+		"Macedonia_14": {
+			"Map": "scenarios/Macedonia_14 - The Gates.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_13"
+		},
+		"Macedonia_15": {
+			"Map": "scenarios/Macedonia_15 - The Battle of Issus.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_14"
 		}
 	},
 	"Order": [
@@ -34,7 +84,17 @@
 		"Macedonia_2",
 		"Macedonia_3",
 		"Macedonia_4",
-		"Macedonia_5"
+		"Macedonia_5",
+		"Macedonia_6",
+		"Macedonia_7",
+		"Macedonia_8",
+		"Macedonia_9",
+		"Macedonia_10",
+		"Macedonia_11",
+		"Macedonia_12",
+		"Macedonia_13",
+		"Macedonia_14",
+		"Macedonia_15"
 	],
 	"ShowUnavailable": true
 }
