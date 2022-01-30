@@ -97,7 +97,7 @@ Trigger.prototype.FindClosestAmongSet = function(attacker,targets)
 		if (!TriggerHelper.IsInWorld(target))
 			continue;
 
-		let targetDistance = DistanceBetweenEntities(attacker, target);
+		let targetDistance = PositionHelper.DistanceBetweenEntities(attacker, target);
 		if (targetDistance < minDistance)
 		{
 			closestTarget = target;
@@ -123,7 +123,7 @@ Trigger.prototype.FindClosestTarget = function(attacker,target_player,target_cla
 		if (!TriggerHelper.IsInWorld(target))
 			continue;
 
-		let targetDistance = DistanceBetweenEntities(attacker, target);
+		let targetDistance = PositionHelper.DistanceBetweenEntities(attacker, target);
 		if (targetDistance < minDistance)
 		{
 			closestTarget = target;
@@ -199,7 +199,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			if (this.num_smith_captured == 1)
 				this.BlacksmithShipAttackRepeats();
 		}
-		else if (id.classesList.indexOf("Workshop") >= 0)
+		else if (id.classesList.indexOf("Arsenal") >= 0)
 		{
 			warn("shop captured");
 			this.DoAfterDelay(240 * 1000,"WorkshopShipAttack",null);
@@ -343,43 +343,59 @@ Trigger.prototype.IntervalActionSpawnPatrol = function(data)
 	//for which player
 	let owner = 5;
 	
-	let currentPop = QueryPlayerIDInterface(owner).GetPopulationCount();
-	if (currentPop > this.greekPopLimit)
-		return;
-	
-	//make list of fortress
-	let forts = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(owner), "Fortress").filter(TriggerHelper.IsInWorld);
-	if (forts.length < 1)
-		return;
-		
 	//make list of possible targets
-	let patrol_classes = ["Fortress","GarrisonTower","CivilCentre","Gates"];
+	let patrol_classes = ["Fortress","GarrisonTower","CivilCentre","Gates","Barracks"];
 	let patrol_entities = this.GetEntititesForClasses(4,patrol_classes);
-	warn("Found "+patrol_entities.length+" patrol targets.");
-	//patrol_entities = patrol_entities.concat(this.GetEntititesForClasses(4,patrol_classes));
+		warn("Found "+patrol_entities.length+" patrol targets.");
 	
-	let num_patrol = this.greekPatrolSize;
-	let spawn_site = pickRandom(forts);
-	
-	//calculate bonus, based on how many merchant ships are around
-	let traders = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(owner), "Trader+Ship").filter(TriggerHelper.IsInWorld);
-	let docks = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(owner), "Dock").filter(TriggerHelper.IsInWorld);
-	
-	if (docks.length > 0)
-		num_patrol += traders.length;
-	
-	let squad = [];
-	for (let i = 0; i < num_patrol; ++i)
+	let currentPop = QueryPlayerIDInterface(owner).GetPopulationCount();
+	if (currentPop < 100)
 	{
-		let units_i = TriggerHelper.SpawnUnits(spawn_site,pickRandom(this.greek_inf_templates),1,owner);
-		squad.push(units_i[0]);
+		
+		//make list of fortress
+		let forts = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(owner), "Fortress").filter(TriggerHelper.IsInWorld);
+		if (forts.length < 1)
+			return;
+			
+		let num_patrol = this.greekPatrolSize;
+		let spawn_site = pickRandom(forts);
+		
+		//calculate bonus, based on how many merchant ships are around
+		let traders = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(owner), "Trader+Ship").filter(TriggerHelper.IsInWorld);
+		let docks = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(owner), "Dock").filter(TriggerHelper.IsInWorld);
+		
+		if (docks.length > 0)
+			num_patrol += traders.length;
+		
+		let squad = [];
+		for (let i = 0; i < num_patrol; ++i)
+		{
+			let units_i = TriggerHelper.SpawnUnits(spawn_site,pickRandom(this.greek_inf_templates),1,owner);
+			squad.push(units_i[0]);
+		}
+		
+		//set formation
+		TriggerHelper.SetUnitFormation(owner, squad, pickRandom(unitFormations));
+
+		let patrol_k = 5;
+		this.PatrolOrder(squad,patrol_entities,patrol_k,owner);
 	}
 	
-	//set formation
-	TriggerHelper.SetUnitFormation(owner, squad, pickRandom(unitFormations));
-
-	let patrol_k = 5;
-	this.PatrolOrder(squad,patrol_entities,patrol_k,owner);
+	//check for idle troops
+	let units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(owner),"Infantry").filter(TriggerHelper.IsInWorld);
+	for (let u of units)
+	{
+		let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
+		if (cmpUnitAI)
+		{
+			if (cmpUnitAI.IsIdle()){
+				
+				//make patrol
+				let patrol_k = 5;
+				this.PatrolOrder([u],patrol_entities,patrol_k,owner);
+			}
+		}
+	}
 }
 
 Trigger.prototype.IntervalActionPlayerFour = function(data)
@@ -493,7 +509,7 @@ Trigger.prototype.IntervalActionTraders = function(data)
 		warn(uneval(traders_e));
 		
 		//make list of own markets
-		let markets_e = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(this.enemies[e]), "Market").filter(TriggerHelper.IsInWorld);
+		let markets_e = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(this.enemies[e]), "Trade").filter(TriggerHelper.IsInWorld);
 		warn("Markets from player " + this.enemies[e]);
 		warn(uneval(markets_e));
 		
@@ -503,27 +519,31 @@ Trigger.prototype.IntervalActionTraders = function(data)
 		{
 			if (this.enemies[e] != this.enemies[p])
 			{
-				let markets_p = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(this.enemies[p]), "Market").filter(TriggerHelper.IsInWorld);
+				let markets_p = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(this.enemies[p]), "Trade").filter(TriggerHelper.IsInWorld);
 		
 				markets_others = markets_others.concat(markets_p);
 			}
 		}
 		
-		//randomly assign each trader to a market of another player
-		for (let trader of traders_e)
+		if (markets_e.length > 0 && markets_others.length > 0)
 		{
-			let cmpUnitAI = Engine.QueryInterface(trader, IID_UnitAI);
-			if (cmpUnitAI) {
-				if (cmpUnitAI.IsIdle())
-				{
-					//warn("updating trade orders");
-					cmpUnitAI.UpdateWorkOrders("Trade");
-					cmpUnitAI.SetupTradeRoute(pickRandom(markets_others),markets_e[0],null,true);
-				}
-			}
-			
-		}
 		
+			//randomly assign each trader to a market of another player
+			for (let trader of traders_e)
+			{
+				let cmpUnitAI = Engine.QueryInterface(trader, IID_UnitAI);
+				if (cmpUnitAI) {
+					if (cmpUnitAI.IsIdle())
+					{
+						//warn("updating trade orders");
+						cmpUnitAI.UpdateWorkOrders("Trade");
+						cmpUnitAI.SetupTradeRoute(pickRandom(markets_others),markets_e[0],null,true);
+					}
+				}
+				
+			}
+		}
+			
 		//make list of sea traders
 		let traders_s = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(this.enemies[e]), "Trader+Ship").filter(TriggerHelper.IsInWorld);
 		//warn("Found "+traders_s.length+" ships for player "+this.enemies[e]);
@@ -597,7 +617,7 @@ Trigger.prototype.IntervalSpawnTradeShips = function(data)
 				if (docks_others.length > 0)
 				{
 					let spawn_dock = pickRandom(docks_e)
-					let trader = TriggerHelper.SpawnUnits(spawn_dock, "units/pers_ship_merchant",1,trader_ais[e]);
+					let trader = TriggerHelper.SpawnUnits(spawn_dock, "units/pers/ship_merchant",1,trader_ais[e]);
 					
 					warn("spawned trade ship");
 					
@@ -711,7 +731,7 @@ Trigger.prototype.DockPersianAttackRepeats = function(data)
 	let spawn_site = forts[0];
 	
 	let num_attackers = this.persDockAttackCounter + 4;
-	warn("Num attackers = "+num_attackers);
+	warn("Dock Num attackers = "+num_attackers);
 	let attackers = [];
 	
 	//spawn attackers
@@ -757,7 +777,9 @@ Trigger.prototype.CavalryTraderAttackRepeats = function(data)
 	//check if we have spawn point
 	let camps = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(owner),"Fortress").filter(TriggerHelper.IsInWorld);
 	
-	if (camps.length < 1)
+	let ccs = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(4),"CivilCentre").filter(TriggerHelper.IsInWorld);
+	
+	if (camps.length < 1 || ccs.length < 1)
 		return;
 		
 	//check if we have targets
@@ -777,7 +799,7 @@ Trigger.prototype.CavalryTraderAttackRepeats = function(data)
 	
 	//decide on size of attack
 	let currentPop = QueryPlayerIDInterface(1).GetPopulationCount();
-	let num_attackers = 3 + Math.floor(currentPop/20);
+	let num_attackers = 3 + Math.floor(currentPop/30);
 	warn("Num attackers = "+num_attackers);
 	let attackers = [];
 	
@@ -795,6 +817,7 @@ Trigger.prototype.CavalryTraderAttackRepeats = function(data)
 	}
 		
 	//spawn attackers
+	this.pers_cav_templates = ["units/pers/cavalry_spearman_b","units/pers/cavalry_javelineer_b","units/pers/champion_cavalry_archer","units/pers/cavalry_archer_a"];
 	for (let i = 0; i < num_attackers; ++i)
 	{
 		let units_i = TriggerHelper.SpawnUnits(spawn_site,pickRandom(this.pers_cav_templates),1,owner);
@@ -907,7 +930,8 @@ Trigger.prototype.RangeActionArrival = function(data)
 		let camps_p = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(3),"MercenaryCamp").filter(TriggerHelper.IsInWorld);
 		let markets_p = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(3),"Market").filter(TriggerHelper.IsInWorld);
 		let forts_p = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(3),"Fortress").filter(TriggerHelper.IsInWorld);
-		let workshops_p = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(3),"Workshop").filter(TriggerHelper.IsInWorld);
+		let workshops_p = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(3),"Arsenal").filter(TriggerHelper.IsInWorld);
+		warn("found "+workshops_p.length +" workshops");
 		
 		// Make it owned by the current player
 		var cmpOwnership = Engine.QueryInterface(camps_p[0], IID_Ownership);
@@ -924,7 +948,7 @@ Trigger.prototype.RangeActionArrival = function(data)
 		TriggerHelper.SpawnUnits(camps_p[0],"units/athen/champion_ranged",10,1);
 		TriggerHelper.SpawnUnits(forts_p[0],"units/athen/champion_ranged",10,1);
 		TriggerHelper.SpawnUnits(markets_p[0],"units/mace/support_trader",5,1);
-		TriggerHelper.SpawnUnits(markets_p[1],"units/mace/support_trader",5,3);
+		TriggerHelper.SpawnUnits(markets_p[1],"units/mace/support_trader",5,1);
 		
 		//start persian attacks
 		this.DoAfterDelay(4 * 60 * 1000,"DockPersianAttackRepeats",null);
@@ -966,6 +990,31 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	}
 }
 
+Trigger.prototype.StructureDecayCheck = function(data)
+{
+	//warn("structure decay check");
+	for (let p of [1])
+	{
+		let structs = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p),"Structure").filter(TriggerHelper.IsInWorld);
+
+		for (let s of structs)
+		{
+			var cmpCapt = Engine.QueryInterface(s, IID_Capturable);
+			if (cmpCapt)
+			{
+				let c_points = cmpCapt.GetCapturePoints();
+			
+				if (c_points[0] > 0)
+				{
+					c_points[p] += c_points[0];
+					c_points[0] = 0;
+					cmpCapt.SetCapturePoints(c_points);
+				}
+			}
+		}
+	}
+}
+
 {
 	let cmpTrigger = Engine.QueryInterface(SYSTEM_ENTITY, IID_Trigger);
 
@@ -985,7 +1034,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	
 	cmpTrigger.pers_inf_templates = TriggerHelper.GetTemplateNamesByClasses("Infantry+!Hero", "pers", undefined, undefined, true);
 	//cmpTrigger.pers_cav_templates = TriggerHelper.GetTemplateNamesByClasses("Cavalry+!Hero", "pers", undefined, undefined, true);
-	cmpTrigger.pers_cav_templates = ["units/pers_cavalry_spearman_b","units/pers_cavalry_javelinist_b","units/pers/champion_cavalry_archer","units/pers_cavalry_archer_a","units/sele_champion_cavalry"];
+	cmpTrigger.pers_cav_templates = ["units/pers/cavalry_spearman_b","units/pers/cavalry_javelineer_b","units/pers/champion_cavalry_archer","units/pers/cavalry_archer_a"];
 	
 	cmpTrigger.pers_siege_templates = TriggerHelper.GetTemplateNamesByClasses("Siege", "pers", undefined, undefined, true);
 	
@@ -1024,13 +1073,20 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		
 		if (p == 1)
 		{
-			cmpPlayer.AddStartingTechnology("phase_town_generic");
-			cmpPlayer.AddStartingTechnology("phase_city_generic");
+			cmpTechnologyManager.ResearchTechnology("phase_town_generic");
+			cmpTechnologyManager.ResearchTechnology("phase_city_generic");
+			cmpTechnologyManager.ResearchTechnology("health_regen_units");
+			cmpTechnologyManager.ResearchTechnology("hoplite_tradition");
+			cmpTechnologyManager.ResearchTechnology("parade_of_daphne");
+			cmpTechnologyManager.ResearchTechnology("unit_advanced");
+			cmpTechnologyManager.ResearchTechnology("unit_elite");
+			cmpTechnologyManager.ResearchTechnology("unlock_champion_infantry");
+			cmpTechnologyManager.ResearchTechnology("upgrade_rank_advanced_mercenary");
 		}
 		else 
 		{
-			cmpPlayer.AddStartingTechnology("phase_town_athen");
-			cmpPlayer.AddStartingTechnology("phase_city_athen");
+			cmpTechnologyManager.ResearchTechnology("phase_town_athen");
+			cmpTechnologyManager.ResearchTechnology("phase_city_athen");
 		}
 	}
 	
@@ -1077,6 +1133,12 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		"maxRange": 20,
 		"requiredComponent": IID_UnitAI, // only count units in range
 		"enabled": true
+	});
+	
+	cmpTrigger.RegisterTrigger("OnInterval", "StructureDecayCheck", {
+		"enabled": true,
+		"delay": 2 * 1000,
+		"interval": 2 * 1000,
 	});
 	
 	/*cmpTrigger.RegisterTrigger("OnInterval", "IntervalUnitCheck", {

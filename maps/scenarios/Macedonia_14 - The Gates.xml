@@ -32,9 +32,9 @@
 		</Postproc>
 	</Environment>
 	<Camera>
-		<Position x="434.575" y="43.5507" z="58.7758"/>
-		<Rotation angle="-0.629301"/>
-		<Declination angle="0.610866"/>
+		<Position x="518.743" y="112.907" z="564.721"/>
+		<Rotation angle="0"/>
+		<Declination angle="0.610865"/>
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
@@ -46,6 +46,7 @@
   "Name": "Macedonia 14 - The Gates (333 BC)",
   "Nomad": false,
   "PlayerData": [
+    "",
     {
       "Civ": "mace",
       "Color": {
@@ -75,16 +76,20 @@
     },
     {
       "Civ": "pers",
+      "Color": {
+        "b": 20,
+        "g": 20,
+        "r": 150
+      },
       "Name": "Persian Empire",
       "Team": 1
     },
     {
-      "AI": "petra",
       "Civ": "pers",
       "Color": {
-        "b": 31,
-        "g": 180,
-        "r": 86
+        "b": 0,
+        "g": 165,
+        "r": 255
       },
       "Name": "Persian Camp",
       "Team": 1
@@ -3061,7 +3066,7 @@
 			<Orientation y="-4.20124"/>
 		</Entity>
 		<Entity uid="756">
-			<Template>structures/rome_temple_vesta</Template>
+			<Template>structures/rome/temple_vesta</Template>
 			<Player>1</Player>
 			<Position x="525.8943" z="705.31476"/>
 			<Orientation y="0.52701"/>
@@ -3124,84 +3129,84 @@
 			<Actor seed="50689"/>
 		</Entity>
 		<Entity uid="784">
-			<Template>units/pers_infantry_archer_a</Template>
+			<Template>units/pers/infantry_archer_a</Template>
 			<Player>2</Player>
 			<Position x="311.81269" z="98.95154"/>
 			<Orientation y="-0.78745"/>
 			<Actor seed="37259"/>
 		</Entity>
 		<Entity uid="785">
-			<Template>units/pers_infantry_archer_a</Template>
+			<Template>units/pers/infantry_archer_a</Template>
 			<Player>2</Player>
 			<Position x="307.49698" z="97.99405"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="18784"/>
 		</Entity>
 		<Entity uid="786">
-			<Template>units/pers_infantry_archer_a</Template>
+			<Template>units/pers/infantry_archer_a</Template>
 			<Player>2</Player>
 			<Position x="305.25004" z="100.64446"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="29775"/>
 		</Entity>
 		<Entity uid="787">
-			<Template>units/pers_infantry_archer_a</Template>
+			<Template>units/pers/infantry_archer_a</Template>
 			<Player>2</Player>
 			<Position x="307.50956" z="102.25612"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="7043"/>
 		</Entity>
 		<Entity uid="788">
-			<Template>units/pers_infantry_archer_a</Template>
+			<Template>units/pers/infantry_archer_a</Template>
 			<Player>2</Player>
 			<Position x="302.07477" z="99.46459"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="61807"/>
 		</Entity>
 		<Entity uid="789">
-			<Template>units/pers_infantry_archer_a</Template>
+			<Template>units/pers/infantry_archer_a</Template>
 			<Player>2</Player>
 			<Position x="304.93274" z="96.46061"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="22980"/>
 		</Entity>
 		<Entity uid="790">
-			<Template>units/pers_infantry_spearman_a</Template>
+			<Template>units/pers/infantry_spearman_a</Template>
 			<Player>2</Player>
 			<Position x="301.33967" z="107.94066"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="59710"/>
 		</Entity>
 		<Entity uid="791">
-			<Template>units/pers_infantry_spearman_a</Template>
+			<Template>units/pers/infantry_spearman_a</Template>
 			<Player>2</Player>
 			<Position x="298.87128" z="106.23148"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="32847"/>
 		</Entity>
 		<Entity uid="792">
-			<Template>units/pers_infantry_spearman_a</Template>
+			<Template>units/pers/infantry_spearman_a</Template>
 			<Player>2</Player>
 			<Position x="296.38944" z="104.68265"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="60193"/>
 		</Entity>
 		<Entity uid="793">
-			<Template>units/pers_infantry_spearman_a</Template>
+			<Template>units/pers/infantry_spearman_a</Template>
 			<Player>2</Player>
 			<Position x="299.09482" z="110.18017"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="56982"/>
 		</Entity>
 		<Entity uid="794">
-			<Template>units/pers_infantry_spearman_a</Template>
+			<Template>units/pers/infantry_spearman_a</Template>
 			<Player>2</Player>
 			<Position x="296.71427" z="108.68557"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="37333"/>
 		</Entity>
 		<Entity uid="795">
-			<Template>units/pers_infantry_spearman_a</Template>
+			<Template>units/pers/infantry_spearman_a</Template>
 			<Player>2</Player>
 			<Position x="294.16187" z="107.20829"/>
 			<Orientation y="2.35621"/>
@@ -3376,42 +3381,42 @@
 			<Actor seed="1411"/>
 		</Entity>
 		<Entity uid="840">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="498.04114" z="224.60148"/>
 			<Orientation y="4.98317"/>
 			<Actor seed="57312"/>
 		</Entity>
 		<Entity uid="841">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="499.13645" z="227.80729"/>
 			<Orientation y="4.98317"/>
 			<Actor seed="40078"/>
 		</Entity>
 		<Entity uid="842">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="500.26484" z="230.9935"/>
 			<Orientation y="4.98317"/>
 			<Actor seed="27424"/>
 		</Entity>
 		<Entity uid="843">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="501.51621" z="234.18659"/>
 			<Orientation y="4.98317"/>
 			<Actor seed="36629"/>
 		</Entity>
 		<Entity uid="844">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="502.68381" z="237.91083"/>
 			<Orientation y="4.98317"/>
 			<Actor seed="3133"/>
 		</Entity>
 		<Entity uid="845">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="503.25403" z="241.4546"/>
 			<Orientation y="4.98317"/>
@@ -3495,42 +3500,42 @@
 			<Actor seed="1411"/>
 		</Entity>
 		<Entity uid="857">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="524.40583" z="192.84498"/>
 			<Orientation y="5.12676"/>
 			<Actor seed="57312"/>
 		</Entity>
 		<Entity uid="858">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="525.94855" z="195.86106"/>
 			<Orientation y="5.12676"/>
 			<Actor seed="40078"/>
 		</Entity>
 		<Entity uid="859">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="527.52131" z="198.85303"/>
 			<Orientation y="5.12676"/>
 			<Actor seed="27424"/>
 		</Entity>
 		<Entity uid="860">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="529.21668" z="201.83417"/>
 			<Orientation y="5.12676"/>
 			<Actor seed="36629"/>
 		</Entity>
 		<Entity uid="861">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="530.90516" z="205.353"/>
 			<Orientation y="5.12676"/>
 			<Actor seed="3133"/>
 		</Entity>
 		<Entity uid="862">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="531.97663" z="208.7787"/>
 			<Orientation y="5.12676"/>
@@ -3614,42 +3619,42 @@
 			<Actor seed="1411"/>
 		</Entity>
 		<Entity uid="891">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="533.78632" z="140.80558"/>
 			<Orientation y="-0.17399"/>
 			<Actor seed="57312"/>
 		</Entity>
 		<Entity uid="892">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="537.1515" z="141.19611"/>
 			<Orientation y="-0.17399"/>
 			<Actor seed="40078"/>
 		</Entity>
 		<Entity uid="893">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="540.51325" z="141.54834"/>
 			<Orientation y="-0.17399"/>
 			<Actor seed="27424"/>
 		</Entity>
 		<Entity uid="894">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="543.93409" z="141.79255"/>
 			<Orientation y="-0.17399"/>
 			<Actor seed="36629"/>
 		</Entity>
 		<Entity uid="895">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="547.79834" z="142.34086"/>
 			<Orientation y="-0.17399"/>
 			<Actor seed="3133"/>
 		</Entity>
 		<Entity uid="896">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="551.24268" z="143.35077"/>
 			<Orientation y="-0.17399"/>
@@ -3733,42 +3738,42 @@
 			<Actor seed="1411"/>
 		</Entity>
 		<Entity uid="908">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="489.18982" z="97.64058"/>
 			<Orientation y="-0.04252"/>
 			<Actor seed="57312"/>
 		</Entity>
 		<Entity uid="909">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="492.5771" z="97.5866"/>
 			<Orientation y="-0.04252"/>
 			<Actor seed="40078"/>
 		</Entity>
 		<Entity uid="910">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="495.956" z="97.49506"/>
 			<Orientation y="-0.04252"/>
 			<Actor seed="27424"/>
 		</Entity>
 		<Entity uid="911">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="499.37925" z="97.28867"/>
 			<Orientation y="-0.04252"/>
 			<Actor seed="36629"/>
 		</Entity>
 		<Entity uid="912">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="503.28205" z="97.32567"/>
 			<Orientation y="-0.04252"/>
 			<Actor seed="3133"/>
 		</Entity>
 		<Entity uid="913">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="506.82917" z="97.87534"/>
 			<Orientation y="-0.04252"/>
@@ -3852,42 +3857,42 @@
 			<Actor seed="1411"/>
 		</Entity>
 		<Entity uid="925">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="455.69907" z="83.2746"/>
 			<Orientation y="7.2186"/>
 			<Actor seed="57312"/>
 		</Entity>
 		<Entity uid="926">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="457.54694" z="80.43522"/>
 			<Orientation y="7.2186"/>
 			<Actor seed="40078"/>
 		</Entity>
 		<Entity uid="927">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="459.35898" z="77.58182"/>
 			<Orientation y="7.2186"/>
 			<Actor seed="27424"/>
 		</Entity>
 		<Entity uid="928">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="461.1006" z="74.6274"/>
 			<Orientation y="7.2186"/>
 			<Actor seed="36629"/>
 		</Entity>
 		<Entity uid="929">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="463.31196" z="71.41135"/>
 			<Orientation y="7.2186"/>
 			<Actor seed="3133"/>
 		</Entity>
 		<Entity uid="930">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="465.7497" z="68.7768"/>
 			<Orientation y="7.2186"/>
@@ -3971,42 +3976,42 @@
 			<Actor seed="1411"/>
 		</Entity>
 		<Entity uid="942">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="409.09665" z="81.5424"/>
 			<Orientation y="7.2186"/>
 			<Actor seed="57312"/>
 		</Entity>
 		<Entity uid="943">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="410.94452" z="78.70302"/>
 			<Orientation y="7.2186"/>
 			<Actor seed="40078"/>
 		</Entity>
 		<Entity uid="944">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="412.75657" z="75.84961"/>
 			<Orientation y="7.2186"/>
 			<Actor seed="27424"/>
 		</Entity>
 		<Entity uid="945">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="414.49817" z="72.89521"/>
 			<Orientation y="7.2186"/>
 			<Actor seed="36629"/>
 		</Entity>
 		<Entity uid="946">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="416.70954" z="69.67914"/>
 			<Orientation y="7.2186"/>
 			<Actor seed="3133"/>
 		</Entity>
 		<Entity uid="947">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="419.14728" z="67.04461"/>
 			<Orientation y="7.2186"/>
@@ -4090,42 +4095,42 @@
 			<Actor seed="1411"/>
 		</Entity>
 		<Entity uid="959">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="344.96586" z="71.3016"/>
 			<Orientation y="7.2186"/>
 			<Actor seed="57312"/>
 		</Entity>
 		<Entity uid="960">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="346.81373" z="68.46222"/>
 			<Orientation y="7.2186"/>
 			<Actor seed="40078"/>
 		</Entity>
 		<Entity uid="961">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="348.62577" z="65.60882"/>
 			<Orientation y="7.2186"/>
 			<Actor seed="27424"/>
 		</Entity>
 		<Entity uid="962">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="350.36738" z="62.65441"/>
 			<Orientation y="7.2186"/>
 			<Actor seed="36629"/>
 		</Entity>
 		<Entity uid="963">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="352.57874" z="59.43834"/>
 			<Orientation y="7.2186"/>
 			<Actor seed="3133"/>
 		</Entity>
 		<Entity uid="964">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="355.01648" z="56.80381"/>
 			<Orientation y="7.2186"/>
@@ -4209,42 +4214,42 @@
 			<Actor seed="1411"/>
 		</Entity>
 		<Entity uid="976">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="318.2776" z="77.0448"/>
 			<Orientation y="7.2186"/>
 			<Actor seed="57312"/>
 		</Entity>
 		<Entity uid="977">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="320.12546" z="74.20543"/>
 			<Orientation y="7.2186"/>
 			<Actor seed="40078"/>
 		</Entity>
 		<Entity uid="978">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="321.9375" z="71.35203"/>
 			<Orientation y="7.2186"/>
 			<Actor seed="27424"/>
 		</Entity>
 		<Entity uid="979">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="323.67911" z="68.39762"/>
 			<Orientation y="7.2186"/>
 			<Actor seed="36629"/>
 		</Entity>
 		<Entity uid="980">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="325.89048" z="65.18155"/>
 			<Orientation y="7.2186"/>
 			<Actor seed="3133"/>
 		</Entity>
 		<Entity uid="981">
-			<Template>units/pers_kardakes_hoplite</Template>
+			<Template>units/pers/kardakes_hoplite</Template>
 			<Player>3</Player>
 			<Position x="328.32822" z="62.54702"/>
 			<Orientation y="7.2186"/>

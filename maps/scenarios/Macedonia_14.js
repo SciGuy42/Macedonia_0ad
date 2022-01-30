@@ -82,7 +82,7 @@ Trigger.prototype.FindClosestTarget = function(attacker,target_player,target_cla
 		if (!TriggerHelper.IsInWorld(target))
 			continue;
 
-		let targetDistance = DistanceBetweenEntities(attacker, target);
+		let targetDistance = PositionHelper.DistanceBetweenEntities(attacker, target);
 		if (targetDistance < minDistance)
 		{
 			closestTarget = target;
@@ -694,13 +694,13 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	
 	
 	//persian soldier types
-	cmpTrigger.pers_inf_templates = ["units/pers/arstibara", "units/pers/champion_infantry", "units/pers_infantry_archer_a","units/pers_infantry_javelinist_a","units/pers_infantry_spearman_b","units/pers_infantry_spearman_a","units/pers_infantry_spearman_e","units/pers_kardakes_hoplite", "units/pers/kardakes_skirmisher"];
-	cmpTrigger.pers_cav_templates = ["units/pers_cavalry_archer_a", "units/pers_cavalry_archer_b","units/pers_cavalry_javelinist_a","units/pers_cavalry_spearman_a","units/pers_cavalry_swordsman_a","units/pers/champion_cavalry", "units/pers/champion_cavalry_archer"];
+	cmpTrigger.pers_inf_templates = ["units/pers/arstibara", "units/pers/champion_infantry", "units/pers/infantry_archer_a","units/pers/infantry_javelineer_a","units/pers/infantry_spearman_b","units/pers/infantry_spearman_a","units/pers/infantry_spearman_e","units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher"];
+	cmpTrigger.pers_cav_templates = ["units/pers/cavalry_archer_a", "units/pers/cavalry_archer_b","units/pers/cavalry_javelineer_a","units/pers/cavalry_spearman_a","units/pers/cavalry_axeman_a","units/pers/champion_cavalry", "units/pers/champion_cavalry_archer"];
 	cmpTrigger.pers_ele_templates = TriggerHelper.GetTemplateNamesByClasses("Champion+Elephant+!Hero", "pers", undefined, undefined, true);
-	cmpTrigger.pers_elite_templates = ["units/pers/arstibara","units/pers/champion_infantry","units/pers_kardakes_hoplite", "units/pers/kardakes_skirmisher","units/pers_infantry_archer_e","units/pers_cavalry_archer_e","units/pers/champion_cavalry_archer","units/pers/champion_cavalry","units/pers_cavalry_swordsman_e"];
+	cmpTrigger.pers_elite_templates = ["units/pers/arstibara","units/pers/champion_infantry","units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher","units/pers/infantry_archer_e","units/pers/cavalry_archer_e","units/pers/champion_cavalry_archer","units/pers/champion_cavalry","units/pers/cavalry_axeman_e"];
 	
 	//macedonian
-	cmpTrigger.mace_inf_templates = ["units/mace/champion_infantry_spearman", "units/mace/champion_infantry_spearman_02","units/mace/infantry_archer_b","units/mace/infantry_javelineer_b","units/mace/infantry_pikeman_a","units/mace_infantry_slinger_b","units/mace_thorakites", "units/mace_thureophoros","units/athen/champion_ranged","units/athen/champion_marine"];
+	cmpTrigger.mace_inf_templates = ["units/mace/champion_infantry_spearman", "units/mace/champion_infantry_crossbowman","units/mace/champion_infantry_spearman_02","units/mace/infantry_archer_b","units/mace/infantry_javelineer_b","units/mace/infantry_pikeman_a","units/mace/infantry_pikeman_b","units/mace/infantry_slinger_b","units/merc_thorakites", "units/merc_thureophoros","units/athen/champion_ranged","units/athen/champion_marine","units/athen/champion_infantry"];
 	cmpTrigger.mace_cav_templates = ["units/mace/champion_cavalry", "units/mace/cavalry_spearman_a","units/mace/cavalry_javelineer_a"];
 	cmpTrigger.mace_siege_templates = ["units/mace/siege_oxybeles_packed"];
 	
@@ -727,8 +727,8 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
 		
-		cmpPlayer.AddStartingTechnology("phase_town_generic");
-		cmpPlayer.AddStartingTechnology("phase_city_generic");
+		cmpTechnologyManager.ResearchTechnology("phase_town_generic");
+		cmpTechnologyManager.ResearchTechnology("phase_city_generic");
 		
 	}
 
