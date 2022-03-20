@@ -23,32 +23,54 @@ var unitFormations = [
 	"special/formations/column_closed"
 ];
 
+
 var disabledTemplates = (civ) => [
 	// Economic structures
-	"structures/" + civ + "_corral",
-	"structures/" + civ + "_farmstead",
-	"structures/" + civ + "_field",
-	"structures/" + civ + "_storehouse",
-	"structures/" + civ + "_rotarymill",
-	"structures/" + civ + "_market",
+	"structures/" + civ + "/corral",
+	"structures/" + civ + "/farmstead",
+	"structures/" + civ + "/field",
+	"structures/" + civ + "/storehouse",
+	"structures/" + civ + "/rotarymill",
+	"structures/" + civ + "/market",
+	"structures/" + civ + "/house",
+	
+	//military
+	"structures/" + civ + "/barracks",
+	"structures/" + civ + "/apartment",
+	"structures/" + civ + "/defense_tower",
+	"structures/" + civ + "/tower_bolt",
+	"structures/" + civ + "/tower_artilery",
+	"structures/" + civ + "/elephant_stable",
+	"structures/" + civ + "/forge",
+	"structures/" + civ + "/arsenal",
+	"structures/" + civ + "/fortress",
+	"structures/" + civ + "/range",
+	"structures/" + civ + "/stable",
+	"structures/" + civ + "/temple",
+	"structures/" + civ + "/outpost",
 	
 	// Expansions
-	"structures/" + civ + "_civil_centre",
-	"structures/" + civ + "_military_colony",
+	"structures/" + civ + "/civil_centre",
+	"structures/" + civ + "/military_colony",
 
 	// Walls
-	"structures/" + civ + "_wallset_stone",
+	"structures/" + civ + "/wallset_stone",
 	"structures/rome_wallset_siege",
 	"other/wallset_palisade",
 
 	// Shoreline
-	"structures/" + civ + "_dock",
+	"structures/" + civ + "/dock",
 	"structures/brit/crannog",
-	"structures/cart_super_dock",
-	"structures/ptol_lighthouse",
+	"structures/cart/super_dock",
+	"structures/ptol/lighthouse",
 	
 	//villagers
-	"units/" + civ + "_support_female_citizen"
+	"units/" + civ + "/support_female_citizen",
+	
+	//embasies
+	"structures/cart/embassy_celtic",
+	"structures/cart/embassy_italic",
+	"structures/cart/embassy_iberian"
 ];
 
 
@@ -90,7 +112,6 @@ Trigger.prototype.ShowText = function(text,option_a,option_b)
 	});
 	
 }
-
 
 
 Trigger.prototype.WalkAndFightClosestTarget = function(attacker,target_player,target_class)
@@ -136,7 +157,7 @@ Trigger.prototype.FindClosestTarget = function(attacker,target_player,target_cla
 		if (!TriggerHelper.IsInWorld(target))
 			continue;
 
-		let targetDistance = DistanceBetweenEntities(attacker, target);
+		let targetDistance = PositionHelper.DistanceBetweenEntities(attacker, target);
 		if (targetDistance < minDistance)
 		{
 			closestTarget = target;
@@ -203,26 +224,61 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			TriggerHelper.SpawnUnits(data.entity,"units/mace/siege_oxybeles_packed",8,1);
 			
 			//spawn the princess
-			TriggerHelper.SpawnUnits(data.entity,"units/kush_hero_amanirenas",1,1);
+			TriggerHelper.SpawnUnits(data.entity,"units/kush/hero_amanirenas",1,1);
 		}
 		else if (id.classesList.indexOf("Pyramid") >= 0)
 		{
 			let cmpPlayer = QueryPlayerIDInterface(1);
 			let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 			
-			cmpTechnologyManager.ResearchTechnology("tower_armour");
+			cmpTechnologyManager.ResearchTechnology("tower_health");
 			cmpTechnologyManager.ResearchTechnology("tower_range");
 			cmpTechnologyManager.ResearchTechnology("tower_watch");
 			cmpTechnologyManager.ResearchTechnology("tower_murderholes");
 			cmpTechnologyManager.ResearchTechnology("tower_crenellations");
-			cmpTechnologyManager.ResearchTechnology("armor_infantry_01");
-			cmpTechnologyManager.ResearchTechnology("armor_cav_01");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
+			//cmpTechnologyManager.ResearchTechnology("armor_infantry_01");
+			//cmpTechnologyManager.ResearchTechnology("armor_cav_01");
+			//cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
 				
 		}
 	}
 	
-	
+	if (data.from == 0 && data.to == -1)
+	{
+		//check if soldier
+		let id = Engine.QueryInterface(data.entity, IID_Identity);
+		if (id && id.classesList.indexOf("Soldier") >= 0)
+		{
+			//find out which cluster
+			let target_cluster = -1;
+			
+			for (let i = 0; i < this.gaiaClusters.length; i ++)
+			{
+				if (this.gaiaClusters[i].includes(data.entity))
+				{
+					target_cluster = i; 
+					break;
+				}
+			}
+			
+			warn("target cluster = "+target_cluster);
+			
+			if (target_cluster != -1)
+			{
+				//go through every unit in cluster and if idle, order to attack
+				for (let u of  this.gaiaClusters[target_cluster])
+				{
+					let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
+					if (cmpUnitAI)
+					{
+						if (cmpUnitAI.IsIdle()){
+							this.WalkAndFightClosestTarget(u,1,"Unit");
+						}
+					}
+				}
+			}
+		}
+	}
 	
 
 	
@@ -242,7 +298,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 	
 	for (let p of [2,3])
 	{
-		let towers_p = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p), "GarrisonTower").filter(TriggerHelper.IsInWorld);
+		let towers_p = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p), "StoneTower").filter(TriggerHelper.IsInWorld);
 		
 		for (let e of towers_p)
 		{
@@ -309,6 +365,16 @@ Trigger.prototype.GarrisonEntities = function(data)
 
 Trigger.prototype.IdleUnitCheck = function(data)
 {
+	this.idleCheckCounter += 1;
+	
+	warn("status counter = "+this.idleCheckCounter);
+	
+	if (this.idleCheckCounter == 50) //25 minutes in
+	{
+		this.DoAfterDelay(5 * 1000,"StartNextAttack",null);
+	}
+	
+	
 	for (let p of [2,3])
 	{
 		let target_p = 1;
@@ -467,6 +533,77 @@ Trigger.prototype.StartNextAttack = function(data)
 		this.DoAfterDelay(300 * 1000,"StartNextAttack",null);
 }
 
+
+
+Trigger.prototype.ClusterUnits = function(units,num_clusters)
+{
+	let dataset = [];
+	
+	for (let u of units)
+	{
+		// get target position
+		var cmpTargetPosition = Engine.QueryInterface(u, IID_Position).GetPosition2D();
+		
+		dataset.push([cmpTargetPosition.x,cmpTargetPosition.y]);
+	}
+	
+	//how many clusters
+	let kmeans = new KMeans({
+	  canvas: null,
+	  data: dataset,
+	  k: num_clusters
+	});
+	
+	let num_iterations = 40;
+	
+	for (let i = 0; i < num_iterations; i ++)
+	{
+		kmeans.run();
+		
+	}
+	
+	let clustering = kmeans.assignments;
+	
+	//warn(uneval(clustering));
+	
+	let clusters = [];
+	for (let k = 0; k < num_clusters; k ++){
+		let cluter_k = [];
+		
+		for (let i = 0; i < units.length; i ++){
+			
+			if (clustering[i] == k)
+			{
+				cluter_k.push(units[i]);
+			}
+		}
+		
+		clusters.push(cluter_k);
+	}
+	
+	return clusters;
+}
+
+
+Trigger.prototype.InitGaiaClusters = function(data)
+{
+	//get all gaia soldiers
+	let soldiers = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(0), "Soldier+!Elephant").filter(TriggerHelper.IsInWorld);
+	
+	//warn("Found "+soldiers.length+" gaia soldiers.");
+	
+	//cluster them
+	let num_clusters = 2;
+	
+	
+	let clusters = this.ClusterUnits(soldiers,num_clusters);
+	//warn(uneval(clusters));
+	
+	//store so we can check when a unit is killed, who its buddies are
+	this.gaiaClusters = clusters;
+	
+}
+
 {
 	let cmpTrigger = Engine.QueryInterface(SYSTEM_ENTITY, IID_Trigger);
 
@@ -484,17 +621,19 @@ Trigger.prototype.StartNextAttack = function(data)
 	//garrison towers
 	cmpTrigger.DoAfterDelay(5 * 1000,"GarrisonEntities",null);
 	
+	//cluster gaia units
+	cmpTrigger.DoAfterDelay(1 * 1000,"InitGaiaClusters",null);
 
 	
-	cmpTrigger.pers_inf_templates = ["units/pers/arstibara", "units/pers/champion_infantry","units/pers_infantry_archer_a", "units/pers_infantry_javelinist_a","units/pers_infantry_spearman_a", "units/pers_kardakes_hoplite", "units/pers/kardakes_skirmisher"]
+	cmpTrigger.pers_inf_templates = ["units/pers/arstibara", "units/pers/champion_infantry","units/pers/infantry_archer_a", "units/pers/infantry_javelineer_a","units/pers/infantry_spearman_a", "units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher"]
 	
-	cmpTrigger.pers_cav_templates = ["units/pers_cavalry_archer_a","units/pers_cavalry_javelinist_a", "units/pers_cavalry_spearman_a", "units/pers_cavalry_swordsman_a","units/pers/champion_cavalry", "units/pers/champion_cavalry_archer"];
+	cmpTrigger.pers_cav_templates = ["units/pers/cavalry_archer_a","units/pers/cavalry_javelineer_a", "units/pers/cavalry_spearman_a", "units/pers/cavalry_axeman_a","units/pers/champion_cavalry", "units/pers/champion_cavalry_archer"];
 	
 	cmpTrigger.pers_siege_templates = TriggerHelper.GetTemplateNamesByClasses("Siege", "pers", undefined, undefined, true);
 	
-	cmpTrigger.kush_inf_templates = ["units/kush_champion_infantry", "units/kush_champion_infantry_amun", "units/kush_champion_infantry_apedemak","units/kush_infantry_archer_a","units/kush_infantry_clubman_a","units/kush_infantry_javelinist_merc_a", "units/kush_infantry_javelinist_merc_b", "units/kush_infantry_pikeman_a", "units/kush_infantry_spearman_a", "units/kush_infantry_swordsman_a"];
+	cmpTrigger.kush_inf_templates = ["units/kush/champion_infantry_archer", "units/kush/champion_infantry_amun", "units/kush/champion_infantry_apedemak","units/kush/infantry_archer_a","units/kush/infantry_maceman_merc_a","units/kush/infantry_javelineer_merc_a", "units/kush/infantry_javelineer_merc_b", "units/kush/infantry_pikeman_a", "units/kush/infantry_spearman_a", "units/kush/infantry_swordsman_a"];
 	
-	cmpTrigger.kush_cav_templates = ["units/kush_cavalry_javelinist_a", "units/kush_cavalry_javelinist_merc_a","units/kush_cavalry_spearman_a", "units/kush_champion_cavalry"];
+	cmpTrigger.kush_cav_templates = ["units/kush/cavalry_javelineer_a", "units/kush/cavalry_javelineer_merc_a","units/kush/cavalry_spearman_a", "units/kush/champion_cavalry"];
 	
 	cmpTrigger.kush_ele_templates = TriggerHelper.GetTemplateNamesByClasses("Champion+Elephant+!Hero", "kush", undefined, undefined, true);
 	
@@ -506,7 +645,7 @@ Trigger.prototype.StartNextAttack = function(data)
 	cmpTrigger.eleRatio = 0.06;
 	cmpTrigger.siegeRatio = 0.05;
 	
-	
+	cmpTrigger.idleCheckCounter = 0;
 	
 	
 	for (let p of [1,2,3])
@@ -524,15 +663,14 @@ Trigger.prototype.StartNextAttack = function(data)
 		let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
 		
-		cmpPlayer.AddStartingTechnology("phase_town_generic");
-		cmpPlayer.AddStartingTechnology("phase_city_generic");
+		cmpTechnologyManager.ResearchTechnology("phase_town_generic");
+		cmpTechnologyManager.ResearchTechnology("phase_city_generic");
 		
 		if (p == 1)
 		{
-			cmpPlayer.AddStartingTechnology("siege_armor");
-			cmpPlayer.AddStartingTechnology("siege_attack");
-			cmpPlayer.AddStartingTechnology("siege_bolt_accuracy");
-			cmpPlayer.AddStartingTechnology("siege_packing");
+			cmpTechnologyManager.ResearchTechnology("siege_health");
+			cmpTechnologyManager.ResearchTechnology("siege_attack");
+			cmpTechnologyManager.ResearchTechnology("siege_bolt_accuracy");
 		}
 		
 	}
@@ -544,7 +682,8 @@ Trigger.prototype.StartNextAttack = function(data)
 	});
 	
 	//22 minutes in, it starts
-	cmpTrigger.DoAfterDelay(1320 * 1000,"StartNextAttack",null);
+	//cmpTrigger.DoAfterDelay(1320 * 1000,"StartNextAttack",null);
+	//cmpTrigger.DoAfterDelay(5 * 1000,"StartNextAttack",null);
 	
 	//then 27 and 32 minutes for next 2 attacks
 	
@@ -552,68 +691,5 @@ Trigger.prototype.StartNextAttack = function(data)
 	
 	//triggers
 	cmpTrigger.RegisterTrigger("OnOwnershipChanged", "OwnershipChangedAction", data);
-	
-	/*cmpTrigger.DoAfterDelay(300 * 1000,"SpawnAlliedInvasionAttack",null);
-	
-	
-	cmpTrigger.RegisterTrigger("OnInterval", "SpawnPatrolPeriodic", {
-		"enabled": true,
-		"delay": 120 * 1000,
-		"interval": 60 * 1000,
-	});
-
-
-	cmpTrigger.RegisterTrigger("OnInterval", "checkInvasionAttack", {
-		"enabled": true,
-		"delay": 5 * 1000,
-		"interval": 15 * 1000,
-	});
-
-	// register invasion unload trigger
-	cmpTrigger.RegisterTrigger("OnRange", "InvasionRangeAction1", {
-		"entities": cmpTrigger.GetTriggerPoints(triggerPointShipUnload1), // central points to calculate the range circles
-		"players": [3], // only count entities of player 6
-		"maxRange": 20,
-		"requiredComponent": IID_UnitAI, // only count units in range
-		"enabled": true
-	});
-	
-	// register invasion unload trigger
-	cmpTrigger.RegisterTrigger("OnRange", "InvasionRangeAction2", {
-		"entities": cmpTrigger.GetTriggerPoints(triggerPointShipUnload2), // central points to calculate the range circles
-		"players": [3], // only count entities of player 6
-		"maxRange": 20,
-		"requiredComponent": IID_UnitAI, // only count units in range
-		"enabled": true
-	});
-
-	cmpTrigger.RegisterTrigger("OnPlayerCommand", "PlayerCommandAction", data);
-	*/
-
-	/*cmpTrigger.RegisterTrigger("OnInterval", "IntervalUnitSpawn", {
-		"enabled": true,
-		"delay": 15 * 1000,
-		"interval": 15 * 1000,
-	});*/
-	
-	
-	
-	/*cmpTrigger.RegisterTrigger("OnInterval", "LevelUpPers", {
-		"enabled": true,
-		"delay": 1 * 1000,
-		"interval": 300 * 1000,
-	});
-	
-	
-	
-	// register winning trigger
-	cmpTrigger.RegisterTrigger("OnRange", "RangeActionTriggerK", {
-		"entities": cmpTrigger.GetTriggerPoints("K"), // central points to calculate the range circles
-		"players": [1], // only count entities of player 1
-		"maxRange": 30,
-		"requiredComponent": IID_UnitAI, // only count units in range
-		"enabled": true
-	});*/
-	
 	
 };
