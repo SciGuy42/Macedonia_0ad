@@ -24,30 +24,30 @@ var unitFormations = [
 
 var disabledTemplates = (civ) => [
 	// Economic structures
-	"structures/" + civ + "_corral",
-	"structures/" + civ + "_farmstead",
-	"structures/" + civ + "_field",
-	"structures/" + civ + "_storehouse",
-	"structures/" + civ + "_rotarymill",
-	"structures/" + civ + "_market",
+	"structures/" + civ + "/corral",
+	"structures/" + civ + "/farmstead",
+	"structures/" + civ + "/field",
+	"structures/" + civ + "/storehouse",
+	"structures/" + civ + "/rotarymill",
+	"structures/" + civ + "/market",
 	
 	// Expansions
-	"structures/" + civ + "_civil_centre",
-	"structures/" + civ + "_military_colony",
+	"structures/" + civ + "/civil_centre",
+	"structures/" + civ + "/military_colony",
 
 	// Walls
-	"structures/" + civ + "_wallset_stone",
+	"structures/" + civ + "/wallset_stone",
 	"structures/rome_wallset_siege",
 	"other/wallset_palisade",
 
 	// Shoreline
-	"structures/" + civ + "_dock",
+	"structures/" + civ + "/dock",
 	"structures/brit/crannog",
-	"structures/cart_super_dock",
-	"structures/ptol_lighthouse",
+	"structures/cart/super_dock",
+	"structures/ptol/lighthouse",
 	
 	//villagers
-	"units/" + civ + "_support_female_citizen"
+	"units/" + civ + "/support_female_citizen"
 ];
 
 
@@ -95,7 +95,7 @@ Trigger.prototype.FindClosestTarget = function(attacker,target_player,target_cla
 		if (!TriggerHelper.IsInWorld(target))
 			continue;
 
-		let targetDistance = DistanceBetweenEntities(attacker, target);
+		let targetDistance = PositionHelper.DistanceBetweenEntities(attacker, target);
 		if (targetDistance < minDistance)
 		{
 			closestTarget = target;
@@ -301,6 +301,8 @@ Trigger.prototype.checkInvasionAttack = function(data)
 //spawn naval attack
 Trigger.prototype.SpawnNavalInvasionAttack = function(data)
 {
+	warn("Carthage invasion ship attack!");
+	
 	if (this.invasion_under_way == true)
 	{
 		warn("invasion attack ordered when already one is going on");
@@ -324,7 +326,7 @@ Trigger.prototype.SpawnNavalInvasionAttack = function(data)
 	let attacker_ships = [];
 	
 	//let ship_spawned = TriggerHelper.SpawnUnits(spawn_site,this.spawn_ship_templates[1],1,owner);
-	let ship_spawned = TriggerHelper.SpawnUnits(spawn_site, "units/cart_ship_quinquereme", 1, owner);
+	let ship_spawned = TriggerHelper.SpawnUnits(spawn_site, "units/cart/ship_quinquereme", 1, owner);
 	let ship_invasion_garrison = [];
 		
 	//spawn the invasion force inside the ship
@@ -366,12 +368,12 @@ Trigger.prototype.GarrisonEntities = function(data)
 	
 	for (let p of [3,5,6])
 	{
-		let towers_p = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p), "GarrisonTower").filter(TriggerHelper.IsInWorld);
+		let towers_p = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p), "StoneTower").filter(TriggerHelper.IsInWorld);
 		
 		for (let e of towers_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/kush_champion_infantry",5,p);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/kush/champion_infantry_amun",5,p);
 			
 			for (let a of archers_e)
 			{
@@ -388,29 +390,12 @@ Trigger.prototype.GarrisonEntities = function(data)
 		{
 			//spawn the garrison inside the tower
 			
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/kush_champion_infantry",fort_size,p);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/kush/champion_infantry_archer",fort_size,p);
 			
 			for (let a of archers_e)
 			{
 				let cmpUnitAI = Engine.QueryInterface(a, IID_UnitAI);
 				cmpUnitAI.Garrison(e,true);
-			}
-		}
-		
-		//wall towers
-		if (p == 5)
-		{
-			let towers_w = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p), "Defensive+Tower+!Outpost+!GarrisonTower").filter(TriggerHelper.IsInWorld);
-			for (let e of towers_w)
-			{
-				//spawn the garrison inside the tower
-				let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",2,p);
-					
-				for (let a of archers_e)
-				{
-					let cmpUnitAI = Engine.QueryInterface(a, IID_UnitAI);
-					cmpUnitAI.Garrison(e,true);
-				}
 			}
 		}
 		
@@ -561,10 +546,10 @@ Trigger.prototype.GarrisonPlayerShips = function(data)
 	for (let ship of warships_pl1)
 	{
 		//spawn the garrison inside the ship
-		TriggerHelper.SpawnGarrisonedUnits(ship, "units/ptol_infantry_archer_e",5,p);
-		TriggerHelper.SpawnGarrisonedUnits(ship, "units/ptol_infantry_slinger_e",5,p);
-		TriggerHelper.SpawnGarrisonedUnits(ship, "units/ptol_infantry_pikeman_e",5,p);
-		TriggerHelper.SpawnGarrisonedUnits(ship, "units/ptol_cavalry_javelinist_merc_e",5,p);
+		TriggerHelper.SpawnGarrisonedUnits(ship, "units/ptol/infantry_archer_e",5,p);
+		TriggerHelper.SpawnGarrisonedUnits(ship, "units/ptol/infantry_slinger_e",5,p);
+		TriggerHelper.SpawnGarrisonedUnits(ship, "units/ptol/infantry_pikeman_e",5,p);
+		TriggerHelper.SpawnGarrisonedUnits(ship, "units/ptol/cavalry_archer_b",5,p);
 	}
 }
 
@@ -613,7 +598,7 @@ Trigger.prototype.SpawnFortressPatrol = function(data)
 	let num_patrols = 10;
 	let patrol_size = 5;
 	
-	let inf_templates = ["units/kush_champion_infantry_amun","units/kush_champion_infantry","units/kush_champion_infantry_apedemak"];
+	let inf_templates = ["units/kush/champion_infantry_amun","units/kush/champion_infantry_archer","units/kush/champion_infantry_apedemak"];
 	
 	//spawn infantry
 	for (let j = 0; j < num_patrols; j++)
@@ -641,6 +626,10 @@ Trigger.prototype.SpawnFortressPatrol = function(data)
 
 Trigger.prototype.CarthageShipAttack = function(data)
 {
+	warn("Carthage ship attack!");
+
+	
+	
 	//check if we have docks
 	let p = 6;
 	let docks = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(6), "Dock").filter(TriggerHelper.IsInWorld);
@@ -648,42 +637,48 @@ Trigger.prototype.CarthageShipAttack = function(data)
 	if (docks.length == 0)
 		return; //attacks end
 		
-	//pick spawn site
-	let triggerPoint = pickRandom(this.GetTriggerPoints(triggerPointShipSpawn));
-	
-	//spawn ship
-	let templates = ["units/cart_ship_trireme","units/cart_ship_bireme"];
-	let ship_spawned = TriggerHelper.SpawnUnits(triggerPoint, pickRandom(templates), 1, p);
-	
-	//spawn garrison
-	for (let j = 0; j < this.cartShipGarrisonSize; ++j)
-	{
-		let u_j = TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0],"units/cart_champion_infantry",1,p);
-	}
-	
-	//get possible targets
-	//get possible list of dock targets
 	let dock_targets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "Dock").filter(TriggerHelper.IsInWorld);
 	
-	//get possible trade ship targets -- TODO
-	
-	
-	//full list of targets
-	let targets = dock_targets;
-	
-	//TODO: add any idle ships to attackers
-	
-	
-	//order attack
-	if (targets.length > 0)
-	{				
-		ProcessCommand(p, {
-			"type": "attack",
-			"entities": ship_spawned,
-			"target": pickRandom(targets),
-			"queued": false,
-			"allowCapture": false
-		});
+	if (docks.length > 0)
+	{
+		
+		//pick spawn site
+		let triggerPoint = pickRandom(this.GetTriggerPoints(triggerPointShipSpawn));
+		
+		//spawn ship
+		let templates = ["units/cart/ship_trireme","units/cart/ship_bireme"];
+		let ship_spawned = TriggerHelper.SpawnUnits(triggerPoint, pickRandom(templates), 1, p);
+		
+		//spawn garrison
+		for (let j = 0; j < this.cartShipGarrisonSize; ++j)
+		{
+			let u_j = TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0],"units/cart/champion_infantry",1,p);
+		}
+		
+		//get possible targets
+		//get possible list of dock targets
+		
+		
+		//get possible trade ship targets -- TODO
+		
+		
+		//full list of targets
+		let targets = dock_targets;
+		
+		//TODO: add any idle ships to attackers
+		
+		
+		//order attack
+		if (targets.length > 0)
+		{				
+			ProcessCommand(p, {
+				"type": "attack",
+				"entities": ship_spawned,
+				"target": pickRandom(targets),
+				"queued": false,
+				"allowCapture": false
+			});
+		}
 	}
 	
 	this.DoAfterDelay(this.cartShipAttackInterval * 1000,"CarthageShipAttack",null);
@@ -744,6 +739,8 @@ Trigger.prototype.CavalryAttack = function(data)
 
 Trigger.prototype.CarthageAttack = function(data)
 {
+	warn("Carthage land attack!");
+	
 	//check if we have camps
 	let p = 6;
 	let structures = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(6), "Structure").filter(TriggerHelper.IsInWorld);
@@ -768,7 +765,7 @@ Trigger.prototype.CarthageAttack = function(data)
 		else 
 		{
 			//elephant
-			let units_i = TriggerHelper.SpawnUnits(spawn_site,"units/cart_champion_elephant",1,p);
+			let units_i = TriggerHelper.SpawnUnits(spawn_site,"units/cart/champion_elephant",1,p);
 			attackers.push(units_i[0]);
 		}
 	}
@@ -810,13 +807,13 @@ Trigger.prototype.CheckForCC = function(data)
 	{
 		//start attacks
 		warn("Has structure!");
-		this.DoAfterDelay(180 * 1000,"CarthageAttack",null);
+		this.DoAfterDelay(240 * 1000,"CarthageAttack",null);
 		
 		//start ship attacks
-		this.DoAfterDelay(300 * 1000,"CarthageShipAttack",null);
+		this.DoAfterDelay(360 * 1000,"CarthageShipAttack",null);
 
 		//start naval invasion attacks
-		this.DoAfterDelay(420 * 1000,"SpawnNavalInvasionAttack",null);
+		this.DoAfterDelay(500 * 1000,"SpawnNavalInvasionAttack",null);
 
 
 	}
@@ -842,7 +839,7 @@ Trigger.prototype.CheckForCC = function(data)
 	
 	
 	//carthage attacker types
-	cmpTrigger.cartAttackerTypes = ["units/cart_champion_infantry","units/cart_champion_pikeman","units/cart_infantry_archer_a","units/cart_champion_cavalry","units/cart_infantry_slinger_iber_a"];
+	cmpTrigger.cartAttackerTypes = ["units/cart/champion_infantry","units/cart/champion_pikeman","units/cart/infantry_archer_a","units/cart/champion_cavalry","units/cart/infantry_slinger_iber_a"];
 	
 	//carthage attack level
 	cmpTrigger.carthageAttackLevel = 15;
@@ -871,8 +868,9 @@ Trigger.prototype.CheckForCC = function(data)
 	//spawn patrols of forts
 	cmpTrigger.DoAfterDelay(10 * 1000,"SpawnFortressPatrol",null);
 	
-	//invasion sea attack
+	//invasion sea attack -- debug
 	//cmpTrigger.DoAfterDelay(10 * 1000,"SpawnNavalInvasionAttack",null);
+	//cmpTrigger.DoAfterDelay(10 * 1000,"CarthageShipAttack",null);
 
 
 
@@ -890,16 +888,16 @@ Trigger.prototype.CheckForCC = function(data)
 	
 		let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
-		cmpPlayer.AddStartingTechnology("phase_town_generic");
-		cmpPlayer.AddStartingTechnology("phase_city_generic");
+		cmpTechnologyManager.ResearchTechnology("phase_town_generic");
+		cmpTechnologyManager.ResearchTechnology("phase_city_generic");
 		
 		if (p == 5) //boost nubian forts
 		{
-			cmpPlayer.AddStartingTechnology("tower_armour");
-			cmpPlayer.AddStartingTechnology("tower_range");
-			cmpPlayer.AddStartingTechnology("tower_watch");
-			cmpPlayer.AddStartingTechnology("tower_murderholes");
-			cmpPlayer.AddStartingTechnology("tower_crenellations");
+			cmpTechnologyManager.ResearchTechnology("tower_health");
+			cmpTechnologyManager.ResearchTechnology("tower_range");
+			cmpTechnologyManager.ResearchTechnology("tower_watch");
+			cmpTechnologyManager.ResearchTechnology("tower_murderholes");
+			cmpTechnologyManager.ResearchTechnology("tower_crenellations");
 		}
 		
 		if (p == 1)
