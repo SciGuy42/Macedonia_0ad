@@ -13,6 +13,7 @@ var triggerPointsPyramid = "F";
 var triggerPointsHolyGuardAttack = "G";
 var triggerPointsSpy = "K";
 var triggerPointsFieldBattleStart = "I";
+var triggerPointsBanditGuards = "H";
 
 var unitTargetClass = "Unit+!Ship";
 var siegeTargetClass = "Structure";
@@ -26,30 +27,30 @@ var unitFormations = [
 
 var disabledTemplates = (civ) => [
 	// Economic structures
-	"structures/" + civ + "_corral",
-	"structures/" + civ + "_farmstead",
-	"structures/" + civ + "_field",
-	"structures/" + civ + "_storehouse",
-	"structures/" + civ + "_rotarymill",
-	"structures/" + civ + "_market",
+	"structures/" + civ + "/corral",
+	"structures/" + civ + "/farmstead",
+	"structures/" + civ + "/field",
+	"structures/" + civ + "/storehouse",
+	"structures/" + civ + "/rotarymill",
+	"structures/" + civ + "/market",
 	
 	// Expansions
-	"structures/" + civ + "_civil_centre",
-	"structures/" + civ + "_military_colony",
+	"structures/" + civ + "/civil_centre",
+	"structures/" + civ + "/military_colony",
 
 	// Walls
-	"structures/" + civ + "_wallset_stone",
+	"structures/" + civ + "/wallset_stone",
 	"structures/rome_wallset_siege",
 	"other/wallset_palisade",
 
 	// Shoreline
-	"structures/" + civ + "_dock",
+	"structures/" + civ + "/dock",
 	"structures/brit/crannog",
-	"structures/cart_super_dock",
-	"structures/ptol_lighthouse",
+	"structures/cart/super_dock",
+	"structures/ptol/lighthouse",
 	
 	//villagers
-	"units/" + civ + "_support_female_citizen"
+	"units/" + civ + "/support_female_citizen"
 ];
 
 var textQuestStart = "You have arrived at a small hamlet. The locals are stunned to see you in real life and bow to you as if you're a living God. \n\nAlas, not all is well in the hamlet! A band of brigands have kidnapped several villagers and have also raided the hamlet's food supply. The hamlet's elders humbly ask for your help -- the camp of the brigands shouldn't be far to the east from here. \n\nIn addition, the hamelet is starving. Should you be able to acquire some goats or other game, bring them to the hamlet.";
@@ -146,7 +147,7 @@ Trigger.prototype.FindClosestTarget = function(attacker,target_player,target_cla
 		if (!TriggerHelper.IsInWorld(target))
 			continue;
 
-		let targetDistance = DistanceBetweenEntities(attacker, target);
+		let targetDistance = PositionHelper.DistanceBetweenEntities(attacker, target);
 		if (targetDistance < minDistance)
 		{
 			closestTarget = target;
@@ -228,7 +229,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			let cmpPlayer = QueryPlayerIDInterface(1);
 			let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 			
-			cmpTechnologyManager.ResearchTechnology("speed_cavalry_01");
+		
 		}
 		else if (data.entity == 6491)
 		{
@@ -237,7 +238,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			if (this.questCaravansSpawned == false && this.questCaravansGiven == true)
 			{
 				//spawn 4 caravans
-				TriggerHelper.SpawnUnits(6491,"units/kush_support_trader",4,1);
+				TriggerHelper.SpawnUnits(6491,"units/kush/support_trader",4,1);
 				
 				this.questCaravansSpawned = true;
 			}
@@ -253,12 +254,19 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				let spawn_site = 6404; //alexander
 				TriggerHelper.SpawnUnits(6839,"units/mace/siege_oxybeles_packed",4,1);
 				this.ballistaCaptured = true;
+				
+				//add some siege tech
+				let cmpPlayer = QueryPlayerIDInterface(1);
+				let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
+				cmpTechnologyManager.ResearchTechnology("siege_attack");
+				cmpTechnologyManager.ResearchTechnology("siege_health");
 			}
 			
 			//change ownership back
 			var cmpOwnership = Engine.QueryInterface(6839, IID_Ownership);
 			cmpOwnership.SetOwner(0);
 		}
+		
 	}
 	else if (data.from == 2 && (data.to == 1 || data.to == -1) && id.classesList.indexOf("MercenaryCamp") >= 0)
 	{
@@ -280,12 +288,18 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		//lose siege towers, get some reward
 		this.QuestArchersReward();
 	}
+	else if (data.from == 0  && data.entity == 6647) //siege tower
+	{
+		let spawn_site = 6404; //alexander
+		TriggerHelper.SpawnUnits(spawn_site,"units/kush/siege_tower",1,1);
+			
+	}
 	
 	//check hero of player 8
 	if (data.from == 8 && data.entity == 6919)
 	{
 		warn("YOU WIN");
-		this.ShowText("You are victorious!","Great!","Also great!");
+		TriggerHelper.SetPlayerWon(1,this.VictoryTextFn,this.VictoryTextFn);	
 	}
 };
 
@@ -295,6 +309,30 @@ Trigger.prototype.PlayerCommandAction = function(data)
 	//warn(uneval(data));
 };
 
+
+
+Trigger.prototype.PatrolOrderList = function(units,p,patrolTargets)
+{
+	
+	if (units.length <= 0)
+		return;
+	
+	for (let patrolTarget of patrolTargets)
+	{
+		let targetPos = TriggerHelper.GetEntityPosition2D(patrolTarget);
+		ProcessCommand(p, {
+			"type": "patrol",
+			"entities": units,
+			"x": targetPos.x,
+			"z": targetPos.y,
+			"targetClasses": {
+				"attack": unitTargetClass
+			},
+			"queued": true,
+			"allowCapture": false
+		});
+	}
+}
 
 
 Trigger.prototype.PatrolOrder = function(units,p)
@@ -349,7 +387,7 @@ Trigger.prototype.SpawnSquad = function(data)
 	let ccs = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p), "Outpost").filter(TriggerHelper.IsInWorld);
 	let site_j = pickRandom(ccs);
 	
-	let pers_inf_templates = ["units/pers/arstibara","units/pers/champion_infantry","units/pers_kardakes_hoplite", "units/pers/kardakes_skirmisher","units/pers_infantry_archer_b"];
+	let pers_inf_templates = ["units/pers/arstibara","units/pers/champion_infantry","units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher","units/pers/infantry_archer_b"];
 	
 	let pers_ele_templates = TriggerHelper.GetTemplateNamesByClasses("Champion+Elephant+!Hero", "pers", undefined, undefined, true);
 	
@@ -405,7 +443,7 @@ Trigger.prototype.SpawnCavalrySquad = function(data)
 	let ccs = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p), "Outpost").filter(TriggerHelper.IsInWorld);
 	let site_j = pickRandom(ccs);
 	
-	let pers_cav_templates = ["units/pers_cavalry_javelinist_a","units/pers_cavalry_spearman_a","units/pers_cavalry_swordsman_a","units/pers/champion_cavalry", "units/pers/champion_cavalry_archer"];
+	let pers_cav_templates = ["units/pers/cavalry_javelineer_a","units/pers/cavalry_spearman_a","units/pers/cavalry_axeman_a","units/pers/champion_cavalry", "units/pers/champion_cavalry_archer"];
 	
 	let pers_ele_templates = TriggerHelper.GetTemplateNamesByClasses("Champion+Elephant+!Hero", "pers", undefined, undefined, true);
 	
@@ -524,8 +562,8 @@ Trigger.prototype.SpawnFieldAttack = function(data)
 	let num_squads_cav = 5;
 	let ele_prob = 0.5; //probability of a squad having an elephant
 	
-	let pers_inf_templates = ["units/pers/arstibara","units/pers/champion_infantry","units/pers_kardakes_hoplite", "units/pers/kardakes_skirmisher","units/pers_infantry_archer_b"];
-	let pers_cav_templates = ["units/pers_cavalry_javelinist_a","units/pers_cavalry_spearman_a","units/pers_cavalry_swordsman_a","units/pers/champion_cavalry", "units/pers/champion_cavalry_archer"];
+	let pers_inf_templates = ["units/pers/arstibara","units/pers/champion_infantry","units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher","units/pers/infantry_archer_b"];
+	let pers_cav_templates = ["units/pers/cavalry_javelineer_a","units/pers/cavalry_spearman_a","units/pers/cavalry_axeman_a","units/pers/champion_cavalry", "units/pers/champion_cavalry_archer"];
 	let pers_ele_templates = TriggerHelper.GetTemplateNamesByClasses("Champion+Elephant+!Hero", "pers", undefined, undefined, true);
 	
 	//spawn infantry
@@ -553,16 +591,24 @@ Trigger.prototype.SpawnPassSpy = function(data)
 	//spawn unit
 	let triggerPoint = pickRandom(this.GetTriggerPoints(triggerPointsSpy));
 	let owner = 6;
-	let u = TriggerHelper.SpawnUnits(triggerPoint, "units/kush_cavalry_javelinist_a", 1, owner);
+	let u = TriggerHelper.SpawnUnits(triggerPoint, "units/kush/cavalry_javelineer_a", 1, owner);
 	
 	//give it order to walk away
-	let target = this.FindClosestTarget(u,6,"Structure");
+	let target = this.FindClosestTarget(u[0],6,"Structure");
 			
-	var cmpTargetPosition = Engine.QueryInterface(target, IID_Position).GetPosition2D();
-			
-	let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			
-	cmpUnitAI.WalkAndFight(cmpTargetPosition.x,cmpTargetPosition.y,null);
+	let target_pos = TriggerHelper.GetEntityPosition2D(target);
+		
+	ProcessCommand(owner, {
+		"type": "attack-walk",
+		"entities": u,
+		"x": target_pos.x,
+		"z": target_pos.y,
+		"queued": true,
+		"targetClasses": {
+			"attack": unitTargetClass
+		},
+		"allowCapture": false
+	});
 }
 
 Trigger.prototype.SeizePlayerTroops = function(data)
@@ -615,6 +661,10 @@ Trigger.prototype.SpawnPyramidWarrior = function(data)
 	let fraction_index = Math.floor((this.pyramidSpawnCounter / this.pyramidSpawnLimit) * (this.kush_inf_ordered.length - this.pyramidWaveSize));
 	warn("index = "+uneval(fraction_index));
 	
+	//set order in terms of difficulty
+	this.kush_inf_ordered = ["units/kush/infantry_archer_b","units/kush/infantry_spearman_b","units/kush/infantry_archer_a","units/kush/infantry_spearman_a","units/kush/infantry_swordsman_b","units/kush/infantry_archer_e","units/kush/infantry_pikeman_b","units/kush/infantry_swordsman_a","units/kush/infantry_maceman_merc_b","units/kush/champion_infantry_archer","units/kush/infantry_pikeman_a","units/kush/cavalry_javelineer_merc_b","units/kush/infantry_javelineer_merc_b","units/kush/infantry_spearman_e","units/kush/infantry_maceman_merc_a","units/kush/cavalry_javelineer_merc_a","units/kush/infantry_pikeman_e","units/kush/infantry_javelineer_merc_a","units/kush/infantry_swordsman_e","units/kush/cavalry_javelineer_merc_a","units/kush/infantry_javelineer_merc_e","units/kush/champion_infantry_archer","units/kush/infantry_maceman_merc_e","units/kush/champion_infantry_amun","units/kush/champion_cavalry","units/kush/champion_infantry_apedemak","units/kush/champion_elephant"];
+	
+	
 	let unit_list_length = this.kush_inf_ordered.length;
 	warn(uneval(unit_list_length));
 	
@@ -635,7 +685,7 @@ Trigger.prototype.SpawnPyramidWarrior = function(data)
 //garison AI entities with archers
 Trigger.prototype.GarrisonEntities = function(data)
 {
-	
+	warn("garrisoning entitie");
 	
 	for (let p of [0,2,4,5,6])
 	{
@@ -647,7 +697,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 			
 			if (p == 0)
 			{
-				let archers_e = TriggerHelper.SpawnUnits(e, "units/kush_champion_infantry",3,p);
+				let archers_e = TriggerHelper.SpawnUnits(e, "units/kush/champion_infantry_amun",3,p);
 				
 				for (let a of archers_e)
 				{
@@ -704,7 +754,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of camps_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/kush_champion_infantry",1,p);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/kush/champion_infantry_amun",1,p);
 			
 			for (let a of archers_e)
 			{
@@ -720,7 +770,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 			for (let c of camps_p)
 			{
 				//spawn the garrison inside the tower
-				let archers_e = TriggerHelper.SpawnUnits(c, "units/kush_champion_infantry",1,p);
+				let archers_e = TriggerHelper.SpawnUnits(c, "units/kush/infantry_archer_a",1,p);
 				
 				for (let a of archers_e)
 				{
@@ -737,7 +787,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 			for (let c of embs_p)
 			{
 				//spawn the garrison inside the tower
-				let archers_e = TriggerHelper.SpawnUnits(c, "units/kush_champion_infantry",5,p);
+				let archers_e = TriggerHelper.SpawnUnits(c, "units/kush/champion_infantry_amun",5,p);
 				
 				for (let a of archers_e)
 				{
@@ -779,7 +829,7 @@ Trigger.prototype.RangeActionHolyGuard = function(data)
 
 Trigger.prototype.RangeActionTriggerAttack = function(data)
 {
-	warn(uneval(data));
+	//warn(uneval(data));
 	//warn(this.questGoatComplete +"\t"+this.suddenAttackComplete);
 	
 	if (this.questGoatComplete == true && this.suddenAttackComplete == false)
@@ -793,13 +843,13 @@ Trigger.prototype.RangeActionTriggerAttack = function(data)
 		for (let i = 0; i < spawn_size; i++)
 		{
 			//decide what to spawn
-			let unit_type = pickRandom(["units/pers/arstibara","units/pers/champion_infantry","units/pers_kardakes_hoplite", "units/pers/kardakes_skirmisher","units/pers_infantry_archer_e","units/pers_infantry_spearman_a", "units/pers_infantry_spearman_a","units/pers_infantry_spearman_a","units/pers_infantry_javelinist_a","units/pers_infantry_javelinist_a",]);
+			let unit_type = pickRandom(["units/pers/arstibara","units/pers/champion_infantry","units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher","units/pers/infantry_archer_e","units/pers/infantry_spearman_a", "units/pers/infantry_spearman_a","units/pers/infantry_spearman_a","units/pers/infantry_javelineer_a","units/pers/infantry_javelineer_a",]);
 			let spawned_units = TriggerHelper.SpawnUnits(spawn_site,unit_type,1,owner);
 			
 			//issue orders
 			for (let u of spawned_units)
 			{
-				this.WalkAndFightClosestTarget(u,1,unitTargetClass);
+				this.WalkAndFightClosestTarget(u,3,"Structure");
 			}
 		}
 		
@@ -831,7 +881,7 @@ Trigger.prototype.RangeActionTriggerAttack = function(data)
 			for (let i = 0; i < spawn_size; i++)
 			{
 				//decide what to spawn
-				let unit_type = pickRandom(["units/pers_cavalry_spearman_b","units/pers_cavalry_spearman_b","units/pers_cavalry_spearman_e","units/pers_cavalry_spearman_a","units/pers_cavalry_javelinist_b","units/pers_cavalry_archer_b"]);
+				let unit_type = pickRandom(["units/pers/cavalry_spearman_e","units/pers/cavalry_spearman_b","units/pers/cavalry_spearman_e","units/pers/cavalry_axeman_a","units/pers/cavalry_javelineer_b","units/pers/cavalry_archer_b"]);
 				let spawned_units = TriggerHelper.SpawnUnits(spawn_site,unit_type,1,owner);
 				
 				//issue orders
@@ -863,10 +913,10 @@ Trigger.prototype.SpawnInitialPatrol = function(data)
 		return;
 		
 	//calculate size of spawn units
-	let num_patrols = 26;
-	let patrol_size = 4;
+	let num_patrols = 38;
+	let patrol_size = 3;
 	
-	let inf_templates = ["units/mace/champion_infantry_spearman_02", "units/mace/champion_infantry_spearman","units/mace_champion_infantry_e","units/mace/infantry_archer_e","units/mace/infantry_javelineer_e","units/mace_infantry_pikeman_e","units/mace/infantry_slinger_e","units/mace_thorakites", "units/mace_thureophoros","units/athen/champion_ranged","units/athen/champion_marine"];
+	let inf_templates = ["units/mace/champion_infantry_spearman_02", "units/mace/champion_infantry_spearman","units/mace/champion_infantry_swordsman","units/mace/infantry_archer_e","units/mace/infantry_javelineer_e","units/mace/infantry_pikeman_e","units/mace/infantry_slinger_e","units/merc_thorakites", "units/merc_thureophoros","units/athen/champion_ranged","units/athen/champion_marine"];
 	
 	//spawn infantry
 	for (let j = 0; j < num_patrols; j++)
@@ -882,11 +932,12 @@ Trigger.prototype.SpawnInitialPatrol = function(data)
 		}
 		
 		//set formation
-		TriggerHelper.SetUnitFormation(p, units, pickRandom(unitFormations));
+		//TriggerHelper.SetUnitFormation(p, units, pickRandom(unitFormations));
 
 		
 		//send to patrol
-		this.PatrolOrder(units,p,pickRandom(targets_A),site_j);
+		let patrol_sites_j = [pickRandom(targets_A), pickRandom(targets_B), pickRandom(targets_A),pickRandom(targets_B)];
+		this.PatrolOrderList(units,p,patrol_sites_j);
 		
 	}
 	
@@ -915,6 +966,10 @@ Trigger.prototype.RangeActionTemple = function(data)
 		this.templeQuestGiven = true;
 		
 		this.ShowText(textQuestTempleGiven,"I suppose!","We're on it!");
+		
+		//debug -- spawn some ballistas cause they couldn't get there
+		let spawn_site = 6404; //alexander
+		TriggerHelper.SpawnUnits(6404,"units/mace/siege_oxybeles_packed",4,1);
 	}
 }
 
@@ -1004,12 +1059,17 @@ Trigger.prototype.QuestFieldBattleReward = function(data)
 	//some additional troops
 	let spawn_site = 6404; //alexander
 	
+	let spawn_sites = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(6), "MercenaryCamp").filter(TriggerHelper.IsInWorld);
+	
+	if (spawn_sites.length > 0)
+		spawn_site = pickRandom(spawn_sites);		
+	
 	//spawn some special guards
 	TriggerHelper.SpawnUnits(spawn_site,"units/mace/champion_infantry_spearman_02",8,1);
-	TriggerHelper.SpawnUnits(spawn_site,"units/mace_thureophoros",8,1);
+	TriggerHelper.SpawnUnits(spawn_site,"units/merc_thureophoros",8,1);
 	
 	//some priests
-	TriggerHelper.SpawnUnits(spawn_site,"units/kush_support_healer_e",4,1);
+	TriggerHelper.SpawnUnits(spawn_site,"units/kush/support_healer_e",6,1);
 	//they only stick around for a bit...
 	
 	//no need, this is the battle before the last battle
@@ -1020,14 +1080,16 @@ Trigger.prototype.QuestFieldBattleReward = function(data)
 	let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 	
 	//improve cav armor and ranged weapons
-	cmpTechnologyManager.ResearchTechnology("armor_cav_02");
-	cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_02");
+	cmpTechnologyManager.ResearchTechnology("archery_tradition");
 	
 	//inspire troops
 	cmpTechnologyManager.ResearchTechnology("attack_soldiers_will");
 	
-	//hero armor
-	cmpTechnologyManager.ResearchTechnology("armor_hero_01");
+	cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_03");
+	cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_03");
+
+	cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_03");
+	cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_03");
 
 	this.ShowText(textQuestMessageComplete,"Thanks!","Oh boy...");
 		
@@ -1059,7 +1121,7 @@ Trigger.prototype.QuestArchersReward = function(data)
 	}
 	
 	//get some elephants
-	TriggerHelper.SpawnUnits(6404,"units/kush_champion_elephant",2,1);
+	TriggerHelper.SpawnUnits(6404,"units/kush/champion_elephant",2,1);
 	
 	//some intelligence -- temple
 	var cmpOwnership = Engine.QueryInterface(6594, IID_Ownership);
@@ -1080,7 +1142,9 @@ Trigger.prototype.QuestGoatReward = function(data)
 	let cmpPlayer = QueryPlayerIDInterface(1);
 	let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 	
-	cmpTechnologyManager.ResearchTechnology("armor_infantry_01");
+	cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
+	cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
+	cmpTechnologyManager.ResearchTechnology("cavalry_movement_speed");
 			
 	this.questGoatComplete = true;		
 	
@@ -1095,7 +1159,7 @@ Trigger.prototype.QuestCaravanReward = function(data)
 	//some swords
 	let cmpPlayer = QueryPlayerIDInterface(1);
 	let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
-	cmpTechnologyManager.ResearchTechnology("attack_infantry_melee_01");
+	cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
 	
 	this.ShowText(textQuestArchersGiven,"As you say","Fine");
 }
@@ -1120,11 +1184,20 @@ Trigger.prototype.QuestTempleReward = function(data)
 	
 	cmpTechnologyManager.ResearchTechnology("heal_rate");
 	cmpTechnologyManager.ResearchTechnology("heal_rate_2");
-	cmpTechnologyManager.ResearchTechnology("attack_champions_elite");
+	cmpTechnologyManager.ResearchTechnology("heal_range");
+	cmpTechnologyManager.ResearchTechnology("heal_range_2");
+	
+	cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
+	cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
+	cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_02");
+	cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
+	cmpTechnologyManager.ResearchTechnology("cavalry_health");
+	
+	/*cmpTechnologyManager.ResearchTechnology("attack_champions_elite");
 	cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_01");
 	cmpTechnologyManager.ResearchTechnology("armor_cav_01");
 	cmpTechnologyManager.ResearchTechnology("ranged_inf_skirmishers");
-	cmpTechnologyManager.ResearchTechnology("armor_infantry_02");
+	cmpTechnologyManager.ResearchTechnology("armor_infantry_02");*/
 	
 	
 	//spawn some healers
@@ -1137,8 +1210,8 @@ Trigger.prototype.QuestTempleReward = function(data)
 	//this.DoAfterDelay(60 * 1000,"RemovePriests",null);
 	
 	//spawn some special guards
-	TriggerHelper.SpawnUnits(spawn_site,"units/kush_champion_infantry_apedemak",5,1);
-	TriggerHelper.SpawnUnits(spawn_site,"units/kush_cavalry_javelinist_merc_e",5,1);
+	TriggerHelper.SpawnUnits(spawn_site,"units/kush/champion_infantry_apedemak",5,1);
+	TriggerHelper.SpawnUnits(spawn_site,"units/kush/cavalry_javelineer_merc_e",5,1);
 		
 	this.ShowText("Thank you for clearing the tombs of grave robbers! We are all in your debt! Please accept these warriors as a token of our thanks. We have also blessed your armor and weapons so that they may serve you even better!","Happy to help","Oh boy...");
 
@@ -1149,7 +1222,7 @@ Trigger.prototype.QuestRescueReward = function(data)
 	
 	//some intelligence
 	//spawn some warriors who join alexander
-	TriggerHelper.SpawnUnits(6404,"units/kush_champion_infantry",4,1);
+	TriggerHelper.SpawnUnits(6404,"units/kush/champion_infantry_archer",5,1);
 		
 	//some intelligence is revealed
 	let outpost_id = 6622;
@@ -1160,7 +1233,7 @@ Trigger.prototype.QuestRescueReward = function(data)
 	let cmpPlayer = QueryPlayerIDInterface(1);
 	let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 	
-	cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
+	cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
 			
 	this.ShowText(textQuestRescueComplete,"Happy to help","Oh boy...");
 }
@@ -1254,6 +1327,35 @@ Trigger.prototype.FlipAssets = function(data)
 }
 
 
+Trigger.prototype.SpawnBanditGuards = function(data)
+{
+	let size = 20;
+	let p = 2;
+	let templates = ["units/kush/infantry_spearman_e","units/kush/infantry_swordsman_a","units/kush/infantry_javelineer_merc_a","units/kush/infantry_spearman_b"];
+	
+	let patrol_sites = this.GetTriggerPoints(triggerPointsBanditGuards);
+	
+	for (let i = 0; i < size; i ++)
+	{
+		let spawn_site = pickRandom(patrol_sites);
+		
+		let units_i = TriggerHelper.SpawnUnits(spawn_site, pickRandom(templates), 1, p);
+		
+		//make patrol
+		this.PatrolOrderList(units_i,p,patrol_sites);
+		
+	}
+}
+
+
+Trigger.prototype.VictoryTextFn = function(n)
+{
+	return markForPluralTranslation(
+          "%(lastPlayer)s has won (game mode).",
+         "%(players)s and %(lastPlayer)s have won (game mode).",
+          n);
+}
+
 Trigger.prototype.BossHealerSpawn = function(data)
 {
 	let healers = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(8), "Healer").filter(TriggerHelper.IsInWorld);
@@ -1263,7 +1365,7 @@ Trigger.prototype.BossHealerSpawn = function(data)
 		
 	if (healers.length <= 2 && heros.length >= 1)
 	{
-		TriggerHelper.SpawnUnits(6919,"units/kush_support_healer_e",2,8);
+		TriggerHelper.SpawnUnits(6919,"units/kush/support_healer_e",2,8);
 	}	
 	
 	this.DoAfterDelay(30 * 1000,"BossHealerSpawn",0);
@@ -1332,6 +1434,10 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	//garrison towers
 	cmpTrigger.DoAfterDelay(5 * 1000,"GarrisonEntities",null);
 	
+	//spawn red guards
+	cmpTrigger.DoAfterDelay(5 * 1000,"SpawnBanditGuards",null);
+	
+	
 	//some state variables
 	
 	
@@ -1377,6 +1483,8 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	//ordered list of kush infantry 
 	cmpTrigger.kush_inf_ordered = ["units/kush_infantry_archer_b","units/kush_infantry_spearman_b","units/kush_infantry_archer_a","units/kush_infantry_spearman_a","units/kush_infantry_swordsman_b","units/kush_infantry_archer_e","units/kush_infantry_pikeman_b","units/kush_infantry_swordsman_a","units/kush_infantry_clubman_b","units/kush_champion_infantry","units/kush_infantry_pikeman_a","units/kush_cavalry_javelinist_merc_b","units/kush_infantry_javelinist_merc_b","units/kush_infantry_spearman_e","units/kush_infantry_clubman_a","units/kush_cavalry_javelinist_merc_a","units/kush_infantry_pikeman_e","units/kush_infantry_javelinist_merc_a","units/kush_infantry_swordsman_e","units/kush_cavalry_javelinist_merc_a","units/kush_infantry_javelinist_merc_e","units/kush_champion_infantry","units/kush_infantry_clubman_e","units/kush_champion_infantry_amun","units/kush_champion_cavalry","units/kush_champion_infantry_apedemak","units/kush_champion_elephant"];
 
+
+	//debug
 	/*cmpTrigger.DoAfterDelay(2 * 1000,"QuestGoatReward",null);
 	cmpTrigger.DoAfterDelay(4 * 1000,"QuestRescueReward",null);
 	cmpTrigger.DoAfterDelay(6 * 1000,"QuestCaravanReward",null);
@@ -1423,41 +1531,42 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
 		
-		cmpPlayer.AddStartingTechnology("phase_town_generic");
-		cmpPlayer.AddStartingTechnology("phase_city_generic");
+		cmpTechnologyManager.ResearchTechnology("phase_town_generic");
+		cmpTechnologyManager.ResearchTechnology("phase_city_generic");
 		
 		if (p == 3)
 		{
-			cmpPlayer.AddStartingTechnology("tower_armour");
-			cmpPlayer.AddStartingTechnology("tower_range");
-			cmpPlayer.AddStartingTechnology("tower_watch");
-			cmpPlayer.AddStartingTechnology("tower_murderholes");
-			cmpPlayer.AddStartingTechnology("tower_crenellations");
-			cmpPlayer.AddStartingTechnology("attack_infantry_ranged_01");
-			cmpPlayer.AddStartingTechnology("attack_infantry_ranged_02");
+			cmpTechnologyManager.ResearchTechnology("tower_health");
+			cmpTechnologyManager.ResearchTechnology("tower_range");
+			cmpTechnologyManager.ResearchTechnology("tower_watch");
+			cmpTechnologyManager.ResearchTechnology("tower_murderholes");
+			cmpTechnologyManager.ResearchTechnology("tower_crenellations");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
 		}
 		else if (p == 7)
 		{
-			cmpPlayer.AddStartingTechnology("armor_cav_01");
-			cmpPlayer.AddStartingTechnology("armor_cav_02");
-			cmpPlayer.AddStartingTechnology("armor_cav_02");
-			cmpPlayer.AddStartingTechnology("armor_cav_02");
-			cmpPlayer.AddStartingTechnology("heal_rate");
-			cmpPlayer.AddStartingTechnology("heal_rate_2");
-			cmpPlayer.AddStartingTechnology("heal_rate_2");
-			cmpPlayer.AddStartingTechnology("heal_range");
-			cmpPlayer.AddStartingTechnology("heal_range_2");
-			cmpPlayer.AddStartingTechnology("attack_cavalry_melee_01");
-			cmpPlayer.AddStartingTechnology("attack_cavalry_melee_02");
-			cmpPlayer.AddStartingTechnology("attack_cavalry_melee_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
+
+			cmpTechnologyManager.ResearchTechnology("heal_rate");
+			cmpTechnologyManager.ResearchTechnology("heal_rate_2");
+			cmpTechnologyManager.ResearchTechnology("heal_rate_2");
+			cmpTechnologyManager.ResearchTechnology("heal_range");
+			cmpTechnologyManager.ResearchTechnology("heal_range_2");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_03");
 		
 			
 			
 		}
 		else if (p == 1)
 		{
-			cmpPlayer.AddStartingTechnology("unlock_shared_los");
-			cmpPlayer.AddStartingTechnology("siege_bolt_accuracy");
+			cmpTechnologyManager.ResearchTechnology("unlock_shared_los");
+			cmpTechnologyManager.ResearchTechnology("siege_bolt_accuracy");
 			//cmpPlayer.AddStartingTechnology("vision_sibylline");
 			
 		}
