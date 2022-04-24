@@ -23,35 +23,56 @@ var unitFormations = [
 	"special/formations/column_closed"
 ];
 
+
 var disabledTemplates = (civ) => [
 	// Economic structures
-	"structures/" + civ + "_corral",
-	"structures/" + civ + "_farmstead",
-	"structures/" + civ + "_field",
-	"structures/" + civ + "_storehouse",
-	"structures/" + civ + "_rotarymill",
-	"structures/" + civ + "_market",
+	"structures/" + civ + "/corral",
+	"structures/" + civ + "/farmstead",
+	"structures/" + civ + "/field",
+	"structures/" + civ + "/storehouse",
+	"structures/" + civ + "/rotarymill",
+	"structures/" + civ + "/market",
 	
 	// Expansions
-	"structures/" + civ + "_civil_centre",
-	"structures/" + civ + "_military_colony",
+	"structures/" + civ + "/civil_centre",
+	"structures/" + civ + "/military_colony",
 
 	// Walls
-	"structures/" + civ + "_wallset_stone",
+	"structures/" + civ + "/wallset_stone",
 	"structures/rome_wallset_siege",
 	"other/wallset_palisade",
 
 	// Shoreline
-	"structures/" + civ + "_dock",
+	"structures/" + civ + "/dock",
 	"structures/brit/crannog",
-	"structures/cart_super_dock",
-	"structures/ptol_lighthouse",
+	"structures/cart/super_dock",
+	"structures/ptol/lighthouse",
 	
 	//villagers
-	"units/" + civ + "_support_female_citizen"
+	"units/" + civ + "/support_female_citizen"
 ];
 
 
+
+Trigger.prototype.VictoryTextFn = function(n)
+{
+	return markForPluralTranslation(
+          "%(lastPlayer)s has won (game mode).",
+         "%(players)s and %(lastPlayer)s have won (game mode).",
+          n);
+}
+
+Trigger.prototype.VictoryCheck = function(data)
+{
+	//check to make sure player 3 has at least 1 structure left
+	let units_darius = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "Unit").filter(TriggerHelper.IsInWorld);
+	warn("length = "+ units_darius.length);
+	if (units_darius.length <= 0)
+	{
+		TriggerHelper.SetPlayerWon(1,this.VictoryTextFn,this.VictoryTextFn);	
+	}
+	
+}
 
 Trigger.prototype.WalkAndFightClosestTarget = function(attacker,target_player,target_class)
 {
@@ -108,7 +129,7 @@ Trigger.prototype.FindClosestTarget = function(attacker,target_player,target_cla
 		if (!TriggerHelper.IsInWorld(target))
 			continue;
 
-		let targetDistance = DistanceBetweenEntities(attacker, target);
+		let targetDistance = PositionHelper.DistanceBetweenEntities(attacker, target);
 		if (targetDistance < minDistance)
 		{
 			closestTarget = target;
@@ -1689,13 +1710,13 @@ Trigger.prototype.DariusFlees = function(data)
 	cmpTrigger.inf_reserve_counter = 0;
 	
 	//give extra tech
-	cmpTrigger.DoAfterDelay(5 * 1000,"ResearchTechs",null);
+	//cmpTrigger.DoAfterDelay(5 * 1000,"ResearchTechs",null);
 	
 	//set diplomacy so that everyone is neutral with the village
 	cmpTrigger.DoAfterDelay(2 * 1000,"SetDiplomacy",null);
 	
 	//difficulty option
-	cmpTrigger.DoAfterDelay(2 * 1000,"DifficultyOption",null);
+	//cmpTrigger.DoAfterDelay(2 * 1000,"DifficultyOption",null);
 	
 	//debug
 	
@@ -1736,6 +1757,7 @@ Trigger.prototype.DariusFlees = function(data)
 	//cmpTrigger.DoAfterDelay(10 * 1000,"SpawnNavalInvasionAttack",null);
 
 
+	let cmpModifiersManager = Engine.QueryInterface(SYSTEM_ENTITY, IID_ModifiersManager);
 
 
 	for (let p of [1,2,3,4,5,6,7,8])
@@ -1757,72 +1779,104 @@ Trigger.prototype.DariusFlees = function(data)
 		
 		let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
-		cmpPlayer.AddStartingTechnology("phase_town_generic");
-		cmpPlayer.AddStartingTechnology("phase_city_generic");
+		cmpTechnologyManager.ResearchTechnology("phase_town_generic");
+		cmpTechnologyManager.ResearchTechnology("phase_city_generic");
 		
 		if (p == 1 || p == 3 || p == 4)
 		{
-		
-			cmpPlayer.AddStartingTechnology("unlock_shared_los");
+			//shared line of sight
+			cmpTechnologyManager.ResearchTechnology("unlock_shared_los");
 			
-			cmpPlayer.AddStartingTechnology("armor_hero_01");
-			cmpPlayer.AddStartingTechnology("armor_cav_01");
-			cmpPlayer.AddStartingTechnology("armor_cav_02");
-			cmpPlayer.AddStartingTechnology("attack_cavalry_melee_01");
-			cmpPlayer.AddStartingTechnology("attack_cavalry_melee_02");
-			cmpPlayer.AddStartingTechnology("attack_soldiers_will");
-			cmpPlayer.AddStartingTechnology("attack_infantry_ranged_01");
-			cmpPlayer.AddStartingTechnology("attack_infantry_ranged_02");
-			cmpPlayer.AddStartingTechnology("armor_infantry_01");
-			cmpPlayer.AddStartingTechnology("armor_infantry_02");
-			cmpPlayer.AddStartingTechnology("attack_infantry_melee_01");
-			cmpPlayer.AddStartingTechnology("attack_infantry_melee_02");
-			cmpPlayer.AddStartingTechnology("heal_rate");
-			cmpPlayer.AddStartingTechnology("heal_rate_2");
-			cmpPlayer.AddStartingTechnology("heal_range");
-			cmpPlayer.AddStartingTechnology("heal_range_2");
-			cmpPlayer.AddStartingTechnology("attack_champions_elite");
-			cmpPlayer.AddStartingTechnology("ranged_inf_skirmishers");
-			cmpPlayer.AddStartingTechnology("ranged_inf_irregulars");
-			cmpPlayer.AddStartingTechnology("siege_bolt_accuracy");
-			cmpPlayer.AddStartingTechnology("mauryans/special_archery_tradition");
+			//attack 
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_03");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_03");
+			
+			//armor
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_03");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_03");
+			
+			//healers are important
+			cmpTechnologyManager.ResearchTechnology("heal_rate");
+			cmpTechnologyManager.ResearchTechnology("heal_rate_2");
+			cmpTechnologyManager.ResearchTechnology("heal_range");
+			cmpTechnologyManager.ResearchTechnology("heal_range_2");
+			
+			//some specials
+			cmpTechnologyManager.ResearchTechnology("cavalry_health");
+			cmpTechnologyManager.ResearchTechnology("cavalry_movement_speed");
+			cmpTechnologyManager.ResearchTechnology("attack_soldiers_will");
+			cmpTechnologyManager.ResearchTechnology("siege_bolt_accuracy");
+			cmpTechnologyManager.ResearchTechnology("archer_attack_spread");
+			
+			if (p == 4 || p == 1)
+			{
+				//some specials just for reserve troops
+				cmpTechnologyManager.ResearchTechnology("agoge");
+				cmpTechnologyManager.ResearchTechnology("nisean_horses");
+				cmpTechnologyManager.ResearchTechnology("silvershields");
+			}
+			
+			//healer bonuses
+			cmpModifiersManager.AddModifiers("Healer Rate Bonus", {
+							"Heal/Interval": [{ "affects": ["Healer"], "multiply": 0.5}],
+						}, cmpPlayer.entity);
+						
+			cmpModifiersManager.AddModifiers("Healer Range Bonus", {
+							"Heal/Range": [{ "affects": ["Healer"], "multiply": 1.5}],
+						}, cmpPlayer.entity);
+						
+			cmpModifiersManager.AddModifiers("Healer Vision Bonus", {
+							"Vision/Range": [{ "affects": ["Healer"], "multiply": 1.5}],
+						}, cmpPlayer.entity);
+						
+			//hero bonuses
+			cmpModifiersManager.AddModifiers("Hero Piercing Armor Bonus", {
+							"Resistance/Entity/Damage/Pierce": [{ "affects": ["Hero"], "add": 6}],
+						}, cmpPlayer.entity);
+			cmpModifiersManager.AddModifiers("Hero Hack Armor Bonus", {
+							"Resistance/Entity/Damage/Hack": [{ "affects": ["Hero"], "add": 6}],
+						}, cmpPlayer.entity);
+				cmpModifiersManager.AddModifiers("Hero Crush Armor Bonus", {
+							"Resistance/Entity/Damage/Crush": [{ "affects": ["Hero"], "add": 10}],
+						}, cmpPlayer.entity);
 		}
 		else if (p == 2)
 		{
-			cmpPlayer.AddStartingTechnology("armor_hero_01");
-			cmpPlayer.AddStartingTechnology("armor_cav_01");
-			//cmpPlayer.AddStartingTechnology("armor_cav_02");
-			cmpPlayer.AddStartingTechnology("attack_cavalry_melee_01");
-			cmpPlayer.AddStartingTechnology("attack_cavalry_melee_02");
-			cmpPlayer.AddStartingTechnology("armor_infantry_01");
-			//cmpPlayer.AddStartingTechnology("armor_infantry_02");
-			cmpPlayer.AddStartingTechnology("attack_soldiers_will");
-			cmpPlayer.AddStartingTechnology("attack_infantry_melee_01");
-			//cmpPlayer.AddStartingTechnology("attack_infantry_melee_02");
+			
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
+			
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
+			
 		}
 		else if (p == 5)
 		{
-			cmpPlayer.AddStartingTechnology("armor_infantry_01");
-			//cmpPlayer.AddStartingTechnology("armor_infantry_02");
-			cmpPlayer.AddStartingTechnology("attack_infantry_melee_01");
-			//cmpPlayer.AddStartingTechnology("attack_infantry_ranged_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
 
 		}
 		else if (p == 6)
 		{
-			cmpPlayer.AddStartingTechnology("armor_infantry_01");
-			//cmpPlayer.AddStartingTechnology("armor_infantry_02");
-			cmpPlayer.AddStartingTechnology("attack_infantry_melee_01");
-			cmpPlayer.AddStartingTechnology("attack_infantry_ranged_01");
-
-			//cmpPlayer.AddStartingTechnology("armor_cav_01");
-			//cmpPlayer.AddStartingTechnology("attack_cavalry_melee_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
 		}
 		else if (p == 7)
 		{
-			//cmpPlayer.AddStartingTechnology("armor_infantry_01");
-			//cmpPlayer.AddStartingTechnology("attack_infantry_melee_01");
-			cmpPlayer.AddStartingTechnology("attack_infantry_ranged_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
 		}
 		
 		
@@ -1834,6 +1888,14 @@ Trigger.prototype.DariusFlees = function(data)
 		"delay": 30 * 1000,
 		"interval": 20 * 1000,
 	});
+	
+	cmpTrigger.RegisterTrigger("OnInterval", "VictoryCheck", {
+		"enabled": true,
+		"delay": 10 * 1000,
+		"interval": 20 * 1000,
+	});
+	
+	
 	
 	// Activate all possible triggers
 	let data = { "enabled": true };
