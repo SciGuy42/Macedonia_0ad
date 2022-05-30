@@ -8,8 +8,8 @@
 		<SunRotation angle="-1.57141"/>
 		<AmbientColor r="0.564706" g="0.576471" b="0.54902"/>
 		<Fog>
-			<FogFactor>0.004</FogFactor>
-			<FogThickness>0.26</FogThickness>
+			<FogFactor>0.00161133</FogFactor>
+			<FogThickness>0.292969</FogThickness>
 			<FogColor r="0.8" g="0.8" b="0.8"/>
 		</Fog>
 		<Water>
@@ -18,8 +18,8 @@
 				<Color r="0" g="0.0431373" b="0.282353"/>
 				<Tint r="0.466667" g="0.764706" b="0.858824"/>
 				<Height>19.9</Height>
-				<Waviness>2</Waviness>
-				<Murkiness>0.82</Murkiness>
+				<Waviness>1.00586</Waviness>
+				<Murkiness>1</Murkiness>
 				<WindAngle>0</WindAngle>
 			</WaterBody>
 		</Water>
@@ -32,8 +32,8 @@
 		</Postproc>
 	</Environment>
 	<Camera>
-		<Position x="524.575" y="109.999" z="459.15"/>
-		<Rotation angle="0.262606"/>
+		<Position x="577.712" y="141.116" z="482.825"/>
+		<Rotation angle="0"/>
 		<Declination angle="0.610865"/>
 	</Camera>
 	<ScriptSettings><![CDATA[
@@ -46,7 +46,6 @@
   "Name": "Macedonia 1 - Consolidating Control (359 BC)",
   "Nomad": false,
   "PlayerData": [
-    "",
     {
       "Civ": "mace",
       "Name": "Philip II",
@@ -75,10 +74,10 @@
       "Civ": "mace",
       "Name": "Rebelious Prince",
       "Resources": {
-        "food": 1000,
-        "metal": 1000,
-        "stone": 1000,
-        "wood": 1000
+        "food": 0,
+        "metal": 0,
+        "stone": 0,
+        "wood": 0
       },
       "StartingCamera": {
         "Position": {
@@ -103,6 +102,12 @@
         "r": 86
       },
       "Name": "Hillside Defenders",
+      "Resources": {
+        "food": 0,
+        "metal": 0,
+        "stone": 0,
+        "wood": 0
+      },
       "Team": 1
     }
   ],

@@ -50,6 +50,8 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 {
 	//warn("The OnOwnershipChanged event happened with the following data:");
 	//warn(uneval(data));
+	
+
 };
 
 Trigger.prototype.PlayerCommandAction = function(data)
@@ -383,6 +385,26 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	
 }
 
+
+Trigger.prototype.VictoryTextFn = function(n)
+{
+	return markForPluralTranslation(
+          "%(lastPlayer)s has won (game mode).",
+         "%(players)s and %(lastPlayer)s have won (game mode).",
+          n);
+}
+
+Trigger.prototype.VictoryCheck = function(data)
+{
+	//check to make sure player 3 has at least 1 structure left
+	let ccs = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "CivilCentre").filter(TriggerHelper.IsInWorld);
+	if (ccs.length <= 0)
+	{
+		TriggerHelper.SetPlayerWon(1,this.VictoryTextFn,this.VictoryTextFn);	
+	}
+	
+}
+
 Trigger.prototype.RangeAction = function(data)
 {
 	//warn("The OnRange event happened with the following data:");
@@ -420,7 +442,13 @@ Trigger.prototype.RangeAction = function(data)
 	//schedule cavalry attack
 	cmpTrigger.DoAfterDelay(50 * 1000,"CavalryAttack",null);
 	
+	cmpTrigger.RegisterTrigger("OnInterval", "VictoryCheck", {
+		"enabled": true,
+		"delay": 15 * 1000,
+		"interval": 15 * 1000,
+	});
 	
+	//disable templates
 
 	/*cmpTrigger.RegisterTrigger("OnInterval", "IntervalActionCavAttack", {
 		"enabled": true,
