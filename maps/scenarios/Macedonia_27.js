@@ -26,30 +26,30 @@ var unitFormations = [
 
 var disabledTemplates = (civ) => [
 	// Economic structures
-	"structures/" + civ + "_corral",
-	"structures/" + civ + "_farmstead",
-	"structures/" + civ + "_field",
-	"structures/" + civ + "_storehouse",
-	"structures/" + civ + "_rotarymill",
-	"structures/" + civ + "_market",
+	"structures/" + civ + "/corral",
+	"structures/" + civ + "/farmstead",
+	"structures/" + civ + "/field",
+	"structures/" + civ + "/storehouse",
+	"structures/" + civ + "/rotarymill",
+	"structures/" + civ + "/market",
 	
 	// Expansions
-	"structures/" + civ + "_civil_centre",
-	"structures/" + civ + "_military_colony",
+	"structures/" + civ + "/civil_centre",
+	"structures/" + civ + "/military_colony",
 
 	// Walls
-	"structures/" + civ + "_wallset_stone",
+	"structures/" + civ + "/wallset_stone",
 	"structures/rome_wallset_siege",
 	"other/wallset_palisade",
 
 	// Shoreline
-	"structures/" + civ + "_dock",
+	"structures/" + civ + "/dock",
 	"structures/brit/crannog",
-	"structures/cart_super_dock",
-	"structures/ptol_lighthouse",
+	"structures/cart/super_dock",
+	"structures/ptol/lighthouse",
 	
 	//villagers
-	"units/" + civ + "_support_female_citizen"
+	"units/" + civ + "/support_female_citizen"
 ];
 
 
@@ -97,7 +97,7 @@ Trigger.prototype.FindClosestTarget = function(attacker,target_player,target_cla
 		if (!TriggerHelper.IsInWorld(target))
 			continue;
 
-		let targetDistance = DistanceBetweenEntities(attacker, target);
+		let targetDistance = PositionHelper.DistanceBetweenEntities(attacker, target);
 		if (targetDistance < minDistance)
 		{
 			closestTarget = target;
@@ -245,7 +245,7 @@ Trigger.prototype.SpawnStructureResponseAttack = function(data)
 }
 
 
-Trigger.prototype.ResearchTechs = function(data)
+/*Trigger.prototype.ResearchTechs = function(data)
 {
 	for (let p of [1])
 	{
@@ -281,7 +281,7 @@ Trigger.prototype.ResearchTechs = function(data)
 	//cmpTechnologyManager.ResearchTechnology("trade_gain_02");
 	//cmpTechnologyManager.ResearchTechnology("trade_gain_02");
 	
-}
+}*/
 
 Trigger.prototype.OwnershipChangedAction = function(data)
 {
@@ -306,7 +306,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				//see whether to capture it
 				let traders = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(1),"Trader").filter(TriggerHelper.IsInWorld);
 				
-				if (traders.length < 10)
+				if (traders.length < 16)
 				{
 					TriggerHelper.SpawnUnits(data.entity,"units/mace/support_trader",1,1);
 				}
@@ -315,7 +315,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	}
 	
 	//check structures
-	if (data.from == 2 && data.to == -1)
+	if (data.from == 2 && (data.to == -1 || data.to == 1))
 	{
 		let id = Engine.QueryInterface(data.entity, IID_Identity);
 		if (id)
@@ -323,6 +323,9 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			//check if structure
 			if (id.classesList.indexOf("Structure") >= 0)
 			{
+				//warn(uneval(id));
+				
+				
 				//possibly send an attack from watch
 				if (Math.random() < this.responseSquadProb)
 				{
@@ -405,156 +408,32 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 					this.maxWatchPop = Math.floor(this.maxWatchPop * 0.995);
 				}
 				
-				//warn("max watch pop = "+this.maxWatchPop);
 			}
-		}
 		
 		
-	}
-	
-	
-	//check if darius is dead
-	/*if (data.from == 3 && data.to == -1)
-	{
-		this.dariusDead = true;
-	}
-	
-	//check if player 2 or 6 has lost a structure
-	if ((data.from == 2 || data.from == 6) && data.to == -1 && data.entity != this.lastFoundation)
-	{
-		let id = Engine.QueryInterface(data.entity, IID_Identity);
-	//	warn(uneval(data));
-	//	warn(uneval(id));
-		if (id != null && id.classesList.indexOf("Structure") >= 0)
-		{
-			
-			//with small probability spawn mercenary squad
-			if (Math.random() < this.mercSpawnProb)
+			//check if civil centre
+			if (id.classesList.indexOf("CivilCentre") >= 0)
 			{
-				this.DoAfterDelay(5 * 1000,"SpawnMercenarySquad",null);
-				//warn("spawning mercs");
+				TriggerHelper.SetPlayerWon(1,this.VictoryTextFn,this.VictoryTextFn);	
 				
-				//decay
-				this.mercSpawnProb = this.mercSpawnProb * this.mercSpawnProbDecay;
-				
-				if (this.mercSpawnProb < 0.2)
-				{
-					this.mercSpawnProb = 0.2;
-				}
-				
-				//warn("new prob = "+uneval(this.mercSpawnProb));
 			}
-		}
-	}
-	
-	//check if player 5 has lost all units
-	if (data.from == 5 && data.to == -1)
-	{
-		let cmpPlayer = QueryPlayerIDInterface(5);
-		let pop = cmpPlayer.GetPopulationCount();
-
-		if (pop == 0)
-		{
-			this.ShowText("The assasins are dead. Darius is severely wounded and as he lay dying, he utters his final words: 'Avenge me! The empire is yours, but you must defeat Bessus. My loyal followers will help you setup camp. You must destroy the traitor!","Sounds good","OK");
 			
-			//spawn servants
-			let dariusID = 3328;
-			let alexanderID = 3287;
-			
-			TriggerHelper.SpawnUnits(alexanderID,"units/pers_infantry_archer_b",10,1);
-			TriggerHelper.SpawnUnits(alexanderID,"units/pers_infantry_spearman_b",10,1);
-			TriggerHelper.SpawnUnits(alexanderID,"units/pers_infantry_javelinist_a",5,1);
-			TriggerHelper.SpawnUnits(alexanderID,"units/pers_support_healer_e",3,1);
-			
-			if (this.dariusDead == false)
+			//captured structures are automatically destroyed
+			if (data.to == 1)
 			{
-				//kill darius if alive
-				let health_u = Engine.QueryInterface(dariusID, IID_Health);
+				let health_u = Engine.QueryInterface(data.entity, IID_Health);
 				health_u.Kill();
-			
-				this.dariusDead = true;
-			}
-			
-		}
-	}*/
-	
-	/*if (this.specialAttackTriggered == false)
-	{
-		if ((data.from == 5 || data.from == 6) && data.to == -1)
-		{
-			//check if strucutre
-			let id = Engine.QueryInterface(data.entity, IID_Identity);
-			//warn(uneval(id));
-			if (id != null && id.classesList.indexOf("Structure") >= 0)
-			{
-				if (data.from == 5)
-				{
-					//spawn attack from player 6
-					this.DoAfterDelay(5 * 1000,"SpecialArcadianAssault",null);
-					this.specialAttackTriggered = true;
-					
-				}
-				else if (data.from == 6)
-				{
-					//spawn attack from player 5
-					this.DoAfterDelay(5 * 1000,"SpecialAchaeanAssault",null);
-					this.specialAttackTriggered = true;
-				}
 			}
 		}
-	}
-	*/
-	
-	/*warn("The OnOwnershipChanged event happened with the following data:");
-	warn(uneval(data));
-	
-	if (data.from == 5 && data.to == -1)
-	{
-		let id = Engine.QueryInterface(data.entity, IID_Identity);
-		if (id.classesList.indexOf("Fortress") >= 0)
-		{
-			warn("Fortress destroyed!");
-			this.CavalryAttack();
-		}
-	}*/
-	
-	//let id = Engine.QueryInterface(data.entity, IID_Identity);
-	//warn(uneval(id));
-	
-	/*if (data.from == 0 && data.to == 1)
-	{
-		let id = Engine.QueryInterface(data.entity, IID_Identity);
-		warn(uneval(id));
 		
-		if (id.classesList.indexOf("Embassy") >= 0)
-		{
-			//captured camp, spawn some balistas
-			TriggerHelper.SpawnUnits(data.entity,"units/mace/siege_oxybeles_packed",8,1);
-			
-			//spawn the princess
-			TriggerHelper.SpawnUnits(data.entity,"units/kush_hero_amanirenas",1,1);
-		}
-		else if (id.classesList.indexOf("Pyramid") >= 0)
-		{
-			let cmpPlayer = QueryPlayerIDInterface(1);
-			let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
-			
-			cmpTechnologyManager.ResearchTechnology("tower_armour");
-			cmpTechnologyManager.ResearchTechnology("tower_range");
-			cmpTechnologyManager.ResearchTechnology("tower_watch");
-			cmpTechnologyManager.ResearchTechnology("tower_murderholes");
-			cmpTechnologyManager.ResearchTechnology("tower_crenellations");
-			cmpTechnologyManager.ResearchTechnology("armor_infantry_01");
-			cmpTechnologyManager.ResearchTechnology("armor_cav_01");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-				
-		}
-	}*/
+		
+	}
 	
-	
-	
-
-	
+	//check if alexander
+	if (data.entity == 2517)
+	{
+			TriggerHelper.SetPlayerWon(2,this.VictoryTextFn,this.VictoryTextFn);	
+	}
 };
 
 Trigger.prototype.PlayerCommandAction = function(data)
@@ -564,6 +443,30 @@ Trigger.prototype.PlayerCommandAction = function(data)
 };
 
 
+Trigger.prototype.StructureDecayCheck = function(data)
+{
+	//warn("structure decay check");
+	for (let p of [1])
+	{
+		let structs = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p),"Structure").filter(TriggerHelper.IsInWorld);
+
+		for (let s of structs)
+		{
+			var cmpCapt = Engine.QueryInterface(s, IID_Capturable);
+			if (cmpCapt)
+			{
+				let c_points = cmpCapt.GetCapturePoints();
+				
+				if (c_points[0] > 0)
+				{
+					c_points[p] += c_points[0];
+					c_points[0] = 0;
+					cmpCapt.SetCapturePoints(c_points);
+				}
+			}
+		}
+	}
+}
 
 
 //garison AI entities with archers
@@ -656,20 +559,6 @@ Trigger.prototype.GarrisonEntities = function(data)
 			}
 		}
 		
-		//wall towers
-		let towers_w = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p), "Defensive+Tower+!Outpost+!GarrisonTower").filter(TriggerHelper.IsInWorld);
-		
-		for (let e of towers_w)
-		{
-			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/pers/champion_infantry",2,owner);
-					
-			for (let a of archers_e)
-			{
-				let cmpUnitAI = Engine.QueryInterface(a, IID_UnitAI);
-				cmpUnitAI.Garrison(e,true);
-			}
-		}
 		
 		//camps
 		let camps_p = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p),"MercenaryCamp").filter(TriggerHelper.IsInWorld);
@@ -696,18 +585,13 @@ Trigger.prototype.SpawnPatrolReinforcements = function(data)
 	let pop = cmpPlayer.GetPopulationCount();
 	//warn("pop = "+pop);
 	
-	//compute points
-	//first collect points
-		
-	//traders arrived
-	//warn("Traders = "+this.numTradersArrived);
 	
 	//fields
 	let p = 2;
 	let fields = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Field").filter(TriggerHelper.IsInWorld);
 	//warn("Fields = "+fields.length);
 		
-	//fields
+	//houses
 	let houses = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "House").filter(TriggerHelper.IsInWorld);
 	//warn("Houses = "+houses.length);
 		
@@ -720,11 +604,11 @@ Trigger.prototype.SpawnPatrolReinforcements = function(data)
 	//warn("Military = "+military.length);
 		
 	//towers
-	let towers = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "DefenseTower").filter(TriggerHelper.IsInWorld);
+	let towers = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "StoneTower").filter(TriggerHelper.IsInWorld);
 	//warn("DefenseTower = "+towers.length);
 			
 	//spawn units based on points
-	let points = 2*houses.length + 8*fields.length + 10*economic.length + 5*military.length + 1*towers.length + 20*this.numTradersArrived;
+	let points = 5*houses.length + 8*fields.length + 10*economic.length + 5*military.length + 1*towers.length + 20*this.numTradersArrived;
 		
 	//warn("points = "+points);
 		
@@ -778,6 +662,17 @@ Trigger.prototype.SpawnPatrolReinforcements = function(data)
 	
 	//repeat
 	this.DoAfterDelay(30 * 1000,"SpawnPatrolReinforcements",null);
+	this.spawnPatrolReinforcementsCounter += 1;
+	//warn("patrol counter = "+this.spawnPatrolReinforcementsCounter);
+	
+	//check if we havve run  out of time and then  start attacks
+	if (this.spawnPatrolReinforcementsCounter == 120) //I got to cc on 98
+	{
+		//warn("we are doomed");
+		this.ShowText("We must hurry and destroy their civil centre! Their reinforcements are on the way!","Oh no","OK");
+		
+		this.DoAfterDelay(5 * 1000,"RepeatSpawnCavalryAttack",null);
+	}
 }
 
 
@@ -864,7 +759,7 @@ Trigger.prototype.SpawnSupplyConvoy = function(data)
 	
 	let num_traders = 1 + Math.round(Math.random()*4);
 	
-	let units_i = TriggerHelper.SpawnUnits(site,"units/pers_support_trader",num_traders,p);
+	let units_i = TriggerHelper.SpawnUnits(site,"units/pers/support_trader",num_traders,p);
 	
 	//give order to march
 	for (let u of units_i)
@@ -1015,6 +910,80 @@ Trigger.prototype.PatrolOrder = function(units,p,A,B)
 }
 
 
+Trigger.prototype.RepeatSpawnCavalryAttack = function(data)
+{
+	this.SpawnFinalCavalryAttack();
+	
+	
+	
+	this.DoAfterDelay(5 * 1000,"RepeatSpawnCavalryAttack",null);
+	
+}
+
+
+Trigger.prototype.VictoryTextFn = function(n)
+{
+	return markForPluralTranslation(
+          "%(lastPlayer)s has won (game mode).",
+         "%(players)s and %(lastPlayer)s have won (game mode).",
+          n);
+}
+
+Trigger.prototype.SpawnFinalCavalryAttack = function(data)
+{
+	let p = 6;
+	
+	if (this.HasUnits(p) == false)
+	{
+		warn("[WARN] Trying to spawn units for player who may be dead, abort.");
+		return;
+	}
+
+	let current_cavalry = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Cavalry").filter(TriggerHelper.IsInWorld);
+	if (current_cavalry.length > 400)
+		return;
+		
+		
+	let attack_size = 30;
+	let cav_templates = ["units/pers/cavalry_axeman_e","units/pers/cavalry_spearman_e","units/pers/cavalry_javelineer_e","units/pers/cavalry_archer_e","units/pers/champion_cavalry","units/pers/champion_chariot","units/pers/champion_elephant"];
+
+	for (let i = 0; i < attack_size; i ++)
+	{
+		let spawn_site = pickRandom(this.GetTriggerPoints(triggerPointSupplyConvoy));
+		let attackers = TriggerHelper.SpawnUnits(spawn_site,pickRandom(cav_templates),1,p);
+		
+		//make attack
+		let target_classes = ["Structure","Unit","Hero"];
+		
+		let cmpUnitAI = Engine.QueryInterface(attackers[0], IID_UnitAI);
+		if (cmpUnitAI)
+		{
+			if (cmpUnitAI.IsIdle())
+			{
+				this.WalkAndFightClosestTarget(attackers[0],1,pickRandom(target_classes));
+			}
+		}
+		
+		/*let target = this.FindClosestTarget(attackers[0],1,pickRandom(target_classes));
+		
+		let target_pos = TriggerHelper.GetEntityPosition2D(target);
+	
+		ProcessCommand(p, {
+			"type": "attack-walk",
+			"entities": attackers,
+			"x": target_pos.x,
+			"z": target_pos.y,
+			"queued": true,
+			"targetClasses": {
+				"attack": unitTargetClass
+			},
+			"allowCapture": false
+		});*/
+	}
+	
+}
+
+
 
 Trigger.prototype.SpawnCavalryAttack = function(data)
 {
@@ -1024,9 +993,17 @@ Trigger.prototype.SpawnCavalryAttack = function(data)
 		return;
 	}
 	
+	
+	
+	
 	//check if we have structures left, if not, end
 	let p = 6;
 	let structures = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "CivilCentre").filter(TriggerHelper.IsInWorld);
+	
+	let current_cavalry = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(6), "Cavalry").filter(TriggerHelper.IsInWorld);
+	
+	if (current_cavalry.length > 400)
+		return;
 	
 	if (structures.length == 0)
 		return;
@@ -1046,7 +1023,7 @@ Trigger.prototype.SpawnCavalryAttack = function(data)
 	let num_attackers = 10 + this.pointsRunningAvg / 20;
 	
 	//types
-	let cav_templates = ["units/pers_cavalry_swordsman_e","units/pers_cavalry_spearman_e","units/pers_cavalry_javelinist_e"];
+	let cav_templates = ["units/pers/cavalry_axeman_e","units/pers/cavalry_spearman_e","units/pers/cavalry_javelineer_e"];
 	let attackers = [];
 	
 	//spawn attackers
@@ -1085,122 +1062,6 @@ Trigger.prototype.SpawnCavalryAttack = function(data)
 	});
 }
 
-Trigger.prototype.ArcadianAttack = function(data)
-{
-	//check if we have camps
-	let p = 6;
-	let structures = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "MercenaryCamp").filter(TriggerHelper.IsInWorld);
-	
-	if (structures.length == 0)
-		return;
-		
-	let spawn_site = pickRandom(structures);
-	
-	let num_attackers = this.arcadiaAttackLevel;
-	let attackers = [];
-	
-	//spawn attackers
-	for (let i = 0; i < num_attackers; ++i)
-	{
-		
-		if (Math.random() < 1.0 - this.arcadiaSiegeProb)
-		{
-			let units_i = TriggerHelper.SpawnUnits(spawn_site,pickRandom(this.arcadiaAttackTemplates),1,p);
-			attackers.push(units_i[0]);
-		}
-		else 
-		{
-			//siege
-			let units_i = TriggerHelper.SpawnUnits(spawn_site,"units/mace/siege_lithobolos_packed",1,p);
-			attackers.push(units_i[0]);
-		}
-	}
-	
-	
-	//set formation
-	TriggerHelper.SetUnitFormation(p, attackers, pickRandom(unitFormations));
-
-	//find target
-	let target = this.FindClosestTarget(attackers[0],1,siegeTargetClass);
-	let target_pos = TriggerHelper.GetEntityPosition2D(target);
-	
-	ProcessCommand(p, {
-		"type": "attack-walk",
-		"entities": attackers,
-		"x": target_pos.x,
-		"z": target_pos.y,
-		"queued": true,
-		"targetClasses": {
-			"attack": unitTargetClass
-		},
-		"allowCapture": false
-	});
-	
-	let next_attack_interval_sec = this.arcadiaAttackInterval + Math.floor(Math.random() * 120);
-	//warn("Next attack = " + uneval(next_attack_interval_sec));
-	this.arcadiaAttackLevel += 2;
-	
-	this.DoAfterDelay(next_attack_interval_sec * 1000,"ArcadianAttack",null);
-}
-
-
-Trigger.prototype.AchaeanAttack = function(data)
-{
-	//check if we have camps
-	let p = 5;
-	let structures = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Fortress").filter(TriggerHelper.IsInWorld);
-	
-	if (structures.length == 0)
-		return;
-		
-	let spawn_site = pickRandom(structures);
-	
-	let num_attackers = this.achaeanAttackLevel;
-	let attackers = [];
-	
-	//spawn attackers
-	for (let i = 0; i < num_attackers; ++i)
-	{
-		
-		if (Math.random() < 1.0 - this.achaeanSiegeProb)
-		{
-			let units_i = TriggerHelper.SpawnUnits(spawn_site,pickRandom(this.achaeanAttackTemplates),1,p);
-			attackers.push(units_i[0]);
-		}
-		else 
-		{
-			//siege
-			let units_i = TriggerHelper.SpawnUnits(spawn_site,"units/athen/siege_oxybeles_packed",1,p);
-			attackers.push(units_i[0]);
-		}
-	}
-	
-	
-	//set formation
-	TriggerHelper.SetUnitFormation(p, attackers, pickRandom(unitFormations));
-
-	//find target
-	let target = this.FindClosestTarget(attackers[0],1,siegeTargetClass);
-	let target_pos = TriggerHelper.GetEntityPosition2D(target);
-	
-	ProcessCommand(p, {
-		"type": "attack-walk",
-		"entities": attackers,
-		"x": target_pos.x,
-		"z": target_pos.y,
-		"queued": true,
-		"targetClasses": {
-			"attack": unitTargetClass
-		},
-		"allowCapture": false
-	});
-	
-	let next_attack_interval_sec = this.achaeanAttackInterval + Math.floor(Math.random() * 120);
-	//warn("Next attack = " + uneval(next_attack_interval_sec));
-	this.arcadiaAttackLevel += 4;
-	
-	this.DoAfterDelay(next_attack_interval_sec * 1000,"AchaeanAttack",null);
-}
 
 
 Trigger.prototype.SpawnAchaeanPatrol = function(data)
@@ -1425,7 +1286,7 @@ Trigger.prototype.SetDiplomacy = function(data)
 
 
 	//some templates
-	cmpTrigger.patrolTemplates = ["units/pers/arstibara","units/pers/champion_infantry","units/pers_kardakes_hoplite", "units/pers/kardakes_skirmisher","units/pers_infantry_archer_e"];
+	cmpTrigger.patrolTemplates = ["units/pers/arstibara","units/pers/champion_infantry","units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher","units/pers/infantry_archer_e"];
 
 	//some variables
 	cmpTrigger.alliesEvent = false;
@@ -1437,13 +1298,11 @@ Trigger.prototype.SetDiplomacy = function(data)
 	//some state variables
 	cmpTrigger.numTradersArrived = 0;
 	cmpTrigger.pointsRunningAvg = 300;
+	cmpTrigger.spawnPatrolReinforcementsCounter = 0;
 	
 	//garrison towers
 	warn("Garrisoning entities");
 	cmpTrigger.DoAfterDelay(5 * 1000,"GarrisonEntities",null);
-	
-	//start techs
-	cmpTrigger.DoAfterDelay(1 * 1000,"ResearchTechs",null);
 	
 	//set diplomancy
 	cmpTrigger.DoAfterDelay(2 * 1000,"SetDiplomacy",null);
@@ -1453,6 +1312,11 @@ Trigger.prototype.SetDiplomacy = function(data)
 	
 	//repeat action to collect points and spawn reinforcements
 	cmpTrigger.DoAfterDelay(30 * 1000,"SpawnPatrolReinforcements",null);
+
+	
+
+	let cmpModifiersManager = Engine.QueryInterface(SYSTEM_ENTITY, IID_ModifiersManager);
+
 
 	for (let p of [1,2,3,4])
 	{
@@ -1464,43 +1328,61 @@ Trigger.prototype.SetDiplomacy = function(data)
 			
 		let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
-		cmpPlayer.AddStartingTechnology("phase_town_generic");
-		cmpPlayer.AddStartingTechnology("phase_city_generic");
+		cmpTechnologyManager.ResearchTechnology("phase_town_generic");
+		cmpTechnologyManager.ResearchTechnology("phase_city_generic");
 		
 		if (p == 1)
 		{
-			cmpPlayer.AddStartingTechnology("trade_commercial_treaty");
-			cmpPlayer.AddStartingTechnology("trade_gain_01");
-			cmpPlayer.AddStartingTechnology("trade_gain_02");
-			cmpPlayer.AddStartingTechnology("trade_convoys_speed");
-			cmpPlayer.AddStartingTechnology("unlock_shared_los");
+			cmpTechnologyManager.ResearchTechnology("trade_commercial_treaty");
+			cmpTechnologyManager.ResearchTechnology("trade_gain_01");
+			cmpTechnologyManager.ResearchTechnology("trade_gain_02");
+			cmpTechnologyManager.ResearchTechnology("unlock_shared_los");
 			
-			//add some battle tech
-			cmpPlayer.AddStartingTechnology("armor_cav_01");
-			cmpPlayer.AddStartingTechnology("speed_cavalry_01");
-			cmpPlayer.AddStartingTechnology("speed_cavalry_02");
-			cmpPlayer.AddStartingTechnology("armor_infantry_01");
-			cmpPlayer.AddStartingTechnology("armor_infantry_02");
-			cmpPlayer.AddStartingTechnology("armor_hero_01");
-			cmpPlayer.AddStartingTechnology("heal_rate");
-			cmpPlayer.AddStartingTechnology("heal_rate_2");
-			cmpPlayer.AddStartingTechnology("heal_range");
-			cmpPlayer.AddStartingTechnology("heal_range_2");
-			cmpPlayer.AddStartingTechnology("ranged_inf_skirmishers");
-			cmpPlayer.AddStartingTechnology("attack_champions_elite");
-
+			//add some armor
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
 			
+			//healing is better
+			cmpTechnologyManager.ResearchTechnology("heal_rate");
+			cmpTechnologyManager.ResearchTechnology("heal_rate_2");
+			cmpTechnologyManager.ResearchTechnology("heal_range");
+			cmpTechnologyManager.ResearchTechnology("heal_range_2");
+			
+			//cavalry speed and health
+			cmpTechnologyManager.ResearchTechnology("cavalry_movement_speed");
+			cmpTechnologyManager.ResearchTechnology("cavalry_health");
+			cmpTechnologyManager.ResearchTechnology("nisean_horses");
+			
+			cmpTechnologyManager.ResearchTechnology("unlock_champion_infantry");
+			cmpTechnologyManager.ResearchTechnology("unlock_champion_cavalry");
+			
+			//imrpove trading
+			
+			//improve healing
+			cmpModifiersManager.AddModifiers("Healer Rate Bonus", {
+							"Heal/Interval": [{ "affects": ["Healer"], "multiply": 0.5}],
+						}, cmpPlayer.entity);
+						
+			cmpModifiersManager.AddModifiers("Healer Range Bonus", {
+							"Heal/Range": [{ "affects": ["Healer"], "multiply": 1.5}],
+						}, cmpPlayer.entity);
+						
+			cmpModifiersManager.AddModifiers("Healer Vision Bonus", {
+							"Vision/Range": [{ "affects": ["Healer"], "multiply": 1.5}],
+						}, cmpPlayer.entity);
 			
 			cmpPlayer.SetPopulationBonuses(300);
 		}
 		else if (p == 2)
 		{
 			//add tower tech
-			cmpPlayer.AddStartingTechnology("tower_armour");
-			cmpPlayer.AddStartingTechnology("tower_range");
-			cmpPlayer.AddStartingTechnology("tower_watch");
-			cmpPlayer.AddStartingTechnology("tower_murderholes");
-			cmpPlayer.AddStartingTechnology("tower_crenellations");
+			cmpTechnologyManager.ResearchTechnology("tower_health");
+			cmpTechnologyManager.ResearchTechnology("tower_range");
+			cmpTechnologyManager.ResearchTechnology("tower_watch");
+			cmpTechnologyManager.ResearchTechnology("tower_murderholes");
+			cmpTechnologyManager.ResearchTechnology("tower_crenellations");
 		}
 	}
 	
@@ -1526,6 +1408,12 @@ Trigger.prototype.SetDiplomacy = function(data)
 		"maxRange": 50,
 		"requiredComponent": IID_UnitAI, // only count units in range
 		"enabled": true
+	});
+	
+	cmpTrigger.RegisterTrigger("OnInterval", "StructureDecayCheck", {
+		"enabled": true,
+		"delay": 10 * 1000,
+		"interval": 10 * 1000,
 	});
 	
 	// Activate all possible triggers
