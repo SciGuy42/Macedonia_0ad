@@ -241,7 +241,12 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	if ((data.from == 2 || data.from == 5 || data.from == 4) && data.to == 1)
 	{
 		let health_u = Engine.QueryInterface(data.entity, IID_Health);
-		health_u.Kill();
+		
+		if (health_u)
+			health_u.Kill();
+		else {
+			Engine.DestroyEntity(data.entity);
+		}
 		
 	}
 };
