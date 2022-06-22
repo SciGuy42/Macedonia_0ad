@@ -71,7 +71,7 @@ Trigger.prototype.FindClosestTarget = function(attacker,target_player,target_cla
 		if (!TriggerHelper.IsInWorld(target))
 			continue;
 
-		let targetDistance = DistanceBetweenEntities(attacker, target);
+		let targetDistance = PositionHelper.DistanceBetweenEntities(attacker, target);
 		if (targetDistance < minDistance)
 		{
 			closestTarget = target;
@@ -96,7 +96,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of camps_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/pers_kardakes_hoplite",10,p);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/pers/kardakes_hoplite",10,p);
 			
 			for (let a of archers_e)
 			{
@@ -179,10 +179,11 @@ Trigger.prototype.SpawnHorsemanPatrol = function(data)
 		//find how many camps we have -- we need more than 1 to spawn
 		let camps = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p),"MercenaryCamp").filter(TriggerHelper.IsInWorld);
 		
-		if (units.length < 300 && camps.length > 1)
+		if (units.length < 450 && camps.length > 1)
 		{
 			//templates, mostly archers
-			let cav_templates = ["units/pers/champion_cavalry","units/pers/champion_cavalry_archer","units/pers_cavalry_javelinist_e","units/pers_cavalry_javelinist_a","units/pers_cavalry_swordsman_e","units/pers_cavalry_swordsman_a","units/pers_cavalry_spearman_e","units/pers_cavalry_spearman_a","units/pers_cavalry_spearman_b"];
+			
+			let cav_templates = ["units/pers/champion_cavalry","units/pers/champion_cavalry_archer","units/pers/cavalry_javelineer_e","units/pers/cavalry_javelineer_a","units/pers/cavalry_axeman_e","units/pers/cavalry_axeman_a","units/pers/cavalry_spearman_e","units/pers/cavalry_spearman_a","units/pers/cavalry_spearman_b"];
 		
 			let sites = this.GetTriggerPoints(triggerPointPatrol);
 			let sites_reversed = [];
@@ -224,7 +225,9 @@ Trigger.prototype.SpawnInitialPatrol = function(data)
 	}
 	
 	//templates, mostly archers
-	let cav_templates = ["units/pers/champion_cavalry","units/pers/champion_cavalry_archer","units/pers_cavalry_javelinist_e","units/pers_cavalry_javelinist_a","units/pers_cavalry_swordsman_e","units/pers_cavalry_swordsman_a","units/pers_cavalry_spearman_e","units/pers_cavalry_spearman_a","units/pers_cavalry_spearman_b"];
+	//let cav_templates = ["units/pers/champion_cavalry","units/pers/champion_cavalry_archer","units/pers/cavalry_javelineer_e","units/pers_cavalry_javelinist_a","units/pers_cavalry_swordsman_e","units/pers_cavalry_swordsman_a","units/pers_cavalry_spearman_e","units/pers_cavalry_spearman_a","units/pers_cavalry_spearman_b"];
+	
+	let cav_templates = ["units/pers/champion_cavalry","units/pers/champion_cavalry_archer","units/pers/cavalry_javelineer_e","units/pers/cavalry_javelineer_a","units/pers/cavalry_axeman_e","units/pers/cavalry_axeman_a","units/pers/cavalry_spearman_e","units/pers/cavalry_spearman_a","units/pers/cavalry_spearman_b"];
 	
 	for (let i = 0; i < num_horsemen; i ++)
 	{
@@ -313,7 +316,7 @@ Trigger.prototype.SpawnFarmers = function(data)
 	{
 		//spawn the unit
 		let farm_i = farms[i];
-		let unit_i = TriggerHelper.SpawnUnits(farm_i,"units/pers_support_female_citizen",3,p);
+		let unit_i = TriggerHelper.SpawnUnits(farm_i,"units/pers/support_female_citizen",3,p);
 		
 		//give order
 		for (let u of unit_i)
@@ -362,7 +365,13 @@ Trigger.prototype.SpawnSquad = function(data)
 	//spawn attackers
 	for (let i = 0; i < size; ++i)
 	{
-		let units_i = TriggerHelper.SpawnUnits(spawn_site,pickRandom(templates),1,p);
+		let template_i = pickRandom(templates);
+		if (template_i == "units/cavalry_javelineer_a")
+		{
+			template_i = "units/pers/cavalry_javelineer_a";
+		}
+		
+		let units_i = TriggerHelper.SpawnUnits(spawn_site,template_i,1,p);
 		attackers.push(units_i[0]);
 	}
 	
@@ -410,7 +419,8 @@ Trigger.prototype.RebelAttack = function(data)
 	//spawn distractors
 	let num_squads_distractors = 3;
 	let squad_size_distractor = 3+Math.round(pop/25)+this.attackCounter;
-	let templates_distractor = ["units/pers/champion_cavalry_archer","units/pers_cavalry_javelinist_e","units/pers_cavalry_javelinist_a","units/pers_cavalry_swordsman_e","units/pers_cavalry_swordsman_a","units/pers_cavalry_spearman_e","units/pers_cavalry_spearman_a","units/pers_cavalry_spearman_b"];
+	let templates_distractor = ["units/pers/champion_cavalry","units/pers/champion_cavalry_archer","units/pers/cavalry_javelineer_e","units/pers/cavalry_javelineer_a","units/pers/cavalry_axeman_e","units/pers/cavalry_axeman_a","units/pers/cavalry_spearman_e","units/pers/cavalry_spearman_a","units/pers/cavalry_spearman_b"];
+	
 	
 	for (let i = 0; i < num_squads_distractors; i ++)
 	{
@@ -429,7 +439,7 @@ Trigger.prototype.RebelAttack = function(data)
 	let num_squads = 2;
 	let squad_size = 10+Math.round(pop/18)+2*this.attackCounter;
 	
-	let templates = ["units/pers/champion_cavalry_archer","units/pers/champion_cavalry_archer","units/pers_cavalry_javelinist_a","units/pers_cavalry_spearman_e","units/pers_champion_cavalry","units/pers_champion_cavalry","units/pers_cavalry_swordsman_e","units/pers_infantry_archer_e","units/pers_infantry_spearman_e","units/pers_infantry_archer_e","units/pers/champion_infantry","units/pers_champion_infantry","units/pers_infantry_javelinist_e","units/pers_infantry_spearman_b","units/pers_infantry_spearman_b","units/pers_mechanical_siege_ram"];
+	let templates = ["units/pers/champion_cavalry_archer","units/pers/champion_cavalry_archer","units/pers/cavalry_javelineer_a","units/pers/cavalry_spearman_e","units/pers/champion_cavalry","units/pers/champion_cavalry","units/pers/cavalry_axeman_e","units/pers/infantry_archer_e","units/pers/infantry_spearman_e","units/pers/infantry_archer_e","units/pers/champion_infantry","units/pers/champion_infantry","units/pers/infantry_javelineer_e","units/pers/infantry_spearman_b","units/pers/infantry_spearman_b","units/pers/siege_ram"];
 	
 	for (let i = 0; i < num_squads; i ++)
 	{
@@ -485,7 +495,7 @@ Trigger.prototype.VictoryCheck = function(data)
 	
 	//warn("pop = "+pop);
 	
-	if (pop == 10)
+	if (pop <= 10)
 	{
 		//victory!
 		//warn("Victory!");
@@ -552,7 +562,7 @@ Trigger.prototype.IdleUnitCheck = function(data)
 					
 					for (let i = 0; i < sites.length; i ++)
 					{
-						let d_i = DistanceBetweenEntities(u, sites[i]);
+						let d_i = PositionHelper.DistanceBetweenEntities(u, sites[i]);
 						if (d_i < min_distance)
 						{
 							index = i;
@@ -621,7 +631,8 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				
 				//destroy the strucure				
 				let health_s = Engine.QueryInterface(data.entity, IID_Health);
-				health_s.Kill();
+				if (health_s)
+					health_s.Kill();
 				
 				//check if we've destroyed all camps
 				if (this.numCampsDestroyed == 1)
@@ -666,23 +677,22 @@ Trigger.prototype.ResearchTechs = function(data)
 		
 		if (p == 1)
 		{
-			cmpTechnologyManager.ResearchTechnology("romans/vision_sibylline");
-			cmpTechnologyManager.ResearchTechnology("ranged_inf_skirmishers");
-	
-			cmpTechnologyManager.ResearchTechnology("armor_infantry_01");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
+			
+			cmpTechnologyManager.ResearchTechnology("nisean_horses");
+			cmpTechnologyManager.ResearchTechnology("cavalry_movement_speed");
+			cmpTechnologyManager.ResearchTechnology("cavalry_health");
+			
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
+			
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
 
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_melee_01");
-			cmpTechnologyManager.ResearchTechnology("armor_cav_01");
-			cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_01");
-			cmpTechnologyManager.ResearchTechnology("attack_cavalry_ranged_01");
-
-			cmpTechnologyManager.ResearchTechnology("speed_cavalry_01");
-	
 			//give some trade gains
 			cmpTechnologyManager.ResearchTechnology("trade_gain_01");
-			cmpTechnologyManager.ResearchTechnology("trade_gain_01");
-			cmpTechnologyManager.ResearchTechnology("trade_gain_01");
+			cmpTechnologyManager.ResearchTechnology("trade_gain_02");
 		}
 	}
 }
@@ -772,7 +782,7 @@ Trigger.prototype.ShowText = function(text,option_a,option_b)
 		let cmpPlayer = QueryPlayerIDInterface(p);
 		
 		//disable templates
-		let disTemplates = ["structures/" + cmpPlayer.GetCiv() + "_civil_centre","structures/" + cmpPlayer.GetCiv() + "_dock"];
+		let disTemplates = ["structures/" + cmpPlayer.GetCiv() + "/civil_centre","structures/" + cmpPlayer.GetCiv() + "/dock"];
 		
 		let hero_templates = TriggerHelper.GetTemplateNamesByClasses("Hero", cmpPlayer.GetCiv(), undefined, undefined, true);
 		disTemplates = disTemplates.concat(hero_templates);
@@ -785,12 +795,12 @@ Trigger.prototype.ShowText = function(text,option_a,option_b)
 		
 		let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
-		cmpPlayer.AddStartingTechnology("phase_town_generic");
-		cmpPlayer.AddStartingTechnology("phase_city_generic");
+		cmpTechnologyManager.ResearchTechnology("phase_town_generic");
+		cmpTechnologyManager.ResearchTechnology("phase_city_generic");
 		
 		if (p == 1)
 		{
-			cmpPlayer.AddStartingTechnology("unlock_shared_los");
+			cmpTechnologyManager.ResearchTechnology("unlock_shared_los");
 			cmpPlayer.SetPopulationBonuses(300);
 		}
 	}
