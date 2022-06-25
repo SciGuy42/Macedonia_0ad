@@ -27,6 +27,136 @@
 			"Map": "scenarios/Macedonia_5 - Magnesia.xml",
 			"MapType": "scenario",
 			"Requires": "Macedonia_4"
+		},
+		"Macedonia_6": {
+			"Map": "scenarios/Macedonia_6 - Mt Haemus.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_5"
+		},
+		"Macedonia_7": {
+			"Map": "scenarios/Macedonia_7 - Conquest of the Getae.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_6"
+		},
+		"Macedonia_8": {
+			"Map": "scenarios/Macedonia_8 - Pelium.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_7"
+		},
+		"Macedonia_9": {
+			"Map": "scenarios/Macedonia_9 - Ionian Rebels.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_8"
+		},
+		"Macedonia_10": {
+			"Map": "scenarios/Macedonia_10 - Sacking of Thebes.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_9"
+		},
+		"Macedonia_11": {
+			"Map": "scenarios/Macedonia_11 - The Five Satraps.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_10"
+		},
+		"Macedonia_12": {
+			"Map": "scenarios/Macedonia_12 - The Siege of Miletus.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_11"
+		},
+		"Macedonia_13": {
+			"Map": "scenarios/Macedonia_13 - Caria.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_12"
+		},
+		"Macedonia_14": {
+			"Map": "scenarios/Macedonia_14 - The Gates.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_13"
+		},
+		"Macedonia_15": {
+			"Map": "scenarios/Macedonia_15 - The Battle of Issus.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_14"
+		},
+		"Macedonia_16": {
+			"Map": "scenarios/Macedonia_16 - A Bridge Too Far.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_15"
+		},
+		"Macedonia_17": {
+			"Map": "scenarios/Macedonia_17 - The Fall of Tyre.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_16"
+		},
+		"Macedonia_18": {
+			"Map": "scenarios/Macedonia_18 - Siege of Gaza.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_17"
+		},
+		"Macedonia_19": {
+			"Map": "scenarios/Macedonia_19 - On the Road to Siwa.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_18"
+		},
+		"Macedonia_20": {
+			"Map": "scenarios/Macedonia_20 - The Oracle.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_19"
+		},
+		"Macedonia_21": {
+			"Map": "scenarios/Macedonia_21 - Up the Nile.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_20"
+		},
+		"Macedonia_22": {
+			"Map": "scenarios/Macedonia_22 - The Spartan Revolt.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_21"
+		},
+		"Macedonia_23": {
+			"Map": "scenarios/Macedonia_23 - Siege of Olbia.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_22"
+		},
+		"Macedonia_24": {
+			"Map": "scenarios/Macedonia_24 - Gaugamela.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_23"
+		},
+		"Macedonia_25": {
+			"Map": "scenarios/Macedonia_25 - The Last Stand.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_24"
+		},
+		"Macedonia_26": {
+			"Map": "scenarios/Macedonia_26 - Death of an Emperor.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_25"
+		},
+		"Macedonia_27": {
+			"Map": "scenarios/Macedonia_27 - The Fall of Aria.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_26"
+		},
+		"Macedonia_28": {
+			"Map": "scenarios/Macedonia_28 - Alexandria Eschate.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_27"
+		},
+		"Macedonia_29": {
+			"Map": "scenarios/Macedonia_29 - Battle of Jaxartes.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_28"
+		},
+		"Macedonia_30": {
+			"Map": "scenarios/Macedonia_30 - Bactra.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_29"
+		},
+		"Macedonia_31": {
+			"Map": "scenarios/Macedonia_31 - Margiana Oasis.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_30"
 		}
 	},
 	"Order": [
@@ -34,7 +164,33 @@
 		"Macedonia_2",
 		"Macedonia_3",
 		"Macedonia_4",
-		"Macedonia_5"
+		"Macedonia_5",
+		"Macedonia_6",
+		"Macedonia_7",
+		"Macedonia_8",
+		"Macedonia_9",
+		"Macedonia_10",
+		"Macedonia_11",
+		"Macedonia_12",
+		"Macedonia_13",
+		"Macedonia_14",
+		"Macedonia_15",
+		"Macedonia_16",
+		"Macedonia_17",
+		"Macedonia_18",
+		"Macedonia_19",
+		"Macedonia_20",
+		"Macedonia_21",
+		"Macedonia_22",
+		"Macedonia_23",
+		"Macedonia_24",
+		"Macedonia_25",
+		"Macedonia_26",
+		"Macedonia_27",
+		"Macedonia_28",
+		"Macedonia_29",
+		"Macedonia_30",
+		"Macedonia_31"
 	],
 	"ShowUnavailable": true
 }
