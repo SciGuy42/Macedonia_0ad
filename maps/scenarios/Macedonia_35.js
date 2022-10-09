@@ -138,7 +138,7 @@ Trigger.prototype.FindClosestTarget = function(attacker,target_player,target_cla
 		if (!TriggerHelper.IsInWorld(target))
 			continue;
 
-		let targetDistance = DistanceBetweenEntities(attacker, target);
+		let targetDistance = PositionHelper.DistanceBetweenEntities(attacker, target);
 		if (targetDistance < minDistance)
 		{
 			closestTarget = target;
@@ -281,6 +281,15 @@ Trigger.prototype.StructureDecayCheck = function(data)
 
 Trigger.prototype.IdleUnitCheck = function(data)
 {
+	this.idleUnitCheckCounter += 1;
+	//warn("idle unit check counter = "+this.idleUnitCheckCounter);
+	
+	//TODO: decide when to start attack
+	if (this.idleUnitCheckCounter == 42)
+	{
+		this.StartAdvanceAttack();
+		
+	}
 	
 	for (let p of [2])
 	{
@@ -349,7 +358,7 @@ Trigger.prototype.IdleUnitCheck = function(data)
 							{
 								
 								//find distance to target
-								let distance = DistanceBetweenEntities(u, target);
+								let distance = PositionHelper.DistanceBetweenEntities(u, target);
 								//warn("distance to targe = "+uneval(distance));
 								
 								if (distance > 20)
@@ -453,7 +462,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of outposts_p)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/maur_champion_infantry",5,p);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/maur/champion_infantry_maceman",5,p);
 			
 			for (let a of archers_e)
 			{
@@ -618,7 +627,7 @@ Trigger.prototype.SpawnMaceAttackInterval = function(data)
 	let sites = this.GetTriggerPoints(triggerPointsMace);
 	
 	//templates
-	let templates = ["units/mace/champion_cavalry","units/mace/cavalry_javelineer_e","units/mace_cavalry_spearman_e","units/athen_cavalry_swordsman_e"];
+	let templates = ["units/mace/champion_cavalry","units/mace/cavalry_javelineer_e","units/mace/cavalry_spearman_e","units/athen/cavalry_swordsman_e"];
 	
 	//spawn
 	let attackers = TriggerHelper.SpawnUnits(pickRandom(sites),pickRandom(templates),1,p);
@@ -672,7 +681,7 @@ Trigger.prototype.SpawnAdvanceAttackSquadInterval = function(data)
 	let sites = this.GetTriggerPoints(triggerPointsAdvanceAttack);
 	
 	//templates
-	let templates = ["units/maur_infantry_archer_a","units/maur_infantry_archer_b","units/maur_infantry_spearman_a","units/maur_infantry_spearman_b","units/maur_infantry_spearman_b","units/maur_infantry_swordsman_b","units/maur_infantry_swordsman_a","units/maur_infantry_swordsman_e","units/maur_infantry_spearman_e"];
+	let templates = ["units/maur/infantry_archer_a","units/maur/infantry_archer_b","units/maur/infantry_spearman_a","units/maur/infantry_spearman_b","units/maur/infantry_spearman_b","units/maur/infantry_swordsman_b","units/maur/infantry_swordsman_a","units/maur/infantry_swordsman_e","units/maur/infantry_spearman_e"];
 	
 	//how many
 	let size = 1;
@@ -681,7 +690,7 @@ Trigger.prototype.SpawnAdvanceAttackSquadInterval = function(data)
 		size = size + 1;
 	}
 	
-	warn("attack size = "+uneval(size));
+	//warn("attack size = "+uneval(size));
 	let attackers = [];	
 	for (let i = 0; i < size; i++)
 	{
@@ -695,6 +704,12 @@ Trigger.prototype.SpawnAdvanceAttackSquadInterval = function(data)
 	//TODO: send to player 1 if player 3 has no structures
 	
 	let target = this.FindClosestTarget(attackers[0],target_player,"Structure");
+	
+	if (!target)
+	{
+		target = this.FindClosestTarget(attackers[0],1,"Structure");
+	}
+	
 	let target_pos = TriggerHelper.GetEntityPosition2D(target);
 	
 	ProcessCommand(p, {
@@ -716,19 +731,19 @@ Trigger.prototype.SpawnAdvanceAttackSquadInterval = function(data)
 	warn(uneval(this.advanceAttackStickBreakProb) +"\t"+uneval(this.advanceAttackInterval))
 	
 	//increment level
-	warn("level = "+uneval(this.advanceAttackLevel));
+	//warn("level = "+uneval(this.advanceAttackLevel));
 	this.advanceAttackLevel = this.advanceAttackLevel + 1;
 	
 	//repeat
 	if (this.advanceAttackLevel < this.advanceAttackMaxLevel)
 	{
 		let next_time = Math.round(this.advanceAttackInterval * 1000);
-		warn("spawning again in "+uneval(next_time));
+		//warn("spawning again in "+uneval(next_time));
 		this.DoAfterDelay(next_time,"SpawnAdvanceAttackSquadInterval",null);
 	}
 	else  //if we run out of levels, main attack starts
 	{
-		warn("advance attack done, main attack starts");
+		//warn("advance attack done, main attack starts");
 		this.eventAdvanceAttackEnded = true;
 		this.StartMainAttack();
 	}
@@ -739,7 +754,7 @@ Trigger.prototype.StartAdvanceAttack = function(data)
 {
 	this.eventAdvanceAttackStarted = true;
 	this.SpawnAdvanceAttackSquadInterval();
-	this.ShowText("Our scouts report that Porus' advance has arrived! They are hehaded towards teh farmsteads!","So it begins","Great!");
+	this.ShowText("Our scouts report that Porus' advance has arrived! They are hehaded towards the farmsteads!","So it begins","Great!");
 	//warn("advance attack started!!!");
 }
 
@@ -748,6 +763,7 @@ Trigger.prototype.StartMainAttack = function(data)
 {
 	this.eventMainAttackStarted = true;
 	this.SpawnMainAttackInterval();
+	this.ShowText("What we saw so far was only the scouts! There are a lot more of them comming -- prepare to fight for your life!","We are ready!","Great!");
 	//warn("main attack started");
 }
 
@@ -759,9 +775,9 @@ Trigger.prototype.VictoryCheck = function(data)
 	//check how many units player 2 has
 	let units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2),"Unit").filter(TriggerHelper.IsInWorld);
 	
-	warn("victory check "+uneval(units.length));
+	//warn("victory check "+uneval(units.length));
 	
-	if (units.length == 0)
+	if (units.length <= 1)
 	{
 		//victory
 		let cmpPlayer = QueryPlayerIDInterface(5);
@@ -782,7 +798,7 @@ Trigger.prototype.StartMaceAttack = function(data)
 	let cmpPlayer = QueryPlayerIDInterface(5);
 	let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
-	cmpTechnologyManager.ResearchTechnology("speed_cavalry_01");	
+	/*cmpTechnologyManager.ResearchTechnology("speed_cavalry_01");	
 	cmpTechnologyManager.ResearchTechnology("speed_cavalry_02");
 	cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_01");
 	cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_02");
@@ -790,7 +806,20 @@ Trigger.prototype.StartMaceAttack = function(data)
 	cmpTechnologyManager.ResearchTechnology("armor_cav_01");
 	cmpTechnologyManager.ResearchTechnology("armor_cav_02");
 	cmpTechnologyManager.ResearchTechnology("armor_cav_02");
-	cmpTechnologyManager.ResearchTechnology("successors/special_war_horses");	
+	cmpTechnologyManager.ResearchTechnology("successors/special_war_horses");	*/
+	
+	
+	//just to make alexander faster
+	cmpTechnologyManager.ResearchTechnology("cavalry_movement_speed");	
+	cmpTechnologyManager.ResearchTechnology("nisean_horses");
+		
+	//armor and attack
+	cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
+	cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_02");
+	cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+	cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
+	cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
+	cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
 	
 	//make neutral towards towards player 1 so we don't retreat all the time
 	cmpPlayer.SetNeutral(1);
@@ -801,7 +830,7 @@ Trigger.prototype.StartMaceAttack = function(data)
 	//start victory check
 	this.DoAfterDelay(10 * 1000,"VictoryCheck",null);
 	
-	this.ShowText("Alexander's cavalary has advance! Thanks the Gods! Now let's finish off the atackers!","Great!","Awesome!");
+	this.ShowText("Alexander's cavalary has arrived! Thanks the Gods! Now let's finish off the atackers!","Great!","Awesome!");
 	
 	this.SpawnMaceAttackInterval();
 	warn("mace attack started");
@@ -813,7 +842,7 @@ Trigger.prototype.SpawnMainAttackInterval = function(data)
 	let p = 2;
 	
 	//templates
-	let templates = ["units/maur_champion_infantry","units/maur_champion_maiden","units/maur_champion_maiden_archer","units/maur_elephant_archer_e","units/maur_infantry_swordsman_e","units/maur_infantry_spearman_e","units/maur_infantry_swordsman_e","units/maur_champion_elephant"];
+	let templates = ["units/maur/champion_infantry_maceman","units/maur/champion_maiden","units/maur/champion_maiden_archer","units/maur/elephant_archer_e","units/maur/infantry_swordsman_e","units/maur/infantry_spearman_e","units/maur/infantry_swordsman_e","units/maur/champion_elephant"];
 	
 	//sites 
 	let sites = this.GetTriggerPoints(triggerPointsMainAttack);
@@ -826,9 +855,13 @@ Trigger.prototype.SpawnMainAttackInterval = function(data)
 		
 	
 	//for each squad
+	let size = Math.round(this.mainAttackSquadSize)+2;
+		
+	warn("size = "+size+"\t num squads = "+this.mainAttackNumSquads);
 	for (let i = 0; i < Math.round(this.mainAttackNumSquads)+2; i ++)
 	{
-		let size = Math.round(this.mainAttackSquadSize)+2;
+		
+		
 		
 		//spawn squad
 		let site_i = pickRandom(sites);
@@ -838,7 +871,7 @@ Trigger.prototype.SpawnMainAttackInterval = function(data)
 		if (Math.random() < siege_prob)
 		{
 			//warn("spawning ram");
-			let unit_i = TriggerHelper.SpawnUnits(site_i,"units/maur_mechanical_siege_ram",1,p);
+			let unit_i = TriggerHelper.SpawnUnits(site_i,"units/maur/siege_ram",1,p);
 		
 			let cmpUnitAI = Engine.QueryInterface(unit_i[0], IID_UnitAI);
 			if (cmpUnitAI)
@@ -863,7 +896,7 @@ Trigger.prototype.SpawnMainAttackInterval = function(data)
 		{
 			//spawning extra elephant
 			//warn("spawning elephant");
-			let unit_i = TriggerHelper.SpawnUnits(site_i,"units/maur_champion_elephant",1,p);
+			let unit_i = TriggerHelper.SpawnUnits(site_i,"units/maur/champion_elephant",1,p);
 		
 			let cmpUnitAI = Engine.QueryInterface(unit_i[0], IID_UnitAI);
 			if (cmpUnitAI)
@@ -895,7 +928,7 @@ Trigger.prototype.SpawnMainAttackInterval = function(data)
 	
 	
 	//check whether to start macedonian cavalry attack
-	IID_StatisticsTracker
+	//IID_StatisticsTracker
 	
 	let cmpPlayer = QueryPlayerIDInterface(p);
 	let cmpStatsTracker = Engine.QueryInterface(cmpPlayer.entity, IID_StatisticsTracker);
@@ -904,7 +937,7 @@ Trigger.prototype.SpawnMainAttackInterval = function(data)
 	//warn("units lost = "+uneval(units_lost));
 		
 		
-	if (units_lost > 1200) 
+	if (units_lost > 1000) 
 	{
 		this.StartMaceAttack();
 	}
@@ -959,7 +992,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	if (data.from == 0 && data.to == 1) //we captured a gaia structure, there is only 1 so...
 	{
 		//spawn some bolt shooters
-		let siege = TriggerHelper.SpawnUnits(data.entity,"units/mace/siege_oxybeles_packed",5,1);
+		let siege = TriggerHelper.SpawnUnits(data.entity,"units/mace/siege_oxybeles_packed",8,1);
 		
 		//warn("spawned siege");
 		//destroy building			
@@ -980,30 +1013,28 @@ Trigger.prototype.ResearchTechs = function(data)
 		let cmpPlayer = QueryPlayerIDInterface(p);
 		let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
-		//visibility bonus
-		cmpTechnologyManager.ResearchTechnology("romans/vision_sibylline");
-		
 		//just to make alexander faster
-		cmpTechnologyManager.ResearchTechnology("speed_cavalry_01");	
-		cmpTechnologyManager.ResearchTechnology("speed_cavalry_02");
+		cmpTechnologyManager.ResearchTechnology("cavalry_movement_speed");	
+		cmpTechnologyManager.ResearchTechnology("nisean_horses");
 		
 		//healer techs
 		cmpTechnologyManager.ResearchTechnology("heal_rate");
-		cmpTechnologyManager.ResearchTechnology("heal_rate");
-		cmpTechnologyManager.ResearchTechnology("heal_rate");
+		cmpTechnologyManager.ResearchTechnology("heal_rate_2");	
 		cmpTechnologyManager.ResearchTechnology("heal_range");
+		cmpTechnologyManager.ResearchTechnology("heal_range_2");
 		
 		//armor and attack
-		cmpTechnologyManager.ResearchTechnology("armor_infantry_01");
-		cmpTechnologyManager.ResearchTechnology("attack_infantry_melee_01");
-		cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-		cmpTechnologyManager.ResearchTechnology("ranged_inf_skirmishers");
-			
-		cmpTechnologyManager.ResearchTechnology("armor_hero_01");
-			
-		cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_01");
-		cmpTechnologyManager.ResearchTechnology("armor_cav_01");
-		cmpTechnologyManager.ResearchTechnology("successors/special_war_horses");	
+		cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
+		cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_02");
+		cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+		cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
+		
+		//better siege to make captured bolt shooters more valuable
+		cmpTechnologyManager.ResearchTechnology("siege_bolt_accuracy");
+		cmpTechnologyManager.ResearchTechnology("siege_attack");
+						
 	}
 	
 	//main enemy
@@ -1017,27 +1048,17 @@ Trigger.prototype.ResearchTechs = function(data)
 		//healer techs
 		cmpTechnologyManager.ResearchTechnology("heal_rate");
 		cmpTechnologyManager.ResearchTechnology("heal_rate_2");	
-		cmpTechnologyManager.ResearchTechnology("heal_rate_2");	
-		cmpTechnologyManager.ResearchTechnology("heal_rate_2");	
-		cmpTechnologyManager.ResearchTechnology("heal_rate_2");	
 		cmpTechnologyManager.ResearchTechnology("heal_range");
 		cmpTechnologyManager.ResearchTechnology("heal_range_2");
 		
-		//armor and attack
-		cmpTechnologyManager.ResearchTechnology("armor_infantry_01");
-		cmpTechnologyManager.ResearchTechnology("armor_infantry_02");
-		cmpTechnologyManager.ResearchTechnology("armor_infantry_02");
-		cmpTechnologyManager.ResearchTechnology("attack_infantry_melee_01");
-		cmpTechnologyManager.ResearchTechnology("attack_infantry_melee_02");
-		cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-		cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_02");
-		cmpTechnologyManager.ResearchTechnology("ranged_inf_skirmishers");
-		
-		cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_01");
-		cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_02");
-		cmpTechnologyManager.ResearchTechnology("armor_cav_01");
-		cmpTechnologyManager.ResearchTechnology("armor_cav_02");
-		cmpTechnologyManager.ResearchTechnology("successors/special_war_horses");	
+		cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
+		cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_02");
+		cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+		cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
 	}
 }
 
@@ -1117,7 +1138,7 @@ Trigger.prototype.SpawnFarmers = function(data)
 	{
 		//spawn the unit
 		let farm_i = farms[i];
-		let unit_i = TriggerHelper.SpawnUnits(farm_i,"units/pers_support_female_citizen",5,p);
+		let unit_i = TriggerHelper.SpawnUnits(farm_i,"units/pers/support_female_citizen",5,p);
 		
 		//give order
 		for (let u of unit_i)
@@ -1172,6 +1193,8 @@ Trigger.prototype.SpawnFarmers = function(data)
 	cmpTrigger.mainAttackLevel = 1;
 	cmpTrigger.maceAttackLevel = 1;
 	
+	cmpTrigger.idleUnitCheckCounter = 0;
+	
 	//start techs
 	cmpTrigger.DoAfterDelay(1 * 1000,"ResearchTechs",null);
 
@@ -1182,7 +1205,7 @@ Trigger.prototype.SpawnFarmers = function(data)
 	cmpTrigger.DoAfterDelay(5 * 1000,"SpawnFarmers",null);
 	
 	//schedule the advance attack in 19 minutes
-	cmpTrigger.DoAfterDelay(1140 * 1000,"StartAdvanceAttack",null);
+	//cmpTrigger.DoAfterDelay(1140 * 1000,"StartAdvanceAttack",null);
 	
 	//repeat patrols
 	
@@ -1198,13 +1221,13 @@ Trigger.prototype.SpawnFarmers = function(data)
 		//add some tech
 		let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
-		cmpPlayer.AddStartingTechnology("phase_town_generic");
-		cmpPlayer.AddStartingTechnology("phase_city_generic");
+		cmpTechnologyManager.ResearchTechnology("phase_town_generic");
+		cmpTechnologyManager.ResearchTechnology("phase_city_generic");
 		
 		//no pop limit
 		if (p == 1)
 		{
-			cmpPlayer.AddStartingTechnology("unlock_shared_los");
+			cmpTechnologyManager.ResearchTechnology("unlock_shared_los");
 			cmpPlayer.SetPopulationBonuses(300);
 		}
 		
@@ -1235,8 +1258,8 @@ Trigger.prototype.SpawnFarmers = function(data)
 	
 	cmpTrigger.RegisterTrigger("OnInterval", "IdleUnitCheck", {
 		"enabled": true,
-		"delay": 20 * 1000,
-		"interval": 20 * 1000,
+		"delay": 30 * 1000,
+		"interval": 30 * 1000,
 	});
 	
 	
