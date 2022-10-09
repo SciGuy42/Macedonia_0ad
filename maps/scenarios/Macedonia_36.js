@@ -25,31 +25,32 @@ var unitFormations = [
 
 var disabledTemplates = (civ) => [
 	// Economic structures
-	"structures/" + civ + "_corral",
-	"structures/" + civ + "_farmstead",
-	"structures/" + civ + "_field",
-	"structures/" + civ + "_storehouse",
-	"structures/" + civ + "_rotarymill",
-	"structures/" + civ + "_market",
+	"structures/" + civ + "/corral",
+	"structures/" + civ + "/farmstead",
+	"structures/" + civ + "/field",
+	"structures/" + civ + "/storehouse",
+	"structures/" + civ + "/rotarymill",
+	"structures/" + civ + "/market",
 	
 	// Expansions
-	"structures/" + civ + "_civil_centre",
-	"structures/" + civ + "_military_colony",
+	"structures/" + civ + "/civil_centre",
+	"structures/" + civ + "/military_colony",
 
 	// Walls
-	"structures/" + civ + "_wallset_stone",
+	"structures/" + civ + "/wallset_stone",
 	"structures/rome_wallset_siege",
 	"other/wallset_palisade",
 
 	// Shoreline
-	"structures/" + civ + "_dock",
+	"structures/" + civ + "/dock",
 	"structures/brit/crannog",
-	"structures/cart_super_dock",
-	"structures/ptol_lighthouse",
+	"structures/cart/super_dock",
+	"structures/ptol/lighthouse",
 	
 	//villagers
-	"units/" + civ + "_support_female_citizen"
+	"units/" + civ + "/support_female_citizen"
 ];
+
 
 
 
@@ -108,7 +109,7 @@ Trigger.prototype.FindClosestTarget = function(attacker,target_player,target_cla
 		if (!TriggerHelper.IsInWorld(target))
 			continue;
 
-		let targetDistance = DistanceBetweenEntities(attacker, target);
+		let targetDistance = PositionHelper.DistanceBetweenEntities(attacker, target);
 		if (targetDistance < minDistance)
 		{
 			closestTarget = target;
@@ -1122,88 +1123,54 @@ Trigger.prototype.ResearchTechs = function(data)
 		let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
 		//everyone gets some extra armor the make battle last longer
-		cmpTechnologyManager.ResearchTechnology("armor_infantry_01");
-		cmpTechnologyManager.ResearchTechnology("armor_infantry_02");
-		cmpTechnologyManager.ResearchTechnology("armor_infantry_02");
-		cmpTechnologyManager.ResearchTechnology("armor_infantry_02");
-		
-		cmpTechnologyManager.ResearchTechnology("armor_cav_01");
-		cmpTechnologyManager.ResearchTechnology("armor_cav_02");
-		cmpTechnologyManager.ResearchTechnology("armor_cav_02");
-
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
 		
 		if (p == 1)
 		{
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_03");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_03");
 			
-			cmpTechnologyManager.ResearchTechnology("romans/vision_sibylline");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_03");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_03");
 			
-			cmpTechnologyManager.ResearchTechnology("speed_cavalry_01");
-			cmpTechnologyManager.ResearchTechnology("speed_cavalry_02");
-			cmpTechnologyManager.ResearchTechnology("successors/special_war_horses");
-			cmpTechnologyManager.ResearchTechnology("armor_hero_01");
-			cmpTechnologyManager.ResearchTechnology("armor_hero_01");
-			cmpTechnologyManager.ResearchTechnology("armor_hero_01");
-			cmpTechnologyManager.ResearchTechnology("armor_hero_01");
-			cmpTechnologyManager.ResearchTechnology("armor_hero_01");
-			cmpTechnologyManager.ResearchTechnology("armor_hero_01");
+			cmpTechnologyManager.ResearchTechnology("cavalry_movement_speed");	
+			cmpTechnologyManager.ResearchTechnology("nisean_horses");
 			
-			cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_01");
-			cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_02");
-			cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_02");
-			
-			cmpTechnologyManager.ResearchTechnology("attack_cavalry_ranged_01");
-			cmpTechnologyManager.ResearchTechnology("attack_cavalry_ranged_02");
-			cmpTechnologyManager.ResearchTechnology("attack_cavalry_ranged_02");
-			
-			
-			cmpTechnologyManager.ResearchTechnology("armor_cav_02");
-			cmpTechnologyManager.ResearchTechnology("armor_cav_02");
-			cmpTechnologyManager.ResearchTechnology("armor_cav_02");
 			
 			cmpTechnologyManager.ResearchTechnology("attack_soldiers_will");
-			cmpTechnologyManager.ResearchTechnology("mauryans/special_archery_tradition");
+			cmpTechnologyManager.ResearchTechnology("archery_tradition");
+			cmpTechnologyManager.ResearchTechnology("archer_attack_spread");
 			
+			//healer techs
 			cmpTechnologyManager.ResearchTechnology("heal_rate");
-			cmpTechnologyManager.ResearchTechnology("heal_rate_2");
-			cmpTechnologyManager.ResearchTechnology("heal_rate_2");
-			cmpTechnologyManager.ResearchTechnology("heal_rate_2");
-			cmpTechnologyManager.ResearchTechnology("heal_rate_2");
+			cmpTechnologyManager.ResearchTechnology("heal_rate_2");	
 			cmpTechnologyManager.ResearchTechnology("heal_range");
 			cmpTechnologyManager.ResearchTechnology("heal_range_2");
-			cmpTechnologyManager.ResearchTechnology("heal_range_2");
-			cmpTechnologyManager.ResearchTechnology("heal_range_2");
+			
 		}
 		else if (p == 3 || p == 4)
 		{
-			cmpTechnologyManager.ResearchTechnology("armor_infantry_02");
-			cmpTechnologyManager.ResearchTechnology("armor_infantry_02");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_02");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
 			
-			//cmpTechnologyManager.ResearchTechnology("armor_hero_01");
-			//cmpTechnologyManager.ResearchTechnology("armor_hero_01");
-			
-			cmpTechnologyManager.ResearchTechnology("armor_cav_02");
-			cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_01");
 
-				
 		}
 		else if (p == 2)
 		{
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-			cmpTechnologyManager.ResearchTechnology("attack_cavalry_ranged_01");
-			cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_01");
-			
+
 			cmpTechnologyManager.ResearchTechnology("heal_rate");
-			cmpTechnologyManager.ResearchTechnology("heal_rate_2");
 			cmpTechnologyManager.ResearchTechnology("heal_rate_2");
 		}
 	}
-	//cmpTechnologyManager.ResearchTechnology("trade_gain_02");
-	//cmpTechnologyManager.ResearchTechnology("trade_gain_02");
-	//cmpTechnologyManager.ResearchTechnology("trade_gain_02");
-	
+
+
 }
 
 
@@ -1295,7 +1262,7 @@ Trigger.prototype.AlexanderHealthCheck = function(data)
 					
 					for (let u of units)
 					{
-						let distance = DistanceBetweenEntities(u, heroes[0]);
+						let distance = PositionHelper.DistanceBetweenEntities(u, heroes[0]);
 								
 						if (distance < 120.0)
 						{
@@ -1373,7 +1340,7 @@ Trigger.prototype.AlexanderHealthCheck = function(data)
 	cmpTrigger.alexFlipped = false;
 
 	cmpTrigger.maceKilled = 0;
-	cmpTrigger.maceKilledThreshold = 250;
+	cmpTrigger.maceKilledThreshold = 280;
 	cmpTrigger.gameLost = false;
 	//give extra tech
 	cmpTrigger.DoAfterDelay(5 * 1000,"ResearchTechs",null);
@@ -1404,40 +1371,9 @@ Trigger.prototype.AlexanderHealthCheck = function(data)
 		"interval": 5 * 1000,
 	});
 	
+	//some additional modifiers
+	let cmpModifiersManager = Engine.QueryInterface(SYSTEM_ENTITY, IID_ModifiersManager);
 	
-	
-	/*cmpTrigger.DoAfterDelay(46 * 1000,"AttackElephants",null);	
-	cmpTrigger.DoAfterDelay(60 * 1000,"AttackChariots",null);	
-	cmpTrigger.DoAfterDelay(75 * 1000,"AttackIndianCavalry",null);	
-	cmpTrigger.DoAfterDelay(90 * 1000,"AttackIndianInfantry",null);	
-	cmpTrigger.DoAfterDelay(100 * 1000,"ClusterAttackGreeks",null);	
-	cmpTrigger.DoAfterDelay(115 * 1000,"AttackDarius",null);
-	*/
-	
-	//start spawning traders
-	/*cmpTrigger.DoAfterDelay(5 * 1000, "SpawnCretanTraders",null);
-	cmpTrigger.DoAfterDelay(5 * 1000, "SpawnArcadianTraders",null);
-	
-	//start spawning patrols
-	cmpTrigger.DoAfterDelay(10 * 1000,"SpawnArcadianPatrol",null);
-	cmpTrigger.DoAfterDelay(10 * 1000,"SpawnAchaeanPatrol",null);
-	
-	//schedule assault
-	cmpTrigger.DoAfterDelay(15 * 1000,"SpawnAssault",null);*/
-	
-	
-	//cmpTrigger.DoAfterDelay(10 * 1000,"FlipMegolopolisAssets",null);
-	
-	
-	
-	//spawn patrols of forts
-	//cmpTrigger.DoAfterDelay(10 * 1000,"SpawnFortressPatrol",null);
-	
-	//invasion sea attack
-	//cmpTrigger.DoAfterDelay(10 * 1000,"SpawnNavalInvasionAttack",null);
-
-
-
 
 	for (let p of [1,2,3,4])
 	{
@@ -1452,75 +1388,20 @@ Trigger.prototype.AlexanderHealthCheck = function(data)
 		
 		let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
-		cmpPlayer.AddStartingTechnology("phase_town_generic");
-		cmpPlayer.AddStartingTechnology("phase_city_generic");
+		cmpTechnologyManager.ResearchTechnology("phase_town_generic");
+		cmpTechnologyManager.ResearchTechnology("phase_city_generic");
 		
-		/*
-		if (p == 1 || p == 3 || p == 4)
+		if (p == 1 || p == 3)
 		{
-		
-			cmpPlayer.AddStartingTechnology("unlock_shared_los");
+			cmpModifiersManager.AddModifiers("Hero Armor Pierce Bonus", {
+				"Resistance/Entity/Damage/Pierce": [{ "affects": ["Hero"], "multiply": 2.0}],
+			}, cmpPlayer.entity);
 			
-			cmpPlayer.AddStartingTechnology("armor_hero_01");
-			cmpPlayer.AddStartingTechnology("armor_cav_01");
-			cmpPlayer.AddStartingTechnology("armor_cav_02");
-			cmpPlayer.AddStartingTechnology("attack_cavalry_melee_01");
-			cmpPlayer.AddStartingTechnology("attack_cavalry_melee_02");
-			cmpPlayer.AddStartingTechnology("attack_soldiers_will");
-			cmpPlayer.AddStartingTechnology("attack_infantry_ranged_01");
-			cmpPlayer.AddStartingTechnology("attack_infantry_ranged_02");
-			cmpPlayer.AddStartingTechnology("armor_infantry_01");
-			cmpPlayer.AddStartingTechnology("armor_infantry_02");
-			cmpPlayer.AddStartingTechnology("attack_infantry_melee_01");
-			cmpPlayer.AddStartingTechnology("attack_infantry_melee_02");
-			cmpPlayer.AddStartingTechnology("heal_rate");
-			cmpPlayer.AddStartingTechnology("heal_rate_2");
-			cmpPlayer.AddStartingTechnology("heal_range");
-			cmpPlayer.AddStartingTechnology("heal_range_2");
-			cmpPlayer.AddStartingTechnology("attack_champions_elite");
-			cmpPlayer.AddStartingTechnology("ranged_inf_skirmishers");
-			cmpPlayer.AddStartingTechnology("ranged_inf_irregulars");
-			cmpPlayer.AddStartingTechnology("siege_bolt_accuracy");
-			cmpPlayer.AddStartingTechnology("mauryans/special_archery_tradition");
+			cmpModifiersManager.AddModifiers("Hero Armor Hack Bonus", {
+				"Resistance/Entity/Damage/Hack": [{ "affects": ["Hero"], "multiply": 2.0}],
+			}, cmpPlayer.entity);
+			
 		}
-		else if (p == 2)
-		{
-			cmpPlayer.AddStartingTechnology("armor_hero_01");
-			cmpPlayer.AddStartingTechnology("armor_cav_01");
-			//cmpPlayer.AddStartingTechnology("armor_cav_02");
-			cmpPlayer.AddStartingTechnology("attack_cavalry_melee_01");
-			cmpPlayer.AddStartingTechnology("attack_cavalry_melee_02");
-			cmpPlayer.AddStartingTechnology("armor_infantry_01");
-			//cmpPlayer.AddStartingTechnology("armor_infantry_02");
-			cmpPlayer.AddStartingTechnology("attack_soldiers_will");
-			cmpPlayer.AddStartingTechnology("attack_infantry_melee_01");
-			//cmpPlayer.AddStartingTechnology("attack_infantry_melee_02");
-		}
-		else if (p == 5)
-		{
-			cmpPlayer.AddStartingTechnology("armor_infantry_01");
-			//cmpPlayer.AddStartingTechnology("armor_infantry_02");
-			cmpPlayer.AddStartingTechnology("attack_infantry_melee_01");
-			//cmpPlayer.AddStartingTechnology("attack_infantry_ranged_01");
-
-		}
-		else if (p == 6)
-		{
-			cmpPlayer.AddStartingTechnology("armor_infantry_01");
-			//cmpPlayer.AddStartingTechnology("armor_infantry_02");
-			cmpPlayer.AddStartingTechnology("attack_infantry_melee_01");
-			cmpPlayer.AddStartingTechnology("attack_infantry_ranged_01");
-
-			//cmpPlayer.AddStartingTechnology("armor_cav_01");
-			//cmpPlayer.AddStartingTechnology("attack_cavalry_melee_01");
-		}
-		else if (p == 7)
-		{
-			//cmpPlayer.AddStartingTechnology("armor_infantry_01");
-			//cmpPlayer.AddStartingTechnology("attack_infantry_melee_01");
-			cmpPlayer.AddStartingTechnology("attack_infantry_ranged_01");
-		}*/
-		
 		
 	}
 	
