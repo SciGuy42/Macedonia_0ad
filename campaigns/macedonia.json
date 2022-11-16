@@ -157,7 +157,77 @@
 			"Map": "scenarios/Macedonia_31 - Margiana Oasis.xml",
 			"MapType": "scenario",
 			"Requires": "Macedonia_30"
-		}
+		},
+		"Macedonia_32": {
+			"Map": "scenarios/Macedonia_32 - A Band of Heros (Part 1).xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_31"
+		},
+		"Macedonia_33": {
+			"Map": "scenarios/Macedonia_33 - The Swat Velly.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_32"
+		},
+		"Macedonia_34": {
+			"Map": "scenarios/Macedonia_34 - The Hiding Place.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_33"
+		},
+		"Macedonia_35": {
+			"Map": "scenarios/Macedonia_35 - Taxila.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_34"
+		},
+		"Macedonia_36": {
+			"Map": "scenarios/Macedonia_36 - Battle of the Hydaspes.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_35"
+		},
+		"Macedonia_37": {
+			"Map": "scenarios/Macedonia_37 - The Mutiny.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_36"
+		},
+		"Macedonia_38": {
+			"Map": "scenarios/Macedonia_38 - The Mallian Campaign.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_37"
+		},
+		"Macedonia_39": {
+			"Map": "scenarios/Macedonia_39 - The Brahmin Rebellion.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_38"
+		},
+		"Macedonia_40": {
+			"Map": "scenarios/Macedonia_40 - The Underground Assault.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_39"
+		},
+		"Macedonia_41": {
+			"Map": "scenarios/Macedonia_41 - Nearchus's Journey (Part 1).xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_40"
+		},
+		"Macedonia_42": {
+			"Map": "scenarios/Macedonia_42 - Nearchus's Journey (Part 2).xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_41"
+		},
+		"Macedonia_43": {
+			"Map": "scenarios/Macedonia_43 - The Gedrosian Desert.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_42"
+		},
+		"Macedonia_44": {
+			"Map": "scenarios/Macedonia_44 - A Band of Heros (Part 2).xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_43"
+		},
+		"Macedonia_45": {
+			"Map": "scenarios/Macedonia_45 - Nightmares.xml",
+			"MapType": "scenario",
+			"Requires": "Macedonia_44"
+		},
 	},
 	"Order": [
 		"Macedonia_1",
@@ -190,7 +260,21 @@
 		"Macedonia_28",
 		"Macedonia_29",
 		"Macedonia_30",
-		"Macedonia_31"
+		"Macedonia_31",
+		"Macedonia_32",
+		"Macedonia_33",
+		"Macedonia_34",
+		"Macedonia_35",
+		"Macedonia_36",
+		"Macedonia_37",
+		"Macedonia_38",
+		"Macedonia_39",
+		"Macedonia_40",
+		"Macedonia_41",
+		"Macedonia_42",
+		"Macedonia_43",
+		"Macedonia_44",
+		"Macedonia_45"		
 	],
 	"ShowUnavailable": true
 }
