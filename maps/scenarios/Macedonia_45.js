@@ -539,7 +539,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of towers)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/pers_infantry_archer_e",5,p);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/pers/infantry_archer_e",5,p);
 			
 			for (let a of archers_e)
 			{
@@ -568,7 +568,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of forts)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/pers_infantry_archer_e",20,p);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/pers/infantry_archer_e",20,p);
 			
 			for (let a of archers_e)
 			{
@@ -1023,9 +1023,9 @@ Trigger.prototype.IntervalSpawnDoomGuards = function(data)
 			if (patrol_sites.length >= 3)
 			{
 				
-				let inf_templates = ["units/pers/champion_infantry","units/pers/champion_elephant","units/pers/arstibara","units/pers/kardakes_skirmisher","units/maur_champion_maiden","units/maur_champion_maiden_archer","units/maur_elephant_archer_e"];
+				let inf_templates = ["units/pers/champion_infantry","units/pers/champion_elephant","units/pers/arstibara","units/pers/kardakes_skirmisher","units/maur/champion_maiden","units/maur/champion_maiden_archer","units/maur/elephant_archer_e"];
 					
-				let hero_templates = ["units/pers_hero_xerxes","units/pers_hero_cyrus","units/pers_hero_darius","units/maur_hero_maurya","units/maur_hero_ashoka","units/maur_hero_ashoka_infantry"];
+				let hero_templates = ["units/pers/hero_xerxes_i","units/pers/hero_cyrus_ii","units/pers/hero_darius_i","units/maur/hero_chandragupta","units/maur/hero_ashoka","units/maur/hero_ashoka_infantry"];
 			
 				//pick patrol sites
 				let sites = [pickRandom(patrol_sites),pickRandom(patrol_sites),pickRandom(patrol_sites)];
@@ -1045,7 +1045,7 @@ Trigger.prototype.IntervalSpawnDoomGuards = function(data)
 				units = units.concat(hero);	
 				
 				//formation
-				//TriggerHelper.SetUnitFormation(p, units, pickRandom(unitFormations));
+				TriggerHelper.SetUnitFormation(p, units, pickRandom(unitFormations));
 								
 				this.PatrolOrderList(units,p,sites);
 			}
@@ -1396,7 +1396,7 @@ Trigger.prototype.IntervalSpawnTraders = function(data)
 		if (cmpPlayer.GetState() == "active")
 		{
 			let traders = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Trader").filter(TriggerHelper.IsInWorld);
-			let markets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Market").filter(TriggerHelper.IsInWorld);
+			let markets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Trade").filter(TriggerHelper.IsInWorld);
 			
 			//get trading markets
 			let markets_others = [];
@@ -1404,7 +1404,7 @@ Trigger.prototype.IntervalSpawnTraders = function(data)
 			{
 				if (p != p_other)
 				{
-					let markets_p_other = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p_other), "Market").filter(TriggerHelper.IsInWorld);
+					let markets_p_other = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p_other), "Trade").filter(TriggerHelper.IsInWorld);
 					markets_others = markets_others.concat(markets_p_other);
 				}
 			}
@@ -1419,7 +1419,7 @@ Trigger.prototype.IntervalSpawnTraders = function(data)
 					
 					let spawn_market = pickRandom(markets);
 					let target_market = pickRandom(markets_others);
-					let trader = TriggerHelper.SpawnUnits(spawn_market,"units/pers_support_trader",1,p);	
+					let trader = TriggerHelper.SpawnUnits(spawn_market,"units/pers/support_trader",1,p);	
 					let cmpUnitAI = Engine.QueryInterface(trader[0], IID_UnitAI);
 					
 					cmpUnitAI.UpdateWorkOrders("Trade");
@@ -1896,7 +1896,7 @@ Trigger.prototype.RangeActionGiftUnit = function(data)
 		
 		//if professional soldier, make patrol
 		let id = Engine.QueryInterface(u, IID_Identity);
-		warn(uneval(id));
+		//warn(uneval(id));
 		if (id != null)
 		{
 			if (id.classesList.indexOf("Champion") >= 0)
@@ -1920,7 +1920,7 @@ Trigger.prototype.RangeActionGiftUnit = function(data)
 		{
 			let spawn_site = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "CivilCentre").filter(TriggerHelper.IsInWorld)[0];
 		
-			let gift_templates = ["units/kush_champion_elephant","units/kush_champion_infantry"];
+			let gift_templates = ["units/kush/champion_elephant"];
 			let unit_i = TriggerHelper.SpawnUnits(spawn_site,pickRandom(gift_templates),1,1);
 			
 		}
@@ -2618,60 +2618,15 @@ Trigger.prototype.FlipSlaveOwnership = function(data)
 	
 	cmpTrigger.giftedUnitsCounter = 0;
 
-	
-	//debug
-	//cmpTrigger.riverBanditsQuestGiven = true;
-	
-	//start techs
-	//cmpTrigger.DoAfterDelay(2 * 1000,"ResearchTechs",null);
-	
 	//garrisons
 	cmpTrigger.DoAfterDelay(4 * 1000,"GarrisonEntities",null);
-	
-	//patrols
-	//cmpTrigger.DoAfterDelay(6 * 1000,"SpawnMountainVillageGuards",null);
-	//cmpTrigger.DoAfterDelay(8 * 1000,"SpawnColonyPatrol",null);
-	
+
 	//traders
 	cmpTrigger.DoAfterDelay(90 * 1000,"IntervalSpawnTraders",null);
-		
-	
-	//debug 
-	//cmpTrigger.DoAfterDelay(6 * 1000,"QuestElephantAmbushComplete",null);
-	//cmpTrigger.DoAfterDelay(8 * 1000,"QuestBarracksCaptivesComplete",null);
-	//cmpTrigger.DoAfterDelay(8 * 1000,"QuestRiverBanditsComplete",null);
-	//cmpTrigger.DoAfterDelay(10 * 1000,"ActivatePersianVillages",null);
-	//cmpTrigger.DoAfterDelay(10 * 1000,"ActivatePersianVillages",null);
-	
-
-	//army starts moving
-	
-	
-	//spawn initial patrols
-	//cmpTrigger.DoAfterDelay(5 * 1000,"SpawnTowerGuards",null);
-	//cmpTrigger.DoAfterDelay(6 * 1000,"SpawnMountainVillageGuards",null);
-	//cmpTrigger.DoAfterDelay(7 * 1000,"SpawnPersianRebelGuards",null);
-	
-	//some repeat patrols
-	//cmpTrigger.DoAfterDelay(5 * 1000,"IntervalSpawnMountainVillageGuards",null);
-	//cmpTrigger.DoAfterDelay(5 * 1000,"IntervalSpawnPersianGuards",null);
 
 	//start patrol spawns
 	cmpTrigger.DoAfterDelay(30 * 1000,"IntervalSpawnDoomGuards",null);
 	
-	//repeat attacks
-	//cmpTrigger.DoAfterDelay(45 * 1000,"IntervalSpawnFanatics",null);
-	
-	//victory check
-	//cmpTrigger.DoAfterDelay(10 * 1000,"VictoryCheck",null);
-	
-	//interval
-	//cmpTrigger.DoAfterDelay(10 * 1000,"SpawnDesertRaiders",null);
-	//cmpTrigger.DoAfterDelay(30 * 1000,"StatusCheck",null);
-	
-	 
-
-
 
 	//disable templates
 	for (let p of [1,2,3,4,5,6,7,8])
@@ -2681,13 +2636,13 @@ Trigger.prototype.FlipSlaveOwnership = function(data)
 		//add some tech
 		let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 	
-		cmpPlayer.AddStartingTechnology("phase_town_generic");
-		cmpPlayer.AddStartingTechnology("phase_city_generic");
+		cmpTechnologyManager.ResearchTechnology("phase_town_generic");
+		cmpTechnologyManager.ResearchTechnology("phase_city_generic");
 		
 		
 		if (p == 1)
 		{
-			cmpPlayer.AddStartingTechnology("unlock_shared_los");		
+			cmpTechnologyManager.ResearchTechnology("unlock_shared_los");		
 		}
 	}
 	
