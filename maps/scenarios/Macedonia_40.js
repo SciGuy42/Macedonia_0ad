@@ -861,7 +861,7 @@ Trigger.prototype.RangeActionTemple = function(data)
 			//give quest
 			this.questTempleGiven = true;
 			
-			this.ShowText("You encounter a small monestary. The monks welcome you and promise to help you if you defeat the dessert raiders who have been harassing them for weeks now.\n\nNote: you only need to kill all units (not structures) to consider this task complete. Come back here once the task is done.","We'll see what we can.","OK");
+			this.ShowText("You encounter a small monastery. The monks welcome you and promise to help you if you defeat the dessert raiders who have been harassing them for weeks now.\n\nNote: you only need to kill all units (not structures) to consider this task complete. Come back here once the task is done.","We'll see what we can.","OK");
 		}
 	}
 	else if (this.questTempleComplete == false) {

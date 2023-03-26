@@ -823,7 +823,7 @@ Trigger.prototype.SpawnApaPatrol = function(data)
 
 Trigger.prototype.SpawnCavalryRaid = function(data)
 {
-	//size of raid is determined by number of strucures owned by 4 and 5
+	//size of raid is determined by number of structures owned by 4 and 5
 	let structures_p4 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(4), "Structure").filter(TriggerHelper.IsInWorld);
 	let structures_p5 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(5), "Structure").filter(TriggerHelper.IsInWorld);
 	
@@ -859,7 +859,7 @@ Trigger.prototype.SpawnSiegeAttackSquad = function(data)
 	//templates
 	let cav_templates = ["units/pers/cavalry_axeman_e","units/pers/cavalry_spearman_e","units/pers/cavalry_javelineer_e","units/pers/cavalry_archer_e","units/pers/champion_cavalry","units/pers/champion_chariot"];
 	let infantry_templates =["units/pers/arstibara","units/pers/champion_infantry","units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher","units/pers/infantry_archer_e"];
-	let siege_tamplates = ["units/pers/siege_ram"];
+	let siege_templates = ["units/pers/siege_ram"];
 
 	let num_cav = 8+Math.round(Math.random()*4);
 	let num_inf = 20+Math.round(Math.random()*6);
@@ -879,7 +879,7 @@ Trigger.prototype.SpawnSiegeAttackSquad = function(data)
 	}
 	for (let i = 0; i < num_siege; ++i)
 	{
-		let units_i = TriggerHelper.SpawnUnits(spawn_site,pickRandom(siege_tamplates),1,p);
+		let units_i = TriggerHelper.SpawnUnits(spawn_site,pickRandom(siege_templates),1,p);
 		attackers.push(units_i[0]);
 	}
 	

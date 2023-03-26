@@ -372,7 +372,7 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		//ships - TODO
 	}
 	
-	//dsiable civil centres
+	//disable civil centres
 	for (let p of [1,2,3])
 	{
 		let ccs = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p),"CivilCentre").filter(TriggerHelper.IsInWorld);
@@ -622,7 +622,7 @@ Trigger.prototype.CheckForCC = function(data)
 		warn("starting attacks");
 		
 		
-		//this.ShowText("Great job at establishing a base! Our scouts report that our success has not gone unnoticed -- the nearby tribes are bound to atack soon, we must prepare for battle!","OK","Looking forward to it!");
+		//this.ShowText("Great job at establishing a base! Our scouts report that our success has not gone unnoticed -- the nearby tribes are bound to attack soon, we must prepare for battle!","OK","Looking forward to it!");
 		
 		//start ship attacks
 		this.DoAfterDelay(360 * 1000,"IntervalSpawnAttackShip",null);
@@ -648,7 +648,7 @@ Trigger.prototype.IntervalSpawnGroundAttack = function(data)
 		return;
 	}
 	
-	//check if we hace merc camps
+	//check if we have merc camps
 	let camps = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p),"MercenaryCamp").filter(TriggerHelper.IsInWorld);
 		
 	if (camps.length == 0)
@@ -1096,7 +1096,7 @@ Trigger.prototype.RangeActionTemple = function(data)
 			//give quest
 			this.questTempleGiven = true;
 			
-			this.ShowText("You encounter a small monestary. The monks welcome you and promise to help you if you defeat the dessert raiders who have been harassing them for weeks now.\n\nNote: you only need to kill all units (not structures) to consider this task complete. Come back here once the task is done.","We'll see what we can.","OK");
+			this.ShowText("You encounter a small monastery. The monks welcome you and promise to help you if you defeat the dessert raiders who have been harassing them for weeks now.\n\nNote: you only need to kill all units (not structures) to consider this task complete. Come back here once the task is done.","We'll see what we can.","OK");
 		}
 	}
 	else if (this.questTempleComplete == false) {

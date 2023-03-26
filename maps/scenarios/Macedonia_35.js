@@ -370,7 +370,7 @@ Trigger.prototype.IdleUnitCheck = function(data)
 									cmpUnitAI.Attack(target,false,false);
 									
 									
-									//warn("swtiching target to "+uneval(target)+", new orders:");
+									//warn("switching target to "+uneval(target)+", new orders:");
 									//let orders_new = cmpUnitAI.GetOrders();
 									//warn(uneval(orders_new));
 									
@@ -763,7 +763,7 @@ Trigger.prototype.StartMainAttack = function(data)
 {
 	this.eventMainAttackStarted = true;
 	this.SpawnMainAttackInterval();
-	this.ShowText("What we saw so far was only the scouts! There are a lot more of them comming -- prepare to fight for your life!","We are ready!","Great!");
+	this.ShowText("What we saw so far was only the scouts! There are a lot more of them coming -- prepare to fight for your life!","We are ready!","Great!");
 	//warn("main attack started");
 }
 
@@ -876,7 +876,7 @@ Trigger.prototype.SpawnMainAttackInterval = function(data)
 			let cmpUnitAI = Engine.QueryInterface(unit_i[0], IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				//find closest strucure
+				//find closest structure
 				let target = this.FindClosestTarget(unit_i[0],1,"Structure");
 				if (target)
 				{
@@ -901,7 +901,7 @@ Trigger.prototype.SpawnMainAttackInterval = function(data)
 			let cmpUnitAI = Engine.QueryInterface(unit_i[0], IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				//find closest strucure
+				//find closest structure
 				let target = this.FindClosestTarget(unit_i[0],1,"Structure");
 				if (target)
 				{

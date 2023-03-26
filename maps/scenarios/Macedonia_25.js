@@ -272,7 +272,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	}
 	else if (data.entity == this.gaiaFortressId && data.to == 1)
 	{
-		this.ShowText("This captured fortress may come in handy should we need to deal with our enemies. We also found a stockpile inside which we can use to expand our force and improve our weapons. Unfortunaely, there are no materials here that we could use to build a siege tower, so we need to look for another fortress or workshop to fullfil that goal. ","Sounds good","That was easy!"); 
+		this.ShowText("This captured fortress may come in handy should we need to deal with our enemies. We also found a stockpile inside which we can use to expand our force and improve our weapons. Unfortunaely, there are no materials here that we could use to build a siege tower, so we need to look for another fortress or workshop to fulfil that goal. ","Sounds good","That was easy!"); 
 		
 		//add some loot
 		let cmpPlayer = QueryPlayerIDInterface(1);
@@ -1094,7 +1094,7 @@ Trigger.prototype.SpawnAlexnaderAmbush = function(data)
 		
 	let cmpPlayer = QueryPlayerIDInterface(1);
 	let pop = cmpPlayer.GetPopulationCount();
-	let size = Math.round(pop*this.ambushAssasinsRatio);
+	let size = Math.round(pop*this.ambushAssassinsRatio);
 	warn("Spawning additional "+size+" attackers");
 	let units = [];
 	let templates = ["units/pers/infantry_spearman_e","units/pers/infantry_spearman_a","units/pers/kardakes_skirmisher"];
@@ -1323,7 +1323,7 @@ Trigger.prototype.RangeActionTraders = function(data)
 		if (markets.length > 0)
 		{
 		
-			this.ShowText("You encounter a trade caravan in desperate need of help. They are headed to the nearest supply stop -- a neutral market past your camps. If you escort them, they promise a large reward for your service.\n\nThe traders will need a few seconds to regroup. Go ahead and march in the direcion of your camps to clear the way of any possible problems.","Fine, we'll do it", "Good luck, man");
+			this.ShowText("You encounter a trade caravan in desperate need of help. They are headed to the nearest supply stop -- a neutral market past your camps. If you escort them, they promise a large reward for your service.\n\nThe traders will need a few seconds to regroup. Go ahead and march in the direction of your camps to clear the way of any possible problems.","Fine, we'll do it", "Good luck, man");
 		
 			//spawn some traders and ask for escort
 			let spawn_site = this.GetTriggerPoints("B")[0];
@@ -1413,17 +1413,17 @@ Trigger.prototype.RangeActionTemple = function(data)
 			//give quest
 			this.ShowText("The priest is happy to see you again. He looks at the statue you have brought and says, 'Yes, this is it! Now about the reward....'. He looks nervously around him and all of a sudden shouts, 'NOW!!!'....","Now what?","This doesn't look good...");
 			
-			this.assasinationTriggered =  true;
+			this.assassinationTriggered =  true;
 			this.DoAfterDelay(1 * 1000,"SpawnAlexnaderAmbush",null);
 	
 			//spawn ambush
 			this.hasPegasus = false;
 			
 		}
-		else if (this.assasinationTriggered && this.templeRewardGiven == false)
+		else if (this.assassinationTriggered && this.templeRewardGiven == false)
 		{
 			//give quest
-			this.ShowText("The temple's priests gather humbly in front of you and turn in the traitor -- a priest who revelead your locatiion to the assasins and signaled them into action. To make up for what they have done, the temple turns over some healing supplies. Your troops will now be healed faster when garrisoned or idle. ","Great","Too little, too late!");
+			this.ShowText("The temple's priests gather humbly in front of you and turn in the traitor -- a priest who revealed your locatiion to the assassins and signaled them into action. To make up for what they have done, the temple turns over some healing supplies. Your troops will now be healed faster when garrisoned or idle. ","Great","Too little, too late!");
 			
 			this.templeRewardGiven = true;
 			
@@ -1701,7 +1701,7 @@ Trigger.prototype.InitGaiaClusters = function(data)
 	cmpTrigger.hasPegasus = false;
 	cmpTrigger.pegasusQuestGiven = false;
 	cmpTrigger.currentDialog = "none";
-	cmpTrigger.assasinationTriggered = false;
+	cmpTrigger.assassinationTriggered = false;
 	cmpTrigger.templeRewardGiven = false;
 	
 	cmpTrigger.banditHorseQuestGiven = false;
@@ -1726,7 +1726,7 @@ Trigger.prototype.InitGaiaClusters = function(data)
 	cmpTrigger.heal_rate_g = 40;
 	
 	//how many additional troops to spawn at various times as a function of current population
-	cmpTrigger.ambushAssasinsRatio = 0.2;
+	cmpTrigger.ambushAssassinsRatio = 0.2;
 	cmpTrigger.banditRatio = 0.2;
 	
 	
@@ -1745,7 +1745,7 @@ Trigger.prototype.InitGaiaClusters = function(data)
 	 * 20 pikemen trained
 	 * 16 archers, 11 skirm, 35 slingers
 	 * 
-	 * assisin attemp and bandit battle sizes should scale
+	 * assisin attempt and bandit battle sizes should scale
 	 * 
 	 * after destroying ballistans, a random attack by fanatics
 	 * 
@@ -1761,7 +1761,7 @@ Trigger.prototype.InitGaiaClusters = function(data)
 	//warn("Garrisoning entities");
 	cmpTrigger.DoAfterDelay(5 * 1000,"GarrisonEntities",null);
 	
-	//set diplomancy
+	//set diplomacy
 	cmpTrigger.DoAfterDelay(2 * 1000,"SetDiplomacy",null);
 	
 	//starting tech

@@ -191,7 +191,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	{
 		if ((data.from == 5 || data.from == 6) && data.to == -1)
 		{
-			//check if strucutre
+			//check if structure
 			let id = Engine.QueryInterface(data.entity, IID_Identity);
 			//warn(uneval(id));
 			if (id != null && id.classesList.indexOf("Structure") >= 0)
@@ -1262,7 +1262,7 @@ Trigger.prototype.SpawnAssault = function(data)
 	cmpTrigger.RegisterTrigger("OnPlayerCommand", "PlayerCommandAction", data);*/
 	
 	/*
-	 * some notes: 6:30 in, spart starts firt attack, 2 dozen troops + 2 rams (moderate + balanced)
+	 * some notes: 6:30 in, spart starts first attack, 2 dozen troops + 2 rams (moderate + balanced)
 	 * 
 	 * 
 	 */

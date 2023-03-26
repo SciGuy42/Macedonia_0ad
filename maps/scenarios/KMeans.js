@@ -22,7 +22,7 @@ function KMeans(opts) {
 
   // Number of cluster centroids.
   this.k = opts.k;
-  
+
   warn("num clusters = "+uneval(this.k));
 
   // Points to cluster.
@@ -62,9 +62,9 @@ function KMeans(opts) {
 
 /**
 * dataDimensionExtents
-* @desc Returns the the minimum and maximum values for each dimention in the data array.
+* @desc Returns the the minimum and maximum values for each dimension in the data array.
 * @param {array} data - data containing points
-* @return {array} extents - extents for each dimenion
+* @return {array} extents - extents for each dimension
 * @example
 * kmeans.data = [
 *   [2,5],
@@ -288,7 +288,7 @@ KMeans.prototype.run = function() {
    *rerun to reassign points to new cluster centroid (means) positions.
    */
   if (meansMoved) {
-   
+
     //this.timer = setTimeout(this.run.bind(this), this.drawDelay);
   } else {
     // Otherwise task has completed.

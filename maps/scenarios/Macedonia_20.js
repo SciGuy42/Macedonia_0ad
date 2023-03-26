@@ -57,10 +57,10 @@ var textQuestStart = "You have arrived at a small hamlet. The locals are stunned
 var textQuestGoatComplete = "The villagers thank you sincerely for helping them replenish their food supply. One of the villagers is a skilled blacksmith and immediately gets to work on your soldiers' armor to improve it. The village elder shares some knowledge of surrounding areas -- go ahead and take a look.";
 var textQuestRescueComplete = "Way to go! The brigands are now defeated. Several local warriors are so inspired that they decide to join you on your quest. They reveal some information about the local area that may be useful in your travels.";
 var textQuestCaravanGiven = "You stumble upon a small village -- in dire need of help. The villagers ask for help securing good and supplies. They used to have a trading routing with a trading post far to the west -- perhaps you can find it and help the village secure some caravans. The trading post lies past a narrow mountain pass that is being occupied by bandits -- perhaps the villagers you encountered earlier already shared the location of that pass.";
-var textQuestArchersGiven = "The villagers bow to you at the site of the supplies you have brought them. They now ask for help one more time. A local tribe, famous for its archers, continues to raid the village. Destroy them and in exchage, the village elder promises to give you a special gift -- a pair of elephants equiped with the best riders of the land.";
+var textQuestArchersGiven = "The villagers bow to you at the site of the supplies you have brought them. They now ask for help one more time. A local tribe, famous for its archers, continues to raid the village. Destroy them and in exchange, the village elder promises to give you a special gift -- a pair of elephants equipped with the best riders of the land.";
 var textQuestArchersComplete = "Excellent! As promised, here are our elephants. Use them wisely, they are the only ones we can spare! We will also share our knowledge of an ancient temple. The priests there may decide to guide you in your quest. Another piece of knowledge that may come in useful: north of our village, there lies a hidden abandoned siege workshop -- it is rumored that it still holds useful equipment that may come in handy before you meet your allied forces.";
 var textQuestTempleGiven = "Several priests walk out of the temple and greet you with pleasure and admiration. They humbly ask for your help -- not far from here, there is a pyramid complex. Grave robbers have gotten inside and are looting the tombs! Destroy them and we will share great knowledge with you and provide you with some of our holy warriors to aid you in your quest.";
-var textQuestMessageGiven = "A messanger from our allied garrison approaches. He thankks the gods he found you and asks you to urgently head towards the army camp -- they are expecting an imminent attack and are requesting your help! If you have found any siege equipment, bring it, we'll need it! Arrive with all your army togeher!";
+var textQuestMessageGiven = "A messenger from our allied garrison approaches. He thankks the gods he found you and asks you to urgently head towards the army camp -- they are expecting an imminent attack and are requesting your help! If you have found any siege equipment, bring it, we'll need it! Arrive with all your army togeher!";
 var textQuestMessageComplete = "After the battle, the commander thanks you for your help and several of his soldiers join you. The commander also reveals information revealed by one of his spies pertaining to the location of Amenhotep's hideout. The hideout is located past a narrow mountain pass, revealed by the spy who is now heading back to camp. Should you advance into the pass, you will encounter Amenhotep's guards, so be ready for battle! Good luck on your quest!";
 var textQuestFinalEncounter = "Amenhotep's guards are dead. It is now time to finish him once and for all. As the Oracle demanded, you must face this encounter alone -- leave your troops behind and search the remaining desert for Amenhotep. He deserves nothing but death!";
 	
@@ -354,9 +354,9 @@ Trigger.prototype.PatrolOrder = function(units,p)
 	//randomly pick 3 gates
 	while (patrolTargets.length < 3)
 	{
-		let taget_k = Math.floor(Math.random() * patrolTargetPool.length);
-		if (patrolTargets.indexOf(patrolTargetPool[taget_k]) < 1) 
-			patrolTargets.push(patrolTargetPool[taget_k]);
+		let target_k = Math.floor(Math.random() * patrolTargetPool.length);
+		if (patrolTargets.indexOf(patrolTargetPool[target_k]) < 1) 
+			patrolTargets.push(patrolTargetPool[target_k]);
 	}
 
 	for (let patrolTarget of patrolTargets)
@@ -685,7 +685,7 @@ Trigger.prototype.SpawnPyramidWarrior = function(data)
 //garison AI entities with archers
 Trigger.prototype.GarrisonEntities = function(data)
 {
-	warn("garrisoning entitie");
+	warn("garrisoning entities");
 	
 	for (let p of [0,2,4,5,6])
 	{
@@ -945,10 +945,10 @@ Trigger.prototype.SpawnInitialPatrol = function(data)
 
 Trigger.prototype.RangeActionPyramid = function(data)
 {
-	if (this.templeQuestGiven == true && this.pyramidSpwaningStarted == false)
+	if (this.templeQuestGiven == true && this.pyramidSpawningStarted == false)
 	{
 		warn("starting pyramid spawn");
-		this.pyramidSpwaningStarted = true;
+		this.pyramidSpawningStarted = true;
 		this.DoAfterDelay(8 * 1000,"SpawnPyramidWarrior",0);
 	}
 	
@@ -1360,10 +1360,10 @@ Trigger.prototype.BossHealerSpawn = function(data)
 {
 	let healers = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(8), "Healer").filter(TriggerHelper.IsInWorld);
 		
-	let heros = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(8), "Hero").filter(TriggerHelper.IsInWorld);
+	let heroes = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(8), "Hero").filter(TriggerHelper.IsInWorld);
 		
 		
-	if (healers.length <= 2 && heros.length >= 1)
+	if (healers.length <= 2 && heroes.length >= 1)
 	{
 		TriggerHelper.SpawnUnits(6919,"units/kush/support_healer_e",2,8);
 	}	
@@ -1458,7 +1458,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	//temple quests
 	cmpTrigger.templeQuestGiven = false;
 	cmpTrigger.templeQuestComplete = false;
-	cmpTrigger.pyramidSpwaningStarted = false;
+	cmpTrigger.pyramidSpawningStarted = false;
 	cmpTrigger.pyramidSpawnCounter = 0;
 	cmpTrigger.pyramidSpawnLimit = 25;
 	cmpTrigger.pyramidWaveSize = 5;
@@ -1470,7 +1470,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	cmpTrigger.questFieldBattleStarted = false;
 	cmpTrigger.persiaUnitsDefault = -1; //used to check when persia attack defeated
 	
-	//persian assasin attack happens after goat quest
+	//persian assassin attack happens after goat quest
 	cmpTrigger.suddenAttackComplete = false; //false by default
 
 	//holy guard attack
@@ -1673,4 +1673,3 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	
 	
 };
-

@@ -232,7 +232,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 		if (pop == 0)
 		{
-			this.ShowText("The assasins are dead. Darius is severely wounded and as he lay dying, he utters his final words: 'Avenge me! The empire is yours, but you must defeat Bessus. My loyal followers will help you setup camp. You must destroy the traitor!","Sounds good","OK");
+			this.ShowText("The assassins are dead. Darius is severely wounded and as he lay dying, he utters his final words: 'Avenge me! The empire is yours, but you must defeat Bessus. My loyal followers will help you setup camp. You must destroy the traitor!","Sounds good","OK");
 			
 			//spawn servants
 			let dariusID = 3328;
@@ -259,7 +259,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	{
 		if ((data.from == 5 || data.from == 6) && data.to == -1)
 		{
-			//check if strucutre
+			//check if structure
 			let id = Engine.QueryInterface(data.entity, IID_Identity);
 			//warn(uneval(id));
 			if (id != null && id.classesList.indexOf("Structure") >= 0)
@@ -930,7 +930,7 @@ Trigger.prototype.SpawnMercenarySquad = function(data)
 		}
 	}
 	
-	//assasins are neutral towards main enemy factions so they do not run away
+	//assassins are neutral towards main enemy factions so they do not run away
 	let cmpPlayer = QueryPlayerIDInterface(5);
 	cmpPlayer.SetNeutral(2);
 	cmpPlayer.SetNeutral(6);

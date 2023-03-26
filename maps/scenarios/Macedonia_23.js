@@ -179,7 +179,7 @@ Trigger.prototype.ResearchQueuedAction = function(data)
 
 Trigger.prototype.MessageScythianAttack = function(data)
 {
-	this.ShowText("The Scythians have arrived! Your orders are to secure our camp outisde the city walls. Do not let the camp be destroyed! We have sent a dispatch to our main fleet of ships to provide evacuation, we just need to hold out until they arrive!","I am ready!","Oh boy..");
+	this.ShowText("The Scythians have arrived! Your orders are to secure our camp outside the city walls. Do not let the camp be destroyed! We have sent a dispatch to our main fleet of ships to provide evacuation, we just need to hold out until they arrive!","I am ready!","Oh boy..");
 }
 
 Trigger.prototype.SpecialAchaeanAssault = function(data)
@@ -353,7 +353,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			
 			if (id.classesList.indexOf("Dock") < 0)
 			{ 
-				//destroy the strucure				
+				//destroy the structure				
 				let health_s = Engine.QueryInterface(data.entity, IID_Health);
 				health_s.Kill();
 			}
@@ -373,7 +373,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			{
 				if (this.campCaptured == false)
 				{
-					//our defaul gains improve
+					//our default gains improve
 					let increment_factor = 1.25;
 					let bonus = 200;
 
@@ -408,11 +408,11 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			{
 				if (id.classesList.indexOf("Structure") >= 0)
 				{
-					this.numBuildingsDestoryed ++;
+					this.numBuildingsDestroyed ++;
 					
-					//warn("Num buildings destroyed = "+uneval(this.numBuildingsDestoryed));
+					//warn("Num buildings destroyed = "+uneval(this.numBuildingsDestroyed));
 					
-					if (this.numBuildingsDestoryed >= this.buildingsDestroyedThreshold )
+					if (this.numBuildingsDestroyed >= this.buildingsDestroyedThreshold )
 					{
 						this.scythianAttackTriggered = true;
 						
@@ -478,7 +478,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			{
 				if (id.classesList.indexOf("Structure") >= 0)
 				{
-					this.numBuildingsDestoryed ++;
+					this.numBuildingsDestroyed ++;
 					this.patrolSizeDefault += 2;
 					//warn("default patrol size is now "+this.patrolSizeDefault);
 				}
@@ -492,7 +492,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	//olbian slaves cannot capture buildings or siege
 	if ((data.to == 6 || data.to == 4) && data.from == 3)
 	{
-		//destroy the strucure				
+		//destroy the structure				
 		let health_s = Engine.QueryInterface(data.entity, IID_Health);
 		health_s.Kill();
 	}
@@ -1484,7 +1484,7 @@ Trigger.prototype.VictoryAchieved = function(data)
 		
 	if (structures.length > 0)
 	{
-		this.ShowText("Our evacuation team is here! We're safe! You have been victorious! Unforunately, Zopyrion did not make it -- he was cut to pieces as he was fleeing the Scythians.","Great! Get me out of here!","I will just hang out here for a bit more...");
+		this.ShowText("Our evacuation team is here! We're safe! You have been victorious! Unfortunately, Zopyrion did not make it -- he was cut to pieces as he was fleeing the Scythians.","Great! Get me out of here!","I will just hang out here for a bit more...");
 
 		TriggerHelper.SetPlayerWon(1,this.VictoryTextFn,this.VictoryTextFn);	
 	}
@@ -1959,7 +1959,7 @@ Trigger.prototype.PointIncrement = function(data)
 	let sites = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Structure").filter(TriggerHelper.IsInWorld);
 	
 	
-	//with small probability, add heaer
+	//with small probability, add header
 	if (Math.random() < this.healerProb)
 	{
 		units_to_spawn.push("units/mace/support_healer_e");
@@ -2001,7 +2001,7 @@ Trigger.prototype.PointIncrement = function(data)
 	cmpTrigger.RegisterTrigger("OnPlayerCommand", "PlayerCommandAction", data);*/
 	
 	/*
-	 * some notes: 6:30 in, spart starts firt attack, 2 dozen troops + 2 rams (moderate + balanced)
+	 * some notes: 6:30 in, spart starts first attack, 2 dozen troops + 2 rams (moderate + balanced)
 	 * 
 	 * 
 	 */
@@ -2037,7 +2037,7 @@ Trigger.prototype.PointIncrement = function(data)
 	cmpTrigger.scythianPopCap = 300;
 	cmpTrigger.scythianAttackTriggered = false;
 	cmpTrigger.buildingsDestroyedThreshold = 18;
-	cmpTrigger.numBuildingsDestoryed = 0;
+	cmpTrigger.numBuildingsDestroyed = 0;
 	
 	//cmpTrigger.DoAfterDelay(cmpTrigger.scythianWaveInterval * 1000,"SpawnCavalryDockAttack",null);
 	//cmpTrigger.DoAfterDelay(20 * 1000,"SpawnCavalryWave",null);

@@ -1265,7 +1265,7 @@ Trigger.prototype.IntervalSpawnGroundAttack = function(data)
 		return;
 	}
 	
-	//check if we hace merc camps
+	//check if we have merc camps
 	let camps = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p),"MercenaryCamp").filter(TriggerHelper.IsInWorld);
 		
 	if (camps.length == 0)
@@ -1498,10 +1498,10 @@ Trigger.prototype.SpawnDesertRaiders = function(data)
 
 Trigger.prototype.QuestRiverBanditsComplete = function(data)
 {
-	//show some text, spawn more heros
+	//show some text, spawn more heroes
 	this.ShowText("The village elders are delighted to hear the news that the bandits are no more. But they have a confession to make -- a few of your companions had been in the village all along, recovering from their wounds. They are now healed and ready to join you","Great!","OK");
 	
-	//spawn heros
+	//spawn heroes
 	let ccs = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(5), "CivilCentre").filter(TriggerHelper.IsInWorld);
 	
 	let unit1 = TriggerHelper.SpawnUnits(ccs[0],"units/mace_hero_craterus",1,1);
@@ -1950,7 +1950,7 @@ Trigger.prototype.RangeActionMercs = function(data)
 		{
 
 		
-			let offer_text = "You encounter a small camp used by local mercenaries.  A number of horse-riding archers are availabble for hire but it will cost us 2500 metal. ";
+			let offer_text = "You encounter a small camp used by local mercenaries.  A number of horse-riding archers are available for hire but it will cost us 2500 metal. ";
 		
 			this.ShowText(offer_text,"Yes, we need you","Perhaps later");
 			
@@ -2285,7 +2285,7 @@ Trigger.prototype.StatusCheck = function(data)
 {
 	//warn("num squads spawned = "+this.armySquadCounter);
 	//warn("num lost = "+this.numTroopsDead);
-	//warn("num arrrived = "+this.numTroopsArrived);
+	//warn("num arrived = "+this.numTroopsArrived);
 	//warn("num starved = "+this.numStarved);
 	
 	let num_actual_dead = this.numTroopsDead - this.numTroopsArrived;
@@ -2584,11 +2584,11 @@ Trigger.prototype.FlipSlaveOwnership = function(data)
 /* Quests:
  * 
  *  1. encounter with elephant ambusher's cave; need to lead elephants past walled in archers
- * 	reward: rescue 1 or 2 heros DONE
+ * 	reward: rescue 1 or 2 heroes DONE
  * 
- *  2. encountaer with barracks that holds captives, gets assaulted then gets 2 heros DONE, heros lose about 550 hp total, mostly for melee units
+ *  2. encountaer with barracks that holds captives, gets assaulted then gets 2 heroes DONE, heroes lose about 550 hp total, mostly for melee units
  * 
- *  3. up in the mountain you discover 2 heros, however, they have gone sick from eating wild mushrooms and attack, need to lead them to a temple and then they regain their condition DONE
+ *  3. up in the mountain you discover 2 heroes, however, they have gone sick from eating wild mushrooms and attack, need to lead them to a temple and then they regain their condition DONE
  * 
  *  - the closest village is willing to provide information about one of your companions, in exchange need to destroy a bandit base; turns out they have found him and were healing him DONE
  * 	get about 4400 loot, mostly food wood metal with some stone, lost very few hit points with clever strategy, took about 9 minutes to destroy main camp

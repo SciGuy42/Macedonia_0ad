@@ -763,7 +763,7 @@ Trigger.prototype.SpawnDockDestroyedResponseAttack = function(data)
 		return;
 	}
 	
-	//check if we hace fortresses
+	//check if we have fortresses
 	let camps = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(2),"Fortress").filter(TriggerHelper.IsInWorld);
 		
 	if (camps.length == 0)
@@ -829,7 +829,7 @@ Trigger.prototype.SpawnStructureDestroyedResponseAttack = function(target_pos)
 		return;
 	}
 	
-	//check if we hace fortresses
+	//check if we have fortresses
 	let camps = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(2),"Fortress").filter(TriggerHelper.IsInWorld);
 		
 	if (camps.length == 0)
@@ -886,7 +886,7 @@ Trigger.prototype.IntervalSpawnGroundAttack = function(data)
 		return;
 	}
 	
-	//check if we hace merc camps
+	//check if we have merc camps
 	let camps = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p),"MercenaryCamp").filter(TriggerHelper.IsInWorld);
 		
 	if (camps.length == 0)
@@ -1376,7 +1376,7 @@ Trigger.prototype.RangeActionTemple = function(data)
 			//give quest
 			this.questTempleGiven = true;
 			
-			this.ShowText("You encounter a small monestary. The monks welcome you and promise to help you if you defeat the dessert raiders who have been harassing them for weeks now.\n\nNote: you only need to kill all units (not structures) to consider this task complete. Come back here once the task is done.","We'll see what we can.","OK");
+			this.ShowText("You encounter a small monastery. The monks welcome you and promise to help you if you defeat the dessert raiders who have been harassing them for weeks now.\n\nNote: you only need to kill all units (not structures) to consider this task complete. Come back here once the task is done.","We'll see what we can.","OK");
 		}
 	}
 	else if (this.questTempleComplete == false) {

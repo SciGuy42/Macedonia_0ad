@@ -686,7 +686,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 					//find target
 					cmpUnitAI.WalkAndFight(target_pos.x,target_pos.y,null);
 						
-					//TODO: this neeeds to happen at the start
+					//TODO: this needs to happen at the start
 					for (let p of [6])
 					{
 						let cmpPlayer = QueryPlayerIDInterface(p);
@@ -1082,7 +1082,7 @@ Trigger.prototype.IntervalSpawnGroundAttack = function(data)
 		return;
 	}
 	
-	//check if we hace merc camps
+	//check if we have merc camps
 	let camps = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p),"MercenaryCamp").filter(TriggerHelper.IsInWorld);
 		
 	if (camps.length == 0)
@@ -1526,7 +1526,7 @@ Trigger.prototype.RangeActionMercs = function(data)
 		{
 
 		
-			let offer_text = "You encounter a small camp used by local mercenaries.  A number of horse-riding archers are availabble for hire but it will cost us 1500 metal. ";
+			let offer_text = "You encounter a small camp used by local mercenaries.  A number of horse-riding archers are available for hire but it will cost us 1500 metal. ";
 		
 			this.ShowText(offer_text,"Yes, we need you","Perhaps later");
 			
@@ -1732,7 +1732,7 @@ Trigger.prototype.StatusCheck = function(data)
 {
 	//warn("num squads spawned = "+this.armySquadCounter);
 	//warn("num lost = "+this.numTroopsDead);
-	//warn("num arrrived = "+this.numTroopsArrived);
+	//warn("num arrived = "+this.numTroopsArrived);
 	//warn("num starved = "+this.numStarved);
 	
 	let num_actual_dead = this.numTroopsDead - this.numTroopsArrived;
@@ -2292,7 +2292,7 @@ WARNING: found 0 soldiers
 WARNING: victory check: 49
 WARNING: num squads spawned = 198
 WARNING: num lost = 5315
-WARNING: num arrrived = 4468
+WARNING: num arrived = 4468
 WARNING: num starved = 486
 WARNING: num dead = 847
 WARNING: ratio = 0.6531385281385281
@@ -2300,5 +2300,3 @@ WARNING: elapsedMinutes = 49.5
 * 
 * 179 dead from player stats
 */
-
-

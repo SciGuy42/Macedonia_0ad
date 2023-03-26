@@ -866,8 +866,8 @@ Trigger.prototype.SpawnCavalryAttack = function(data)
 	//if siege is delivered, then alexander becomes the target
 	if (this.siegeDeliverd == true)
 	{
-		let heros = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "Hero").filter(TriggerHelper.IsInWorld);
-		target = heros[0];
+		let heroes = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "Hero").filter(TriggerHelper.IsInWorld);
+		target = heroes[0];
 	}
 	
 	//check if we have structures left, if not, end
@@ -1048,7 +1048,7 @@ Trigger.prototype.CheckForCC = function(data)
 	cmpTrigger.DoAfterDelay(10 * 1000,"SpawnInitialPatrol",null);
 	cmpTrigger.DoAfterDelay(30 * 1000,"SpawnIntervalPatrol",null);
 	
-	//small persistant attacks
+	//small persistent attacks
 	cmpTrigger.DoAfterDelay(10 * 1000,"SpawnFanaticSquad",null);
 	
 	//dialog for siege equipment
@@ -1057,7 +1057,7 @@ Trigger.prototype.CheckForCC = function(data)
 	cmpTrigger.DoAfterDelay(6 * 1000,"Dialog3",null);
 	cmpTrigger.DoAfterDelay(cmpTrigger.siegeDeliveryTime * 1000,"SpawnSiegeEquipment",null);
 	
-	//cavalry attack targetting dock/blacksmith
+	//cavalry attack targeting dock/blacksmith
 	cmpTrigger.DoAfterDelay(cmpTrigger.cavalryAttackInerval * 1000,"SpawnCavalryAttack",null);
 
 	

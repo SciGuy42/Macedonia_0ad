@@ -73,7 +73,7 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker,target_player,ta
 	
 }
 
-Trigger.prototype.GetEntititesForClasses = function(owner,classes)
+Trigger.prototype.GetEntitiesForClasses = function(owner,classes)
 {
 	let results = [];
 	for (let c of classes)
@@ -345,7 +345,7 @@ Trigger.prototype.IntervalActionSpawnPatrol = function(data)
 	
 	//make list of possible targets
 	let patrol_classes = ["Fortress","GarrisonTower","CivilCentre","Gates","Barracks"];
-	let patrol_entities = this.GetEntititesForClasses(4,patrol_classes);
+	let patrol_entities = this.GetEntitiesForClasses(4,patrol_classes);
 		warn("Found "+patrol_entities.length+" patrol targets.");
 	
 	let currentPop = QueryPlayerIDInterface(owner).GetPopulationCount();

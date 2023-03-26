@@ -1295,7 +1295,7 @@ Trigger.prototype.AlexanderHealthCheck = function(data)
  * 
  * 663/306, mace 200/268
  * 
- * //lates with fast ai:
+ * //latest with fast ai:
  * 658/365, mace 276/275 out of 338
  * 660/374, mace 299/287
  * 659/408, mace 275/318
@@ -1325,7 +1325,7 @@ Trigger.prototype.AlexanderHealthCheck = function(data)
 	cmpTrigger.RegisterTrigger("OnPlayerCommand", "PlayerCommandAction", data);*/
 	
 	/*
-	 * some notes: 6:30 in, spart starts firt attack, 2 dozen troops + 2 rams (moderate + balanced)
+	 * some notes: 6:30 in, spart starts first attack, 2 dozen troops + 2 rams (moderate + balanced)
 	 * 
 	 * 
 	 */
@@ -1348,7 +1348,7 @@ Trigger.prototype.AlexanderHealthCheck = function(data)
 	//difficulty option
 	//cmpTrigger.DoAfterDelay(2 * 1000,"DifficultyOption",null);
 	
-	//start attackes
+	//start attackers
 	let delay = 30;
 	cmpTrigger.DoAfterDelay((delay+15) * 1000,"AttackInftanryWave",null);	
 	cmpTrigger.DoAfterDelay((delay+25) * 1000,"AttackCavalryWave",null);
