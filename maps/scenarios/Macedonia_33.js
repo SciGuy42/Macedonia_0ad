@@ -695,7 +695,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 					
 					if (this.questTempleGiven == false)
 					{
-						//we did the quest before asigned to it, monks still give us reward
+						//we did the quest before assigned to it, monks still give us reward
 						
 						//TODO: show text
 						this.ShowText("The bandit elephant riders have been defeated. Among the loot, you find ancient religious relics. Monks from a nearby temple are happy you have recovered them and in exchange, offers some medicines and knowledge that will improve the performance of our healers","Great","Also great!");
@@ -927,9 +927,9 @@ Trigger.prototype.IntervalVictoryCheck = function(data)
 	}
 		
 	//check if we still have hero
-	let heros = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(1),"Hero").filter(TriggerHelper.IsInWorld);
+	let heroes = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(1),"Hero").filter(TriggerHelper.IsInWorld);
 	
-	if (heros.length <= 0 /*&& towers.length <= 0*/)
+	if (heroes.length <= 0 /*&& towers.length <= 0*/)
 	{
 		TriggerHelper.SetPlayerWon(6,this.VictoryTextFn,this.VictoryTextFn);
 	}

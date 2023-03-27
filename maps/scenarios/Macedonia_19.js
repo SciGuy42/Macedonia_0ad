@@ -431,7 +431,7 @@ Trigger.prototype.RandomTemplateMace= function(data)
 
 Trigger.prototype.StartNextAttack = function(data)
 {
-	warn("Starting atack "+uneval(this.attack_index));
+	warn("Starting attack "+uneval(this.attack_index));
 	
 	if (this.attack_index == 0)
 	{
@@ -443,7 +443,7 @@ Trigger.prototype.StartNextAttack = function(data)
 	}
 	else if (this.attack_index == 2)
 	{
-		this.ShowText("The last of the enemy forfes are approaching! If we survive this assualt, we win!","We're readdy!","May the Gods help us!");
+		this.ShowText("The last of the enemy forfes are approaching! If we survive this assault, we win!","We're readdy!","May the Gods help us!");
 	}
 	
 	//spawn pers infantry

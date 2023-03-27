@@ -629,7 +629,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				
 				//warn("camp destroyed");
 				
-				//destroy the strucure				
+				//destroy the structure				
 				let health_s = Engine.QueryInterface(data.entity, IID_Health);
 				if (health_s)
 					health_s.Kill();
@@ -649,7 +649,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 					//stop spawning of patrol cavalry
 					this.finalAttackTriggered = true;
 					
-					//spaw final attack
+					//spawn final attack
 					this.DoAfterDelay(15 * 1000,"RebelAttack",null);
 					this.DoAfterDelay(35 * 1000,"RebelAttack",null);
 					this.DoAfterDelay(70 * 1000,"RebelAttack",null);

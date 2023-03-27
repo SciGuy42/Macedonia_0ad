@@ -647,7 +647,7 @@ Trigger.prototype.SpawnMainAttackInterval = function(data)
 			let cmpUnitAI = Engine.QueryInterface(unit_i[0], IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				//find closest strucure
+				//find closest structure
 				let target = this.FindClosestTarget(unit_i[0],1,"Structure");
 				if (target)
 				{
@@ -672,7 +672,7 @@ Trigger.prototype.SpawnMainAttackInterval = function(data)
 			let cmpUnitAI = Engine.QueryInterface(unit_i[0], IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				//find closest strucure
+				//find closest structure
 				let target = this.FindClosestTarget(unit_i[0],1,"Structure");
 				if (target)
 				{

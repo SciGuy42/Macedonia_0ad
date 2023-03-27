@@ -208,7 +208,7 @@ Trigger.prototype.SpawnStructureResponseAttack = function(data)
 		
 		let site = ccs[0];
 		
-		//warn("spawning strucure response squad");
+		//warn("spawning structure response squad");
 		
 		let attackers = [];
 		let p = 3;
@@ -670,7 +670,7 @@ Trigger.prototype.SpawnPatrolReinforcements = function(data)
 	this.spawnPatrolReinforcementsCounter += 1;
 	//warn("patrol counter = "+this.spawnPatrolReinforcementsCounter);
 	
-	//check if we havve run  out of time and then  start attacks
+	//check if we have run  out of time and then  start attacks
 	if (this.spawnPatrolReinforcementsCounter == 120) //I got to cc on 98
 	{
 		//warn("we are doomed");
@@ -805,9 +805,9 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		//warn("Found cavalry = "+units.length);
 		
 		//get alexander position
-		let heros = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1),"Hero").filter(TriggerHelper.IsInWorld);
+		let heroes = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1),"Hero").filter(TriggerHelper.IsInWorld);
 		
-		if (heros.length > 0)
+		if (heroes.length > 0)
 		{
 			
 			//warn("Found hero");
@@ -1043,12 +1043,12 @@ Trigger.prototype.SpawnCavalryAttack = function(data)
 	//TriggerHelper.SetUnitFormation(p, attackers, pickRandom(unitFormations));
 	
 	//target is alexander
-	let heros = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "Hero").filter(TriggerHelper.IsInWorld);
+	let heroes = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "Hero").filter(TriggerHelper.IsInWorld);
 	
 	let target = null;
 	
-	if (heros.length > 0)
-		target = heros[0];
+	if (heroes.length > 0)
+		target = heroes[0];
 	else 
 		target = this.FindClosestTarget(attackers[0],1,siegeTargetClass);
 	
@@ -1309,7 +1309,7 @@ Trigger.prototype.SetDiplomacy = function(data)
 	warn("Garrisoning entities");
 	cmpTrigger.DoAfterDelay(5 * 1000,"GarrisonEntities",null);
 	
-	//set diplomancy
+	//set diplomacy
 	cmpTrigger.DoAfterDelay(2 * 1000,"SetDiplomacy",null);
 	
 	//start supply convoys to enemy
@@ -1363,7 +1363,7 @@ Trigger.prototype.SetDiplomacy = function(data)
 			cmpTechnologyManager.ResearchTechnology("unlock_champion_infantry");
 			cmpTechnologyManager.ResearchTechnology("unlock_champion_cavalry");
 			
-			//imrpove trading
+			//improve trading
 			
 			//improve healing
 			cmpModifiersManager.AddModifiers("Healer Rate Bonus", {

@@ -844,7 +844,7 @@ Trigger.prototype.IntervalReinforcementSpawnAction = function(data)
 
 
 
-Trigger.prototype.TriggerDiplomancy = function(data)
+Trigger.prototype.TriggerDiplomacy = function(data)
 {
 	let towers = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1),"StoneTower").filter(TriggerHelper.IsInWorld);
 	for (let t of towers)
@@ -973,7 +973,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	cmpPlayer.SetAlly(3);
 	cmpPlayer_p3.SetAlly(1);*/
 			
-	cmpTrigger.DoAfterDelay(5,"TriggerDiplomancy",null);
+	cmpTrigger.DoAfterDelay(5,"TriggerDiplomacy",null);
 	
 			
 			
@@ -991,7 +991,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	//list of reinforcements
 	cmpTrigger.reinforceTypes = ["units/mace/champion_cavalry","units/merc_black_cloak","units/mace/champion_infantry_spearman","units/mace/infantry_archer_a","units/mace/infantry_slinger_a","units/mace/cavalry_javelineer_a","units/merc_thureophoros"];
 	
-	//strcture decay check
+	//structure decay check
 	cmpTrigger.structureDecayCounter = 0;
 	cmpTrigger.DoAfterDelay(15 * 1000, "StructureDecayCheck",null);
 	

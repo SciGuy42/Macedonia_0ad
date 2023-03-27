@@ -441,7 +441,7 @@ Trigger.prototype.SpawnIntervalGuardPatrol = function(data)
 		if (units.length < this.maxEnemyKidnappersPatrolSize)
 		{
 			
-			//warn("Found this mane enemy units: "+uneval(units.length));
+			//warn("Found this many enemy units: "+uneval(units.length));
 		
 			//decide how many to spawn
 			let difference = this.maxEnemyKidnappersPatrolSize - units.length;
@@ -725,7 +725,7 @@ Trigger.prototype.RangeActionTraders = function(data)
 		this.DoAfterDelay(20 * 1000,"ActionTradersJourneyStart",null);
 		this.DoAfterDelay(5 * 1000,"SpawnTradersAmbush",null);
 		
-		this.ShowText("You happen upon a desparate caravan trying to reach the Dock to the south. The traders ask you to provide escort and in exchange, their horsemen will assist when the final battle comes. The caravans will rest a bit longer and then head out -- scout ahead of them towards the Dock by the camp to make sure the road is safe.","Got it!","Will do");
+		this.ShowText("You happen upon a desperate caravan trying to reach the Dock to the south. The traders ask you to provide escort and in exchange, their horsemen will assist when the final battle comes. The caravans will rest a bit longer and then head out -- scout ahead of them towards the Dock by the camp to make sure the road is safe.","Got it!","Will do");
 	}
 }
 
@@ -833,7 +833,7 @@ Trigger.prototype.RangeActionTradeOutpost = function(data)
 		//warn("Trade quest given");
 		
 		//TODO: add text
-		this.ShowText("The small trading outpost welcomes you. The traders pledge their support in your cause to free Alexander but ask for help themselves -- a group of bandits based out of an old elephant stable have stolen their equipment, particularly materails needed to build boats. Should you defeat the bandits, the nomad traders will provide you with a boat that may come in handy. The bandit's outpost is located to the north east of here.","I'll try","OK");
+		this.ShowText("The small trading outpost welcomes you. The traders pledge their support in your cause to free Alexander but ask for help themselves -- a group of bandits based out of an old elephant stable have stolen their equipment, particularly materials needed to build boats. Should you defeat the bandits, the nomad traders will provide you with a boat that may come in handy. The bandit's outpost is located to the north east of here.","I'll try","OK");
 		
 		this.tradeOutpostQuestGiven = true;
 	}
@@ -1674,12 +1674,12 @@ Trigger.prototype.RangeActionTempleQuest = function(data)
 		{
 			
 			//warn("Temple Quest Given");
-			this.ShowText("You encounter an ancient monestary next to the mountains. The head monk greets you with respect and shares the story of how recently, a group of bandits from up in the mountains stole a relic from the monks. Should you rerieve it, they'll offer their support in your quest to free Alexander.","We'll do what we can.","Perhaps.")
+			this.ShowText("You encounter an ancient monastery next to the mountains. The head monk greets you with respect and shares the story of how recently, a group of bandits from up in the mountains stole a relic from the monks. Should you rerieve it, they'll offer their support in your quest to free Alexander.","We'll do what we can.","Perhaps.")
 			
 			this.templeQuestGiven = true;
 		}
 		else {
-			this.ShowText("You encounter an ancient monestary next to the mountains. The head monk greets you with respect and shares the story of how recently, a group of bandits from up in the mountains stole a relic from the monks. As you have already found the relic, you give it to the monks and in exchange, they agree to help you in your final battle against Alexander's kidnappers","Great!","Thanks!")
+			this.ShowText("You encounter an ancient monastery next to the mountains. The head monk greets you with respect and shares the story of how recently, a group of bandits from up in the mountains stole a relic from the monks. As you have already found the relic, you give it to the monks and in exchange, they agree to help you in your final battle against Alexander's kidnappers","Great!","Thanks!")
 			
 			this.templeQuestGiven = true;
 			this.templeQuestComplete = true;
@@ -1760,7 +1760,7 @@ Trigger.prototype.SpawnCityKidnappers = function(data)
 	
 	//difficulty related constants
 	cmpTrigger.enemyCampPatrolSize = 80;
-	cmpTrigger.kidnappersPatrolSize = 30; //initail
+	cmpTrigger.kidnappersPatrolSize = 30; //initial
 	cmpTrigger.maxEnemyPatrolSize = 130;
 	cmpTrigger.maxEnemyKidnappersPatrolSize = 70; //max
 	cmpTrigger.intervalPatrol = 3;

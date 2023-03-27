@@ -473,7 +473,7 @@ Trigger.prototype.FlipAssets = function(data)
 		cmpOwnership.SetOwner(1);
 	}
 	
-	//set neutral so we don't try ot retreat
+	//set neutral so we don't try to retreat
 	let cmpPlayer3 = QueryPlayerIDInterface(3);
 	cmpPlayer3.SetNeutral(1);	
 }
@@ -937,9 +937,9 @@ Trigger.prototype.IntervalVictoryCheck = function(data)
 	}
 		
 	//check if we still have hero
-	let heros = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(1),"Hero").filter(TriggerHelper.IsInWorld);
+	let heroes = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(1),"Hero").filter(TriggerHelper.IsInWorld);
 	
-	if (heros.length <= 0 /*&& towers.length <= 0*/)
+	if (heroes.length <= 0 /*&& towers.length <= 0*/)
 	{
 		TriggerHelper.SetPlayerWon(6,this.VictoryTextFn,this.VictoryTextFn);
 	}

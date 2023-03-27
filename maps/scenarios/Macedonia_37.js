@@ -605,7 +605,7 @@ Trigger.prototype.SpawnInterevalPatrol = function(data)
 		let templates = ["units/maur/champion_infantry_maceman","units/maur/infantry_archer_e","units/maur/champion_maiden","units/maur/champion_maiden_archer","units/maur/champion_infantry_maceman","units/maur/champion_elephant","units/maur/infantry_swordsman_e","units/maur/infantry_spearman_e"];
 	
 		//decide whether the patrol goes for Prasii or Gangaridai
-		let patrol_sites_ownder = null;
+		let patrol_sites_owner = null;
 		let patrol_sites = null;
 		
 		let sites_p2 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2),"Structure").filter(TriggerHelper.IsInWorld);
@@ -618,24 +618,24 @@ Trigger.prototype.SpawnInterevalPatrol = function(data)
 		
 		if (sites_p2.length == 0 && sites_p5.length > 0)
 		{
-			patrol_sites_ownder = 5;
+			patrol_sites_owner = 5;
 			patrol_sites = sites_p5;
 		}
 		else if (sites_p2.length > 0 && sites_p5.length == 0)
 		{
-			patrol_sites_ownder = 2;
+			patrol_sites_owner = 2;
 			patrol_sites = sites_p2;
 		}
 		else 
 		{
 			if (Math.random() < 0.5)
 			{
-				patrol_sites_ownder = 2;
+				patrol_sites_owner = 2;
 				patrol_sites = sites_p2;
 			}
 			else 
 			{
-				patrol_sites_ownder = 5;
+				patrol_sites_owner = 5;
 				patrol_sites = sites_p5;
 			}	
 		}
@@ -755,7 +755,7 @@ Trigger.prototype.StartAdvanceAttack = function(data)
 {
 	this.eventAdvanceAttackStarted = true;
 	this.SpawnAdvanceAttackSquadInterval();
-	this.ShowText("Our scouts report that Porus' advance has arrived! They are hehaded towards teh farmsteads!","So it begins","Great!");
+	this.ShowText("Our scouts report that Porus' advance has arrived! They are hehaded towards the farmsteads!","So it begins","Great!");
 	//warn("advance attack started!!!");
 }
 
@@ -829,7 +829,7 @@ Trigger.prototype.SpawnMainAttackInterval = function(data)
 			let cmpUnitAI = Engine.QueryInterface(unit_i[0], IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				//find closest strucure
+				//find closest structure
 				let target = this.FindClosestTarget(unit_i[0],1,"Structure");
 				if (target)
 				{
@@ -854,7 +854,7 @@ Trigger.prototype.SpawnMainAttackInterval = function(data)
 			let cmpUnitAI = Engine.QueryInterface(unit_i[0], IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				//find closest strucure
+				//find closest structure
 				let target = this.FindClosestTarget(unit_i[0],1,"Structure");
 				if (target)
 				{
@@ -984,7 +984,7 @@ Trigger.prototype.StructureBuiltAction = function(data)
 		{
 		
 			//show text
-			this.ShowText("A messanger from the Nanda Empire has arrived. He explains that the local general in charge of the garrison is not very happy about you building a base in Nanda territory. While the Nanda will tolerate you for now, beware, any further expansion could result in war.","So it goes.","Oh my");
+			this.ShowText("A messenger from the Nanda Empire has arrived. He explains that the local general in charge of the garrison is not very happy about you building a base in Nanda territory. While the Nanda will tolerate you for now, beware, any further expansion could result in war.","So it goes.","Oh my");
 		}
 		
 	}

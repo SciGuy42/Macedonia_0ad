@@ -219,7 +219,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			
 			warn("archers killed = "+this.archersKilled);
 			
-			if (this.archersKilled > this.archersRetreatTreshold)
+			if (this.archersKilled > this.archersRetreatThreshold)
 			{
 				
 				this.DoAfterDelay(5 * 1000,"ArchersRetreatCommand",null);
@@ -233,7 +233,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			}
 			else if (this.archersKilled == 1)
 			{
-				this.ShowText("Excellent! That archer did not see this comming! Let's keep firing until they realize they need to retreat!","Great","ok");
+				this.ShowText("Excellent! That archer did not see this coming! Let's keep firing until they realize they need to retreat!","Great","ok");
 			}
 		}
 	}
@@ -282,7 +282,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	{
 		if ((data.from == 5 || data.from == 6) && data.to == -1)
 		{
-			//check if strucutre
+			//check if structure
 			let id = Engine.QueryInterface(data.entity, IID_Identity);
 			//warn(uneval(id));
 			if (id != null && id.classesList.indexOf("Structure") >= 0)
@@ -888,7 +888,7 @@ Trigger.prototype.SpawnApaPatrol = function(data)
 
 Trigger.prototype.SpawnCavalryRaid = function(data)
 {
-	//size of raid is determined by number of strucures owned by 4 and 5
+	//size of raid is determined by number of structures owned by 4 and 5
 	let structures_p4 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(4), "Structure").filter(TriggerHelper.IsInWorld);
 	let structures_p5 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(5), "Structure").filter(TriggerHelper.IsInWorld);
 	
@@ -1378,7 +1378,7 @@ Trigger.prototype.FleetMovementCommand = function(data)
 	//state variables
 	cmpTrigger.riverCrossed = false; //flips to true once you unload units on the other side
 	cmpTrigger.archersKilled = 0;
-	cmpTrigger.archersRetreatTreshold = 100;
+	cmpTrigger.archersRetreatThreshold = 100;
 	cmpTrigger.archersRetreated = false;
 	cmpTrigger.boatCommandTriggered = false;
 	cmpTrigger.cavalryAttacksTriggered = false;

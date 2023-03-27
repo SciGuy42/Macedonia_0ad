@@ -1672,7 +1672,7 @@ Trigger.prototype.DariusFlees = function(data)
 	cmpTrigger.RegisterTrigger("OnPlayerCommand", "PlayerCommandAction", data);*/
 	
 	/*
-	 * some notes: 6:30 in, spart starts firt attack, 2 dozen troops + 2 rams (moderate + balanced)
+	 * some notes: 6:30 in, spart starts first attack, 2 dozen troops + 2 rams (moderate + balanced)
 	 * 
 	 * 
 	 */
@@ -1722,7 +1722,7 @@ Trigger.prototype.DariusFlees = function(data)
 	
 	//cmpTrigger.DoAfterDelay(10 * 1000,"DariusFlees",null);
 	
-	//start attackes
+	//start attackers
 	
 	cmpTrigger.DoAfterDelay(15 * 1000,"AttackInftanryWave",null);	
 	cmpTrigger.DoAfterDelay(40 * 1000,"AttackCavalryWave",null);

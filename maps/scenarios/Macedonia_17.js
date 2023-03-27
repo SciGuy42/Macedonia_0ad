@@ -291,9 +291,9 @@ Trigger.prototype.PatrolOrder = function(units,p)
 	//randomly pick 3 gates
 	while (patrolTargets.length < 5)
 	{
-		let taget_k = Math.floor(Math.random() * patrolTargetPool.length);
-		if (patrolTargets.indexOf(patrolTargetPool[taget_k]) < 1) 
-			patrolTargets.push(patrolTargetPool[taget_k]);
+		let target_k = Math.floor(Math.random() * patrolTargetPool.length);
+		if (patrolTargets.indexOf(patrolTargetPool[target_k]) < 1) 
+			patrolTargets.push(patrolTargetPool[target_k]);
 	}
 
 	for (let patrolTarget of patrolTargets)
@@ -585,9 +585,9 @@ Trigger.prototype.SpawnElephantPatrolPeriodic = function(data)
 		return;
 		
 	//check to see how many elephants we already have
-	let eles = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p), "Elephant").filter(TriggerHelper.IsInWorld);
+	let elephants = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p), "Elephant").filter(TriggerHelper.IsInWorld);
 	
-	if (eles.length > 20)
+	if (elephants.length > 20)
 		return;
 	
 	//check patrol targets, currently ccs and docks
@@ -918,7 +918,7 @@ Trigger.prototype.IdleUnitCheck = function(data)
 	{
 		let units_inf = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p),"Infantry").filter(TriggerHelper.IsInWorld);
 		
-		//make patrol if idel
+		//make patrol if idle
 		for (let u of units_inf)
 		{
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
@@ -937,7 +937,7 @@ Trigger.prototype.IdleUnitCheck = function(data)
 	{
 		let units_inf = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p),"Elephant").filter(TriggerHelper.IsInWorld);
 		
-		//make patrol if idel
+		//make patrol if idle
 		for (let u of units_inf)
 		{
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
