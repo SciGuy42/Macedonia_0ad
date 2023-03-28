@@ -72,7 +72,7 @@ function KMeans(opts) {
 *   [3,1]
 * ];
 * var extents = kmeans.dataDimensionExtents();
-* console.log(extents); // [{min: 2, max: 4}, {min: 1, max: 7}]
+* warn(uneval(extents)); // [{min: 2, max: 4}, {min: 1, max: 7}]
 */
 KMeans.prototype.dataDimensionExtents = function() {
   var data = this.data;
@@ -105,7 +105,7 @@ KMeans.prototype.dataDimensionExtents = function() {
 * @return {array} ranges
 * kmeans.extents = [{min: 2, max: 4}, {min: 1, max: 7}]
 * var ranges = kmeans.dataExtentRanges(extents);
-* console.log(ranges); // [2,6]
+* warn(uneval(ranges)); // [2,6]
 */
 KMeans.prototype.dataExtentRanges = function() {
   var ranges = [];
@@ -123,7 +123,7 @@ KMeans.prototype.dataExtentRanges = function() {
 * @return {array} cluster centroid points
 * @example
 * var means = kmeans.seeds();
-* console.log(means); // [[2,3],[4,5],[5,2]]
+* warn(uneval(means)); // [[2,3],[4,5],[5,2]]
 */
 KMeans.prototype.seeds = function() {
   var means = [];

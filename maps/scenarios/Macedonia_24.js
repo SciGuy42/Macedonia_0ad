@@ -1700,7 +1700,7 @@ Trigger.prototype.DariusFlees = function(data)
 	 * 
 	 */
 	
-	//console.log(clusterMaker.clusters());
+	// warn(uneval(clusterMaker.clusters()));
 	
 	//some constants and variables
 	cmpTrigger.waveIndex = 1;
