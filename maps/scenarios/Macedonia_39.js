@@ -81,8 +81,8 @@ var disabledTemplates = (civ) => [
 
 	// Walls
 	"structures/" + civ + "/wallset_stone",
-	"structures/rome_wallset_siege",
-	"other/wallset_palisade",
+	"structures/rome/wallset_siege",
+	"structures/wallset_palisade",
 
 	// Shoreline
 	"structures/" + civ + "/dock",
@@ -359,7 +359,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					
 					let trigger_sites = this.GetTriggerPoints(triggerPointsPatrol);
 		
@@ -390,7 +391,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					this.WalkAndFightClosestTarget(u,1,unitTargetClass);
 				}
 			}
@@ -524,7 +526,7 @@ Trigger.prototype.SpawnAdvanceAttackSquadInterval = function(data)
 	let sites = this.GetTriggerPoints(triggerPointsAdvanceAttack);
 	
 	//templates
-	let templates = ["units/maur_infantry_archer_a","units/maur_infantry_archer_b","units/maur_infantry_spearman_a","units/maur_infantry_spearman_b","units/maur_infantry_spearman_b","units/maur_infantry_swordsman_b","units/maur_infantry_swordsman_a","units/maur_infantry_swordsman_e","units/maur_infantry_spearman_e"];
+	let templates = ["units/maur/infantry_archer_a", "units/maur/infantry_archer_b", "units/maur/infantry_spearman_a", "units/maur/infantry_spearman_b", "units/maur/infantry_spearman_b", "units/maur/infantry_swordsman_b", "units/maur/infantry_swordsman_a", "units/maur/infantry_swordsman_e", "units/maur/infantry_spearman_e"];
 	
 	//how many
 	let size = 1;
@@ -617,7 +619,7 @@ Trigger.prototype.SpawnMainAttackInterval = function(data)
 	let p = 2;
 	
 	//templates
-	let templates = ["units/maur_champion_infantry","units/maur_champion_maiden","units/maur_champion_maiden_archer","units/maur_elephant_archer_e","units/maur_infantry_swordsman_e","units/maur_infantry_spearman_e","units/maur_infantry_swordsman_e","units/maur_champion_elephant"];
+	let templates = ["units/maur/champion_infantry", "units/maur/champion_maiden", "units/maur/champion_maiden_archer", "units/maur/elephant_archer_e", "units/maur/infantry_swordsman_e", "units/maur/infantry_spearman_e", "units/maur/infantry_swordsman_e", "units/maur/champion_elephant"];
 	
 	//sites 
 	let sites = this.GetTriggerPoints(triggerPointsMainAttack);
@@ -642,7 +644,7 @@ Trigger.prototype.SpawnMainAttackInterval = function(data)
 		if (Math.random() < siege_prob)
 		{
 			//warn("spawning ram");
-			let unit_i = TriggerHelper.SpawnUnits(site_i,"units/maur_mechanical_siege_ram",1,p);
+			let unit_i = TriggerHelper.SpawnUnits(site_i, "units/maur/siege_ram", 1, p);
 		
 			let cmpUnitAI = Engine.QueryInterface(unit_i[0], IID_UnitAI);
 			if (cmpUnitAI)
@@ -667,7 +669,7 @@ Trigger.prototype.SpawnMainAttackInterval = function(data)
 		{
 			//spawning extra elephant
 			//warn("spawning elephant");
-			let unit_i = TriggerHelper.SpawnUnits(site_i,"units/maur_champion_elephant",1,p);
+			let unit_i = TriggerHelper.SpawnUnits(site_i, "units/maur/champion_elephant", 1, p);
 		
 			let cmpUnitAI = Engine.QueryInterface(unit_i[0], IID_UnitAI);
 			if (cmpUnitAI)
@@ -919,7 +921,8 @@ Trigger.prototype.LevelAdvance = function(data)
 	{
 		this.ShowText("The second rebel army is approaching! Prepare for battle! We need to defeat them all!","We're ready!","Oh NO!");
 	}
-	else {
+	else
+	{
 		this.ShowText("More of them are coming! We need to defeat them all!","We're ready!","Oh NO!");
 
 	}
@@ -1002,14 +1005,14 @@ Trigger.prototype.LevelAdvance = function(data)
 	}
 	/*else if (this.currentLevel == 3)
 	{
-		squad_templates = ["units/maur_champion_infantry","units/maur_infantry_spearman_e","units/maur_infantry_swordsman_e","units/maur_champion_maiden","units/maur_infantry_archer_e","units/maur_champion_maiden","units/maur_champion_infantry","units/maur_champion_maiden_archer","units/maur_elephant_archer_e","units/maur_champion_elephant","units/maur_cavalry_javelineer_e","units/maur_cavalry_swordsman_e"];
+		squad_templates = ["units/maur/champion_infantry","units/maur/infantry_spearman_e","units/maur/infantry_swordsman_e","units/maur/champion_maiden","units/maur/infantry_archer_e","units/maur/champion_maiden","units/maur/champion_infantry","units/maur/champion_maiden_archer","units/maur/elephant_archer_e","units/maur/champion_elephant","units/maur/cavalry_javelineer_e","units/maur/cavalry_swordsman_e"];
 		wave_templates = squad_templates;
-		siege_templates = ["units/maur_champion_elephant","units/mace/siege_oxybeles_packed","units/pers_mechanical_siege_ram"];
+		siege_templates = ["units/maur/champion_elephant","units/mace/siege_oxybeles_packed","units/pers/siege_ram"];
 	}
 	else {
-		squad_templates = ["units/maur_champion_infantry","units/maur_infantry_spearman_e","units/maur_infantry_swordsman_e","units/maur_champion_maiden","units/maur_infantry_archer_e","units/maur_champion_maiden","units/maur_champion_infantry","units/maur_champion_maiden_archer","units/maur_elephant_archer_e","units/maur_champion_elephant","units/maur_cavalry_javelineer_e","units/maur_cavalry_swordsman_e","units/maur_champion_chariot","units/maur_champion_chariot"];
+		squad_templates = ["units/maur/champion_infantry","units/maur/infantry_spearman_e","units/maur/infantry_swordsman_e","units/maur/champion_maiden","units/maur/infantry_archer_e","units/maur/champion_maiden","units/maur/champion_infantry","units/maur/champion_maiden_archer","units/maur/elephant_archer_e","units/maur/champion_elephant","units/maur/cavalry_javelineer_e","units/maur/cavalry_swordsman_e","units/maur/champion_chariot","units/maur/champion_chariot"];
 		wave_templates = squad_templates;
-		siege_templates = ["units/maur_champion_elephant","units/mace/siege_oxybeles_packed","units/pers_mechanical_siege_ram","units/mace/siege_lithobolos_packed"];
+		siege_templates = ["units/maur/champion_elephant","units/mace/siege_oxybeles_packed","units/pers/siege_ram","units/mace/siege_lithobolos_packed"];
 	}*/
 	
 	//step 3 -- decide spawn sites
@@ -1091,7 +1094,8 @@ Trigger.prototype.LevelAdvance = function(data)
 	
 		this.currentLevel += 1;
 	}
-	else {
+	else
+	{
 		warn("starting victory check");
 		this.DoAfterDelay(20 * 1000,"VictoryCheck",null);
 	}

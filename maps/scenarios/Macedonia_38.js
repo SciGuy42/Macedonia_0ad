@@ -42,8 +42,8 @@ var disabledTemplatesCCs = (civ) => [
 
 	
 	// Expansions
-	"structures/" + civ + "_civil_centre",
-	"structures/" + civ + "_military_colony",
+	"structures/" + civ + "/civil_centre",
+	"structures/" + civ + "/military_colony",
 
 	// Shoreline
 	"structures/brit/crannog"
@@ -53,44 +53,44 @@ var disabledTemplatesDocksCCs = (civ) => [
 
 	
 	// Expansions
-	"structures/" + civ + "_civil_centre",
-	"structures/" + civ + "_military_colony",
+	"structures/" + civ + "/civil_centre",
+	"structures/" + civ + "/military_colony",
 
 	// Shoreline
-	"structures/" + civ + "_dock",
+	"structures/" + civ + "/dock",
 	"structures/brit/crannog",
-	"structures/cart_super_dock",
-	"structures/ptol_lighthouse"
+	"structures/cart/super_dock",
+	"structures/ptol/lighthouse"
 ];
 
 
 var disabledTemplates = (civ) => [
 	// Economic structures
-	"structures/" + civ + "_corral",
-	"structures/" + civ + "_farmstead",
-	"structures/" + civ + "_field",
-	"structures/" + civ + "_storehouse",
-	"structures/" + civ + "_rotarymill",
-	"structures/" + civ + "_market",
-	"structures/" + civ + "_house",
+	"structures/" + civ + "/corral",
+	"structures/" + civ + "/farmstead",
+	"structures/" + civ + "/field",
+	"structures/" + civ + "/storehouse",
+	"structures/" + civ + "/rotarymill",
+	"structures/" + civ + "/market",
+	"structures/" + civ + "/house",
 	
 	// Expansions
-	"structures/" + civ + "_civil_centre",
-	"structures/" + civ + "_military_colony",
+	"structures/" + civ + "/civil_centre",
+	"structures/" + civ + "/military_colony",
 
 	// Walls
-	"structures/" + civ + "_wallset_stone",
-	"structures/rome_wallset_siege",
-	"other/wallset_palisade",
+	"structures/" + civ + "/wallset_stone",
+	"structures/rome/wallset_siege",
+	"structures/wallset_palisade",
 
 	// Shoreline
-	"structures/" + civ + "_dock",
+	"structures/" + civ + "/dock",
 	"structures/brit/crannog",
-	"structures/cart_super_dock",
-	"structures/ptol_lighthouse",
+	"structures/cart/super_dock",
+	"structures/ptol/lighthouse",
 	
 	//villagers
-	"units/" + civ + "_support_female_citizen"
+	"units/" + civ + "/support_female_citizen"
 ];
 
 
@@ -306,7 +306,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI && Math.random() < 0.25)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					this.WalkAndFightClosestTarget(u,1,unitTargetClass);
 				}
 			}
@@ -320,7 +321,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					
 					let trigger_sites = this.GetTriggerPoints(triggerPointsPatrol);
 
@@ -486,7 +488,7 @@ Trigger.prototype.SpawnAdvanceAttackSquadInterval = function(data)
 	let sites = this.GetTriggerPoints(triggerPointsAdvanceAttack);
 	
 	//templates
-	let templates = ["units/maur_infantry_archer_a","units/maur_infantry_archer_b","units/maur_infantry_spearman_a","units/maur_infantry_spearman_b","units/maur_infantry_spearman_b","units/maur_infantry_swordsman_b","units/maur_infantry_swordsman_a","units/maur_infantry_swordsman_e","units/maur_infantry_spearman_e"];
+	let templates = ["units/maur/infantry_archer_a", "units/maur/infantry_archer_b", "units/maur/infantry_spearman_a", "units/maur/infantry_spearman_b", "units/maur/infantry_spearman_b", "units/maur/infantry_swordsman_b", "units/maur/infantry_swordsman_a", "units/maur/infantry_swordsman_e", "units/maur/infantry_spearman_e"];
 	
 	//how many
 	let size = 1;
@@ -583,7 +585,7 @@ Trigger.prototype.SpawnMainAttackInterval = function(data)
 	let p = 2;
 	
 	//templates
-	let templates = ["units/maur_champion_infantry","units/maur_champion_maiden","units/maur_champion_maiden_archer","units/maur_elephant_archer_e","units/maur_infantry_swordsman_e","units/maur_infantry_spearman_e","units/maur_infantry_swordsman_e","units/maur_champion_elephant"];
+	let templates = ["units/maur/champion_infantry", "units/maur/champion_maiden", "units/maur/champion_maiden_archer", "units/maur/elephant_archer_e", "units/maur/infantry_swordsman_e", "units/maur/infantry_spearman_e", "units/maur/infantry_swordsman_e", "units/maur/champion_elephant"];
 	
 	//sites 
 	let sites = this.GetTriggerPoints(triggerPointsMainAttack);
@@ -608,7 +610,7 @@ Trigger.prototype.SpawnMainAttackInterval = function(data)
 		if (Math.random() < siege_prob)
 		{
 			//warn("spawning ram");
-			let unit_i = TriggerHelper.SpawnUnits(site_i,"units/maur_mechanical_siege_ram",1,p);
+			let unit_i = TriggerHelper.SpawnUnits(site_i, "units/maur/siege_ram", 1, p);
 		
 			let cmpUnitAI = Engine.QueryInterface(unit_i[0], IID_UnitAI);
 			if (cmpUnitAI)
@@ -633,7 +635,7 @@ Trigger.prototype.SpawnMainAttackInterval = function(data)
 		{
 			//spawning extra elephant
 			//warn("spawning elephant");
-			let unit_i = TriggerHelper.SpawnUnits(site_i,"units/maur_champion_elephant",1,p);
+			let unit_i = TriggerHelper.SpawnUnits(site_i, "units/maur/champion_elephant", 1, p);
 		
 			let cmpUnitAI = Engine.QueryInterface(unit_i[0], IID_UnitAI);
 			if (cmpUnitAI)
@@ -1084,7 +1086,8 @@ Trigger.prototype.IntervalCheckIndianCCs = function(data)
 			cmpTechnologyManager.ResearchTechnology("phase_town_generic");
 			cmpTechnologyManager.ResearchTechnology("phase_city_generic");
 		}
-		else {
+		else
+		{
 			cmpTechnologyManager.ResearchTechnology("phase_town_athen");
 			cmpTechnologyManager.ResearchTechnology("phase_city_athen");
 		}

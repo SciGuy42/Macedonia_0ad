@@ -40,8 +40,8 @@ var disabledTemplatesCCs = (civ) => [
 
 	
 	// Expansions
-	"structures/" + civ + "_civil_centre",
-	"structures/" + civ + "_military_colony",
+	"structures/" + civ + "/civil_centre",
+	"structures/" + civ + "/military_colony",
 
 	// Shoreline
 	"structures/brit/crannog"
@@ -77,8 +77,8 @@ var disabledTemplates = (civ) => [
 
 	// Walls
 	"structures/" + civ + "/wallset_stone",
-	"structures/rome_wallset_siege",
-	"other/wallset_palisade",
+	"structures/rome/wallset_siege",
+	"structures/wallset_palisade",
 
 	// Shoreline
 	"structures/" + civ + "/dock",
@@ -321,7 +321,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 				let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 				if (cmpUnitAI)
 				{
-					if (cmpUnitAI.IsIdle()){
+					if (cmpUnitAI.IsIdle())
+					{
 						this.WalkAndFightClosestTarget(u,1,unitTargetClass);
 					}
 				}
@@ -658,7 +659,7 @@ Trigger.prototype.SpawnInterevalPatrol = function(data)
 Trigger.prototype.SpawnIntervalPtolemyAttack = function(data)
 {
 	//templates
-	let templates = ["units/athen/champion_ranged","units/athen/champion_marine","units/athen/champion_marine","units/mace/champion_infantry_spearman","units/mace/champion_infantry_spearman_02","units/mace_thorakites","units/mace_thureophoros"];
+	let templates = ["units/athen/champion_ranged", "units/athen/champion_marine", "units/athen/champion_marine", "units/mace/champion_infantry_spearman", "units/mace/champion_infantry_spearman_02", "units/mace/thorakites", "units/mace/thureophoros"];
 
 	//how big each squad
 	let squad_size = this.ptolAttackSize;
@@ -688,7 +689,7 @@ Trigger.prototype.SpawnAdvanceAttackSquadInterval = function(data)
 	let sites = this.GetTriggerPoints(triggerPointsAdvanceAttack);
 	
 	//templates
-	let templates = ["units/maur_infantry_archer_a","units/maur_infantry_archer_b","units/maur_infantry_spearman_a","units/maur_infantry_spearman_b","units/maur_infantry_spearman_b","units/maur_infantry_swordsman_b","units/maur_infantry_swordsman_a","units/maur_infantry_swordsman_e","units/maur_infantry_spearman_e"];
+	let templates = ["units/maur/infantry_archer_a", "units/maur/infantry_archer_b", "units/maur/infantry_spearman_a", "units/maur/infantry_spearman_b", "units/maur/infantry_spearman_b", "units/maur/infantry_swordsman_b", "units/maur/infantry_swordsman_a", "units/maur/infantry_swordsman_e", "units/maur/infantry_spearman_e"];
 	
 	//how many
 	let size = 1;
@@ -799,7 +800,7 @@ Trigger.prototype.SpawnMainAttackInterval = function(data)
 	let p = 2;
 	
 	//templates
-	let templates = ["units/maur_champion_infantry","units/maur_champion_maiden","units/maur_champion_maiden_archer","units/maur_elephant_archer_e","units/maur_infantry_swordsman_e","units/maur_infantry_spearman_e","units/maur_infantry_swordsman_e","units/maur_champion_elephant"];
+	let templates = ["units/maur/champion_infantry", "units/maur/champion_maiden", "units/maur/champion_maiden_archer", "units/maur/elephant_archer_e", "units/maur/infantry_swordsman_e", "units/maur/infantry_spearman_e", "units/maur/infantry_swordsman_e", "units/maur/champion_elephant"];
 	
 	//sites 
 	let sites = this.GetTriggerPoints(triggerPointsMainAttack);
@@ -824,7 +825,7 @@ Trigger.prototype.SpawnMainAttackInterval = function(data)
 		if (Math.random() < siege_prob)
 		{
 			//warn("spawning ram");
-			let unit_i = TriggerHelper.SpawnUnits(site_i,"units/maur_mechanical_siege_ram",1,p);
+			let unit_i = TriggerHelper.SpawnUnits(site_i, "units/maur/siege_ram", 1, p);
 		
 			let cmpUnitAI = Engine.QueryInterface(unit_i[0], IID_UnitAI);
 			if (cmpUnitAI)
@@ -849,7 +850,7 @@ Trigger.prototype.SpawnMainAttackInterval = function(data)
 		{
 			//spawning extra elephant
 			//warn("spawning elephant");
-			let unit_i = TriggerHelper.SpawnUnits(site_i,"units/maur_champion_elephant",1,p);
+			let unit_i = TriggerHelper.SpawnUnits(site_i, "units/maur/champion_elephant", 1, p);
 		
 			let cmpUnitAI = Engine.QueryInterface(unit_i[0], IID_UnitAI);
 			if (cmpUnitAI)
@@ -1195,7 +1196,8 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 					let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 					if (cmpUnitAI)
 					{
-						if (cmpUnitAI.IsIdle()){
+						if (cmpUnitAI.IsIdle())
+						{
 							this.WalkAndFightClosestTarget(u,1,"Unit");
 						}
 					}
@@ -1474,10 +1476,12 @@ Trigger.prototype.ClusterUnits = function(units,num_clusters)
 	//warn(uneval(clustering));
 	
 	let clusters = [];
-	for (let k = 0; k < num_clusters; k ++){
+	for (let k = 0; k < num_clusters; k++)
+	{
 		let cluter_k = [];
 		
-		for (let i = 0; i < units.length; i ++){
+		for (let i = 0; i < units.length; i++)
+		{
 			
 			if (clustering[i] == k)
 			{

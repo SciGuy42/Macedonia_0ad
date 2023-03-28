@@ -88,8 +88,8 @@ var disabledTemplates = (civ) => [
 
 	// Walls
 	"structures/" + civ + "/wallset_stone",
-	"structures/rome_wallset_siege",
-	"other/wallset_palisade",
+	"structures/rome/wallset_siege",
+	"structures/wallset_palisade",
 
 	// Shoreline
 	"structures/" + civ + "/dock",
@@ -360,7 +360,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 				let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 				if (cmpUnitAI)
 				{
-					if (cmpUnitAI.IsIdle()){
+					if (cmpUnitAI.IsIdle())
+					{
 							
 						//attack closest target
 						this.WalkAndFightClosestTarget(u,1,"Structure");
@@ -474,7 +475,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of towers)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/maur_champion_infantry",5,p);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/maur/champion_infantry",5,p);
 			
 			for (let a of archers_e)
 			{
@@ -488,7 +489,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of forts)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/maur_champion_infantry",20,p);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/maur/champion_infantry",20,p);
 			
 			for (let a of archers_e)
 			{
@@ -1039,7 +1040,7 @@ Trigger.prototype.SpawnTraders = function(data)
 			target_market = pickRandom(markets);
 		}
 		
-		let trader = TriggerHelper.SpawnUnits(spawn_market,"units/maur_support_trader",1,e);	
+		let trader = TriggerHelper.SpawnUnits(spawn_market, "units/maur/support_trader", 1, e);
 		let cmpUnitAI = Engine.QueryInterface(trader[0], IID_UnitAI);
 				
 		cmpUnitAI.UpdateWorkOrders("Trade");
@@ -1063,7 +1064,7 @@ Trigger.prototype.SpawnDesertRaiders = function(data)
 
 	for (let i = 0; i < 90; i ++)
 	{
-		let templates = ["units/pers/champion_infantry","units/pers_infantry_archer_e","units/pers_infantry_javelinist_e","units/pers_kardakes_hoplite"];
+		let templates = ["units/pers/champion_infantry", "units/pers/infantry_archer_e", "units/pers/infantry_javelinist_e", "units/pers/kardakes_hoplite"];
 		
 		//pick patrol sites
 		let sites = [pickRandom(spawn_sites),pickRandom(spawn_sites),pickRandom(spawn_sites),pickRandom(spawn_sites)];
@@ -1092,14 +1093,16 @@ Trigger.prototype.RangeActionTemple = function(data)
 			this.QuestTempleComplete();
 			
 		}
-		else {
+		else
+		{
 			//give quest
 			this.questTempleGiven = true;
 			
 			this.ShowText("You encounter a small monastery. The monks welcome you and promise to help you if you defeat the dessert raiders who have been harassing them for weeks now.\n\nNote: you only need to kill all units (not structures) to consider this task complete. Come back here once the task is done.","We'll see what we can.","OK");
 		}
 	}
-	else if (this.questTempleComplete == false) {
+	else if (this.questTempleComplete == false)
+	{
 		let units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(5),"Unit").filter(TriggerHelper.IsInWorld);
 		
 		if (units.length == 0)
@@ -1256,21 +1259,21 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 			}
 			else if (id.template.GenericName == "Armored Swordsman")
 			{
-				template = "units/mace_thorakites";
+				template = "units/mace/thorakites";
 			}
 			else if (id.template.GenericName == "Heavy Skirmisher")
 			{
-				template = "units/mace_thureophoros";
+				template = "units/mace/thureophoros";
 			}
 			
 		}
-		else if (template == "units/mace_cavalry_javelinist_b" || template == "units/mace/cavalry_javelineer_a")
+		else if (template == "units/mace/cavalry_javelinist_b" || template == "units/mace/cavalry_javelineer_a")
 		{
 			template = "units/mace/cavalry_javelineer_e";
 		}
 		else if (template == "units/mace/cavalry_spearman_b" || template == "units/mace/cavalry_spearman_a")
 		{
-			template = "units/mace_cavalry_spearman_e";
+			template = "units/mace/cavalry_spearman_e";
 		}
 		else if (template == "units/mace/infantry_archer_b" || template == "units/mace/infantry_archer_a")
 		{
@@ -1282,9 +1285,9 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 		}
 		else if (template == "units/mace/infantry_pikeman_b" || template == "units/mace/infantry_pikeman_a")
 		{
-			template = "units/mace_infantry_pikeman_e";
+			template = "units/mace/infantry_pikeman_e";
 		}
-		else if (template == "units/mace_infantry_slinger_b" || template == "units/mace/infantry_slinger_a")
+		else if (template == "units/mace/infantry_slinger_b" || template == "units/mace/infantry_slinger_a")
 		{
 			template = "units/mace/infantry_slinger_e";
 		}
@@ -1407,7 +1410,7 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 			
 		if (p == 1)
 		{
-			//disTemplates = disTemplates.concat(["units/mace/hero_alexander_iii","units/mace_hero_craterus","units/mace/hero_philip_ii","units/mace_hero_demetrius","units/mace_hero_pyrhus"]);
+			//disTemplates = disTemplates.concat(["units/mace/hero_alexander_iii","units/mace/hero_craterus","units/mace/hero_philip_ii","units/mace/hero_demetrius","units/mace/hero_pyrhus"]);
 			//cmpPlayer.SetDisabledTemplates(disTemplates);
 		}
 		else if (p == 4 || p == 5 || p == 6)

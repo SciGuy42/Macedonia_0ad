@@ -39,8 +39,8 @@ var disabledTemplates = (civ) => [
 
 	// Walls
 	"structures/" + civ + "/wallset_stone",
-	"structures/rome_wallset_siege",
-	"other/wallset_palisade",
+	"structures/rome/wallset_siege",
+	"structures/wallset_palisade",
 
 	// Shoreline
 	"structures/" + civ + "/dock",
@@ -305,7 +305,8 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 					let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 					if (cmpUnitAI)
 					{
-						if (cmpUnitAI.IsIdle()){
+						if (cmpUnitAI.IsIdle())
+						{
 							if (i % mod_k == 0)
 							{
 								attackers.push(u);
@@ -356,7 +357,8 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 					let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 					if (cmpUnitAI)
 					{
-						if (cmpUnitAI.IsIdle()){
+						if (cmpUnitAI.IsIdle())
+						{
 							if (i % mod_k == 0)
 							{
 								attackers.push(u);
@@ -536,7 +538,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					//warn("Found idle persia inf or cav");
 					this.WalkAndFightClosestTarget(u,target_p,unitTargetClass);
 				}
@@ -558,7 +561,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					
 					//set to walk and attack
 					this.WalkAndFightClosestTarget(u,target_player,siegeTargetClass);
@@ -581,7 +585,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					
 					//set to walk and attack
 					this.WalkAndFightClosestTarget(u,target_player,siegeTargetClass);
@@ -605,7 +610,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					
 					//set to walk and attack
 					this.WalkAndFightClosestTarget(u,target_player,unitTargetClass);
@@ -628,7 +634,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					
 					//set to walk and attack
 					this.WalkAndFightClosestTarget(u,target_player,unitTargetClass);
@@ -652,7 +659,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					
 					//set to walk and attack
 					this.WalkAndFightClosestTarget(u,target_player,unitTargetClass);
@@ -677,7 +685,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					
 					//set to walk and attack
 					this.WalkAndFightClosestTarget(u,target_player,unitTargetClass);
@@ -967,7 +976,8 @@ Trigger.prototype.CheckAssault = function(data)
 		this.DoAfterDelay(10 * 1000,"FlipMegolopolisAssets",null);
 		warn("Assault over!");
 	}
-	else {
+	else
+	{
 		this.DoAfterDelay(15 * 1000,"CheckAssault",null);
 	
 	}
@@ -988,7 +998,7 @@ Trigger.prototype.SpawnAssault = function(data)
 		//spawn unit
 		let triggerPoint = pickRandom(this.GetTriggerPoints(triggerPointNorth));
 		
-		let units_i = TriggerHelper.SpawnUnits(triggerPoint, "units/spart_mechanical_siege_ram", 1, owner);
+		let units_i = TriggerHelper.SpawnUnits(triggerPoint, "units/spart/siege_ram", 1, owner);
 		
 		//make it fight
 		this.WalkAndFightClosestTarget(units_i[0],target_player,"CivilCentre");
@@ -1060,7 +1070,8 @@ Trigger.prototype.AttackCavalryWave = function(data)
 		let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 		if (cmpUnitAI)
 		{
-			if (cmpUnitAI.IsIdle()){
+			if (cmpUnitAI.IsIdle())
+			{
 				if (i % mod_k == 0)
 				{
 					attackers.push(u);
@@ -1117,7 +1128,8 @@ Trigger.prototype.AttackCavalryWave = function(data)
 		this.waveCavIndex = this.waveCavIndex + 1;
 		this.DoAfterDelay(this.cavWaveInterval * 1000,"AttackCavalryWave",null);	
 	}
-	else {
+	else
+	{
 		this.cavIdleCheck = true;
 	}
 }
@@ -1141,7 +1153,8 @@ Trigger.prototype.AttackInftanryWave = function(data)
 		let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 		if (cmpUnitAI)
 		{
-			if (cmpUnitAI.IsIdle()){
+			if (cmpUnitAI.IsIdle())
+			{
 				if (i % mod_k == 0)
 				{
 					attackers.push(u);
@@ -1197,7 +1210,8 @@ Trigger.prototype.AttackInftanryWave = function(data)
 		this.waveIndex = this.waveIndex + 1;
 		this.DoAfterDelay(this.infantryWaveInterval * 1000,"AttackInftanryWave",null);	
 	}
-	else {
+	else
+	{
 		this.infIdleCheck = true;
 	}
 }
@@ -1222,7 +1236,8 @@ Trigger.prototype.AttackDarius = function(data)
 		let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 		if (cmpUnitAI)
 		{
-			if (cmpUnitAI.IsIdle()){
+			if (cmpUnitAI.IsIdle())
+			{
 				
 				//set to walk and attack
 				//this.WalkAndFightClosestTarget(u,target_player,siegeTargetClass);
@@ -1268,7 +1283,8 @@ Trigger.prototype.AttackGreekInfantry = function(data)
 		let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 		if (cmpUnitAI)
 		{
-			if (cmpUnitAI.IsIdle()){
+			if (cmpUnitAI.IsIdle())
+			{
 				
 				//set to walk and attack
 				this.WalkAndFightClosestTarget(u,target_player,siegeTargetClass);
@@ -1296,7 +1312,8 @@ Trigger.prototype.AttackIndianInfantry = function(data)
 		let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 		if (cmpUnitAI)
 		{
-			if (cmpUnitAI.IsIdle()){
+			if (cmpUnitAI.IsIdle())
+			{
 				
 				attackers.push(u);
 				//set to walk and attack
@@ -1348,7 +1365,8 @@ Trigger.prototype.AttackIndianCavalry = function(data)
 		let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 		if (cmpUnitAI)
 		{
-			if (cmpUnitAI.IsIdle()){
+			if (cmpUnitAI.IsIdle())
+			{
 				
 				attackers.push(u);
 				
@@ -1411,7 +1429,8 @@ Trigger.prototype.AttackChariots = function(data)
 		let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 		if (cmpUnitAI)
 		{
-			if (cmpUnitAI.IsIdle()){
+			if (cmpUnitAI.IsIdle())
+			{
 				
 				//set to walk and attack
 				this.WalkAndFightClosestTarget(u,target_player,siegeTargetClass);
@@ -1437,7 +1456,8 @@ Trigger.prototype.AttackElephants = function(data)
 		let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 		if (cmpUnitAI)
 		{
-			if (cmpUnitAI.IsIdle()){
+			if (cmpUnitAI.IsIdle())
+			{
 				
 				//set to walk and attack
 				this.WalkAndFightClosestTarget(u,target_player,siegeTargetClass);
@@ -1524,10 +1544,12 @@ Trigger.prototype.ClusterUnits = function(units,num_clusters)
 	//warn(uneval(clustering));
 	
 	let clusters = [];
-	for (let k = 0; k < num_clusters; k ++){
+	for (let k = 0; k < num_clusters; k++)
+	{
 		let cluter_k = [];
 		
-		for (let i = 0; i < units.length; i ++){
+		for (let i = 0; i < units.length; i++)
+		{
 			
 			if (clustering[i] == k)
 			{
@@ -1612,7 +1634,8 @@ Trigger.prototype.ClusterAttackGreeks = function(data)
 		{
 			target = this.FindClosestTarget(clusters[k][0],1,unitTargetClass);
 		}
-		else {
+		else
+		{
 			let targets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(3), unitTargetClass).filter(TriggerHelper.IsInWorld);
 			target = pickRandom(targets);
 		}

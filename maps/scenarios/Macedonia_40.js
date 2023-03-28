@@ -43,8 +43,8 @@ var disabledTemplatesCCs = (civ) => [
 
 	
 	// Expansions
-	"structures/" + civ + "_civil_centre",
-	"structures/" + civ + "_military_colony",
+	"structures/" + civ + "/civil_centre",
+	"structures/" + civ + "/military_colony",
 
 	// Shoreline
 	"structures/brit/crannog"
@@ -54,14 +54,14 @@ var disabledTemplatesDocksCCs = (civ) => [
 
 	
 	// Expansions
-	"structures/" + civ + "_civil_centre",
-	"structures/" + civ + "_military_colony",
+	"structures/" + civ + "/civil_centre",
+	"structures/" + civ + "/military_colony",
 
 	// Shoreline
-	"structures/" + civ + "_dock",
+	"structures/" + civ + "/dock",
 	"structures/brit/crannog",
-	"structures/cart_super_dock",
-	"structures/ptol_lighthouse"
+	"structures/cart/super_dock",
+	"structures/ptol/lighthouse"
 ];
 
 
@@ -87,8 +87,8 @@ var disabledTemplates = (civ) => [
 
 	// Walls
 	"structures/" + civ + "/wallset_stone",
-	"structures/rome_wallset_siege",
-	"other/wallset_palisade",
+	"structures/rome/wallset_siege",
+	"structures/wallset_palisade",
 
 	// Shoreline
 	"structures/" + civ + "/dock",
@@ -345,7 +345,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 						
 					//pick patrol sites
 					let sites = [pickRandom(spawn_sites),pickRandom(spawn_sites),pickRandom(spawn_sites),pickRandom(spawn_sites)];
@@ -369,7 +370,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					
 					
 					let sites = [pickRandom(patrol_sites),pickRandom(patrol_sites),pickRandom(patrol_sites),pickRandom(patrol_sites)];
@@ -515,7 +517,8 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 				if (cmpUnitAI)
 				{
-					if (cmpUnitAI.IsIdle()){
+					if (cmpUnitAI.IsIdle())
+					{
 						this.WalkAndFightClosestTarget(u,1,unitTargetClass);
 					}
 				}
@@ -857,14 +860,16 @@ Trigger.prototype.RangeActionTemple = function(data)
 			this.QuestTempleComplete();
 			
 		}
-		else {
+		else
+		{
 			//give quest
 			this.questTempleGiven = true;
 			
 			this.ShowText("You encounter a small monastery. The monks welcome you and promise to help you if you defeat the dessert raiders who have been harassing them for weeks now.\n\nNote: you only need to kill all units (not structures) to consider this task complete. Come back here once the task is done.","We'll see what we can.","OK");
 		}
 	}
-	else if (this.questTempleComplete == false) {
+	else if (this.questTempleComplete == false)
+	{
 		let units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(5),"Unit").filter(TriggerHelper.IsInWorld);
 		
 		if (units.length == 0)
@@ -1276,7 +1281,7 @@ Trigger.prototype.RangeActionTeleportD = function(data)
 			
 		if (p == 1)
 		{
-			//disTemplates = disTemplates.concat(["units/mace/hero_alexander_iii","units/mace_hero_craterus","units/mace/hero_philip_ii","units/mace_hero_demetrius","units/mace_hero_pyrhus"]);
+			//disTemplates = disTemplates.concat(["units/mace/hero_alexander_iii","units/mace/hero_craterus","units/mace/hero_philip_ii","units/mace/hero_demetrius","units/mace/hero_pyrhus"]);
 			disTemplates = disTemplates.concat(["units/mace/ship_bireme","units/mace/ship_trireme"]);
 		}
 		

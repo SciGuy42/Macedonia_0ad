@@ -40,8 +40,8 @@ var disabledTemplates = (civ) => [
 
 	// Walls
 	"structures/" + civ + "/wallset_stone",
-	"structures/rome_wallset_siege",
-	"other/wallset_palisade",
+	"structures/rome/wallset_siege",
+	"structures/wallset_palisade",
 
 	// Shoreline
 	"structures/" + civ + "/dock",
@@ -1204,7 +1204,7 @@ Trigger.prototype.QuestTempleReward = function(data)
 	//let spawn_site = 6594; temple
 	let spawn_site = 6404; //alexander
 	
-	//TriggerHelper.SpawnUnits(spawn_site,"units/kush_support_healer_e",4,1);
+	//TriggerHelper.SpawnUnits(spawn_site,"units/kush/support_healer_e",4,1);
 	
 	//they only stick around for a bit...
 	//this.DoAfterDelay(60 * 1000,"RemovePriests",null);
@@ -1481,7 +1481,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	cmpTrigger.ballistaCaptured = false;
 
 	//ordered list of kush infantry 
-	cmpTrigger.kush_inf_ordered = ["units/kush_infantry_archer_b","units/kush_infantry_spearman_b","units/kush_infantry_archer_a","units/kush_infantry_spearman_a","units/kush_infantry_swordsman_b","units/kush_infantry_archer_e","units/kush_infantry_pikeman_b","units/kush_infantry_swordsman_a","units/kush_infantry_clubman_b","units/kush_champion_infantry","units/kush_infantry_pikeman_a","units/kush_cavalry_javelinist_merc_b","units/kush_infantry_javelinist_merc_b","units/kush_infantry_spearman_e","units/kush_infantry_clubman_a","units/kush_cavalry_javelinist_merc_a","units/kush_infantry_pikeman_e","units/kush_infantry_javelinist_merc_a","units/kush_infantry_swordsman_e","units/kush_cavalry_javelinist_merc_a","units/kush_infantry_javelinist_merc_e","units/kush_champion_infantry","units/kush_infantry_clubman_e","units/kush_champion_infantry_amun","units/kush_champion_cavalry","units/kush_champion_infantry_apedemak","units/kush_champion_elephant"];
+	cmpTrigger.kush_inf_ordered = ["units/kush/infantry_archer_b", "units/kush/infantry_spearman_b", "units/kush/infantry_archer_a", "units/kush/infantry_spearman_a", "units/kush/infantry_swordsman_b", "units/kush/infantry_archer_e", "units/kush/infantry_pikeman_b", "units/kush/infantry_swordsman_a", "units/kush/infantry_clubman_b", "units/kush/champion_infantry", "units/kush/infantry_pikeman_a", "units/kush/cavalry_javelinist_merc_b", "units/kush/infantry_javelinist_merc_b", "units/kush/infantry_spearman_e", "units/kush/infantry_clubman_a", "units/kush/cavalry_javelinist_merc_a", "units/kush/infantry_pikeman_e", "units/kush/infantry_javelinist_merc_a", "units/kush/infantry_swordsman_e", "units/kush/cavalry_javelinist_merc_a", "units/kush/infantry_javelinist_merc_e", "units/kush/champion_infantry", "units/kush/infantry_clubman_e", "units/kush/champion_infantry_amun", "units/kush/champion_cavalry", "units/kush/champion_infantry_apedemak", "units/kush/champion_elephant"];
 
 
 	//debug

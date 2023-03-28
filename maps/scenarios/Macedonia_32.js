@@ -45,7 +45,7 @@ var disabledTemplates = (civ) => [
 	// Walls
 	"structures/" + civ + "/wallset_stone",
 	"structures/rome/wallset_siege",
-	"other/wallset_palisade",
+	"structures/wallset_palisade",
 
 	// Shoreline
 	"structures/" + civ + "/dock",
@@ -401,7 +401,7 @@ Trigger.prototype.SpawnHorsemanPatrol = function(data)
 		if (units.length < 300 && camps.length > 1)
 		{
 			//templates, mostly archers
-			let cav_templates = ["units/pers/champion_cavalry","units/pers/champion_cavalry_archer","units/pers_cavalry_javelinist_e","units/pers_cavalry_javelinist_a","units/pers_cavalry_swordsman_e","units/pers_cavalry_swordsman_a","units/pers_cavalry_spearman_e","units/pers_cavalry_spearman_a","units/pers_cavalry_spearman_b"];
+			let cav_templates = ["units/pers/champion_cavalry", "units/pers/champion_cavalry_archer", "units/pers/cavalry_javelinist_e", "units/pers/cavalry_javelinist_a", "units/pers/cavalry_swordsman_e", "units/pers/cavalry_swordsman_a", "units/pers/cavalry_spearman_e", "units/pers/cavalry_spearman_a", "units/pers/cavalry_spearman_b"];
 		
 			let sites = this.GetTriggerPoints(triggerPointPatrol);
 			let sites_reversed = [];
@@ -661,7 +661,8 @@ Trigger.prototype.SpawnElephantBandits = function(data)
 		
 		this.elephantSpwanInterval = this.elephantSpwanInterval * 0.925;
 	}
-	else {
+	else
+	{
 		//warn("done with elephants!");
 	}
 }
@@ -923,7 +924,7 @@ Trigger.prototype.RebelAttack = function(data)
 	//spawn distractors
 	let num_squads_distractors = 3;
 	let squad_size_distractor = 3+Math.round(pop/25)+this.attackCounter;
-	let templates_distractor = ["units/pers/champion_cavalry_archer","units/pers_cavalry_javelinist_e","units/pers_cavalry_javelinist_a","units/pers_cavalry_swordsman_e","units/pers_cavalry_swordsman_a","units/pers_cavalry_spearman_e","units/pers_cavalry_spearman_a","units/pers_cavalry_spearman_b"];
+	let templates_distractor = ["units/pers/champion_cavalry_archer", "units/pers/cavalry_javelinist_e", "units/pers/cavalry_javelinist_a", "units/pers/cavalry_swordsman_e", "units/pers/cavalry_swordsman_a", "units/pers/cavalry_spearman_e", "units/pers/cavalry_spearman_a", "units/pers/cavalry_spearman_b"];
 	
 	for (let i = 0; i < num_squads_distractors; i ++)
 	{
@@ -942,7 +943,7 @@ Trigger.prototype.RebelAttack = function(data)
 	let num_squads = 2;
 	let squad_size = 10+Math.round(pop/18)+2*this.attackCounter;
 	
-	let templates = ["units/pers/champion_cavalry_archer","units/pers/champion_cavalry_archer","units/pers_cavalry_javelinist_a","units/pers_cavalry_spearman_e","units/pers_champion_cavalry","units/pers_champion_cavalry","units/pers_cavalry_swordsman_e","units/pers_infantry_archer_e","units/pers_infantry_spearman_e","units/pers_infantry_archer_e","units/pers/champion_infantry","units/pers_champion_infantry","units/pers_infantry_javelinist_e","units/pers_infantry_spearman_b","units/pers_infantry_spearman_b","units/pers_mechanical_siege_ram"];
+	let templates = ["units/pers/champion_cavalry_archer", "units/pers/champion_cavalry_archer", "units/pers/cavalry_javelinist_a", "units/pers/cavalry_spearman_e", "units/pers/champion_cavalry", "units/pers/champion_cavalry", "units/pers/cavalry_swordsman_e", "units/pers/infantry_archer_e", "units/pers/infantry_spearman_e", "units/pers/infantry_archer_e", "units/pers/champion_infantry", "units/pers/champion_infantry", "units/pers/infantry_javelinist_e", "units/pers/infantry_spearman_b", "units/pers/infantry_spearman_b", "units/pers/siege_ram"];
 	
 	for (let i = 0; i < num_squads; i ++)
 	{
@@ -1059,7 +1060,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 				
 				if (cmpUnitAI)
 				{
-					if (cmpUnitAI.IsIdle()){
+					if (cmpUnitAI.IsIdle())
+					{
 						//warn("Found idle soldier");
 						this.WalkAndFightClosestTarget(u,1,unitTargetClass);
 					}
@@ -1081,7 +1083,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 				
 				if (cmpUnitAI)
 				{
-					if (cmpUnitAI.IsIdle()){
+					if (cmpUnitAI.IsIdle())
+					{
 						
 						if (this.mainAssaultStarted == true && this.mainAssaultCounter > 5)
 						{
@@ -1091,7 +1094,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 							else 
 								this.WalkAndFightClosestTarget(u,4,unitTargetClass);
 						}
-						else {
+						else
+						{
 							//warn("Found idle soldier of player 2, patrolling");
 							// sites
 							let outposts = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p),"Outpost").filter(TriggerHelper.IsInWorld);
@@ -1122,14 +1126,16 @@ Trigger.prototype.IdleUnitCheck = function(data)
 				
 				if (cmpUnitAI)
 				{
-					if (cmpUnitAI.IsIdle()){
+					if (cmpUnitAI.IsIdle())
+					{
 						//warn("Found idle soldier");
 						this.WalkAndFightClosestTarget(u,2,unitTargetClass);
 					}
 				}
 			}
 		}
-		else {
+		else
+		{
 			let units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p),"Unit").filter(TriggerHelper.IsInWorld);
 			
 			for (let u of units)
@@ -1138,7 +1144,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 				
 				if (cmpUnitAI)
 				{
-					if (cmpUnitAI.IsIdle()){
+					if (cmpUnitAI.IsIdle())
+					{
 						let structures_p = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p),"Structure").filter(TriggerHelper.IsInWorld);
 						
 						let num_targets = 3;
@@ -1298,7 +1305,8 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					this.WalkAndFightClosestTarget(u,1,"Unit");
 				}
 			}
@@ -1678,7 +1686,8 @@ Trigger.prototype.RangeActionTempleQuest = function(data)
 			
 			this.templeQuestGiven = true;
 		}
-		else {
+		else
+		{
 			this.ShowText("You encounter an ancient monastery next to the mountains. The head monk greets you with respect and shares the story of how recently, a group of bandits from up in the mountains stole a relic from the monks. As you have already found the relic, you give it to the monks and in exchange, they agree to help you in your final battle against Alexander's kidnappers","Great!","Thanks!")
 			
 			this.templeQuestGiven = true;

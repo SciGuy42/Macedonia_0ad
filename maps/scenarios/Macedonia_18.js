@@ -54,8 +54,8 @@ var disabledTemplates = (civ) => [
 
 	// Walls
 	"structures/" + civ + "/wallset_stone",
-	"structures/rome_wallset_siege",
-	"other/wallset_palisade",
+	"structures/rome/wallset_siege",
+	"structures/wallset_palisade",
 
 	// Shoreline
 	"structures/" + civ + "/dock",
@@ -153,7 +153,8 @@ Trigger.prototype.SpawnSiegeEquipment = function(data)
 		units.push("units/athen/siege_oxybeles_packed");
 		units.push("units/athen/siege_oxybeles_packed");
 	}
-	else {
+	else
+	{
 		units.push("units/mace/siege_tower");
 		units.push("units/mace/siege_tower");
 	}
@@ -164,7 +165,8 @@ Trigger.prototype.SpawnSiegeEquipment = function(data)
 		units.push("units/mace/siege_ram");
 		units.push("units/mace/siege_ram");
 	}
-	else {
+	else
+	{
 		units.push("units/mace/siege_lithobolos_packed");
 		units.push("units/mace/siege_lithobolos_packed");
 		units.push("units/mace/siege_lithobolos_packed");
@@ -175,7 +177,8 @@ Trigger.prototype.SpawnSiegeEquipment = function(data)
 		units.push("units/mace/siege_lithobolos_packed");
 		units.push("units/mace/siege_lithobolos_packed");
 	}
-	else {
+	else
+	{
 		units.push("units/athen/siege_oxybeles_packed");
 		units.push("units/athen/siege_oxybeles_packed");
 		units.push("units/athen/siege_oxybeles_packed");
@@ -539,7 +542,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					//warn("Found idle soldier");
 					this.WalkAndFightClosestTarget(u,target_p,unitTargetClass);
 				}
@@ -781,13 +785,13 @@ Trigger.prototype.CarthageShipAttack = function(data)
 	let triggerPoint = pickRandom(this.GetTriggerPoints(triggerPointShipSpawn));
 	
 	//spawn ship
-	let templates = ["units/cart_ship_trireme","units/cart_ship_bireme"];
+	let templates = ["units/cart/ship_trireme", "units/cart/ship_bireme"];
 	let ship_spawned = TriggerHelper.SpawnUnits(triggerPoint, pickRandom(templates), 1, p);
 	
 	//spawn garrison
 	for (let j = 0; j < this.cartShipGarrisonSize; ++j)
 	{
-		let u_j = TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0],"units/cart_champion_infantry",1,p);
+		let u_j = TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/cart/champion_infantry", 1, p);
 	}
 	
 	//get possible targets
@@ -944,7 +948,7 @@ Trigger.prototype.CarthageAttack = function(data)
 		else 
 		{
 			//elephant
-			let units_i = TriggerHelper.SpawnUnits(spawn_site,"units/cart_champion_elephant",1,p);
+			let units_i = TriggerHelper.SpawnUnits(spawn_site, "units/cart/champion_elephant", 1, p);
 			attackers.push(units_i[0]);
 		}
 	}

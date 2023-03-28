@@ -56,8 +56,8 @@ var disabledTemplatesCCs = (civ) => [
 
 	
 	// Expansions
-	"structures/" + civ + "_civil_centre",
-	"structures/" + civ + "_military_colony",
+	"structures/" + civ + "/civil_centre",
+	"structures/" + civ + "/military_colony",
 
 	// Shoreline
 	"structures/brit/crannog"
@@ -67,14 +67,14 @@ var disabledTemplatesDocksCCs = (civ) => [
 
 	
 	// Expansions
-	"structures/" + civ + "_civil_centre",
-	"structures/" + civ + "_military_colony",
+	"structures/" + civ + "/civil_centre",
+	"structures/" + civ + "/military_colony",
 
 	// Shoreline
-	"structures/" + civ + "_dock",
+	"structures/" + civ + "/dock",
 	"structures/brit/crannog",
-	"structures/cart_super_dock",
-	"structures/ptol_lighthouse"
+	"structures/cart/super_dock",
+	"structures/ptol/lighthouse"
 ];
 
 var disabledTemplates = (civ) => [
@@ -99,8 +99,8 @@ var disabledTemplates = (civ) => [
 
 	// Walls
 	"structures/" + civ + "/wallset_stone",
-	"structures/rome_wallset_siege",
-	"other/wallset_palisade",
+	"structures/rome/wallset_siege",
+	"structures/wallset_palisade",
 
 	// Shoreline
 	"structures/" + civ + "/dock",
@@ -1553,14 +1553,16 @@ Trigger.prototype.RangeActionTemple = function(data)
 			//complete quest
 			this.QuestTempleComplete();
 		}
-		else {
+		else
+		{
 			//give quest
 			
 			
 			this.ShowText("The small monastary you encounter welcomes you. They are willing to help you with healing but first ask that you seek out an ancient relic stolen by thieves. The relic looks like a pegasus -- you won't miss it. Should you ackquire it, come back to the temple, the monks will be forever grateful.","We'll see what we can do.","OK");
 		}
 	}
-	else if (this.questTempleComplete == false) {
+	else if (this.questTempleComplete == false)
+	{
 		if (this.questTempleRelicTaken == true)
 		{
 			//complete quest
@@ -1607,7 +1609,8 @@ Trigger.prototype.PlayerCommandAction = function(data)
 		
 				this.archersTrained = true;
 			}
-			else {
+			else
+			{
 				this.DoAfterDelay(30 * 1000,"ToggleArcherTraining",null);		
 			}
 		}
@@ -1725,7 +1728,8 @@ Trigger.prototype.RangeActionElephantTraders = function(data)
 			//set the dialog state variable
 			this.dialogState = "elephant_traders";
 		}
-		else {
+		else
+		{
 			this.ShowText("The traders in this village are willing to see you some elephants for 500 stone. Alas, we do not have the resources","Very well","We'll come back later");
 			
 			//turn on mercs in 45 seconds
@@ -1972,7 +1976,8 @@ Trigger.prototype.IntervalAttritionCheck = function(data)
 		num_dead += 6;
 		//cmpPlayer.AddResource("food",-1*resources.food);
 	}
-	else {
+	else
+	{
 		cmpPlayer.AddResource("food",-1*food_loss);
 	}
 	
@@ -2291,7 +2296,8 @@ Trigger.prototype.StatusCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					
 					let patrol_sites = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p),"Structure").filter(TriggerHelper.IsInWorld);
 					
@@ -2314,7 +2320,8 @@ Trigger.prototype.StatusCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					
 						let target_site = this.GetTriggerPoints("B")[0];
 						let target_pos = TriggerHelper.GetEntityPosition2D(target_site);
@@ -2386,7 +2393,8 @@ Trigger.prototype.StatusCheck = function(data)
 
 			this.finalAttackScheduled = true;
 		}
-		else {
+		else
+		{
 			//if too much time has passed, lose the game
 			if (this.elapsedMinutes > 60)
 			{
@@ -2408,7 +2416,8 @@ Trigger.prototype.StatusCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					//attack closes soldier
 					this.WalkAndFightClosestTarget(u,1,"Hero");
 				}
@@ -2437,7 +2446,7 @@ Trigger.prototype.SpawnTravelingArmySquad = function(data)
 	let squad_units = [];
 			
 	//melee
-	let melee_template = pickRandom(["units/mace_infantry_pikeman_e","units/mace/champion_infantry_spearman","units/mace_thorakites"]);		
+	let melee_template = pickRandom(["units/mace/infantry_pikeman_e", "units/mace/champion_infantry_spearman", "units/mace/thorakites"]);
 	let units_melee = TriggerHelper.SpawnUnits(site,melee_template,10,p);
 	squad_units = squad_units.concat(units_melee);
 	
@@ -2447,12 +2456,12 @@ Trigger.prototype.SpawnTravelingArmySquad = function(data)
 	squad_units = squad_units.concat(units_ranged);
 	
 	//cavalry
-	let cav_template = pickRandom(["units/mace/champion_cavalry","units/mace/cavalry_javelineer_e","units/mace_cavalry_spearman_e"]);		
+	let cav_template = pickRandom(["units/mace/champion_cavalry", "units/mace/cavalry_javelineer_e", "units/mace/cavalry_spearman_e"]);
 	let units_cav= TriggerHelper.SpawnUnits(site,cav_template,6,p);
 	squad_units = squad_units.concat(units_cav);
 	
 	//some slow units
-	let units_support= TriggerHelper.SpawnUnits(site,"units/sele_champion_elephant",2,p);
+	let units_support = TriggerHelper.SpawnUnits(site, "units/sele/champion_elephant", 2, p);
 	squad_units = squad_units.concat(units_support);
 	
 	//all have little health

@@ -46,8 +46,8 @@ var disabledTemplates = (civ) => [
 
 	// Walls
 	"structures/" + civ + "/wallset_stone",
-	"structures/rome_wallset_siege",
-	"other/wallset_palisade",
+	"structures/rome/wallset_siege",
+	"structures/wallset_palisade",
 
 	// Shoreline
 	"structures/" + civ + "/dock",
@@ -92,10 +92,12 @@ Trigger.prototype.ClusterUnits = function(units,num_clusters)
 	//warn(uneval(clustering));
 	
 	let clusters = [];
-	for (let k = 0; k < num_clusters; k ++){
+	for (let k = 0; k < num_clusters; k++)
+	{
 		let cluter_k = [];
 		
-		for (let i = 0; i < units.length; i ++){
+		for (let i = 0; i < units.length; i++)
+		{
 			
 			if (clustering[i] == k)
 			{
@@ -339,7 +341,8 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 					let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 					if (cmpUnitAI)
 					{
-						if (cmpUnitAI.IsIdle()){
+						if (cmpUnitAI.IsIdle())
+						{
 							this.WalkAndFightClosestTarget(u,1,"Unit");
 						}
 					}
@@ -547,7 +550,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 			for (let e of towers_w)
 			{
 				//spawn the garrison inside the tower
-				let archers_e = TriggerHelper.SpawnUnits(e, "units/pers_infantry_archer_e",2,p);
+				let archers_e = TriggerHelper.SpawnUnits(e, "units/pers/infantry_archer_e",2,p);
 					
 				for (let a of archers_e)
 				{
@@ -607,7 +610,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					//warn("Found idle soldier");
 					this.WalkAndFightClosestTarget(u,target_p,unitTargetClass);
 				}
@@ -664,7 +668,7 @@ Trigger.prototype.SpawnFortressPatrol = function(data)
 	let num_patrols = 10;
 	let patrol_size = 5;
 	
-	let inf_templates = ["units/kush_champion_infantry_amun","units/kush_champion_infantry","units/kush_champion_infantry_apedemak"];
+	let inf_templates = ["units/kush/champion_infantry_amun", "units/kush/champion_infantry", "units/kush/champion_infantry_apedemak"];
 	
 	//spawn infantry
 	for (let j = 0; j < num_patrols; j++)
@@ -766,7 +770,8 @@ Trigger.prototype.CheckAssault = function(data)
 		this.ShowText("We have defeated the assault on Megalopolis! The city is now under your command!","Great!","OK");
 		//warn("Assault over!");
 	}
-	else {
+	else
+	{
 		this.DoAfterDelay(15 * 1000,"CheckAssault",null);
 	
 	}
@@ -787,7 +792,7 @@ Trigger.prototype.SpawnAssault = function(data)
 		//spawn unit
 		let triggerPoint = pickRandom(this.GetTriggerPoints(triggerPointNorth));
 		
-		let units_i = TriggerHelper.SpawnUnits(triggerPoint, "units/spart_mechanical_siege_ram", 1, owner);
+		let units_i = TriggerHelper.SpawnUnits(triggerPoint, "units/spart/siege_ram", 1, owner);
 		
 		//make it fight
 		this.WalkAndFightClosestTarget(units_i[0],target_player,"CivilCentre");
@@ -1134,7 +1139,7 @@ Trigger.prototype.SpawnTraderAttack = function(data)
 	let p = 0;
 	
 	let attack_size = 25;
-	let templates = ["units/pers_cavalry_spearman_a","units/pers_cavalry_swordsman_a","units/pers_cavalry_javelinist_a","units/pers/champion_cavalry_archer","units/pers/champion_cavalry"];
+	let templates = ["units/pers/cavalry_spearman_a", "units/pers/cavalry_swordsman_a", "units/pers/cavalry_javelinist_a", "units/pers/champion_cavalry_archer", "units/pers/champion_cavalry"];
 	
 	let attackers = [];
 	
@@ -1330,7 +1335,7 @@ Trigger.prototype.RangeActionTraders = function(data)
 			let p = 6;
 			
 			//spawn traders
-			let units_i = TriggerHelper.SpawnUnits(spawn_site,"units/pers_support_trader",3,p);
+			let units_i = TriggerHelper.SpawnUnits(spawn_site, "units/pers/support_trader", 3, p);
 
 			this.traders = units_i;
 

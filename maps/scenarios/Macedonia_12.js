@@ -17,27 +17,27 @@ var unitFormations = [
 
 var disabledTemplates = (civ) => [
 	// Economic structures
-	"structures/" + civ + "_corral",
-	"structures/" + civ + "_farmstead",
-	"structures/" + civ + "_field",
-	"structures/" + civ + "_storehouse",
-	"structures/" + civ + "_rotarymill",
-	"structures/" + civ + "_market",
+	"structures/" + civ + "/corral",
+	"structures/" + civ + "/farmstead",
+	"structures/" + civ + "/field",
+	"structures/" + civ + "/storehouse",
+	"structures/" + civ + "/rotarymill",
+	"structures/" + civ + "/market",
 	
 	// Expansions
-	"structures/" + civ + "_civil_centre",
-	"structures/" + civ + "_military_colony",
+	"structures/" + civ + "/civil_centre",
+	"structures/" + civ + "/military_colony",
 
 	// Walls
-	"structures/" + civ + "_wallset_stone",
-	"structures/rome_wallset_siege",
-	"other/wallset_palisade",
+	"structures/" + civ + "/wallset_stone",
+	"structures/rome/wallset_siege",
+	"structures/wallset_palisade",
 
 	// Shoreline
-	"structures/" + civ + "_dock",
+	"structures/" + civ + "/dock",
 	"structures/brit/crannog",
-	"structures/cart_super_dock",
-	"structures/ptol_lighthouse"
+	"structures/cart/super_dock",
+	"structures/ptol/lighthouse"
 ];
 
 
@@ -211,7 +211,8 @@ Trigger.prototype.IntervalActionAlliedAttack = function(data)
 				let cmpUnitAI = Engine.QueryInterface(enemy_units[i], IID_UnitAI);
 				
 				//check if the unit is idle and if it can attack
-				if (cmpUnitAI){
+				if (cmpUnitAI)
+				{
 					let pos_i = Engine.QueryInterface(enemy_units[i], IID_Position).GetPosition2D();
 					
 					if (cmpUnitAI.IsIdle() && Engine.QueryInterface(enemy_units[i], IID_Attack))
@@ -409,7 +410,8 @@ Trigger.prototype.IntervalActionTraders = function(data)
 		for (let trader of traders_e)
 		{
 			let cmpUnitAI = Engine.QueryInterface(trader, IID_UnitAI);
-			if (cmpUnitAI) {
+			if (cmpUnitAI)
+			{
 				if (cmpUnitAI.IsIdle())
 				{
 					//warn("updating trade orders");
@@ -448,7 +450,8 @@ Trigger.prototype.IntervalActionTraders = function(data)
 		for (let trader of traders_s)
 		{
 			let cmpUnitAI = Engine.QueryInterface(trader, IID_UnitAI);
-			if (cmpUnitAI) {
+			if (cmpUnitAI)
+			{
 				if (cmpUnitAI.IsIdle())
 				{
 					//warn("updating ship orders");
@@ -483,7 +486,8 @@ Trigger.prototype.IntervalSpawnTradeShips = function(data)
 				let docks_others = [];
 				for (let p of this.enemies)
 				{
-					if (p != trader_ais[e]){
+					if (p != trader_ais[e])
+					{
 						let docks_p = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p), "Dock").filter(TriggerHelper.IsInWorld);
 					
 						docks_others = docks_others.concat(docks_p);
@@ -493,7 +497,7 @@ Trigger.prototype.IntervalSpawnTradeShips = function(data)
 				if (docks_others.length > 0)
 				{
 					let spawn_dock = pickRandom(docks_e)
-					let trader = TriggerHelper.SpawnUnits(spawn_dock, "units/pers_ship_merchant",1,trader_ais[e]);
+					let trader = TriggerHelper.SpawnUnits(spawn_dock, "units/pers/ship_merchant", 1, trader_ais[e]);
 					
 					warn("spawned trade ship");
 					
@@ -598,7 +602,8 @@ Trigger.prototype.GreekAttack = function(data)
 		let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 		if (cmpUnitAI)
 		{
-			if (cmpUnitAI.IsIdle()){
+			if (cmpUnitAI.IsIdle())
+			{
 				attackers.push(u);
 			}
 		}
@@ -669,7 +674,8 @@ Trigger.prototype.IntervalUnitCheck = function(data)
 		let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 		if (cmpUnitAI)
 		{
-			if (cmpUnitAI.IsIdle()){
+			if (cmpUnitAI.IsIdle())
+			{
 				if (Math.random() < 0.5)
 					attackers.push(u);
 			}
@@ -870,7 +876,8 @@ Trigger.prototype.PersianAttack = function(data)
 		let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 		if (cmpUnitAI)
 		{
-			if (cmpUnitAI.IsIdle()){
+			if (cmpUnitAI.IsIdle())
+			{
 				attackers.push(u);
 			}
 		}
@@ -1010,9 +1017,9 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		let cmpPlayer = QueryPlayerIDInterface(p);
 		
 		let d_templates = disabledTemplates(cmpPlayer.GetCiv());
-		d_templates.push("units/athen_ship_bireme");
-		d_templates.push("units/athen_ship_trireme");
-		d_templates.push("units/athen_ship_merchant");
+		d_templates.push("units/athen/ship_bireme");
+		d_templates.push("units/athen/ship_trireme");
+		d_templates.push("units/athen/ship_merchant");
 		
 		cmpPlayer.SetDisabledTemplates(d_templates);
 	
@@ -1111,4 +1118,3 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 
 	
 };
-

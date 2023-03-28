@@ -18,30 +18,30 @@ var unitFormations = [
 
 var disabledTemplates = (civ) => [
 	// Economic structures
-	"structures/" + civ + "_corral",
-	"structures/" + civ + "_farmstead",
-	"structures/" + civ + "_field",
-	"structures/" + civ + "_storehouse",
-	"structures/" + civ + "_rotarymill",
-	"structures/" + civ + "_market",
+	"structures/" + civ + "/corral",
+	"structures/" + civ + "/farmstead",
+	"structures/" + civ + "/field",
+	"structures/" + civ + "/storehouse",
+	"structures/" + civ + "/rotarymill",
+	"structures/" + civ + "/market",
 	
 	// Expansions
-	"structures/" + civ + "_civil_centre",
-	"structures/" + civ + "_military_colony",
+	"structures/" + civ + "/civil_centre",
+	"structures/" + civ + "/military_colony",
 
 	// Walls
-	"structures/" + civ + "_wallset_stone",
-	"structures/rome_wallset_siege",
-	"other/wallset_palisade",
+	"structures/" + civ + "/wallset_stone",
+	"structures/rome/wallset_siege",
+	"structures/wallset_palisade",
 
 	// Shoreline
-	"structures/" + civ + "_dock",
+	"structures/" + civ + "/dock",
 	"structures/brit/crannog",
-	"structures/cart_super_dock",
-	"structures/ptol_lighthouse",
+	"structures/cart/super_dock",
+	"structures/ptol/lighthouse",
 	
 	//villagers
-	"units/" + civ + "_support_female_citizen"
+	"units/" + civ + "/support_female_citizen"
 ];
 
 
@@ -271,7 +271,8 @@ Trigger.prototype.IntervalUnitCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					//warn("Found idle soldier");
 					this.WalkAndFightClosestTarget(u,target_p,unitTargetClass);
 				}
@@ -771,4 +772,3 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		"enabled": true
 	});
 };
-

@@ -24,36 +24,36 @@ var unitFormations = [
 
 var disabledTemplates = (civ) => [
 	// Economic structures
-	"structures/" + civ + "_corral",
-	"structures/" + civ + "_farmstead",
-	"structures/" + civ + "_field",
-	"structures/" + civ + "_storehouse",
-	"structures/" + civ + "_rotarymill",
-	"structures/" + civ + "_market",
-	"structures/" + civ + "_house",
+	"structures/" + civ + "/corral",
+	"structures/" + civ + "/farmstead",
+	"structures/" + civ + "/field",
+	"structures/" + civ + "/storehouse",
+	"structures/" + civ + "/rotarymill",
+	"structures/" + civ + "/market",
+	"structures/" + civ + "/house",
 	
 	// Expansions
-	"structures/" + civ + "_civil_centre",
-	"structures/" + civ + "_military_colony",
+	"structures/" + civ + "/civil_centre",
+	"structures/" + civ + "/military_colony",
 
 	// Walls
-	"structures/" + civ + "_wallset_stone",
-	"structures/rome_wallset_siege",
-	"other/wallset_palisade",
+	"structures/" + civ + "/wallset_stone",
+	"structures/rome/wallset_siege",
+	"structures/wallset_palisade",
 
 	// Shoreline
-	"structures/" + civ + "_dock",
+	"structures/" + civ + "/dock",
 	"structures/brit/crannog",
-	"structures/cart_super_dock",
-	"structures/ptol_lighthouse",
+	"structures/cart/super_dock",
+	"structures/ptol/lighthouse",
 	
 	// barracks
-	"structures/" + civ + "_barracks",
-	"structures/" + civ + "_workshop",
-	"structures/pers_elephant_stables",
+	"structures/" + civ + "/barracks",
+	"structures/" + civ + "/workshop",
+	"structures/pers/elephant_stables",
 	
 	//villagers
-	"units/" + civ + "_support_female_citizen"
+	"units/" + civ + "/support_female_citizen"
 ];
 
 
@@ -137,7 +137,8 @@ Trigger.prototype.SpawnSiegeEquipment = function(data)
 		units.push("units/athen/siege_oxybeles_packed");
 		units.push("units/athen/siege_oxybeles_packed");
 	}
-	else {
+	else
+	{
 		units.push("units/mace/siege_tower");
 		units.push("units/mace/siege_tower");
 	}
@@ -148,7 +149,8 @@ Trigger.prototype.SpawnSiegeEquipment = function(data)
 		units.push("units/mace/siege_ram");
 		units.push("units/mace/siege_ram");
 	}
-	else {
+	else
+	{
 		units.push("units/mace/siege_lithobolos_packed");
 		units.push("units/mace/siege_lithobolos_packed");
 		units.push("units/mace/siege_lithobolos_packed");
@@ -159,7 +161,8 @@ Trigger.prototype.SpawnSiegeEquipment = function(data)
 		units.push("units/mace/siege_lithobolos_packed");
 		units.push("units/mace/siege_lithobolos_packed");
 	}
-	else {
+	else
+	{
 		units.push("units/athen/siege_oxybeles_packed");
 		units.push("units/athen/siege_oxybeles_packed");
 		units.push("units/athen/siege_oxybeles_packed");
@@ -296,7 +299,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			TriggerHelper.SpawnUnits(data.entity,"units/mace/siege_oxybeles_packed",8,1);
 			
 			//spawn the princess
-			TriggerHelper.SpawnUnits(data.entity,"units/kush_hero_amanirenas",1,1);
+			TriggerHelper.SpawnUnits(data.entity,"units/kush/hero_amanirenas",1,1);
 		}
 		else if (id.classesList.indexOf("Pyramid") >= 0)
 		{
@@ -545,7 +548,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					//warn("Found idle soldier");
 					this.WalkAndFightClosestTarget(u,target_p,unitTargetClass);
 				}
@@ -622,7 +626,7 @@ Trigger.prototype.SpawnIntervalPatrol = function(data)
 		let num_patrols = 1;
 		let patrol_size = 1;
 		
-		let inf_templates = ["units/pers/champion_infantry","units/pers_champion_infantry","units/pers_champion_infantry","units/pers_champion_infantry","units/pers_infantry_archer_e","units/pers_infantry_javelinist_e"];
+		let inf_templates = ["units/pers/champion_infantry", "units/pers/champion_infantry", "units/pers/champion_infantry", "units/pers/champion_infantry", "units/pers/infantry_archer_e", "units/pers/infantry_javelinist_e"];
 		
 		//spawn infantry
 		for (let j = 0; j < num_patrols; j++)
@@ -664,7 +668,7 @@ Trigger.prototype.SpawnFanaticSquad = function(data)
 	if (spwan_sites.length == 0)
 		return;
 		
-	let inf_templates = ["units/pers/champion_infantry","units/pers_infantry_spearman_a","units/pers_infantry_spearman_b","units/pers_infantry_spearman_e","units/pers_infantry_archer_a","units/pers_infantry_javelinist_a"];
+	let inf_templates = ["units/pers/champion_infantry", "units/pers/infantry_spearman_a", "units/pers/infantry_spearman_b", "units/pers/infantry_spearman_e", "units/pers/infantry_archer_a", "units/pers/infantry_javelinist_a"];
 	
 	let units = [];
 	let site_j = pickRandom(spwan_sites);
@@ -746,7 +750,7 @@ Trigger.prototype.SpawnInitialPatrol = function(data)
 	let num_patrols = 115;
 	let patrol_size = 1;
 	
-	let inf_templates = ["units/pers/champion_infantry","units/pers_infantry_spearman_a","units/pers_infantry_spearman_b","units/pers_infantry_spearman_e","units/pers_infantry_archer_a","units/pers_infantry_javelinist_a"];
+	let inf_templates = ["units/pers/champion_infantry", "units/pers/infantry_spearman_a", "units/pers/infantry_spearman_b", "units/pers/infantry_spearman_e", "units/pers/infantry_archer_a", "units/pers/infantry_javelinist_a"];
 	
 	//spawn infantry
 	for (let j = 0; j < num_patrols; j++)
@@ -785,13 +789,13 @@ Trigger.prototype.CarthageShipAttack = function(data)
 	let triggerPoint = pickRandom(this.GetTriggerPoints(triggerPointShipSpawn));
 	
 	//spawn ship
-	let templates = ["units/cart_ship_trireme","units/cart_ship_bireme"];
+	let templates = ["units/cart/ship_trireme", "units/cart/ship_bireme"];
 	let ship_spawned = TriggerHelper.SpawnUnits(triggerPoint, pickRandom(templates), 1, p);
 	
 	//spawn garrison
 	for (let j = 0; j < this.cartShipGarrisonSize; ++j)
 	{
-		let u_j = TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0],"units/cart_champion_infantry",1,p);
+		let u_j = TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/cart/champion_infantry", 1, p);
 	}
 	
 	//get possible targets
@@ -889,7 +893,7 @@ Trigger.prototype.SpawnCavalryAttack = function(data)
 		num_attackers = min_size;
 	
 	//types
-	let cav_templates = ["units/pers_cavalry_archer_a","units/pers_cavalry_javelinist_a", "units/pers_cavalry_spearman_a", "units/pers_cavalry_swordsman_a","units/pers/champion_cavalry", "units/pers/champion_cavalry_archer"];
+	let cav_templates = ["units/pers/cavalry_archer_a", "units/pers/cavalry_javelinist_a", "units/pers/cavalry_spearman_a", "units/pers/cavalry_swordsman_a", "units/pers/champion_cavalry", "units/pers/champion_cavalry_archer"];
 	let attackers = [];
 	
 	//spawn attackers
@@ -948,7 +952,7 @@ Trigger.prototype.CarthageAttack = function(data)
 		else 
 		{
 			//elephant
-			let units_i = TriggerHelper.SpawnUnits(spawn_site,"units/cart_champion_elephant",1,p);
+			let units_i = TriggerHelper.SpawnUnits(spawn_site, "units/cart/champion_elephant", 1, p);
 			attackers.push(units_i[0]);
 		}
 	}
@@ -1023,7 +1027,7 @@ Trigger.prototype.CheckForCC = function(data)
 	
 	
 	//carthage attacker types
-	cmpTrigger.cartAttackerTypes = ["units/cart_champion_infantry","units/cart_champion_pikeman","units/cart_infantry_archer_a","units/cart_champion_cavalry","units/cart_infantry_slinger_iber_a"];
+	cmpTrigger.cartAttackerTypes = ["units/cart/champion_infantry", "units/cart/champion_pikeman", "units/cart/infantry_archer_a", "units/cart/champion_cavalry", "units/cart/infantry_slinger_iber_a"];
 	
 	//some variables
 	cmpTrigger.maxPatrolSize = 150;

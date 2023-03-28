@@ -50,8 +50,8 @@ var disabledTemplates = (civ) => [
 
 	// Walls
 	"structures/" + civ + "/wallset_stone",
-	"structures/rome_wallset_siege",
-	"other/wallset_palisade",
+	"structures/rome/wallset_siege",
+	"structures/wallset_palisade",
 
 	// Shoreline
 	"structures/" + civ + "/dock",
@@ -295,10 +295,12 @@ Trigger.prototype.ClusterUnits = function(units,num_clusters)
 	//warn(uneval(clustering));
 	
 	let clusters = [];
-	for (let k = 0; k < num_clusters; k ++){
+	for (let k = 0; k < num_clusters; k++)
+	{
 		let cluter_k = [];
 		
-		for (let i = 0; i < units.length; i ++){
+		for (let i = 0; i < units.length; i++)
+		{
 			
 			if (clustering[i] == k)
 			{
@@ -356,7 +358,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 				let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 				if (cmpUnitAI)
 				{
-					if (cmpUnitAI.IsIdle()){
+					if (cmpUnitAI.IsIdle())
+					{
 						
 						let sites = [pickRandom(sites_outer),pickRandom(sites_inner),pickRandom(sites_outer)];
 						
@@ -512,7 +515,8 @@ Trigger.prototype.SpawnInterevalPatrol = function(data)
 			
 			
 		}
-		else {
+		else
+		{
 			return; //no more respawns
 		}
 		
@@ -563,7 +567,8 @@ Trigger.prototype.SpawnInterevalPatrolOra = function(data)
 			
 			//warn("Spawned patrol unit for Ora");
 		}
-		else {
+		else
+		{
 			return; //no more respawns
 		}
 		
@@ -751,7 +756,8 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 					let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 					if (cmpUnitAI)
 					{
-						if (cmpUnitAI.IsIdle()){
+						if (cmpUnitAI.IsIdle())
+						{
 							this.WalkAndFightClosestTarget(u,1,"Unit");
 						}
 					}

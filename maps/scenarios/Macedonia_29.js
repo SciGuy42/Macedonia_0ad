@@ -31,30 +31,30 @@ var unitFormations = [
 
 var disabledTemplates = (civ) => [
 	// Economic structures
-	"structures/" + civ + "_corral",
-	"structures/" + civ + "_farmstead",
-	"structures/" + civ + "_field",
-	"structures/" + civ + "_storehouse",
-	"structures/" + civ + "_rotarymill",
-	"structures/" + civ + "_market",
+	"structures/" + civ + "/corral",
+	"structures/" + civ + "/farmstead",
+	"structures/" + civ + "/field",
+	"structures/" + civ + "/storehouse",
+	"structures/" + civ + "/rotarymill",
+	"structures/" + civ + "/market",
 	
 	// Expansions
-	"structures/" + civ + "_civil_centre",
-	"structures/" + civ + "_military_colony",
+	"structures/" + civ + "/civil_centre",
+	"structures/" + civ + "/military_colony",
 
 	// Walls
-	"structures/" + civ + "_wallset_stone",
-	"structures/rome_wallset_siege",
-	"other/wallset_palisade",
+	"structures/" + civ + "/wallset_stone",
+	"structures/rome/wallset_siege",
+	"structures/wallset_palisade",
 
 	// Shoreline
-	"structures/" + civ + "_dock",
+	"structures/" + civ + "/dock",
 	"structures/brit/crannog",
-	"structures/cart_super_dock",
-	"structures/ptol_lighthouse",
+	"structures/cart/super_dock",
+	"structures/ptol/lighthouse",
 	
 	//villagers
-	"units/" + civ + "_support_female_citizen"
+	"units/" + civ + "/support_female_citizen"
 ];
 
 
@@ -332,7 +332,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			TriggerHelper.SpawnUnits(data.entity,"units/mace/siege_oxybeles_packed",8,1);
 			
 			//spawn the princess
-			TriggerHelper.SpawnUnits(data.entity,"units/kush_hero_amanirenas",1,1);
+			TriggerHelper.SpawnUnits(data.entity,"units/kush/hero_amanirenas",1,1);
 		}
 		else if (id.classesList.indexOf("Pyramid") >= 0)
 		{
@@ -534,7 +534,8 @@ Trigger.prototype.FinalAtttackB = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					//warn("Found idle soldier");
 					this.WalkAndFightClosestTarget(u,1,unitTargetClass);
 				}
@@ -555,7 +556,8 @@ Trigger.prototype.FinalAtttackA = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					//warn("Found idle soldier");
 					this.WalkAndFightClosestTarget(u,1,unitTargetClass);
 				}
@@ -577,7 +579,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					//warn("Found idle soldier");
 					this.WalkAndFightClosestTarget(u,1,unitTargetClass);
 				}
@@ -662,7 +665,7 @@ Trigger.prototype.SpawnEastMountainPatrol = function(data)
 	let site = pickRandom(structures);
 	
 	//templates, mostly archers
-	let templates = ["units/pers_infantry_archer_e","units/pers_infantry_archer_a"];
+	let templates = ["units/pers/infantry_archer_e", "units/pers/infantry_archer_a"];
 	
 	//spawn a single template
 	let inf_units = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p), "Infantry").filter(TriggerHelper.IsInWorld);
@@ -704,7 +707,7 @@ Trigger.prototype.SpawnMiddleMountainPatrol = function(data)
 	let site = pickRandom(structures);
 	
 	//templates, mostly archers
-	let templates = ["units/pers_infantry_archer_e","units/pers_infantry_archer_a"];
+	let templates = ["units/pers/infantry_archer_e", "units/pers/infantry_archer_a"];
 	
 	//spawn a single template
 	let inf_units = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p), "Infantry").filter(TriggerHelper.IsInWorld);
@@ -746,7 +749,7 @@ Trigger.prototype.SpawnWestMountainPatrol = function(data)
 	let site = pickRandom(structures);
 	
 	//templates, mostly archers
-	let templates = ["units/pers_infantry_archer_e","units/pers_infantry_archer_a"];
+	let templates = ["units/pers/infantry_archer_e", "units/pers/infantry_archer_a"];
 	
 	//spawn a single template
 	let inf_units = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p), "Infantry").filter(TriggerHelper.IsInWorld);
@@ -806,7 +809,7 @@ Trigger.prototype.SpawnMaPatrol = function(data)
 	let site = pickRandom(structures);
 	
 	//templates, mostly archers
-	let cav_templates = ["units/pers/champion_cavalry","units/pers/champion_cavalry_archer","units/pers_champion_cavalry_archer"];
+	let cav_templates = ["units/pers/champion_cavalry", "units/pers/champion_cavalry_archer", "units/pers/champion_cavalry_archer"];
 	
 	//see if we have room to spawn more
 	let cmpPlayer = QueryPlayerIDInterface(p);
@@ -855,7 +858,7 @@ Trigger.prototype.SpawnApaPatrol = function(data)
 	let site = pickRandom(structures);
 	
 	//templates, mostly archers
-	let cav_templates = ["units/pers/champion_cavalry","units/pers/champion_cavalry_archer","units/pers_champion_cavalry_archer"];
+	let cav_templates = ["units/pers/champion_cavalry", "units/pers/champion_cavalry_archer", "units/pers/champion_cavalry_archer"];
 	
 	//see if we have room to spawn more
 	let cmpPlayer = QueryPlayerIDInterface(p);
@@ -916,7 +919,7 @@ Trigger.prototype.SpawnCavalryRaidSquad = function(data)
 	let spawn_site = pickRandom(this.GetTriggerPoints(triggerPointRaid));
 	
 	//templates
-	let cav_templates = ["units/pers/champion_cavalry","units/pers/champion_cavalry_archer","units/pers_champion_cavalry_archer","units/pers_cavalry_javelinist_e","units/pers_cavalry_swordsman_e"];
+	let cav_templates = ["units/pers/champion_cavalry", "units/pers/champion_cavalry_archer", "units/pers/champion_cavalry_archer", "units/pers/cavalry_javelinist_e", "units/pers/cavalry_swordsman_e"];
 	
 	let num_attackers = 8;
 	let attackers = [];

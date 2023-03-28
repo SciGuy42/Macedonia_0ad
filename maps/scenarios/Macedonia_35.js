@@ -39,45 +39,45 @@ var disabledTemplatesDocksCCs = (civ) => [
 
 	
 	// Expansions
-	"structures/" + civ + "_civil_centre",
-	"structures/" + civ + "_military_colony",
+	"structures/" + civ + "/civil_centre",
+	"structures/" + civ + "/military_colony",
 
 	// Shoreline
-	"structures/" + civ + "_dock",
+	"structures/" + civ + "/dock",
 	"structures/brit/crannog",
-	"structures/cart_super_dock",
-	"structures/ptol_lighthouse",
+	"structures/cart/super_dock",
+	"structures/ptol/lighthouse",
 	
 ];
 
 
 var disabledTemplates = (civ) => [
 	// Economic structures
-	"structures/" + civ + "_corral",
-	"structures/" + civ + "_farmstead",
-	"structures/" + civ + "_field",
-	"structures/" + civ + "_storehouse",
-	"structures/" + civ + "_rotarymill",
-	"structures/" + civ + "_market",
-	"structures/" + civ + "_house",
+	"structures/" + civ + "/corral",
+	"structures/" + civ + "/farmstead",
+	"structures/" + civ + "/field",
+	"structures/" + civ + "/storehouse",
+	"structures/" + civ + "/rotarymill",
+	"structures/" + civ + "/market",
+	"structures/" + civ + "/house",
 	
 	// Expansions
-	"structures/" + civ + "_civil_centre",
-	"structures/" + civ + "_military_colony",
+	"structures/" + civ + "/civil_centre",
+	"structures/" + civ + "/military_colony",
 
 	// Walls
-	"structures/" + civ + "_wallset_stone",
-	"structures/rome_wallset_siege",
-	"other/wallset_palisade",
+	"structures/" + civ + "/wallset_stone",
+	"structures/rome/wallset_siege",
+	"structures/wallset_palisade",
 
 	// Shoreline
-	"structures/" + civ + "_dock",
+	"structures/" + civ + "/dock",
 	"structures/brit/crannog",
-	"structures/cart_super_dock",
-	"structures/ptol_lighthouse",
+	"structures/cart/super_dock",
+	"structures/ptol/lighthouse",
 	
 	//villagers
-	"units/" + civ + "_support_female_citizen"
+	"units/" + civ + "/support_female_citizen"
 ];
 
 
@@ -300,7 +300,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 						
 					this.WalkAndFightClosestTarget(u,1,unitTargetClass);
 				}
@@ -329,7 +330,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			//check if idle
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					//warn("idle elephant");
 					this.WalkAndFightClosestTarget(u,1,siegeTargetClass,false);
 				}
@@ -410,7 +412,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 						
 					if (structs.length > 0)
 					{
@@ -486,7 +489,7 @@ Trigger.prototype.SpawnInterevalPatrol = function(data)
 	
 	if (units_p.length < this.maxPatrol)
 	{
-		let templates_p2 = ["units/maur_champion_infantry","units/maur_infantry_archer_e","units/maur_champion_maiden","units/maur_champion_maiden_archer","units/maur_champion_infantry","units/maur_champion_elephant","units/maur_infantry_swordsman_e","units/maur_infantry_spearman_e"];
+		let templates_p2 = ["units/maur/champion_infantry", "units/maur/infantry_archer_e", "units/maur/champion_maiden", "units/maur/champion_maiden_archer", "units/maur/champion_infantry", "units/maur/champion_elephant", "units/maur/infantry_swordsman_e", "units/maur/infantry_spearman_e"];
 	
 		//TO DO: check if we have civil centre or fortress
 		let sites_p2 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p),"Structure").filter(TriggerHelper.IsInWorld);
@@ -506,7 +509,8 @@ Trigger.prototype.SpawnInterevalPatrol = function(data)
 			
 			
 		}
-		else {
+		else
+		{
 			return; //no more respawns
 		}
 		
@@ -539,7 +543,7 @@ Trigger.prototype.SpawnInterevalPatrolOra = function(data)
 	if (units_p.length < this.maxPatrolOra)
 	{
 		//spawn a patrol unit
-		let templates_p2 = ["units/maur_champion_infantry","units/maur_infantry_archer_e","units/maur_champion_maiden","units/maur_champion_maiden_archer","units/maur_champion_infantry","units/maur_champion_elephant","units/maur_elephant_archer_e"];
+		let templates_p2 = ["units/maur/champion_infantry", "units/maur/infantry_archer_e", "units/maur/champion_maiden", "units/maur/champion_maiden_archer", "units/maur/champion_infantry", "units/maur/champion_elephant", "units/maur/elephant_archer_e"];
 	
 		//sites
 		let sites_p6 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(sites_owenr),"Structure").filter(TriggerHelper.IsInWorld);
@@ -555,7 +559,8 @@ Trigger.prototype.SpawnInterevalPatrolOra = function(data)
 			
 			//warn("Spawned patrol unit for Ora");
 		}
-		else {
+		else
+		{
 			return; //no more respawns
 		}
 		
@@ -572,7 +577,7 @@ Trigger.prototype.SpawnInitialPatrol = function(data)
 	let p = 2;
 	let total_unit_count_p2 = this.initPatrol;
 	
-	let templates_p2 = ["units/maur_champion_infantry","units/maur_infantry_archer_e","units/maur_champion_maiden","units/maur_champion_maiden_archer","units/maur_champion_infantry","units/maur_champion_elephant","units/maur_infantry_swordsman_e","units/maur_infantry_spearman_e"];
+	let templates_p2 = ["units/maur/champion_infantry", "units/maur/infantry_archer_e", "units/maur/champion_maiden", "units/maur/champion_maiden_archer", "units/maur/champion_infantry", "units/maur/champion_elephant", "units/maur/infantry_swordsman_e", "units/maur/infantry_spearman_e"];
 	
 	//sites
 	let sites_p2 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p),"Structure").filter(TriggerHelper.IsInWorld);
@@ -597,7 +602,7 @@ Trigger.prototype.SpawnInitialPatrol = function(data)
 Trigger.prototype.SpawnIntervalPtolemyAttack = function(data)
 {
 	//templates
-	let templates = ["units/athen/champion_ranged","units/athen/champion_marine","units/athen/champion_marine","units/mace/champion_infantry_spearman","units/mace/champion_infantry_spearman_02","units/mace_thorakites","units/mace_thureophoros"];
+	let templates = ["units/athen/champion_ranged", "units/athen/champion_marine", "units/athen/champion_marine", "units/mace/champion_infantry_spearman", "units/mace/champion_infantry_spearman_02", "units/mace/thorakites", "units/mace/thureophoros"];
 
 	//how big each squad
 	let squad_size = this.ptolAttackSize;

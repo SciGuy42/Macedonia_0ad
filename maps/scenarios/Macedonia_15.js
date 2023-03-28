@@ -20,8 +20,8 @@ var disabledTemplates = (civ) => [
 
 	// Walls
 	"structures/" + civ + "/wallset_stone",
-	"structures/rome_wallset_siege",
-	"other/wallset_palisade",
+	"structures/rome/wallset_siege",
+	"structures/wallset_palisade",
 
 	// Shoreline
 	"structures/" + civ + "/dock",
@@ -121,7 +121,8 @@ Trigger.prototype.IntervalAction = function(data)
 				let cmpUnitAI = Engine.QueryInterface(enemy_units[i], IID_UnitAI);
 				
 				//check if the unit is idle and if it can attack
-				if (cmpUnitAI){
+				if (cmpUnitAI)
+				{
 					let pos_i = Engine.QueryInterface(enemy_units[i], IID_Position).GetPosition2D();
 					
 					if (cmpUnitAI.IsIdle() && Engine.QueryInterface(enemy_units[i], IID_Attack))
@@ -242,4 +243,3 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 
 	
 };
-

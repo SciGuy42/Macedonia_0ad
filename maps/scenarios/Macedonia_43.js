@@ -50,8 +50,8 @@ var disabledTemplatesCCs = (civ) => [
 
 	
 	// Expansions
-	"structures/" + civ + "_civil_centre",
-	"structures/" + civ + "_military_colony",
+	"structures/" + civ + "/civil_centre",
+	"structures/" + civ + "/military_colony",
 
 	// Shoreline
 	"structures/brit/crannog"
@@ -61,14 +61,14 @@ var disabledTemplatesDocksCCs = (civ) => [
 
 	
 	// Expansions
-	"structures/" + civ + "_civil_centre",
-	"structures/" + civ + "_military_colony",
+	"structures/" + civ + "/civil_centre",
+	"structures/" + civ + "/military_colony",
 
 	// Shoreline
-	"structures/" + civ + "_dock",
+	"structures/" + civ + "/dock",
 	"structures/brit/crannog",
-	"structures/cart_super_dock",
-	"structures/ptol_lighthouse"
+	"structures/cart/super_dock",
+	"structures/ptol/lighthouse"
 ];
 
 
@@ -95,8 +95,8 @@ var disabledTemplates = (civ) => [
 
 	// Walls
 	"structures/" + civ + "/wallset_stone",
-	"structures/rome_wallset_siege",
-	"other/wallset_palisade",
+	"structures/rome/wallset_siege",
+	"structures/wallset_palisade",
 
 	// Shoreline
 	"structures/" + civ + "/dock",
@@ -415,7 +415,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 				let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 				if (cmpUnitAI)
 				{
-					if (cmpUnitAI.IsIdle()){
+					if (cmpUnitAI.IsIdle())
+					{
 						//pick patrol sites
 						let sites = [pickRandom(structs),pickRandom(structs),pickRandom(structs),pickRandom(structs),pickRandom(structs)];
 							
@@ -706,7 +707,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	/*if (data.entity == 2711)
 	{
 		//spawn some siege
-		let unit_i = TriggerHelper.SpawnUnits(data.entity,"units/brit_mechanical_siege_ram",3,1);		
+		let unit_i = TriggerHelper.SpawnUnits(data.entity,"units/brit/siege_ram",3,1);		
 	}
 	
 	//check if player 2 lost building
@@ -1113,20 +1114,20 @@ Trigger.prototype.IntervalSpawnGroundAttack = function(data)
 			
 			if (i == 0)
 			{
-				templates = ["units/pers_infantry_spearman_a","units/pers_infantry_spearman_a","units/pers_infantry_javelinist_a","units/pers_infantry_archer_a","units/pers_cavalry_spearman_a","units/pers_cavalry_swordsman_a","units/pers_cavalry_javelinist_a"];
+				templates = ["units/pers/infantry_spearman_a", "units/pers/infantry_spearman_a", "units/pers/infantry_javelinist_a", "units/pers/infantry_archer_a", "units/pers/cavalry_spearman_a", "units/pers/cavalry_swordsman_a", "units/pers/cavalry_javelinist_a"];
 			}
 			else if (i == 1)
 			{
-				templates = ["units/pers_infantry_spearman_e","units/pers_infantry_javelinist_e","units/pers_infantry_archer_e","units/pers_cavalry_spearman_e","units/pers_cavalry_swordsman_e","units/pers_cavalry_javelinist_e","units/pers/champion_infantry","units/pers/champion_infantry","units/pers_cavalry_archer_a"];
+				templates = ["units/pers/infantry_spearman_e", "units/pers/infantry_javelinist_e", "units/pers/infantry_archer_e", "units/pers/cavalry_spearman_e", "units/pers/cavalry_swordsman_e", "units/pers/cavalry_javelinist_e", "units/pers/champion_infantry", "units/pers/champion_infantry", "units/pers/cavalry_archer_a"];
 				
 				siege_templates = ["units/pers/champion_elephant"];
 				
 			}
 			else if (i == 2)
 			{
-				templates = ["units/pers_kardakes_hoplite","units/pers/kardakes_skirmisher","units/pers_infantry_archer_e","units/pers/champion_cavalry","units/pers_cavalry_swordsman_e","units/pers_cavalry_javelinist_e","units/pers/champion_infantry","units/pers_cavalry_archer_e"];
+				templates = ["units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher", "units/pers/infantry_archer_e", "units/pers/champion_cavalry", "units/pers/cavalry_swordsman_e", "units/pers/cavalry_javelinist_e", "units/pers/champion_infantry", "units/pers/cavalry_archer_e"];
 				
-				siege_templates = ["units/pers/champion_elephant","units/pers_mechanical_siege_ram"];
+				siege_templates = ["units/pers/champion_elephant", "units/pers/siege_ram"];
 			}
 			
 			templates = templates.concat(siege_templates);
@@ -1327,14 +1328,16 @@ Trigger.prototype.RangeActionTemple = function(data)
 			//complete quest
 			this.QuestTempleComplete();
 		}
-		else {
+		else
+		{
 			//give quest
 			
 			
 			this.ShowText("The small monastary you encounter welcomes you. They are willing to help you with healing but first ask that you seek out an ancient relic stolen by thieves. The relic looks like a pegasus -- you won't miss it. Should you ackquire it, come back to the temple, the monks will be forever grateful.","We'll see what we can do.","OK");
 		}
 	}
-	else if (this.questTempleComplete == false) {
+	else if (this.questTempleComplete == false)
+	{
 		if (this.questTempleRelicTaken == true)
 		{
 			//complete quest
@@ -1488,7 +1491,8 @@ Trigger.prototype.RangeActionElephantTraders = function(data)
 			//set the dialog state variable
 			this.dialogState = "elephant_traders";
 		}
-		else {
+		else
+		{
 			this.ShowText("The traders in this village are willing to see you some elephants for 500 stone. Alas, we do not have the resources","Very well","We'll come back later");
 			
 			//turn on mercs in 45 seconds
@@ -1603,7 +1607,8 @@ Trigger.prototype.IntervalAttritionCheck = function(data)
 		num_dead += 6;
 		//cmpPlayer.AddResource("food",-1*resources.food);
 	}
-	else {
+	else
+	{
 		cmpPlayer.AddResource("food",-1*food_loss);
 	}
 	
@@ -1767,7 +1772,8 @@ Trigger.prototype.StatusCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					
 					let patrol_sites = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p),"Structure").filter(TriggerHelper.IsInWorld);
 					
@@ -1790,7 +1796,8 @@ Trigger.prototype.StatusCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					
 						let target_site = this.GetTriggerPoints("B")[0];
 						let target_pos = TriggerHelper.GetEntityPosition2D(target_site);
@@ -1864,7 +1871,8 @@ Trigger.prototype.StatusCheck = function(data)
 
 			this.finalAttackScheduled = true;
 		}
-		else {
+		else
+		{
 			//if too much time has passed, lose the game
 			if (this.elapsedMinutes > 60)
 			{
@@ -2101,7 +2109,7 @@ Trigger.prototype.FlipSlaveOwnership = function(data)
 		
 		if (p == 1)
 		{
-			disTemplates = disTemplates.concat(["units/mace/hero_alexander_iii","units/mace_hero_craterus","units/mace/hero_philip_ii","units/mace_hero_demetrius","units/mace_hero_pyrhus"]);
+			disTemplates = disTemplates.concat(["units/mace/hero_alexander_iii", "units/mace/hero_craterus", "units/mace/hero_philip_ii", "units/mace/hero_demetrius", "units/mace/hero_pyrhus"]);
 		}
 			
 		cmpPlayer.SetDisabledTemplates(disTemplates);

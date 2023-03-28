@@ -37,8 +37,8 @@ var disabledTemplates = (civ) => [
 
 	// Walls
 	"structures/" + civ + "/wallset_stone",
-	"structures/rome_wallset_siege",
-	"other/wallset_palisade",
+	"structures/rome/wallset_siege",
+	"structures/wallset_palisade",
 
 	// Shoreline
 	"structures/" + civ + "/dock",
@@ -172,7 +172,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			TriggerHelper.SpawnUnits(data.entity,"units/mace/siege_oxybeles_packed",8,1);
 			
 			//spawn the princess
-			TriggerHelper.SpawnUnits(data.entity,"units/kush_hero_amanirenas",1,1);
+			TriggerHelper.SpawnUnits(data.entity,"units/kush/hero_amanirenas",1,1);
 		}
 		else if (id.classesList.indexOf("Pyramid") >= 0)
 		{
@@ -435,7 +435,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					//warn("Found idle soldier");
 					this.WalkAndFightClosestTarget(u,target_p,unitTargetClass);
 				}

@@ -34,30 +34,30 @@ var unitFormations = [
 
 var disabledTemplates = (civ) => [
 	// Economic structures
-	"structures/" + civ + "_corral",
-	"structures/" + civ + "_farmstead",
-	"structures/" + civ + "_field",
-	"structures/" + civ + "_storehouse",
-	"structures/" + civ + "_rotarymill",
-	"structures/" + civ + "_market",
+	"structures/" + civ + "/corral",
+	"structures/" + civ + "/farmstead",
+	"structures/" + civ + "/field",
+	"structures/" + civ + "/storehouse",
+	"structures/" + civ + "/rotarymill",
+	"structures/" + civ + "/market",
 	
 	// Expansions
-	"structures/" + civ + "_civil_centre",
-	"structures/" + civ + "_military_colony",
+	"structures/" + civ + "/civil_centre",
+	"structures/" + civ + "/military_colony",
 
 	// Walls
-	"structures/" + civ + "_wallset_stone",
-	"structures/rome_wallset_siege",
-	"other/wallset_palisade",
+	"structures/" + civ + "/wallset_stone",
+	"structures/rome/wallset_siege",
+	"structures/wallset_palisade",
 
 	// Shoreline
-	"structures/" + civ + "_dock",
+	"structures/" + civ + "/dock",
 	"structures/brit/crannog",
-	"structures/cart_super_dock",
-	"structures/ptol_lighthouse",
+	"structures/cart/super_dock",
+	"structures/ptol/lighthouse",
 	
 	//villagers
-	//"units/" + civ + "_support_female_citizen"
+	//"units/" + civ + "/support_female_citizen"
 ];
 
 
@@ -270,7 +270,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 				let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 				if (cmpUnitAI)
 				{
-					if (cmpUnitAI.IsIdle()){
+					if (cmpUnitAI.IsIdle())
+					{
 						//warn("Found idle soldier");
 						//this.WalkAndFightClosestTarget(u,1,unitTargetClass);
 						
@@ -315,7 +316,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let e of towers_s)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/maur_champion_infantry",3,p);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/maur/champion_infantry",3,p);
 			
 			for (let a of archers_e)
 			{
@@ -502,7 +503,8 @@ Trigger.prototype.SpawnInterevalPatrolBazira = function(data)
 			
 			//warn("Spawned patrol unit for Bazira");
 		}
-		else {
+		else
+		{
 			return; //no more respawns
 		}
 		
@@ -551,7 +553,8 @@ Trigger.prototype.SpawnInterevalPatrolOra = function(data)
 			
 			//warn("Spawned patrol unit for Ora");
 		}
-		else {
+		else
+		{
 			return; //no more respawns
 		}
 		
@@ -702,7 +705,8 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 					
 						this.questTempleGiven = true;
 					}
-					else {
+					else
+					{
 						//TODO: show text
 						this.ShowText("The bandit elephant riders have been defeated. Among the loot, you find ancient religious relics. Monks from a nearby temple are happy you have recovered them and in exchange, offers some medicines and knowledge that will improve the performance of our healers","Great","Also great!");
 					

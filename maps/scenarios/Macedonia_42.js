@@ -43,8 +43,8 @@ var disabledTemplatesCCs = (civ) => [
 
 	
 	// Expansions
-	"structures/" + civ + "_civil_centre",
-	"structures/" + civ + "_military_colony",
+	"structures/" + civ + "/civil_centre",
+	"structures/" + civ + "/military_colony",
 
 	// Shoreline
 	"structures/brit/crannog"
@@ -54,14 +54,14 @@ var disabledTemplatesDocksCCs = (civ) => [
 
 	
 	// Expansions
-	"structures/" + civ + "_civil_centre",
-	"structures/" + civ + "_military_colony",
+	"structures/" + civ + "/civil_centre",
+	"structures/" + civ + "/military_colony",
 
 	// Shoreline
-	"structures/" + civ + "_dock",
+	"structures/" + civ + "/dock",
 	"structures/brit/crannog",
-	"structures/cart_super_dock",
-	"structures/ptol_lighthouse"
+	"structures/cart/super_dock",
+	"structures/ptol/lighthouse"
 ];
 
 
@@ -88,8 +88,8 @@ var disabledTemplates = (civ) => [
 
 	// Walls
 	"structures/" + civ + "/wallset_stone",
-	"structures/rome_wallset_siege",
-	"other/wallset_palisade",
+	"structures/rome/wallset_siege",
+	"structures/wallset_palisade",
 
 	// Shoreline
 	"structures/" + civ + "/dock",
@@ -383,7 +383,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 				let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 				if (cmpUnitAI)
 				{
-					if (cmpUnitAI.IsIdle()){
+					if (cmpUnitAI.IsIdle())
+					{
 						//pick patrol sites
 						let sites = [pickRandom(structs),pickRandom(structs),pickRandom(structs),pickRandom(structs),pickRandom(structs)];
 							
@@ -459,7 +460,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of outposts)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/brit_champion_infantry",1,p);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/brit/champion_infantry",1,p);
 			
 			for (let a of archers_e)
 			{
@@ -917,20 +918,20 @@ Trigger.prototype.IntervalSpawnGroundAttack = function(data)
 			
 			if (i == 0)
 			{
-				templates = ["units/pers_infantry_spearman_a","units/pers_infantry_spearman_a","units/pers_infantry_javelinist_a","units/pers_infantry_archer_a","units/pers_cavalry_spearman_a","units/pers_cavalry_swordsman_a","units/pers_cavalry_javelinist_a"];
+				templates = ["units/pers/infantry_spearman_a", "units/pers/infantry_spearman_a", "units/pers/infantry_javelinist_a", "units/pers/infantry_archer_a", "units/pers/cavalry_spearman_a", "units/pers/cavalry_swordsman_a", "units/pers/cavalry_javelinist_a"];
 			}
 			else if (i == 1)
 			{
-				templates = ["units/pers_infantry_spearman_e","units/pers_infantry_javelinist_e","units/pers_infantry_archer_e","units/pers_cavalry_spearman_e","units/pers_cavalry_swordsman_e","units/pers_cavalry_javelinist_e","units/pers/champion_infantry","units/pers_champion_infantry","units/pers_cavalry_archer_a"];
+				templates = ["units/pers/infantry_spearman_e", "units/pers/infantry_javelinist_e", "units/pers/infantry_archer_e", "units/pers/cavalry_spearman_e", "units/pers/cavalry_swordsman_e", "units/pers/cavalry_javelinist_e", "units/pers/champion_infantry", "units/pers/champion_infantry", "units/pers/cavalry_archer_a"];
 				
 				siege_templates = ["units/pers/champion_elephant"];
 				
 			}
 			else if (i == 2)
 			{
-				templates = ["units/pers_kardakes_hoplite","units/pers/kardakes_skirmisher","units/pers_infantry_archer_e","units/pers/champion_cavalry","units/pers_cavalry_swordsman_e","units/pers_cavalry_javelinist_e","units/pers/champion_infantry","units/pers_cavalry_archer_e"];
+				templates = ["units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher", "units/pers/infantry_archer_e", "units/pers/champion_cavalry", "units/pers/cavalry_swordsman_e", "units/pers/cavalry_javelinist_e", "units/pers/champion_infantry", "units/pers/cavalry_archer_e"];
 				
-				siege_templates = ["units/pers/champion_elephant","units/pers_mechanical_siege_ram"];
+				siege_templates = ["units/pers/champion_elephant", "units/pers/siege_ram"];
 			}
 			
 			templates = templates.concat(siege_templates);
@@ -1035,18 +1036,18 @@ Trigger.prototype.IntervalSpawnAttackShip = function(data)
 	
 	if (ships_pl1.length > 0 || docks_pl1.length > 0)
 	{
-		let ship_template = "units/maur_ship_bireme";
+		let ship_template = "units/maur/ship_bireme";
 		let garrison_size = 8;
 		
 		if (Math.random() < 0.33)
 		{
-			ship_template = "units/maur_ship_trireme";
+			ship_template = "units/maur/ship_trireme";
 			garrison_size = 10;
 		}
 		
 		let ship_spawned = TriggerHelper.SpawnUnits(pickRandom(docks), ship_template, 1, p);
 	
-		TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/maur_champion_infantry",garrison_size,p);
+		TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/maur/champion_infantry", garrison_size, p);
 		
 		
 		
@@ -1101,18 +1102,18 @@ Trigger.prototype.IntervalSpawnPatrolShip = function(data)
 	
 	if (ships.length < 5)
 	{
-		let ship_template = "units/maur_ship_bireme";
+		let ship_template = "units/maur/ship_bireme";
 		let garrison_size = 8;
 		
 		if (Math.random() < 0.25)
 		{
-			ship_template = "units/maur_ship_trireme";
+			ship_template = "units/maur/ship_trireme";
 			garrison_size = 10;
 		}
 		
 		let ship_spawned = TriggerHelper.SpawnUnits(pickRandom(docks), ship_template, 1, p);
 	
-		TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/maur_champion_infantry",garrison_size,p);
+		TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/maur/champion_infantry", garrison_size, p);
 		
 		let trigger_sites = this.GetTriggerPoints(triggerPointsShipPatrol);
 
@@ -1319,7 +1320,7 @@ Trigger.prototype.SpawnTraders = function(data)
 			target_market = pickRandom(markets);
 		}
 		
-		let trader = TriggerHelper.SpawnUnits(spawn_market,"units/maur_support_trader",1,e);	
+		let trader = TriggerHelper.SpawnUnits(spawn_market, "units/maur/support_trader", 1, e);
 		let cmpUnitAI = Engine.QueryInterface(trader[0], IID_UnitAI);
 				
 		cmpUnitAI.UpdateWorkOrders("Trade");
@@ -1343,7 +1344,7 @@ Trigger.prototype.SpawnDesertRaiders = function(data)
 
 	for (let i = 0; i < 90; i ++)
 	{
-		let templates = ["units/pers/champion_infantry","units/pers_infantry_archer_e","units/pers_infantry_javelinist_e","units/pers_kardakes_hoplite"];
+		let templates = ["units/pers/champion_infantry", "units/pers/infantry_archer_e", "units/pers/infantry_javelinist_e", "units/pers/kardakes_hoplite"];
 		
 		//pick patrol sites
 		let sites = [pickRandom(spawn_sites),pickRandom(spawn_sites),pickRandom(spawn_sites),pickRandom(spawn_sites)];
@@ -1372,14 +1373,16 @@ Trigger.prototype.RangeActionTemple = function(data)
 			this.QuestTempleComplete();
 			
 		}
-		else {
+		else
+		{
 			//give quest
 			this.questTempleGiven = true;
 			
 			this.ShowText("You encounter a small monastery. The monks welcome you and promise to help you if you defeat the dessert raiders who have been harassing them for weeks now.\n\nNote: you only need to kill all units (not structures) to consider this task complete. Come back here once the task is done.","We'll see what we can.","OK");
 		}
 	}
-	else if (this.questTempleComplete == false) {
+	else if (this.questTempleComplete == false)
+	{
 		let units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(5),"Unit").filter(TriggerHelper.IsInWorld);
 		
 		if (units.length == 0)
@@ -1467,7 +1470,7 @@ Trigger.prototype.RangeActionMercs = function(data)
 	if (this.mercsAvailable == true && data.added.length > 0)
 	{
 		let sizes = [5,10];
-		let templates = ["units/pers/champion_cavalry_archer","units/pers_cavalry_archer_e","units/maur_champion_chariot"];
+		let templates = ["units/pers/champion_cavalry_archer", "units/pers/cavalry_archer_e", "units/maur/champion_chariot"];
 		
 		let costs_stone = [50,75,100];
 		let costs_food = [25,50,75];
@@ -1536,21 +1539,21 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 			}
 			else if (id.template.GenericName == "Armored Swordsman")
 			{
-				template = "units/mace_thorakites";
+				template = "units/mace/thorakites";
 			}
 			else if (id.template.GenericName == "Heavy Skirmisher")
 			{
-				template = "units/mace_thureophoros";
+				template = "units/mace/thureophoros";
 			}
 			
 		}
-		else if (template == "units/mace_cavalry_javelinist_b" || template == "units/mace/cavalry_javelineer_a")
+		else if (template == "units/mace/cavalry_javelinist_b" || template == "units/mace/cavalry_javelineer_a")
 		{
 			template = "units/mace/cavalry_javelineer_e";
 		}
 		else if (template == "units/mace/cavalry_spearman_b" || template == "units/mace/cavalry_spearman_a")
 		{
-			template = "units/mace_cavalry_spearman_e";
+			template = "units/mace/cavalry_spearman_e";
 		}
 		else if (template == "units/mace/infantry_archer_b" || template == "units/mace/infantry_archer_a")
 		{
@@ -1562,9 +1565,9 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 		}
 		else if (template == "units/mace/infantry_pikeman_b" || template == "units/mace/infantry_pikeman_a")
 		{
-			template = "units/mace_infantry_pikeman_e";
+			template = "units/mace/infantry_pikeman_e";
 		}
-		else if (template == "units/mace_infantry_slinger_b" || template == "units/mace/infantry_slinger_a")
+		else if (template == "units/mace/infantry_slinger_b" || template == "units/mace/infantry_slinger_a")
 		{
 			template = "units/mace/infantry_slinger_e";
 		}

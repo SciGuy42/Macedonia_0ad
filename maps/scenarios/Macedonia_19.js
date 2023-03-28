@@ -55,8 +55,8 @@ var disabledTemplates = (civ) => [
 
 	// Walls
 	"structures/" + civ + "/wallset_stone",
-	"structures/rome_wallset_siege",
-	"other/wallset_palisade",
+	"structures/rome/wallset_siege",
+	"structures/wallset_palisade",
 
 	// Shoreline
 	"structures/" + civ + "/dock",
@@ -271,7 +271,8 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 					let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 					if (cmpUnitAI)
 					{
-						if (cmpUnitAI.IsIdle()){
+						if (cmpUnitAI.IsIdle())
+						{
 							this.WalkAndFightClosestTarget(u,1,"Unit");
 						}
 					}
@@ -392,7 +393,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					//warn("Found idle soldier");
 					this.WalkAndFightClosestTarget(u,target_p,unitTargetClass);
 				}
@@ -567,10 +569,12 @@ Trigger.prototype.ClusterUnits = function(units,num_clusters)
 	//warn(uneval(clustering));
 	
 	let clusters = [];
-	for (let k = 0; k < num_clusters; k ++){
+	for (let k = 0; k < num_clusters; k++)
+	{
 		let cluter_k = [];
 		
-		for (let i = 0; i < units.length; i ++){
+		for (let i = 0; i < units.length; i++)
+		{
 			
 			if (clustering[i] == k)
 			{

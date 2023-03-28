@@ -262,7 +262,7 @@ Trigger.prototype.RangeAction = function(data)
 	{
 		this.spawnedBigShip = true;
 		
-		let big_ships = TriggerHelper.SpawnUnits(12170,"units/ptol_ship_quinquereme",1,1);
+		let big_ships = TriggerHelper.SpawnUnits(12170, "units/ptol/ship_quinquereme", 1, 1);
 		TriggerHelper.SpawnUnits(12170,"units/mace/siege_lithobolos_packed",2,1);
 		
 		this.big_ship = big_ships[0];
@@ -272,27 +272,27 @@ Trigger.prototype.RangeAction = function(data)
 
 var disabledTemplates = (civ) => [
 	// Economic structures
-	/*"structures/" + civ + "_corral",
-	"structures/" + civ + "_farmstead",
-	"structures/" + civ + "_field",
-	"structures/" + civ + "_storehouse",
-	"structures/" + civ + "_rotarymill",
-	"structures/" + civ + "_market",*/
+	/*"structures/" + civ + "/corral",
+	"structures/" + civ + "/farmstead",
+	"structures/" + civ + "/field",
+	"structures/" + civ + "/storehouse",
+	"structures/" + civ + "/rotarymill",
+	"structures/" + civ + "/market",*/
 	
 	// Expansions
-	"structures/" + civ + "_civil_centre",
-	"structures/" + civ + "_military_colony",
+	"structures/" + civ + "/civil_centre",
+	"structures/" + civ + "/military_colony",
 
 	// Walls
-	"structures/" + civ + "_wallset_stone",
-	"structures/rome_wallset_siege",
-	"other/wallset_palisade",
+	"structures/" + civ + "/wallset_stone",
+	"structures/rome/wallset_siege",
+	"structures/wallset_palisade",
 
 	// Shoreline
-	/*"structures/" + civ + "_dock",
+	/*"structures/" + civ + "/dock",
 	"structures/brit/crannog",
-	"structures/cart_super_dock",
-	"structures/ptol_lighthouse"*/
+	"structures/cart/super_dock",
+	"structures/ptol/lighthouse"*/
 ];
 
 /*let ents_5 = TriggerHelper.GetEntitiesByPlayer(4);
@@ -366,7 +366,7 @@ Trigger.prototype.spawnCatapultShipAttack = function(data)
 		
 		for (let k = 0; k < num_ships; k ++)
 		{
-			let ship_spawned = TriggerHelper.SpawnUnits(spawn_site,"units/pers_ship_bireme",1,random_enemy);
+			let ship_spawned = TriggerHelper.SpawnUnits(spawn_site, "units/pers/ship_bireme", 1, random_enemy);
 			
 			//spawn the garrison inside the ship
 			TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/athen/champion_ranged",garrisonCount,random_enemy);
@@ -479,7 +479,8 @@ Trigger.prototype.specialShipAttack = function(data)
 		
 		//spawn the ships 
 		let attacker_ships = [];
-		for (let i = 0; i < shipSpawnCount; ++i){
+		for (let i = 0; i < shipSpawnCount; ++i)
+		{
 			let ship_spawned = TriggerHelper.SpawnUnits(spawn_site,pickRandom(shipTypes),1,random_enemy);
 
 			//spawn the garrison inside the ship
@@ -548,7 +549,8 @@ Trigger.prototype.spawnShipAttack = function(data)
 		
 		//spawn the ships 
 		let attacker_ships = [];
-		for (let i = 0; i < shipSpawnCount; ++i){
+		for (let i = 0; i < shipSpawnCount; ++i)
+		{
 			let ship_spawned = TriggerHelper.SpawnUnits(spawn_site,pickRandom(shipTypes),1,random_enemy);
 
 			//spawn the garrison inside the ship
@@ -612,7 +614,8 @@ Trigger.prototype.spawnTradeShips = function(data)
 			let docks_others = [];
 			for (let p of this.enemy_players)
 			{
-				if (p != this.enemy_players[e]){
+				if (p != this.enemy_players[e])
+				{
 					let docks_p = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p), "Dock").filter(TriggerHelper.IsInWorld);
 				
 					docks_others = docks_others.concat(docks_p);
@@ -622,7 +625,7 @@ Trigger.prototype.spawnTradeShips = function(data)
 			if (docks_e.length > 0 && docks_others.length > 0)
 			{
 				let spawn_dock = pickRandom(docks_e)
-				let trader = TriggerHelper.SpawnUnits(spawn_dock, "units/pers_ship_merchant",1,this.enemy_players[e]);
+				let trader = TriggerHelper.SpawnUnits(spawn_dock, "units/pers/ship_merchant", 1, this.enemy_players[e]);
 				
 				warn("spawned trade ship");
 				
@@ -654,7 +657,8 @@ Trigger.prototype.makeShipsTrade = function(data)
 		for (let trader of traders_e)
 		{
 			let cmpUnitAI = Engine.QueryInterface(trader, IID_UnitAI);
-			if (cmpUnitAI) {
+			if (cmpUnitAI)
+			{
 				if (cmpUnitAI.IsIdle())
 				{
 					idle_traders_e.push(trader);
@@ -672,7 +676,8 @@ Trigger.prototype.makeShipsTrade = function(data)
 			let docks_others = [];
 			for (let p of this.enemy_players)
 			{
-				if (p != this.enemy_players[e]){
+				if (p != this.enemy_players[e])
+				{
 					let docks_p = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p), "Dock").filter(TriggerHelper.IsInWorld);
 			
 					docks_others = docks_others.concat(docks_p);
@@ -787,11 +792,11 @@ Trigger.prototype.GarrisonEntities = function(data)
 	
 	//restrict units for one of the enemies
 	cmpPlayer = QueryPlayerIDInterface(4);
-	cmpPlayer.SetDisabledTemplates(["units/athen_support_female_citizen","units/sele_support_female_citizen","units/athen_infantry_javelinist_b","units/athen_infantry_spearman_b","units/athen_infantry_slinger_b","units/athen/cavalry_javelineer_b"]);
+	cmpPlayer.SetDisabledTemplates(["units/athen/support_female_citizen", "units/sele/support_female_citizen", "units/athen/infantry_javelinist_b", "units/athen/infantry_spearman_b", "units/athen/infantry_slinger_b", "units/athen/cavalry_javelineer_b"]);
 	
 	//restrict techs by ally
 	cmpPlayer = QueryPlayerIDInterface(5);
-	cmpPlayer.SetDisabledTemplates(["units/mace/support_female_citizen","units/sele_support_female_citizen"]);
+	cmpPlayer.SetDisabledTemplates(["units/mace/support_female_citizen", "units/sele/support_female_citizen"]);
 	
 	//some constants
 	cmpTrigger.enemy_players = [2,3,4];
@@ -873,4 +878,3 @@ Trigger.prototype.GarrisonEntities = function(data)
 		"enabled": true,
 	});*/
 };
-

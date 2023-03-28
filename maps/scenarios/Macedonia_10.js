@@ -48,10 +48,10 @@ Trigger.prototype.ResearchQueuedAction = function(data)
 Trigger.prototype.StructureDecayCheck = function(data)
 {
 	this.structureDecayCounter += 1;
-	
+
 	for (let p of [1])
 	{
-		let structs = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p),"Structure").filter(TriggerHelper.IsInWorld);
+		let structs = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Structure").filter(TriggerHelper.IsInWorld);
 
 		for (let s of structs)
 		{
@@ -70,8 +70,8 @@ Trigger.prototype.StructureDecayCheck = function(data)
 			}
 		}
 	}
-	
-	this.DoAfterDelay(15 * 1000, "StructureDecayCheck",null);
+
+	this.DoAfterDelay(15 * 1000, "StructureDecayCheck", null);
 }
 
 
@@ -81,12 +81,14 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 {
 	
 	//if we captured gaia object
-	if (data.from == 0 && data.to == 1){
+	if (data.from == 0 && data.to == 1)
+	{
 		
 		//warn(uneval(data));
 		
 		//big temple
-		if (data.entity == 2233){ //big temple
+		if (data.entity == 2233)
+		{ //big temple
 			//spawn some healers
 			TriggerHelper.SpawnUnits(2014,"units/mace/support_healer_e",6,1);
 		
@@ -181,7 +183,8 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		{
 			//gate was destroyed, send cavalry attack
 			//warn("gate destroyed");
-			if (this.gate_attack_done == false){
+			if (this.gate_attack_done == false)
+			{
 				//get position of gate
 				let pos_gate = Engine.QueryInterface(data.entity, IID_Position).GetPosition2D();
 			
@@ -202,8 +205,10 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			}
 			
 		}
-		else if (this.ccs.indexOf(data.entity) >= 0){ //civil centered destroyed
-			if (this.cc_attack_done == false){
+		else if (this.ccs.indexOf(data.entity) >= 0)
+		{ //civil centered destroyed
+			if (this.cc_attack_done == false)
+			{
 				
 				//get list of ccs
 				let ccs = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(3), "CivilCentre").filter(TriggerHelper.IsInWorld);
@@ -230,8 +235,10 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				TriggerHelper.SetPlayerWon(1,this.VictoryTextFn,this.VictoryTextFn);	
 			}
 		}
-		else if (this.forts.indexOf(data.entity) >= 0){ //forts destroyed
-			if (this.fort_attack_done == false){
+		else if (this.forts.indexOf(data.entity) >= 0)
+		{ //forts destroyed
+			if (this.fort_attack_done == false)
+			{
 				
 				//spawn cavalry
 				let units = [];
@@ -247,7 +254,8 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				this.fort_attack_done = true;
 			}
 		}
-		else if (data.from == 2 || data.from == 3) {
+		else if (data.from == 2 || data.from == 3)
+		{
 			//defending forces lost a troop
 			this.current_points += 0.25;
 			//warn(uneval(data));
@@ -317,7 +325,7 @@ Trigger.prototype.SpawnAndStartCavalryAttack = function()
 	}
 	
 	
-	this.gaul_cavalry_types = ["units/gaul/cavalry_swordsman_e","units/gaul_cavalry_javelineer_e","units/brit_war_dog_e","units/gaul/champion_cavalry","units/brit/champion_chariot"];
+	this.gaul_cavalry_types = ["units/gaul/cavalry_swordsman_e", "units/gaul/cavalry_javelineer_e", "units/brit/war_dog_e", "units/gaul/champion_cavalry", "units/brit/champion_chariot"];
 	
 	
 	//get list of barracks
@@ -346,7 +354,8 @@ Trigger.prototype.SpawnAndStartCavalryAttack = function()
 	}
 	
 	let attackers = [];
-	for (let i = 0; i < attack_size; ++i){
+	for (let i = 0; i < attack_size; ++i)
+	{
 		let attacker_i = TriggerHelper.SpawnUnits(spawn_site,pickRandom(this.gaul_cavalry_types),1,5);
 		attackers = attackers.concat(attacker_i);
 	}
@@ -406,7 +415,8 @@ Trigger.prototype.IntervalActionSpawnTraders = function(data)
 			//make list of own markets
 			let markets_e = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(this.enemies[e]), "Market").filter(TriggerHelper.IsInWorld);
 			
-			if (markets_e.length > 0){
+			if (markets_e.length > 0)
+			{
 			
 				//warn(uneval(markets_e));
 				let site = pickRandom(markets_e);
@@ -452,7 +462,8 @@ Trigger.prototype.IntervalActionTraders = function(data)
 		for (let trader of traders_e)
 		{
 			let cmpUnitAI = Engine.QueryInterface(trader, IID_UnitAI);
-			if (cmpUnitAI) {
+			if (cmpUnitAI)
+			{
 				if (cmpUnitAI.IsIdle())
 				{
 					//warn("updating trade orders");
@@ -757,7 +768,8 @@ Trigger.prototype.IntervalDefenderSpawnAction = function(data)
 			else 
 				this.PatrolOrderList(unit_i,p,sites_reversed);
 		}
-		else {
+		else
+		{
 			//towers
 			let patrol_sites = [pickRandom(towers),pickRandom(towers),pickRandom(towers),pickRandom(towers)];
 			this.PatrolOrderList(unit_i,p,patrol_sites);
@@ -820,7 +832,7 @@ var disabledTemplates = (civ) => [
 	// Walls
 	"structures/" + civ + "/wallset_stone",
 	"structures/rome/wallset_siege",
-	"other/wallset_palisade",
+	"structures/wallset_palisade",
 
 	// Shoreline
 	"structures/" + civ + "/dock",
@@ -1048,7 +1060,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	//list of crannogs of player 4
 	//we randomly spawn units near them just to help the AI of player 4
 	/*cmpTrigger.crannog_ids = [7366,7371,7382];
-	cmpTrigger.infantryTypesSpawn = ["units/brit_infantry_javelineer_b","units/brit/infantry_slinger_b","units/brit_infantry_spearman_b"];
+	cmpTrigger.infantryTypesSpawn = ["units/brit/infantry_javelineer_b","units/brit/infantry_slinger_b","units/brit/infantry_spearman_b"];
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalCrannogSpawnAction", {
 		"enabled": true,
 		"delay": 6 * 1000,
@@ -1091,4 +1103,3 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	
 	
 };
-

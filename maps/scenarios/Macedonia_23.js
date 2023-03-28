@@ -39,8 +39,8 @@ var disabledTemplates = (civ) => [
 
 	// Walls
 	"structures/" + civ + "/wallset_stone",
-	"structures/rome_wallset_siege",
-	"other/wallset_palisade",
+	"structures/rome/wallset_siege",
+	"structures/wallset_palisade",
 
 	// Shoreline
 	"structures/" + civ + "/dock",
@@ -331,7 +331,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 					
 					//spawn some traders
 					let p = 1;
-					let trader = TriggerHelper.SpawnUnits(data.entity,"units/athen_support_trader",4,p);
+					let trader = TriggerHelper.SpawnUnits(data.entity,"units/athen/support_trader",4,p);
 				}*/
 			}
 			else if (id.classesList.indexOf("DefenseTower") >= 0 || id.classesList.indexOf("Fortress") >= 0 )
@@ -624,7 +624,8 @@ Trigger.prototype.GarrisonEntities = function(data)
 					cmpUnitAI.Garrison(e,true);
 				}
 			}
-			else {
+			else
+			{
 				let archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged",fort_size,p);
 				
 				for (let a of archers_e)
@@ -705,14 +706,16 @@ Trigger.prototype.IdleUnitCheck = function(data)
 					let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 					if (cmpUnitAI)
 					{
-						if (cmpUnitAI.IsIdle()){
+						if (cmpUnitAI.IsIdle())
+						{
 							//warn("Found idle soldier");
 							this.WalkAndFightClosestTarget(u,target_p,unitTargetClass);
 						}
 					}
 				}
 			}
-			else {
+			else
+			{
 				//warn("Sending all units to patrol");
 				//patrol
 				for (let u of units_all)
@@ -740,7 +743,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					//warn("Found idle soldier");
 					this.WalkAndFightClosestTarget(u,target_p,unitTargetClass);
 				}
@@ -858,7 +862,8 @@ Trigger.prototype.SpawnRepairCrew = function(data)
 		
 			let site_j = pickRandom(sites);
 			
-			if (site_j){	
+			if (site_j)
+			{
 				let repair_crew = TriggerHelper.SpawnUnits(site_j,pickRandom(this.repairTemplates),5,p);
 				
 				//warn("Sending repair men");
@@ -1023,7 +1028,8 @@ Trigger.prototype.SpawnPatrol = function(data)
 		{
 			this.PatrolOrder(patrol_j,p,pickRandom(targets_A),site_j);
 		}
-		else {
+		else
+		{
 			//attack
 			let target = this.FindClosestTarget(patrol_j[0],3,unitTargetClass);
 			let target_pos = TriggerHelper.GetEntityPosition2D(target);
@@ -1245,7 +1251,8 @@ Trigger.prototype.SpawnOlbianTrader = function(data)
 			}
 		
 				
-			if (markets_others.length > 0){
+			if (markets_others.length > 0)
+			{
 				
 
 				let site = pickRandom(docks);
@@ -1297,7 +1304,8 @@ Trigger.prototype.SpawnNeutralTrader = function(data)
 			}
 		
 				
-			if (markets_others.length > 0){
+			if (markets_others.length > 0)
+			{
 				
 
 				let site = pickRandom(docks);
@@ -1381,7 +1389,8 @@ Trigger.prototype.SpawnScyhianTrader = function(data)
 			}
 		
 				
-			if (markets_others.length > 0){
+			if (markets_others.length > 0)
+			{
 				
 
 				let site = pickRandom(docks);
@@ -1420,7 +1429,7 @@ Trigger.prototype.SpawnAssault = function(data)
 		//spawn unit
 		let triggerPoint = pickRandom(this.GetTriggerPoints(triggerPointNorth));
 		
-		let units_i = TriggerHelper.SpawnUnits(triggerPoint, "units/spart_mechanical_siege_ram", 1, owner);
+		let units_i = TriggerHelper.SpawnUnits(triggerPoint, "units/spart/siege_ram", 1, owner);
 		
 		//make it fight
 		this.WalkAndFightClosestTarget(units_i[0],target_player,"CivilCentre");
@@ -1488,7 +1497,8 @@ Trigger.prototype.VictoryAchieved = function(data)
 
 		TriggerHelper.SetPlayerWon(1,this.VictoryTextFn,this.VictoryTextFn);	
 	}
-	else {
+	else
+	{
 		TriggerHelper.SetPlayerWon(2,this.VictoryTextFn,this.VictoryTextFn);
 	}
 }

@@ -38,8 +38,8 @@ var disabledTemplates = (civ) => [
 
 	// Walls
 	"structures/" + civ + "/wallset_stone",
-	"structures/rome_wallset_siege",
-	"other/wallset_palisade",
+	"structures/rome/wallset_siege",
+	"structures/wallset_palisade",
 
 	// Shoreline
 	"structures/" + civ + "/dock",
@@ -241,7 +241,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			TriggerHelper.SpawnUnits(data.entity,"units/mace/siege_oxybeles_packed",8,1);
 			
 			//spawn the princess
-			TriggerHelper.SpawnUnits(data.entity,"units/kush_hero_amanirenas",1,1);
+			TriggerHelper.SpawnUnits(data.entity,"units/kush/hero_amanirenas",1,1);
 		}
 		else if (id.classesList.indexOf("Pyramid") >= 0)
 		{
@@ -393,7 +393,7 @@ Trigger.prototype.SpawnNavalInvasionAttack = function(data)
 	let attacker_ships = [];
 	
 	//let ship_spawned = TriggerHelper.SpawnUnits(spawn_site,this.spawn_ship_templates[1],1,owner);
-	let ship_spawned = TriggerHelper.SpawnUnits(spawn_site, "units/cart_ship_quinquereme", 1, owner);
+	let ship_spawned = TriggerHelper.SpawnUnits(spawn_site, "units/cart/ship_quinquereme", 1, owner);
 	let ship_invasion_garrison = [];
 		
 	//spawn the invasion force inside the ship
@@ -503,7 +503,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					//warn("Found idle soldier");
 					this.WalkAndFightClosestTarget(u,target_p,unitTargetClass);
 				}
@@ -560,7 +561,7 @@ Trigger.prototype.SpawnFortressPatrol = function(data)
 	let num_patrols = 10;
 	let patrol_size = 5;
 	
-	let inf_templates = ["units/kush_champion_infantry_amun","units/kush_champion_infantry","units/kush_champion_infantry_apedemak"];
+	let inf_templates = ["units/kush/champion_infantry_amun", "units/kush/champion_infantry", "units/kush/champion_infantry_apedemak"];
 	
 	//spawn infantry
 	for (let j = 0; j < num_patrols; j++)
@@ -774,10 +775,12 @@ Trigger.prototype.SpawnAchaeanPatrol = function(data)
 		let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 		if (cmpUnitAI)
 		{
-			if (cmpUnitAI.IsIdle()){
+			if (cmpUnitAI.IsIdle())
+			{
 				idle_units.push(u);	
 			}
-			else {
+			else
+			{
 				//check if patroling
 				let orders = cmpUnitAI.GetOrders();
 				//warn(uneval(orders));
@@ -848,10 +851,12 @@ Trigger.prototype.SpawnArcadianPatrol = function(data)
 		let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 		if (cmpUnitAI)
 		{
-			if (cmpUnitAI.IsIdle()){
+			if (cmpUnitAI.IsIdle())
+			{
 				idle_units.push(u);	
 			}
-			else {
+			else
+			{
 				//check if patroling
 				let orders = cmpUnitAI.GetOrders();
 				//warn(uneval(orders));
@@ -929,7 +934,8 @@ Trigger.prototype.SpawnArcadianTraders = function(data)
 			}
 		
 				
-			if (markets_others.length > 0){
+			if (markets_others.length > 0)
+			{
 				
 
 				let site = pickRandom(docks);
@@ -971,7 +977,8 @@ Trigger.prototype.SpawnArcadianTraders = function(data)
 		let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 		if (cmpUnitAI)
 		{
-			if (cmpUnitAI.IsIdle()){
+			if (cmpUnitAI.IsIdle())
+			{
 				//warn("Found idle trader");
 				
 				//make list of others' docks
@@ -1028,7 +1035,8 @@ Trigger.prototype.SpawnCretanTraders = function(data)
 			}
 		
 				
-			if (markets_others.length > 0){
+			if (markets_others.length > 0)
+			{
 				
 
 				let site = pickRandom(docks);
@@ -1071,7 +1079,8 @@ Trigger.prototype.SpawnCretanTraders = function(data)
 		let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 		if (cmpUnitAI)
 		{
-			if (cmpUnitAI.IsIdle()){
+			if (cmpUnitAI.IsIdle())
+			{
 				//warn("Found idle trader");
 				
 				//make list of others' docks
@@ -1178,7 +1187,8 @@ Trigger.prototype.CheckAssault = function(data)
 		this.ShowText("We have defeated the assault on Megalopolis! The city is now under your command!","Great!","OK");
 		//warn("Assault over!");
 	}
-	else {
+	else
+	{
 		this.DoAfterDelay(15 * 1000,"CheckAssault",null);
 	
 	}

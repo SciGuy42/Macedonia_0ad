@@ -41,8 +41,8 @@ var disabledTemplates = (civ) => [
 
 	// Walls
 	"structures/" + civ + "/wallset_stone",
-	"structures/rome_wallset_siege",
-	"other/wallset_palisade",
+	"structures/rome/wallset_siege",
+	"structures/wallset_palisade",
 
 	// Shoreline
 	"structures/" + civ + "/dock",
@@ -230,7 +230,8 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			//warn("Camp destroyed!");
 			let  num_attack_squads = 2;
 			
-			for (let i = 0; i < num_attack_squads; i++){
+			for (let i = 0; i < num_attack_squads; i++)
+			{
 				
 				this.DoAfterDelay(((i*20)+1) * 1000,"SpawnSiegeAttackSquad",null);
 			}
@@ -244,7 +245,8 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		
 		if (health_u)
 			health_u.Kill();
-		else {
+		else
+		{
 			Engine.DestroyEntity(data.entity);
 		}
 		
@@ -421,7 +423,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					//warn("Found idle soldier");
 					this.WalkAndGatherClosestTarget(u,0,"Animal");
 				}
@@ -436,7 +439,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					//send to patrol
 					if (p == 4)
 					{
@@ -458,7 +462,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					if (p == 4)
 					{
 						//pick points to patrol
@@ -510,7 +515,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					//warn("Found idle soldier");
 					this.WalkAndFightClosestTarget(u,1,unitTargetClass);
 				}
