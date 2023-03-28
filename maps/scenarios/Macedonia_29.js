@@ -1417,7 +1417,7 @@ Trigger.prototype.FleetMovementCommand = function(data)
 		if (true) //disable civil centres
 		{
 
-			let disTemplates = ["structures/" + cmpPlayer.GetCiv() + "/civil_centre","structures/" + cmpPlayer.GetCiv() + "/dock"];
+			let disTemplates = ["structures/" + QueryPlayerIDInterface(p, IID_Identity).GetCiv() + "/civil_centre","structures/" + QueryPlayerIDInterface(p, IID_Identity).GetCiv() + "/dock"];
 		
 			cmpPlayer.SetDisabledTemplates(disTemplates);
 		}

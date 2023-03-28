@@ -1239,14 +1239,14 @@ Trigger.prototype.VictoryCheck = function(data)
 		if (true) //disable civil centres
 		{
 			//disable buildings production
-			//let disTemplates = disabledTemplates(cmpPlayer.GetCiv());
+			//let disTemplates = disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv());
 		
 			//disable units as well
-			//let unit_templaes = TriggerHelper.GetTemplateNamesByClasses("Unit", cmpPlayer.GetCiv(), undefined, undefined, true);
+			//let unit_templaes = TriggerHelper.GetTemplateNamesByClasses("Unit", QueryPlayerIDInterface(p, IID_Identity).GetCiv(), undefined, undefined, true);
 			
 			//disTemplates = disTemplates.concat(unit_templaes);
 		
-			let disTemplates = ["structures/" + cmpPlayer.GetCiv() + "/civil_centre","structures/" + cmpPlayer.GetCiv() + "/dock"];
+			let disTemplates = ["structures/" + QueryPlayerIDInterface(p, IID_Identity).GetCiv() + "/civil_centre","structures/" + QueryPlayerIDInterface(p, IID_Identity).GetCiv() + "/dock"];
 		
 			cmpPlayer.SetDisabledTemplates(disTemplates);
 			//warn("Disabling templates for player "+uneval(p));

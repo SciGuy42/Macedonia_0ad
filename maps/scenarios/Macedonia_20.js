@@ -1518,11 +1518,11 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		//cmpPlayer.SetPopulationBonuses(300);
 		
 		//disable troop production
-		let disTemplates = disabledTemplates(cmpPlayer.GetCiv());
+		let disTemplates = disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv());
 		
 		if (p == 3)
 		{
-			let unit_templates = TriggerHelper.GetTemplateNamesByClasses("Unit", cmpPlayer.GetCiv(), undefined, undefined, true);
+			let unit_templates = TriggerHelper.GetTemplateNamesByClasses("Unit", QueryPlayerIDInterface(p, IID_Identity).GetCiv(), undefined, undefined, true);
 			disTemplates = disTemplates.concat(unit_templates);	
 		}
 		

@@ -2186,12 +2186,12 @@ Trigger.prototype.PointIncrement = function(data)
 		
 
 		//disable buildings production
-		let disTemplates = disabledTemplates(cmpPlayer.GetCiv());
+		let disTemplates = disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv());
 		
 		if (p != 1)
 		{
 			//disable units as well
-			let unit_templaes = TriggerHelper.GetTemplateNamesByClasses("Unit", cmpPlayer.GetCiv(), undefined, undefined, true);	
+			let unit_templaes = TriggerHelper.GetTemplateNamesByClasses("Unit", QueryPlayerIDInterface(p, IID_Identity).GetCiv(), undefined, undefined, true);	
 			disTemplates = disTemplates.concat(unit_templaes);
 		}
 		else if (p == 1)

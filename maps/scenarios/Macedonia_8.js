@@ -238,7 +238,7 @@ Trigger.prototype.IntervalSpawnGuards = function(data)
 			if (patrol_sites.length >= 3)
 			{
 				
-				let inf_templates = ["units/athen/champion_ranged","units/athen/champion_marine","units/thebes_sacred_band_hoplitai","units/merc_black_cloak"];
+				let inf_templates = ["units/athen/champion_ranged","units/athen/champion_marine","units/theb_sacred_band","units/merc_black_cloak"];
 			
 				//pick patrol sites
 				let sites = [pickRandom(patrol_sites),pickRandom(patrol_sites),pickRandom(patrol_sites)];
@@ -484,4 +484,3 @@ Trigger.prototype.GarrisonEntities = function(data)
 		"interval": 60 * 1000,
 	});
 };
-

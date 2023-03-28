@@ -1392,7 +1392,7 @@ Trigger.prototype.AlexanderHealthCheck = function(data)
 		let cmpPlayer = QueryPlayerIDInterface(p);
 		
 		//disable buildings production
-		let disTemplates = disabledTemplates(cmpPlayer.GetCiv());
+		let disTemplates = disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv());
 			
 		
 		cmpPlayer.SetDisabledTemplates(disTemplates);

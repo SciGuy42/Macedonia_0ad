@@ -1212,7 +1212,7 @@ Trigger.prototype.KillCamp = function(data)
 		if (p == 2 || p == 3 || p == 3)
 		{
 			
-			let disTemplates = disabledTemplates(cmpPlayer.GetCiv())
+			let disTemplates = disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv())
 			cmpPlayer.SetDisabledTemplates(disTemplates);
 			
 		}

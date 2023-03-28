@@ -1075,11 +1075,11 @@ Trigger.prototype.CheckForCC = function(data)
 		
 		
 		//disable troop production
-		let disTemplates = disabledTemplates(cmpPlayer.GetCiv());
+		let disTemplates = disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv());
 		
 		if (p != 1)
 		{
-			let unit_templates = TriggerHelper.GetTemplateNamesByClasses("Unit", cmpPlayer.GetCiv(), undefined, undefined, true);
+			let unit_templates = TriggerHelper.GetTemplateNamesByClasses("Unit", QueryPlayerIDInterface(p, IID_Identity).GetCiv(), undefined, undefined, true);
 			disTemplates = disTemplates.concat(unit_templates);	
 		}
 		

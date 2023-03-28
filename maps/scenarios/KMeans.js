@@ -292,7 +292,7 @@ KMeans.prototype.run = function() {
     //this.timer = setTimeout(this.run.bind(this), this.drawDelay);
   } else {
     // Otherwise task has completed.
-    console.log('Iteration took for completion: ' + this.iterations);
+    warn('Iteration took for completion: ' + this.iterations);
   }
 };
 

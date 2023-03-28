@@ -1278,7 +1278,7 @@ Trigger.prototype.UpdatePoints = function(data)
 	
 	cmpTrigger.persianCavTypes = ["units/pers/cavalry_spearman_a","units/pers/cavalry_javelineer_a","units/pers/champion_cavalry_archer","units/pers/cavalry_archer_a","units/pers/cavalry_axeman_a"];
 
-	cmpTrigger.greekInfTypes = ["units/athen/champion_ranged","units/athen/champion_marine","units/athen/champion_infantry","units/thebes_sacred_band_hoplitai"];
+	cmpTrigger.greekInfTypes = ["units/athen/champion_ranged","units/athen/champion_marine","units/athen/champion_infantry","units/theb_sacred_band"];
 	cmpTrigger.greekSiegeTypes = ["units/athen/siege_oxybeles_packed","units/mace/siege_lithobolos_packed"];
 
 	//list of enemy players and other constants
@@ -1368,4 +1368,3 @@ Trigger.prototype.UpdatePoints = function(data)
 	
 	
 };
-

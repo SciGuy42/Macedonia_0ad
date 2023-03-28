@@ -938,7 +938,7 @@ Trigger.prototype.StartWar = function(data)
 	let cmpPlayer = QueryPlayerIDInterface(1);
 		
 	//disable templates -- nobody can build docks or civil centre
-	let disTemplates = disabledTemplatesCCs(cmpPlayer.GetCiv())
+	let disTemplates = disabledTemplatesCCs(QueryPlayerIDInterface(1, IID_Identity).GetCiv())
 	cmpPlayer.SetDisabledTemplates(disTemplates);
 		
 	//start war
@@ -1585,12 +1585,12 @@ Trigger.prototype.InitGaiaClusters = function(data)
 
 		if (p == 6 || p == 7)
 		{
-			let disTemplates = disabledTemplatesDocksCCs(cmpPlayer.GetCiv())
+			let disTemplates = disabledTemplatesDocksCCs(QueryPlayerIDInterface(p, IID_Identity).GetCiv())
 			cmpPlayer.SetDisabledTemplates(disTemplates);
 		}
 		else if (p != 1)
 		{
-			let disTemplates = disabledTemplatesCCs(cmpPlayer.GetCiv())
+			let disTemplates = disabledTemplatesCCs(QueryPlayerIDInterface(p, IID_Identity).GetCiv())
 			cmpPlayer.SetDisabledTemplates(disTemplates);
 		}
 		

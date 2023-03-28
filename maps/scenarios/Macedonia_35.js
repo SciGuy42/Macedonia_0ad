@@ -1220,7 +1220,7 @@ Trigger.prototype.SpawnFarmers = function(data)
 		let cmpPlayer = QueryPlayerIDInterface(p);
 		
 		//disable templates -- nobody can build docks or civil centre
-		let disTemplates = disabledTemplatesDocksCCs(cmpPlayer.GetCiv())
+		let disTemplates = disabledTemplatesDocksCCs(QueryPlayerIDInterface(p, IID_Identity).GetCiv())
 		cmpPlayer.SetDisabledTemplates(disTemplates);
 		
 		//add some tech

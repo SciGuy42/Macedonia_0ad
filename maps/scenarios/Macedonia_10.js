@@ -949,7 +949,8 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	
 	//player 3
 	let cmpPlayer = QueryPlayerIDInterface(3);
-	cmpPlayer.SetDisabledTemplates(disabledTemplates(cmpPlayer.GetCiv()));
+
+	cmpPlayer.SetDisabledTemplates(disabledTemplates(QueryPlayerIDInterface(3, IID_Identity).GetCiv()));
 	let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 	
 	
@@ -966,7 +967,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	cmpPlayer = QueryPlayerIDInterface(2);
 	cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 	
-	cmpPlayer.SetDisabledTemplates(disabledTemplates(cmpPlayer.GetCiv()));
+	cmpPlayer.SetDisabledTemplates(disabledTemplates(QueryPlayerIDInterface(2, IID_Identity).GetCiv()));
 	cmpTechnologyManager.ResearchTechnology("phase_town_athen");
 	cmpTechnologyManager.ResearchTechnology("phase_city_athen");
 	
@@ -974,7 +975,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	cmpPlayer = QueryPlayerIDInterface(1);
 	cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 	
-	cmpPlayer.SetDisabledTemplates(disabledTemplates(cmpPlayer.GetCiv()));
+	cmpPlayer.SetDisabledTemplates(disabledTemplates(QueryPlayerIDInterface(1, IID_Identity).GetCiv()));
 	cmpTechnologyManager.ResearchTechnology("phase_town");
 	cmpTechnologyManager.ResearchTechnology("phase_city");
 	cmpTechnologyManager.ResearchTechnology("unlock_shared_los");
@@ -997,7 +998,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	cmpTrigger.numCCsDestroyed = 0;
 	
 	//store list of defender types
-	cmpTrigger.infTypes = ["units/thebes_sacred_band_hoplitai","units/athen/champion_marine","units/athen/champion_ranged","units/athen/champion_ranged","units/merc_black_cloak","units/athen/infantry_slinger_e","units/athen/infantry_javelineer_e"];
+	cmpTrigger.infTypes = ["units/theb_sacred_band","units/athen/champion_marine","units/athen/champion_ranged","units/athen/champion_ranged","units/merc_black_cloak","units/athen/infantry_slinger_e","units/athen/infantry_javelineer_e"];
 	cmpTrigger.cavTypes = ["units/athen/cavalry_javelineer_e","units/athen/cavalry_swordsman_e","units/spart/cavalry_spearman_e"];
 	
 	//list of reinforcements

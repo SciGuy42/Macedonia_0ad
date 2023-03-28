@@ -1072,7 +1072,7 @@ Trigger.prototype.StructureDecayCheck = function(data)
 	for (let p of [1,3])
 	{
 		let cmpPlayer = QueryPlayerIDInterface(p);
-		cmpPlayer.SetDisabledTemplates(disabledTemplates(cmpPlayer.GetCiv()));
+		cmpPlayer.SetDisabledTemplates(disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv()));
 	
 		let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
@@ -1104,7 +1104,7 @@ Trigger.prototype.StructureDecayCheck = function(data)
 	{
 		let cmpPlayer = QueryPlayerIDInterface(p);
 		
-		let d_templates = disabledTemplates(cmpPlayer.GetCiv());
+		let d_templates = disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv());
 		//d_templates.push("units/athen/ship_bireme");
 		//d_templates.push("units/athen/ship_trireme");
 		//d_templates.push("units/athen/ship_merchant");

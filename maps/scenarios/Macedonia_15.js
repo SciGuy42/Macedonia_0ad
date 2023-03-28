@@ -204,7 +204,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	for (let p of [1,2])
 	{
 		let cmpPlayer = QueryPlayerIDInterface(p);
-		cmpPlayer.SetDisabledTemplates(disabledTemplates(cmpPlayer.GetCiv()));
+		cmpPlayer.SetDisabledTemplates(disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv()));
 	
 		let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		

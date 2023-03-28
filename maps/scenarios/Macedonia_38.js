@@ -1073,7 +1073,7 @@ Trigger.prototype.IntervalCheckIndianCCs = function(data)
 		if (p == 7 || p == 8)
 		{
 			
-			let disTemplates = disabledTemplates(cmpPlayer.GetCiv())
+			let disTemplates = disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv())
 			cmpPlayer.SetDisabledTemplates(disTemplates);
 			
 		}

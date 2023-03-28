@@ -383,7 +383,7 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		
 			let cmpPlayer = QueryPlayerIDInterface(p);
 			
-			let disTemplates = disabledTemplatesCCs(cmpPlayer.GetCiv())
+			let disTemplates = disabledTemplatesCCs(QueryPlayerIDInterface(p, IID_Identity).GetCiv())
 			cmpPlayer.SetDisabledTemplates(disTemplates);
 			
 		}
@@ -1405,7 +1405,7 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 		//disable templates -- nobody can build docks or civil centre
 		
 		
-		//let disTemplates = disabledTemplates(cmpPlayer.GetCiv());
+		//let disTemplates = disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv());
 		let disTemplates = [];
 			
 		if (p == 1)
@@ -1415,7 +1415,7 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 		}
 		else if (p == 4 || p == 5 || p == 6)
 		{
-			disTemplates = disabledTemplates(cmpPlayer.GetCiv());
+			disTemplates = disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv());
 			cmpPlayer.SetDisabledTemplates(disTemplates);
 		}
 		

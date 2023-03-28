@@ -423,7 +423,7 @@ Trigger.prototype.GarrisonAction = function(data)
 	cmpTrigger.spawn_attack_bonus = 2;
 	
 	//greek mercenaries variables
-	cmpTrigger.greekInfTypes = ["units/athen/cavalry_javelineer_a","units/athen/cavalry_swordsman_a","units/athen/champion_ranged","units/athen/champion_marine","units/athen/champion_infantry","units/thebes_sacred_band_hoplitai","units/merc_black_cloak"];
+	cmpTrigger.greekInfTypes = ["units/athen/cavalry_javelineer_a","units/athen/cavalry_swordsman_a","units/athen/champion_ranged","units/athen/champion_marine","units/athen/champion_infantry","units/theb_sacred_band","units/merc_black_cloak"];
 	cmpTrigger.greekSiegeTypes =["units/athen/siege_oxybeles_packed","units/athen/siege_oxybeles_packed","units/athen/siege_lithobolos_packed","units/athen/siege_oxybeles_packed"];
 	
 	cmpTrigger.greek_camps = [3802,4578];
@@ -454,4 +454,3 @@ Trigger.prototype.GarrisonAction = function(data)
 	});
 	
 };
-

@@ -1006,7 +1006,7 @@ Trigger.prototype.IntervalVictoryCheck = function(data)
 		let cmpPlayer = QueryPlayerIDInterface(p);
 		
 		//disable templates -- nobody can build a cc
-		let disTemplates = ["structures/" + cmpPlayer.GetCiv() + "/civil_centre","structures/" + cmpPlayer.GetCiv() + "/dock"];
+		let disTemplates = ["structures/" + QueryPlayerIDInterface(p, IID_Identity).GetCiv() + "/civil_centre","structures/" + QueryPlayerIDInterface(p, IID_Identity).GetCiv() + "/dock"];
 		cmpPlayer.SetDisabledTemplates(disTemplates);
 		
 		//add some tech

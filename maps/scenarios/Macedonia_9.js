@@ -313,7 +313,7 @@ Trigger.prototype.spawnShipEscort = function(data)
 	//pick random enemy player and get ship types
 	let random_enemy = pickRandom(this.enemy_players);
 	let cmpPlayer = QueryPlayerIDInterface(random_enemy);
-	let shipTypes = TriggerHelper.GetTemplateNamesByClasses("Warship", cmpPlayer.GetCiv(), undefined, undefined, true); 
+	let shipTypes = TriggerHelper.GetTemplateNamesByClasses("Warship", QueryPlayerIDInterface(random_enemy, IID_Identity).GetCiv(), undefined, undefined, true); 
 	
 	//check to see that player has ship traders and docks
 	let traders_e = TriggerHelper.MatchEntitiesByClass(TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(random_enemy), "Trader").filter(TriggerHelper.IsInWorld),"Ship");
@@ -353,7 +353,7 @@ Trigger.prototype.spawnCatapultShipAttack = function(data)
 	let random_enemy = pickRandom([2,4]);
 	
 	let cmpPlayer = QueryPlayerIDInterface(random_enemy);
-	let shipTypes = TriggerHelper.GetTemplateNamesByClasses("Warship", cmpPlayer.GetCiv(), undefined, undefined, true);
+	let shipTypes = TriggerHelper.GetTemplateNamesByClasses("Warship", QueryPlayerIDInterface(random_enemy, IID_Identity).GetCiv(), undefined, undefined, true);
 	
 	//pick dock
 	let docks = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(random_enemy), "Dock").filter(TriggerHelper.IsInWorld);
@@ -397,7 +397,7 @@ Trigger.prototype.spawnInvasionAttack = function(data)
 	let random_enemy = 4;
 	
 	let cmpPlayer = QueryPlayerIDInterface(random_enemy);
-	let shipTypes = TriggerHelper.GetTemplateNamesByClasses("Warship", cmpPlayer.GetCiv(), undefined, undefined, true); 
+	let shipTypes = TriggerHelper.GetTemplateNamesByClasses("Warship", QueryPlayerIDInterface(random_enemy, IID_Identity).GetCiv(), undefined, undefined, true); 
 	let shipType = shipTypes[shipTypes.length-1];
 	
 	//pick dock
@@ -411,7 +411,7 @@ Trigger.prototype.spawnInvasionAttack = function(data)
 	
 	//spawn the garrison inside the ship
 	TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/athen/champion_ranged",10,random_enemy);
-	TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/thebes_sacred_band_hoplitai",10,random_enemy);
+	TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/theb_sacred_band",10,random_enemy);
 			
 	
 	//make sure the unit has no orders, for some reason after garissoning, the order queue is full of pick up orders
@@ -462,7 +462,7 @@ Trigger.prototype.specialShipAttack = function(data)
 	let random_enemy = pickRandom(this.enemy_players);
 	
 	let cmpPlayer = QueryPlayerIDInterface(random_enemy);
-	let shipTypes = TriggerHelper.GetTemplateNamesByClasses("Warship", cmpPlayer.GetCiv(), undefined, undefined, true); 
+	let shipTypes = TriggerHelper.GetTemplateNamesByClasses("Warship", QueryPlayerIDInterface(random_enemy, IID_Identity).GetCiv(), undefined, undefined, true); 
 	
 	//pick dock
 	let docks = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(random_enemy), "Dock").filter(TriggerHelper.IsInWorld);
@@ -529,7 +529,7 @@ Trigger.prototype.spawnShipAttack = function(data)
 	let random_enemy = pickRandom(this.enemy_players);
 	
 	let cmpPlayer = QueryPlayerIDInterface(random_enemy);
-	let shipTypes = TriggerHelper.GetTemplateNamesByClasses("Warship", cmpPlayer.GetCiv(), undefined, undefined, true); 
+	let shipTypes = TriggerHelper.GetTemplateNamesByClasses("Warship", QueryPlayerIDInterface(random_enemy, IID_Identity).GetCiv(), undefined, undefined, true); 
 	
 	warn(uneval(shipTypes));
 	
@@ -779,7 +779,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 	cmpPlayer.AddStartingTechnology("phase_city");
 	cmpPlayer.AddStartingTechnology("hellenes/special_iphicratean_reforms");
 	cmpPlayer.AddStartingTechnology("unlock_shared_los");
-	cmpPlayer.SetDisabledTemplates(disabledTemplates(cmpPlayer.GetCiv()));
+	cmpPlayer.SetDisabledTemplates(disabledTemplates(QueryPlayerIDInterface(1, IID_Identity).GetCiv()));
 	
 	//set techs and restrictions on AI players
 	for (let p = 2; p <= 4; ++p)
@@ -787,7 +787,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		let cmpPlayer_p = QueryPlayerIDInterface(p);
 		cmpPlayer_p.AddStartingTechnology("phase_town");
 		cmpPlayer_p.AddStartingTechnology("phase_city");
-	//cmpPlayer_p.SetDisabledTemplates(disabledTemplates(cmpPlayer.GetCiv()));
+	//cmpPlayer_p.SetDisabledTemplates(disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv()));
 	}
 	
 	//restrict units for one of the enemies

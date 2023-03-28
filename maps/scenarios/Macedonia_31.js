@@ -784,13 +784,13 @@ Trigger.prototype.ShowText = function(text,option_a,option_b)
 		let cmpPlayer = QueryPlayerIDInterface(p);
 		
 		//disable templates
-		let disTemplates = ["structures/" + cmpPlayer.GetCiv() + "/civil_centre","structures/" + cmpPlayer.GetCiv() + "/dock"];
+		let disTemplates = ["structures/" + QueryPlayerIDInterface(p, IID_Identity).GetCiv() + "/civil_centre","structures/" + QueryPlayerIDInterface(p, IID_Identity).GetCiv() + "/dock"];
 		
-		let hero_templates = TriggerHelper.GetTemplateNamesByClasses("Hero", cmpPlayer.GetCiv(), undefined, undefined, true);
+		let hero_templates = TriggerHelper.GetTemplateNamesByClasses("Hero", QueryPlayerIDInterface(p, IID_Identity).GetCiv(), undefined, undefined, true);
 		disTemplates = disTemplates.concat(hero_templates);
 		
 		if (p == 3)
-			disTemplates = disTemplates.concat(disabledTemplates(cmpPlayer.GetCiv()));
+			disTemplates = disTemplates.concat(disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv()));
 		
 		
 		cmpPlayer.SetDisabledTemplates(disTemplates);

@@ -750,7 +750,7 @@ Trigger.prototype.VictoryCheck = function(data)
 	//greek info
 	//cmpTrigger.greekSpawnSites = [7670,7671,7672,7680];
 	cmpTrigger.greekSpawnSites =  cmpTrigger.GetTriggerPoints("B");
-	cmpTrigger.greekInfTypes = ["units/athen/cavalry_javelineer_a","units/athen/cavalry_swordsman_a","units/athen/cavalry_javelineer_b","units/athen/cavalry_swordsman_b","units/athen/champion_ranged","units/athen/champion_marine","units/athen/champion_infantry","units/thebes_sacred_band_hoplitai","units/merc_black_cloak"];
+	cmpTrigger.greekInfTypes = ["units/athen/cavalry_javelineer_a","units/athen/cavalry_swordsman_a","units/athen/cavalry_javelineer_b","units/athen/cavalry_swordsman_b","units/athen/champion_ranged","units/athen/champion_marine","units/athen/champion_infantry","units/theb_sacred_band","units/merc_black_cloak"];
 	cmpTrigger.greekSiegeTypes = ["units/athen/siege_oxybeles_packed","units/athen/siege_oxybeles_packed","units/athen/siege_lithobolos_packed","units/athen/siege_oxybeles_packed"];
 	
 	cmpTrigger.greekRatio = 0.85;
@@ -816,4 +816,3 @@ Trigger.prototype.VictoryCheck = function(data)
 
 	
 };
-

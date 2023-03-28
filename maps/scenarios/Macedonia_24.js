@@ -1790,10 +1790,10 @@ Trigger.prototype.DariusFlees = function(data)
 		//for players 3,4,5,6 disable templates
 		
 		//disable buildings production
-		let disTemplates = disabledTemplates(cmpPlayer.GetCiv());
+		let disTemplates = disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv());
 		
 		//disable units as well
-		let unit_templaes = TriggerHelper.GetTemplateNamesByClasses("Unit", cmpPlayer.GetCiv(), undefined, undefined, true);
+		let unit_templaes = TriggerHelper.GetTemplateNamesByClasses("Unit", QueryPlayerIDInterface(p, IID_Identity).GetCiv(), undefined, undefined, true);
 			
 		disTemplates = disTemplates.concat(unit_templaes);
 		

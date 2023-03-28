@@ -1007,9 +1007,10 @@ Trigger.prototype.IntervalVictoryCheck = function(data)
 	for (let p of [1,2,3])
 	{
 		let cmpPlayer = QueryPlayerIDInterface(p);
+
 		
 		//disable templates -- nobody can build buildings
-		let disTemplates = disabledTemplates(cmpPlayer.GetCiv())
+		let disTemplates = disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv())
 		cmpPlayer.SetDisabledTemplates(disTemplates);
 		
 		//add some tech

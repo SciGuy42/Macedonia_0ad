@@ -1034,7 +1034,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	cmpTrigger.persAttackLevel = 15;
 	
 	
-	cmpTrigger.greekInfTypes = ["units/athen/champion_ranged","units/athen/champion_marine","units/athen/champion_marine","units/athen/champion_infantry","units/athen/champion_infantry","units/thebes_sacred_band_hoplitai"];
+	cmpTrigger.greekInfTypes = ["units/athen/champion_ranged","units/athen/champion_marine","units/athen/champion_marine","units/athen/champion_infantry","units/athen/champion_infantry","units/theb_sacred_band"];
 	cmpTrigger.greekSiegeTypes = ["units/athen/siege_oxybeles_packed","units/athen/siege_oxybeles_packed","units/mace/siege_lithobolos_packed"];
 	cmpTrigger.spawn_ship_templates = TriggerHelper.GetTemplateNamesByClasses("Warship", "athen", undefined, undefined, true);
 
@@ -1064,12 +1064,12 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		if (p == 4 || p == 5 || p == 3)
 		{
 			//disable troop production
-			let disTemplates = disabledTemplates(cmpPlayer.GetCiv());
+			let disTemplates = disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv());
 			cmpPlayer.SetDisabledTemplates(disTemplates);
 		}
 		else if (p == 2)
 		{
-			cmpPlayer.SetDisabledTemplates(["structures/" + cmpPlayer.GetCiv() + "/civil_centre"]);
+			cmpPlayer.SetDisabledTemplates(["structures/" + QueryPlayerIDInterface(p, IID_Identity).GetCiv() + "/civil_centre"]);
 		}
 		
 		//add tower techs to city watch

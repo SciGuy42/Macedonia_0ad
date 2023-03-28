@@ -1209,7 +1209,7 @@ Trigger.prototype.CheckForCC = function(data)
 	{
 		//disable new civil centres
 		let cmpPlayer = QueryPlayerIDInterface(1);
-		let disTemplates = ["structures/" + cmpPlayer.GetCiv() + "_civil_centre"];
+		let disTemplates = ["structures/" + QueryPlayerIDInterface(1, IID_Identity).GetCiv() + "_civil_centre"];
 		
 		cmpPlayer.SetDisabledTemplates(disTemplates);
 		
@@ -1329,7 +1329,7 @@ Trigger.prototype.SetDiplomacy = function(data)
 		let cmpPlayer = QueryPlayerIDInterface(p);
 		
 		//disable buildings production
-		let disTemplates = disabledTemplates(cmpPlayer.GetCiv());
+		let disTemplates = disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv());
 		cmpPlayer.SetDisabledTemplates(disTemplates);
 			
 		let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);

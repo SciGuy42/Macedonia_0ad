@@ -659,7 +659,7 @@ Trigger.prototype.InitGaiaClusters = function(data)
 		cmpPlayer.SetPopulationBonuses(300);
 		
 		//disable troop production
-		let disTemplates = disabledTemplates(cmpPlayer.GetCiv());
+		let disTemplates = disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv());
 		
 		if (p == 2 || p == 3)
 			cmpPlayer.SetDisabledTemplates(disTemplates);

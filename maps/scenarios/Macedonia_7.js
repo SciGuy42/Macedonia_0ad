@@ -318,7 +318,7 @@ Trigger.prototype.SpawnInvasionShip = function()
 		return; //player 6 is dead
 	}
 	
-	let shipTypes = TriggerHelper.GetTemplateNamesByClasses("Warship", cmpPlayer.GetCiv(), undefined, undefined, true); 
+	let shipTypes = TriggerHelper.GetTemplateNamesByClasses("Warship", QueryPlayerIDInterface(p, IID_Identity).GetCiv(), undefined, undefined, true); 
 	let shipType = pickRandom(shipTypes);
 	
 	let docks = []
@@ -341,7 +341,7 @@ Trigger.prototype.SpawnInvasionShip = function()
 	//spawn the garrison inside the ship
 	ship_garrison = ship_garrison.concat(TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/gaul/champion_fanatic",12,p));
 	
-	//ship_garrison = ship_garrison.concat(TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/thebes_sacred_band_hoplitai",6,7));
+	//ship_garrison = ship_garrison.concat(TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/theb_sacred_band",6,7));
 	
 	//make sure the unit has no orders, for some reason after garissoning, the order queue is full of pick up orders
 	let cmpUnitAI = Engine.QueryInterface(ship_spawned[0], IID_UnitAI);
@@ -702,4 +702,3 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	}*/
 	
 };
-

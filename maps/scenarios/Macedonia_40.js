@@ -1276,7 +1276,7 @@ Trigger.prototype.RangeActionTeleportD = function(data)
 		//disable templates -- nobody can build docks or civil centre
 		
 		
-		let disTemplates = disabledTemplates(cmpPlayer.GetCiv())
+		let disTemplates = disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv())
 		//warn("disabled template = "+uneval(disTemplates));
 			
 		if (p == 1)

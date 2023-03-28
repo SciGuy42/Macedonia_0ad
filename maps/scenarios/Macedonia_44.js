@@ -1808,7 +1808,7 @@ Trigger.prototype.RangeActionRiverBanditsQuest = function(data)
 		for (let p of [4,6,7])
 		{
 			let cmpPlayer = QueryPlayerIDInterface(p);
-			let disTemplates = disabledTemplates(cmpPlayer.GetCiv());
+			let disTemplates = disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv());
 			cmpPlayer.SetDisabledTemplates(disTemplates);
 		}
 	
@@ -2681,7 +2681,7 @@ Trigger.prototype.FlipSlaveOwnership = function(data)
 	{
 		let cmpPlayer = QueryPlayerIDInterface(p);
 		
-		let disTemplates = disabledTemplates(cmpPlayer.GetCiv());
+		let disTemplates = disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv());
 		
 		if (p == 4 || p == 6 || p == 7)	
 			cmpPlayer.SetDisabledTemplates(disTemplates);

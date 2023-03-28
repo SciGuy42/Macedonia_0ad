@@ -815,9 +815,9 @@ Trigger.prototype.SpawnInfiltrators = function(data)
 		//for players 3,4,5,6 disable templates
 		
 		//disable templates
-		let disTemplates = ["structures/" + cmpPlayer.GetCiv() + "/civil_centre","structures/" + cmpPlayer.GetCiv() + "/dock"];
+		let disTemplates = ["structures/" + QueryPlayerIDInterface(p, IID_Identity).GetCiv() + "/civil_centre","structures/" + QueryPlayerIDInterface(p, IID_Identity).GetCiv() + "/dock"];
 		
-		let hero_templates = TriggerHelper.GetTemplateNamesByClasses("Hero", cmpPlayer.GetCiv(), undefined, undefined, true);
+		let hero_templates = TriggerHelper.GetTemplateNamesByClasses("Hero", QueryPlayerIDInterface(p, IID_Identity).GetCiv(), undefined, undefined, true);
 		disTemplates = disTemplates.concat(hero_templates);
 		
 		cmpPlayer.SetDisabledTemplates(disTemplates);

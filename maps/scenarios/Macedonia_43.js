@@ -2105,7 +2105,7 @@ Trigger.prototype.FlipSlaveOwnership = function(data)
 		let cmpPlayer = QueryPlayerIDInterface(p);
 		
 	
-		let disTemplates = disabledTemplates(cmpPlayer.GetCiv());
+		let disTemplates = disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv());
 		
 		if (p == 1)
 		{
