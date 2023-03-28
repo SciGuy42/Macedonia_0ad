@@ -112,7 +112,8 @@ Trigger.prototype.PersianAttackCav = function(data)
 	//warn("The PersianAttackCav event happened");
 
 	//we must have too much pop, delay
-	if (this.temp_site == -1){
+	if (this.temp_site == -1)
+	{
 		this.DoAfterDelay(this.persAttackInterval,"PersianAttackCav",null);
 		return;
 	}
@@ -122,13 +123,16 @@ Trigger.prototype.PersianAttackCav = function(data)
 	let num_attackers = Math.floor(this.cavRatio*this.prog_seq[this.numberOfTimerTriggerCav])+1;
 	
 	//spawn cavalry -- done later so cavalry catches up with infantry
-	if (this.numberOfTimerTriggerCav == 3){
+	if (this.numberOfTimerTriggerCav == 3)
+	{
 		this.persianCavTypes.push("units/pers/cavalry_archer_b");
 	}
-	else if (this.numberOfTimerTriggerCav == 5){
+	else if (this.numberOfTimerTriggerCav == 5)
+	{
 		this.persianCavTypes.push("units/pers/cavalry_archer_e");
 	}
-	else if (this.numberOfTimerTriggerCav == 7){
+	else if (this.numberOfTimerTriggerCav == 7)
+	{
 		this.persianCavTypes.push("units/pers/champion_cavalry_archer");
 	}
 	
@@ -281,8 +285,10 @@ Trigger.prototype.PersianAttack = function(data)
 	
 	//spawn some distractors
 	let num_distractors = Math.floor(this.prog_seq[this.numberOfTimerTrigger] / 3);
-	for (let i = 0; i < this.persianSpawnSites.length; i ++){
-		if (site != this.persianSpawnSites[i]){
+	for (let i = 0; i < this.persianSpawnSites.length; i++)
+	{
+		if (site != this.persianSpawnSites[i])
+		{
 			temp_name = this.persianInfTypes[Math.floor(Math.random() * Math.floor(this.persianInfTypes.length))];
 			TriggerHelper.SpawnUnits(this.persianSpawnSites[i],temp_name,num_distractors,2);
 		}
@@ -521,9 +527,9 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		if (difficulty == "medium")
 		{
 			//add some tech
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-			cmpTechnologyManager.ResearchTechnology("armor_infantry_01");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_melee_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
 		
 			for (let k = 0; k < this.prog_seq.length; ++k)
 			{
@@ -533,17 +539,15 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		else if (difficulty == "hard")
 		{
 			//add some tech
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_02");
-			cmpTechnologyManager.ResearchTechnology("armor_infantry_01");
-			cmpTechnologyManager.ResearchTechnology("armor_infantry_02");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_melee_01");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_melee_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_02");
 			
-			cmpTechnologyManager.ResearchTechnology("armor_cav_01");
-			cmpTechnologyManager.ResearchTechnology("armor_cav_02");
-			cmpTechnologyManager.ResearchTechnology("attack_cavalry_ranged_01");
-			cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
 
 
 			for (let k = 0; k < this.prog_seq.length; ++k)
@@ -660,7 +664,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle()){
+				if (cmpUnitAI.IsIdle())
+				{
 					//warn("Found idle unit.");
 					
 					let id = Engine.QueryInterface(u, IID_Identity);

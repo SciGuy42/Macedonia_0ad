@@ -121,13 +121,15 @@ Trigger.prototype.SpawnAndStartCavalryAttack = function()
 	{
 		attack_size = 35;
 		this.gaul_cavalry_interval = this.gaul_cavalry_interval * 0.99;
-		if (this.gaul_cavalry_interval < 100 * 1000){
+		if (this.gaul_cavalry_interval < 100 * 1000)
+		{
 			this.gaul_cavalry_interval = 100 * 1000;
 		}
 	}
 	
 	let attackers = [];
-	for (let i = 0; i < attack_size; ++i){
+	for (let i = 0; i < attack_size; ++i)
+	{
 		let attacker_i = TriggerHelper.SpawnUnits(spawn_site,pickRandom(this.gaul_cavalry_types),1,5);
 		attackers = attackers.concat(attacker_i);
 	}
@@ -239,7 +241,8 @@ Trigger.prototype.IntervalActionTraders = function(data)
 		for (let trader of traders_e)
 		{
 			let cmpUnitAI = Engine.QueryInterface(trader, IID_UnitAI);
-			if (cmpUnitAI) {
+			if (cmpUnitAI)
+			{
 				if (cmpUnitAI.IsIdle())
 				{
 					//warn("updating trade orders");
@@ -275,18 +278,18 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 			{
 				this.spawn_attack_bonus = 6;
 				
-				cmpTechnologyManager.ResearchTechnology("armor_cav_01");
-				cmpTechnologyManager.ResearchTechnology("attack_cavalry_ranged_01");
+				cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
+				cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
 			}
 			else if (ai_mult >= 1.5)
 			{
 				this.spawn_attack_bonus = 10;
 				
 				//add some tech
-				cmpTechnologyManager.ResearchTechnology("armor_cav_01");
-				cmpTechnologyManager.ResearchTechnology("armor_cav_02");
-				cmpTechnologyManager.ResearchTechnology("attack_cavalry_ranged_01");
-				cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_01");
+				cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
+				cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
+				cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+				cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
 
 
 			}
@@ -296,21 +299,21 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 			if (ai_mult == 1.25)
 			{
 				this.greek_spawn_attack_bonus = 6;
-				cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-				cmpTechnologyManager.ResearchTechnology("armor_infantry_01");
-				cmpTechnologyManager.ResearchTechnology("armor_cav_01");
+				cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+				cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
+				cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
 			}
 			else if (ai_mult >= 1.5)
 			{
 				this.greek_spawn_attack_bonus = 10;
 				
 				//add some tech
-				cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-				cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_02");
-				cmpTechnologyManager.ResearchTechnology("armor_infantry_01");
-				cmpTechnologyManager.ResearchTechnology("armor_infantry_02");
-				cmpTechnologyManager.ResearchTechnology("armor_cav_01");
-				cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_01");
+				cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+				cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
+				cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
+				cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
+				cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
+				cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
 			}
 		}
 	}
@@ -334,7 +337,8 @@ Trigger.prototype.GreekAttackAction = function(data)
 	warn("attack size = "+attack_size);
 	
 	let attackers = [];
-	for (let i = 0; i < attack_size; ++i){
+	for (let i = 0; i < attack_size; ++i)
+	{
 		if (Math.random() < this.siege_prob)
 		{
 			let attacker_i = TriggerHelper.SpawnUnits(spawn_site,pickRandom(this.greekSiegeTypes),1,7);

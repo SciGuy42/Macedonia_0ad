@@ -803,28 +803,18 @@ Trigger.prototype.StartMaceAttack = function(data)
 	let cmpPlayer = QueryPlayerIDInterface(5);
 	let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
-	/*cmpTechnologyManager.ResearchTechnology("speed_cavalry_01");	
-	cmpTechnologyManager.ResearchTechnology("speed_cavalry_02");
-	cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_01");
-	cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_02");
-	cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_02");
-	cmpTechnologyManager.ResearchTechnology("armor_cav_01");
-	cmpTechnologyManager.ResearchTechnology("armor_cav_02");
-	cmpTechnologyManager.ResearchTechnology("armor_cav_02");
-	cmpTechnologyManager.ResearchTechnology("successors/special_war_horses");	*/
-	
-	
 	//just to make alexander faster
 	cmpTechnologyManager.ResearchTechnology("cavalry_movement_speed");	
 	cmpTechnologyManager.ResearchTechnology("nisean_horses");
 		
-	//armor and attack
+	//resistance and attack
 	cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
 	cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_02");
 	cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
 	cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
 	cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
 	cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
+	cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
 	
 	//make neutral towards towards player 1 so we don't retreat all the time
 	cmpPlayer.SetNeutral(1);
@@ -1028,7 +1018,7 @@ Trigger.prototype.ResearchTechs = function(data)
 		cmpTechnologyManager.ResearchTechnology("heal_range");
 		cmpTechnologyManager.ResearchTechnology("heal_range_2");
 		
-		//armor and attack
+		//resistance and attack
 		cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
 		cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_02");
 		cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");

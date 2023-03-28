@@ -99,7 +99,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			let cmpPlayer = QueryPlayerIDInterface(1);
 			
 			let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
-			//cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
+			//cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
 			//cmpTechnologyManager.ResearchTechnology("phase_city");
 			cmpTechnologyManager.ResearchTechnology("archer_attack_spread");
 			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
@@ -883,10 +883,9 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 			{
 				this.spawn_attack_bonus = 3;
 				
-				cmpTechnologyManager.ResearchTechnology("armor_cav_01");
-				cmpTechnologyManager.ResearchTechnology("attack_cavalry_ranged_01");
-				cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-				cmpTechnologyManager.ResearchTechnology("armor_infantry_01");
+				cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
+				cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+				cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
 				
 			}
 			else if (ai_mult >= 1.5)
@@ -894,14 +893,13 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 				this.spawn_attack_bonus = 8;
 				
 				//add some tech
-				cmpTechnologyManager.ResearchTechnology("armor_cav_01");
-				cmpTechnologyManager.ResearchTechnology("armor_cav_02");
-				cmpTechnologyManager.ResearchTechnology("attack_cavalry_ranged_01");
-				cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_01");
-				cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-				cmpTechnologyManager.ResearchTechnology("armor_infantry_01");
-				cmpTechnologyManager.ResearchTechnology("armor_infantry_02");
-				cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_02");
+				cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
+				cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
+				cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
+				cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+				cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
+				cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
+				cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
 				
 
 			}
@@ -956,7 +954,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	
 	cmpTechnologyManager.ResearchTechnology("phase_town_athen");
 	cmpTechnologyManager.ResearchTechnology("phase_city_athen");
-	//cmpTechnologyManager.ResearchTechnology("tower_armour");
+	//cmpTechnologyManager.ResearchTechnology("tower_health");
 	cmpTechnologyManager.ResearchTechnology("tower_range");
 	cmpTechnologyManager.ResearchTechnology("tower_watch");
 	cmpTechnologyManager.ResearchTechnology("tower_murderholes");

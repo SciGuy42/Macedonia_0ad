@@ -781,32 +781,30 @@ Trigger.prototype.PlayerCommandAction = function(data)
 			let cmpPlayer = QueryPlayerIDInterface(7);
 			let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
-			cmpTechnologyManager.ResearchTechnology("armor_cav_02");
-			cmpTechnologyManager.ResearchTechnology("armor_infantry_02");
-			cmpTechnologyManager.ResearchTechnology("ranged_inf_skirmishers");
-			
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
 			
 			cmpPlayer = QueryPlayerIDInterface(6);
 			cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
-			cmpTechnologyManager.ResearchTechnology("armor_cav_02");
-			cmpTechnologyManager.ResearchTechnology("armor_infantry_02");	
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
 			
 			cmpPlayer = QueryPlayerIDInterface(5);
 			cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
-			cmpTechnologyManager.ResearchTechnology("armor_infantry_02");
-			cmpTechnologyManager.ResearchTechnology("armor_infantry_02");	
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
 			cmpTechnologyManager.ResearchTechnology("attack_soldiers_will");	
 		
 			cmpPlayer = QueryPlayerIDInterface(2);
 			cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
-			cmpTechnologyManager.ResearchTechnology("armor_infantry_02");
-			cmpTechnologyManager.ResearchTechnology("armor_infantry_02");
-			cmpTechnologyManager.ResearchTechnology("armor_infantry_02");
-			cmpTechnologyManager.ResearchTechnology("armor_cav_02");
-			cmpTechnologyManager.ResearchTechnology("armor_cav_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
 			cmpTechnologyManager.ResearchTechnology("attack_soldiers_will");
 			
 			warn("Difficulty = hard");
@@ -1477,28 +1475,22 @@ Trigger.prototype.ResearchTechs = function(data)
 		let cmpPlayer = QueryPlayerIDInterface(p);
 		let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
-		cmpTechnologyManager.ResearchTechnology("armor_cav_02");
-		cmpTechnologyManager.ResearchTechnology("armor_cav_02");
-		cmpTechnologyManager.ResearchTechnology("armor_infantry_02");
-		cmpTechnologyManager.ResearchTechnology("armor_infantry_02");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
 		
 		if (p == 1)
 		{
-			
-			cmpTechnologyManager.ResearchTechnology("romans/vision_sibylline");
-			
-			cmpTechnologyManager.ResearchTechnology("speed_cavalry_01");
-			cmpTechnologyManager.ResearchTechnology("speed_cavalry_02");
-			cmpTechnologyManager.ResearchTechnology("successors/special_war_horses");
-			cmpTechnologyManager.ResearchTechnology("armor_hero_01");
-			cmpTechnologyManager.ResearchTechnology("armor_hero_01");
+			cmpTechnologyManager.ResearchTechnology("cavalry_movement_speed");
+			cmpTechnologyManager.ResearchTechnology("nisean_horses");
 			
 			cmpTechnologyManager.ResearchTechnology("heal_rate_2");
 			cmpTechnologyManager.ResearchTechnology("heal_rate_2");
 			cmpTechnologyManager.ResearchTechnology("heal_range_2");
 			cmpTechnologyManager.ResearchTechnology("heal_range_2");
 			
-			cmpTechnologyManager.ResearchTechnology("armor_cav_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
 		}
 		else if (p == 3 || p == 4)
 		{
@@ -1818,7 +1810,7 @@ Trigger.prototype.DariusFlees = function(data)
 			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_02");
 			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_03");
 			
-			//armor
+			//resistance
 			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
 			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
 			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_03");
@@ -1861,13 +1853,13 @@ Trigger.prototype.DariusFlees = function(data)
 						}, cmpPlayer.entity);
 						
 			//hero bonuses
-			cmpModifiersManager.AddModifiers("Hero Piercing Armor Bonus", {
+			cmpModifiersManager.AddModifiers("Hero Piercing Resistance Bonus", {
 							"Resistance/Entity/Damage/Pierce": [{ "affects": ["Hero"], "add": 6}],
 						}, cmpPlayer.entity);
-			cmpModifiersManager.AddModifiers("Hero Hack Armor Bonus", {
+			cmpModifiersManager.AddModifiers("Hero Hack Resistance Bonus", {
 							"Resistance/Entity/Damage/Hack": [{ "affects": ["Hero"], "add": 6}],
 						}, cmpPlayer.entity);
-				cmpModifiersManager.AddModifiers("Hero Crush Armor Bonus", {
+			cmpModifiersManager.AddModifiers("Hero Crush Resistance Bonus", {
 							"Resistance/Entity/Damage/Crush": [{ "affects": ["Hero"], "add": 10}],
 						}, cmpPlayer.entity);
 		}

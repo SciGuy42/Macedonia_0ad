@@ -432,12 +432,12 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 							let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 							
 							/*cmpTechnologyManager.ResearchTechnology("attack_soldiers_will");
-							cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-							cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_02");
-							cmpTechnologyManager.ResearchTechnology("armor_infantry_01");
-							cmpTechnologyManager.ResearchTechnology("armor_infantry_02");
-							cmpTechnologyManager.ResearchTechnology("attack_infantry_melee_01");
-							cmpTechnologyManager.ResearchTechnology("attack_infantry_melee_02");*/
+							cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+							cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
+							cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
+							cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
+							cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
+							cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_02");*/
 						}
 						
 						//start slave army -- the Olbians free the slaves
@@ -1535,8 +1535,6 @@ Trigger.prototype.ResearchStartingTradeTech = function(data)
 			cmpTechnologyManager.ResearchTechnology("siege_health");
 			cmpTechnologyManager.ResearchTechnology("siege_pack_unpack");
 			
-			//cmpTechnologyManager.ResearchTechnology("romans/vision_sibylline");
-			
 			cmpModifiersManager.AddModifiers("Trade Bonus", {
 				"Trader/GainMultiplier": [{ "affects": ["Trader"], "multiply": 2.0}],
 			}, cmpPlayer.entity);
@@ -1586,22 +1584,8 @@ Trigger.prototype.ResearchStartingTradeTech = function(data)
 			
 			cmpTechnologyManager.ResearchTechnology("attack_soldiers_will");
 
-			//cmpTechnologyManager.ResearchTechnology("armor_cav_02");
-			//cmpTechnologyManager.ResearchTechnology("armor_cav_02");
-			/*cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_01");
-			cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_02");
-			cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_02");
-			cmpTechnologyManager.ResearchTechnology("attack_cavalry_ranged_01");
-			cmpTechnologyManager.ResearchTechnology("attack_cavalry_ranged_02");
-			cmpTechnologyManager.ResearchTechnology("attack_cavalry_ranged_02");*/
-		//	cmpTechnologyManager.ResearchTechnology("speed_cavalry_01");
-		//	cmpTechnologyManager.ResearchTechnology("speed_cavalry_02");
-		//	cmpTechnologyManager.ResearchTechnology("successors/special_war_horses");
-			
-			
-		
-
-			
+			/*
+			cmpTechnologyManager.ResearchTechnology("nisean_horses");*/
 		}
 		else if (p == 5)
 		{

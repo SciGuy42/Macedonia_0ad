@@ -851,12 +851,8 @@ Trigger.prototype.ResearchTechs = function(data)
 		let cmpPlayer = QueryPlayerIDInterface(p);
 		let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
-		//visibility bonus
-		cmpTechnologyManager.ResearchTechnology("romans/vision_sibylline");
-		
 		//just to make cavalry faster
-		cmpTechnologyManager.ResearchTechnology("speed_cavalry_01");	
-		cmpTechnologyManager.ResearchTechnology("speed_cavalry_02");
+		cmpTechnologyManager.ResearchTechnology("cavalry_movement_speed");
 		
 		//healer techs
 		cmpTechnologyManager.ResearchTechnology("heal_rate");
@@ -868,39 +864,27 @@ Trigger.prototype.ResearchTechs = function(data)
 		cmpTechnologyManager.ResearchTechnology("heal_range");
 		cmpTechnologyManager.ResearchTechnology("heal_range");
 		
-		//armor
-		cmpTechnologyManager.ResearchTechnology("armor_cav_01");
-		cmpTechnologyManager.ResearchTechnology("armor_cav_02");
-		cmpTechnologyManager.ResearchTechnology("armor_cav_02");
-		cmpTechnologyManager.ResearchTechnology("armor_cav_02");
+		//resistance
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
 
-		cmpTechnologyManager.ResearchTechnology("armor_infantry_01");	
-		cmpTechnologyManager.ResearchTechnology("armor_infantry_02");	
-		cmpTechnologyManager.ResearchTechnology("armor_infantry_02");	
-		cmpTechnologyManager.ResearchTechnology("armor_infantry_02");	
-		
-			
-		cmpTechnologyManager.ResearchTechnology("armor_hero_01");
-		cmpTechnologyManager.ResearchTechnology("armor_hero_01");
-		cmpTechnologyManager.ResearchTechnology("armor_hero_01");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
 		
 		//attack
-		cmpTechnologyManager.ResearchTechnology("attack_cavalry_ranged_01");
-		cmpTechnologyManager.ResearchTechnology("attack_cavalry_ranged_02");
-		cmpTechnologyManager.ResearchTechnology("attack_cavalry_ranged_02");
-		cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_01");
-		cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_02");
-		cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_02");
+		cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+		cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
+			
+		cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
+		cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_02");
+		cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+		cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
 		
-		cmpTechnologyManager.ResearchTechnology("attack_infantry_melee_01");
-		cmpTechnologyManager.ResearchTechnology("attack_infantry_melee_02");
-		cmpTechnologyManager.ResearchTechnology("attack_infantry_melee_02");
-		cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-		cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_02");
-		cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_02");
-		cmpTechnologyManager.ResearchTechnology("ranged_inf_skirmishers");
-		
-		cmpTechnologyManager.ResearchTechnology("successors/special_war_horses");
+		cmpTechnologyManager.ResearchTechnology("nisean_horses");
 			
 		//shared drop sites with player 4
 		cmpTechnologyManager.ResearchTechnology("unlock_shared_dropsites");	
@@ -923,9 +907,9 @@ Trigger.prototype.ResearchTechs = function(data)
 		let cmpPlayer = QueryPlayerIDInterface(p);
 		let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
-		cmpTechnologyManager.ResearchTechnology("armor_infantry_01");
-		cmpTechnologyManager.ResearchTechnology("attack_infantry_melee_01");
-		cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
+		cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
+		cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
 		
 		
 	}*/
@@ -1344,34 +1328,31 @@ Trigger.prototype.IntervalSpawnGroundAttack = function(data)
 		
 	if (this.groundAttackCounter == 0)
 	{
-		cmpTechnologyManager.ResearchTechnology("armor_infantry_01");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
 	}	
 	else if (this.groundAttackCounter == 1)
 	{
-		cmpTechnologyManager.ResearchTechnology("armor_cav_01");
-		cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
+		cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
 	}
 	else if (this.groundAttackCounter == 2)
 	{
-		cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_01");
-		cmpTechnologyManager.ResearchTechnology("attack_infantry_melee_01");
-		cmpTechnologyManager.ResearchTechnology("attack_cavalry_ranged_01");
+		cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
+		cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
 	}
 	else if (this.groundAttackCounter == 3)
 	{
-		cmpTechnologyManager.ResearchTechnology("armor_infantry_02");
-		cmpTechnologyManager.ResearchTechnology("armor_cav_02");
-		cmpTechnologyManager.ResearchTechnology("ranged_inf_skirmishers");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
 	}
 	else if (this.groundAttackCounter == 4)
 	{
-		cmpTechnologyManager.ResearchTechnology("armor_cav_02");
-		cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_02");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
+		cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
 	}
 	else if (this.groundAttackCounter == 5)
 	{
-		cmpTechnologyManager.ResearchTechnology("attack_champions_elite");
-		cmpTechnologyManager.ResearchTechnology("attack_infantry_melee_02");
+		cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_02");
 	}
 	else if (this.groundAttackCounter == 6)
 	{

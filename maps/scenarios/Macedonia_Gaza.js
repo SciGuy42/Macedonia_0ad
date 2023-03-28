@@ -306,14 +306,14 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			let cmpPlayer = QueryPlayerIDInterface(1);
 			let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 			
-			cmpTechnologyManager.ResearchTechnology("tower_armour");
+			cmpTechnologyManager.ResearchTechnology("tower_health");
 			cmpTechnologyManager.ResearchTechnology("tower_range");
 			cmpTechnologyManager.ResearchTechnology("tower_watch");
 			cmpTechnologyManager.ResearchTechnology("tower_murderholes");
 			cmpTechnologyManager.ResearchTechnology("tower_crenellations");
-			cmpTechnologyManager.ResearchTechnology("armor_infantry_01");
-			cmpTechnologyManager.ResearchTechnology("armor_cav_01");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
 				
 		}
 	}*/
@@ -1092,7 +1092,7 @@ Trigger.prototype.CheckForCC = function(data)
 		
 		if (p == 2) //boost forts
 		{
-			cmpTechnologyManager.ResearchTechnology("tower_armour");
+			cmpTechnologyManager.ResearchTechnology("tower_health");
 			cmpTechnologyManager.ResearchTechnology("tower_range");
 			cmpTechnologyManager.ResearchTechnology("tower_watch");
 			cmpTechnologyManager.ResearchTechnology("tower_murderholes");
@@ -1104,14 +1104,12 @@ Trigger.prototype.CheckForCC = function(data)
 			cmpPlayer.SetPopulationBonuses(400);
 			
 			cmpTechnologyManager.ResearchTechnology("unlock_shared_los");
-			cmpTechnologyManager.ResearchTechnology("siege_armor");
+			cmpTechnologyManager.ResearchTechnology("siege_health");
 			cmpTechnologyManager.ResearchTechnology("siege_attack");
 			cmpTechnologyManager.ResearchTechnology("siege_bolt_accuracy");
-			cmpTechnologyManager.ResearchTechnology("siege_packing");
 			cmpTechnologyManager.ResearchTechnology("unlock_champion_units");
 			cmpTechnologyManager.ResearchTechnology("unlock_spies");
-			cmpTechnologyManager.ResearchTechnology("speed_cavalry_01");
-			cmpTechnologyManager.ResearchTechnology("speed_cavalry_02");
+			cmpTechnologyManager.ResearchTechnology("cavalry_movement_speed");
 			
 			//add some siege techs
 			

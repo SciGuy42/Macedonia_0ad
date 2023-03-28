@@ -855,7 +855,7 @@ Trigger.prototype.ResearchTechs = function(data)
 		cmpTechnologyManager.ResearchTechnology("heal_range");
 		cmpTechnologyManager.ResearchTechnology("heal_range_2");
 		
-		//armor and attack
+		//resistance and attack
 		cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
 		cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_02");
 		cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
@@ -882,7 +882,7 @@ Trigger.prototype.ResearchTechs = function(data)
 		cmpTechnologyManager.ResearchTechnology("heal_range");
 		cmpTechnologyManager.ResearchTechnology("heal_range_2");
 		
-		//armor and attack
+		//resistance and attack
 		cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
 		cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_02");
 		cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");

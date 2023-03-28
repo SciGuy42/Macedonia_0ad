@@ -993,16 +993,16 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		if (ai_mult == 1.25)
 		{
 			//add some tech
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_melee_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
 		}
 		else if (ai_mult >= 1.5)
 		{
 			//add some tech
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_02");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_melee_01");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_melee_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_02");
 		}
 	}
 }
@@ -1075,7 +1075,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		//add tower techs to city watch
 		if (p == 5)
 		{
-			//cmpTechnologyManager.ResearchTechnology("tower_armour");
+			//cmpTechnologyManager.ResearchTechnology("tower_health");
 			cmpTechnologyManager.ResearchTechnology("tower_range");
 			cmpTechnologyManager.ResearchTechnology("tower_watch");
 			cmpTechnologyManager.ResearchTechnology("tower_murderholes");

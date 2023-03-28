@@ -54,7 +54,7 @@ var disabledTemplates = (civ) => [
 ];
 
 var textQuestStart = "You have arrived at a small hamlet. The locals are stunned to see you in real life and bow to you as if you're a living God. \n\nAlas, not all is well in the hamlet! A band of brigands have kidnapped several villagers and have also raided the hamlet's food supply. The hamlet's elders humbly ask for your help -- the camp of the brigands shouldn't be far to the east from here. \n\nIn addition, the hamelet is starving. Should you be able to acquire some goats or other game, bring them to the hamlet.";
-var textQuestGoatComplete = "The villagers thank you sincerely for helping them replenish their food supply. One of the villagers is a skilled blacksmith and immediately gets to work on your soldiers' armor to improve it. The village elder shares some knowledge of surrounding areas -- go ahead and take a look.";
+var textQuestGoatComplete = "The villagers thank you sincerely for helping them replenish their food supply. One of the villagers is a skilled blacksmith and immediately gets to work on your soldiers' resistance to improve it. The village elder shares some knowledge of surrounding areas -- go ahead and take a look.";
 var textQuestRescueComplete = "Way to go! The brigands are now defeated. Several local warriors are so inspired that they decide to join you on your quest. They reveal some information about the local area that may be useful in your travels.";
 var textQuestCaravanGiven = "You stumble upon a small village -- in dire need of help. The villagers ask for help securing good and supplies. They used to have a trading routing with a trading post far to the west -- perhaps you can find it and help the village secure some caravans. The trading post lies past a narrow mountain pass that is being occupied by bandits -- perhaps the villagers you encountered earlier already shared the location of that pass.";
 var textQuestArchersGiven = "The villagers bow to you at the site of the supplies you have brought them. They now ask for help one more time. A local tribe, famous for its archers, continues to raid the village. Destroy them and in exchange, the village elder promises to give you a special gift -- a pair of elephants equipped with the best riders of the land.";
@@ -1079,7 +1079,7 @@ Trigger.prototype.QuestFieldBattleReward = function(data)
 	let cmpPlayer = QueryPlayerIDInterface(1);
 	let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 	
-	//improve cav armor and ranged weapons
+	//improve cav resistance and ranged weapons
 	cmpTechnologyManager.ResearchTechnology("archery_tradition");
 	
 	//inspire troops
@@ -1138,7 +1138,7 @@ Trigger.prototype.QuestGoatReward = function(data)
 	var cmpOwnership = Engine.QueryInterface(outpost_id, IID_Ownership);
 	cmpOwnership.SetOwner(1);
 
-	//some armor
+	//some resistance
 	let cmpPlayer = QueryPlayerIDInterface(1);
 	let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 	
@@ -1193,11 +1193,9 @@ Trigger.prototype.QuestTempleReward = function(data)
 	cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
 	cmpTechnologyManager.ResearchTechnology("cavalry_health");
 	
-	/*cmpTechnologyManager.ResearchTechnology("attack_champions_elite");
-	cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_01");
-	cmpTechnologyManager.ResearchTechnology("armor_cav_01");
-	cmpTechnologyManager.ResearchTechnology("ranged_inf_skirmishers");
-	cmpTechnologyManager.ResearchTechnology("armor_infantry_02");*/
+	cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
+	cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
+	cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
 	
 	
 	//spawn some healers
@@ -1400,16 +1398,16 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		if (ai_mult == 1.25)
 		{
 			//add some tech
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_melee_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
 		}
 		else if (ai_mult >= 1.5)
 		{
 			//add some tech
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_02");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_melee_01");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_melee_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_02");
 		}
 	}
 }

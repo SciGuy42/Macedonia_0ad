@@ -680,32 +680,31 @@ Trigger.prototype.PlayerCommandAction = function(data)
 			let cmpPlayer = QueryPlayerIDInterface(7);
 			let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
-			cmpTechnologyManager.ResearchTechnology("armor_cav_02");
-			cmpTechnologyManager.ResearchTechnology("armor_infantry_02");
-			cmpTechnologyManager.ResearchTechnology("ranged_inf_skirmishers");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
 			
 			
 			cmpPlayer = QueryPlayerIDInterface(6);
 			cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
-			cmpTechnologyManager.ResearchTechnology("armor_cav_02");
-			cmpTechnologyManager.ResearchTechnology("armor_infantry_02");	
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
 			
 			cmpPlayer = QueryPlayerIDInterface(5);
 			cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
-			cmpTechnologyManager.ResearchTechnology("armor_infantry_02");
-			cmpTechnologyManager.ResearchTechnology("armor_infantry_02");	
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
 			cmpTechnologyManager.ResearchTechnology("attack_soldiers_will");	
 		
 			cmpPlayer = QueryPlayerIDInterface(2);
 			cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
-			cmpTechnologyManager.ResearchTechnology("armor_infantry_02");
-			cmpTechnologyManager.ResearchTechnology("armor_infantry_02");
-			cmpTechnologyManager.ResearchTechnology("armor_infantry_02");
-			cmpTechnologyManager.ResearchTechnology("armor_cav_02");
-			cmpTechnologyManager.ResearchTechnology("armor_cav_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
 			cmpTechnologyManager.ResearchTechnology("attack_soldiers_will");
 			
 			warn("Difficulty = hard");
@@ -1132,7 +1131,7 @@ Trigger.prototype.ResearchTechs = function(data)
 		let cmpPlayer = QueryPlayerIDInterface(p);
 		let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
-		//everyone gets some extra armor the make battle last longer
+		//everyone gets some extra resistance the make battle last longer
 		cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
 		cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
 		cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
@@ -1405,11 +1404,11 @@ Trigger.prototype.AlexanderHealthCheck = function(data)
 		
 		if (p == 1 || p == 3)
 		{
-			cmpModifiersManager.AddModifiers("Hero Armor Pierce Bonus", {
+			cmpModifiersManager.AddModifiers("Hero Resistance Pierce Bonus", {
 				"Resistance/Entity/Damage/Pierce": [{ "affects": ["Hero"], "multiply": 2.0}],
 			}, cmpPlayer.entity);
 			
-			cmpModifiersManager.AddModifiers("Hero Armor Hack Bonus", {
+			cmpModifiersManager.AddModifiers("Hero Resistance Hack Bonus", {
 				"Resistance/Entity/Damage/Hack": [{ "affects": ["Hero"], "multiply": 2.0}],
 			}, cmpPlayer.entity);
 			

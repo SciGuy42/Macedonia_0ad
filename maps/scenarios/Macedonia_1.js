@@ -315,8 +315,8 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		tower_garrison_count = 2;
 		
 		//add some tech
-		cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-		cmpTechnologyManager.ResearchTechnology("armor_infantry_01");
+		cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
 	}
 	else if (ai_mult >= 1.5)
 	{
@@ -324,10 +324,10 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		walltower_garrison_count = 1
 		
 		//add some tech
-		cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-		cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_02");
-		cmpTechnologyManager.ResearchTechnology("armor_infantry_01");
-		cmpTechnologyManager.ResearchTechnology("armor_infantry_02");
+		cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+		cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
 	}
 	
 	//player 3
@@ -342,8 +342,8 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		this.spawnCavCount += 1;
 		
 		//add some tech
-		cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-		cmpTechnologyManager.ResearchTechnology("armor_infantry_01");
+		cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
 	}
 	else if (ai_mult >= 1.5)
 	{
@@ -351,10 +351,10 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		this.spawnCavCount += 4;
 		
 		//add some tech
-		cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-		cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_02");
-		cmpTechnologyManager.ResearchTechnology("armor_infantry_01");
-		cmpTechnologyManager.ResearchTechnology("armor_infantry_02");
+		cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+		cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
+		cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
 	}*/
 	
 	//garrison towers
@@ -471,4 +471,3 @@ Trigger.prototype.RangeAction = function(data)
 		"enabled": true,
 	});*/
 };
-

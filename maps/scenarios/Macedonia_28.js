@@ -1101,12 +1101,7 @@ Trigger.prototype.ResearchTechs = function(data)
 		let cmpPlayer = QueryPlayerIDInterface(p);
 		let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
-		if (p == 1)
-		{
-			cmpTechnologyManager.ResearchTechnology("romans/vision_sibylline");
-			cmpTechnologyManager.ResearchTechnology("ranged_inf_skirmishers");
-		}
-		else if (p == 2)
+		if (p == 2)
 		{
 			//give some trade gains
 			cmpTechnologyManager.ResearchTechnology("trade_gain_01");
@@ -1116,10 +1111,10 @@ Trigger.prototype.ResearchTechs = function(data)
 		else if (p == 4 || p ==5 || p == 6)
 		{
 			//infantry archer and cav tech
-			cmpTechnologyManager.ResearchTechnology("armor_infantry_01");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-			cmpTechnologyManager.ResearchTechnology("armor_cav_01");
-			cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
 
 			
 		}
@@ -1282,7 +1277,7 @@ Trigger.prototype.VictoryCheck = function(data)
 			}, cmpPlayer.entity);
 		}
 		
-		//give some armors to some of the enemies
+		//give some resistance to some of the enemies
 		if (p == 4 || p ==5 || p == 6)
 		{
 			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");

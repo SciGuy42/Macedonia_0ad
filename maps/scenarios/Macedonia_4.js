@@ -95,7 +95,8 @@ Trigger.prototype.IntervalAction = function(data)
 				let cmpUnitAI = Engine.QueryInterface(enemy_units[i], IID_UnitAI);
 				
 				//check if the unit is idle and if it can attack
-				if (cmpUnitAI){
+				if (cmpUnitAI)
+				{
 					let pos_i = Engine.QueryInterface(enemy_units[i], IID_Position).GetPosition2D();
 					
 					if (cmpUnitAI.IsIdle() && Engine.QueryInterface(enemy_units[i], IID_Attack))
@@ -142,16 +143,16 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		if (difficulty == "medium")
 		{
 			//add some tech
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-			cmpTechnologyManager.ResearchTechnology("armor_infantry_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
 		}
 		else if (difficulty == "hard")
 		{
 			//add some tech
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_02");
-			cmpTechnologyManager.ResearchTechnology("armor_infantry_01");
-			cmpTechnologyManager.ResearchTechnology("armor_infantry_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
 		}
 	}
 }
@@ -191,4 +192,3 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 
 	
 };
-

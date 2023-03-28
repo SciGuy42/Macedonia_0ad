@@ -1459,7 +1459,7 @@ Trigger.prototype.ResearchTechs = function(data)
 			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_02");
 			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_03");
 			
-			//armor
+			//resistance
 			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
 			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
 			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_03");
@@ -1473,40 +1473,17 @@ Trigger.prototype.ResearchTechs = function(data)
 			cmpTechnologyManager.ResearchTechnology("archer_attack_spread");
 			cmpTechnologyManager.ResearchTechnology("nisean_horses");
 			
-			
-			/*cmpTechnologyManager.ResearchTechnology("romans/vision_sibylline");
-			
-			//improve skirmisher hero
-			cmpTechnologyManager.ResearchTechnology("ranged_inf_skirmishers");
-			cmpTechnologyManager.ResearchTechnology("ranged_inf_skirmishers");
-			cmpTechnologyManager.ResearchTechnology("ranged_inf_skirmishers");
-	
-			//hero armor
-			cmpTechnologyManager.ResearchTechnology("armor_hero_01");
-			cmpTechnologyManager.ResearchTechnology("armor_hero_01");
-			cmpTechnologyManager.ResearchTechnology("armor_hero_01");
-			cmpTechnologyManager.ResearchTechnology("armor_hero_01");
-			cmpTechnologyManager.ResearchTechnology("armor_hero_01");
-			
 			//melee attack
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_melee_01");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_melee_01");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_melee_01");
-			
-			cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_01");
-			cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_01");
-			cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_01");
-			cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_01");
-			cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_01");
+			/*cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
 			
 			//archer attack
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
 
 			*/
 		}
@@ -1757,7 +1734,7 @@ Trigger.prototype.SpawnCityKidnappers = function(data)
 	 
 	//brit cata: speed and vision for soldiers, range for javelins
 	//iber cata: health for soldiers
-	//rome cata: +1 armor
+	//rome cata: +1 resistance
 	
 	
 	let cmpTrigger = Engine.QueryInterface(SYSTEM_ENTITY, IID_Trigger);
@@ -1887,13 +1864,13 @@ Trigger.prototype.SpawnCityKidnappers = function(data)
 			
 			//some modifiers
 			//hero bonuses
-			cmpModifiersManager.AddModifiers("Hero Piercing Armor Bonus", {
+			cmpModifiersManager.AddModifiers("Hero Piercing Resistance Bonus", {
 							"Resistance/Entity/Damage/Pierce": [{ "affects": ["Hero"], "add": 6}],
 						}, cmpPlayer.entity);
-			cmpModifiersManager.AddModifiers("Hero Hack Armor Bonus", {
+			cmpModifiersManager.AddModifiers("Hero Hack Resistance Bonus", {
 							"Resistance/Entity/Damage/Hack": [{ "affects": ["Hero"], "add": 6}],
 						}, cmpPlayer.entity);
-			cmpModifiersManager.AddModifiers("Hero Crush Armor Bonus", {
+			cmpModifiersManager.AddModifiers("Hero Crush Resistance Bonus", {
 							"Resistance/Entity/Damage/Crush": [{ "affects": ["Hero"], "add": 10}],
 						}, cmpPlayer.entity);
 						

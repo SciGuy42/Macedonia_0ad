@@ -303,7 +303,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	{
 		//warn("captured catafalque");
 		
-		//captured catafalque - alexander gets better armor
+		//captured catafalque - alexander gets better resistance
 		let cmpPlayer = QueryPlayerIDInterface(1);
 		let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
@@ -1257,15 +1257,10 @@ Trigger.prototype.RewardTraders = function(data)
 	//get some tech
 	let cmpPlayer = QueryPlayerIDInterface(1);
 	let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
-	cmpTechnologyManager.ResearchTechnology("armor_infantry_02");
-	cmpTechnologyManager.ResearchTechnology("armor_infantry_02");
-	cmpTechnologyManager.ResearchTechnology("armor_cav_02");
-	cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_02");
-	cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_02");
-	cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_02");
-	cmpTechnologyManager.ResearchTechnology("attack_cavalry_melee_02");
-	cmpTechnologyManager.ResearchTechnology("attack_infantry_melee_02");
-	cmpTechnologyManager.ResearchTechnology("attack_infantry_melee_02");
+	cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
+	cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
+	cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
+	cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_02");
 }
 
 Trigger.prototype.RangeActionTradersDestination = function(data)
@@ -1443,13 +1438,7 @@ Trigger.prototype.RewardTemple = function(data)
 	let cmpPlayer = QueryPlayerIDInterface(p);
 	let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 	
-	/*cmpTechnologyManager.ResearchTechnology("heal_barracks");
-	cmpTechnologyManager.ResearchTechnology("heal_barracks");
-	cmpTechnologyManager.ResearchTechnology("heal_barracks");
-	cmpTechnologyManager.ResearchTechnology("heal_barracks");
-	cmpTechnologyManager.ResearchTechnology("heal_barracks");*/
-	
-	cmpTechnologyManager.ResearchTechnology("health_regen_units");
+	cmpTechnologyManager.ResearchTechnology("garrison_heal");
 	cmpTechnologyManager.ResearchTechnology("health_regen_units");
 	
 	this.heal_rate_g = this.heal_rate_g * 2;	
@@ -1607,7 +1596,7 @@ Trigger.prototype.ResearchStartingTech = function(data)
 		
 		if (p == 1)
 		{
-			//armor
+			//resistance
 			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
 			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
 			
@@ -1625,13 +1614,13 @@ Trigger.prototype.ResearchStartingTech = function(data)
 			cmpTechnologyManager.ResearchTechnology("unlock_shared_dropsites");
 			
 			//hero
-			cmpModifiersManager.AddModifiers("Hero Piercing Armor Bonus", {
+			cmpModifiersManager.AddModifiers("Hero Piercing Resistance Bonus", {
 							"Resistance/Entity/Damage/Pierce": [{ "affects": ["Hero"], "add": 4}],
 						}, cmpPlayer.entity);
-			cmpModifiersManager.AddModifiers("Hero Hack Armor Bonus", {
+			cmpModifiersManager.AddModifiers("Hero Hack Resistance Bonus", {
 							"Resistance/Entity/Damage/Hack": [{ "affects": ["Hero"], "add": 4}],
 						}, cmpPlayer.entity);
-				cmpModifiersManager.AddModifiers("Hero Crush Armor Bonus", {
+			cmpModifiersManager.AddModifiers("Hero Crush Resistance Bonus", {
 							"Resistance/Entity/Damage/Crush": [{ "affects": ["Hero"], "add": 10}],
 						}, cmpPlayer.entity);
 			
@@ -1739,7 +1728,7 @@ Trigger.prototype.InitGaiaClusters = function(data)
 	//cart catagalque -- + 1 armoer and attack for melee cavalry
 	//iber catafalque -- extra health for soldiers
 	//mace -- extra loot + slow trickle of metal
-	//rome -- + 1 armor for all units
+	//rome -- + 1 resistance for all units
 	
 	/*
 	 * Notes from run 1:

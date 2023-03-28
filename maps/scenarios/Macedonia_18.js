@@ -1134,12 +1134,10 @@ Trigger.prototype.StructureDecayCheck = function(data)
 			cmpTechnologyManager.ResearchTechnology("siege_health");
 			cmpTechnologyManager.ResearchTechnology("siege_attack");
 			cmpTechnologyManager.ResearchTechnology("siege_bolt_accuracy");
-			//cmpTechnologyManager.ResearchTechnology("siege_packing");
 			cmpTechnologyManager.ResearchTechnology("unlock_champion_infantry");
 			cmpTechnologyManager.ResearchTechnology("unlock_champion_cavalry");
 			cmpTechnologyManager.ResearchTechnology("unlock_spies");
-			//cmpTechnologyManager.ResearchTechnology("speed_cavalry_01");
-			//cmpTechnologyManager.ResearchTechnology("speed_cavalry_02");
+			cmpTechnologyManager.ResearchTechnology("cavalry_movement_speed");
 			
 			//add some siege techs
 			

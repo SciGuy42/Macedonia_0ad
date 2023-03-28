@@ -109,7 +109,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				let cmpPlayer = QueryPlayerIDInterface(1);
 				let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 				cmpTechnologyManager.ResearchTechnology("carthaginians/special_exploration");
-				cmpTechnologyManager.ResearchTechnology("romans/vision_sibylline");
 				cmpTechnologyManager.ResearchTechnology("health_regen_units");
 				warn("captured temple");
 				
@@ -127,13 +126,12 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				let cmpPlayer = QueryPlayerIDInterface(1);
 				let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 				
-				cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-				cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_02");
+				cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+				cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
 				cmpTechnologyManager.ResearchTechnology("attack_soldiers_will");
-				cmpTechnologyManager.ResearchTechnology("armor_ship_reinforcedhull");
-				cmpTechnologyManager.ResearchTechnology("armor_ship_hypozomata");
-				//cmpTechnologyManager.ResearchTechnology("romans/vision_sibylline");
-				//cmpTechnologyManager.ResearchTechnology("health_regen_units");
+				cmpTechnologyManager.ResearchTechnology("ship_health");
+				cmpTechnologyManager.ResearchTechnology("ship_movement_speed");
+				cmpTechnologyManager.ResearchTechnology("health_regen_units");
 				warn("captured smith");
 				this.captured_smith = true;
 				
@@ -153,9 +151,8 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				let cmpPlayer = QueryPlayerIDInterface(1);
 				let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 				
-				cmpTechnologyManager.ResearchTechnology("siege_armor");
+				cmpTechnologyManager.ResearchTechnology("siege_health");
 				cmpTechnologyManager.ResearchTechnology("siege_attack");
-				cmpTechnologyManager.ResearchTechnology("siege_packing");
 				
 				warn("captured siege");
 				
@@ -166,7 +163,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				this.escortShipGarrison += 2;
 			}
 		}
-		//cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_02");
+		//cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
 			
 		
 	}

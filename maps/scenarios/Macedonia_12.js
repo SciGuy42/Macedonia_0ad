@@ -251,6 +251,7 @@ Trigger.prototype.IntervalActionPlayerFour = function(data)
 	
 	for (let u of units_pl4)
 	{
+		warn(uneval(["u, 2, unitTargetClass", u, 2, unitTargetClass]));
 		let target_u = this.FindClosestTarget(u,2,unitTargetClass);
 		
 		ProcessCommand(4, {
@@ -410,14 +411,11 @@ Trigger.prototype.IntervalActionTraders = function(data)
 		for (let trader of traders_e)
 		{
 			let cmpUnitAI = Engine.QueryInterface(trader, IID_UnitAI);
-			if (cmpUnitAI)
-			{
-				if (cmpUnitAI.IsIdle())
+			if (markets_others?.length && cmpUnitAI.IsIdle())
 				{
 					//warn("updating trade orders");
 					cmpUnitAI.UpdateWorkOrders("Trade");
 					cmpUnitAI.SetupTradeRoute(pickRandom(markets_others),markets_e[0],null,true);
-				}
 			}
 			
 		}
@@ -941,16 +939,16 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		if (ai_mult == 1.25)
 		{
 			//add some tech
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_melee_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
 		}
 		else if (ai_mult >= 1.5)
 		{
 			//add some tech
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_02");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_melee_01");
-			cmpTechnologyManager.ResearchTechnology("attack_infantry_melee_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
+			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_02");
 		}
 	}
 }
@@ -1008,7 +1006,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
 		cmpTechnologyManager.ResearchTechnology("unlock_shared_los");
-		cmpTechnologyManager.ResearchTechnology("hellenes/special_iphicratean_reforms");
+		cmpTechnologyManager.ResearchTechnology("iphicratean_reforms");
 	}
 	
 	//tech for enemies
@@ -1029,7 +1027,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		cmpTechnologyManager.ResearchTechnology("tower_watch");
 		cmpTechnologyManager.ResearchTechnology("tower_crenellations");
 		cmpTechnologyManager.ResearchTechnology("tower_murderholes");
-		cmpTechnologyManager.ResearchTechnology("tower_armour");
+		cmpTechnologyManager.ResearchTechnology("tower_health");
 		cmpTechnologyManager.ResearchTechnology("trade_gain_01");
 		for (let k = 0; k < 5; k ++)
 		{

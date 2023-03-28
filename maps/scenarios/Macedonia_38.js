@@ -932,7 +932,7 @@ Trigger.prototype.ResearchTechs = function(data)
 		cmpTechnologyManager.ResearchTechnology("heal_rate");
 		cmpTechnologyManager.ResearchTechnology("heal_range");
 				
-		//armor and attack
+		//resistance and attack
 		cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
 		cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
 		

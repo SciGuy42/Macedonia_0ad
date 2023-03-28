@@ -255,13 +255,9 @@ Trigger.prototype.SpawnStructureResponseAttack = function(data)
 		
 		if (p == 1)
 		{
-			cmpTechnologyManager.ResearchTechnology("romans/vision_sibylline");
 			
-			cmpTechnologyManager.ResearchTechnology("speed_cavalry_01");
-			cmpTechnologyManager.ResearchTechnology("speed_cavalry_02");
-			cmpTechnologyManager.ResearchTechnology("successors/special_war_horses");
-			cmpTechnologyManager.ResearchTechnology("armor_hero_01");
-			cmpTechnologyManager.ResearchTechnology("armor_hero_01");
+			cmpTechnologyManager.ResearchTechnology("cavalry_movement_speed");
+			cmpTechnologyManager.ResearchTechnology("nisean_horses");
 			
 			cmpTechnologyManager.ResearchTechnology("heal_rate_2");
 			cmpTechnologyManager.ResearchTechnology("heal_rate_2");
@@ -1344,7 +1340,7 @@ Trigger.prototype.SetDiplomacy = function(data)
 			cmpTechnologyManager.ResearchTechnology("trade_gain_02");
 			cmpTechnologyManager.ResearchTechnology("unlock_shared_los");
 			
-			//add some armor
+			//add some resistance
 			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
 			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
 			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");

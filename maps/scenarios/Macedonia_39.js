@@ -950,7 +950,7 @@ Trigger.prototype.LevelAdvance = function(data)
 	let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 	if (this.currentLevel == 1)
 	{
-		//add armor and attack
+		//add resistance and attack
 		cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
 		cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
 		
@@ -965,7 +965,7 @@ Trigger.prototype.LevelAdvance = function(data)
 	}
 	else if (this.currentLevel == 2)
 	{
-		//add armor and attack
+		//add resistance and attack
 		cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_03");
 		cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_03");
 		
