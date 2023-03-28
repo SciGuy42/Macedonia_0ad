@@ -74,9 +74,9 @@ Trigger.prototype.ClusterUnits = function(units, num_clusters)
 
 	// how many clusters
 	const kmeans = new KMeans({
-	  "canvas": null,
-	  "data": dataset,
-	  "k": num_clusters
+		"canvas": null,
+		"data": dataset,
+		"k": num_clusters
 	});
 
 	const num_iterations = 40;
@@ -134,7 +134,7 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	{
 
 
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -943,7 +943,7 @@ Trigger.prototype.SpawnFortressAttack = function(data)
 
 	const cmpPlayer = QueryPlayerIDInterface(1);
 	const pop = cmpPlayer.GetPopulationCount();
-	size += Math.round(pop*0.65); // pretty big attack
+	size += Math.round(pop * 0.65); // pretty big attack
 
 	// templatets
 	const templates = ["units/pers/arstibara", "units/pers/champion_infantry", "units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher", "units/pers/infantry_archer_b", "units/pers/infantry_spearman_e", "units/pers/infantry_spearman_a", "units/pers/infantry_archer_a", "units/pers/infantry_spearman_b"];
@@ -969,7 +969,7 @@ Trigger.prototype.SpawnFortressAttack = function(data)
 		data.templates = templates;
 		data.site = pickRandom(sites);
 
-		this.DoAfterDelay(4*(i+1) * 1000, "SpawnFortressAttackSquad", data);
+		this.DoAfterDelay(4 * (i + 1) * 1000, "SpawnFortressAttackSquad", data);
 
 	}
 };
@@ -1015,7 +1015,7 @@ Trigger.prototype.SpawnPassAttack = function(data)
 
 	const cmpPlayer1 = QueryPlayerIDInterface(1);
 	const pop = cmpPlayer1.GetPopulationCount();
-	size += Math.round(pop*0.8); // pretty big attack
+	size += Math.round(pop * 0.8); // pretty big attack
 
 	// templatets
 	const templates = ["units/pers/arstibara", "units/pers/arstibara", "units/pers/champion_infantry", "units/pers/champion_infantry", "units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher", "units/pers/infantry_archer_e", "units/pers/infantry_spearman_e", "units/pers/infantry_spearman_e", "units/pers/infantry_archer_e", "units/pers/infantry_archer_a", "units/pers/infantry_archer_b", "units/pers/infantry_spearman_e", "units/pers/champion_cavalry", "units/pers/champion_cavalry_archer", "units/pers/cavalry_axeman_e", "units/pers/cavalry_spearman_e"];
@@ -1038,21 +1038,21 @@ Trigger.prototype.SpawnPassAttack = function(data)
 	for (let i = 0; i < num_squads; i++)
 	{
 		const data = {};
-		data.squad_size = squad_size+Math.round(i*1.55);
+		data.squad_size = squad_size + Math.round(i * 1.55);
 		data.templates = templates;
 		data.site = pickRandom(sites);
 
-		this.DoAfterDelay(12*(i+1) * 1000, "SpawnPassAttackSquad", data);
+		this.DoAfterDelay(12 * (i + 1) * 1000, "SpawnPassAttackSquad", data);
 
 		// spawn rear attacks at the end
-		if (num_squads - i < 4 || (i+1) % 4 == 0)
+		if (num_squads - i < 4 || (i + 1) % 4 == 0)
 		{
 			const data_rear = {};
 			data_rear.site = this.GetTriggerPoints("E")[1];
 			data_rear.templates = cav_templates;
 			data_rear.squad_size = 10;
 
-			this.DoAfterDelay(12*(i+1) * 1000, "SpawnRearPassAttackSquad", data_rear);
+			this.DoAfterDelay(12 * (i + 1) * 1000, "SpawnRearPassAttackSquad", data_rear);
 		}
 
 		// last batch, somewhat stronger
@@ -1063,10 +1063,10 @@ Trigger.prototype.SpawnPassAttack = function(data)
 			data_rear.templates = cav_templates;
 			data_rear.squad_size = 10;
 
-			this.DoAfterDelay((12*(i+2)) * 1000, "SpawnRearPassAttackSquad", data_rear);
-			this.DoAfterDelay((12*(i+3)) * 1000, "SpawnRearPassAttackSquad", data_rear);
+			this.DoAfterDelay((12 * (i + 2)) * 1000, "SpawnRearPassAttackSquad", data_rear);
+			this.DoAfterDelay((12 * (i + 3)) * 1000, "SpawnRearPassAttackSquad", data_rear);
 
-			this.DoAfterDelay(12*(i+2) * 1000, "SpawnPassAttackSquad", data);
+			this.DoAfterDelay(12 * (i + 2) * 1000, "SpawnPassAttackSquad", data);
 
 		}
 	}
@@ -1099,8 +1099,8 @@ Trigger.prototype.SpawnAlexnaderAmbush = function(data)
 
 	const cmpPlayer = QueryPlayerIDInterface(1);
 	const pop = cmpPlayer.GetPopulationCount();
-	const size = Math.round(pop*this.ambushAssassinsRatio);
-	warn("Spawning additional "+size+" attackers");
+	const size = Math.round(pop * this.ambushAssassinsRatio);
+	warn("Spawning additional " + size + " attackers");
 	let units = [];
 	const templates = ["units/pers/infantry_spearman_e", "units/pers/infantry_spearman_a", "units/pers/kardakes_skirmisher"];
 	for (let i = 0; i < size; i++)
@@ -1233,7 +1233,7 @@ Trigger.prototype.RangeActionBanditAttack = function(data)
 
 		const cmpPlayer = QueryPlayerIDInterface(1);
 		const pop = cmpPlayer.GetPopulationCount();
-		const size = Math.round(pop*this.banditRatio)-5;
+		const size = Math.round(pop * this.banditRatio) - 5;
 		// warn("Spawning additional "+size+" attackers");
 		const site = 1791; // falled doric column
 		for (let i = 0; i < size; i++)

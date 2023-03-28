@@ -58,7 +58,7 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	}
 	else
 	{
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -222,7 +222,7 @@ Trigger.prototype.IntervalActionAlliedAttack = function(data)
 						{
 							const pos_j = Engine.QueryInterface(human_units[j], IID_Position).GetPosition2D();
 
-							d = Math.sqrt((pos_i.x-pos_j.x)*(pos_i.x-pos_j.x) + (pos_i.y-pos_j.y)*(pos_i.y-pos_j.y));
+							d = Math.sqrt((pos_i.x - pos_j.x) * (pos_i.x - pos_j.x) + (pos_i.y - pos_j.y) * (pos_i.y - pos_j.y));
 
 							if (d < best_distance)
 							{
@@ -527,7 +527,7 @@ Trigger.prototype.TowerDestroyedAttack = function(data)
 	}
 
 	const num_attackers = this.tower_destroyed_attack_size;
-	warn("Num attackers = "+num_attackers);
+	warn("Num attackers = " + num_attackers);
 	const attackers = [];
 
 	// spawn attackers
@@ -560,7 +560,7 @@ Trigger.prototype.GateDestroyedAttack = function(data)
 	}
 
 	const num_attackers = 40;
-	warn("Num attackers = "+num_attackers);
+	warn("Num attackers = " + num_attackers);
 	const attackers = [];
 
 	// spawn attackers
@@ -589,7 +589,7 @@ Trigger.prototype.GreekAttack = function(data)
 		return;
 
 	const num_attackers = this.greekAttackSize;
-	warn("Num attackers = "+num_attackers);
+	warn("Num attackers = " + num_attackers);
 	const attackers = [];
 
 	// find any idle soldiers
@@ -616,7 +616,7 @@ Trigger.prototype.GreekAttack = function(data)
 	}
 
 	// spawn siege
-	const num_siege = Math.floor(num_attackers/12);
+	const num_siege = Math.floor(num_attackers / 12);
 	const siege_attackers = [];
 	for (let i = 0; i < num_siege; ++i)
 	{
@@ -680,7 +680,7 @@ Trigger.prototype.IntervalUnitCheck = function(data)
 		}
 	}
 
-	warn("Selected "+attackers.length +" idle soldiers");
+	warn("Selected " + attackers.length + " idle soldiers");
 
 	if (attackers.length > 15)
 	{
@@ -863,7 +863,7 @@ Trigger.prototype.PersianAttack = function(data)
 	const spawn_site = camps[0];
 
 	const num_attackers = this.persAttackSize;
-	warn("Num attackers = "+num_attackers);
+	warn("Num attackers = " + num_attackers);
 	const attackers = [];
 
 	// find any idle soldiers
@@ -889,7 +889,7 @@ Trigger.prototype.PersianAttack = function(data)
 	}
 
 	// spawn siege
-	const num_siege = Math.floor(num_attackers/7);
+	const num_siege = Math.floor(num_attackers / 7);
 	const siege_attackers = [];
 	for (let i = 0; i < num_siege; ++i)
 	{

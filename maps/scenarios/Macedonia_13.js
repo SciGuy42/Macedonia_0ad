@@ -68,7 +68,7 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	}
 	else
 	{
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -271,7 +271,7 @@ Trigger.prototype.IntervalActionAlliedAttack = function(data)
 						{
 							const pos_j = Engine.QueryInterface(human_units[j], IID_Position).GetPosition2D();
 
-							d = Math.sqrt((pos_i.x-pos_j.x)*(pos_i.x-pos_j.x) + (pos_i.y-pos_j.y)*(pos_i.y-pos_j.y));
+							d = Math.sqrt((pos_i.x - pos_j.x) * (pos_i.x - pos_j.x) + (pos_i.y - pos_j.y) * (pos_i.y - pos_j.y));
 
 							if (d < best_distance)
 							{
@@ -348,7 +348,7 @@ Trigger.prototype.IntervalActionSpawnPatrol = function(data)
 	// make list of possible targets
 	const patrol_classes = ["Fortress", "GarrisonTower", "CivilCentre", "Gates", "Barracks"];
 	const patrol_entities = this.GetEntitiesForClasses(4, patrol_classes);
-	warn("Found "+patrol_entities.length+" patrol targets.");
+	warn("Found " + patrol_entities.length + " patrol targets.");
 
 	const currentPop = QueryPlayerIDInterface(owner).GetPopulationCount();
 	if (currentPop < 100)
@@ -651,7 +651,7 @@ Trigger.prototype.GreekAttack = function(data)
 		return;
 
 	const num_attackers = this.greekAttackSize;
-	warn("Num attackers = "+num_attackers);
+	warn("Num attackers = " + num_attackers);
 	const attackers = [];
 
 	// find any idle soldiers
@@ -678,7 +678,7 @@ Trigger.prototype.GreekAttack = function(data)
 	}
 
 	// spawn siege
-	const num_siege = Math.floor(num_attackers/12);
+	const num_siege = Math.floor(num_attackers / 12);
 	const siege_attackers = [];
 	for (let i = 0; i < num_siege; ++i)
 	{
@@ -738,7 +738,7 @@ Trigger.prototype.DockPersianAttackRepeats = function(data)
 	const spawn_site = forts[0];
 
 	const num_attackers = this.persDockAttackCounter + 4;
-	warn("Dock Num attackers = "+num_attackers);
+	warn("Dock Num attackers = " + num_attackers);
 	const attackers = [];
 
 	// spawn attackers
@@ -771,7 +771,7 @@ Trigger.prototype.DockPersianAttackRepeats = function(data)
 
 	this.persDockAttackCounter++;
 
-	const interval = (180+Math.floor(Math.random()*60)) * 1000;
+	const interval = (180 + Math.floor(Math.random() * 60)) * 1000;
 	this.DoAfterDelay(interval, "DockPersianAttackRepeats", null);
 
 };
@@ -795,7 +795,7 @@ Trigger.prototype.CavalryTraderAttackRepeats = function(data)
 
 	if (traders.length < 1)
 	{
-		const interval = (this.persAttackInterval+Math.floor(Math.random()*60)) * 1000;
+		const interval = (this.persAttackInterval + Math.floor(Math.random() * 60)) * 1000;
 		this.DoAfterDelay(interval, "CavalryTraderAttackRepeats", null);
 
 		return;
@@ -806,8 +806,8 @@ Trigger.prototype.CavalryTraderAttackRepeats = function(data)
 
 	// decide on size of attack
 	const currentPop = QueryPlayerIDInterface(1).GetPopulationCount();
-	const num_attackers = 3 + Math.floor(currentPop/30);
-	warn("Num attackers = "+num_attackers);
+	const num_attackers = 3 + Math.floor(currentPop / 30);
+	warn("Num attackers = " + num_attackers);
 	const attackers = [];
 
 	// find any idle cavalry
@@ -842,7 +842,7 @@ Trigger.prototype.CavalryTraderAttackRepeats = function(data)
 		"allowCapture": false
 	});
 
-	const interval = (this.persAttackInterval+Math.floor(Math.random()*60)) * 1000;
+	const interval = (this.persAttackInterval + Math.floor(Math.random() * 60)) * 1000;
 	this.DoAfterDelay(interval, "CavalryTraderAttackRepeats", null);
 };
 
@@ -868,7 +868,7 @@ Trigger.prototype.PersianAttackRepeats = function(data)
 	// let spawn_site = camps[0];
 
 	const num_attackers = this.persAttackSize;
-	warn("Num attackers = "+num_attackers);
+	warn("Num attackers = " + num_attackers);
 	const attackers = [];
 
 	// find any idle soldiers
@@ -894,7 +894,7 @@ Trigger.prototype.PersianAttackRepeats = function(data)
 	}
 
 	// spawn siege
-	const num_siege = Math.floor(num_attackers/9);
+	const num_siege = Math.floor(num_attackers / 9);
 	for (let i = 0; i < num_siege; ++i)
 	{
 		const units_i = TriggerHelper.SpawnUnits(spawn_site, pickRandom(this.pers_siege_templates), 1, owner);
@@ -921,7 +921,7 @@ Trigger.prototype.PersianAttackRepeats = function(data)
 
 	this.persAttackSize += 1;
 
-	const interval = (this.persAttackInterval+Math.floor(Math.random()*60)) * 1000;
+	const interval = (this.persAttackInterval + Math.floor(Math.random() * 60)) * 1000;
 	this.DoAfterDelay(interval, "PersianAttackRepeats", null);
 
 
@@ -940,7 +940,7 @@ Trigger.prototype.RangeActionArrival = function(data)
 		const markets_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(3), "Market").filter(TriggerHelper.IsInWorld);
 		const forts_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(3), "Fortress").filter(TriggerHelper.IsInWorld);
 		const workshops_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(3), "Arsenal").filter(TriggerHelper.IsInWorld);
-		warn("found "+workshops_p.length +" workshops");
+		warn("found " + workshops_p.length + " workshops");
 
 		// Make it owned by the current player
 		var cmpOwnership = Engine.QueryInterface(camps_p[0], IID_Ownership);

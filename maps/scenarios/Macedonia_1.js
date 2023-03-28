@@ -205,9 +205,9 @@ Trigger.prototype.InfantryAttack = function(data)
 
 
 	// spawn attacking party
-	var ents1 = TriggerHelper.SpawnUnits(2906, "units/mace/infantry_pikeman_b", this.spawnInfCount+3, 3);
-	var ents2 = TriggerHelper.SpawnUnits(2906, "units/mace/infantry_javelineer_b", this.spawnInfCount+3, 3);
-	var ents3 = TriggerHelper.SpawnUnits(2906, "units/mace/infantry_archer_b", this.spawnInfCount+3, 3);
+	var ents1 = TriggerHelper.SpawnUnits(2906, "units/mace/infantry_pikeman_b", this.spawnInfCount + 3, 3);
+	var ents2 = TriggerHelper.SpawnUnits(2906, "units/mace/infantry_javelineer_b", this.spawnInfCount + 3, 3);
+	var ents3 = TriggerHelper.SpawnUnits(2906, "units/mace/infantry_archer_b", this.spawnInfCount + 3, 3);
 	var full_list = ents1.concat(ents2, ents3);
 
 	// warn(uneval(full_list));

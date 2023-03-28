@@ -43,7 +43,7 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	{
 
 
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -775,7 +775,7 @@ Trigger.prototype.SpawnLandTraders = function(data)
 		let markets_e = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(this.enemies[e]), "Market+!Dock").filter(TriggerHelper.IsInWorld);
 
 		if (this.enemies[e] == 4) // look for docks
-			 markets_e = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(this.enemies[e]), "Market").filter(TriggerHelper.IsInWorld);
+			markets_e = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(this.enemies[e]), "Market").filter(TriggerHelper.IsInWorld);
 
 		if (markets_e.length > 0)
 		{
@@ -938,7 +938,7 @@ Trigger.prototype.GreekAttack = function(data)
 
 	const spawn_site = camps[0];
 
-	const num_attackers = Math.floor(this.points_player6 / this.greekDiv)+4;
+	const num_attackers = Math.floor(this.points_player6 / this.greekDiv) + 4;
 	// warn("Num attackers = "+num_attackers);
 	const attackers = [];
 
@@ -963,7 +963,7 @@ Trigger.prototype.GreekAttack = function(data)
 		attackers.push(units_i[0]);
 	}
 
-	const num_siege = Math.floor(this.points_player6 / (5*75.0))+1;
+	const num_siege = Math.floor(this.points_player6 / (5 * 75.0)) + 1;
 	for (let i = 0; i < num_siege; ++i)
 	{
 		const units_i = TriggerHelper.SpawnUnits(spawn_site, pickRandom(this.greekSiegeTypes), 1, 6);
@@ -1021,7 +1021,7 @@ Trigger.prototype.SpecialGreekAttack = function(data)
 		attackers.push(units_i[0]);
 	}
 
-	const num_siege = Math.floor(num_attackers/6.0)+1;
+	const num_siege = Math.floor(num_attackers / 6.0) + 1;
 	for (let i = 0; i < num_siege; ++i)
 	{
 		const units_i = TriggerHelper.SpawnUnits(triggerPoint, "units/athen/siege_oxybeles_packed", 1, 6);
@@ -1063,7 +1063,7 @@ Trigger.prototype.CapadociaAttack = function(data)
 
 	const spawn_site = camps[0];
 
-	const num_attackers = Math.floor(this.points_player4 / this.capaDiv)+4;
+	const num_attackers = Math.floor(this.points_player4 / this.capaDiv) + 4;
 	// warn("Num attackers = "+num_attackers);
 	const attackers = [];
 

@@ -125,7 +125,7 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	{
 
 
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -240,8 +240,8 @@ Trigger.prototype.PatrolOrderList = function(units, p, patrolTargets)
 		ProcessCommand(p, {
 			"type": "patrol",
 			"entities": units,
-			"x": targetPos.x-10.0+(Math.random()*20),
-			"z": targetPos.y-10.0+(Math.random()*20),
+			"x": targetPos.x - 10.0 + (Math.random() * 20),
+			"z": targetPos.y - 10.0 + (Math.random() * 20),
 			"targetClasses": {
 				"attack": unitTargetClass
 			},
@@ -329,7 +329,7 @@ Trigger.prototype.IdleUnitCheck = function(data)
 {
 
 	this.idleUnitCounter += 1;
-	warn("idle unit check"+this.idleUnitCounter);
+	warn("idle unit check" + this.idleUnitCounter);
 
 
 	// colony militia
@@ -683,16 +683,16 @@ Trigger.prototype.IntervalSpawnGuards = function(data)
 
 	const traders = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Trader").filter(TriggerHelper.IsInWorld);
 
-	warn(uneval(barracks.length)+"\t"+uneval(temples.length)+"\t"+uneval(ele_stables.length)+"\t"+uneval(towers.length)+"\t"+uneval(forts.length));
+	warn(uneval(barracks.length) + "\t" + uneval(temples.length) + "\t" + uneval(ele_stables.length) + "\t" + uneval(towers.length) + "\t" + uneval(forts.length));
 
-	const pop_limit = 75 + barracks.length*20 + ele_stables.length*25+towers.length*3+forts.length*20+traders.length*5;
+	const pop_limit = 75 + barracks.length * 20 + ele_stables.length * 25 + towers.length * 3 + forts.length * 20 + traders.length * 5;
 
-	warn("pop limit = "+pop_limit);
+	warn("pop limit = " + pop_limit);
 
 	// first check our current population
 
 	const units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Unit").filter(TriggerHelper.IsInWorld);
-	warn("current pop = "+units.length);
+	warn("current pop = " + units.length);
 	if (units.length < pop_limit)
 	{
 		const spawn_sites = towers.concat(forts);
@@ -707,7 +707,7 @@ Trigger.prototype.IntervalSpawnGuards = function(data)
 		}
 
 		// how many infantry to spawn
-		const spawn_size = 10 + barracks.length + ele_stables.length*3 + Math.round(traders.length/2);
+		const spawn_size = 10 + barracks.length + ele_stables.length * 3 + Math.round(traders.length / 2);
 
 		// warn("inf spawn size = "+spawn_size);
 
@@ -725,7 +725,7 @@ Trigger.prototype.IntervalSpawnGuards = function(data)
 		}
 
 		// spawn healers
-		const num_healers = temples.length*3;
+		const num_healers = temples.length * 3;
 		for (let i = 0; i < num_healers; i++)
 		{
 
@@ -739,7 +739,7 @@ Trigger.prototype.IntervalSpawnGuards = function(data)
 		}
 
 		// spawn elephants
-		const num_elephants = ele_stables.length*3;
+		const num_elephants = ele_stables.length * 3;
 		const ele_templates = ["units/maur/champion_elephant", "units/maur/elephant_archer_e"];
 		for (let i = 0; i < num_elephants; i++)
 		{
@@ -1106,7 +1106,7 @@ Trigger.prototype.RangeActionTeleportC = function(data)
 				}
 
 
-				warn("new templatte = "+new_template);
+				warn("new templatte = " + new_template);
 
 
 				Engine.DestroyEntity(u);
@@ -1180,7 +1180,7 @@ Trigger.prototype.RangeActionTeleportD = function(data)
 				}
 
 
-				warn("new templatte = "+new_template);
+				warn("new templatte = " + new_template);
 
 
 				Engine.DestroyEntity(u);

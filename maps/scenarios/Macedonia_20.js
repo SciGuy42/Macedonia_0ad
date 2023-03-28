@@ -127,7 +127,7 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	{
 
 
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -646,7 +646,7 @@ Trigger.prototype.SpawnPyramidWarrior = function(data)
 	const pyramids = [6619, 6620, 6621];
 	const count_limit = 40; // only up to some number
 
-	warn("pyramid warrior " +uneval(this.pyramidSpawnCounter));
+	warn("pyramid warrior " + uneval(this.pyramidSpawnCounter));
 
 	if (this.pyramidSpawnCounter > this.pyramidSpawnLimit)
 	{
@@ -659,7 +659,7 @@ Trigger.prototype.SpawnPyramidWarrior = function(data)
 	}
 
 	const fraction_index = Math.floor((this.pyramidSpawnCounter / this.pyramidSpawnLimit) * (this.kush_inf_ordered.length - this.pyramidWaveSize));
-	warn("index = "+uneval(fraction_index));
+	warn("index = " + uneval(fraction_index));
 
 	// set order in terms of difficulty
 	this.kush_inf_ordered = ["units/kush/infantry_archer_b", "units/kush/infantry_spearman_b", "units/kush/infantry_archer_a", "units/kush/infantry_spearman_a", "units/kush/infantry_swordsman_b", "units/kush/infantry_archer_e", "units/kush/infantry_pikeman_b", "units/kush/infantry_swordsman_a", "units/kush/infantry_maceman_merc_b", "units/kush/champion_infantry_archer", "units/kush/infantry_pikeman_a", "units/kush/cavalry_javelineer_merc_b", "units/kush/infantry_javelineer_merc_b", "units/kush/infantry_spearman_e", "units/kush/infantry_maceman_merc_a", "units/kush/cavalry_javelineer_merc_a", "units/kush/infantry_pikeman_e", "units/kush/infantry_javelineer_merc_a", "units/kush/infantry_swordsman_e", "units/kush/cavalry_javelineer_merc_a", "units/kush/infantry_javelineer_merc_e", "units/kush/champion_infantry_archer", "units/kush/infantry_maceman_merc_e", "units/kush/champion_infantry_amun", "units/kush/champion_cavalry", "units/kush/champion_infantry_apedemak", "units/kush/champion_elephant"];
@@ -672,7 +672,7 @@ Trigger.prototype.SpawnPyramidWarrior = function(data)
 	for (let i = 0; i < this.pyramidWaveSize; i++)
 	{
 		const site_i = pickRandom(pyramids);
-		const unit_i = TriggerHelper.SpawnUnits(site_i, this.kush_inf_ordered[i+fraction_index], 1, 0);
+		const unit_i = TriggerHelper.SpawnUnits(site_i, this.kush_inf_ordered[i + fraction_index], 1, 0);
 	}
 
 	this.pyramidSpawnCounter += 1;
@@ -1020,7 +1020,7 @@ Trigger.prototype.RangeActionElephantVillage = function(data)
 				caravans.push(e);
 			}
 		}
-		warn("Found "+num_caravans+" caravans!");
+		warn("Found " + num_caravans + " caravans!");
 
 		if (num_caravans >= 4)
 		{
@@ -1256,7 +1256,7 @@ Trigger.prototype.RangeActionTriggerGoat = function(data)
 				goats.push(e);
 			}
 		}
-		warn("Found "+num_goats+" goats!");
+		warn("Found " + num_goats + " goats!");
 		if (num_goats >= 5)
 		{
 			warn("5 goats!");

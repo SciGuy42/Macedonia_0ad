@@ -120,7 +120,7 @@ Trigger.prototype.PersianAttackCav = function(data)
 
 	let temp_name = "";
 
-	const num_attackers = Math.floor(this.cavRatio*this.prog_seq[this.numberOfTimerTriggerCav])+1;
+	const num_attackers = Math.floor(this.cavRatio * this.prog_seq[this.numberOfTimerTriggerCav]) + 1;
 
 	// spawn cavalry -- done later so cavalry catches up with infantry
 	if (this.numberOfTimerTriggerCav == 3)
@@ -151,7 +151,7 @@ Trigger.prototype.PersianAttackCav = function(data)
 	}
 
 	// spawn a few infantry to catch up with siege -- 1 per siege unit
-	const num_siege_guard = Math.floor(this.prog_seq[this.numberOfTimerTriggerCav]*this.siegeRatio)+1;
+	const num_siege_guard = Math.floor(this.prog_seq[this.numberOfTimerTriggerCav] * this.siegeRatio) + 1;
 	for (let i = 0; i < num_attackers; ++i)
 	{
 		temp_name = this.persianInfTypes[Math.floor(Math.random() * Math.floor(this.persianInfTypes.length))];
@@ -247,7 +247,7 @@ Trigger.prototype.PersianAttack = function(data)
 		this.persianSiegeTypes.push("units/pers/siege_ram");
 	}
 
-	const num_siege = Math.floor(this.siegeRatio*this.prog_seq[this.numberOfTimerTrigger]);
+	const num_siege = Math.floor(this.siegeRatio * this.prog_seq[this.numberOfTimerTrigger]);
 	for (let i = 0; i < num_siege; ++i)
 	{
 		temp_name = this.persianSiegeTypes[Math.floor(Math.random() * Math.floor(this.persianSiegeTypes.length))];
@@ -308,7 +308,7 @@ Trigger.prototype.PersianAttack = function(data)
 		// spawn infantry
 		const sec_attackers = [];
 
-		for (let i = 0; i < this.prog_seq[this.numberOfTimerTrigger-7]; ++i)
+		for (let i = 0; i < this.prog_seq[this.numberOfTimerTrigger - 7]; ++i)
 		{
 			temp_name = this.persianInfTypes[Math.floor(Math.random() * Math.floor(this.persianInfTypes.length))];
 			const units_i = TriggerHelper.SpawnUnits(this.persianSpawnSites[second_site], temp_name, 1, 2);
@@ -316,8 +316,6 @@ Trigger.prototype.PersianAttack = function(data)
 			sec_attackers.push(units_i[0]);
 		}
 
-		// spawn siege
-		const num_siege = Math.floor(this.siegeRatio*this.prog_seq[this.numberOfTimerTrigger]);
 		for (let i = 0; i < num_siege; ++i)
 		{
 			temp_name = this.persianSiegeTypes[Math.floor(Math.random() * Math.floor(this.persianSiegeTypes.length))];
@@ -371,7 +369,7 @@ Trigger.prototype.GreekAttack = function(data)
 	// warn(uneval(this.greekAttackCounter));
 
 	var all_units = TriggerHelper.GetEntitiesByPlayer(4);
-	var pop_limit = 30+8*this.greekAttackCounter;
+	var pop_limit = 30 + 8 * this.greekAttackCounter;
 	if (all_units.length > pop_limit)
 	{
 		// warn("greeks have too much pop, no spawn");
@@ -383,7 +381,7 @@ Trigger.prototype.GreekAttack = function(data)
 	let temp_name = "";
 
 	// spawn infantry
-	for (let i = 0; i < Math.floor(this.greekRatio*this.prog_seq[this.greekAttackCounter]); ++i)
+	for (let i = 0; i < Math.floor(this.greekRatio * this.prog_seq[this.greekAttackCounter]); ++i)
 	{
 		// pick spawn site
 		const site = Math.floor(Math.random() * Math.floor(this.greekSpawnSites.length));
@@ -393,7 +391,7 @@ Trigger.prototype.GreekAttack = function(data)
 	}
 
 	// spawn siege
-	const num_siege = Math.floor(this.greekRatio*this.siegeRatio*this.prog_seq[this.greekAttackCounter]);
+	const num_siege = Math.floor(this.greekRatio * this.siegeRatio * this.prog_seq[this.greekAttackCounter]);
 	for (let i = 0; i < num_siege; ++i)
 	{
 		// pick spawn site
@@ -645,7 +643,7 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	}
 	else // find a structure
 	{
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -729,7 +727,7 @@ Trigger.prototype.VictoryCheck = function(data)
 
 	for (let i = 0; i < 100; ++i)
 	{
-		cmpTrigger.prog_seq.push(5+Math.floor(Math.sqrt(2.25*i))+Math.floor(i/2));
+		cmpTrigger.prog_seq.push(5 + Math.floor(Math.sqrt(2.25 * i)) + Math.floor(i / 2));
 	}
 	// warn(uneval(cmpTrigger.prog_seq));
 

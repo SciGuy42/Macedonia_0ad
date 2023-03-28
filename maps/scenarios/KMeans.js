@@ -18,14 +18,14 @@ function KMeans(opts)
 
 	opts = opts || {};
 	/* this.canvas = opts.canvas;
-  this.context = this.canvas.getContext('2d');
-  this.width = this.canvas.width;
-  this.height = this.canvas.height;*/
+	this.context = this.canvas.getContext('2d');
+	this.width = this.canvas.width;
+	this.height = this.canvas.height;*/
 
 	// Number of cluster centroids.
 	this.k = opts.k;
 
-	warn("num clusters = "+uneval(this.k));
+	warn("num clusters = " + uneval(this.k));
 
 	// Points to cluster.
 	this.data = opts.data;
@@ -76,7 +76,8 @@ function KMeans(opts)
 * var extents = kmeans.dataDimensionExtents();
 * warn(uneval(extents)); // [{min: 2, max: 4}, {min: 1, max: 7}]
 */
-KMeans.prototype.dataDimensionExtents = function() {
+KMeans.prototype.dataDimensionExtents = function()
+{
 	var data = this.data;
 	var extents = [];
 
@@ -114,7 +115,8 @@ KMeans.prototype.dataDimensionExtents = function() {
 * var ranges = kmeans.dataExtentRanges(extents);
 * warn(uneval(ranges)); // [2,6]
 */
-KMeans.prototype.dataExtentRanges = function() {
+KMeans.prototype.dataExtentRanges = function()
+{
 	var ranges = [];
 
 	for (var i = 0; i < this.extents.length; i++)
@@ -133,7 +135,8 @@ KMeans.prototype.dataExtentRanges = function() {
 * var means = kmeans.seeds();
 * warn(uneval(means)); // [[2,3],[4,5],[5,2]]
 */
-KMeans.prototype.seeds = function() {
+KMeans.prototype.seeds = function()
+{
 	var means = [];
 	while (this.k--)
 	{
@@ -165,7 +168,8 @@ KMeans.prototype.seeds = function() {
 *
 * http://en.wikipedia.org/wiki/Euclidean_distance
 */
-KMeans.prototype.assignClusterToDataPoints = function() {
+KMeans.prototype.assignClusterToDataPoints = function()
+{
 	var assignments = [];
 
 	for (var i = 0; i < this.data.length; i++)
@@ -179,8 +183,8 @@ KMeans.prototype.assignClusterToDataPoints = function() {
 			var sum = 0;
 
 			/* We calculate the Euclidean distance.
-       * √((pi-qi)^2+...+(pn-qn)^2)
-       */
+			 * √((pi-qi)^2+...+(pn-qn)^2)
+			 */
 
 			for (var dim = 0; dim < point.length; dim++)
 			{
@@ -212,7 +216,8 @@ KMeans.prototype.assignClusterToDataPoints = function() {
  * @desc Update the positions of the the cluster centroids (means) to the average positions
  * of all data points that belong to that mean.
  */
-KMeans.prototype.moveMeans = function() {
+KMeans.prototype.moveMeans = function()
+{
 	var sums = fillArray(this.means.length, 0);
 	var counts = fillArray(this.means.length, 0);
 	var moved = false;
@@ -242,8 +247,8 @@ KMeans.prototype.moveMeans = function() {
 	}
 
 	/* If cluster centroid (mean) is not longer assigned to any points,
-   * move it somewhere else randomly within range of points.
-   */
+	 * move it somewhere else randomly within range of points.
+	 */
 	for (meanIndex = 0; meanIndex < sums.length; meanIndex++)
 	{
 		if (counts[meanIndex] === 0)
@@ -260,13 +265,13 @@ KMeans.prototype.moveMeans = function() {
 		for (dim = 0; dim < sums[meanIndex].length; dim++)
 		{
 			sums[meanIndex][dim] /= counts[meanIndex];
-			sums[meanIndex][dim] = Math.round(100*sums[meanIndex][dim])/100;
+			sums[meanIndex][dim] = Math.round(100 * sums[meanIndex][dim]) / 100;
 		}
 	}
 
 	/* If current means does not equal to new means, then
-   * move cluster centroid closer to average point.
-   */
+	 * move cluster centroid closer to average point.
+	 */
 	if (this.means.toString() !== sums.toString())
 	{
 		var diff;
@@ -282,7 +287,7 @@ KMeans.prototype.moveMeans = function() {
 				{
 					var stepsPerIteration = 10;
 					this.means[meanIndex][dim] += diff / stepsPerIteration;
-					this.means[meanIndex][dim] = Math.round(100*this.means[meanIndex][dim])/100;
+					this.means[meanIndex][dim] = Math.round(100 * this.means[meanIndex][dim]) / 100;
 				}
 				else
 				{
@@ -301,7 +306,8 @@ KMeans.prototype.moveMeans = function() {
  * and checks if cluster centroids (means) have moved, otherwise
  * end program.
  */
-KMeans.prototype.run = function() {
+KMeans.prototype.run = function()
+{
 	++this.iterations;
 
 	// Reassign points to nearest cluster centroids.
@@ -311,8 +317,8 @@ KMeans.prototype.run = function() {
 	var meansMoved = this.moveMeans();
 
 	/* If cluster centroids moved then
-   *rerun to reassign points to new cluster centroid (means) positions.
-   */
+	 *rerun to reassign points to new cluster centroid (means) positions.
+	 */
 	if (meansMoved)
 	{
 
@@ -330,13 +336,14 @@ KMeans.prototype.run = function() {
 * @desc Generate a random colors for clusters.
 * @return random colors
 */
-KMeans.prototype.clusterColors = function() {
+KMeans.prototype.clusterColors = function()
+{
 	var colors = [];
 
 	// Generate point color for each cluster.
 	for (var i = 0; i < this.data.length; i++)
 	{
-		colors.push('#'+((Math.random()*(1<<24))|0).toString(16));
+		colors.push('#' + ((Math.random() * (1 << 24)) | 0).toString(16));
 	}
 
 	return colors;
@@ -348,7 +355,8 @@ KMeans.prototype.clusterColors = function() {
 * @param {number} index - cluster (mean) index
 * @return color for cluster
 */
-KMeans.prototype.clusterColor = function(n) {
+KMeans.prototype.clusterColor = function(n)
+{
 	return this.clusterColors[n];
 };
 

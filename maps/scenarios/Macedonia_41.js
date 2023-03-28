@@ -125,7 +125,7 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	{
 
 
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -514,7 +514,7 @@ Trigger.prototype.VictoryCheck = function(data)
 	const ccs_p2 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "CivilCentre").filter(TriggerHelper.IsInWorld);
 	const ccs_p3 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(3), "CivilCentre").filter(TriggerHelper.IsInWorld);
 
-	warn("found "+uneval(ccs_p3.length+ccs_p2.length) + " ccs");
+	warn("found " + uneval(ccs_p3.length + ccs_p2.length) + " ccs");
 
 	if (ccs_p2.length <= 1 && ccs_p3.length <= 1)
 	{
@@ -616,7 +616,7 @@ Trigger.prototype.CheckForCC = function(data)
 	// check if player 1 has built structure
 	const structures = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "Structure").filter(TriggerHelper.IsInWorld);
 
-	warn("Found "+structures.length+" structures");
+	warn("Found " + structures.length + " structures");
 
 	if (structures.length > 3) // start after at least 2 structures
 	{
@@ -675,8 +675,8 @@ Trigger.prototype.IntervalSpawnGroundAttack = function(data)
 			let templates;
 			let siege_templates = [];
 
-			const base_size = 14+this.groundAttackCounter;
-			const size_increase = 2*this.groundAttackCounter;
+			const base_size = 14 + this.groundAttackCounter;
+			const size_increase = 2 * this.groundAttackCounter;
 
 			if (i == 0)
 			{
@@ -699,7 +699,7 @@ Trigger.prototype.IntervalSpawnGroundAttack = function(data)
 			templates = templates.concat(siege_templates);
 
 			// decide how many
-			const size = base_size + i*size_increase;
+			const size = base_size + i * size_increase;
 
 			const data = {};
 
@@ -718,7 +718,7 @@ Trigger.prototype.IntervalSpawnGroundAttack = function(data)
 			// data.site = pickRandom(camps);
 			data.site = camps[0];
 
-			this.DoAfterDelay((i+1) * 20 * 1000, "SpawnAttackSquad", data);
+			this.DoAfterDelay((i + 1) * 20 * 1000, "SpawnAttackSquad", data);
 		}
 	}
 
@@ -839,7 +839,7 @@ Trigger.prototype.IntervalSpawnAttackShip = function(data)
 
 	}
 
-	const next_attack_delay_secs = 180 + Math.floor(Math.random()*30);
+	const next_attack_delay_secs = 180 + Math.floor(Math.random() * 30);
 
 	this.DoAfterDelay(next_attack_delay_secs * 1000, "IntervalSpawnAttackShip", null);
 };
@@ -1145,9 +1145,9 @@ Trigger.prototype.PlayerCommandAction = function(data)
 			// subtract resources
 			const cmpPlayer = QueryPlayerIDInterface(1);
 			// warn(uneval(this.mercOffer));
-			cmpPlayer.AddResource("food", -1*this.mercOffer.total_cost_food);
-			cmpPlayer.AddResource("stone", -1*this.mercOffer.total_cost_stone);
-			cmpPlayer.AddResource("metal", -1*this.mercOffer.total_cost_metal);
+			cmpPlayer.AddResource("food", -1 * this.mercOffer.total_cost_food);
+			cmpPlayer.AddResource("stone", -1 * this.mercOffer.total_cost_stone);
+			cmpPlayer.AddResource("metal", -1 * this.mercOffer.total_cost_metal);
 
 
 			// spawm mercs
@@ -1203,9 +1203,9 @@ Trigger.prototype.RangeActionMercs = function(data)
 		const offer_cost_metal = pickRandom(costs_metal);
 		const template = pickRandom(templates);
 
-		const total_cost_stone = offer_size*offer_cost_stone;
-		const total_cost_food = offer_size*offer_cost_food;
-		const total_cost_metal = offer_size*offer_cost_metal;
+		const total_cost_stone = offer_size * offer_cost_stone;
+		const total_cost_food = offer_size * offer_cost_food;
+		const total_cost_metal = offer_size * offer_cost_metal;
 
 		// check if the player has enough
 		const cmpPlayer = QueryPlayerIDInterface(1);
@@ -1222,7 +1222,7 @@ Trigger.prototype.RangeActionMercs = function(data)
 			this.mercOffer.template = template;
 
 
-			const offer_text = "You encounter a small camp used by local mercenaries. There are currently "+(offer_size)+" mounted archers available for a total price of "+(total_cost_food)+" food, "+(total_cost_stone)+" stone, and "+(total_cost_metal)+" metal. Would you be willing to hire them?";
+			const offer_text = "You encounter a small camp used by local mercenaries. There are currently " + (offer_size) + " mounted archers available for a total price of " + (total_cost_food) + " food, " + (total_cost_stone) + " stone, and " + (total_cost_metal) + " metal. Would you be willing to hire them?";
 
 			this.ShowText(offer_text, "Yes, we need you", "Perhaps later");
 

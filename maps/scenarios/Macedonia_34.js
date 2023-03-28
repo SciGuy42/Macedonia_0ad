@@ -87,7 +87,7 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	{
 
 
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -179,8 +179,8 @@ Trigger.prototype.PatrolOrderList = function(units, p, patrolTargets)
 		ProcessCommand(p, {
 			"type": "patrol",
 			"entities": units,
-			"x": targetPos.x-10.0+(Math.random()*20),
-			"z": targetPos.y-10.0+(Math.random()*20),
+			"x": targetPos.x - 10.0 + (Math.random() * 20),
+			"z": targetPos.y - 10.0 + (Math.random() * 20),
 			"targetClasses": {
 				"attack": unitTargetClass
 			},
@@ -277,9 +277,9 @@ Trigger.prototype.ClusterUnits = function(units, num_clusters)
 
 	// how many clusters
 	const kmeans = new KMeans({
-	  "canvas": null,
-	  "data": dataset,
-	  "k": num_clusters
+		"canvas": null,
+		"data": dataset,
+		"k": num_clusters
 	});
 
 	const num_iterations = 40;
@@ -338,7 +338,7 @@ Trigger.prototype.InitGaiaClusters = function(data)
 Trigger.prototype.IdleUnitCheck = function(data)
 {
 	this.idleCheckCounter += 1;
-	warn("idle counter = "+this.idleCheckCounter);
+	warn("idle counter = " + this.idleCheckCounter);
 
 	for (const p of [2])
 	{
@@ -642,7 +642,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 				// increase spawn interval
 				this.patrolInterval *= 1.1;
-				warn("new patrol spawn interval = "+uneval(this.patrolInterval));
+				warn("new patrol spawn interval = " + uneval(this.patrolInterval));
 			}
 			else if (id.classesList.indexOf("GarrisonTower") >= 0)
 			{
@@ -746,7 +746,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				}
 			}
 
-			warn("target cluster = "+target_cluster);
+			warn("target cluster = " + target_cluster);
 
 			if (target_cluster != -1)
 			{
@@ -999,7 +999,7 @@ Trigger.prototype.IntervalVictoryCheck = function(data)
 	cmpTrigger.DoAfterDelay(1 * 500, "InitGaiaClusters", null);
 
 	// repeat patrols
-	cmpTrigger.DoAfterDelay((20+cmpTrigger.patrolInterval) * 1000, "SpawnInterevalPatrol", null);
+	cmpTrigger.DoAfterDelay((20 + cmpTrigger.patrolInterval) * 1000, "SpawnInterevalPatrol", null);
 
 
 	// disable templates

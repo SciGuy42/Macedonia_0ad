@@ -101,7 +101,7 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	{
 
 
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -508,7 +508,7 @@ Trigger.prototype.PersianCavalryAttack = function(data)
 
 	const next_attack_interval_sec = 240 + Math.floor(Math.random() * 120);
 	warn("Next attack = " + uneval(next_attack_interval_sec));
-	this.persAttackLevel += Math.floor(Math.random() * 3)+1;
+	this.persAttackLevel += Math.floor(Math.random() * 3) + 1;
 
 	this.DoAfterDelay(next_attack_interval_sec * 1000, "PersianCavalryAttack", null);
 
@@ -953,7 +953,7 @@ Trigger.prototype.IdleUnitCheck = function(data)
 };
 
 
-Trigger.prototype.RandomTemplatePers= function(data)
+Trigger.prototype.RandomTemplatePers = function(data)
 {
 	const r = Math.random();
 
@@ -965,7 +965,7 @@ Trigger.prototype.RandomTemplatePers= function(data)
 };
 
 
-Trigger.prototype.RandomTemplateMace= function(data)
+Trigger.prototype.RandomTemplateMace = function(data)
 {
 	const r = Math.random();
 

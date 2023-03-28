@@ -77,7 +77,7 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	{
 
 
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -195,7 +195,7 @@ Trigger.prototype.SpawnStructureResponseAttack = function(data)
 	const pop = cmpPlayer.GetPopulationCount();
 	// warn("pop = "+pop);
 
-	if (pop < 1.25*this.maxWatchPop && pop > 0)
+	if (pop < 1.25 * this.maxWatchPop && pop > 0)
 	{
 		const attack_size = data.attack_size;
 		const ele_prob = data.ele_prob;
@@ -348,7 +348,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 					}
 
 					// bonus troops added based on running average of points
-					data_attack.attack_size += Math.round(this.pointsRunningAvg/30);
+					data_attack.attack_size += Math.round(this.pointsRunningAvg / 30);
 
 					// get location of building
 					var cmpTargetPosition = Engine.QueryInterface(data.entity, IID_Position).GetPosition2D();
@@ -610,7 +610,7 @@ Trigger.prototype.SpawnPatrolReinforcements = function(data)
 	// warn("DefenseTower = "+towers.length);
 
 	// spawn units based on points
-	const points = 5*houses.length + 8*fields.length + 10*economic.length + 5*military.length + 1*towers.length + 20*this.numTradersArrived;
+	const points = 5 * houses.length + 8 * fields.length + 10 * economic.length + 5 * military.length + 1 * towers.length + 20 * this.numTradersArrived;
 
 	// warn("points = "+points);
 
@@ -624,7 +624,7 @@ Trigger.prototype.SpawnPatrolReinforcements = function(data)
 	{
 
 		// spawn
-		const num_troops = Math.round(points/10);
+		const num_troops = Math.round(points / 10);
 		// warn("num troops = "+num_troops);
 		p = 3;
 		for (let i = 0; i < num_troops; i++)
@@ -758,7 +758,7 @@ Trigger.prototype.SpawnSupplyConvoy = function(data)
 	const p = 6;
 	const site = pickRandom(this.GetTriggerPoints(triggerPointSupplyConvoy));
 
-	const num_traders = 1 + Math.round(Math.random()*4);
+	const num_traders = 1 + Math.round(Math.random() * 4);
 
 	const units_i = TriggerHelper.SpawnUnits(site, "units/pers/support_trader", num_traders, p);
 

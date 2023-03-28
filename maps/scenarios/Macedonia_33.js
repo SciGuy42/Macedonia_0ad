@@ -148,8 +148,8 @@ Trigger.prototype.PatrolOrderList = function(units, p, patrolTargets)
 		ProcessCommand(p, {
 			"type": "patrol",
 			"entities": units,
-			"x": targetPos.x-10.0+(Math.random()*20),
-			"z": targetPos.y-10.0+(Math.random()*20),
+			"x": targetPos.x - 10.0 + (Math.random() * 20),
+			"z": targetPos.y - 10.0 + (Math.random() * 20),
 			"targetClasses": {
 				"attack": unitTargetClass
 			},
@@ -469,7 +469,7 @@ Trigger.prototype.FlipAssets = function(data)
 	}
 
 	// start gaia attacks
-	this.DoAfterDelay(60+this.cavalryAttackInterval * 1000, "SpawnIntervalCavalryAttack", null);
+	this.DoAfterDelay(60 + this.cavalryAttackInterval * 1000, "SpawnIntervalCavalryAttack", null);
 
 };
 
@@ -991,7 +991,7 @@ Trigger.prototype.IntervalVictoryCheck = function(data)
 	cmpTrigger.DoAfterDelay(5 * 1000, "SpawnInitialPatrol", null);
 
 	// repeat patrols
-	cmpTrigger.DoAfterDelay((20+cmpTrigger.patrolInervalBazira) * 1000, "SpawnInterevalPatrolBazira", null);
+	cmpTrigger.DoAfterDelay((20 + cmpTrigger.patrolInervalBazira) * 1000, "SpawnInterevalPatrolBazira", null);
 	cmpTrigger.DoAfterDelay((cmpTrigger.patrolInervalOra) * 1000, "SpawnInterevalPatrolOra", null);
 
 

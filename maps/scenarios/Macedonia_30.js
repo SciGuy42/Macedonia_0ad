@@ -81,7 +81,7 @@ Trigger.prototype.WalkAndGatherClosestTarget = function(attacker, target_player,
 	{
 
 
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -110,7 +110,7 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	{
 
 
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -201,13 +201,13 @@ Trigger.prototype.PlayerCommandAction = function(data)
 			const cmpPlayer = QueryPlayerIDInterface(1);
 
 			// pay
-			cmpPlayer.AddResource("stone", -1*this.dockCostStone);
+			cmpPlayer.AddResource("stone", -1 * this.dockCostStone);
 
 			// receive
 			cmpPlayer.AddResource("food", this.dockOfferFood);
 
 			// increment base cost
-		    this.stoneToFoodFactor *= 0.975;
+			this.stoneToFoodFactor *= 0.975;
 		}
 
 		this.dockDialogActive = false;
@@ -223,8 +223,8 @@ Trigger.prototype.PlayerCommandAction = function(data)
 			const cmpPlayer = QueryPlayerIDInterface(1);
 
 			// pay
-			cmpPlayer.AddResource("food", -1*this.workshopOfferFoodCost);
-			cmpPlayer.AddResource("metal", -1*this.workshopOfferMetalCost);
+			cmpPlayer.AddResource("food", -1 * this.workshopOfferFoodCost);
+			cmpPlayer.AddResource("metal", -1 * this.workshopOfferMetalCost);
 
 			// spawn
 			const site = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(6), "Arsenal").filter(TriggerHelper.IsInWorld)[0];
@@ -331,7 +331,7 @@ Trigger.prototype.HorseCheck = function(data)
 			// with small probability reproduce
 			const rate = 0.05;
 
-			const new_horses = Math.round((horses.length*rate)+1);
+			const new_horses = Math.round((horses.length * rate) + 1);
 
 			// warn("Adding "+new_horses);
 			for (let i = 0; i < new_horses; i++)
@@ -578,7 +578,7 @@ Trigger.prototype.RangeActionDock = function(data)
 {
 	if (this.dockOffer == true)
 	{
-		const cost = Math.round(this.dockBaseCost + this.dockBaseCost * Math.floor(Math.random()*5));
+		const cost = Math.round(this.dockBaseCost + this.dockBaseCost * Math.floor(Math.random() * 5));
 
 		// warn("cost = "+cost);
 		// check if player has enouggh food and metal
@@ -588,7 +588,7 @@ Trigger.prototype.RangeActionDock = function(data)
 		{
 			const offer_food = Math.round(cost * this.stoneToFoodFactor);
 
-			const text = "Greetings, Macedonians. We're always happy to trade. We're willing to exchange "+offer_food+ " for "+cost +" stone, should you have it. Let us know and either way, come back again soon!";
+			const text = "Greetings, Macedonians. We're always happy to trade. We're willing to exchange " + offer_food + " for " + cost + " stone, should you have it. Let us know and either way, come back again soon!";
 
 			// store offer information
 			this.dockOfferFood = offer_food;
@@ -620,7 +620,7 @@ Trigger.prototype.RangeActionWorkshop = function(data)
 		// check if player has enouggh food and metal
 		const cmpPlayer = QueryPlayerIDInterface(1);
 		const resources = cmpPlayer.GetResourceCounts();
-		if (resources.food > cost && resources.metal > Math.round(cost*0.5))
+		if (resources.food > cost && resources.metal > Math.round(cost * 0.5))
 		{
 			// select random template
 			const templates = ["units/mace/siege_ram", "units/mace/siege_lithobolos_packed", "units/mace/siege_oxybeles_packed"];
@@ -628,12 +628,12 @@ Trigger.prototype.RangeActionWorkshop = function(data)
 			const piece = pickRandom(templates);
 			const name = names[templates.indexOf(piece)];
 
-			const text = "The craftsmen at the shop have an offer for you -- they will produce a "+name+" in exchange for "+cost+" food and "+Math.round(cost*0.5)+" metal. Let us know if you agree with the exhcnage. Either way, come by again soon, we may have another offer for you.";
+			const text = "The craftsmen at the shop have an offer for you -- they will produce a " + name + " in exchange for " + cost + " food and " + Math.round(cost * 0.5) + " metal. Let us know if you agree with the exhcnage. Either way, come by again soon, we may have another offer for you.";
 
 			// store offer information
 			this.workshopOfferPiece = piece;
 			this.workshopOfferFoodCost = cost;
-			this.workshopOfferMetalCost = Math.round(cost*0.5);
+			this.workshopOfferMetalCost = Math.round(cost * 0.5);
 			this.workshopDialogActive = true;
 
 			// make offer go false
@@ -688,7 +688,7 @@ Trigger.prototype.ResearchTechs = function(data)
 			cmpTechnologyManager.ResearchTechnology("trade_gain_01");
 			cmpTechnologyManager.ResearchTechnology("trade_gain_02");
 		}
-		else if (p == 4 || p ==5 || p == 6)
+		else if (p == 4 || p == 5 || p == 6)
 		{
 			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
 			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");

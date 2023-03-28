@@ -77,7 +77,7 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	{
 
 
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -1197,9 +1197,9 @@ Trigger.prototype.ClusterUnits = function(units, num_clusters)
 
 	// how many clusters
 	const kmeans = new KMeans({
-	  "canvas": null,
-	  "data": dataset,
-	  "k": num_clusters
+		"canvas": null,
+		"data": dataset,
+		"k": num_clusters
 	});
 
 	const num_iterations = 40;
@@ -1255,7 +1255,7 @@ Trigger.prototype.AlexanderHealthCheck = function(data)
 			if (health_u)
 			{
 
-				const health_fraction = health_u.GetHitpoints()/health_u.GetMaxHitpoints();
+				const health_fraction = health_u.GetHitpoints() / health_u.GetMaxHitpoints();
 				// warn("health ratio = "+uneval(health_fraction));
 
 				if (health_fraction < 0.55)
@@ -1342,7 +1342,7 @@ Trigger.prototype.AlexanderHealthCheck = function(data)
 	 */
 
 	const units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(3), "Unit").filter(TriggerHelper.IsInWorld);
-	warn("mace army size = "+uneval(units.length));
+	warn("mace army size = " + uneval(units.length));
 
 	cmpTrigger.heroID1 = 4839;
 	cmpTrigger.heroID2 = 4969;
@@ -1361,10 +1361,10 @@ Trigger.prototype.AlexanderHealthCheck = function(data)
 
 	// start attackers
 	const delay = 30;
-	cmpTrigger.DoAfterDelay((delay+15) * 1000, "AttackInftanryWave", null);
-	cmpTrigger.DoAfterDelay((delay+25) * 1000, "AttackCavalryWave", null);
+	cmpTrigger.DoAfterDelay((delay + 15) * 1000, "AttackInftanryWave", null);
+	cmpTrigger.DoAfterDelay((delay + 25) * 1000, "AttackCavalryWave", null);
 	// cmpTrigger.DoAfterDelay((delay+19) * 1000,"HealersAdvanceDebug",null);
-	cmpTrigger.DoAfterDelay((delay+18) * 1000, "AttackTaxila", null);
+	cmpTrigger.DoAfterDelay((delay + 18) * 1000, "AttackTaxila", null);
 	// cmpTrigger.DoAfterDelay((delay+28) * 1000,"AttackCavalryWaveDebug",null);
 
 	/* cmpTrigger.DoAfterDelay((delay+15) * 1000,"AttackInftanryWave",null);
@@ -1395,7 +1395,7 @@ Trigger.prototype.AlexanderHealthCheck = function(data)
 
 
 		cmpPlayer.SetDisabledTemplates(disTemplates);
-		warn("Disabling templates for player "+uneval(p));
+		warn("Disabling templates for player " + uneval(p));
 
 		const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 

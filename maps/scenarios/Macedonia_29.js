@@ -82,7 +82,7 @@ Trigger.prototype.WalkAndGatherClosestTarget = function(attacker, target_player,
 	{
 
 
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -111,7 +111,7 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	{
 
 
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -217,7 +217,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			// count how many troops have been killed
 			this.archersKilled += 1;
 
-			warn("archers killed = "+this.archersKilled);
+			warn("archers killed = " + this.archersKilled);
 
 			if (this.archersKilled > this.archersRetreatThreshold)
 			{
@@ -478,7 +478,7 @@ Trigger.prototype.HorseCheck = function(data)
 			// with small probability reproduce
 			const rate = 0.05;
 
-			const new_horses = Math.round((horses.length*rate)+1);
+			const new_horses = Math.round((horses.length * rate) + 1);
 
 			// warn("Adding "+new_horses);
 			for (let i = 0; i < new_horses; i++)
@@ -657,7 +657,7 @@ Trigger.prototype.SpawnEastMountainPatrol = function(data)
 	// warn(structures.length);
 	if (structures.length == 0)
 	{
-		warn("Did not find structures for player "+p);
+		warn("Did not find structures for player " + p);
 		return; // no more structures, must be defeated
 	}
 
@@ -684,7 +684,7 @@ Trigger.prototype.SpawnEastMountainPatrol = function(data)
 	}
 
 	// schedule next spawn
-	const next_spawn_seconds = Math.round(Math.sqrt(2*inf_units.length))+1;
+	const next_spawn_seconds = Math.round(Math.sqrt(2 * inf_units.length)) + 1;
 	// warn("next spawn in "+next_spawn_seconds+" seconds");
 	this.DoAfterDelay(next_spawn_seconds * 1000, "SpawnEastMountainPatrol", null);
 
@@ -699,7 +699,7 @@ Trigger.prototype.SpawnMiddleMountainPatrol = function(data)
 	// warn(structures.length);
 	if (structures.length == 0)
 	{
-		warn("Did not find structures for player "+p);
+		warn("Did not find structures for player " + p);
 		return; // no more structures, must be defeated
 	}
 
@@ -726,7 +726,7 @@ Trigger.prototype.SpawnMiddleMountainPatrol = function(data)
 	}
 
 	// schedule next spawn
-	const next_spawn_seconds = Math.round(Math.sqrt(2*inf_units.length))+1;
+	const next_spawn_seconds = Math.round(Math.sqrt(2 * inf_units.length)) + 1;
 	// warn("next spawn in "+next_spawn_seconds+" seconds");
 	this.DoAfterDelay(next_spawn_seconds * 1000, "SpawnMiddleMountainPatrol", null);
 
@@ -741,7 +741,7 @@ Trigger.prototype.SpawnWestMountainPatrol = function(data)
 	// warn(structures.length);
 	if (structures.length == 0)
 	{
-		warn("Did not find structures for player "+p);
+		warn("Did not find structures for player " + p);
 		return; // no more structures, must be defeated
 	}
 
@@ -768,7 +768,7 @@ Trigger.prototype.SpawnWestMountainPatrol = function(data)
 	}
 
 	// schedule next spawn
-	const next_spawn_seconds = Math.round(Math.sqrt(2*inf_units.length))+1;
+	const next_spawn_seconds = Math.round(Math.sqrt(2 * inf_units.length)) + 1;
 	// warn("next spawn in "+next_spawn_seconds+" seconds");
 	this.DoAfterDelay(next_spawn_seconds * 1000, "SpawnWestMountainPatrol", null);
 
@@ -895,11 +895,11 @@ Trigger.prototype.SpawnCavalryRaid = function(data)
 	const structures_p4 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(4), "Structure").filter(TriggerHelper.IsInWorld);
 	const structures_p5 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(5), "Structure").filter(TriggerHelper.IsInWorld);
 
-	const num_squads = Math.round((structures_p4.length + structures_p5.length)/2);
+	const num_squads = Math.round((structures_p4.length + structures_p5.length) / 2);
 
 	for (let i = 0; i < num_squads; i++)
 	{
-		this.DoAfterDelay((i*5) * 1000, "SpawnCavalryRaidSquad", null);
+		this.DoAfterDelay((i * 5) * 1000, "SpawnCavalryRaidSquad", null);
 	}
 
 	// repeat after 6 minutes
@@ -964,7 +964,7 @@ Trigger.prototype.SpawnCatapults = function(data)
 
 Trigger.prototype.SpawnCavalryAttack = function(data)
 {
-	warn("cavalry attack counter = "+this.cavalryAttackCounter);
+	warn("cavalry attack counter = " + this.cavalryAttackCounter);
 
 	// check if we have structures left, if not, end
 	const p = 5;
@@ -976,10 +976,10 @@ Trigger.prototype.SpawnCavalryAttack = function(data)
 
 
 	// how big should the attack be
-	let num_attackers = 18+Math.round(this.cavalryAttackCounter/3);
+	let num_attackers = 18 + Math.round(this.cavalryAttackCounter / 3);
 	while (true)
 	{
-		if (Math.random() < (this.dirichletParam+0.05))
+		if (Math.random() < (this.dirichletParam + 0.05))
 		{
 			break;
 		}
@@ -992,7 +992,7 @@ Trigger.prototype.SpawnCavalryAttack = function(data)
 	// final attacks
 	if (this.cavalryAttackCounter >= 37)
 	{
-		num_attackers += Math.round(this.cavalryAttackCounter/1.5);
+		num_attackers += Math.round(this.cavalryAttackCounter / 1.5);
 	}
 
 	// update dirichlet param
@@ -1001,7 +1001,7 @@ Trigger.prototype.SpawnCavalryAttack = function(data)
 		this.dirichletParam = this.dirichletParamMin;
 
 	// warn("new dirichlet param = "+this.dirichletParam);
-	warn("spawning num attackers = "+num_attackers);
+	warn("spawning num attackers = " + num_attackers);
 
 	// types
 	const cav_templates = ["units/pers/champion_cavalry", "units/pers/champion_cavalry_archer", "units/pers/cavalry_javelineer_e", "units/pers/cavalry_javelineer_a", "units/pers/cavalry_axeman_e", "units/pers/cavalry_axeman_a", "units/pers/cavalry_spearman_e", "units/pers/cavalry_spearman_a", "units/pers/cavalry_spearman_b"];
@@ -1046,7 +1046,7 @@ Trigger.prototype.SpawnCavalryAttack = function(data)
 	if (this.cavalryAttackInterval < 5.0)
 		this.cavalryAttackInterval = 5.0;
 
-	warn("next attack in = "+this.cavalryAttackInterval);
+	warn("next attack in = " + this.cavalryAttackInterval);
 
 	this.cavalryAttackCounter += 1;
 

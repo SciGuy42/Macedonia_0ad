@@ -122,8 +122,8 @@ Trigger.prototype.PatrolOrderList = function(units, p, patrolTargets)
 		ProcessCommand(p, {
 			"type": "patrol",
 			"entities": units,
-			"x": targetPos.x-10.0+(Math.random()*20),
-			"z": targetPos.y-10.0+(Math.random()*20),
+			"x": targetPos.x - 10.0 + (Math.random() * 20),
+			"z": targetPos.y - 10.0 + (Math.random() * 20),
 			"targetClasses": {
 				"attack": unitTargetClass
 			},
@@ -187,7 +187,7 @@ Trigger.prototype.SpawnHorsemanPatrol = function(data)
 
 			const sites = this.GetTriggerPoints(triggerPointPatrol);
 			const sites_reversed = [];
-			for (let i = sites.length-1; i >= 0; i--)
+			for (let i = sites.length - 1; i >= 0; i--)
 			{
 				sites_reversed.push(sites[i]);
 			}
@@ -203,7 +203,7 @@ Trigger.prototype.SpawnHorsemanPatrol = function(data)
 				this.PatrolOrderList(unit_i, p, sites_reversed);
 		}
 
-		const next_spawn_interval = Math.round(Math.sqrt(units.length))+1;
+		const next_spawn_interval = Math.round(Math.sqrt(units.length)) + 1;
 		// warn("next spawn = "+next_spawn_interval);
 		this.DoAfterDelay(next_spawn_interval * 1000, "SpawnHorsemanPatrol", null);
 	}
@@ -219,7 +219,7 @@ Trigger.prototype.SpawnInitialPatrol = function(data)
 	// warn("Found "+sites.length+" patrol sites");
 
 	const sites_reversed = [];
-	for (let i = sites.length-1; i >= 0; i--)
+	for (let i = sites.length - 1; i >= 0; i--)
 	{
 		sites_reversed.push(sites[i]);
 	}
@@ -237,7 +237,7 @@ Trigger.prototype.SpawnInitialPatrol = function(data)
 
 
 
-		const index = Math.floor(Math.random()*sites_i.length);
+		const index = Math.floor(Math.random() * sites_i.length);
 		// warn("index = "+index);
 
 		// spawn the unit
@@ -245,7 +245,7 @@ Trigger.prototype.SpawnInitialPatrol = function(data)
 
 		// make it patrol
 		const patrol_sites_i = [];
-		let k = index+1;
+		let k = index + 1;
 
 		for (let j = 0; j < sites_i.length; j++)
 		{
@@ -346,7 +346,7 @@ Trigger.prototype.TransferFood = function(data)
 		cmpPlayer1.AddResource("food", resources.food);
 
 		// remove it from player 4
-		cmpPlayer4.AddResource("food", -1*resources.food);
+		cmpPlayer4.AddResource("food", -1 * resources.food);
 	}
 };
 
@@ -418,7 +418,7 @@ Trigger.prototype.RebelAttack = function(data)
 
 	// spawn distractors
 	const num_squads_distractors = 3;
-	const squad_size_distractor = 3+Math.round(pop/25)+this.attackCounter;
+	const squad_size_distractor = 3 + Math.round(pop / 25) + this.attackCounter;
 	const templates_distractor = ["units/pers/champion_cavalry", "units/pers/champion_cavalry_archer", "units/pers/cavalry_javelineer_e", "units/pers/cavalry_javelineer_a", "units/pers/cavalry_axeman_e", "units/pers/cavalry_axeman_a", "units/pers/cavalry_spearman_e", "units/pers/cavalry_spearman_a", "units/pers/cavalry_spearman_b"];
 
 
@@ -437,7 +437,7 @@ Trigger.prototype.RebelAttack = function(data)
 
 	// spawn main force
 	const num_squads = 2;
-	const squad_size = 10+Math.round(pop/18)+2*this.attackCounter;
+	const squad_size = 10 + Math.round(pop / 18) + 2 * this.attackCounter;
 
 	const templates = ["units/pers/champion_cavalry_archer", "units/pers/champion_cavalry_archer", "units/pers/cavalry_javelineer_a", "units/pers/cavalry_spearman_e", "units/pers/champion_cavalry", "units/pers/champion_cavalry", "units/pers/cavalry_axeman_e", "units/pers/infantry_archer_e", "units/pers/infantry_spearman_e", "units/pers/infantry_archer_e", "units/pers/champion_infantry", "units/pers/champion_infantry", "units/pers/infantry_javelineer_e", "units/pers/infantry_spearman_b", "units/pers/infantry_spearman_b", "units/pers/siege_ram"];
 
@@ -534,7 +534,7 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	{
 
 
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -574,7 +574,7 @@ Trigger.prototype.IdleUnitCheck = function(data)
 					// make patrol
 					// make it patrol
 					const patrol_sites_i = [];
-					let k = index+1;
+					let k = index + 1;
 
 					for (let j = 0; j < sites.length; j++)
 					{

@@ -75,7 +75,7 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	{
 
 
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -259,7 +259,7 @@ Trigger.prototype.InvasionRangeAction = function(data)
 				if (this.carthageInvasionShipGarrisonSize < 49)
 					this.carthageInvasionShipGarrisonSize += 2;
 
-				warn("Next invasion in "+uneval(this.carthageInvasionAttackInterval));
+				warn("Next invasion in " + uneval(this.carthageInvasionAttackInterval));
 				this.DoAfterDelay(this.carthageInvasionAttackInterval * 1000, "SpawnNavalInvasionAttack", null);
 
 
@@ -464,7 +464,7 @@ Trigger.prototype.StartEpisode = function(data)
 
 	// spawn and attack
 	const units_A = [];
-	for (let t= 0; t < this.unitTypes.length; t++)
+	for (let t = 0; t < this.unitTypes.length; t++)
 	{
 		for (let i = 0; i < counts_A[t]; i++)
 		{
@@ -504,7 +504,7 @@ Trigger.prototype.StartEpisode = function(data)
 
 	// spawn and attack
 	const units_B = [];
-	for (let t= 0; t < this.unitTypes.length; t++)
+	for (let t = 0; t < this.unitTypes.length; t++)
 	{
 		for (let i = 0; i < counts_B[t]; i++)
 		{
@@ -543,7 +543,7 @@ Trigger.prototype.GarrisonPlayerShips = function(data)
 	const warships_pl1 = TriggerHelper.MatchEntitiesByClass(units_pl1, "Warship").filter(TriggerHelper.IsInWorld);
 
 
-	warn("Found "+uneval(warships_pl1));
+	warn("Found " + uneval(warships_pl1));
 	for (const ship of warships_pl1)
 	{
 		// spawn the garrison inside the ship

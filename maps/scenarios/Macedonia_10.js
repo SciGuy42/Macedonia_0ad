@@ -347,7 +347,7 @@ Trigger.prototype.SpawnAndStartCavalryAttack = function()
 	const units_pl1 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "Human").filter(TriggerHelper.IsInWorld);
 	// warn("Found " + units_pl1.length + " human units");
 
-	let attack_size = Math.floor(units_pl1.length/8.0)+2;
+	let attack_size = Math.floor(units_pl1.length / 8.0) + 2;
 	if (attack_size > 30)
 	{
 		attack_size = 30;
@@ -502,7 +502,7 @@ Trigger.prototype.AttackOrder = function(units)
 	{
 		const pos_i = Engine.QueryInterface(unit_i, IID_Position).GetPosition2D();
 
-		d = Math.sqrt((pos_i.x-pos.x)*(pos_i.x-pos.x) + (pos_i.y-pos.y)*(pos_i.y-pos.y));
+		d = Math.sqrt((pos_i.x - pos.x) * (pos_i.x - pos.x) + (pos_i.y - pos.y) * (pos_i.y - pos.y));
 
 		if (d < best_distance)
 		{
@@ -745,7 +745,7 @@ Trigger.prototype.IntervalDefenderSpawnAction = function(data)
 	// get trigger points
 	const sites = this.GetTriggerPoints("K");
 	const sites_reversed = [];
-	for (let i = sites.length-1; i >= 0; i--)
+	for (let i = sites.length - 1; i >= 0; i--)
 	{
 		sites_reversed.push(sites[i]);
 	}

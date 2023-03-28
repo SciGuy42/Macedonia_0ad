@@ -115,7 +115,7 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	{
 
 
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -207,8 +207,8 @@ Trigger.prototype.PatrolOrderList = function(units, p, patrolTargets)
 		ProcessCommand(p, {
 			"type": "patrol",
 			"entities": units,
-			"x": targetPos.x-10.0+(Math.random()*20),
-			"z": targetPos.y-10.0+(Math.random()*20),
+			"x": targetPos.x - 10.0 + (Math.random() * 20),
+			"z": targetPos.y - 10.0 + (Math.random() * 20),
 			"targetClasses": {
 				"attack": unitTargetClass
 			},
@@ -698,7 +698,7 @@ Trigger.prototype.SpawnAdvanceAttackSquadInterval = function(data)
 		size += 1;
 	}
 
-	warn("attack size = "+uneval(size));
+	warn("attack size = " + uneval(size));
 	const attackers = [];
 	for (let i = 0; i < size; i++)
 	{
@@ -730,17 +730,17 @@ Trigger.prototype.SpawnAdvanceAttackSquadInterval = function(data)
 	// decays
 	this.advanceAttackStickBreakProb *= this.advanceAttackStickBreakProbDecay;
 	this.advanceAttackInterval *= this.advanceAttackIntervalDecay;
-	warn(uneval(this.advanceAttackStickBreakProb) +"\t"+uneval(this.advanceAttackInterval));
+	warn(uneval(this.advanceAttackStickBreakProb) + "\t" + uneval(this.advanceAttackInterval));
 
 	// increment level
-	warn("level = "+uneval(this.advanceAttackLevel));
+	warn("level = " + uneval(this.advanceAttackLevel));
 	this.advanceAttackLevel += 1;
 
 	// repeat
 	if (this.advanceAttackLevel < this.advanceAttackMaxLevel)
 	{
 		const next_time = Math.round(this.advanceAttackInterval * 1000);
-		warn("spawning again in "+uneval(next_time));
+		warn("spawning again in " + uneval(next_time));
 		this.DoAfterDelay(next_time, "SpawnAdvanceAttackSquadInterval", null);
 	}
 	else  // if we run out of levels, main attack starts
@@ -776,7 +776,7 @@ Trigger.prototype.VictoryCheck = function(data)
 	// check how many units player 2 has
 	const units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "Unit").filter(TriggerHelper.IsInWorld);
 
-	warn("victory check "+uneval(units.length));
+	warn("victory check " + uneval(units.length));
 
 	if (units.length == 0)
 	{
@@ -813,9 +813,9 @@ Trigger.prototype.SpawnMainAttackInterval = function(data)
 
 
 	// for each squad
-	for (let i = 0; i < Math.round(this.mainAttackNumSquads)+2; i++)
+	for (let i = 0; i < Math.round(this.mainAttackNumSquads) + 2; i++)
 	{
-		const size = Math.round(this.mainAttackSquadSize)+2;
+		const size = Math.round(this.mainAttackSquadSize) + 2;
 
 		// spawn squad
 		const site_i = pickRandom(sites);
@@ -1364,7 +1364,7 @@ Trigger.prototype.StartMutinyInsurrection = function(data)
 
 	for (let i = 0; i < num_squads; i++)
 	{
-		this.DoAfterDelay((20+i*8) * 1000, "SpawnMutinyInsurrectionSquad", null);
+		this.DoAfterDelay((20 + i * 8) * 1000, "SpawnMutinyInsurrectionSquad", null);
 	}
 
 	// start victory check
@@ -1398,7 +1398,7 @@ Trigger.prototype.IntervalCheckIndianCCs = function(data)
 	const ccs_pl5 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(5), "CivilCentre").filter(TriggerHelper.IsInWorld);
 	const total = ccs_pl2.length + ccs_pl5.length;
 
-	warn("enemy ccs = "+total);
+	warn("enemy ccs = " + total);
 
 	if (total <= 3)
 	{
@@ -1446,9 +1446,9 @@ Trigger.prototype.ClusterUnits = function(units, num_clusters)
 
 	// how many clusters
 	const kmeans = new KMeans({
-	  "canvas": null,
-	  "data": dataset,
-	  "k": num_clusters
+		"canvas": null,
+		"data": dataset,
+		"k": num_clusters
 	});
 
 	const num_iterations = 40;

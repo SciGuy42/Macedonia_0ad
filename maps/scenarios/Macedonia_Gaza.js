@@ -202,7 +202,7 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	{
 
 
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -399,7 +399,7 @@ Trigger.prototype.InvasionRangeAction = function(data)
 				if (this.carthageInvasionShipGarrisonSize < 49)
 					this.carthageInvasionShipGarrisonSize += 2;
 
-				warn("Next invasion in "+uneval(this.carthageInvasionAttackInterval));
+				warn("Next invasion in " + uneval(this.carthageInvasionAttackInterval));
 				this.DoAfterDelay(this.carthageInvasionAttackInterval * 1000, "SpawnNavalInvasionAttack", null);
 
 
@@ -673,8 +673,8 @@ Trigger.prototype.SpawnFanaticSquad = function(data)
 	const units = [];
 	const site_j = pickRandom(spwan_sites);
 
-	const squad_size = Math.floor(Math.random()*(this.fanaticSquadSizeMax-this.fanaticSquadSizeMin))+this.fanaticSquadSizeMin;
-	warn("Squad size = "+uneval(squad_size));
+	const squad_size = Math.floor(Math.random() * (this.fanaticSquadSizeMax - this.fanaticSquadSizeMin)) + this.fanaticSquadSizeMin;
+	warn("Squad size = " + uneval(squad_size));
 	// let squad_size = 5;
 
 	// melee
@@ -714,7 +714,7 @@ Trigger.prototype.SpawnFanaticSquad = function(data)
 	if (Math.random() < 0.075)
 		this.fanaticSquadSizeMax++;
 
-	warn("new min and max: "+this.fanaticSquadSizeMin+" "+this.fanaticSquadSizeMax);
+	warn("new min and max: " + this.fanaticSquadSizeMin + " " + this.fanaticSquadSizeMax);
 
 	this.DoAfterDelay(this.fanaticAttackInterval * 1000, "SpawnFanaticSquad", null);
 };

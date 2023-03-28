@@ -106,7 +106,7 @@ Trigger.prototype.IntervalAction = function(data)
 						{
 							const pos_j = Engine.QueryInterface(human_units[j], IID_Position).GetPosition2D();
 
-							d = Math.sqrt((pos_i.x-pos_j.x)*(pos_i.x-pos_j.x) + (pos_i.y-pos_j.y)*(pos_i.y-pos_j.y));
+							d = Math.sqrt((pos_i.x - pos_j.x) * (pos_i.x - pos_j.x) + (pos_i.y - pos_j.y) * (pos_i.y - pos_j.y));
 
 							if (d < best_distance)
 							{

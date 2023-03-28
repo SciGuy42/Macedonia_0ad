@@ -84,7 +84,7 @@ Trigger.prototype.WalkAndFightRandomTarget = function(attacker, target_player, t
 	}
 	else // find a structure
 	{
-		warn("[ERROR] Could not find random target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find random target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -112,7 +112,7 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	{
 
 
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -506,7 +506,7 @@ Trigger.prototype.PlayerCommandAction = function(data)
 
 	if (data.cmd.type == "tribute")
 	{
-		if (data.player ==1 && data.cmd.player == 3)
+		if (data.player == 1 && data.cmd.player == 3)
 		{
 			// warn(uneval(data.cmd.amounts));
 
@@ -540,7 +540,7 @@ Trigger.prototype.PlayerCommandAction = function(data)
 			// warn("tributing "+amount+" "+resource);
 
 			const cmpPlayer = QueryPlayerIDInterface(3);
-			cmpPlayer.AddResource(resource, -1*amount);
+			cmpPlayer.AddResource(resource, -1 * amount);
 
 		}
 
@@ -803,14 +803,14 @@ Trigger.prototype.SpawnPatrolInterval = function(data)
 	{
 		// decide if we want to spend points -- 100 points per extra soldier
 		const unit_point_cost = 100;
-		const num_extra = 1+Math.round(8.0*(Math.random()));
+		const num_extra = 1 + Math.round(8.0 * (Math.random()));
 
 		if (this.enemyPoints > num_extra * unit_point_cost)
 		{
 			this.enemyPoints -= num_extra * unit_point_cost;
 
 
-			this.patrolSize = this.patrolSizeDefault + num_extra + (this.numDocksCaptured*2);
+			this.patrolSize = this.patrolSizeDefault + num_extra + (this.numDocksCaptured * 2);
 			// warn("Adding "+uneval(this.patrolSize)+" soldiers to patrol to current force of "+units.length);
 		}
 		else
@@ -1786,7 +1786,7 @@ Trigger.prototype.SpawnSlaveAttack = function(data)
 {
 	const p = 6;
 
-	const attack_size = 16+Math.round(12*Math.random());
+	const attack_size = 16 + Math.round(12 * Math.random());
 
 	// site
 	const sites = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "CivilCentre").filter(TriggerHelper.IsInWorld);
@@ -1906,7 +1906,7 @@ Trigger.prototype.PointIncrement = function(data)
 	const res_factor = 0.05;
 
 	// do default point increment + gain
-	this.pointFood = this.pointFood + this.pointFoodIncrement + cargo_food + res_factor*gain_food;
+	this.pointFood = this.pointFood + this.pointFoodIncrement + cargo_food + res_factor * gain_food;
 	this.pointWood = this.pointWood + this.pointWoodIncrement + cargo_wood;
 	this.pointStone = this.pointStone + this.pointStoneIncrement + cargo_stone;
 	this.pointMetal = this.pointMetal + this.pointMetalIncrement + cargo_metal;
@@ -2065,9 +2065,9 @@ Trigger.prototype.PointIncrement = function(data)
 	// healer spawn probability
 	cmpTrigger.healerProb = 0.07;
 
-	cmpTrigger.DoAfterDelay((30+cmpTrigger.pointIncrementTime) * 1000, "PointIncrement", null);
+	cmpTrigger.DoAfterDelay((30 + cmpTrigger.pointIncrementTime) * 1000, "PointIncrement", null);
 
-	cmpTrigger.DoAfterDelay((30+cmpTrigger.pointIncrementTime) * 1000, "PointIncrementEnemy", null);
+	cmpTrigger.DoAfterDelay((30 + cmpTrigger.pointIncrementTime) * 1000, "PointIncrementEnemy", null);
 
 
 	// whether the special attack has happened
@@ -2112,19 +2112,19 @@ Trigger.prototype.PointIncrement = function(data)
 	cmpTrigger.DoAfterDelay(3 * 1000, "SetDiplomacy", null);
 	for (let i = 1; i <= 10; i++)
 	{
-		cmpTrigger.DoAfterDelay((i*10+Math.round(Math.random()*15)) * 1000, "SpawnNeutralTrader", null);
+		cmpTrigger.DoAfterDelay((i * 10 + Math.round(Math.random() * 15)) * 1000, "SpawnNeutralTrader", null);
 	}
 
 	for (let i = 1; i <= 8; i++)
 	{
-		cmpTrigger.DoAfterDelay((i*10+Math.round(Math.random()*15)) * 1000, "SpawnScyhianTrader", null);
+		cmpTrigger.DoAfterDelay((i * 10 + Math.round(Math.random() * 15)) * 1000, "SpawnScyhianTrader", null);
 	}
 
 	// schedule our own trade ships
 
 	for (let i = 1; i <= 6; i++)
 	{
-		cmpTrigger.DoAfterDelay((i*20+Math.round(Math.random()*15)) * 1000, "SpawnTradeShip", null);
+		cmpTrigger.DoAfterDelay((i * 20 + Math.round(Math.random() * 15)) * 1000, "SpawnTradeShip", null);
 	}
 
 	/* cmpTrigger.DoAfterDelay(5 * 1000,"SpawnScyhianTrader",null);
@@ -2182,7 +2182,7 @@ Trigger.prototype.PointIncrement = function(data)
 		}
 
 		cmpPlayer.SetDisabledTemplates(disTemplates);
-		warn("Disabling templates for player "+uneval(p));
+		warn("Disabling templates for player " + uneval(p));
 
 
 		const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);

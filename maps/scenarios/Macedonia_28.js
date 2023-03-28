@@ -78,7 +78,7 @@ Trigger.prototype.WalkAndGatherClosestTarget = function(attacker, target_player,
 	{
 
 
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -107,7 +107,7 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	{
 
 
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -197,7 +197,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 					const archers_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Archer").filter(TriggerHelper.IsInWorld);
 					//	warn("Found "+archers_p.length+" archers of player "+p);
 
-					const attack_size = Math.round(archers_p.length/3);
+					const attack_size = Math.round(archers_p.length / 3);
 					const archers_response_squad = [];
 
 					if (attack_size <= archers_p.length)
@@ -233,7 +233,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			for (let i = 0; i < num_attack_squads; i++)
 			{
 
-				this.DoAfterDelay(((i*20)+1) * 1000, "SpawnSiegeAttackSquad", null);
+				this.DoAfterDelay(((i * 20) + 1) * 1000, "SpawnSiegeAttackSquad", null);
 			}
 		}
 	}
@@ -349,7 +349,7 @@ Trigger.prototype.HorseCheck = function(data)
 			// with small probability reproduce
 			const rate = 0.05;
 
-			const new_horses = Math.round((horses.length*rate)+1);
+			const new_horses = Math.round((horses.length * rate) + 1);
 
 			// warn("Adding "+new_horses);
 			for (let i = 0; i < new_horses; i++)
@@ -593,7 +593,7 @@ Trigger.prototype.SpawnEastMountainPatrol = function(data)
 	// warn(structures.length);
 	if (structures.length == 0)
 	{
-		warn("Did not find structures for player "+p);
+		warn("Did not find structures for player " + p);
 		return; // no more structures, must be defeated
 	}
 
@@ -620,7 +620,7 @@ Trigger.prototype.SpawnEastMountainPatrol = function(data)
 	}
 
 	// schedule next spawn
-	const next_spawn_seconds = Math.round(Math.sqrt(2*inf_units.length))+1;
+	const next_spawn_seconds = Math.round(Math.sqrt(2 * inf_units.length)) + 1;
 	// warn("next spawn in "+next_spawn_seconds+" seconds");
 	this.DoAfterDelay(next_spawn_seconds * 1000, "SpawnEastMountainPatrol", null);
 
@@ -635,7 +635,7 @@ Trigger.prototype.SpawnMiddleMountainPatrol = function(data)
 	// warn(structures.length);
 	if (structures.length == 0)
 	{
-		warn("Did not find structures for player "+p);
+		warn("Did not find structures for player " + p);
 		return; // no more structures, must be defeated
 	}
 
@@ -662,7 +662,7 @@ Trigger.prototype.SpawnMiddleMountainPatrol = function(data)
 	}
 
 	// schedule next spawn
-	const next_spawn_seconds = Math.round(Math.sqrt(2*inf_units.length))+1;
+	const next_spawn_seconds = Math.round(Math.sqrt(2 * inf_units.length)) + 1;
 	// warn("next spawn in "+next_spawn_seconds+" seconds");
 	this.DoAfterDelay(next_spawn_seconds * 1000, "SpawnMiddleMountainPatrol", null);
 
@@ -677,7 +677,7 @@ Trigger.prototype.SpawnWestMountainPatrol = function(data)
 	// warn(structures.length);
 	if (structures.length == 0)
 	{
-		warn("Did not find structures for player "+p);
+		warn("Did not find structures for player " + p);
 		return; // no more structures, must be defeated
 	}
 
@@ -704,7 +704,7 @@ Trigger.prototype.SpawnWestMountainPatrol = function(data)
 	}
 
 	// schedule next spawn
-	const next_spawn_seconds = Math.round(Math.sqrt(2*inf_units.length))+1;
+	const next_spawn_seconds = Math.round(Math.sqrt(2 * inf_units.length)) + 1;
 	// warn("next spawn in "+next_spawn_seconds+" seconds");
 	this.DoAfterDelay(next_spawn_seconds * 1000, "SpawnWestMountainPatrol", null);
 
@@ -758,7 +758,7 @@ Trigger.prototype.SpawnMaPatrol = function(data)
 
 	if (cav_units.length < this.maxSacaCav)
 	{
-		const patrol_size = 5+Math.round(structures.length/2);
+		const patrol_size = 5 + Math.round(structures.length / 2);
 		const units = [];
 		for (let i = 0; i < patrol_size; i++)
 		{
@@ -805,7 +805,7 @@ Trigger.prototype.SpawnApaPatrol = function(data)
 
 	if (cav_units.length < this.maxSacaCav)
 	{
-		const patrol_size = 5+Math.round(structures.length/2);
+		const patrol_size = 5 + Math.round(structures.length / 2);
 		const units = [];
 		for (let i = 0; i < patrol_size; i++)
 		{
@@ -833,12 +833,12 @@ Trigger.prototype.SpawnCavalryRaid = function(data)
 	const structures_p4 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(4), "Structure").filter(TriggerHelper.IsInWorld);
 	const structures_p5 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(5), "Structure").filter(TriggerHelper.IsInWorld);
 
-	const num_squads = 2+Math.round((structures_p4.length + structures_p5.length)/2);
+	const num_squads = 2 + Math.round((structures_p4.length + structures_p5.length) / 2);
 	// warn("spawning "+num_squads+" attack squads");
 
 	for (let i = 0; i < num_squads; i++)
 	{
-		this.DoAfterDelay((i*5) * 1000, "SpawnCavalryRaidSquad", null);
+		this.DoAfterDelay((i * 5) * 1000, "SpawnCavalryRaidSquad", null);
 	}
 
 	// repeat after 6 minutes
@@ -864,11 +864,11 @@ Trigger.prototype.SpawnSiegeAttackSquad = function(data)
 
 	// templates
 	const cav_templates = ["units/pers/cavalry_axeman_e", "units/pers/cavalry_spearman_e", "units/pers/cavalry_javelineer_e", "units/pers/cavalry_archer_e", "units/pers/champion_cavalry", "units/pers/champion_chariot"];
-	const infantry_templates =["units/pers/arstibara", "units/pers/champion_infantry", "units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher", "units/pers/infantry_archer_e"];
+	const infantry_templates = ["units/pers/arstibara", "units/pers/champion_infantry", "units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher", "units/pers/infantry_archer_e"];
 	const siege_templates = ["units/pers/siege_ram"];
 
-	const num_cav = 8+Math.round(Math.random()*4);
-	const num_inf = 20+Math.round(Math.random()*6);
+	const num_cav = 8 + Math.round(Math.random() * 4);
+	const num_inf = 20 + Math.round(Math.random() * 6);
 	const num_siege = 4;
 	const attackers = [];
 
@@ -1108,7 +1108,7 @@ Trigger.prototype.ResearchTechs = function(data)
 			cmpTechnologyManager.ResearchTechnology("trade_gain_01");
 			cmpTechnologyManager.ResearchTechnology("trade_gain_01");
 		}
-		else if (p == 4 || p ==5 || p == 6)
+		else if (p == 4 || p == 5 || p == 6)
 		{
 			// infantry archer and cav tech
 			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
@@ -1278,7 +1278,7 @@ Trigger.prototype.VictoryCheck = function(data)
 		}
 
 		// give some resistance to some of the enemies
-		if (p == 4 || p ==5 || p == 6)
+		if (p == 4 || p == 5 || p == 6)
 		{
 			cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
 			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");

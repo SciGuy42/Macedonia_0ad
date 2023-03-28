@@ -157,7 +157,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 
 					const m1 = markets[0];
-					const m2 = markets[markets.length-1];
+					const m2 = markets[markets.length - 1];
 
 					const cmpUnitAI = Engine.QueryInterface(trader[0], IID_UnitAI);
 
@@ -170,7 +170,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			else if (this.crannog_ids.indexOf(data.entity) >= 0 /* || data.entity == 7176 || data.entity == 7177*/) // if pl2 or pl4 lose a civic center
 			{
 				// stage attack from player 3 in response to a civil centre lost by player 4
-			//	warn("crannog destroyed or captured");
+				//	warn("crannog destroyed or captured");
 				// this.SpawnAndStartCavalryAttack();
 
 				this.DoAfterDelay(5 * 1000, "SpawnAndStartCavalryAttack", null);
@@ -299,7 +299,7 @@ Trigger.prototype.SpawnAndStartCavalryAttack = function()
 	const units_pl1 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "Human").filter(TriggerHelper.IsInWorld);
 	// warn("Found " + units_pl1.length + " human units");
 
-	let attack_size = Math.floor(units_pl1.length/8.0)+2+this.spawn_cav_bonus;
+	let attack_size = Math.floor(units_pl1.length / 8.0) + 2 + this.spawn_cav_bonus;
 	if (attack_size > 40)
 	{
 		attack_size = 40;
@@ -390,7 +390,7 @@ Trigger.prototype.IntervalCrannogSpawnAction = function(data)
 
 	for (let i = 0; i < crannogs.length; ++i)
 	{
-		TriggerHelper.SpawnUnits(crannogs[i], pickRandom(this.infantryTypesSpawn), 1+this.spawn_crannog_bonus, 4);
+		TriggerHelper.SpawnUnits(crannogs[i], pickRandom(this.infantryTypesSpawn), 1 + this.spawn_crannog_bonus, 4);
 		// warn("spawning crannog unit");
 	}
 };

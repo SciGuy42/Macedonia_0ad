@@ -117,7 +117,7 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	{
 
 
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -209,8 +209,8 @@ Trigger.prototype.PatrolOrderList = function(units, p, patrolTargets)
 		ProcessCommand(p, {
 			"type": "patrol",
 			"entities": units,
-			"x": targetPos.x-10.0+(Math.random()*20),
-			"z": targetPos.y-10.0+(Math.random()*20),
+			"x": targetPos.x - 10.0 + (Math.random() * 20),
+			"z": targetPos.y - 10.0 + (Math.random() * 20),
 			"targetClasses": {
 				"attack": unitTargetClass
 			},
@@ -295,7 +295,7 @@ Trigger.prototype.StructureDecayCheck = function(data)
 Trigger.prototype.IdleUnitCheck = function(data)
 {
 	this.idleCheckCounter += 1;
-	warn("idle counter = "+ this.idleCheckCounter);
+	warn("idle counter = " + this.idleCheckCounter);
 
 	for (const p of [8])
 	{
@@ -598,9 +598,9 @@ Trigger.prototype.SpawnMainAttackInterval = function(data)
 
 
 	// for each squad
-	for (let i = 0; i < Math.round(this.mainAttackNumSquads)+2; i++)
+	for (let i = 0; i < Math.round(this.mainAttackNumSquads) + 2; i++)
 	{
-		const size = Math.round(this.mainAttackSquadSize)+2;
+		const size = Math.round(this.mainAttackSquadSize) + 2;
 
 		// spawn squad
 		const site_i = pickRandom(sites);

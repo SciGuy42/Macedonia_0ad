@@ -212,4 +212,3 @@ Trigger.prototype.GarrisonShips = function(data)
 		"enabled": true
 	});*/
 }
-

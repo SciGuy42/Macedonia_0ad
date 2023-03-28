@@ -118,7 +118,7 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	{
 
 
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -233,8 +233,8 @@ Trigger.prototype.PatrolOrderList = function(units, p, patrolTargets)
 		ProcessCommand(p, {
 			"type": "patrol",
 			"entities": units,
-			"x": targetPos.x-10.0+(Math.random()*20),
-			"z": targetPos.y-10.0+(Math.random()*20),
+			"x": targetPos.x - 10.0 + (Math.random() * 20),
+			"z": targetPos.y - 10.0 + (Math.random() * 20),
 			"targetClasses": {
 				"attack": unitTargetClass
 			},
@@ -340,7 +340,7 @@ Trigger.prototype.IdleUnitCheck = function(data)
 {
 
 	this.idleCheckCounter += 1;
-	warn("idle unit check "+this.idleCheckCounter);
+	warn("idle unit check " + this.idleCheckCounter);
 	if (this.idleCheckCounter == 36)
 	{
 		// start war
@@ -632,9 +632,9 @@ Trigger.prototype.SpawnMainAttackInterval = function(data)
 
 
 	// for each squad
-	for (let i = 0; i < Math.round(this.mainAttackNumSquads)+2; i++)
+	for (let i = 0; i < Math.round(this.mainAttackNumSquads) + 2; i++)
 	{
-		const size = Math.round(this.mainAttackSquadSize)+2;
+		const size = Math.round(this.mainAttackSquadSize) + 2;
 
 		// spawn squad
 		const site_i = pickRandom(sites);
@@ -1040,12 +1040,12 @@ Trigger.prototype.LevelAdvance = function(data)
 	// step 4: schedule siege spawns
 	const siege_time_delay = 0;
 	const siege_wave_interval = 9;
-	for (let i = 0; i < num_siege_wave_series[this.currentLevel-1]; i++)
+	for (let i = 0; i < num_siege_wave_series[this.currentLevel - 1]; i++)
 	{
 		const data_siege_i = {};
 		data_siege_i.trigger_sites = spawn_trigger_points;
 		data_siege_i.templates = siege_templates;
-		data_siege_i.size = siege_size_series[this.currentLevel-1];
+		data_siege_i.size = siege_size_series[this.currentLevel - 1];
 		data_siege_i.p = 2;
 		data_siege_i.target_player = 1;
 
@@ -1056,12 +1056,12 @@ Trigger.prototype.LevelAdvance = function(data)
 	const wave_time_delay = 10;
 	const wave_interval = 13;
 
-	for (let i = 0; i < num_wave_series[this.currentLevel-1]; i++)
+	for (let i = 0; i < num_wave_series[this.currentLevel - 1]; i++)
 	{
 		const data_siege_i = {};
 		data_siege_i.trigger_sites = spawn_trigger_points;
 		data_siege_i.templates = squad_templates;
-		data_siege_i.size = wave_size_series[this.currentLevel-1]+i*4;
+		data_siege_i.size = wave_size_series[this.currentLevel - 1] + i * 4;
 		data_siege_i.p = 2;
 		data_siege_i.target_player = 1;
 
@@ -1070,12 +1070,12 @@ Trigger.prototype.LevelAdvance = function(data)
 
 	// step 6: some cavalry waves
 	const wave_cav_time_delay = 50;
-	for (let i = 0; i < num_cav_wave_series[this.currentLevel-1]; i++)
+	for (let i = 0; i < num_cav_wave_series[this.currentLevel - 1]; i++)
 	{
 		const data_cav_i = {};
 		data_cav_i.trigger_sites = [cav_wave_trigger_point];
 		data_cav_i.templates = cav_templates;
-		data_cav_i.size = wave_cav_size_series[this.currentLevel-1]+i*4;
+		data_cav_i.size = wave_cav_size_series[this.currentLevel - 1] + i * 4;
 		data_cav_i.p = 2;
 		data_cav_i.target_player = 1;
 

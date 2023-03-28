@@ -116,7 +116,7 @@ Trigger.prototype.SpawnAndStartCavalryAttack = function()
 	const units_pl1 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "Human").filter(TriggerHelper.IsInWorld);
 	warn("Found " + units_pl1.length + " human units");
 
-	let attack_size = Math.floor(units_pl1.length/6.0)+2+this.spawn_attack_bonus;
+	let attack_size = Math.floor(units_pl1.length / 6.0) + 2 + this.spawn_attack_bonus;
 	if (attack_size > 35)
 	{
 		attack_size = 35;
@@ -333,8 +333,8 @@ Trigger.prototype.GreekAttackAction = function(data)
 	const units_pl1 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "Human").filter(TriggerHelper.IsInWorld);
 	warn("Found " + units_pl1.length + " human units");
 
-	const attack_size = Math.floor(units_pl1.length/7.0)+2+this.greek_spawn_attack_bonus;
-	warn("attack size = "+attack_size);
+	const attack_size = Math.floor(units_pl1.length / 7.0) + 2 + this.greek_spawn_attack_bonus;
+	warn("attack size = " + attack_size);
 
 	let attackers = [];
 	for (let i = 0; i < attack_size; ++i)
@@ -428,7 +428,7 @@ Trigger.prototype.GarrisonAction = function(data)
 
 	// greek mercenaries variables
 	cmpTrigger.greekInfTypes = ["units/athen/cavalry_javelineer_a", "units/athen/cavalry_swordsman_a", "units/athen/champion_ranged", "units/athen/champion_marine", "units/athen/champion_infantry", "units/theb_sacred_band", "units/merc_black_cloak"];
-	cmpTrigger.greekSiegeTypes =["units/athen/siege_oxybeles_packed", "units/athen/siege_oxybeles_packed", "units/athen/siege_lithobolos_packed", "units/athen/siege_oxybeles_packed"];
+	cmpTrigger.greekSiegeTypes = ["units/athen/siege_oxybeles_packed", "units/athen/siege_oxybeles_packed", "units/athen/siege_lithobolos_packed", "units/athen/siege_oxybeles_packed"];
 
 	cmpTrigger.greek_camps = [3802, 4578];
 	cmpTrigger.siege_prob = 0.1;

@@ -125,7 +125,7 @@ Trigger.prototype.WalkAndFightRandomtTarget = function(attacker, target_player, 
 	{
 
 
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -153,7 +153,7 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	{
 
 
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -540,7 +540,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		if (id != null && id.classesList.indexOf("Champion") >= 0 && health_s.hitpoints == 0)
 		{
 			this.numLost += 1;
-			warn("num champs lost = "+	this.numLost);
+			warn("num champs lost = " + this.numLost);
 			if (this.numLost >= 15)
 			{
 				TriggerHelper.SetPlayerWon(2, this.VictoryTextFnEnemy, this.VictoryTextFnEnemy);
@@ -801,7 +801,7 @@ Trigger.prototype.SpawnDockDestroyedResponseAttack = function(data)
 			const size_increase = 2;
 
 			// decide how many
-			const size = base_size + i*size_increase;
+			const size = base_size + i * size_increase;
 
 			const data = {};
 
@@ -814,7 +814,7 @@ Trigger.prototype.SpawnDockDestroyedResponseAttack = function(data)
 			data.site = pickRandom(camps);
 			data.target_pos = target_pos;
 
-			this.DoAfterDelay((i+1) * 10 * 1000, "SpawnAttackSquad", data);
+			this.DoAfterDelay((i + 1) * 10 * 1000, "SpawnAttackSquad", data);
 		}
 	}
 };
@@ -859,7 +859,7 @@ Trigger.prototype.SpawnStructureDestroyedResponseAttack = function(target_pos)
 			const size_increase = 2;
 
 			// decide how many
-			const size = base_size + i*size_increase;
+			const size = base_size + i * size_increase;
 
 			const data = {};
 
@@ -872,7 +872,7 @@ Trigger.prototype.SpawnStructureDestroyedResponseAttack = function(target_pos)
 			data.site = pickRandom(camps);
 			data.target_pos = target_pos;
 
-			this.DoAfterDelay((i+1) * 20 * 1000, "SpawnAttackSquad", data);
+			this.DoAfterDelay((i + 1) * 20 * 1000, "SpawnAttackSquad", data);
 		}
 	}
 };
@@ -913,8 +913,8 @@ Trigger.prototype.IntervalSpawnGroundAttack = function(data)
 			let templates;
 			let siege_templates = [];
 
-			const base_size = 14+this.groundAttackCounter;
-			const size_increase = 2*this.groundAttackCounter;
+			const base_size = 14 + this.groundAttackCounter;
+			const size_increase = 2 * this.groundAttackCounter;
 
 			if (i == 0)
 			{
@@ -937,7 +937,7 @@ Trigger.prototype.IntervalSpawnGroundAttack = function(data)
 			templates = templates.concat(siege_templates);
 
 			// decide how many
-			const size = base_size + i*size_increase;
+			const size = base_size + i * size_increase;
 
 			const data = {};
 
@@ -956,7 +956,7 @@ Trigger.prototype.IntervalSpawnGroundAttack = function(data)
 			// data.site = pickRandom(camps);
 			data.site = camps[0];
 
-			this.DoAfterDelay((i+1) * 20 * 1000, "SpawnAttackSquad", data);
+			this.DoAfterDelay((i + 1) * 20 * 1000, "SpawnAttackSquad", data);
 		}
 	}
 
@@ -1075,7 +1075,7 @@ Trigger.prototype.IntervalSpawnAttackShip = function(data)
 
 	}
 
-	const next_attack_delay_secs = 180 + Math.floor(Math.random()*30);
+	const next_attack_delay_secs = 180 + Math.floor(Math.random() * 30);
 
 	this.DoAfterDelay(next_attack_delay_secs * 1000, "IntervalSpawnAttackShip", null);
 };
@@ -1216,18 +1216,18 @@ Trigger.prototype.IntervalSpawnGuards = function(data)
 
 	// warn(uneval(houses.length)+", "+uneval(barracks.length)+", "+uneval(forts.length)+", "+docks.length+", "+corals.length);
 
-	const pop_limit = 100+houses.length*2+barracks.length*6+forts.length*10+docks.length*50+corals.length*5+ships.length*3;
+	const pop_limit = 100 + houses.length * 2 + barracks.length * 6 + forts.length * 10 + docks.length * 50 + corals.length * 5 + ships.length * 3;
 
 
 
 	const units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Unit").filter(TriggerHelper.IsInWorld);
 
-	warn("current pop = "+units.length+"; pop limit = "+pop_limit);
+	warn("current pop = " + units.length + "; pop limit = " + pop_limit);
 	if (units.length < pop_limit)
 	{
 		// decide how many to spawn
-		const size = 5 + Math.floor(houses.length/8) + Math.floor(barracks.length) + docks.length*5+corals.length;
-		warn("spawning size = "+size);
+		const size = 5 + Math.floor(houses.length / 8) + Math.floor(barracks.length) + docks.length * 5 + corals.length;
+		warn("spawning size = " + size);
 
 		// find patrol/spawn sites
 		const patrol_sites = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Structure").filter(TriggerHelper.IsInWorld);
@@ -1422,9 +1422,9 @@ Trigger.prototype.PlayerCommandAction = function(data)
 			// subtract resources
 			const cmpPlayer = QueryPlayerIDInterface(1);
 			// warn(uneval(this.mercOffer));
-			cmpPlayer.AddResource("food", -1*this.mercOffer.total_cost_food);
-			cmpPlayer.AddResource("stone", -1*this.mercOffer.total_cost_stone);
-			cmpPlayer.AddResource("metal", -1*this.mercOffer.total_cost_metal);
+			cmpPlayer.AddResource("food", -1 * this.mercOffer.total_cost_food);
+			cmpPlayer.AddResource("stone", -1 * this.mercOffer.total_cost_stone);
+			cmpPlayer.AddResource("metal", -1 * this.mercOffer.total_cost_metal);
 
 
 			// spawm mercs
@@ -1480,9 +1480,9 @@ Trigger.prototype.RangeActionMercs = function(data)
 		const offer_cost_metal = pickRandom(costs_metal);
 		const template = pickRandom(templates);
 
-		const total_cost_stone = offer_size*offer_cost_stone;
-		const total_cost_food = offer_size*offer_cost_food;
-		const total_cost_metal = offer_size*offer_cost_metal;
+		const total_cost_stone = offer_size * offer_cost_stone;
+		const total_cost_food = offer_size * offer_cost_food;
+		const total_cost_metal = offer_size * offer_cost_metal;
 
 		// check if the player has enough
 		const cmpPlayer = QueryPlayerIDInterface(1);
@@ -1499,7 +1499,7 @@ Trigger.prototype.RangeActionMercs = function(data)
 			this.mercOffer.template = template;
 
 
-			const offer_text = "You encounter a small camp used by local mercenaries. There are currently "+(offer_size)+" mounted archers available for a total price of "+(total_cost_food)+" food, "+(total_cost_stone)+" stone, and "+(total_cost_metal)+" metal. Would you be willing to hire them?";
+			const offer_text = "You encounter a small camp used by local mercenaries. There are currently " + (offer_size) + " mounted archers available for a total price of " + (total_cost_food) + " food, " + (total_cost_stone) + " stone, and " + (total_cost_metal) + " metal. Would you be willing to hire them?";
 
 			this.ShowText(offer_text, "Yes, we need you", "Perhaps later");
 

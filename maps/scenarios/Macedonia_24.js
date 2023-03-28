@@ -66,7 +66,7 @@ Trigger.prototype.VictoryCheck = function(data)
 {
 	// check to make sure player 3 has at least 1 structure left
 	const units_darius = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "Unit").filter(TriggerHelper.IsInWorld);
-	warn("length = "+ units_darius.length);
+	warn("length = " + units_darius.length);
 	if (units_darius.length <= 0)
 	{
 		TriggerHelper.SetPlayerWon(1, this.VictoryTextFn, this.VictoryTextFn);
@@ -97,7 +97,7 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	{
 
 
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -297,7 +297,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				const attackers = [];
 
 				// iterate through them
-				const mod_k = 2-this.inf_reserve_counter;
+				const mod_k = 2 - this.inf_reserve_counter;
 				let i = 0;
 				for (const u of units)
 				{
@@ -349,7 +349,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				const attackers = [];
 
 				// iterate through them
-				const mod_k = 2-this.inf_reserve_counter;
+				const mod_k = 2 - this.inf_reserve_counter;
 				let i = 0;
 				for (const u of units)
 				{
@@ -966,7 +966,7 @@ Trigger.prototype.CheckAssault = function(data)
 {
 	const units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(7), "Unit").filter(TriggerHelper.IsInWorld);
 
-	warn("Found "+uneval(units.length) +" units");
+	warn("Found " + uneval(units.length) + " units");
 
 	if (units.length == 0)
 	{
@@ -1057,7 +1057,7 @@ Trigger.prototype.AttackCavalryWave = function(data)
 	// warn("Found "+uneval(units.length) +" cavalry");
 
 	// iterate through them
-	const mod_k = this.numCavWaves+1-this.waveCavIndex;
+	const mod_k = this.numCavWaves + 1 - this.waveCavIndex;
 	let i = 0;
 
 	const attackers = [];
@@ -1143,7 +1143,7 @@ Trigger.prototype.AttackInftanryWave = function(data)
 	const attackers = [];
 
 	// iterate through them
-	const mod_k = this.numWaves+1-this.waveIndex;
+	const mod_k = this.numWaves + 1 - this.waveIndex;
 	let i = 0;
 	for (const u of units)
 	{
@@ -1518,9 +1518,9 @@ Trigger.prototype.ClusterUnits = function(units, num_clusters)
 
 	// how many clusters
 	const kmeans = new KMeans({
-	  "canvas": null,
-	  "data": dataset,
-	  "k": num_clusters
+		"canvas": null,
+		"data": dataset,
+		"k": num_clusters
 	});
 
 	const num_iterations = 40;
@@ -1790,7 +1790,7 @@ Trigger.prototype.DariusFlees = function(data)
 		disTemplates = disTemplates.concat(unit_templaes);
 
 		cmpPlayer.SetDisabledTemplates(disTemplates);
-		warn("Disabling templates for player "+uneval(p));
+		warn("Disabling templates for player " + uneval(p));
 
 		const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 

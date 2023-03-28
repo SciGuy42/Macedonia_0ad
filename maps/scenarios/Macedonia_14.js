@@ -62,7 +62,7 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	}
 	else
 	{
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -282,7 +282,7 @@ Trigger.prototype.IntervalUnitCheck = function(data)
 };
 
 
-Trigger.prototype.RandomTemplatePers= function(data)
+Trigger.prototype.RandomTemplatePers = function(data)
 {
 	const r = Math.random();
 
@@ -294,7 +294,7 @@ Trigger.prototype.RandomTemplatePers= function(data)
 };
 
 
-Trigger.prototype.RandomTemplateMace= function(data)
+Trigger.prototype.RandomTemplateMace = function(data)
 {
 	const r = Math.random();
 
@@ -309,7 +309,7 @@ Trigger.prototype.RandomTemplateMace= function(data)
 Trigger.prototype.EliteWaveUnitSpawn = function(data)
 {
 	// PERSIA
-	const num_spawn = 3*this.pers_spawn_size;
+	const num_spawn = 3 * this.pers_spawn_size;
 	const attackers_per = [];
 
 	for (let i = 0; i < num_spawn; i++)
@@ -406,7 +406,7 @@ Trigger.prototype.ElephantWaveUnitSpawn = function(data)
 Trigger.prototype.CavalryWaveUnitSpawn = function(data)
 {
 	// PERSIA
-	const num_spawn = 3*this.pers_spawn_size;
+	const num_spawn = 3 * this.pers_spawn_size;
 	const attackers_per = [];
 
 

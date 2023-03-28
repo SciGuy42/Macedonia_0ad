@@ -133,7 +133,7 @@ Trigger.prototype.WalkAndFightRandomtTarget = function(attacker, target_player, 
 	{
 
 
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -161,7 +161,7 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	{
 
 
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -537,7 +537,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
 		if (id != null)
 		{
-			 if (id.classesList.indexOf("Structure") >= 0)
+			if (id.classesList.indexOf("Structure") >= 0)
 			{
 				const health_s = Engine.QueryInterface(data.entity, IID_Health);
 				if (health_s)
@@ -559,7 +559,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		// warn(uneval(id));
 		if (id != null)
 		{
-			 if (id.classesList.indexOf("Trader") >= 0)
+			if (id.classesList.indexOf("Trader") >= 0)
 			{
 				// player 1 gets some food
 				const cmpPlayer = QueryPlayerIDInterface(1);
@@ -997,20 +997,20 @@ Trigger.prototype.FinalAttack = function(data)
 	{
 
 		// schedule
-		this.DoAfterDelay(Math.round(interval_seconds * 1000)*(i+1), "SpawnDesertRaiders", null);
+		this.DoAfterDelay(Math.round(interval_seconds * 1000) * (i + 1), "SpawnDesertRaiders", null);
 
-		if (i == num_waves -1)
+		if (i == num_waves - 1)
 		{
-			const victory_check_delay = Math.round((1+interval_seconds) * 1000)*(i+1);
+			const victory_check_delay = Math.round((1 + interval_seconds) * 1000) * (i + 1);
 			// let victory_check_delay = 1000;
 			this.DoAfterDelay(victory_check_delay, "VictoryCheck", null);
-			warn("scheduling victory check in "+victory_check_delay);
+			warn("scheduling victory check in " + victory_check_delay);
 
 			// count how many gaia soldiers exist
 			const soldiers = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(0), "Soldier").filter(TriggerHelper.IsInWorld);
 			this.gaiaUnitsThreshold = soldiers.length;
 
-			warn("gaia soldiers threshold = "+this.gaiaUnitsThreshold);
+			warn("gaia soldiers threshold = " + this.gaiaUnitsThreshold);
 		}
 
 		// more
@@ -1051,7 +1051,7 @@ Trigger.prototype.SpawnStructureDestroyedResponseAttack = function(target_pos)
 			const size_increase = 5;
 
 			// decide how many
-			const size = base_size + i*size_increase;
+			const size = base_size + i * size_increase;
 
 			const data = {};
 
@@ -1068,7 +1068,7 @@ Trigger.prototype.SpawnStructureDestroyedResponseAttack = function(target_pos)
 			data.target_pos = target_pos;
 			// warn(uneval(data));
 
-			this.DoAfterDelay((i+1) * 20 * 1000, "SpawnAttackSquad", data);
+			this.DoAfterDelay((i + 1) * 20 * 1000, "SpawnAttackSquad", data);
 		}
 	}
 };
@@ -1109,8 +1109,8 @@ Trigger.prototype.IntervalSpawnGroundAttack = function(data)
 			let templates;
 			let siege_templates = [];
 
-			const base_size = 14+this.groundAttackCounter;
-			const size_increase = 2*this.groundAttackCounter;
+			const base_size = 14 + this.groundAttackCounter;
+			const size_increase = 2 * this.groundAttackCounter;
 
 			if (i == 0)
 			{
@@ -1133,7 +1133,7 @@ Trigger.prototype.IntervalSpawnGroundAttack = function(data)
 			templates = templates.concat(siege_templates);
 
 			// decide how many
-			const size = base_size + i*size_increase;
+			const size = base_size + i * size_increase;
 
 			const data = {};
 
@@ -1152,7 +1152,7 @@ Trigger.prototype.IntervalSpawnGroundAttack = function(data)
 			// data.site = pickRandom(camps);
 			data.site = camps[0];
 
-			this.DoAfterDelay((i+1) * 20 * 1000, "SpawnAttackSquad", data);
+			this.DoAfterDelay((i + 1) * 20 * 1000, "SpawnAttackSquad", data);
 		}
 	}
 
@@ -1310,7 +1310,7 @@ Trigger.prototype.QuestTempleComplete = function(data)
 
 Trigger.prototype.RangeActionTemple = function(data)
 {
-//	warn("range action temple");
+	//	warn("range action temple");
 
 
 	if (this.questTempleGiven == false && this.questTempleComplete == false)
@@ -1606,13 +1606,13 @@ Trigger.prototype.IntervalAttritionCheck = function(data)
 	}
 	else
 	{
-		cmpPlayer.AddResource("food", -1*food_loss);
+		cmpPlayer.AddResource("food", -1 * food_loss);
 	}
 
 
 	for (let i = 0; i < num_dead; i++)
 	{
-		this.DoAfterDelay((2+Math.round(Math.random()*6)) * 1000, "KillStarvingSoldier", null);
+		this.DoAfterDelay((2 + Math.round(Math.random() * 6)) * 1000, "KillStarvingSoldier", null);
 	}
 
 	this.DoAfterDelay(20 * 1000, "IntervalAttritionCheck", null);
@@ -1738,8 +1738,8 @@ Trigger.prototype.StatusCheck = function(data)
 	// warn("num starved = "+this.numStarved);
 
 	const num_actual_dead = this.numTroopsDead - this.numTroopsArrived;
-	warn("num dead = "+num_actual_dead);
-	const ratio = (this.numTroopsArrived - num_actual_dead)/(28 * this.armySquadCounter);
+	warn("num dead = " + num_actual_dead);
+	const ratio = (this.numTroopsArrived - num_actual_dead) / (28 * this.armySquadCounter);
 	// warn("ratio = "+ratio);
 
 	// keep track of time
@@ -1927,23 +1927,23 @@ Trigger.prototype.SpawnTravelingArmySquad = function(data)
 
 	// ranged
 	const ranged_template = pickRandom(["units/mace/infantry_slinger_e", "units/mace/infantry_javelineer_e", "units/mace/infantry_archer_e"]);
-	const units_ranged= TriggerHelper.SpawnUnits(site, ranged_template, 10, p);
+	const units_ranged = TriggerHelper.SpawnUnits(site, ranged_template, 10, p);
 	squad_units = squad_units.concat(units_ranged);
 
 	// cavalry
 	const cav_template = pickRandom(["units/mace/champion_cavalry", "units/mace/cavalry_javelineer_e", "units/mace/cavalry_spearman_e"]);
-	const units_cav= TriggerHelper.SpawnUnits(site, cav_template, 6, p);
+	const units_cav = TriggerHelper.SpawnUnits(site, cav_template, 6, p);
 	squad_units = squad_units.concat(units_cav);
 
 	// some slow units
-	const units_support= TriggerHelper.SpawnUnits(site, "units/sele/champion_elephant", 2, p);
+	const units_support = TriggerHelper.SpawnUnits(site, "units/sele/champion_elephant", 2, p);
 	squad_units = squad_units.concat(units_support);
 
 	// all have little health
 	for (const u of squad_units)
 	{
 		const health_s = Engine.QueryInterface(u, IID_Health);
-		health_s.SetHitpoints(5+Math.round(Math.random()*10));
+		health_s.SetHitpoints(5 + Math.round(Math.random() * 10));
 	}
 
 	// make formation
@@ -2071,7 +2071,7 @@ Trigger.prototype.FlipSlaveOwnership = function(data)
 	cmpTrigger.DoAfterDelay(5 * 1000, "SpawnTravelingArmySquad", null);
 
 	// archer ambush starts shortly after first squad makes it to the destination
-	cmpTrigger.DoAfterDelay(Math.round(4.75*60) * 1000, "SpawnArcherAmbush", null);
+	cmpTrigger.DoAfterDelay(Math.round(4.75 * 60) * 1000, "SpawnArcherAmbush", null);
 
 	// attrition check
 	cmpTrigger.DoAfterDelay(60 * 1000, "IntervalAttritionCheck", null);

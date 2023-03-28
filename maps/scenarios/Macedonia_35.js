@@ -104,7 +104,7 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	{
 
 
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -196,8 +196,8 @@ Trigger.prototype.PatrolOrderList = function(units, p, patrolTargets)
 		ProcessCommand(p, {
 			"type": "patrol",
 			"entities": units,
-			"x": targetPos.x-10.0+(Math.random()*20),
-			"z": targetPos.y-10.0+(Math.random()*20),
+			"x": targetPos.x - 10.0 + (Math.random() * 20),
+			"z": targetPos.y - 10.0 + (Math.random() * 20),
 			"targetClasses": {
 				"attack": unitTargetClass
 			},
@@ -733,7 +733,7 @@ Trigger.prototype.SpawnAdvanceAttackSquadInterval = function(data)
 	// decays
 	this.advanceAttackStickBreakProb *= this.advanceAttackStickBreakProbDecay;
 	this.advanceAttackInterval *= this.advanceAttackIntervalDecay;
-	warn(uneval(this.advanceAttackStickBreakProb) +"\t"+uneval(this.advanceAttackInterval));
+	warn(uneval(this.advanceAttackStickBreakProb) + "\t" + uneval(this.advanceAttackInterval));
 
 	// increment level
 	// warn("level = "+uneval(this.advanceAttackLevel));
@@ -850,10 +850,10 @@ Trigger.prototype.SpawnMainAttackInterval = function(data)
 
 
 	// for each squad
-	const size = Math.round(this.mainAttackSquadSize)+2;
+	const size = Math.round(this.mainAttackSquadSize) + 2;
 
-	warn("size = "+size+"\t num squads = "+this.mainAttackNumSquads);
-	for (let i = 0; i < Math.round(this.mainAttackNumSquads)+2; i++)
+	warn("size = " + size + "\t num squads = " + this.mainAttackNumSquads);
+	for (let i = 0; i < Math.round(this.mainAttackNumSquads) + 2; i++)
 	{
 
 
@@ -1118,7 +1118,7 @@ Trigger.prototype.TransferFood = function(data)
 	cmpPlayer1.AddResource("food", resources.food);
 
 	// remove it from player 4
-	cmpPlayer4.AddResource("food", -1*resources.food);
+	cmpPlayer4.AddResource("food", -1 * resources.food);
 
 };
 

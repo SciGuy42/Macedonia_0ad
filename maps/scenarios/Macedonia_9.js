@@ -358,8 +358,8 @@ Trigger.prototype.spawnCatapultShipAttack = function(data)
 	if (docks.length > 0)
 	{
 		const spawn_site = pickRandom(docks);
-		const num_ships = Math.floor(Math.random() * 3)+1;
-		const garrisonCount = Math.floor(Math.random() * 10)+5;
+		const num_ships = Math.floor(Math.random() * 3) + 1;
+		const garrisonCount = Math.floor(Math.random() * 10) + 5;
 
 		for (let k = 0; k < num_ships; k++)
 		{
@@ -378,7 +378,7 @@ Trigger.prototype.spawnCatapultShipAttack = function(data)
 		}
 	}
 
-	this.catapultShipAttackInterval = 0.99 * this.catapultShipAttackInterval;
+	this.catapultShipAttackInterval *= 0.99;
 	this.DoAfterDelay(this.catapultShipAttackInterval, "spawnCatapultShipAttack", null);
 
 };
@@ -395,7 +395,7 @@ Trigger.prototype.spawnInvasionAttack = function(data)
 
 	const cmpPlayer = QueryPlayerIDInterface(random_enemy);
 	const shipTypes = TriggerHelper.GetTemplateNamesByClasses("Warship", QueryPlayerIDInterface(random_enemy, IID_Identity).GetCiv(), undefined, undefined, true);
-	const shipType = shipTypes[shipTypes.length-1];
+	const shipType = shipTypes[shipTypes.length - 1];
 
 	// pick dock
 	const docks = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(random_enemy), "Dock").filter(TriggerHelper.IsInWorld);
@@ -471,7 +471,7 @@ Trigger.prototype.specialShipAttack = function(data)
 		// decide how many ships to spawn
 		const units_pl1 = TriggerHelper.GetEntitiesByPlayer(1);
 		const warships_pl1 = TriggerHelper.MatchEntitiesByClass(units_pl1, "Warship").filter(TriggerHelper.IsInWorld);
-		const shipSpawnCount = Math.floor(warships_pl1.length/4.0 + 2);
+		const shipSpawnCount = Math.floor(warships_pl1.length / 4.0 + 2);
 
 
 		// spawn the ships
@@ -540,7 +540,7 @@ Trigger.prototype.spawnShipAttack = function(data)
 		// decide how many ships to spawn
 		const units_pl1 = TriggerHelper.GetEntitiesByPlayer(1);
 		const warships_pl1 = TriggerHelper.MatchEntitiesByClass(units_pl1, "Warship").filter(TriggerHelper.IsInWorld);
-		const shipSpawnCount = Math.floor(warships_pl1.length/4.0 + 1);
+		const shipSpawnCount = Math.floor(warships_pl1.length / 4.0 + 1);
 
 		const garrisonCount = this.attackShipGarrison;
 
@@ -588,7 +588,7 @@ Trigger.prototype.spawnShipAttack = function(data)
 		}
 	}
 
-	this.shipAttackInterval = 0.995 * this.shipAttackInterval;
+	this.shipAttackInterval *= 0.995;
 	this.DoAfterDelay(this.shipAttackInterval, "spawnShipAttack", null);
 
 };
@@ -786,7 +786,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		const cmpTechnologyManager_p = Engine.QueryInterface(cmpPlayer_p.entity, IID_TechnologyManager);
 		cmpTechnologyManager_p.ResearchTechnology("phase_town");
 		cmpTechnologyManager_p.ResearchTechnology("phase_city");
-	// cmpPlayer_p.SetDisabledTemplates(disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv()));
+		// cmpPlayer_p.SetDisabledTemplates(disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv()));
 	}
 
 	// restrict units for one of the enemies

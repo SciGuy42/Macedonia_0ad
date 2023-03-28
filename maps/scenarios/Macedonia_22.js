@@ -76,7 +76,7 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	{
 
 
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -328,7 +328,7 @@ Trigger.prototype.InvasionRangeAction = function(data)
 				if (this.carthageInvasionShipGarrisonSize < 49)
 					this.carthageInvasionShipGarrisonSize += 2;
 
-				warn("Next invasion in "+uneval(this.carthageInvasionAttackInterval));
+				warn("Next invasion in " + uneval(this.carthageInvasionAttackInterval));
 				this.DoAfterDelay(this.carthageInvasionAttackInterval * 1000, "SpawnNavalInvasionAttack", null);
 
 
@@ -788,7 +788,7 @@ Trigger.prototype.SpawnAchaeanPatrol = function(data)
 				{
 					if (orders[0].type == "Patrol")
 					{
-						num_patroling+=1;
+						num_patroling += 1;
 					}
 
 				}
@@ -864,7 +864,7 @@ Trigger.prototype.SpawnArcadianPatrol = function(data)
 				{
 					if (orders[0].type == "Patrol")
 					{
-						num_patroling+=1;
+						num_patroling += 1;
 					}
 
 				}
@@ -1349,7 +1349,7 @@ Trigger.prototype.SpawnAssault = function(data)
 			disTemplates = disTemplates.concat(unit_templaes);
 
 			cmpPlayer.SetDisabledTemplates(disTemplates);
-			warn("Disabling templates for player "+uneval(p));
+			warn("Disabling templates for player " + uneval(p));
 		}
 
 		const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);

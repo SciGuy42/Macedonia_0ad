@@ -83,10 +83,10 @@ Trigger.prototype.StartRepeatAttacks = function()
 	this.gaul_cavalary_started = true;
 
 	// schedule next attack
-	this.DoAfterDelay((120*1000)+this.gaul_cavalry_interval, "SpawnAndStartCavalryAttack", null);
+	this.DoAfterDelay((120 * 1000) + this.gaul_cavalry_interval, "SpawnAndStartCavalryAttack", null);
 
 	// also start ship attacks
-	this.DoAfterDelay((120*1000)+this.shipAttackDelay, "SpawnShip", null);
+	this.DoAfterDelay((120 * 1000) + this.shipAttackDelay, "SpawnShip", null);
 
 	// disabled for now, not implemented well
 	// this.DoAfterDelay(this.invasionAttackDelay,"SpawnInvasionShip",null);
@@ -199,7 +199,7 @@ Trigger.prototype.SpawnAndStartCavalryAttack = function()
 		const units_pl1 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "Human").filter(TriggerHelper.IsInWorld);
 		// warn("Found " + units_pl1.length + " human units");
 
-		const attack_size = Math.floor(units_pl1.length/4.0)+2+this.spawn_cav_bonus;
+		const attack_size = Math.floor(units_pl1.length / 4.0) + 2 + this.spawn_cav_bonus;
 		let attackers = [];
 		for (let i = 0; i < attack_size; ++i)
 		{
@@ -240,7 +240,7 @@ Trigger.prototype.SpawnAndStartCavalryAttack = function()
 
 
 	// schedule next attack
-	const nextAttackDelay = Math.round(this.gaul_cavalry_interval+(Math.random()*120*1000));
+	const nextAttackDelay = Math.round(this.gaul_cavalry_interval + (Math.random() * 120 * 1000));
 	// warn("next attack in "+nextAttackDelay);
 	this.DoAfterDelay(nextAttackDelay, "SpawnAndStartCavalryAttack", null);
 };
@@ -403,7 +403,7 @@ Trigger.prototype.SpawnShip = function()
 	// decide how many ships to spawn
 	const units_pl1 = TriggerHelper.GetEntitiesByPlayer(1);
 	const warships_pl1 = TriggerHelper.MatchEntitiesByClass(units_pl1, "Warship").filter(TriggerHelper.IsInWorld);
-	const shipSpawnCount = Math.floor(warships_pl1.length/4.0 + 1)+this.spawn_ship_bonus;
+	const shipSpawnCount = Math.floor(warships_pl1.length / 4.0 + 1) + this.spawn_ship_bonus;
 
 	// warn("Spawning " + shipSpawnCount + " ships");
 
@@ -423,7 +423,7 @@ Trigger.prototype.SpawnShip = function()
 	}
 
 	// schedule next spawn -- add some randomnes
-	this.DoAfterDelay(this.shipAttackInterval+Math.floor(Math.random() * 60 * 1000), "SpawnShip", null);
+	this.DoAfterDelay(this.shipAttackInterval + Math.floor(Math.random() * 60 * 1000), "SpawnShip", null);
 
 };
 
@@ -593,7 +593,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		this.spawn_ship_bonus = 0;
 		this.spawn_cav_bonus = 4;
 		this.ship_garrison_size = 6;
-		this.shipAttackInterval *=0.95;
+		this.shipAttackInterval *= 0.95;
 
 	}
 	else if (difficulty == 2)
@@ -601,7 +601,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		this.spawn_ship_bonus = 1;
 		this.spawn_cav_bonus = 8;
 		this.ship_garrison_size = 10;
-		this.shipAttackInterval *=0.9;
+		this.shipAttackInterval *= 0.9;
 	}
 };
 
