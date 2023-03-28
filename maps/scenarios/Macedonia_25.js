@@ -1814,9 +1814,9 @@ Trigger.prototype.InitGaiaClusters = function(data)
 		
 		/*if (p == 4 || p == 6)
 		{
-			cmpPlayer.AddStartingTechnology("trade_commercial_treaty");
-			cmpPlayer.AddStartingTechnology("trade_gain_01");
-			cmpPlayer.AddStartingTechnology("trade_gain_02");
+			cmpTechnologyManager.ResearchTechnology("trade_commercial_treaty");
+			cmpTechnologyManager.ResearchTechnology("trade_gain_01");
+			cmpTechnologyManager.ResearchTechnology("trade_gain_02");
 		}*/
 		
 		if (p == 1)

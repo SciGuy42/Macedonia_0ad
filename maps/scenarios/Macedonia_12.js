@@ -1050,13 +1050,13 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		
 		if (p == 2 || p == 3)
 		{
-			cmpPlayer.AddStartingTechnology("phase_town_athen");
-			//cmpPlayer.AddStartingTechnology("phase_city_athen");
+			cmpTechnologyManager.ResearchTechnology("phase_town_athen");
+			//cmpTechnologyManager.ResearchTechnology("phase_city_athen");
 		}
 		else
 		{
-			cmpPlayer.AddStartingTechnology("phase_town_generic");
-			cmpPlayer.AddStartingTechnology("phase_city_generic");
+			cmpTechnologyManager.ResearchTechnology("phase_town_generic");
+			cmpTechnologyManager.ResearchTechnology("phase_city_generic");
 		}
 	}
 

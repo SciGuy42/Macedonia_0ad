@@ -774,19 +774,21 @@ Trigger.prototype.GarrisonEntities = function(data)
 	
 	//modify player 1 techs and pop bonus
 	let cmpPlayer = QueryPlayerIDInterface(1);
+	let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 	cmpPlayer.SetPopulationBonuses(100);
-	cmpPlayer.AddStartingTechnology("phase_town");
-	cmpPlayer.AddStartingTechnology("phase_city");
-	cmpPlayer.AddStartingTechnology("hellenes/special_iphicratean_reforms");
-	cmpPlayer.AddStartingTechnology("unlock_shared_los");
+	cmpTechnologyManager.ResearchTechnology("phase_town");
+	cmpTechnologyManager.ResearchTechnology("phase_city");
+	cmpTechnologyManager.ResearchTechnology("iphicratean_reforms");
+	cmpTechnologyManager.ResearchTechnology("unlock_shared_los");
 	cmpPlayer.SetDisabledTemplates(disabledTemplates(QueryPlayerIDInterface(1, IID_Identity).GetCiv()));
 	
 	//set techs and restrictions on AI players
 	for (let p = 2; p <= 4; ++p)
 	{
 		let cmpPlayer_p = QueryPlayerIDInterface(p);
-		cmpPlayer_p.AddStartingTechnology("phase_town");
-		cmpPlayer_p.AddStartingTechnology("phase_city");
+		let cmpTechnologyManager_p = Engine.QueryInterface(cmpPlayer_p.entity, IID_TechnologyManager);
+		cmpTechnologyManager_p.ResearchTechnology("phase_town");
+		cmpTechnologyManager_p.ResearchTechnology("phase_city");
 	//cmpPlayer_p.SetDisabledTemplates(disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv()));
 	}
 	

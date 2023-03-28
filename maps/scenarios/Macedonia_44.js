@@ -2695,7 +2695,7 @@ Trigger.prototype.FlipSlaveOwnership = function(data)
 		//no pop limit
 		if (p == 1)
 		{
-			//cmpPlayer.AddStartingTechnology("unlock_shared_los");
+			//cmpTechnologyManager.ResearchTechnology("unlock_shared_los");
 			cmpPlayer.SetPopulationBonuses(300);
 		}
 		else if (p == 2 || p == 3 || p == 5 || p == 8 || p == 4)

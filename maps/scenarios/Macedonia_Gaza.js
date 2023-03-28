@@ -1087,31 +1087,31 @@ Trigger.prototype.CheckForCC = function(data)
 	
 		let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 		
-		cmpPlayer.AddStartingTechnology("phase_town_generic");
-		cmpPlayer.AddStartingTechnology("phase_city_generic");
+		cmpTechnologyManager.ResearchTechnology("phase_town_generic");
+		cmpTechnologyManager.ResearchTechnology("phase_city_generic");
 		
 		if (p == 2) //boost forts
 		{
-			cmpPlayer.AddStartingTechnology("tower_armour");
-			cmpPlayer.AddStartingTechnology("tower_range");
-			cmpPlayer.AddStartingTechnology("tower_watch");
-			cmpPlayer.AddStartingTechnology("tower_murderholes");
-			cmpPlayer.AddStartingTechnology("tower_crenellations");
+			cmpTechnologyManager.ResearchTechnology("tower_armour");
+			cmpTechnologyManager.ResearchTechnology("tower_range");
+			cmpTechnologyManager.ResearchTechnology("tower_watch");
+			cmpTechnologyManager.ResearchTechnology("tower_murderholes");
+			cmpTechnologyManager.ResearchTechnology("tower_crenellations");
 		}
 		
 		if (p == 1)
 		{
 			cmpPlayer.SetPopulationBonuses(400);
 			
-			cmpPlayer.AddStartingTechnology("unlock_shared_los");
-			cmpPlayer.AddStartingTechnology("siege_armor");
-			cmpPlayer.AddStartingTechnology("siege_attack");
-			cmpPlayer.AddStartingTechnology("siege_bolt_accuracy");
-			cmpPlayer.AddStartingTechnology("siege_packing");
-			cmpPlayer.AddStartingTechnology("unlock_champion_units");
-			cmpPlayer.AddStartingTechnology("unlock_spies");
-			cmpPlayer.AddStartingTechnology("speed_cavalry_01");
-			cmpPlayer.AddStartingTechnology("speed_cavalry_02");
+			cmpTechnologyManager.ResearchTechnology("unlock_shared_los");
+			cmpTechnologyManager.ResearchTechnology("siege_armor");
+			cmpTechnologyManager.ResearchTechnology("siege_attack");
+			cmpTechnologyManager.ResearchTechnology("siege_bolt_accuracy");
+			cmpTechnologyManager.ResearchTechnology("siege_packing");
+			cmpTechnologyManager.ResearchTechnology("unlock_champion_units");
+			cmpTechnologyManager.ResearchTechnology("unlock_spies");
+			cmpTechnologyManager.ResearchTechnology("speed_cavalry_01");
+			cmpTechnologyManager.ResearchTechnology("speed_cavalry_02");
 			
 			//add some siege techs
 			

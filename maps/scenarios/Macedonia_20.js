@@ -1567,7 +1567,6 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		{
 			cmpTechnologyManager.ResearchTechnology("unlock_shared_los");
 			cmpTechnologyManager.ResearchTechnology("siege_bolt_accuracy");
-			//cmpPlayer.AddStartingTechnology("vision_sibylline");
 			
 		}
 		

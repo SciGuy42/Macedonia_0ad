@@ -97,10 +97,10 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			
 			//get some tech
 			let cmpPlayer = QueryPlayerIDInterface(1);
-			//cmpPlayer.AddStartingTechnology("attack_infantry_ranged_01");
-			//cmpPlayer.AddStartingTechnology("phase_city");
-
+			
 			let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
+			//cmpTechnologyManager.ResearchTechnology("attack_infantry_ranged_01");
+			//cmpTechnologyManager.ResearchTechnology("phase_city");
 			cmpTechnologyManager.ResearchTechnology("archer_attack_spread");
 			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
 			cmpTechnologyManager.ResearchTechnology("cavalry_health");
