@@ -1259,11 +1259,11 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 			}
 			else if (id.template.GenericName == "Armored Swordsman")
 			{
-				template = "units/mace/thorakites";
+				template = "units/merc_thorakites";
 			}
 			else if (id.template.GenericName == "Heavy Skirmisher")
 			{
-				template = "units/mace/thureophoros";
+				template = "units/merc_thureophoros";
 			}
 
 		}

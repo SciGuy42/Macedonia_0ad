@@ -659,7 +659,7 @@ Trigger.prototype.SpawnInterevalPatrol = function(data)
 Trigger.prototype.SpawnIntervalPtolemyAttack = function(data)
 {
 	// templates
-	const templates = ["units/athen/champion_ranged", "units/athen/champion_marine", "units/athen/champion_marine", "units/mace/champion_infantry_spearman", "units/mace/champion_infantry_spearman_02", "units/mace/thorakites", "units/mace/thureophoros"];
+	const templates = ["units/athen/champion_ranged", "units/athen/champion_marine", "units/athen/champion_marine", "units/mace/champion_infantry_spearman", "units/mace/champion_infantry_spearman_02", "units/merc_thorakites", "units/merc_thureophoros"];
 
 	// how big each squad
 	const squad_size = this.ptolAttackSize;

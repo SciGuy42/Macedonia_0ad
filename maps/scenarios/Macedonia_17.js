@@ -372,7 +372,7 @@ Trigger.prototype.SpawnAlliedInvasionAttack = function(data)
 
 	// warn(uneval(result));
 
-	// check if alluy have docks
+	// check if allies have docks
 	const have_docks = false;
 	const spawn_docks = [];
 	const docks_e = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(3), "Dock").filter(TriggerHelper.IsInWorld);
