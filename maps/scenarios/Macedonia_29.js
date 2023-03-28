@@ -1172,9 +1172,7 @@ Trigger.prototype.ResearchTechs = function(data)
 			cmpTechnologyManager.ResearchTechnology("cavalry_health");
 			
 			//faster training for infantry
-			cmpTechnologyManager.ResearchTechnology("infantry_cost_time");
 			cmpTechnologyManager.ResearchTechnology("hoplite_tradition");
-			
 			
 			//better infantry
 			cmpTechnologyManager.ResearchTechnology("agoge");

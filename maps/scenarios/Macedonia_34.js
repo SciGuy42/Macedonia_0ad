@@ -864,7 +864,6 @@ Trigger.prototype.ResearchTechs = function(data)
 		cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
 		
 		//faster training for infantry
-		cmpTechnologyManager.ResearchTechnology("infantry_cost_time");
 		cmpTechnologyManager.ResearchTechnology("hoplite_tradition");
 		
 	}

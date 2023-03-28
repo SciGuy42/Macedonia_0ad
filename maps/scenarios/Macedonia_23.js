@@ -1524,8 +1524,6 @@ Trigger.prototype.ResearchStartingTradeTech = function(data)
 			cmpTechnologyManager.ResearchTechnology("trade_commercial_treaty");
 			cmpTechnologyManager.ResearchTechnology("ship_movement_speed");
 			
-			cmpTechnologyManager.ResearchTechnology("infantry_cost_time");
-			
 			//trireme can train units
 			cmpTechnologyManager.ResearchTechnology("iphicratean_reforms");
 			
