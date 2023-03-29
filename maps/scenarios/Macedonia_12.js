@@ -251,7 +251,6 @@ Trigger.prototype.IntervalActionPlayerFour = function(data)
 
 	for (const u of units_pl4)
 	{
-		warn(uneval(["u, 2, unitTargetClass", u, 2, unitTargetClass]));
 		const target_u = this.FindClosestTarget(u, 2, unitTargetClass);
 
 		ProcessCommand(4, {

@@ -78,7 +78,7 @@ Trigger.prototype.SpawnAndStartCavalryAttack = function()
 	// check to see if possible units to spawn need to change -- gets harder periodically
 	if (this.gaul_cav_attack_counter == 2)
 	{
-		this.gaul_cavalry_types = ["units/gaul/cavalry_swordsman_b", "units/gaul/cavalry_javelineer_b", "units/brit/war_dog_b"];
+		this.gaul_cavalry_types = ["units/gaul/cavalry_swordsman_b", "units/gaul/cavalry_javelineer_b", "units/brit/war_dog"];
 	}
 	else if (this.gaul_cav_attack_counter == 3)
 	{

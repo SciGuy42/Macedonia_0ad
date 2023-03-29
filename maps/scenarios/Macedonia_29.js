@@ -919,7 +919,7 @@ Trigger.prototype.SpawnCavalryRaidSquad = function(data)
 	const spawn_site = pickRandom(this.GetTriggerPoints(triggerPointRaid));
 
 	// templates
-	const cav_templates = ["units/pers/champion_cavalry", "units/pers/champion_cavalry_archer", "units/pers/champion_cavalry_archer", "units/pers/cavalry_javelinist_e", "units/pers/cavalry_swordsman_e"];
+	const cav_templates = ["units/pers/champion_cavalry", "units/pers/champion_cavalry_archer", "units/pers/champion_cavalry_archer", "units/pers/cavalry_javelineer_e", "units/pers/cavalry_axeman_e"];
 
 	const num_attackers = 8;
 	const attackers = [];

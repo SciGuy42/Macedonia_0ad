@@ -225,7 +225,7 @@ Trigger.prototype.SpawnInitialPatrol = function(data)
 	}
 
 	// templates, mostly archers
-	// let cav_templates = ["units/pers/champion_cavalry","units/pers/champion_cavalry_archer","units/pers/cavalry_javelineer_e","units/pers/cavalry_javelinist_a","units/pers/cavalry_swordsman_e","units/pers/cavalry_swordsman_a","units/pers/cavalry_spearman_e","units/pers/cavalry_spearman_a","units/pers/cavalry_spearman_b"];
+	// let cav_templates = ["units/pers/champion_cavalry","units/pers/champion_cavalry_archer","units/pers/cavalry_javelineer_e","units/pers/cavalry_javelineer_a","units/pers/cavalry_axeman_e","units/pers/cavalry_axeman_a","units/pers/cavalry_spearman_e","units/pers/cavalry_spearman_a","units/pers/cavalry_spearman_b"];
 
 	const cav_templates = ["units/pers/champion_cavalry", "units/pers/champion_cavalry_archer", "units/pers/cavalry_javelineer_e", "units/pers/cavalry_javelineer_a", "units/pers/cavalry_axeman_e", "units/pers/cavalry_axeman_a", "units/pers/cavalry_spearman_e", "units/pers/cavalry_spearman_a", "units/pers/cavalry_spearman_b"];
 

@@ -1281,7 +1281,7 @@ Trigger.prototype.RangeActionTeleportD = function(data)
 
 		if (p == 1)
 		{
-			// disTemplates = disTemplates.concat(["units/mace/hero_alexander_iii","units/mace/hero_craterus","units/mace/hero_philip_ii","units/mace/hero_demetrius","units/mace/hero_pyrhus"]);
+			// disTemplates = disTemplates.concat(["units/mace/hero_alexander_iii","units/mace/hero_craterus","units/mace/hero_philip_ii","units/mace/hero_demetrius_i","units/mace/hero_pyrrhus_i"]);
 			disTemplates = disTemplates.concat(["units/mace/ship_bireme", "units/mace/ship_trireme"]);
 		}
 

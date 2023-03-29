@@ -626,7 +626,7 @@ Trigger.prototype.SpawnIntervalPatrol = function(data)
 		const num_patrols = 1;
 		const patrol_size = 1;
 
-		const inf_templates = ["units/pers/champion_infantry", "units/pers/champion_infantry", "units/pers/champion_infantry", "units/pers/champion_infantry", "units/pers/infantry_archer_e", "units/pers/infantry_javelinist_e"];
+		const inf_templates = ["units/pers/champion_infantry", "units/pers/champion_infantry", "units/pers/champion_infantry", "units/pers/champion_infantry", "units/pers/infantry_archer_e", "units/pers/infantry_javelineer_e"];
 
 		// spawn infantry
 		for (let j = 0; j < num_patrols; j++)
@@ -668,7 +668,7 @@ Trigger.prototype.SpawnFanaticSquad = function(data)
 	if (spwan_sites.length == 0)
 		return;
 
-	const inf_templates = ["units/pers/champion_infantry", "units/pers/infantry_spearman_a", "units/pers/infantry_spearman_b", "units/pers/infantry_spearman_e", "units/pers/infantry_archer_a", "units/pers/infantry_javelinist_a"];
+	const inf_templates = ["units/pers/champion_infantry", "units/pers/infantry_spearman_a", "units/pers/infantry_spearman_b", "units/pers/infantry_spearman_e", "units/pers/infantry_archer_a", "units/pers/infantry_javelineer_a"];
 
 	const units = [];
 	const site_j = pickRandom(spwan_sites);
@@ -750,7 +750,7 @@ Trigger.prototype.SpawnInitialPatrol = function(data)
 	const num_patrols = 115;
 	const patrol_size = 1;
 
-	const inf_templates = ["units/pers/champion_infantry", "units/pers/infantry_spearman_a", "units/pers/infantry_spearman_b", "units/pers/infantry_spearman_e", "units/pers/infantry_archer_a", "units/pers/infantry_javelinist_a"];
+	const inf_templates = ["units/pers/champion_infantry", "units/pers/infantry_spearman_a", "units/pers/infantry_spearman_b", "units/pers/infantry_spearman_e", "units/pers/infantry_archer_a", "units/pers/infantry_javelineer_a"];
 
 	// spawn infantry
 	for (let j = 0; j < num_patrols; j++)
@@ -893,7 +893,7 @@ Trigger.prototype.SpawnCavalryAttack = function(data)
 		num_attackers = min_size;
 
 	// types
-	const cav_templates = ["units/pers/cavalry_archer_a", "units/pers/cavalry_javelinist_a", "units/pers/cavalry_spearman_a", "units/pers/cavalry_swordsman_a", "units/pers/champion_cavalry", "units/pers/champion_cavalry_archer"];
+	const cav_templates = ["units/pers/cavalry_archer_a", "units/pers/cavalry_javelineer_a", "units/pers/cavalry_spearman_a", "units/pers/cavalry_axeman_a", "units/pers/champion_cavalry", "units/pers/champion_cavalry_archer"];
 	const attackers = [];
 
 	// spawn attackers

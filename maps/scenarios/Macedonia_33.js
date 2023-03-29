@@ -316,7 +316,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let e of towers_s)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/maur/champion_infantry",3,p);
+			let archers_e = TriggerHelper.SpawnUnits(e, "units/maur/champion_infantry_maceman",3,p);
 
 			for (let a of archers_e)
 			{

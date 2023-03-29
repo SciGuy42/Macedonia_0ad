@@ -800,7 +800,7 @@ Trigger.prototype.SpawnMainAttackInterval = function(data)
 	const p = 2;
 
 	// templates
-	const templates = ["units/maur/champion_infantry", "units/maur/champion_maiden", "units/maur/champion_maiden_archer", "units/maur/elephant_archer_e", "units/maur/infantry_swordsman_e", "units/maur/infantry_spearman_e", "units/maur/infantry_swordsman_e", "units/maur/champion_elephant"];
+	const templates = ["units/maur/champion_infantry_maceman", "units/maur/champion_maiden", "units/maur/champion_maiden_archer", "units/maur/elephant_archer_e", "units/maur/infantry_swordsman_e", "units/maur/infantry_spearman_e", "units/maur/infantry_swordsman_e", "units/maur/champion_elephant"];
 
 	// sites
 	const sites = this.GetTriggerPoints(triggerPointsMainAttack);

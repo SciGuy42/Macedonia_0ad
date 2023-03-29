@@ -475,7 +475,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of towers)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/maur/champion_infantry",5,p);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/maur/champion_infantry_maceman",5,p);
 
 			for (let a of archers_e)
 			{
@@ -489,7 +489,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of forts)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/maur/champion_infantry",20,p);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/maur/champion_infantry_maceman",20,p);
 
 			for (let a of archers_e)
 			{
@@ -1064,7 +1064,7 @@ Trigger.prototype.SpawnDesertRaiders = function(data)
 
 	for (let i = 0; i < 90; i++)
 	{
-		const templates = ["units/pers/champion_infantry", "units/pers/infantry_archer_e", "units/pers/infantry_javelinist_e", "units/pers/kardakes_hoplite"];
+		const templates = ["units/pers/champion_infantry", "units/pers/infantry_archer_e", "units/pers/infantry_javelineer_e", "units/pers/kardakes_hoplite"];
 
 		// pick patrol sites
 		const sites = [pickRandom(spawn_sites), pickRandom(spawn_sites), pickRandom(spawn_sites), pickRandom(spawn_sites)];
@@ -1267,7 +1267,7 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 			}
 
 		}
-		else if (template == "units/mace/cavalry_javelinist_b" || template == "units/mace/cavalry_javelineer_a")
+		else if (template == "units/mace/cavalry_javelineer_b" || template == "units/mace/cavalry_javelineer_a")
 		{
 			template = "units/mace/cavalry_javelineer_e";
 		}
@@ -1410,7 +1410,7 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 
 		if (p == 1)
 		{
-			// disTemplates = disTemplates.concat(["units/mace/hero_alexander_iii","units/mace/hero_craterus","units/mace/hero_philip_ii","units/mace/hero_demetrius","units/mace/hero_pyrhus"]);
+			// disTemplates = disTemplates.concat(["units/mace/hero_alexander_iii","units/mace/hero_craterus","units/mace/hero_philip_ii","units/mace/hero_demetrius_i","units/mace/hero_pyrrhus_i"]);
 			// cmpPlayer.SetDisabledTemplates(disTemplates);
 		}
 		else if (p == 4 || p == 5 || p == 6)

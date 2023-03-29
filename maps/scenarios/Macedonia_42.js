@@ -460,7 +460,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of outposts)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/brit/champion_infantry",1,p);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/brit/champion_infantry_swordsman",1,p);
 
 			for (let a of archers_e)
 			{
@@ -918,18 +918,18 @@ Trigger.prototype.IntervalSpawnGroundAttack = function(data)
 
 			if (i == 0)
 			{
-				templates = ["units/pers/infantry_spearman_a", "units/pers/infantry_spearman_a", "units/pers/infantry_javelinist_a", "units/pers/infantry_archer_a", "units/pers/cavalry_spearman_a", "units/pers/cavalry_swordsman_a", "units/pers/cavalry_javelinist_a"];
+				templates = ["units/pers/infantry_spearman_a", "units/pers/infantry_spearman_a", "units/pers/infantry_javelineer_a", "units/pers/infantry_archer_a", "units/pers/cavalry_spearman_a", "units/pers/cavalry_axeman_a", "units/pers/cavalry_javelineer_a"];
 			}
 			else if (i == 1)
 			{
-				templates = ["units/pers/infantry_spearman_e", "units/pers/infantry_javelinist_e", "units/pers/infantry_archer_e", "units/pers/cavalry_spearman_e", "units/pers/cavalry_swordsman_e", "units/pers/cavalry_javelinist_e", "units/pers/champion_infantry", "units/pers/champion_infantry", "units/pers/cavalry_archer_a"];
+				templates = ["units/pers/infantry_spearman_e", "units/pers/infantry_javelineer_e", "units/pers/infantry_archer_e", "units/pers/cavalry_spearman_e", "units/pers/cavalry_axeman_e", "units/pers/cavalry_javelineer_e", "units/pers/champion_infantry", "units/pers/champion_infantry", "units/pers/cavalry_archer_a"];
 
 				siege_templates = ["units/pers/champion_elephant"];
 
 			}
 			else if (i == 2)
 			{
-				templates = ["units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher", "units/pers/infantry_archer_e", "units/pers/champion_cavalry", "units/pers/cavalry_swordsman_e", "units/pers/cavalry_javelinist_e", "units/pers/champion_infantry", "units/pers/cavalry_archer_e"];
+				templates = ["units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher", "units/pers/infantry_archer_e", "units/pers/champion_cavalry", "units/pers/cavalry_axeman_e", "units/pers/cavalry_javelineer_e", "units/pers/champion_infantry", "units/pers/cavalry_archer_e"];
 
 				siege_templates = ["units/pers/champion_elephant", "units/pers/siege_ram"];
 			}
@@ -1044,7 +1044,7 @@ Trigger.prototype.IntervalSpawnAttackShip = function(data)
 
 		const ship_spawned = TriggerHelper.SpawnUnits(pickRandom(docks), ship_template, 1, p);
 
-		TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/maur/champion_infantry", garrison_size, p);
+		TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/maur/champion_infantry_maceman", garrison_size, p);
 
 
 
@@ -1110,7 +1110,7 @@ Trigger.prototype.IntervalSpawnPatrolShip = function(data)
 
 		const ship_spawned = TriggerHelper.SpawnUnits(pickRandom(docks), ship_template, 1, p);
 
-		TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/maur/champion_infantry", garrison_size, p);
+		TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/maur/champion_infantry_maceman", garrison_size, p);
 
 		const trigger_sites = this.GetTriggerPoints(triggerPointsShipPatrol);
 
@@ -1341,7 +1341,7 @@ Trigger.prototype.SpawnDesertRaiders = function(data)
 
 	for (let i = 0; i < 90; i++)
 	{
-		const templates = ["units/pers/champion_infantry", "units/pers/infantry_archer_e", "units/pers/infantry_javelinist_e", "units/pers/kardakes_hoplite"];
+		const templates = ["units/pers/champion_infantry", "units/pers/infantry_archer_e", "units/pers/infantry_javelineer_e", "units/pers/kardakes_hoplite"];
 
 		// pick patrol sites
 		const sites = [pickRandom(spawn_sites), pickRandom(spawn_sites), pickRandom(spawn_sites), pickRandom(spawn_sites)];
@@ -1536,7 +1536,7 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 			}
 			else if (id.template.GenericName == "Armored Swordsman")
 			{
-				template = "units/mace/thorakites";
+				template = "units/merc_thorakites";
 			}
 			else if (id.template.GenericName == "Heavy Skirmisher")
 			{
@@ -1544,7 +1544,7 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 			}
 
 		}
-		else if (template == "units/mace/cavalry_javelinist_b" || template == "units/mace/cavalry_javelineer_a")
+		else if (template == "units/mace/cavalry_javelineer_b" || template == "units/mace/cavalry_javelineer_a")
 		{
 			template = "units/mace/cavalry_javelineer_e";
 		}

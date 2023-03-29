@@ -619,7 +619,7 @@ Trigger.prototype.SpawnMainAttackInterval = function(data)
 	const p = 2;
 
 	// templates
-	const templates = ["units/maur/champion_infantry", "units/maur/champion_maiden", "units/maur/champion_maiden_archer", "units/maur/elephant_archer_e", "units/maur/infantry_swordsman_e", "units/maur/infantry_spearman_e", "units/maur/infantry_swordsman_e", "units/maur/champion_elephant"];
+	const templates = ["units/maur/champion_infantry_maceman", "units/maur/champion_maiden", "units/maur/champion_maiden_archer", "units/maur/elephant_archer_e", "units/maur/infantry_swordsman_e", "units/maur/infantry_spearman_e", "units/maur/infantry_swordsman_e", "units/maur/champion_elephant"];
 
 	// sites
 	const sites = this.GetTriggerPoints(triggerPointsMainAttack);
@@ -1005,12 +1005,12 @@ Trigger.prototype.LevelAdvance = function(data)
 	}
 	/* else if (this.currentLevel == 3)
 	{
-		squad_templates = ["units/maur/champion_infantry","units/maur/infantry_spearman_e","units/maur/infantry_swordsman_e","units/maur/champion_maiden","units/maur/infantry_archer_e","units/maur/champion_maiden","units/maur/champion_infantry","units/maur/champion_maiden_archer","units/maur/elephant_archer_e","units/maur/champion_elephant","units/maur/cavalry_javelineer_e","units/maur/cavalry_swordsman_e"];
+		squad_templates = ["units/maur/champion_infantry_maceman","units/maur/infantry_spearman_e","units/maur/infantry_swordsman_e","units/maur/champion_maiden","units/maur/infantry_archer_e","units/maur/champion_maiden","units/maur/champion_infantry_maceman","units/maur/champion_maiden_archer","units/maur/elephant_archer_e","units/maur/champion_elephant","units/maur/cavalry_javelineer_e","units/maur/cavalry_swordsman_e"];
 		wave_templates = squad_templates;
 		siege_templates = ["units/maur/champion_elephant","units/mace/siege_oxybeles_packed","units/pers/siege_ram"];
 	}
 	else {
-		squad_templates = ["units/maur/champion_infantry","units/maur/infantry_spearman_e","units/maur/infantry_swordsman_e","units/maur/champion_maiden","units/maur/infantry_archer_e","units/maur/champion_maiden","units/maur/champion_infantry","units/maur/champion_maiden_archer","units/maur/elephant_archer_e","units/maur/champion_elephant","units/maur/cavalry_javelineer_e","units/maur/cavalry_swordsman_e","units/maur/champion_chariot","units/maur/champion_chariot"];
+		squad_templates = ["units/maur/champion_infantry_maceman","units/maur/infantry_spearman_e","units/maur/infantry_swordsman_e","units/maur/champion_maiden","units/maur/infantry_archer_e","units/maur/champion_maiden","units/maur/champion_infantry_maceman","units/maur/champion_maiden_archer","units/maur/elephant_archer_e","units/maur/champion_elephant","units/maur/cavalry_javelineer_e","units/maur/cavalry_swordsman_e","units/maur/champion_chariot","units/maur/champion_chariot"];
 		wave_templates = squad_templates;
 		siege_templates = ["units/maur/champion_elephant","units/mace/siege_oxybeles_packed","units/pers/siege_ram","units/mace/siege_lithobolos_packed"];
 	}*/

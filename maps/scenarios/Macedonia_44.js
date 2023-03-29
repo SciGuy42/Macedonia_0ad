@@ -1182,18 +1182,18 @@ Trigger.prototype.IntervalSpawnGroundAttack = function(data)
 
 			if (i == 0)
 			{
-				templates = ["units/pers/infantry_spearman_a", "units/pers/infantry_spearman_a", "units/pers/infantry_javelineer_a", "units/pers/infantry_archer_a", "units/pers/cavalry_spearman_a", "units/pers/cavalry_swordsman_a", "units/pers/cavalry_javelineer_a"];
+				templates = ["units/pers/infantry_spearman_a", "units/pers/infantry_spearman_a", "units/pers/infantry_javelineer_a", "units/pers/infantry_archer_a", "units/pers/cavalry_spearman_a", "units/pers/cavalry_axeman_a", "units/pers/cavalry_javelineer_a"];
 			}
 			else if (i == 1)
 			{
-				templates = ["units/pers/infantry_spearman_e", "units/pers/infantry_javelineer_e", "units/pers/infantry_archer_e", "units/pers/cavalry_spearman_e", "units/pers/cavalry_swordsman_e", "units/pers/cavalry_javelineer_e", "units/pers/champion_infantry", "units/pers/champion_infantry", "units/pers/cavalry_archer_a"];
+				templates = ["units/pers/infantry_spearman_e", "units/pers/infantry_javelineer_e", "units/pers/infantry_archer_e", "units/pers/cavalry_spearman_e", "units/pers/cavalry_axeman_e", "units/pers/cavalry_javelineer_e", "units/pers/champion_infantry", "units/pers/champion_infantry", "units/pers/cavalry_archer_a"];
 
 				siege_templates = ["units/pers/champion_elephant"];
 
 			}
 			else if (i == 2)
 			{
-				templates = ["units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher", "units/pers/infantry_archer_e", "units/pers/champion_cavalry", "units/pers/cavalry_swordsman_e", "units/pers/cavalry_javelineer_e", "units/pers/champion_infantry", "units/pers/cavalry_archer_e"];
+				templates = ["units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher", "units/pers/infantry_archer_e", "units/pers/champion_cavalry", "units/pers/cavalry_axeman_e", "units/pers/cavalry_javelineer_e", "units/pers/champion_infantry", "units/pers/cavalry_archer_e"];
 
 				siege_templates = ["units/pers/champion_elephant", "units/pers/siege_ram"];
 			}
@@ -2440,7 +2440,7 @@ Trigger.prototype.SpawnTravelingArmySquad = function(data)
 	let squad_units = [];
 
 	// melee
-	const melee_template = pickRandom(["units/mace/infantry_pikeman_e", "units/mace/champion_infantry_spearman", "units/mace/thorakites"]);
+	const melee_template = pickRandom(["units/mace/infantry_pikeman_e", "units/mace/champion_infantry_spearman", "units/merc_thorakites"]);
 	const units_melee = TriggerHelper.SpawnUnits(site, melee_template, 10, p);
 	squad_units = squad_units.concat(units_melee);
 

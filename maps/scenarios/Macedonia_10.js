@@ -325,7 +325,7 @@ Trigger.prototype.SpawnAndStartCavalryAttack = function()
 	}
 
 
-	this.gaul_cavalry_types = ["units/gaul/cavalry_swordsman_e", "units/gaul/cavalry_javelineer_e", "units/brit/war_dog_e", "units/gaul/champion_cavalry", "units/brit/champion_chariot"];
+	this.gaul_cavalry_types = ["units/gaul/cavalry_swordsman_e", "units/gaul/cavalry_javelineer_e", "units/brit/war_dog", "units/gaul/champion_cavalry", "units/brit/champion_chariot"];
 
 
 	// get list of barracks

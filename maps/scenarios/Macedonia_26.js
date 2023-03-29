@@ -497,7 +497,7 @@ Trigger.prototype.SpawnFortressPatrol = function(data)
 	const num_patrols = 10;
 	const patrol_size = 5;
 
-	const inf_templates = ["units/kush/champion_infantry_amun", "units/kush/champion_infantry", "units/kush/champion_infantry_apedemak"];
+	const inf_templates = ["units/kush/champion_infantry_amun", "units/kush/champion_infantry_archer", "units/kush/champion_infantry_apedemak"];
 
 	// spawn infantry
 	for (let j = 0; j < num_patrols; j++)

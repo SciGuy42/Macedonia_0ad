@@ -553,7 +553,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of towers)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/brit/champion_infantry",3,p);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/brit/champion_infantry_swordsman",3,p);
 
 			for (let a of archers_e)
 			{
@@ -582,7 +582,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of outposts)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/brit/champion_infantry",1,p);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/brit/champion_infantry_swordsman",1,p);
 
 			for (let a of archers_e)
 			{
@@ -602,7 +602,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of towers)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/maur/champion_infantry",5,p);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/maur/champion_infantry_maceman",5,p);
 
 			for (let a of archers_e)
 			{
@@ -616,7 +616,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		for (let c of forts)
 		{
 			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/maur/champion_infantry",20,p);
+			let archers_e = TriggerHelper.SpawnUnits(c, "units/maur/champion_infantry_maceman",20,p);
 
 			for (let a of archers_e)
 			{
@@ -1064,7 +1064,7 @@ Trigger.prototype.IntervalSpawnMountainVillageGuards = function(data)
 				if (patrol_sites.length >= 2 && spawn_sites.length > 0)
 				{
 
-					const inf_templates = ["units/brit/champion_infantry", "units/gaul/champion_fanatic", "units/brit/infantry_javelinist_e", "units/brit/infantry_slinger_e", "units/brit/war_dog_e", "units/brit/infantry_spearman_e"];
+					const inf_templates = ["units/brit/champion_infantry_swordsman", "units/gaul/champion_fanatic", "units/brit/infantry_javelineer_e", "units/brit/infantry_slinger_e", "units/brit/war_dog", "units/brit/infantry_spearman_e"];
 
 					// pick patrol sites
 					const sites = [pickRandom(spawn_sites), pickRandom(patrol_sites), pickRandom(patrol_sites)];
@@ -1211,7 +1211,7 @@ Trigger.prototype.SpawnStructureDestroyedResponseAttack = function(target_pos)
 		for (let i = 0; i < num_waves; i++)
 		{
 
-			const templates = ["units/pers/champion_infantry", "units/pers/infantry_archer_e", "units/pers/infantry_javelinist_e", "units/pers/kardakes_hoplite", "units/pers/arstibara"];
+			const templates = ["units/pers/champion_infantry", "units/pers/infantry_archer_e", "units/pers/infantry_javelineer_e", "units/pers/kardakes_hoplite", "units/pers/arstibara"];
 
 			const base_size = 18;
 			const size_increase = 5;
@@ -1280,18 +1280,18 @@ Trigger.prototype.IntervalSpawnGroundAttack = function(data)
 
 			if (i == 0)
 			{
-				templates = ["units/pers/infantry_spearman_a", "units/pers/infantry_spearman_a", "units/pers/infantry_javelinist_a", "units/pers/infantry_archer_a", "units/pers/cavalry_spearman_a", "units/pers/cavalry_swordsman_a", "units/pers/cavalry_javelinist_a"];
+				templates = ["units/pers/infantry_spearman_a", "units/pers/infantry_spearman_a", "units/pers/infantry_javelineer_a", "units/pers/infantry_archer_a", "units/pers/cavalry_spearman_a", "units/pers/cavalry_axeman_a", "units/pers/cavalry_javelineer_a"];
 			}
 			else if (i == 1)
 			{
-				templates = ["units/pers/infantry_spearman_e", "units/pers/infantry_javelinist_e", "units/pers/infantry_archer_e", "units/pers/cavalry_spearman_e", "units/pers/cavalry_swordsman_e", "units/pers/cavalry_javelinist_e", "units/pers/champion_infantry", "units/pers/champion_infantry", "units/pers/cavalry_archer_a"];
+				templates = ["units/pers/infantry_spearman_e", "units/pers/infantry_javelineer_e", "units/pers/infantry_archer_e", "units/pers/cavalry_spearman_e", "units/pers/cavalry_axeman_e", "units/pers/cavalry_javelineer_e", "units/pers/champion_infantry", "units/pers/champion_infantry", "units/pers/cavalry_archer_a"];
 
 				siege_templates = ["units/pers/champion_elephant"];
 
 			}
 			else if (i == 2)
 			{
-				templates = ["units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher", "units/pers/infantry_archer_e", "units/pers/champion_cavalry", "units/pers/cavalry_swordsman_e", "units/pers/cavalry_javelinist_e", "units/pers/champion_infantry", "units/pers/cavalry_archer_e"];
+				templates = ["units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher", "units/pers/infantry_archer_e", "units/pers/champion_cavalry", "units/pers/cavalry_axeman_e", "units/pers/cavalry_javelineer_e", "units/pers/champion_infantry", "units/pers/cavalry_archer_e"];
 
 				siege_templates = ["units/pers/champion_elephant", "units/pers/siege_ram"];
 			}
@@ -1448,7 +1448,7 @@ Trigger.prototype.SpawnDesertRaiders = function(data)
 	const attackers = [];
 	for (let i = 0; i < 28; i++)
 	{
-		const templates = ["units/pers/champion_infantry", "units/pers/infantry_archer_a", "units/pers/infantry_javelinist_a", "units/pers/kardakes_hoplite", "units/pers/infantry_spearman_e", "units/pers/kardakes_skirmisher", "units/pers/arstibara", "units/pers/infantry_spearman_b"];
+		const templates = ["units/pers/champion_infantry", "units/pers/infantry_archer_a", "units/pers/infantry_javelineer_a", "units/pers/kardakes_hoplite", "units/pers/infantry_spearman_e", "units/pers/kardakes_skirmisher", "units/pers/arstibara", "units/pers/infantry_spearman_b"];
 
 		// spawn the unit
 		const unit_i = TriggerHelper.SpawnUnits(pickRandom(spawn_sites), pickRandom(templates), 1, p);
@@ -1621,7 +1621,7 @@ Trigger.prototype.RangeActionGreekColony = function(data)
 			const data = {};
 			data.p = 7;
 			data.site = spawn_site;
-			data.templates = ["units/pers/champion_infantry", "units/pers/champion_elephant", "units/pers/arstibara", "units/pers/infantry_javelinist_e", "units/pers/infantry_archer_e", "units/pers/infantry_spearman_e", "units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher"];
+			data.templates = ["units/pers/champion_infantry", "units/pers/champion_elephant", "units/pers/arstibara", "units/pers/infantry_javelineer_e", "units/pers/infantry_archer_e", "units/pers/infantry_spearman_e", "units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher"];
 			data.size = 12;
 			data.target_class = "Unit";
 			data.target_player = 1;
@@ -2016,7 +2016,7 @@ Trigger.prototype.SpawnPersianRebelGuards = function(data)
 			const patrol_sites = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Structure").filter(TriggerHelper.IsInWorld);
 			const spawn_sites = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "MercenaryCamp").filter(TriggerHelper.IsInWorld);
 
-			const inf_templates = ["units/pers/champion_infantry", "units/pers/champion_elephant", "units/pers/arstibara", "units/pers/infantry_javelinist_e", "units/pers/infantry_archer_e", "units/pers/infantry_spearman_e", "units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher"];
+			const inf_templates = ["units/pers/champion_infantry", "units/pers/champion_elephant", "units/pers/arstibara", "units/pers/infantry_javelineer_e", "units/pers/infantry_archer_e", "units/pers/infantry_spearman_e", "units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher"];
 
 			// pick patrol sites
 			const sites = [pickRandom(patrol_sites), pickRandom(patrol_sites), pickRandom(patrol_sites), pickRandom(patrol_sites)];
@@ -2043,7 +2043,7 @@ Trigger.prototype.SpawnColonyPatrol = function(data)
 		for (let i = 0; i < size; i++)
 		{
 
-			const inf_templates = ["units/athen/infantry_spearman_e", "units/athen/infantry_slinger_e", "units/athen/infantry_marine_archer_e", "units/athen/infantry_javelinist_e"];
+			const inf_templates = ["units/athen/infantry_spearman_e", "units/athen/infantry_slinger_e", "units/athen/infantry_marine_archer_e", "units/athen/infantry_javelineer_e"];
 
 			// pick patrol sites
 			const sites = [pickRandom(patrol_sites), pickRandom(patrol_sites), pickRandom(patrol_sites), pickRandom(patrol_sites)];
@@ -2083,7 +2083,7 @@ Trigger.prototype.SpawnMountainVillageGuards = function(data)
 		for (let i = 0; i < size; i++)
 		{
 
-			const inf_templates = ["units/brit/champion_infantry", "units/gaul/champion_fanatic", "units/brit/infantry_javelinist_e", "units/brit/infantry_slinger_e", "units/brit/war_dog_e", "units/brit/infantry_spearman_e"];
+			const inf_templates = ["units/brit/champion_infantry_swordsman", "units/gaul/champion_fanatic", "units/brit/infantry_javelineer_e", "units/brit/infantry_slinger_e", "units/brit/war_dog", "units/brit/infantry_spearman_e"];
 
 			// pick patrol sites
 			const sites = [pickRandom(patrol_sites), pickRandom(patrol_sites), pickRandom(patrol_sites), pickRandom(patrol_sites)];
@@ -2456,7 +2456,7 @@ Trigger.prototype.SpawnTravelingArmySquad = function(data)
 	let squad_units = [];
 
 	// melee
-	const melee_template = pickRandom(["units/mace/infantry_pikeman_e", "units/mace/champion_infantry_spearman", "units/mace/thorakites"]);
+	const melee_template = pickRandom(["units/mace/infantry_pikeman_e", "units/mace/champion_infantry_spearman", "units/merc_thorakites"]);
 	const units_melee = TriggerHelper.SpawnUnits(site, melee_template, 10, p);
 	squad_units = squad_units.concat(units_melee);
 

@@ -401,7 +401,7 @@ Trigger.prototype.SpawnHorsemanPatrol = function(data)
 		if (units.length < 300 && camps.length > 1)
 		{
 			// templates, mostly archers
-			const cav_templates = ["units/pers/champion_cavalry", "units/pers/champion_cavalry_archer", "units/pers/cavalry_javelinist_e", "units/pers/cavalry_javelinist_a", "units/pers/cavalry_swordsman_e", "units/pers/cavalry_swordsman_a", "units/pers/cavalry_spearman_e", "units/pers/cavalry_spearman_a", "units/pers/cavalry_spearman_b"];
+			const cav_templates = ["units/pers/champion_cavalry", "units/pers/champion_cavalry_archer", "units/pers/cavalry_javelineer_e", "units/pers/cavalry_javelineer_a", "units/pers/cavalry_axeman_e", "units/pers/cavalry_axeman_a", "units/pers/cavalry_spearman_e", "units/pers/cavalry_spearman_a", "units/pers/cavalry_spearman_b"];
 
 			const sites = this.GetTriggerPoints(triggerPointPatrol);
 			const sites_reversed = [];
@@ -924,7 +924,7 @@ Trigger.prototype.RebelAttack = function(data)
 	// spawn distractors
 	const num_squads_distractors = 3;
 	const squad_size_distractor = 3 + Math.round(pop / 25) + this.attackCounter;
-	const templates_distractor = ["units/pers/champion_cavalry_archer", "units/pers/cavalry_javelinist_e", "units/pers/cavalry_javelinist_a", "units/pers/cavalry_swordsman_e", "units/pers/cavalry_swordsman_a", "units/pers/cavalry_spearman_e", "units/pers/cavalry_spearman_a", "units/pers/cavalry_spearman_b"];
+	const templates_distractor = ["units/pers/champion_cavalry_archer", "units/pers/cavalry_javelineer_e", "units/pers/cavalry_javelineer_a", "units/pers/cavalry_axeman_e", "units/pers/cavalry_axeman_a", "units/pers/cavalry_spearman_e", "units/pers/cavalry_spearman_a", "units/pers/cavalry_spearman_b"];
 
 	for (let i = 0; i < num_squads_distractors; i++)
 	{
@@ -943,7 +943,7 @@ Trigger.prototype.RebelAttack = function(data)
 	const num_squads = 2;
 	const squad_size = 10 + Math.round(pop / 18) + 2 * this.attackCounter;
 
-	const templates = ["units/pers/champion_cavalry_archer", "units/pers/champion_cavalry_archer", "units/pers/cavalry_javelinist_a", "units/pers/cavalry_spearman_e", "units/pers/champion_cavalry", "units/pers/champion_cavalry", "units/pers/cavalry_swordsman_e", "units/pers/infantry_archer_e", "units/pers/infantry_spearman_e", "units/pers/infantry_archer_e", "units/pers/champion_infantry", "units/pers/champion_infantry", "units/pers/infantry_javelinist_e", "units/pers/infantry_spearman_b", "units/pers/infantry_spearman_b", "units/pers/siege_ram"];
+	const templates = ["units/pers/champion_cavalry_archer", "units/pers/champion_cavalry_archer", "units/pers/cavalry_javelineer_a", "units/pers/cavalry_spearman_e", "units/pers/champion_cavalry", "units/pers/champion_cavalry", "units/pers/cavalry_axeman_e", "units/pers/infantry_archer_e", "units/pers/infantry_spearman_e", "units/pers/infantry_archer_e", "units/pers/champion_infantry", "units/pers/champion_infantry", "units/pers/infantry_javelineer_e", "units/pers/infantry_spearman_b", "units/pers/infantry_spearman_b", "units/pers/siege_ram"];
 
 	for (let i = 0; i < num_squads; i++)
 	{

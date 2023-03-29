@@ -489,7 +489,7 @@ Trigger.prototype.SpawnInterevalPatrol = function(data)
 
 	if (units_p.length < this.maxPatrol)
 	{
-		const templates_p2 = ["units/maur/champion_infantry", "units/maur/infantry_archer_e", "units/maur/champion_maiden", "units/maur/champion_maiden_archer", "units/maur/champion_infantry", "units/maur/champion_elephant", "units/maur/infantry_swordsman_e", "units/maur/infantry_spearman_e"];
+		const templates_p2 = ["units/maur/champion_infantry_maceman", "units/maur/infantry_archer_e", "units/maur/champion_maiden", "units/maur/champion_maiden_archer", "units/maur/champion_infantry_maceman", "units/maur/champion_elephant", "units/maur/infantry_swordsman_e", "units/maur/infantry_spearman_e"];
 
 		// TO DO: check if we have civil centre or fortress
 		const sites_p2 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Structure").filter(TriggerHelper.IsInWorld);
@@ -543,7 +543,7 @@ Trigger.prototype.SpawnInterevalPatrolOra = function(data)
 	if (units_p.length < this.maxPatrolOra)
 	{
 		// spawn a patrol unit
-		const templates_p2 = ["units/maur/champion_infantry", "units/maur/infantry_archer_e", "units/maur/champion_maiden", "units/maur/champion_maiden_archer", "units/maur/champion_infantry", "units/maur/champion_elephant", "units/maur/elephant_archer_e"];
+		const templates_p2 = ["units/maur/champion_infantry_maceman", "units/maur/infantry_archer_e", "units/maur/champion_maiden", "units/maur/champion_maiden_archer", "units/maur/champion_infantry_maceman", "units/maur/champion_elephant", "units/maur/elephant_archer_e"];
 
 		// sites
 		const sites_p6 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(sites_owenr), "Structure").filter(TriggerHelper.IsInWorld);
@@ -577,7 +577,7 @@ Trigger.prototype.SpawnInitialPatrol = function(data)
 	const p = 2;
 	const total_unit_count_p2 = this.initPatrol;
 
-	const templates_p2 = ["units/maur/champion_infantry", "units/maur/infantry_archer_e", "units/maur/champion_maiden", "units/maur/champion_maiden_archer", "units/maur/champion_infantry", "units/maur/champion_elephant", "units/maur/infantry_swordsman_e", "units/maur/infantry_spearman_e"];
+	const templates_p2 = ["units/maur/champion_infantry_maceman", "units/maur/infantry_archer_e", "units/maur/champion_maiden", "units/maur/champion_maiden_archer", "units/maur/champion_infantry_maceman", "units/maur/champion_elephant", "units/maur/infantry_swordsman_e", "units/maur/infantry_spearman_e"];
 
 	// sites
 	const sites_p2 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Structure").filter(TriggerHelper.IsInWorld);

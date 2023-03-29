@@ -668,7 +668,7 @@ Trigger.prototype.SpawnFortressPatrol = function(data)
 	const num_patrols = 10;
 	const patrol_size = 5;
 
-	const inf_templates = ["units/kush/champion_infantry_amun", "units/kush/champion_infantry", "units/kush/champion_infantry_apedemak"];
+	const inf_templates = ["units/kush/champion_infantry_amun", "units/kush/champion_infantry_archer", "units/kush/champion_infantry_apedemak"];
 
 	// spawn infantry
 	for (let j = 0; j < num_patrols; j++)
@@ -1139,7 +1139,7 @@ Trigger.prototype.SpawnTraderAttack = function(data)
 	const p = 0;
 
 	const attack_size = 25;
-	const templates = ["units/pers/cavalry_spearman_a", "units/pers/cavalry_swordsman_a", "units/pers/cavalry_javelinist_a", "units/pers/champion_cavalry_archer", "units/pers/champion_cavalry"];
+	const templates = ["units/pers/cavalry_spearman_a", "units/pers/cavalry_axeman_a", "units/pers/cavalry_javelineer_a", "units/pers/champion_cavalry_archer", "units/pers/champion_cavalry"];
 
 	const attackers = [];
 

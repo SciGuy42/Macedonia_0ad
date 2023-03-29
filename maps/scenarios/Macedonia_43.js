@@ -1114,18 +1114,18 @@ Trigger.prototype.IntervalSpawnGroundAttack = function(data)
 
 			if (i == 0)
 			{
-				templates = ["units/pers/infantry_spearman_a", "units/pers/infantry_spearman_a", "units/pers/infantry_javelinist_a", "units/pers/infantry_archer_a", "units/pers/cavalry_spearman_a", "units/pers/cavalry_swordsman_a", "units/pers/cavalry_javelinist_a"];
+				templates = ["units/pers/infantry_spearman_a", "units/pers/infantry_spearman_a", "units/pers/infantry_javelineer_a", "units/pers/infantry_archer_a", "units/pers/cavalry_spearman_a", "units/pers/cavalry_axeman_a", "units/pers/cavalry_javelineer_a"];
 			}
 			else if (i == 1)
 			{
-				templates = ["units/pers/infantry_spearman_e", "units/pers/infantry_javelinist_e", "units/pers/infantry_archer_e", "units/pers/cavalry_spearman_e", "units/pers/cavalry_swordsman_e", "units/pers/cavalry_javelinist_e", "units/pers/champion_infantry", "units/pers/champion_infantry", "units/pers/cavalry_archer_a"];
+				templates = ["units/pers/infantry_spearman_e", "units/pers/infantry_javelineer_e", "units/pers/infantry_archer_e", "units/pers/cavalry_spearman_e", "units/pers/cavalry_axeman_e", "units/pers/cavalry_javelineer_e", "units/pers/champion_infantry", "units/pers/champion_infantry", "units/pers/cavalry_archer_a"];
 
 				siege_templates = ["units/pers/champion_elephant"];
 
 			}
 			else if (i == 2)
 			{
-				templates = ["units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher", "units/pers/infantry_archer_e", "units/pers/champion_cavalry", "units/pers/cavalry_swordsman_e", "units/pers/cavalry_javelinist_e", "units/pers/champion_infantry", "units/pers/cavalry_archer_e"];
+				templates = ["units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher", "units/pers/infantry_archer_e", "units/pers/champion_cavalry", "units/pers/cavalry_axeman_e", "units/pers/cavalry_javelineer_e", "units/pers/champion_infantry", "units/pers/cavalry_archer_e"];
 
 				siege_templates = ["units/pers/champion_elephant", "units/pers/siege_ram"];
 			}
@@ -2106,7 +2106,7 @@ Trigger.prototype.FlipSlaveOwnership = function(data)
 
 		if (p == 1)
 		{
-			disTemplates = disTemplates.concat(["units/mace/hero_alexander_iii", "units/mace/hero_craterus", "units/mace/hero_philip_ii", "units/mace/hero_demetrius", "units/mace/hero_pyrhus"]);
+			disTemplates = disTemplates.concat(["units/mace/hero_alexander_iii", "units/mace/hero_craterus", "units/mace/hero_philip_ii", "units/mace/hero_demetrius_i", "units/mace/hero_pyrrhus_i"]);
 		}
 
 		cmpPlayer.SetDisabledTemplates(disTemplates);
