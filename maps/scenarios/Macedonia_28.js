@@ -1227,25 +1227,25 @@ Trigger.prototype.VictoryCheck = function(data)
 
 	for (const p of [1, 2, 3, 4, 5])
 	{
-		const cmpPlayer = QueryPlayerIDInterface(p);
+		cmpPlayer = QueryPlayerIDInterface(p);
 
 		// for players 3,4,5,6 disable templates
 
-		if (true) // disable civil centres
-		{
-			// disable buildings production
-			// let disTemplates = disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv());
+		// disable civil centres
 
-			// disable units as well
-			// let unit_templaes = TriggerHelper.GetTemplateNamesByClasses("Unit", QueryPlayerIDInterface(p, IID_Identity).GetCiv(), undefined, undefined, true);
+		// disable buildings production
+		// let disTemplates = disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv());
 
-			// disTemplates = disTemplates.concat(unit_templaes);
+		// disable units as well
+		// let unit_templaes = TriggerHelper.GetTemplateNamesByClasses("Unit", QueryPlayerIDInterface(p, IID_Identity).GetCiv(), undefined, undefined, true);
 
-			const disTemplates = ["structures/" + QueryPlayerIDInterface(p, IID_Identity).GetCiv() + "/civil_centre", "structures/" + QueryPlayerIDInterface(p, IID_Identity).GetCiv() + "/dock"];
+		// disTemplates = disTemplates.concat(unit_templaes);
 
-			cmpPlayer.SetDisabledTemplates(disTemplates);
-			// warn("Disabling templates for player "+uneval(p));
-		}
+		const disTemplates = ["structures/" + QueryPlayerIDInterface(p, IID_Identity).GetCiv() + "/civil_centre", "structures/" + QueryPlayerIDInterface(p, IID_Identity).GetCiv() + "/dock"];
+
+		cmpPlayer.SetDisabledTemplates(disTemplates);
+		// warn("Disabling templates for player "+uneval(p));
+
 
 		const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 

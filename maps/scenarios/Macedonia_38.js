@@ -667,7 +667,7 @@ Trigger.prototype.SpawnMainAttackInterval = function(data)
 
 
 	// check whether to start macedonian cavalry attack
-	IID_StatisticsTracker;
+	// IID_StatisticsTracker;
 
 	const cmpPlayer = QueryPlayerIDInterface(p);
 	const cmpStatsTracker = Engine.QueryInterface(cmpPlayer.entity, IID_StatisticsTracker);

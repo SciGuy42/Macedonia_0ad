@@ -456,7 +456,7 @@ Trigger.prototype.checkInvasionAttack = function(data)
 		else
 		{
 			// ship must have been destroyed
-			this.invasion_under_way == false;
+			this.invasion_under_way = false;
 		}
 	}
 };

@@ -610,9 +610,9 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		// warn(uneval(id));
 		if (id != null)
 		{
-			if (id.classesList.indexOf("Siege") >= 0)
+			if (id.classesList.includes("Siege"))
 			{
-
+				warn("Empty block statement");
 			}
 			else
 			{
@@ -2493,7 +2493,7 @@ Trigger.prototype.SpawnTravelingArmySquad = function(data)
 
 Trigger.prototype.ActivatePersianVillages = function(data)
 {
-	for (const p of [2, 3, 5])
+	for (let p of [2, 3, 5])
 	{
 		const cmpPlayer = QueryPlayerIDInterface(p);
 		cmpPlayer.SetPopulationBonuses(300);
@@ -2512,7 +2512,7 @@ Trigger.prototype.ActivatePersianVillages = function(data)
 		cmpPlayer.SetEnemy(4);
 		cmpPlayer.SetEnemy(1);
 
-		for (const p of [1])
+		for (p of [1])
 		{
 			const cmpPlayer_p = QueryPlayerIDInterface(p);
 			for (const p_other of [2, 3, 5])

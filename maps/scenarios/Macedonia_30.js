@@ -234,11 +234,6 @@ Trigger.prototype.PlayerCommandAction = function(data)
 			// increment base cost
 			this.workshopBaseCost *= this.workshopCostFactor;
 		}
-		else
-		{
-
-
-		}
 
 		this.workshopDialogActive = false;
 	}

@@ -324,12 +324,12 @@ Trigger.prototype.SpawnAlliedInvasionAttack = function(data)
 		return;
 	}
 
-	const target_point = triggerPointShipUnload1;
-	const spawn_point = triggerPointShipInvasionSpawn1;
+	let target_point = triggerPointShipUnload1;
+	let spawn_point = triggerPointShipInvasionSpawn1;
 	if (Math.random() < 0.5)
 	{
-		const target_point = triggerPointShipUnload2;
-		const spawn_point = triggerPointShipInvasionSpawn2;
+		target_point = triggerPointShipUnload2;
+		spawn_point = triggerPointShipInvasionSpawn2;
 	}
 
 	// prompt for target
@@ -907,7 +907,7 @@ Trigger.prototype.checkInvasionAttack = function(data)
 		else
 		{
 			// ship must have been destroyed
-			this.invasion_under_way == false;
+			this.invasion_under_way = false;
 		}
 	}
 };

@@ -749,7 +749,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 			}
 		}*/
 
-		const camps_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "MercenaryCamp").filter(TriggerHelper.IsInWorld);
+		let camps_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "MercenaryCamp").filter(TriggerHelper.IsInWorld);
 
 		for (const c of camps_p)
 		{
@@ -765,7 +765,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 
 		if (p == 6 || p == 4)
 		{
-			const camps_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Outpost").filter(TriggerHelper.IsInWorld);
+			camps_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Outpost").filter(TriggerHelper.IsInWorld);
 
 			for (const c of camps_p)
 			{

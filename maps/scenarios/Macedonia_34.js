@@ -400,10 +400,10 @@ Trigger.prototype.GarrisonEntities = function(data)
 {
 
 	// ptolemy camp
-	for (const p of [3])
-	{
+	// for (const p of [3])
+	// {
 
-	}
+	// }
 
 	// main enemy
 	for (const p of [2])

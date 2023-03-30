@@ -362,7 +362,7 @@ Trigger.prototype.checkInvasionAttack = function(data)
 		else
 		{
 			// ship must have been destroyed
-			this.invasion_under_way == false;
+			this.invasion_under_way = false;
 		}
 	}
 };
@@ -943,7 +943,7 @@ Trigger.prototype.SpawnArcadianTraders = function(data)
 				// warn("Spawning trader for crete");
 				const trader = TriggerHelper.SpawnUnits(site, "units/athen/support_trader", 1, e);
 
-				const cmpUnitAI = Engine.QueryInterface(trader[0], IID_UnitAI);
+				let cmpUnitAI = Engine.QueryInterface(trader[0], IID_UnitAI);
 
 				cmpUnitAI.UpdateWorkOrders("Trade");
 				cmpUnitAI.SetupTradeRoute(pickRandom(markets_others), site, null, true);
@@ -956,7 +956,7 @@ Trigger.prototype.SpawnArcadianTraders = function(data)
 						const escort_i = TriggerHelper.SpawnUnits(site, pickRandom(this.patrolTemplates), 1, e);
 
 
-						const cmpUnitAI = Engine.QueryInterface(escort_i[0], IID_UnitAI);
+						cmpUnitAI = Engine.QueryInterface(escort_i[0], IID_UnitAI);
 						cmpUnitAI.orderQueue = [];
 						cmpUnitAI.order = undefined;
 						cmpUnitAI.isIdle = true;
@@ -1044,7 +1044,7 @@ Trigger.prototype.SpawnCretanTraders = function(data)
 				// warn("Spawning trader for crete");
 				const trader = TriggerHelper.SpawnUnits(site, "units/athen/support_trader", 1, e);
 
-				const cmpUnitAI = Engine.QueryInterface(trader[0], IID_UnitAI);
+				let cmpUnitAI = Engine.QueryInterface(trader[0], IID_UnitAI);
 
 				cmpUnitAI.UpdateWorkOrders("Trade");
 				cmpUnitAI.SetupTradeRoute(pickRandom(markets_others), site, null, true);
@@ -1057,7 +1057,7 @@ Trigger.prototype.SpawnCretanTraders = function(data)
 						const escort_i = TriggerHelper.SpawnUnits(site, "units/athen/cavalry_swordsman_a", 1, e);
 
 
-						const cmpUnitAI = Engine.QueryInterface(escort_i[0], IID_UnitAI);
+						cmpUnitAI = Engine.QueryInterface(escort_i[0], IID_UnitAI);
 						cmpUnitAI.orderQueue = [];
 						cmpUnitAI.order = undefined;
 						cmpUnitAI.isIdle = true;

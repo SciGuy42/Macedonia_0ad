@@ -433,7 +433,7 @@ Trigger.prototype.checkInvasionAttack = function(data)
 		else
 		{
 			// ship must have been destroyed
-			this.invasion_under_way == false;
+			this.invasion_under_way = false;
 		}
 	}
 };
@@ -596,7 +596,7 @@ Trigger.prototype.SpawnIntervalPatrol = function(data)
 	const p = 2;
 
 	// see if we can add more patrols
-	const units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Unit").filter(TriggerHelper.IsInWorld);
+	let units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Unit").filter(TriggerHelper.IsInWorld);
 
 
 	if (units.length < this.maxPatrolSize)
@@ -631,7 +631,7 @@ Trigger.prototype.SpawnIntervalPatrol = function(data)
 		// spawn infantry
 		for (let j = 0; j < num_patrols; j++)
 		{
-			const units = [];
+			units = [];
 			const site_j = pickRandom(targets_B);
 
 			// melee

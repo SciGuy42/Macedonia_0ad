@@ -942,7 +942,7 @@ Trigger.prototype.SpawnMercenarySquad = function(data)
 
 	for (const p of [1, 2, 3, 4, 5, 6])
 	{
-		const cmpPlayer = QueryPlayerIDInterface(p);
+		cmpPlayer = QueryPlayerIDInterface(p);
 
 		// for players 3,4,5,6 disable templates
 

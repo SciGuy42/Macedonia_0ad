@@ -258,7 +258,7 @@ Trigger.prototype.PersianAttack = function(data)
 	// set formation
 	TriggerHelper.SetUnitFormation(2, attackers, pickRandom(unitFormations));
 
-	const targets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), unitTargetClass);
+	let targets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), unitTargetClass);
 	let closestTarget;
 	let minDistance = Infinity;
 
@@ -327,9 +327,9 @@ Trigger.prototype.PersianAttack = function(data)
 		// set formation
 		TriggerHelper.SetUnitFormation(2, sec_attackers, pickRandom(unitFormations));
 
-		const targets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), unitTargetClass);
-		let closestTarget;
-		let minDistance = Infinity;
+		targets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), unitTargetClass);
+		closestTarget = undefined;
+		minDistance = Infinity;
 
 		for (const target of targets)
 		{

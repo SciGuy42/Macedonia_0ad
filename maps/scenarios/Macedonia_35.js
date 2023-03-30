@@ -349,7 +349,7 @@ Trigger.prototype.IdleUnitCheck = function(data)
 					// check if it is attack
 					if (orders[0].type == "Attack")
 					{
-						const target = orders[0].data.target;
+						let target = orders[0].data.target;
 						const id = Engine.QueryInterface(target, IID_Identity);
 						if (id)
 						{
@@ -367,7 +367,7 @@ Trigger.prototype.IdleUnitCheck = function(data)
 								{
 									// change order to attack nearest structure
 
-									const target = this.FindClosestTarget(u, 1, "Structure");
+									target = this.FindClosestTarget(u, 1, "Structure");
 									cmpUnitAI.orders = [];
 									cmpUnitAI.Attack(target, false, false);
 

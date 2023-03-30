@@ -1289,38 +1289,35 @@ Trigger.prototype.SpawnNeutralTrader = function(data)
 		/* let traders_e = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(e), "Trader+!Ship").filter(TriggerHelper.IsInWorld);*/
 
 
-		if (true)
+		// make list of others markets
+		// make list of others' docks
+		let markets_others = [];
+		const trading_partners = [2];
+		for (const p of trading_partners)
 		{
-			// make list of others markets
-			// make list of others' docks
-			let markets_others = [];
-			const trading_partners = [2];
-			for (const p of trading_partners)
-			{
 
-				const markets_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Market+!Dock").filter(TriggerHelper.IsInWorld);
+			const markets_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Market+!Dock").filter(TriggerHelper.IsInWorld);
 
-				markets_others = markets_others.concat(markets_p);
-			}
+			markets_others = markets_others.concat(markets_p);
+		}
 
 
-			if (markets_others.length > 0)
-			{
+		if (markets_others.length > 0)
+		{
 
 
-				const site = pickRandom(docks);
+			const site = pickRandom(docks);
 
-				// warn("Spawning trader for crete");
-				const trader = TriggerHelper.SpawnUnits(site, "units/athen/support_trader", 1, e);
+			// warn("Spawning trader for crete");
+			const trader = TriggerHelper.SpawnUnits(site, "units/athen/support_trader", 1, e);
 
-				const cmpUnitAI = Engine.QueryInterface(trader[0], IID_UnitAI);
+			const cmpUnitAI = Engine.QueryInterface(trader[0], IID_UnitAI);
 
-				cmpUnitAI.UpdateWorkOrders("Trade");
-				cmpUnitAI.SetupTradeRoute(pickRandom(markets_others), site, null, true);
-
-			}
+			cmpUnitAI.UpdateWorkOrders("Trade");
+			cmpUnitAI.SetupTradeRoute(pickRandom(markets_others), site, null, true);
 
 		}
+
 	}
 
 	// this.DoAfterDelay(45 * 1000, "SpawnCretanTraders",null);
@@ -1343,16 +1340,10 @@ Trigger.prototype.SpawnTradeShip = function(data)
 		// make list of traders
 		/* let traders_e = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(e), "Trader+!Ship").filter(TriggerHelper.IsInWorld);*/
 
+		const site = pickRandom(docks);
 
-		if (true)
-		{
-
-			const site = pickRandom(docks);
-
-			// warn("Spawning trader for crete");
-			const trader = TriggerHelper.SpawnUnits(site, "units/mace/ship_merchant", 1, e);
-
-		}
+		// warn("Spawning trader for crete");
+		const trader = TriggerHelper.SpawnUnits(site, "units/mace/ship_merchant", 1, e);
 	}
 
 	// this.DoAfterDelay(45 * 1000, "SpawnCretanTraders",null);
@@ -1365,47 +1356,36 @@ Trigger.prototype.SpawnScyhianTrader = function(data)
 	// make list of own docks
 	const docks = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(e), "Dock").filter(TriggerHelper.IsInWorld);
 
-
-
 	if (docks.length > 0)
 	{
-
 		// make list of traders
 		/* let traders_e = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(e), "Trader+!Ship").filter(TriggerHelper.IsInWorld);*/
 
-
-		if (true)
+		// make list of others markets
+		// make list of others' docks
+		let markets_others = [];
+		const trading_partners = [2];
+		for (const p of trading_partners)
 		{
-			// make list of others markets
-			// make list of others' docks
-			let markets_others = [];
-			const trading_partners = [2];
-			for (const p of trading_partners)
-			{
+			const markets_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Dock").filter(TriggerHelper.IsInWorld);
 
-				const markets_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Dock").filter(TriggerHelper.IsInWorld);
-
-				markets_others = markets_others.concat(markets_p);
-			}
-
-
-			if (markets_others.length > 0)
-			{
-
-
-				const site = pickRandom(docks);
-
-				// warn("Spawning trader for crete");
-				const trader = TriggerHelper.SpawnUnits(site, "units/gaul/ship_merchant", 1, e);
-
-				const cmpUnitAI = Engine.QueryInterface(trader[0], IID_UnitAI);
-
-				cmpUnitAI.UpdateWorkOrders("Trade");
-				cmpUnitAI.SetupTradeRoute(pickRandom(markets_others), site, null, true);
-
-			}
-
+			markets_others = markets_others.concat(markets_p);
 		}
+
+
+		if (markets_others.length > 0)
+		{
+			const site = pickRandom(docks);
+
+			// warn("Spawning trader for crete");
+			const trader = TriggerHelper.SpawnUnits(site, "units/gaul/ship_merchant", 1, e);
+
+			const cmpUnitAI = Engine.QueryInterface(trader[0], IID_UnitAI);
+
+			cmpUnitAI.UpdateWorkOrders("Trade");
+			cmpUnitAI.SetupTradeRoute(pickRandom(markets_others), site, null, true);
+		}
+
 	}
 
 	// this.DoAfterDelay(45 * 1000, "SpawnCretanTraders",null);

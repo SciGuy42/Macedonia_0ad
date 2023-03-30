@@ -900,21 +900,19 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 				cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
 				cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
 				cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
-
-
 			}
 		}
-		else if (player == 3)
-		{
-			if (ai_mult == 1.25)
-			{
+		// else if (player == 3)
+		// {
+		// 	if (ai_mult == 1.25)
+		// 	{
 
-			}
-			else if (ai_mult >= 1.5)
-			{
+		// 	}
+		// 	else if (ai_mult >= 1.5)
+		// 	{
 
-			}
-		}
+		// 	}
+		// }
 	}
 };
 

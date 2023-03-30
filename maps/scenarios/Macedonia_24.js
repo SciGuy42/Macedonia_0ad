@@ -772,8 +772,7 @@ Trigger.prototype.PlayerCommandAction = function(data)
 
 		if (data.cmd.answer == "button1") // easy
 		{
-
-
+			warn("Difficulty = easy");
 		}
 		else // hard
 		{
@@ -1492,10 +1491,10 @@ Trigger.prototype.ResearchTechs = function(data)
 
 			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
 		}
-		else if (p == 3 || p == 4)
-		{
+		// else if (p == 3 || p == 4)
+		// {
 
-		}
+		// }
 	}
 	// cmpTechnologyManager.ResearchTechnology("trade_gain_02");
 	// cmpTechnologyManager.ResearchTechnology("trade_gain_02");

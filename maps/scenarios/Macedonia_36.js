@@ -671,8 +671,7 @@ Trigger.prototype.PlayerCommandAction = function(data)
 
 		if (data.cmd.answer == "button1") // easy
 		{
-
-
+			warn("Difficulty = easy");
 		}
 		else // hard
 		{

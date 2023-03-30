@@ -1411,13 +1411,11 @@ Trigger.prototype.FleetMovementCommand = function(data)
 
 		// for players 3,4,5,6 disable templates
 
-		if (true) // disable civil centres
-		{
+		// disable civil centres
+		const disTemplates = ["structures/" + QueryPlayerIDInterface(p, IID_Identity).GetCiv() + "/civil_centre", "structures/" + QueryPlayerIDInterface(p, IID_Identity).GetCiv() + "/dock"];
 
-			const disTemplates = ["structures/" + QueryPlayerIDInterface(p, IID_Identity).GetCiv() + "/civil_centre", "structures/" + QueryPlayerIDInterface(p, IID_Identity).GetCiv() + "/dock"];
+		cmpPlayer.SetDisabledTemplates(disTemplates);
 
-			cmpPlayer.SetDisabledTemplates(disTemplates);
-		}
 
 		const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 
