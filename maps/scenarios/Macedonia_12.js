@@ -156,7 +156,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			this.DoAfterDelay(240 * 1000, "WorkshopShipAttack", null);
 		}
 	}
-	else if (data.from == 2 && id.classesList.indexOf("Gates") >= 0)
+	else if (data.from == 2 && id.classesList.indexOf("Gate") >= 0)
 	{
 		warn("gate destroyed");
 		this.GateDestroyedAttack();

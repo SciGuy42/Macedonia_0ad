@@ -205,7 +205,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			this.DoAfterDelay(240 * 1000, "WorkshopShipAttack", null);
 		}
 	}
-	/* else if (data.from == 2 && id.classesList.indexOf("Gates") >= 0)
+	/* else if (data.from == 2 && id.classesList.indexOf("Gate") >= 0)
 	{
 		warn("gate destroyed");
 		this.GateDestroyedAttack();
@@ -346,7 +346,7 @@ Trigger.prototype.IntervalActionSpawnPatrol = function(data)
 	const owner = 5;
 
 	// make list of possible targets
-	const patrol_classes = ["Fortress", "GarrisonTower", "CivilCentre", "Gates", "Barracks"];
+	const patrol_classes = ["Fortress", "GarrisonTower", "CivilCentre", "Gate", "Barracks"];
 	const patrol_entities = this.GetEntitiesForClasses(4, patrol_classes);
 	warn("Found " + patrol_entities.length + " patrol targets.");
 
