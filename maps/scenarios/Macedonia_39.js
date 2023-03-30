@@ -441,7 +441,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 	for (const p of [1])
 	{
 		/* let owner = 3;
-		let turrets = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p),"Defensive+Tower+!Outpost+!GarrisonTower").filter(TriggerHelper.IsInWorld);
+		let turrets = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p),"WallTower").filter(TriggerHelper.IsInWorld);
 
 		for (let c of turrets)
 		{

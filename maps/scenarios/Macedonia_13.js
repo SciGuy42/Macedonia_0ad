@@ -215,7 +215,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		warn("cc destroyed");
 		// TO DO: win
 	}
-	else if (data.from == 3 && id.classesList.indexOf("GarrisonTower") >= 0)
+	else if (data.from == 3 && id.classesList.includes("Defensive") && id.classesList.includes("Tower"))
 	{
 		warn("tower destroyed");
 		this.TowerDestroyedAttack();
@@ -346,7 +346,7 @@ Trigger.prototype.IntervalActionSpawnPatrol = function(data)
 	const owner = 5;
 
 	// make list of possible targets
-	const patrol_classes = ["Fortress", "GarrisonTower", "CivilCentre", "Gate", "Barracks"];
+	const patrol_classes = ["Fortress", "SentryTower", "StoneTower", "CivilCentre", "Gate", "Barracks"];
 	const patrol_entities = this.GetEntitiesForClasses(4, patrol_classes);
 	warn("Found " + patrol_entities.length + " patrol targets.");
 
@@ -429,7 +429,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 
 	for (const p of [0, 2, 3, 4, 5])
 	{
-		const towers_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "GarrisonTower").filter(TriggerHelper.IsInWorld);
+		const towers_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Defensive+Tower").filter(TriggerHelper.IsInWorld);
 
 
 		for (const e of towers_p)
@@ -464,7 +464,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		}
 
 		// wall towers
-		const towers_w = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Defensive+Tower+!Outpost+!GarrisonTower").filter(TriggerHelper.IsInWorld);
+		const towers_w = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "WallTower").filter(TriggerHelper.IsInWorld);
 		for (const e of towers_w)
 		{
 			// spawn the garrison inside the tower
@@ -643,7 +643,7 @@ Trigger.prototype.IntervalSpawnTradeShips = function(data)
 
 Trigger.prototype.GreekAttack = function(data)
 {
-	const towers = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(3), "GarrisonTower").filter(TriggerHelper.IsInWorld);
+	const towers = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(3), "Defensive+Tower").filter(TriggerHelper.IsInWorld);
 
 	const human_camps = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "MercenaryCamp").filter(TriggerHelper.IsInWorld);
 

@@ -334,7 +334,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 					let trader = TriggerHelper.SpawnUnits(data.entity,"units/athen/support_trader",4,p);
 				}*/
 			}
-			else if (id.classesList.indexOf("DefenseTower") >= 0 || id.classesList.indexOf("Fortress") >= 0)
+			else if ((id.classesList.includes("Defensive") && id.classesList.includes("Tower")) || id.classesList.includes("Fortress"))
 			{
 
 
@@ -1001,7 +1001,7 @@ Trigger.prototype.SpawnPatrol = function(data)
 		let targets_A = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "CivilCentre").filter(TriggerHelper.IsInWorld);
 		targets_A = targets_A.concat(TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Temple").filter(TriggerHelper.IsInWorld));
 
-		let targets_B = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "DefenseTower").filter(TriggerHelper.IsInWorld);
+		let targets_B = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Defensive+Tower").filter(TriggerHelper.IsInWorld);
 		targets_B = targets_B.concat(TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Gate").filter(TriggerHelper.IsInWorld));
 		targets_B = targets_B.concat(TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Fortress").filter(TriggerHelper.IsInWorld));
 		targets_B = targets_B.concat(TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Outpost").filter(TriggerHelper.IsInWorld));
@@ -1949,7 +1949,7 @@ Trigger.prototype.PointIncrement = function(data)
 
 		// make it fight
 		// this.WalkAndFightClosestTarget(units_i[0],target_player,"Gate");
-		this.WalkAndFightRandomTarget(units_i[0], target_player, "DefenseTower", "Structure");
+		this.WalkAndFightRandomTarget(units_i[0], target_player, "Defensive+Tower", "Structure");
 	}
 
 

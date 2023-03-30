@@ -689,7 +689,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 
 	for (const p of [0, 2, 4, 5, 6])
 	{
-		const towers_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "GarrisonTower").filter(TriggerHelper.IsInWorld);
+		const towers_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Defensive+Tower").filter(TriggerHelper.IsInWorld);
 
 
 		for (const e of towers_p)
@@ -736,7 +736,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		}
 
 		// wall towers
-		/* let towers_w = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p), "Defensive+Tower+!Outpost+!GarrisonTower").filter(TriggerHelper.IsInWorld);
+		/* let towers_w = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p), "WallTower").filter(TriggerHelper.IsInWorld);
 		for (let e of towers_w)
 		{
 			//spawn the garrison inside the tower

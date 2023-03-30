@@ -358,7 +358,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	}*/
 
 	// garrison towers
-	const towers_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "GarrisonTower").filter(TriggerHelper.IsInWorld);
+	const towers_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "StoneTower").filter(TriggerHelper.IsInWorld);
 	for (const e of towers_p)
 	{
 		const archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged", 5, 2);
@@ -370,11 +370,11 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		}
 	}
 
-	const towers_w = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "Defensive+Tower+!Outpost+!GarrisonTower").filter(TriggerHelper.IsInWorld);
+	const towers_w = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "WallTower").filter(TriggerHelper.IsInWorld);
 	for (const e of towers_w)
 	{
 		// spawn the garrison inside the tower
-		const archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged", 2, 2);
+		const archers_e = TriggerHelper.SpawnUnits(e, "units/athen/champion_ranged", 3, 2);
 
 		for (const a of archers_e)
 		{

@@ -372,7 +372,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 
 	for (const p of [1, 5])
 	{
-		const towers_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "GarrisonTower").filter(TriggerHelper.IsInWorld);
+		const towers_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Defensive+Tower").filter(TriggerHelper.IsInWorld);
 
 		const owner = p;
 
@@ -406,7 +406,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		}
 
 		// wall towers
-		const towers_w = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Defensive+Tower+!Outpost+!GarrisonTower").filter(TriggerHelper.IsInWorld);
+		const towers_w = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "WallTower").filter(TriggerHelper.IsInWorld);
 
 		for (const e of towers_w)
 		{

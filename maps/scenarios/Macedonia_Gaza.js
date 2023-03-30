@@ -495,7 +495,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		// wall towers
 		if (p == 2)
 		{
-			const towers_w = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Defensive+Tower+!Outpost+!GarrisonTower").filter(TriggerHelper.IsInWorld);
+			const towers_w = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "WallTower").filter(TriggerHelper.IsInWorld);
 			for (const e of towers_w)
 			{
 				// spawn the garrison inside the tower
@@ -617,7 +617,7 @@ Trigger.prototype.SpawnIntervalPatrol = function(data)
 		const targets_A = ccs.concat(forts).concat(market).concat(village).concat(gates);
 
 		// targets B
-		const targets_B = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "DefenseTower").filter(TriggerHelper.IsInWorld);
+		const targets_B = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Defensive+Tower").filter(TriggerHelper.IsInWorld);
 
 		if (targets_A.length == 0 || targets_B.length == 0)
 			return;
@@ -741,7 +741,7 @@ Trigger.prototype.SpawnInitialPatrol = function(data)
 	const targets_A = ccs.concat(forts).concat(market).concat(village).concat(gates);
 
 	// targets B
-	const targets_B = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "DefenseTower").filter(TriggerHelper.IsInWorld);
+	const targets_B = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Defensive+Tower").filter(TriggerHelper.IsInWorld);
 
 	if (targets_A.length == 0 || targets_B.length == 0)
 		return;
@@ -830,7 +830,7 @@ Trigger.prototype.CarthageShipAttack = function(data)
 Trigger.prototype.ToggleTowerOwnershipA = function(data)
 {
 	// defense towers
-	const towers_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "DefenseTower").filter(TriggerHelper.IsInWorld);
+	const towers_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "Defensive+Tower").filter(TriggerHelper.IsInWorld);
 
 	// switch ownership
 	for (const t of towers_p)
@@ -845,7 +845,7 @@ Trigger.prototype.ToggleTowerOwnershipA = function(data)
 Trigger.prototype.ToggleTowerOwnershipB = function(data)
 {
 	// defense towers
-	const towers_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "DefenseTower").filter(TriggerHelper.IsInWorld);
+	const towers_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "Defensive+Tower").filter(TriggerHelper.IsInWorld);
 
 	// switch ownership
 	for (const t of towers_p)

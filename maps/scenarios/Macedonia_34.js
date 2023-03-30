@@ -644,7 +644,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				this.patrolInterval *= 1.1;
 				warn("new patrol spawn interval = " + uneval(this.patrolInterval));
 			}
-			else if (id.classesList.indexOf("GarrisonTower") >= 0)
+			else if (id.classesList.includes("Defensive") && id.classesList.includes("Tower"))
 			{
 
 				// our allies spawn faster
@@ -933,7 +933,7 @@ Trigger.prototype.IntervalVictoryCheck = function(data)
 	// warn("player 6 has "+uneval(ccs.length)+" ccs");
 
 	// check how many towers pl 2 has
-	const towers = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "GarrisonTower").filter(TriggerHelper.IsInWorld);
+	const towers = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "Defensive+Tower").filter(TriggerHelper.IsInWorld);
 	// warn("player 2 has "+uneval(towers.length)+" towers");
 
 	if (ccs.length <= 0 && towers.length <= 0)

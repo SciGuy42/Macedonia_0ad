@@ -248,7 +248,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		warn("cc destroyed");
 		// TO DO: win
 	}
-	else if (data.from == 3 && id.classesList.indexOf("GarrisonTower") >= 0)
+	else if (data.from == 3 && id.classesList.includes("Defensive") && id.classesList.includes("Tower"))
 	{
 		warn("tower destroyed");
 		this.TowerDestroyedAttack();
@@ -809,7 +809,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		//wall towers
 		if (p == 5)
 		{
-			let towers_w = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p), "Defensive+Tower+!Outpost+!GarrisonTower").filter(TriggerHelper.IsInWorld);
+			let towers_w = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p), "WallTower").filter(TriggerHelper.IsInWorld);
 			for (let e of towers_w)
 			{
 				//spawn the garrison inside the tower

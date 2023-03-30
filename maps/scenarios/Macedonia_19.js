@@ -137,7 +137,7 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	{
 
 
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
@@ -261,7 +261,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				}
 			}
 
-			warn("target cluster = "+target_cluster);
+			warn("target cluster = " + target_cluster);
 
 			if (target_cluster != -1)
 			{
@@ -333,7 +333,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		// wall towers
 		if (p == 5)
 		{
-			const towers_w = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Defensive+Tower+!Outpost+!GarrisonTower").filter(TriggerHelper.IsInWorld);
+			const towers_w = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "WallTower").filter(TriggerHelper.IsInWorld);
 			for (const e of towers_w)
 			{
 				// spawn the garrison inside the tower
@@ -368,7 +368,7 @@ Trigger.prototype.IdleUnitCheck = function(data)
 {
 	this.idleCheckCounter += 1;
 
-	warn("status counter = "+this.idleCheckCounter);
+	warn("status counter = " + this.idleCheckCounter);
 
 	if (this.idleCheckCounter == 50) // 25 minutes in
 	{
@@ -404,7 +404,7 @@ Trigger.prototype.IdleUnitCheck = function(data)
 };
 
 
-Trigger.prototype.RandomTemplatePers= function(data)
+Trigger.prototype.RandomTemplatePers = function(data)
 {
 	const r = Math.random();
 
@@ -416,7 +416,7 @@ Trigger.prototype.RandomTemplatePers= function(data)
 };
 
 
-Trigger.prototype.RandomTemplateMace= function(data)
+Trigger.prototype.RandomTemplateMace = function(data)
 {
 	const r = Math.random();
 
@@ -431,7 +431,7 @@ Trigger.prototype.RandomTemplateMace= function(data)
 
 Trigger.prototype.StartNextAttack = function(data)
 {
-	warn("Starting attack "+uneval(this.attack_index));
+	warn("Starting attack " + uneval(this.attack_index));
 
 	if (this.attack_index == 0)
 	{
@@ -472,7 +472,7 @@ Trigger.prototype.StartNextAttack = function(data)
 
 	// spawn elephants
 	owner = 2;
-	for (let i = 0; i < Math.floor(this.eleRatio*this.attack_level); i++)
+	for (let i = 0; i < Math.floor(this.eleRatio * this.attack_level); i++)
 	{
 		// spawn unit
 		const triggerPoint = pickRandom(this.GetTriggerPoints(triggerPointEle));
@@ -484,7 +484,7 @@ Trigger.prototype.StartNextAttack = function(data)
 
 	// spawn kush cavalry
 	owner = 2;
-	for (let i = 0; i < Math.floor(this.cavRatio*this.attack_level); i++)
+	for (let i = 0; i < Math.floor(this.cavRatio * this.attack_level); i++)
 	{
 		// spawn unit
 		const triggerPoint = pickRandom(this.GetTriggerPoints(triggerPointCav));
@@ -496,7 +496,7 @@ Trigger.prototype.StartNextAttack = function(data)
 
 	// spawn pers cavalry
 	owner = 3;
-	for (let i = 0; i < Math.floor(this.cavRatio*this.attack_level); i++)
+	for (let i = 0; i < Math.floor(this.cavRatio * this.attack_level); i++)
 	{
 		// spawn unit
 		const triggerPoint = pickRandom(this.GetTriggerPoints(triggerPointCav));
@@ -508,7 +508,7 @@ Trigger.prototype.StartNextAttack = function(data)
 
 	// spawn pers siege
 	owner = 3;
-	for (let i = 0; i < Math.floor(this.siegeRatio*this.attack_level); i++)
+	for (let i = 0; i < Math.floor(this.siegeRatio * this.attack_level); i++)
 	{
 		// spawn unit
 		const triggerPoint = pickRandom(this.GetTriggerPoints(triggerPointCav));
@@ -549,9 +549,9 @@ Trigger.prototype.ClusterUnits = function(units, num_clusters)
 
 	// how many clusters
 	const kmeans = new KMeans({
-	  "canvas": null,
-	  "data": dataset,
-	  "k": num_clusters
+		"canvas": null,
+		"data": dataset,
+		"k": num_clusters
 	});
 
 	const num_iterations = 40;

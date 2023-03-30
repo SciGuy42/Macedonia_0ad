@@ -329,7 +329,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 					// warn(uneval(id.classesList));
 
 					// handle defense tower
-					if (id.classesList.indexOf("DefenseTower") >= 0)
+					if (id.classesList.includes("Defensive") && id.classesList.includes("Tower"))
 					{
 						data_attack.attack_size = 8;
 						data_attack.ele_prob = 0.4;
@@ -391,7 +391,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 					cmpPlayer.AddResource("metal", 25);
 					this.maxWatchPop = Math.floor(this.maxWatchPop * 0.985);
 				}
-				else if (id.classesList.indexOf("DefenseTower") >= 0)
+				else if (id.classesList.includes("Defensive") && id.classesList.includes("Tower"))
 				{
 					cmpPlayer.AddResource("stone", 50);
 					cmpPlayer.AddResource("metal", 25);
@@ -606,8 +606,8 @@ Trigger.prototype.SpawnPatrolReinforcements = function(data)
 	// warn("Military = "+military.length);
 
 	// towers
-	const towers = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "StoneTower").filter(TriggerHelper.IsInWorld);
-	// warn("DefenseTower = "+towers.length);
+	const towers = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Defensive+Tower").filter(TriggerHelper.IsInWorld);
+	// warn("Defense tower = "+towers.length);
 
 	// spawn units based on points
 	const points = 5 * houses.length + 8 * fields.length + 10 * economic.length + 5 * military.length + 1 * towers.length + 20 * this.numTradersArrived;
@@ -1083,7 +1083,7 @@ Trigger.prototype.SpawnAchaeanPatrol = function(data)
 		targets_A = targets_A.concat(TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "MercenaryCamp").filter(TriggerHelper.IsInWorld));
 		targets_A = targets_A.concat(TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Fortress").filter(TriggerHelper.IsInWorld));
 
-		let targets_B = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "DefenseTower").filter(TriggerHelper.IsInWorld);
+		let targets_B = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Defensive+Tower").filter(TriggerHelper.IsInWorld);
 		targets_B = targets_B.concat(TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Gate").filter(TriggerHelper.IsInWorld));
 
 
@@ -1125,7 +1125,7 @@ Trigger.prototype.SpawnBessusPatrol = function(data)
 			targets_A = targets_A.concat(TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "Market").filter(TriggerHelper.IsInWorld));
 
 
-			let targets_B = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "DefenseTower").filter(TriggerHelper.IsInWorld);
+			let targets_B = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "Defensive+Tower").filter(TriggerHelper.IsInWorld);
 			targets_B = targets_B.concat(TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "Fortress").filter(TriggerHelper.IsInWorld));
 
 			if (targets_A.length == 0 || targets_B.length == 0)

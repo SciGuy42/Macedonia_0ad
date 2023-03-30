@@ -162,7 +162,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 
 	for (const p of [0, 6])
 	{
-		const towers = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "DefenseTower").filter(TriggerHelper.IsInWorld);
+		const towers = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Defensive+Tower").filter(TriggerHelper.IsInWorld);
 
 		for (const c of towers)
 		{

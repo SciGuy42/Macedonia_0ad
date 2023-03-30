@@ -700,11 +700,9 @@ Trigger.prototype.GarrisonEntities = function(data)
 
 	for (const p of players)
 	{
-		const towers_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "GarrisonTower").filter(TriggerHelper.IsInWorld);
+		const towers_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "StoneTower").filter(TriggerHelper.IsInWorld);
 
-		let size = 5;
-		if (p == 0)
-			size = 1;
+		const size = p == 0 ? 1 : 5;
 
 		for (const e of towers_p)
 		{

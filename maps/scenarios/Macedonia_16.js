@@ -278,7 +278,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		warn("cc destroyed");
 		// TO DO: win
 	}
-	else if (data.from == 3 && id.classesList.indexOf("GarrisonTower") >= 0)
+	else if (data.from == 3 && id.classesList.includes("Defensive") && id.classesList.includes("Tower"))
 	{
 		warn("tower destroyed");
 		this.TowerDestroyedAttack();

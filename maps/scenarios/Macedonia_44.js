@@ -2371,7 +2371,7 @@ Trigger.prototype.StatusCheck = function(data)
 	if (this.finalAttackScheduled == false)
 	{
 		const forts = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "Fortress").filter(TriggerHelper.IsInWorld);
-		const towers = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "DefenseTower").filter(TriggerHelper.IsInWorld);
+		const towers = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "Defensive+Tower").filter(TriggerHelper.IsInWorld);
 
 		if (forts.length == 0 && towers.length == 0)
 		{

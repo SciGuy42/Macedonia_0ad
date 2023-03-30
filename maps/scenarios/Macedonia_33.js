@@ -411,7 +411,7 @@ Trigger.prototype.GarrisonEntities = function(data)
 		}
 
 		// wall tower
-		// let towers_w = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p), "Defensive+Tower+!Outpost+!GarrisonTower").filter(TriggerHelper.IsInWorld);
+		// let towers_w = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p), "WallTower").filter(TriggerHelper.IsInWorld);
 		const towers_w = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "WallTower").filter(TriggerHelper.IsInWorld);
 		for (const e of towers_w)
 		{
@@ -774,7 +774,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
 		if (id)
 		{
-			if (id.classesList.indexOf("GarrisonTower") >= 0)
+			if (id.classesList.includes("Defensive") && id.classesList.includes("Tower"))
 			{
 				// warn("Bazira tower destroyed.");
 

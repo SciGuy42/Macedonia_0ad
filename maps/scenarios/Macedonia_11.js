@@ -125,7 +125,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			if (data.from == 6)
 			{
 
-				if (id.classesList.indexOf("GarrisonTower") >= 0 && this.tower_destroyed_event_happened == false)
+				if ((id.classesList.includes("Defensive") && id.classesList.includes("Tower")) && this.tower_destroyed_event_happened == false)
 				{
 					//warn("tower destroyed");
 					this.tower_destroyed_event_happened = true;
@@ -249,8 +249,6 @@ Trigger.prototype.IntervalActionSpawnPatrol = function(data)
 
 	//	warn("our ccs: "+uneval(cc));
 	// warn("other ccs: "+uneval(other_ccs));
-
-	const markets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(6), "GarrisonTower").filter(TriggerHelper.IsInWorld);
 
 	const patrol_points = [cc[0], pickRandom(other_ccs)];
 
