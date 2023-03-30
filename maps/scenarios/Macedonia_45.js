@@ -1712,7 +1712,7 @@ Trigger.prototype.PlayerCommandAction = function(data)
 
 				// get tech
 				const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
-				cmpTechnologyManager.ResearchTechnology("persians/special_archery_tradition");
+				cmpTechnologyManager.ResearchTechnology("archery_tradition");
 
 				this.archersTrained = true;
 			}

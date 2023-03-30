@@ -1107,7 +1107,7 @@ Trigger.prototype.CheckForCC = function(data)
 			cmpTechnologyManager.ResearchTechnology("siege_health");
 			cmpTechnologyManager.ResearchTechnology("siege_attack");
 			cmpTechnologyManager.ResearchTechnology("siege_bolt_accuracy");
-			cmpTechnologyManager.ResearchTechnology("unlock_champion_units");
+			cmpTechnologyManager.ResearchTechnology("unlock_champion_infantry");
 			cmpTechnologyManager.ResearchTechnology("unlock_spies");
 			cmpTechnologyManager.ResearchTechnology("cavalry_movement_speed");
 

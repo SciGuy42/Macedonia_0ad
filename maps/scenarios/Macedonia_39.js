@@ -980,7 +980,7 @@ Trigger.prototype.LevelAdvance = function(data)
 	/* else if (this.currentLevel == 4)
 	{
 		cmpTechnologyManager.ResearchTechnology("attack_soldiers_will");
-		cmpTechnologyManager.ResearchTechnology("mauryans/special_archery_tradition");
+		cmpTechnologyManager.ResearchTechnology("archery_tradition");
 	}*/
 
 	// step 2: decide on templates

@@ -108,7 +108,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				// we get some tech -- improved line of sight, regeneration when idle
 				const cmpPlayer = QueryPlayerIDInterface(1);
 				const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
-				cmpTechnologyManager.ResearchTechnology("carthaginians/special_exploration");
 				cmpTechnologyManager.ResearchTechnology("health_regen_units");
 				warn("captured temple");
 
