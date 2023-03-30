@@ -1540,7 +1540,7 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 			}
 			else if (id.template.GenericName == "Heavy Skirmisher")
 			{
-				template = "units/mace/thureophoros";
+				template = "units/merc_thureophoros";
 			}
 
 		}

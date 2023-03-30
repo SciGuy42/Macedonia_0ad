@@ -366,7 +366,7 @@ Trigger.prototype.SpawnSquad = function(data)
 	for (let i = 0; i < size; ++i)
 	{
 		let template_i = pickRandom(templates);
-		if (template_i == "units/cavalry_javelineer_a")
+		if (template_i == "units/pers/cavalry_javelineer_a")
 		{
 			template_i = "units/pers/cavalry_javelineer_a";
 		}

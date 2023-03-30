@@ -50,7 +50,7 @@ var disabledTemplates = (civ) => [
 	// barracks
 	"structures/" + civ + "/barracks",
 	"structures/" + civ + "/workshop",
-	"structures/pers/elephant_stables",
+	"structures/pers/elephant_stable",
 
 	// villagers
 	"units/" + civ + "/support_female_citizen"
