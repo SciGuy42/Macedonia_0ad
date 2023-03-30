@@ -118,11 +118,11 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				this.attackShipGarrison += 1;
 			}
 		}
-		else if (data.entity == 12464) // gaia blacksmith
+		else if (data.entity == 12464) // gaia Forge
 		{
 			if (this.captured_smith == false)
 			{
-				// we get some blacksmith tech
+				// we get some forge tech
 				const cmpPlayer = QueryPlayerIDInterface(1);
 				const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 

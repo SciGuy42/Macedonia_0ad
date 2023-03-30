@@ -49,7 +49,7 @@ var disabledTemplates = (civ) => [
 
 	// barracks
 	"structures/" + civ + "/barracks",
-	"structures/" + civ + "/workshop",
+	"structures/" + civ + "/arsenal",
 	"structures/pers/elephant_stable",
 
 	// villagers
@@ -1061,7 +1061,7 @@ Trigger.prototype.CheckForCC = function(data)
 	cmpTrigger.DoAfterDelay(6 * 1000, "Dialog3", null);
 	cmpTrigger.DoAfterDelay(cmpTrigger.siegeDeliveryTime * 1000, "SpawnSiegeEquipment", null);
 
-	// cavalry attack targeting dock/blacksmith
+	// cavalry attack targeting dock/forge
 	cmpTrigger.DoAfterDelay(cmpTrigger.cavalryAttackInerval * 1000, "SpawnCavalryAttack", null);
 
 

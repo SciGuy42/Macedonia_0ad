@@ -492,7 +492,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		}
 	}
 
-	// check if workshop
+	// check if arsenal
 	if (data.entity == 7261)
 	{
 		// spawn some siege

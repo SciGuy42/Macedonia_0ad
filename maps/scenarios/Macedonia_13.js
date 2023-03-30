@@ -192,12 +192,12 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 
 		}
-		else if (id.classesList.indexOf("Blacksmith") >= 0)
+		else if (id.classesList.indexOf("Forge") >= 0)
 		{
 			warn("smith captured");
 			this.num_smith_captured += 1;
 			if (this.num_smith_captured == 1)
-				this.BlacksmithShipAttackRepeats();
+				this.ForgeShipAttackRepeats();
 		}
 		else if (id.classesList.indexOf("Arsenal") >= 0)
 		{

@@ -494,7 +494,7 @@ Trigger.prototype.VictoryCheck = function(data)
 
 Trigger.prototype.OwnershipChangedAction = function(data)
 {
-	// check if workshop
+	// check if arsenal
 	if (data.entity == 2711)
 	{
 		// spawn some siege

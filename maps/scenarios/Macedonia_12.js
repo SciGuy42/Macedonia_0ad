@@ -143,14 +143,14 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 			TriggerHelper.SpawnUnits(data.entity, "units/mace/ship_merchant", 2, 1);
 		}
-		else if (id.classesList.indexOf("Blacksmith") >= 0)
+		else if (id.classesList.indexOf("Forge") >= 0)
 		{
 			warn("smith captured");
 			this.num_smith_captured += 1;
 			if (this.num_smith_captured == 1)
-				this.BlacksmithShipAttackRepeats();
+				this.ForgeShipAttackRepeats();
 		}
-		else if (id.classesList.indexOf("Workshop") >= 0)
+		else if (id.classesList.indexOf("Arsenal") >= 0)
 		{
 			warn("shop captured");
 			this.DoAfterDelay(240 * 1000, "WorkshopShipAttack", null);
@@ -708,7 +708,7 @@ Trigger.prototype.WorkshopShipAttack = function(data)
 
 
 	// pick dock
-	const smiths = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "Workshop").filter(TriggerHelper.IsInWorld);
+	const smiths = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "Arsenal").filter(TriggerHelper.IsInWorld);
 
 	if (smiths.length == 0)
 	{
@@ -750,21 +750,21 @@ Trigger.prototype.WorkshopShipAttack = function(data)
 		cmpUnitAI.Attack(target);
 	}
 
-	// this.DoAfterDelay(360 * 1000,"BlacksmithShipAttackRepeats",null);
+	// this.DoAfterDelay(360 * 1000,"ForgeShipAttackRepeats",null);
 };
 
 
 // spawn random attack
-Trigger.prototype.BlacksmithShipAttackRepeats = function(data)
+Trigger.prototype.ForgeShipAttackRepeats = function(data)
 {
 
 
 	// pick dock
-	const smiths = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "Blacksmith").filter(TriggerHelper.IsInWorld);
+	const smiths = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "Forge").filter(TriggerHelper.IsInWorld);
 
 	if (smiths.length == 0)
 	{
-		this.DoAfterDelay(360 * 1000, "BlacksmithShipAttackRepeats", null);
+		this.DoAfterDelay(360 * 1000, "ForgeShipAttackRepeats", null);
 		return;
 	}
 
@@ -803,7 +803,7 @@ Trigger.prototype.BlacksmithShipAttackRepeats = function(data)
 		cmpUnitAI.Attack(target);
 	}
 
-	this.DoAfterDelay(360 * 1000, "BlacksmithShipAttackRepeats", null);
+	this.DoAfterDelay(360 * 1000, "ForgeShipAttackRepeats", null);
 };
 
 
