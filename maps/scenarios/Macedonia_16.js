@@ -65,7 +65,6 @@ var disabledTemplates = (civ) => [
 	"structures/cart/embassy_iberian"
 ];
 
-
 Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, target_class)
 {
 	let target = this.FindClosestTarget(attacker, target_player, target_class);
@@ -74,12 +73,10 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 		target = this.FindClosestTarget(attacker, target_player, siegeTargetClass);
 	}
 
-
 	if (target)
 	{
 		// get target position
 		var cmpTargetPosition = Engine.QueryInterface(target, IID_Position).GetPosition2D();
-
 
 		const cmpUnitAI = Engine.QueryInterface(attacker, IID_UnitAI);
 		cmpUnitAI.SwitchToStance("violent");
@@ -88,12 +85,10 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	else // find a structure
 	{
 
-
 		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
-
 
 Trigger.prototype.WalkAndFightRandomtTarget = function(attacker, target_player, target_class)
 {
@@ -103,12 +98,10 @@ Trigger.prototype.WalkAndFightRandomtTarget = function(attacker, target_player, 
 		target = this.FindRandomTarget(attacker, target_player, siegeTargetClass);
 	}
 
-
 	if (target)
 	{
 		// get target position
 		var cmpTargetPosition = Engine.QueryInterface(target, IID_Position).GetPosition2D();
-
 
 		const cmpUnitAI = Engine.QueryInterface(attacker, IID_UnitAI);
 		cmpUnitAI.SwitchToStance("violent");
@@ -117,12 +110,10 @@ Trigger.prototype.WalkAndFightRandomtTarget = function(attacker, target_player, 
 	else // find a structure
 	{
 
-
 		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
-
 
 Trigger.prototype.FindRandomTarget = function(attacker, target_player, target_class)
 {
@@ -144,7 +135,6 @@ Trigger.prototype.FindRandomTarget = function(attacker, target_player, target_cl
 
 	return pickRandom(targets);
 };
-
 
 Trigger.prototype.FindClosestTarget = function(attacker, target_player, target_class)
 {
@@ -292,10 +282,6 @@ Trigger.prototype.PlayerCommandAction = function(data)
 	// warn(uneval(data));
 };
 
-
-
-
-
 // garison AI entities with archers
 Trigger.prototype.GarrisonEntities = function(data)
 {
@@ -303,7 +289,6 @@ Trigger.prototype.GarrisonEntities = function(data)
 	for (const p of [2, 3, 4])
 	{
 		const towers_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "StoneTower").filter(TriggerHelper.IsInWorld);
-
 
 		for (const e of towers_p)
 		{
@@ -350,9 +335,6 @@ Trigger.prototype.GarrisonEntities = function(data)
 	}
 };
 
-
-
-
 Trigger.prototype.LevelUpPers = function(data)
 {
 	this.persLevel += 1;
@@ -390,7 +372,6 @@ Trigger.prototype.IdleUnitCheck = function(data)
 	}
 };
 
-
 Trigger.prototype.StructureDecayCheck = function(data)
 {
 	// warn("structure decay check");
@@ -416,7 +397,6 @@ Trigger.prototype.StructureDecayCheck = function(data)
 	}
 };
 
-
 Trigger.prototype.RandomTemplatePers = function(data)
 {
 	const r = Math.random();
@@ -428,7 +408,6 @@ Trigger.prototype.RandomTemplatePers = function(data)
 	return pickRandom(this.pers_ele_templates);
 };
 
-
 Trigger.prototype.RandomTemplateMace = function(data)
 {
 	const r = Math.random();
@@ -439,7 +418,6 @@ Trigger.prototype.RandomTemplateMace = function(data)
 		return pickRandom(this.mace_cav_templates);
 	return pickRandom(this.mace_siege_templates);
 };
-
 
 Trigger.prototype.EliteWaveUnitSpawn = function(data)
 {
@@ -461,7 +439,6 @@ Trigger.prototype.EliteWaveUnitSpawn = function(data)
 
 	// set formation
 	TriggerHelper.SetUnitFormation(2, attackers_per, pickRandom(unitFormations));
-
 
 	const target = this.FindClosestTarget(attackers_per[0], 1, unitTargetClass);
 	// warn(target);
@@ -544,7 +521,6 @@ Trigger.prototype.CavalryWaveUnitSpawn = function(data)
 	const num_spawn = 3 * this.pers_spawn_size;
 	const attackers_per = [];
 
-
 	for (let i = 0; i < num_spawn; i++)
 	{
 		// pick spawn point
@@ -587,7 +563,6 @@ Trigger.prototype.WaveUnitSpawn = function(data)
 	const num_spawn = this.pers_spawn_size;
 	const attackers_per = [];
 
-
 	for (let i = 0; i < num_spawn; i++)
 	{
 
@@ -624,13 +599,9 @@ Trigger.prototype.IntervalUnitSpawn = function(data)
 	const target_pos_pers = TriggerHelper.GetEntityPosition2D(mace_site);
 	const target_pos_mace = TriggerHelper.GetEntityPosition2D(pers_site);
 
-
-
-
 	// PERSIA
 	let num_spawn = this.pers_spawn_size;
 	const attackers_per = [];
-
 
 	for (let i = 0; i < num_spawn; i++)
 	{
@@ -672,7 +643,6 @@ Trigger.prototype.IntervalUnitSpawn = function(data)
 		},
 		"allowCapture": false
 	});
-
 
 	// MACEDONIA
 	const currentPop = QueryPlayerIDInterface(1).GetPopulationCount();
@@ -718,9 +688,6 @@ Trigger.prototype.IntervalUnitSpawn = function(data)
 		});
 	}
 };
-
-
-
 
 Trigger.prototype.RepeatUnitSpawnGreek = function(data)
 {
@@ -800,8 +767,6 @@ Trigger.prototype.RepeatUnitSpawnPers = function(data)
 
 };
 
-
-
 Trigger.prototype.RangeActionTriggerK = function(data)
 {
 	// warn(uneval(data));
@@ -819,7 +784,6 @@ Trigger.prototype.RangeActionTriggerK = function(data)
 	if (data.currentCollection.length > 10)
 	{
 		TriggerHelper.SetPlayerWon(1, this.VictoryTextFn, this.VictoryTextFn);
-
 
 		/* warn("Win!");
 		// try out the dialog
@@ -915,7 +879,6 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 
 	cmpTrigger.enemies = [2, 4];
 
-
 	// persian soldier types
 	cmpTrigger.pers_inf_templates = ["units/pers/arstibara", "units/pers/champion_infantry", "units/pers/champion_infantry", "units/pers/infantry_archer_a", "units/pers/infantry_javelineer_a", "units/pers/infantry_spearman_b", "units/pers/infantry_spearman_a", "units/pers/infantry_spearman_e", "units/pers/kardakes_hoplite", "units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher"];
 	cmpTrigger.pers_cav_templates = ["units/pers/cavalry_javelineer_a", "units/pers/cavalry_spearman_a", "units/pers/cavalry_axeman_a", "units/pers/champion_cavalry", "units/pers/champion_cavalry_archer"];
@@ -934,7 +897,6 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	// some state variables
 	cmpTrigger.persLevel = 2;
 
-
 	/* warn(uneval(cmpTrigger.greek_inf_templates));
 	warn(uneval(cmpTrigger.mace_inf_templates));
 	warn(uneval(cmpTrigger.mace_cav_templates));
@@ -942,7 +904,6 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 
 	// garrison towers
 	cmpTrigger.DoAfterDelay(5 * 1000, "GarrisonEntities", null);
-
 
 	// spawn persian units
 	cmpTrigger.DoAfterDelay(cmpTrigger.persSpawnInterval, "RepeatUnitSpawnPers", null);
@@ -974,7 +935,6 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 
 		const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 
-
 		cmpTechnologyManager.ResearchTechnology("phase_town_generic");
 		cmpTechnologyManager.ResearchTechnology("phase_city_generic");
 
@@ -985,14 +945,11 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		}
 	}
 
-
 	/* cmpTrigger.RegisterTrigger("OnInterval", "IntervalUnitSpawn", {
 		"enabled": true,
 		"delay": 15 * 1000,
 		"interval": 15 * 1000,
 	});*/
-
-
 
 	cmpTrigger.RegisterTrigger("OnInterval", "LevelUpPers", {
 		"enabled": true,
@@ -1020,6 +977,5 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		"requiredComponent": IID_UnitAI, // only count units in range
 		"enabled": true
 	});
-
 
 }

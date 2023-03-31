@@ -4,17 +4,13 @@ warn("loading the triggers file");
 // Trigger listeners //
 // /////////////////////
 
-
 var unitTargetClass = "Unit+!Ship";
 var siegeTargetClass = "Structure";
-
 
 var triggerPointNorth = "B";
 var triggerPointSouth = "A";
 var triggerPointArc = "K";
 var triggerPointAch = "J";
-
-
 
 var unitFormations = [
 	"special/formations/box",
@@ -22,7 +18,6 @@ var unitFormations = [
 	"special/formations/line_closed",
 	"special/formations/column_closed"
 ];
-
 
 var disabledTemplates = (civ) => [
 	// Economic structures
@@ -53,8 +48,6 @@ var disabledTemplates = (civ) => [
 	"units/" + civ + "/support_female_citizen"
 ];
 
-
-
 Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, target_class)
 {
 	let target = this.FindClosestTarget(attacker, target_player, target_class);
@@ -63,12 +56,10 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 		target = this.FindClosestTarget(attacker, target_player, siegeTargetClass);
 	}
 
-
 	if (target)
 	{
 		// get target position
 		var cmpTargetPosition = Engine.QueryInterface(target, IID_Position).GetPosition2D();
-
 
 		const cmpUnitAI = Engine.QueryInterface(attacker, IID_UnitAI);
 		cmpUnitAI.SwitchToStance("violent");
@@ -76,7 +67,6 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	}
 	else // find a structure
 	{
-
 
 		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
@@ -146,7 +136,6 @@ Trigger.prototype.ResearchQueuedAction = function(data)
 	// warn("The OnResearchQueued event happened with the following data:");
 	// warn(uneval(data));
 };
-
 
 Trigger.prototype.SpecialAchaeanAssault = function(data)
 {
@@ -390,7 +379,6 @@ Trigger.prototype.GarrisonEntities = function(data)
 	}
 };
 
-
 Trigger.prototype.IdleUnitCheck = function(data)
 {
 
@@ -432,7 +420,6 @@ Trigger.prototype.IdleUnitCheck = function(data)
 	}
 };
 
-
 Trigger.prototype.VictoryTextFn = function(n)
 {
 	return markForPluralTranslation(
@@ -441,15 +428,11 @@ Trigger.prototype.VictoryTextFn = function(n)
 		n);
 };
 
-
-
-
 Trigger.prototype.PatrolOrder = function(units, p, A, B)
 {
 
 	if (units.length <= 0)
 		return;
-
 
 	// list of patrol targets
 	const patrolTargets = [A, B];
@@ -505,14 +488,12 @@ Trigger.prototype.SpawnFortressPatrol = function(data)
 		// set formation
 		TriggerHelper.SetUnitFormation(p, units, pickRandom(unitFormations));
 
-
 		// send to patrol
 		this.PatrolOrder(units, p);
 
 	}
 
 };
-
 
 Trigger.prototype.CavalryAttack = function(data)
 {
@@ -597,7 +578,6 @@ Trigger.prototype.ArcadianAttack = function(data)
 		}
 	}
 
-
 	// set formation
 	TriggerHelper.SetUnitFormation(p, attackers, pickRandom(unitFormations));
 
@@ -623,7 +603,6 @@ Trigger.prototype.ArcadianAttack = function(data)
 
 	this.DoAfterDelay(next_attack_interval_sec * 1000, "ArcadianAttack", null);
 };
-
 
 Trigger.prototype.AchaeanAttack = function(data)
 {
@@ -656,7 +635,6 @@ Trigger.prototype.AchaeanAttack = function(data)
 		}
 	}
 
-
 	// set formation
 	TriggerHelper.SetUnitFormation(p, attackers, pickRandom(unitFormations));
 
@@ -683,7 +661,6 @@ Trigger.prototype.AchaeanAttack = function(data)
 	this.DoAfterDelay(next_attack_interval_sec * 1000, "AchaeanAttack", null);
 };
 
-
 Trigger.prototype.SpawnAchaeanPatrol = function(data)
 {
 	const p = 5; // arcdians
@@ -704,7 +681,6 @@ Trigger.prototype.SpawnAchaeanPatrol = function(data)
 
 		let targets_B = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Defensive+Tower").filter(TriggerHelper.IsInWorld);
 		targets_B = targets_B.concat(TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Gate").filter(TriggerHelper.IsInWorld));
-
 
 		if (targets_A.length == 0 || targets_B.length == 0)
 			return;
@@ -743,7 +719,6 @@ Trigger.prototype.SpawnBessusPatrol = function(data)
 			let targets_A = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "CivilCentre").filter(TriggerHelper.IsInWorld);
 			targets_A = targets_A.concat(TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "Market").filter(TriggerHelper.IsInWorld));
 
-
 			let targets_B = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "StoneTower").filter(TriggerHelper.IsInWorld);
 			targets_B = targets_B.concat(TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "Fortress").filter(TriggerHelper.IsInWorld));
 
@@ -768,9 +743,6 @@ Trigger.prototype.SpawnBessusPatrol = function(data)
 		this.DoAfterDelay(30 * 1000, "SpawnBessusPatrol", null);
 	}
 };
-
-
-
 
 Trigger.prototype.ShowText = function(text, option_a, option_b)
 {
@@ -810,7 +782,6 @@ Trigger.prototype.ShowText = function(text, option_a, option_b)
 	});
 
 };
-
 
 Trigger.prototype.CheckForCC = function(data)
 {
@@ -880,7 +851,6 @@ Trigger.prototype.SpawnMercenarySquad = function(data)
 
 {
 	const cmpTrigger = Engine.QueryInterface(SYSTEM_ENTITY, IID_Trigger);
-
 
 	// some templates
 	cmpTrigger.squadTemplates = ["units/athen/champion_ranged", "units/merc_black_cloak", "units/athen/champion_marine", "units/athen/champion_infantry", "units/merc_thureophoros"];
@@ -954,8 +924,6 @@ Trigger.prototype.SpawnMercenarySquad = function(data)
 
 		const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 
-
-
 		cmpTechnologyManager.ResearchTechnology("phase_town_generic");
 		cmpTechnologyManager.ResearchTechnology("phase_city_generic");
 
@@ -977,7 +945,6 @@ Trigger.prototype.SpawnMercenarySquad = function(data)
 		}
 	}
 
-
 	cmpTrigger.RegisterTrigger("OnInterval", "IdleUnitCheck", {
 		"enabled": true,
 		"delay": 30 * 1000,
@@ -990,7 +957,5 @@ Trigger.prototype.SpawnMercenarySquad = function(data)
 	cmpTrigger.RegisterTrigger("OnOwnershipChanged", "OwnershipChangedAction", data);
 
 	/* cmpTrigger.DoAfterDelay(300 * 1000,"SpawnAlliedInvasionAttack",null);*/
-
-
 
 }

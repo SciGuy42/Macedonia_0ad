@@ -6,9 +6,7 @@ warn("loading the triggers file");
 
 var unitTargetClass = "Unit+!Ship";
 
-
 var triggerPointShipUnload = "C";
-
 
 var unitFormations = [
 	"special/formations/box",
@@ -37,11 +35,9 @@ Trigger.prototype.StructureBuiltAction = function(data)
 
 			this.StartRepeatAttacks();
 
-
 			this.gaul_cavalary_started = true;
 
 		}
-
 
 	}
 };
@@ -128,11 +124,9 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		// spawn some villagers
 		TriggerHelper.SpawnUnits(8013, "units/mace/support_female_citizen", 10, 1);
 
-
 		// trigger cavalry attacks
 		if (this.gaul_cavalary_started == false)
 		{
-
 
 			this.StartRepeatAttacks();
 		}
@@ -150,7 +144,6 @@ Trigger.prototype.PlayerCommandAction = function(data)
 	// warn("The OnPlayerCommand event happened with the following data:");
 	// warn(uneval(data));
 };
-
 
 Trigger.prototype.FlipOutpostOwnership = function(data)
 {
@@ -238,13 +231,11 @@ Trigger.prototype.SpawnAndStartCavalryAttack = function()
 		});
 	}
 
-
 	// schedule next attack
 	const nextAttackDelay = Math.round(this.gaul_cavalry_interval + (Math.random() * 120 * 1000));
 	// warn("next attack in "+nextAttackDelay);
 	this.DoAfterDelay(nextAttackDelay, "SpawnAndStartCavalryAttack", null);
 };
-
 
 Trigger.prototype.InvasionRangeAction = function(data)
 {
@@ -337,7 +328,6 @@ Trigger.prototype.SpawnInvasionShip = function()
 		return;
 
 	const spawn_site = pickRandom(docks);
-
 
 	const ship_spawned = TriggerHelper.SpawnUnits(spawn_site, shipType, 1, p);
 	let ship_garrison = [];
@@ -441,8 +431,6 @@ Trigger.prototype.IntervalActionTraders = function(data)
 		{
 			// make list of own markets
 			const markets_e = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(e), "Market").filter(TriggerHelper.IsInWorld);
-
-
 
 			// make list of possible other markets
 			let markets_others = [];
@@ -564,7 +552,6 @@ Trigger.prototype.IntervalAction = function(data)
 
 };
 
-
 Trigger.prototype.SetDifficultyLevel = function(data)
 {
 	// Very Hard: 1.56; Hard: 1.25; Medium 1
@@ -604,7 +591,6 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		this.shipAttackInterval *= 0.9;
 	}
 };
-
 
 {
 	const cmpTrigger = Engine.QueryInterface(SYSTEM_ENTITY, IID_Trigger);
@@ -652,15 +638,12 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	cmpTrigger.gaul_cavalry_interval = 120 * 1000;
 	cmpTrigger.gaul_cavalary_started = false;
 
-
 	cmpTrigger.invasion_under_way = false;
 	cmpTrigger.invasion_ship = undefined;
 	cmpTrigger.invasion_troops = undefined;
 
 	// lose towers
 	cmpTrigger.DoAfterDelay(1, "FlipOutpostOwnership", null);
-
-
 
 	// register invasion unload trigger
 	cmpTrigger.RegisterTrigger("OnRange", "InvasionRangeAction", {
@@ -670,7 +653,6 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		"requiredComponent": IID_UnitAI, // only count units in range
 		"enabled": true
 	});
-
 
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalAction", {
 		"enabled": true,
@@ -683,7 +665,6 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		"delay": 3 * 1000,
 		"interval": 45 * 1000,
 	});
-
 
 	/* let ents_5 = TriggerHelper.GetEntitiesByPlayer(5);
 	for (let e of ents_5)

@@ -4,7 +4,6 @@ warn("loading the triggers file");
 // Trigger listeners //
 // /////////////////////
 
-
 var unitTargetClass = "Unit+!Ship";
 var siegeTargetClass = "Structure";
 
@@ -29,8 +28,6 @@ var triggerPointTempleQuest = "H";
 var triggerPointKidnapperGuardPatrol = "J";
 var triggerPointStartAssault = "I";*/
 
-
-
 var unitFormations = [
 	"special/formations/box",
 	"special/formations/battle_line",
@@ -38,9 +35,7 @@ var unitFormations = [
 	"special/formations/column_closed"
 ];
 
-
 var disabledTemplatesCCs = (civ) => [
-
 
 	// Expansions
 	"structures/" + civ + "/civil_centre",
@@ -52,7 +47,6 @@ var disabledTemplatesCCs = (civ) => [
 
 var disabledTemplatesDocksCCs = (civ) => [
 
-
 	// Expansions
 	"structures/" + civ + "/civil_centre",
 	"structures/" + civ + "/military_colony",
@@ -63,7 +57,6 @@ var disabledTemplatesDocksCCs = (civ) => [
 	"structures/cart/super_dock",
 	"structures/ptol/lighthouse"
 ];
-
 
 var disabledTemplates = (civ) => [
 	// Economic structures
@@ -100,8 +93,6 @@ var disabledTemplates = (civ) => [
 	"units/" + civ + "/support_female_citizen"
 ];
 
-
-
 Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, target_class)
 {
 	let target = this.FindClosestTarget(attacker, target_player, target_class);
@@ -110,12 +101,10 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 		target = this.FindClosestTarget(attacker, target_player, siegeTargetClass);
 	}
 
-
 	if (target)
 	{
 		// get target position
 		var cmpTargetPosition = Engine.QueryInterface(target, IID_Position).GetPosition2D();
-
 
 		const cmpUnitAI = Engine.QueryInterface(attacker, IID_UnitAI);
 		cmpUnitAI.SwitchToStance("violent");
@@ -124,12 +113,10 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	else // find a structure
 	{
 
-
 		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
-
 
 Trigger.prototype.FindRandomTarget = function(attacker, target_player, target_class)
 {
@@ -151,7 +138,6 @@ Trigger.prototype.FindRandomTarget = function(attacker, target_player, target_cl
 
 	return pickRandom(targets);
 };
-
 
 Trigger.prototype.FindClosestTarget = function(attacker, target_player, target_class)
 {
@@ -224,7 +210,6 @@ Trigger.prototype.SpawnAttackSquad = function(p, site, templates, size, target_c
 	});
 };
 
-
 // scenario indendent functions
 Trigger.prototype.PatrolOrderList = function(units, p, patrolTargets)
 {
@@ -250,7 +235,6 @@ Trigger.prototype.PatrolOrderList = function(units, p, patrolTargets)
 		});
 	}
 };
-
 
 Trigger.prototype.ShowText = function(text, option_a, option_b)
 {
@@ -298,7 +282,6 @@ Trigger.prototype.StructureDecayCheck = function(data)
 		const structs = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Structure").filter(TriggerHelper.IsInWorld);
 		// warn("checking decay");
 
-
 		for (const s of structs)
 		{
 			var cmpCapt = Engine.QueryInterface(s, IID_Capturable);
@@ -322,21 +305,16 @@ Trigger.prototype.StructureDecayCheck = function(data)
 	}
 };
 
-
-
-
 Trigger.prototype.IdleUnitCheck = function(data)
 {
 
 	this.idleUnitCounter += 1;
 	warn("idle unit check" + this.idleUnitCounter);
 
-
 	// colony militia
 	for (const p of [5])
 	{
 		const spawn_sites = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Structure").filter(TriggerHelper.IsInWorld);
-
 
 		const inf_units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Unit").filter(TriggerHelper.IsInWorld);
 
@@ -364,7 +342,6 @@ Trigger.prototype.IdleUnitCheck = function(data)
 
 		const patrol_sites = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(3), "Structure").filter(TriggerHelper.IsInWorld);
 
-
 		for (const u of units)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
@@ -372,7 +349,6 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			{
 				if (cmpUnitAI.IsIdle())
 				{
-
 
 					const sites = [pickRandom(patrol_sites), pickRandom(patrol_sites), pickRandom(patrol_sites), pickRandom(patrol_sites)];
 
@@ -384,11 +360,9 @@ Trigger.prototype.IdleUnitCheck = function(data)
 	}
 };
 
-
 // garison AI entities with archers
 Trigger.prototype.GarrisonEntities = function(data)
 {
-
 
 	for (const p of [2])
 	{
@@ -422,11 +396,8 @@ Trigger.prototype.GarrisonEntities = function(data)
 	}
 };
 
-
-
 Trigger.prototype.VictoryCheck = function(data)
 {
-
 
 	// check how many structures player 2 has
 	const structs = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "Structure").filter(TriggerHelper.IsInWorld);
@@ -444,10 +415,6 @@ Trigger.prototype.VictoryCheck = function(data)
 	}
 
 };
-
-
-
-
 
 Trigger.prototype.OwnershipChangedAction = function(data)
 {
@@ -533,7 +500,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 	}
 
-
 	// check if temple is captured before quest completed
 	if (data.from == 0 && data.to == 1)
 	{
@@ -551,7 +517,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	{
 		this.LevelAdvance();
 	}*/
-
 
 	// warn(uneval(data));
 	// check if we killed gaia infantry
@@ -573,9 +538,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		}
 	}*/
 };
-
-
-
 
 Trigger.prototype.ResearchTechs = function(data)
 {
@@ -622,7 +584,6 @@ Trigger.prototype.ResearchTechs = function(data)
 	}
 };
 
-
 Trigger.prototype.VictoryTextFn = function(n)
 {
 	return markForPluralTranslation(
@@ -630,7 +591,6 @@ Trigger.prototype.VictoryTextFn = function(n)
 		"%(players)s and %(lastPlayer)s have won (game mode).",
 		n);
 };
-
 
 Trigger.prototype.IntervalSpawnGoats = function(data)
 {
@@ -667,7 +627,6 @@ Trigger.prototype.IntervalSpawnGuards = function(data)
 	{
 		return;
 	}
-
 
 	// compute population limit based on what structures we have
 	const barracks = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Barracks").filter(TriggerHelper.IsInWorld);
@@ -752,17 +711,13 @@ Trigger.prototype.IntervalSpawnGuards = function(data)
 			this.PatrolOrderList(unit_i, p, sites);
 		}
 
-
 	}
-
 
 	this.DoAfterDelay(20 * 1000, "IntervalSpawnGuards", null);
 
 	warn("end spawn guards");
 
 };
-
-
 
 Trigger.prototype.SpawnTraders = function(data)
 {
@@ -777,8 +732,6 @@ Trigger.prototype.SpawnTraders = function(data)
 	// make list of own markets
 	const markets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(3), "Trade").filter(TriggerHelper.IsInWorld);
 	const docks = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(3), "Dock").filter(TriggerHelper.IsInWorld);
-
-
 
 	for (let i = 0; i < 20; i++)
 	{
@@ -795,12 +748,8 @@ Trigger.prototype.SpawnTraders = function(data)
 		cmpUnitAI.UpdateWorkOrders("Trade");
 		cmpUnitAI.SetupTradeRoute(target_market, spawn_market, null, true);
 
-
-
-
 	}
 };
-
 
 Trigger.prototype.SpawnDesertRaiders = function(data)
 {
@@ -809,7 +758,6 @@ Trigger.prototype.SpawnDesertRaiders = function(data)
 
 	// check if we have structure
 	const spawn_sites = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Structure").filter(TriggerHelper.IsInWorld);
-
 
 	for (let i = 0; i < 90; i++)
 	{
@@ -826,9 +774,6 @@ Trigger.prototype.SpawnDesertRaiders = function(data)
 
 };
 
-
-
-
 Trigger.prototype.QuestTempleComplete = function(data)
 {
 	this.questTempleComplete = true;
@@ -841,8 +786,6 @@ Trigger.prototype.QuestTempleComplete = function(data)
 
 	// show text
 	this.ShowText("The monks thank you for your help. Their monastery is at your service.", "Thanks!", "OK");
-
-
 
 };
 
@@ -879,7 +822,6 @@ Trigger.prototype.RangeActionTemple = function(data)
 		}
 
 	}
-
 
 };
 
@@ -940,12 +882,7 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 					new_template = "units/athen/hero_iphicrates";
 				}
 
-
-
-
 			}
-
-
 
 			if (new_template)
 			{
@@ -956,9 +893,7 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 
 				}
 
-
 				// warn("new templatte = "+new_template);
-
 
 				Engine.DestroyEntity(u);
 
@@ -973,7 +908,6 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 		}
 	}
 };
-
 
 Trigger.prototype.RangeActionTeleportB = function(data)
 {
@@ -1020,8 +954,6 @@ Trigger.prototype.RangeActionTeleportB = function(data)
 
 			}
 
-
-
 			if (new_template)
 			{
 				// check a few specific bugs
@@ -1031,9 +963,7 @@ Trigger.prototype.RangeActionTeleportB = function(data)
 
 				}
 
-
 				// warn("new templatte = "+new_template);
-
 
 				Engine.DestroyEntity(u);
 
@@ -1093,8 +1023,6 @@ Trigger.prototype.RangeActionTeleportC = function(data)
 				}
 			}
 
-
-
 			if (new_template)
 			{
 				// check a few specific bugs
@@ -1104,9 +1032,7 @@ Trigger.prototype.RangeActionTeleportC = function(data)
 
 				}
 
-
 				warn("new templatte = " + new_template);
-
 
 				Engine.DestroyEntity(u);
 
@@ -1167,8 +1093,6 @@ Trigger.prototype.RangeActionTeleportD = function(data)
 				}
 			}
 
-
-
 			if (new_template)
 			{
 				// check a few specific bugs
@@ -1178,9 +1102,7 @@ Trigger.prototype.RangeActionTeleportD = function(data)
 
 				}
 
-
 				warn("new templatte = " + new_template);
-
 
 				Engine.DestroyEntity(u);
 
@@ -1196,7 +1118,6 @@ Trigger.prototype.RangeActionTeleportD = function(data)
 	}
 
 };
-
 
 /* Random maps:
  * 	India - lake in middle, mostly dry empty
@@ -1214,14 +1135,11 @@ Trigger.prototype.RangeActionTeleportD = function(data)
  *
  */
 
-
 {
-
 
 	const cmpTrigger = Engine.QueryInterface(SYSTEM_ENTITY, IID_Trigger);
 
 	// some constants (that may change)
-
 
 	// state variables
 	cmpTrigger.questTempleGiven = false;
@@ -1241,20 +1159,16 @@ Trigger.prototype.RangeActionTeleportD = function(data)
 
 	// warn("outlets: "+uneval(cmpTrigger.tunnelOutlets));
 
-
 	// start techs
 	cmpTrigger.DoAfterDelay(1 * 1000, "ResearchTechs", null);
 
 	// garrison entities
 	cmpTrigger.DoAfterDelay(3 * 1000, "GarrisonEntities", null);
 
-
 	// start patrol spawns
 	cmpTrigger.DoAfterDelay(3 * 1000, "SpawnDesertRaiders", null);
 
 	cmpTrigger.DoAfterDelay(2 * 1000, "IntervalSpawnGuards", null);
-
-
 
 	// debug
 	// cmpTrigger.DoAfterDelay(20 * 1000,"QuestTempleComplete",null);
@@ -1273,7 +1187,6 @@ Trigger.prototype.RangeActionTeleportD = function(data)
 		const cmpPlayer = QueryPlayerIDInterface(p);
 
 		// disable templates -- nobody can build docks or civil centre
-
 
 		let disTemplates = disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv());
 		// warn("disabled template = "+uneval(disTemplates));
@@ -1364,7 +1277,6 @@ Trigger.prototype.RangeActionTeleportD = function(data)
 	// cmpTrigger.RegisterTrigger("OnStructureBuilt", "StructureBuiltAction", data);
 
 	// cmpTrigger.RegisterTrigger("OnPlayerCommand", "PlayerCommandAction", data);
-
 
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalSpawnGoats", {
 		"enabled": true,

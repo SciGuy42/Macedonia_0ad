@@ -9,7 +9,6 @@ warn("loading the triggers file");
  */
 var unitTargetClass = "Unit+!Ship";
 
-
 var unitFormations = [
 	"special/formations/box",
 	"special/formations/battle_line",
@@ -65,7 +64,6 @@ Trigger.prototype.PlayerCommandAction = function(data)
 	// warn("The OnPlayerCommand event happened with the following data:");
 	// warn(uneval(data));
 };
-
 
 // garison AI entities with archers
 Trigger.prototype.GarrisonEntities = function(data)
@@ -193,12 +191,10 @@ Trigger.prototype.PersianAttackCav = function(data)
 
 };
 
-
 Trigger.prototype.PersianAttack = function(data)
 {
 	// warn("Persian attack:");
 	// warn(uneval(this.numberOfTimerTrigger));
-
 
 	var all_units = TriggerHelper.GetEntitiesByPlayer(2).filter(TriggerHelper.IsInWorld);
 	// warn("found "+all_units.length+" entities");
@@ -208,14 +204,12 @@ Trigger.prototype.PersianAttack = function(data)
 	const popUsed = cmpPlayer.GetPopulationCount();
 	// warn("found "+popUsed+" pop");
 
-
 	if (popUsed > pop_limit)
 	{
 		this.temp_site = -1;
 		this.DoAfterDelay(this.persAttackInterval, "PersianAttack", null);
 		return;
 	}
-
 
 	// pick spawn site
 	const site = Math.floor(Math.random() * Math.floor(this.persianSpawnSites.length));
@@ -361,8 +355,6 @@ Trigger.prototype.PersianAttack = function(data)
 
 };
 
-
-
 Trigger.prototype.GreekAttack = function(data)
 {
 	// warn("Greek attack:");
@@ -375,8 +367,6 @@ Trigger.prototype.GreekAttack = function(data)
 		// warn("greeks have too much pop, no spawn");
 		return;
 	}
-
-
 
 	let temp_name = "";
 
@@ -401,11 +391,9 @@ Trigger.prototype.GreekAttack = function(data)
 		TriggerHelper.SpawnUnits(this.greekSpawnSites[site], temp_name, 1, 4);
 	}
 
-
 	this.greekAttackCounter++;
 	/* if (this.greekAttackCounter >= this.maxNumberOfTimerTrigger)
 		this.DisableTrigger("OnInterval", "GreekAttack");*/
-
 
 	this.greekAttackInterval *= this.greekGamma;
 	// warn("greek interval = ");
@@ -425,12 +413,10 @@ Trigger.prototype.IntervalAction = function(data)
 	if (this.numberOfTimerTrigger >= this.maxNumberOfTimerTrigger)
 		this.DisableTrigger("OnInterval", "IntervalAction");*/
 
-
 	var enemy_players = [2, 4];
 
 	/* for (let p = 0; p < enemy_players.length; ++p)
 	{
-
 
 		var enemy_units = TriggerHelper.GetEntitiesByPlayer(enemy_players[p]);
 		var human_units = TriggerHelper.GetEntitiesByPlayer(1);
@@ -443,8 +429,6 @@ Trigger.prototype.IntervalAction = function(data)
 			for (let i = 0; i < enemy_units.length; ++i)
 			{
 				let cmpUnitAI = Engine.QueryInterface(enemy_units[i], IID_UnitAI);
-
-
 
 				//check if the unit is idle and if it can attack
 				if (cmpUnitAI){
@@ -477,8 +461,6 @@ Trigger.prototype.IntervalAction = function(data)
 								}
 							}
 
-
-
 						}
 
 						cmpUnitAI.SwitchToStance("violent");
@@ -508,13 +490,10 @@ Trigger.prototype.TestAction = function(data)
 	// warn("test action")
 };
 
-
-
 Trigger.prototype.SetDifficultyLevel = function(data)
 {
 	// Very Hard: 1.56; Hard: 1.25; Medium 1
 	const difficulty = "easy";
-
 
 	for (const player of [2, 4])
 	{
@@ -547,7 +526,6 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
 			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
 
-
 			for (let k = 0; k < this.prog_seq.length; ++k)
 			{
 				this.prog_seq[k] += 4;
@@ -555,7 +533,6 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		}
 	}
 };
-
 
 Trigger.prototype.StructureDecayCheck = function(data)
 {
@@ -580,7 +557,6 @@ Trigger.prototype.StructureDecayCheck = function(data)
 		}
 	}
 };
-
 
 Trigger.prototype.FindClosestTarget = function(attacker, target_player, target_class)
 {
@@ -630,7 +606,6 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 		target = this.FindClosestTarget(attacker, target_player, "Unit");
 	}
 
-
 	if (target)
 	{
 		// get target position
@@ -674,7 +649,6 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		}
 	}
 };
-
 
 Trigger.prototype.VictoryTextFnEnemy = function(n)
 {
@@ -745,7 +719,6 @@ Trigger.prototype.VictoryCheck = function(data)
 	cmpTrigger.persianCavTypes = ["units/pers/cavalry_spearman_b", "units/pers/cavalry_javelineer_b"];
 	cmpTrigger.persianCavTypesAll = ["units/pers/cavalry_spearman_e", "units/pers/cavalry_javelineer_e", "units/pers/champion_cavalry_archer", "units/pers/cavalry_archer_e", "units/pers/cavalry_axeman_e"];
 
-
 	cmpTrigger.numberOfTimerTrigger = 0;
 	cmpTrigger.maxNumberOfTimerTrigger = 100; // execute it that many times
 	cmpTrigger.numberOfTimerTriggerCav = 0;
@@ -777,7 +750,6 @@ Trigger.prototype.VictoryCheck = function(data)
 		"interval": 75 * 1000,
 	});*/
 
-
 	cmpTrigger.RegisterTrigger("OnInterval", "IdleUnitCheck", {
 		"enabled": true,
 		"delay": 120 * 1000,
@@ -797,7 +769,6 @@ Trigger.prototype.VictoryCheck = function(data)
 	cmpTrigger.DoAfterDelay(cmpTrigger.persAttackDelay, "PersianAttack", null);
 	cmpTrigger.DoAfterDelay(cmpTrigger.persAttackDelayCav, "PersianAttackCav", null);
 
-
 	cmpTrigger.greekAttackInterval = 75 * 1000;
 	cmpTrigger.greekAttackDelay = 125 * 1000;
 	cmpTrigger.greekGamma = 0.9825;
@@ -805,7 +776,6 @@ Trigger.prototype.VictoryCheck = function(data)
 
 	cmpTrigger.DoAfterDelay(5 * 1000, "SetDifficultyLevel", null);
 	cmpTrigger.DoAfterDelay(3 * 1000, "GarrisonEntities", null);
-
 
 	// schedule victory check
 	cmpTrigger.DoAfterDelay(45 * 60 * 1000, "VictoryCheck", null); // 45 minutes, check if we still have 2 ccs
@@ -815,7 +785,5 @@ Trigger.prototype.VictoryCheck = function(data)
 		"delay": 10 * 1000,
 		"interval": 10 * 1000,
 	});
-
-
 
 }

@@ -6,7 +6,6 @@ warn("loading the triggers file");
 
 var unitTargetClass = "Unit+!Ship";
 
-
 var unitFormations = [
 	"special/formations/box",
 	"special/formations/battle_line",
@@ -50,7 +49,6 @@ Trigger.prototype.ResearchQueuedAction = function(data)
 	// warn("The OnResearchQueued event happened with the following data:");
 	// warn(uneval(data));
 };
-
 
 Trigger.prototype.OwnershipChangedAction = function(data)
 {
@@ -207,7 +205,6 @@ Trigger.prototype.SpawnAndStartCavalryAttack = function()
 	this.gaul_cav_attack_counter += 1;
 };
 
-
 Trigger.prototype.IntervalActionTraders = function(data)
 {
 
@@ -261,7 +258,6 @@ Trigger.prototype.IntervalAction = function(data)
 
 };
 
-
 Trigger.prototype.SetDifficultyLevel = function(data)
 {
 	// Very Hard: 1.56; Hard: 1.25; Medium 1
@@ -291,7 +287,6 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 				cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
 				cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
 
-
 			}
 		}
 		else if (player == 7)
@@ -318,7 +313,6 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		}
 	}
 };
-
 
 Trigger.prototype.GreekAttackAction = function(data)
 {
@@ -385,7 +379,6 @@ Trigger.prototype.GreekAttackAction = function(data)
 	this.DoAfterDelay(this.greek_merc_interval, "GreekAttackAction", null);
 };
 
-
 Trigger.prototype.GarrisonAction = function(data)
 {
 	for (const camp_id of this.greek_camps)
@@ -414,7 +407,6 @@ Trigger.prototype.GarrisonAction = function(data)
 	cmpTrigger.RegisterTrigger("OnResearchQueued", "ResearchQueuedAction", data);
 	cmpTrigger.RegisterTrigger("OnOwnershipChanged", "OwnershipChangedAction", data);
 	cmpTrigger.RegisterTrigger("OnPlayerCommand", "PlayerCommandAction", data);
-
 
 	// list of enemy players
 	cmpTrigger.enemies = [2, 4, 5, 6, 7];

@@ -4,7 +4,6 @@ warn("loading the triggers file");
 // Trigger listeners //
 // /////////////////////
 
-
 var unitTargetClass = "Unit+!Ship";
 var siegeTargetClass = "Structure";
 
@@ -23,8 +22,6 @@ var triggerPointsCaveRaiders = "G";
 var triggerPointsCaveRaidersTargets = "H";
 var triggerPointsCaveFortress = "I";*/
 
-
-
 // var triggerPointsAdvanceAttack = "A";
 // var triggerPointsMainAttack = "B";
 // var triggerPointsMace = "C";
@@ -42,8 +39,6 @@ var triggerPointTempleQuest = "H";
 var triggerPointKidnapperGuardPatrol = "J";
 var triggerPointStartAssault = "I";*/
 
-
-
 var unitFormations = [
 	"special/formations/box",
 	"special/formations/battle_line",
@@ -51,9 +46,7 @@ var unitFormations = [
 	"special/formations/column_closed"
 ];
 
-
 var disabledTemplatesCCs = (civ) => [
-
 
 	// Expansions
 	"structures/" + civ + "/civil_centre",
@@ -64,7 +57,6 @@ var disabledTemplatesCCs = (civ) => [
 ];
 
 var disabledTemplatesDocksCCs = (civ) => [
-
 
 	// Expansions
 	"structures/" + civ + "/civil_centre",
@@ -120,12 +112,10 @@ Trigger.prototype.WalkAndFightRandomtTarget = function(attacker, target_player, 
 		target = this.FindRandomTarget(attacker, target_player, siegeTargetClass);
 	}
 
-
 	if (target)
 	{
 		// get target position
 		var cmpTargetPosition = Engine.QueryInterface(target, IID_Position).GetPosition2D();
-
 
 		const cmpUnitAI = Engine.QueryInterface(attacker, IID_UnitAI);
 		cmpUnitAI.SwitchToStance("violent");
@@ -133,7 +123,6 @@ Trigger.prototype.WalkAndFightRandomtTarget = function(attacker, target_player, 
 	}
 	else // find a structure
 	{
-
 
 		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
@@ -148,12 +137,10 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 		target = this.FindClosestTarget(attacker, target_player, siegeTargetClass);
 	}
 
-
 	if (target)
 	{
 		// get target position
 		var cmpTargetPosition = Engine.QueryInterface(target, IID_Position).GetPosition2D();
-
 
 		const cmpUnitAI = Engine.QueryInterface(attacker, IID_UnitAI);
 		cmpUnitAI.SwitchToStance("violent");
@@ -162,12 +149,10 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	else // find a structure
 	{
 
-
 		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
-
 
 Trigger.prototype.FindRandomTarget = function(attacker, target_player, target_class)
 {
@@ -189,7 +174,6 @@ Trigger.prototype.FindRandomTarget = function(attacker, target_player, target_cl
 
 	return pickRandom(targets);
 };
-
 
 Trigger.prototype.FindClosestTarget = function(attacker, target_player, target_class)
 {
@@ -243,7 +227,6 @@ Trigger.prototype.SpawnAttackSquad = function(data)
 	let target_pos = data.target_pos;
 	const use_formation = data.use_formation;
 
-
 	// spawn the units
 	const attackers = [];
 	for (let i = 0; i < size; i++)
@@ -277,14 +260,12 @@ Trigger.prototype.SpawnAttackSquad = function(data)
 	});
 };
 
-
 // scenario indendent functions
 Trigger.prototype.PatrolOrderList = function(units, p, patrolTargets)
 {
 
 	if (units.length <= 0)
 		return;
-
 
 	for (const patrolTarget of patrolTargets)
 	{
@@ -302,7 +283,6 @@ Trigger.prototype.PatrolOrderList = function(units, p, patrolTargets)
 		});
 	}
 };
-
 
 Trigger.prototype.ShowText = function(text, option_a, option_b)
 {
@@ -356,7 +336,6 @@ Trigger.prototype.StructureDecayCheck = function(data)
 			{
 				const c_points = cmpCapt.GetCapturePoints();
 
-
 				if (c_points[0] > 0)
 				{
 					c_points[p] += c_points[0];
@@ -369,8 +348,6 @@ Trigger.prototype.StructureDecayCheck = function(data)
 		}
 	}
 };
-
-
 
 Trigger.prototype.MonitorCrazedHeroesQuest = function(data)
 {
@@ -407,7 +384,6 @@ Trigger.prototype.MonitorCrazedHeroesQuest = function(data)
 	}
 };
 
-
 Trigger.prototype.MonitorRiverBanditsQuestQuest = function(data)
 {
 
@@ -441,17 +417,14 @@ Trigger.prototype.MonitorBarracksCaptivesQuest = function(data)
 				}
 			}
 
-
 			this.DoAfterDelay(5 * 1000, "MonitorBarracksCaptivesQuest", null);
 		}
 	}
 
 };
 
-
 Trigger.prototype.IdleUnitCheckFast = function(data)
 {
-
 
 	// check for elephants
 	if (this.elephantAmbushTriggered == true && this.elephantAmbushEnded == false)
@@ -460,7 +433,6 @@ Trigger.prototype.IdleUnitCheckFast = function(data)
 		const p = 6;
 		const target_player = 1;
 		const units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Elephant").filter(TriggerHelper.IsInWorld);
-
 
 		// make them attack
 		for (const u of units)
@@ -475,7 +447,6 @@ Trigger.prototype.IdleUnitCheckFast = function(data)
 			}
 		}
 	}
-
 
 };
 
@@ -503,7 +474,6 @@ Trigger.prototype.IdleUnitCheck = function(data)
 						//pick patrol sites
 						let sites = [pickRandom(structs),pickRandom(structs),pickRandom(structs),pickRandom(structs),pickRandom(structs)];
 
-
 						this.PatrolOrderList([u],p,sites);
 
 					}
@@ -512,8 +482,6 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		}
 
 	}
-
-
 
 	for (let p of [3])
 	{
@@ -533,7 +501,6 @@ Trigger.prototype.IdleUnitCheck = function(data)
 
 	}*/
 };
-
 
 // garison AI entities with archers
 Trigger.prototype.GarrisonEntities = function(data)
@@ -568,15 +535,9 @@ Trigger.prototype.GarrisonEntities = function(data)
 			}
 		}
 
-
 	}
 
-
-
-
 };
-
-
 
 Trigger.prototype.VictoryCheck = function(data)
 {
@@ -597,7 +558,6 @@ Trigger.prototype.VictoryCheck = function(data)
 		this.DoAfterDelay(15 * 1000, "VictoryCheck", null);
 	}
 };
-
 
 Trigger.prototype.OwnershipChangedAction = function(data)
 {
@@ -635,7 +595,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				const unit_i = TriggerHelper.SpawnUnits(data.entity, "units/mace/siege_lithobolos_packed", 1, 1);
 			}
 		}
-
 
 	}
 
@@ -681,8 +640,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			this.QuestRiverBanditsComplete();
 		}
 
-
-
 		// spawn cavalry with small probability
 		if (data.from == 0 && data.to == -1)
 		{
@@ -694,7 +651,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			if (camps.length > 0)
 			{
 				const camp = camps[0];
-
 
 				// find distance between dead entity and camp
 				const d = PositionHelper.DistanceBetweenEntities(data.entity, camp);
@@ -783,7 +739,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 	}
 
-
 	// check if gaia soldier
 	/* if (data.from == 0 && data.to == -1)
 	{
@@ -861,7 +816,6 @@ Trigger.prototype.ResearchTechs = function(data)
 		cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
 		cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
 
-
 	}*/
 };
 
@@ -880,7 +834,6 @@ Trigger.prototype.VictoryTextFn = function(n)
 		"%(players)s and %(lastPlayer)s have won (game mode).",
 		n);
 };
-
 
 Trigger.prototype.IntervalSpawnPersianGuards = function(data)
 {
@@ -921,7 +874,6 @@ Trigger.prototype.IntervalSpawnPersianGuards = function(data)
 
 					const inf_templates = ["units/pers/champion_infantry", "units/pers/champion_elephant", "units/pers/arstibara", "units/pers/infantry_javelineer_e", "units/pers/infantry_archer_e", "units/pers/infantry_spearman_e", "units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher"];
 
-
 					// pick patrol sites
 					const sites = [pickRandom(patrol_sites), pickRandom(patrol_sites), pickRandom(patrol_sites)];
 
@@ -937,7 +889,6 @@ Trigger.prototype.IntervalSpawnPersianGuards = function(data)
 	this.DoAfterDelay(15 * 1000, "IntervalSpawnPersianGuards", null);
 
 };
-
 
 Trigger.prototype.IntervalSpawnMountainVillageGuards = function(data)
 {
@@ -1008,7 +959,6 @@ Trigger.prototype.IntervalSpawnGoats = function(data)
 	}
 };
 
-
 Trigger.prototype.CheckForCC = function(data)
 {
 	// check if player 1 has built structure
@@ -1032,7 +982,6 @@ Trigger.prototype.CheckForCC = function(data)
 		this.DoAfterDelay(30 * 1000, "CheckForCC", null);
 	}
 };
-
 
 Trigger.prototype.FinalAttack = function(data)
 {
@@ -1089,7 +1038,6 @@ Trigger.prototype.FinalAttackWarning = function(data)
 	this.ShowText("News about the destruction of the rebel fortifications has spread throughut the lands. We hear reports of rebel fighters gathering to assault our army as it crosses the desert.  We must be prepared to protect our army as the assault may come from anywhere and anytime.", "OK", "Fine");
 };
 
-
 Trigger.prototype.SpawnStructureDestroyedResponseAttack = function(target_pos)
 {
 	const p = 0;
@@ -1100,13 +1048,11 @@ Trigger.prototype.SpawnStructureDestroyedResponseAttack = function(target_pos)
 	const target_player = 1;
 	const targets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(target_player), "Unit").filter(TriggerHelper.IsInWorld);
 
-
 	if (targets.length > 0)
 	{
 		// warn("starting attack in reesponse to structure destroyed");
 
 		const num_waves = 5;
-
 
 		for (let i = 0; i < num_waves; i++)
 		{
@@ -1122,8 +1068,6 @@ Trigger.prototype.SpawnStructureDestroyedResponseAttack = function(target_pos)
 			const data = {};
 
 			const spawn_site = this.GetTriggerPoints(triggerPointsCaveFortress)[0];
-
-
 
 			data.p = p;
 			data.templates = templates;
@@ -1161,13 +1105,11 @@ Trigger.prototype.IntervalSpawnGroundAttack = function(data)
 	const target_player = 1;
 	const targets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(target_player), "Structure").filter(TriggerHelper.IsInWorld);
 
-
 	if (targets.length > 0)
 	{
 		// warn("starting ground attack");
 
 		const num_waves = 3;
-
 
 		for (let i = 0; i < num_waves; i++)
 		{
@@ -1222,7 +1164,6 @@ Trigger.prototype.IntervalSpawnGroundAttack = function(data)
 		}
 	}
 
-
 	// give some tech
 	const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 
@@ -1262,7 +1203,6 @@ Trigger.prototype.IntervalSpawnGroundAttack = function(data)
 	const next_time = 420 + Math.floor(Math.random(180));
 	// warn("spawning next attack in "+next_time+" seconds");
 	this.DoAfterDelay(next_time * 1000, "IntervalSpawnGroundAttack", null);
-
 
 	// increment counter
 	this.groundAttackCounter += 1;
@@ -1307,7 +1247,6 @@ Trigger.prototype.IntervalSpawnTraders = function(data)
 
 };
 
-
 Trigger.prototype.SpawnDesertRaiders = function(data)
 {
 	// warn("desert spawn"+this.waveCounter);
@@ -1318,7 +1257,6 @@ Trigger.prototype.SpawnDesertRaiders = function(data)
 	const target_sites = this.GetTriggerPoints(triggerPointsCaveRaidersTargets);
 
 	const spawn_sites = this.GetTriggerPoints(triggerPointsCaveRaiders);
-
 
 	const attackers = [];
 	for (let i = 0; i < 28; i++)
@@ -1335,8 +1273,6 @@ Trigger.prototype.SpawnDesertRaiders = function(data)
 	// send to target
 	const target_pos = TriggerHelper.GetEntityPosition2D(pickRandom(target_sites));
 
-
-
 	ProcessCommand(p, {
 		"type": "attack-walk",
 		"entities": attackers,
@@ -1350,7 +1286,6 @@ Trigger.prototype.SpawnDesertRaiders = function(data)
 	});
 
 };
-
 
 Trigger.prototype.QuestRiverBanditsComplete = function(data)
 {
@@ -1400,7 +1335,6 @@ Trigger.prototype.QuestTempleComplete = function(data)
 	this.questTempleComplete = true;
 };
 
-
 Trigger.prototype.QuestCrazedHeroesComplete = function(data)
 {
 	this.ShowText("It was a wise decision (or lucky coincidence!) to lead your raging companions to this monastery. The local healers immediately recognize that your friends have eaten wild mushrooms and after restraining them, and maknig drink some medicine, your friends are back to normal and happy to be in your company.", "Great!", "Awesome!");
@@ -1429,7 +1363,6 @@ Trigger.prototype.QuestBarracksCaptivesComplete = function(data)
 	const barracks_p8 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(8), "Barracks").filter(TriggerHelper.IsInWorld);
 	warn(uneval(barracks_p8));
 
-
 	const unit1 = TriggerHelper.SpawnUnits(spawn_site, "units/pers/hero_xerxes_i", 1, 1);
 	const unit2 = TriggerHelper.SpawnUnits(spawn_site, "units/ptol/hero_cleopatra_vii", 1, 1);
 
@@ -1439,7 +1372,6 @@ Trigger.prototype.QuestBarracksCaptivesComplete = function(data)
 		const health_s = Engine.QueryInterface(barracks_p8[0], IID_Health);
 		health_s.Kill();
 	}
-
 
 	this.ShowText("Among the captives held in the barracks emerge a few familiar faces. What joy to see your friends!", "Great!", "Awesome!");
 
@@ -1454,15 +1386,11 @@ Trigger.prototype.QuestElephantAmbushComplete = function(data)
 	const unit1 = TriggerHelper.SpawnUnits(site, "units/kush/hero_amanirenas_infantry", 1, 1);
 	const unit2 = TriggerHelper.SpawnUnits(site, "units/ptol/hero_ptolemy_iv", 1, 1);
 
-
 	this.ShowText("After the last elephant has been slain, two of your companions emerge from the cave. ", "Great!", "Awesome!");
 
 	this.elephantAmbushTriggered = true;
 	this.elephantAmbushEnded = true;
 };
-
-
-
 
 Trigger.prototype.RangeActionGreekColony = function(data)
 {
@@ -1527,16 +1455,13 @@ Trigger.prototype.RangeActionGreekColony = function(data)
 	}
 };
 
-
 Trigger.prototype.RangeActionTemple = function(data)
 {
 	//	warn("range action temple");
 
-
 	if (this.questTempleGiven == false && this.questTempleComplete == false)
 	{
 		this.questTempleGiven = true;
-
 
 		// check if relic is picked up
 
@@ -1548,7 +1473,6 @@ Trigger.prototype.RangeActionTemple = function(data)
 		else
 		{
 			// give quest
-
 
 			this.ShowText("The small monastary you encounter welcomes you. They are willing to help you with healing but first ask that you seek out an ancient relic stolen by thieves. The relic looks like a pegasus -- you won't miss it. Should you ackquire it, come back to the temple, the monks will be forever grateful.", "We'll see what we can do.", "OK");
 		}
@@ -1575,7 +1499,6 @@ Trigger.prototype.SpawnUnit = function(data)
 	const unit_i = TriggerHelper.SpawnUnits(site, template, num, owner);
 
 };
-
 
 Trigger.prototype.PlayerCommandAction = function(data)
 {
@@ -1645,7 +1568,6 @@ Trigger.prototype.PlayerCommandAction = function(data)
 	}
 };
 
-
 Trigger.prototype.ToggleArcherTraining = function(data)
 {
 	if (this.archerTrainingAvailable == true)
@@ -1687,9 +1609,6 @@ Trigger.prototype.ToggleElephantTraders = function(data)
 
 };
 
-
-
-
 Trigger.prototype.RangeActionElephantTraders = function(data)
 {
 	// warn("range action triggered");
@@ -1697,7 +1616,6 @@ Trigger.prototype.RangeActionElephantTraders = function(data)
 
 	if (this.elephantsAvailable == true && data.added.length > 0)
 	{
-
 
 		// decide on offer
 		const total_cost_stone = 500;
@@ -1711,11 +1629,9 @@ Trigger.prototype.RangeActionElephantTraders = function(data)
 		if (resources.stone >= total_cost_stone)
 		{
 
-
 			const offer_text = "The traders in this outposts have some elephants for sale. They are willing to part with some for the price of 500 stone. What do you say?";
 
 			this.ShowText(offer_text, "Yes, we need elephants", "Perhaps later");
-
 
 			// set the dialog state variable
 			this.dialogState = "elephant_traders";
@@ -1729,14 +1645,9 @@ Trigger.prototype.RangeActionElephantTraders = function(data)
 
 		}
 
-
-
 	}
 
 };
-
-
-
 
 Trigger.prototype.SpawnElephantAmbush = function(data)
 {
@@ -1753,10 +1664,6 @@ Trigger.prototype.SpawnElephantAmbush = function(data)
 	}
 };
 
-
-
-
-
 Trigger.prototype.RangeActionCrazedHeroes = function(data)
 {
 	if (this.crazedHeroesSpawned == false && data.added.length > 0)
@@ -1769,15 +1676,12 @@ Trigger.prototype.RangeActionCrazedHeroes = function(data)
 		const unit1 = TriggerHelper.SpawnUnits(spawn_site, "units/spart/hero_agis", 1, 6);
 		const unit2 = TriggerHelper.SpawnUnits(spawn_site, "units/spart/hero_brasidas", 1, 6);
 
-
 		this.crazedHeroesSpawned = true;
 		this.crazedHeroesInProgress = true;
 
 		this.DoAfterDelay(5 * 1000, "MonitorCrazedHeroesQuest", null);
 	}
 };
-
-
 
 Trigger.prototype.RangeActionRiverBanditsQuest = function(data)
 {
@@ -1839,14 +1743,8 @@ Trigger.prototype.RangeActionElephantAmbush = function(data)
 
 		}
 
-
-
 	}
 };
-
-
-
-
 
 Trigger.prototype.RangeActionArcherTraining = function(data)
 {
@@ -1876,7 +1774,6 @@ Trigger.prototype.RangeActionMercs = function(data)
 	{
 		const templates = ["units/pers/champion_cavalry_archer"];
 
-
 		// decide on offer
 		const total_cost_metal = 2500;
 
@@ -1890,12 +1787,9 @@ Trigger.prototype.RangeActionMercs = function(data)
 		if (resources.metal >= total_cost_metal)
 		{
 
-
 			const offer_text = "You encounter a small camp used by local mercenaries.  A number of horse-riding archers are available for hire but it will cost us 2500 metal. ";
 
 			this.ShowText(offer_text, "Yes, we need you", "Perhaps later");
-
-
 
 			// set the dialog state variable
 			this.dialogState = "mercs";
@@ -1908,12 +1802,9 @@ Trigger.prototype.RangeActionMercs = function(data)
 			this.DoAfterDelay(45 * 1000, "ToggleMercs", null);
 		}
 
-
-
 	}
 
 };
-
 
 Trigger.prototype.RangeActionArrival = function(data)
 {
@@ -1927,7 +1818,6 @@ Trigger.prototype.RangeActionArrival = function(data)
 	}
 };
 
-
 Trigger.prototype.KillStarvingSoldier = function(data)
 {
 	const units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(3), "Soldier+!Elephant").filter(TriggerHelper.IsInWorld);
@@ -1938,8 +1828,6 @@ Trigger.prototype.KillStarvingSoldier = function(data)
 
 	this.numStarved += 1;
 };
-
-
 
 Trigger.prototype.IntervalAttritionCheck = function(data)
 {
@@ -1973,7 +1861,6 @@ Trigger.prototype.IntervalAttritionCheck = function(data)
 		cmpPlayer.AddResource("food", -1 * food_loss);
 	}
 
-
 	for (let i = 0; i < num_dead; i++)
 	{
 		this.DoAfterDelay((2 + Math.round(Math.random() * 6)) * 1000, "KillStarvingSoldier", null);
@@ -1982,7 +1869,6 @@ Trigger.prototype.IntervalAttritionCheck = function(data)
 	this.DoAfterDelay(20 * 1000, "IntervalAttritionCheck", null);
 
 };
-
 
 Trigger.prototype.SpawnPersianRebelGuards = function(data)
 {
@@ -2010,7 +1896,6 @@ Trigger.prototype.SpawnPersianRebelGuards = function(data)
 	}
 
 };
-
 
 Trigger.prototype.SpawnColonyPatrol = function(data)
 {
@@ -2060,12 +1945,10 @@ Trigger.prototype.SpawnMountainVillageGuards = function(data)
 			}
 		}
 
-
 		for (let i = 0; i < size; i++)
 		{
 
 			const inf_templates = ["units/brit/champion_infantry_swordsman", "units/gaul/champion_fanatic", "units/brit/infantry_javelineer_e", "units/brit/infantry_slinger_e", "units/brit/war_dog", "units/brit/infantry_spearman_e"];
-
 
 			// pick patrol sites
 			const sites = [pickRandom(patrol_sites), pickRandom(patrol_sites), pickRandom(patrol_sites), pickRandom(patrol_sites)];
@@ -2079,7 +1962,6 @@ Trigger.prototype.SpawnMountainVillageGuards = function(data)
 
 };
 
-
 Trigger.prototype.SpawnTowerGuards = function(data)
 {
 	for (const p of [2])
@@ -2092,7 +1974,6 @@ Trigger.prototype.SpawnTowerGuards = function(data)
 
 			// find patrol/spawn sites
 			const patrol_sites = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "StoneTower").filter(TriggerHelper.IsInWorld);
-
 
 			const inf_templates = ["units/pers/champion_infantry"];
 
@@ -2109,14 +1990,11 @@ Trigger.prototype.SpawnTowerGuards = function(data)
 
 };
 
-
 Trigger.prototype.LoseGame = function(data)
 {
 	TriggerHelper.SetPlayerWon(2, this.VictoryTextFn, this.VictoryTextFn);
 
-
 };
-
 
 Trigger.prototype.SpawnInitialTraders = function(data)
 {
@@ -2144,8 +2022,6 @@ Trigger.prototype.SpawnInitialTraders = function(data)
 			cmpUnitAI.SetupTradeRoute(target_dock, dock, null, true);
 		}
 	}
-
-
 
 	/* let e = 2;
 
@@ -2184,7 +2060,6 @@ Trigger.prototype.SpawnInitialTraders = function(data)
 		*/
 };
 
-
 Trigger.prototype.SpawnFortressAttack = function(data)
 {
 	const p = 7;
@@ -2206,7 +2081,6 @@ Trigger.prototype.SpawnFortressAttack = function(data)
 	}
 
 	TriggerHelper.SetUnitFormation(p, attackers, pickRandom(unitFormations));
-
 
 	// make them attack
 	const target = this.FindClosestTarget(attackers[0], 1, "Unit");
@@ -2248,7 +2122,6 @@ Trigger.prototype.SpawnArcherAmbush = function(data)
 	}
 };
 
-
 Trigger.prototype.StatusCheck = function(data)
 {
 	// warn("num squads spawned = "+this.armySquadCounter);
@@ -2266,7 +2139,6 @@ Trigger.prototype.StatusCheck = function(data)
 	// warn("elapsedMinutes = "+this.elapsedMinutes );
 	this.DoAfterDelay(30 * 1000, "StatusCheck", null);
 
-
 	if (num_actual_dead > 1300)
 	{
 		this.ShowText("We have lost too many troops. We lose. ", "Bummer", "Nooo!");
@@ -2274,8 +2146,6 @@ Trigger.prototype.StatusCheck = function(data)
 		this.DoAfterDelay(4 * 1000, "LoseGame", null);
 
 	}
-
-
 
 	// check for idle troops
 	for (const p of [6])
@@ -2394,7 +2264,6 @@ Trigger.prototype.StatusCheck = function(data)
 
 				this.DoAfterDelay(4 * 1000, "LoseGame", null);
 
-
 			}
 		}
 	}
@@ -2418,8 +2287,6 @@ Trigger.prototype.StatusCheck = function(data)
 
 	}
 
-
-
 };
 
 Trigger.prototype.SpawnTravelingArmySquad = function(data)
@@ -2430,7 +2297,6 @@ Trigger.prototype.SpawnTravelingArmySquad = function(data)
 
 	if (cmpPlayer.GetState() == "defeated")
 		return;
-
 
 	// spawn site
 	const site = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(3), "MercenaryCamp").filter(TriggerHelper.IsInWorld)[0];
@@ -2479,11 +2345,7 @@ Trigger.prototype.SpawnTravelingArmySquad = function(data)
 		"queued": true
 	});
 
-
 	this.armySquadCounter += 1;
-
-
-
 
 	this.DoAfterDelay(15 * 1000, "SpawnTravelingArmySquad", null);
 
@@ -2519,14 +2381,12 @@ Trigger.prototype.ActivatePersianVillages = function(data)
 			}
 		}
 
-
 		// let units1= TriggerHelper.SpawnUnits(site,"units/pers/infantry_archer_e",10,p);
 		// let units2= TriggerHelper.SpawnUnits(site,"units/pers/infantry_spearman_e",10,p);
 	}
 
 	// we start getting patrols
 	this.DoAfterDelay(15 * 1000, "IntervalSpawnPersianGuards", null);
-
 
 };
 
@@ -2576,21 +2436,14 @@ Trigger.prototype.FlipSlaveOwnership = function(data)
  * 	- initial traders (2 ships per village), DONE, make about 850 per 5 minutes (170 per min)
  *
 
-
-
-
  */
-
 
 {
 
-
 	const cmpTrigger = Engine.QueryInterface(SYSTEM_ENTITY, IID_Trigger);
-
 
 	// some state variables
 	cmpTrigger.dialogState = "none";
-
 
 	cmpTrigger.elephantAmbushTriggered = false;
 	cmpTrigger.elephantAmbushEnded = false;
@@ -2630,7 +2483,6 @@ Trigger.prototype.FlipSlaveOwnership = function(data)
 	// traders
 	cmpTrigger.DoAfterDelay(10 * 1000, "SpawnInitialTraders", null);
 
-
 	// debug
 	// cmpTrigger.DoAfterDelay(6 * 1000,"QuestElephantAmbushComplete",null);
 	// cmpTrigger.DoAfterDelay(8 * 1000,"QuestBarracksCaptivesComplete",null);
@@ -2638,9 +2490,7 @@ Trigger.prototype.FlipSlaveOwnership = function(data)
 	// cmpTrigger.DoAfterDelay(10 * 1000,"ActivatePersianVillages",null);
 	// cmpTrigger.DoAfterDelay(10 * 1000,"ActivatePersianVillages",null);
 
-
 	// army starts moving
-
 
 	// spawn initial patrols
 	// cmpTrigger.DoAfterDelay(5 * 1000,"SpawnTowerGuards",null);
@@ -2663,10 +2513,6 @@ Trigger.prototype.FlipSlaveOwnership = function(data)
 	// interval
 	// cmpTrigger.DoAfterDelay(10 * 1000,"SpawnDesertRaiders",null);
 	// cmpTrigger.DoAfterDelay(30 * 1000,"StatusCheck",null);
-
-
-
-
 
 	// disable templates
 	for (const p of [1, 2, 3, 4, 5, 6, 7])
@@ -2741,7 +2587,6 @@ Trigger.prototype.FlipSlaveOwnership = function(data)
 			cmpPlayer_other.SetAlly(p);
 		}
 	}
-
 
 	// triggers
 	const data = { "enabled": true };
@@ -2821,20 +2666,15 @@ Trigger.prototype.FlipSlaveOwnership = function(data)
 		"enabled": true
 	});*/
 
-
-
 	cmpTrigger.RegisterTrigger("OnOwnershipChanged", "OwnershipChangedAction", data);
 	// cmpTrigger.RegisterTrigger("OnStructureBuilt", "StructureBuiltAction", data);
 	cmpTrigger.RegisterTrigger("OnPlayerCommand", "PlayerCommandAction", data);
-
 
 	cmpTrigger.RegisterTrigger("OnInterval", "IdleUnitCheck", {
 		"enabled": true,
 		"delay": 5 * 1000,
 		"interval": 30 * 1000,
 	});
-
-
 
 	cmpTrigger.RegisterTrigger("OnInterval", "IdleUnitCheckFast", {
 		"enabled": true,

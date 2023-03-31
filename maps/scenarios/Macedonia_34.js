@@ -4,7 +4,6 @@ warn("loading the triggers file");
 // Trigger listeners //
 // /////////////////////
 
-
 var unitTargetClass = "Unit+!Ship";
 var siegeTargetClass = "Structure";
 
@@ -25,15 +24,12 @@ var triggerPointTempleQuest = "H";
 var triggerPointKidnapperGuardPatrol = "J";
 var triggerPointStartAssault = "I";*/
 
-
-
 var unitFormations = [
 	"special/formations/box",
 	"special/formations/battle_line",
 	"special/formations/line_closed",
 	"special/formations/column_closed"
 ];
-
 
 var disabledTemplates = (civ) => [
 	// Economic structures
@@ -63,7 +59,6 @@ var disabledTemplates = (civ) => [
 	"units/" + civ + "/support_female_citizen"
 ];
 
-
 Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, target_class)
 {
 	let target = this.FindClosestTarget(attacker, target_player, target_class);
@@ -72,12 +67,10 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 		target = this.FindClosestTarget(attacker, target_player, siegeTargetClass);
 	}
 
-
 	if (target)
 	{
 		// get target position
 		var cmpTargetPosition = Engine.QueryInterface(target, IID_Position).GetPosition2D();
-
 
 		const cmpUnitAI = Engine.QueryInterface(attacker, IID_UnitAI);
 		cmpUnitAI.SwitchToStance("violent");
@@ -85,7 +78,6 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	}
 	else // find a structure
 	{
-
 
 		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
@@ -163,7 +155,6 @@ Trigger.prototype.SpawnAttackSquad = function(p, site, templates, size, target_c
 	});
 };
 
-
 // scenario indendent functions
 Trigger.prototype.PatrolOrderList = function(units, p, patrolTargets)
 {
@@ -189,7 +180,6 @@ Trigger.prototype.PatrolOrderList = function(units, p, patrolTargets)
 		});
 	}
 };
-
 
 Trigger.prototype.ShowText = function(text, option_a, option_b)
 {
@@ -237,7 +227,6 @@ Trigger.prototype.StructureDecayCheck = function(data)
 		const structs = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Structure").filter(TriggerHelper.IsInWorld);
 		// warn("checking decay");
 
-
 		for (const s of structs)
 		{
 			var cmpCapt = Engine.QueryInterface(s, IID_Capturable);
@@ -260,8 +249,6 @@ Trigger.prototype.StructureDecayCheck = function(data)
 		}
 	}
 };
-
-
 
 Trigger.prototype.ClusterUnits = function(units, num_clusters)
 {
@@ -314,7 +301,6 @@ Trigger.prototype.ClusterUnits = function(units, num_clusters)
 	return clusters;
 };
 
-
 Trigger.prototype.InitGaiaClusters = function(data)
 {
 	// get all gaia soldiers
@@ -325,7 +311,6 @@ Trigger.prototype.InitGaiaClusters = function(data)
 	// cluster them
 	const num_clusters = 1;
 
-
 	const clusters = this.ClusterUnits(soldiers, num_clusters);
 	// warn(uneval(clusters));
 
@@ -333,7 +318,6 @@ Trigger.prototype.InitGaiaClusters = function(data)
 	this.gaiaClusters = clusters;
 
 };
-
 
 Trigger.prototype.IdleUnitCheck = function(data)
 {
@@ -349,7 +333,6 @@ Trigger.prototype.IdleUnitCheck = function(data)
 
 		const sites_inner = this.GetTriggerPoints(triggerPointsInner);
 		const sites_outer = this.GetTriggerPoints(triggerPointsOuter);
-
 
 		if (sites_p2.length >= 3)
 		{
@@ -392,8 +375,6 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		}
 	}
 };
-
-
 
 // garison AI entities with archers
 Trigger.prototype.GarrisonEntities = function(data)
@@ -455,7 +436,6 @@ Trigger.prototype.GarrisonEntities = function(data)
 	}
 };
 
-
 Trigger.prototype.FlipAssets = function(data)
 {
 	// get all structures except docks
@@ -481,9 +461,6 @@ Trigger.prototype.FlipAssets = function(data)
 	cmpPlayer3.SetNeutral(1);
 };
 
-
-
-
 Trigger.prototype.SpawnInterevalPatrol = function(data)
 {
 	// fortress 1
@@ -500,7 +477,6 @@ Trigger.prototype.SpawnInterevalPatrol = function(data)
 		// TO DO: check if we have civil centre or fortress
 		const sites_p2 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Structure").filter(TriggerHelper.IsInWorld);
 
-
 		const sites_inner = this.GetTriggerPoints(triggerPointsInner);
 		const sites_outer = this.GetTriggerPoints(triggerPointsOuter);
 
@@ -512,7 +488,6 @@ Trigger.prototype.SpawnInterevalPatrol = function(data)
 			const unit_i = TriggerHelper.SpawnUnits(pickRandom(sites_inner), pickRandom(templates_p2), 1, p);
 
 			this.PatrolOrderList(unit_i, p, sites);
-
 
 		}
 		else
@@ -527,7 +502,6 @@ Trigger.prototype.SpawnInterevalPatrol = function(data)
 	// warn("spawning again in "+uneval(next_time));
 	this.DoAfterDelay(next_time, "SpawnInterevalPatrol", null);
 };
-
 
 Trigger.prototype.SpawnInterevalPatrolOra = function(data)
 {
@@ -549,7 +523,6 @@ Trigger.prototype.SpawnInterevalPatrolOra = function(data)
 	if (units_p.length < this.maxPatrolOra)
 	{
 		// spawn a patrol unit
-
 
 		const templates_p2 = ["units/maur/champion_infantry_maceman", "units/maur/infantry_archer_e", "units/maur/champion_maiden", "units/maur/champion_maiden_archer", "units/maur/champion_infantry_maceman", "units/maur/champion_elephant", "units/maur/infantry_swordsman_e", "units/maur/infantry_spearman_e"];
 
@@ -590,7 +563,6 @@ Trigger.prototype.SpawnInitialPatrol = function(data)
 	// sites
 	const sites_p2 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Structure").filter(TriggerHelper.IsInWorld);
 
-
 	const sites_inner = this.GetTriggerPoints(triggerPointsInner);
 	const sites_outer = this.GetTriggerPoints(triggerPointsOuter);
 
@@ -605,8 +577,6 @@ Trigger.prototype.SpawnInitialPatrol = function(data)
 	}
 };
 
-
-
 Trigger.prototype.SpawnIntervalPtolemyAttack = function(data)
 {
 	// templates
@@ -620,9 +590,7 @@ Trigger.prototype.SpawnIntervalPtolemyAttack = function(data)
 
 	const sites_spawn = this.GetTriggerPoints(triggerPointsRandevouz);
 
-
 	this.SpawnAttackSquad(3, sites_spawn[0], templates, squad_size, "Structure", 2);
-
 
 	this.DoAfterDelay(Math.round(this.ptolAttackInterval * 1000), "SpawnIntervalPtolemyAttack", null);
 
@@ -659,7 +627,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			health_s.Kill();
 		}
 	}
-
 
 	// give extra loot
 	if (data.from == 2 && data.to == -1)
@@ -767,16 +734,12 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	}
 };
 
-
-
-
 Trigger.prototype.RangeActionTemple = function(data)
 {
 
 	if (this.questTempleGiven == false)
 	{
 		this.ShowText("The monks in this temple greet you with welcome. They are happy to assist you in your cause, but immediately they face another problem. Recently, the monastary was raided by bandits, many who are elephant riders, who are camped out on a hill not too far from here. Should you recover our stolen goods, we will help you.", "Sounds good", "I'll get on it");
-
 
 		this.questTempleGiven = true;
 	}
@@ -813,8 +776,6 @@ Trigger.prototype.RangeActionRandevouz = function(data)
 	}
 };
 
-
-
 Trigger.prototype.RewardQuestTemple = function(data)
 {
 	// warn("reward for temple quest");
@@ -843,7 +804,6 @@ Trigger.prototype.ResearchTechs = function(data)
 
 		const cmpPlayer = QueryPlayerIDInterface(p);
 		const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
-
 
 		cmpTechnologyManager.ResearchTechnology("cavalry_health");
 		cmpTechnologyManager.ResearchTechnology("cavalry_movement_speed");
@@ -875,7 +835,6 @@ Trigger.prototype.ResearchTechs = function(data)
 		const cmpPlayer = QueryPlayerIDInterface(p);
 		const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 
-
 		// healer techs
 		cmpTechnologyManager.ResearchTechnology("heal_rate");
 		cmpTechnologyManager.ResearchTechnology("heal_rate_2");
@@ -895,7 +854,6 @@ Trigger.prototype.ResearchTechs = function(data)
 	}
 };
 
-
 Trigger.prototype.VictoryTextFn = function(n)
 {
 	return markForPluralTranslation(
@@ -904,13 +862,11 @@ Trigger.prototype.VictoryTextFn = function(n)
 		n);
 };
 
-
 Trigger.prototype.WarnMessage = function(n)
 {
 	// show text
 	this.ShowText("Our scouts report that Indian reinforcements are on their way! We must destroy their civil centre immediately!\n\nNote: You have 5 game minutes time to do so in order to win.", "So it goes.", "Oh my");
 };
-
 
 Trigger.prototype.FailMessage = function(n)
 {
@@ -918,7 +874,6 @@ Trigger.prototype.FailMessage = function(n)
 	this.ShowText("We have failed to destroy the enemy. We must retreat", "So it goes.", "Oh my");
 
 };
-
 
 Trigger.prototype.EndGame = function(n)
 {
@@ -950,7 +905,6 @@ Trigger.prototype.IntervalVictoryCheck = function(data)
 	}
 };
 
-
 /* Random maps:
  * 	India - lake in middle, mostly dry empty
  *  Kerala - sea on one side, green
@@ -965,7 +919,6 @@ Trigger.prototype.IntervalVictoryCheck = function(data)
  *
  */
 
-
 {
 	const cmpTrigger = Engine.QueryInterface(SYSTEM_ENTITY, IID_Trigger);
 
@@ -974,13 +927,11 @@ Trigger.prototype.IntervalVictoryCheck = function(data)
 	cmpTrigger.maxPatrol = 200;
 	cmpTrigger.patrolInterval = 1.75; // initially every 2 seconds, later it increases
 
-
 	cmpTrigger.ptolAttackSize = 5;
 	cmpTrigger.ptolAttackInterval = 8;
 
 	cmpTrigger.timeLeft = 1500;
 	cmpTrigger.warnMessageTime = 1200;
-
 
 	// some state variables
 	cmpTrigger.eventRandevouz = false;
@@ -1001,12 +952,10 @@ Trigger.prototype.IntervalVictoryCheck = function(data)
 	// repeat patrols
 	cmpTrigger.DoAfterDelay((20 + cmpTrigger.patrolInterval) * 1000, "SpawnInterevalPatrol", null);
 
-
 	// disable templates
 	for (const p of [1, 2, 3])
 	{
 		const cmpPlayer = QueryPlayerIDInterface(p);
-
 
 		// disable templates -- nobody can build buildings
 		const disTemplates = disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv());
@@ -1025,17 +974,14 @@ Trigger.prototype.IntervalVictoryCheck = function(data)
 			cmpPlayer.SetPopulationBonuses(300);
 		}
 
-
 	}
 
 	// set diplomacy
-
 
 	// triggers
 	const data = { "enabled": true };
 	cmpTrigger.RegisterTrigger("OnOwnershipChanged", "OwnershipChangedAction", data);
 	// cmpTrigger.RegisterTrigger("OnPlayerCommand", "PlayerCommandAction", data);
-
 
 	cmpTrigger.RegisterTrigger("OnInterval", "IdleUnitCheck", {
 		"enabled": true,
@@ -1050,7 +996,6 @@ Trigger.prototype.IntervalVictoryCheck = function(data)
 		"requiredComponent": IID_UnitAI, // only count units in range
 		"enabled": true
 	});
-
 
 	/* cmpTrigger.RegisterTrigger("OnInterval", "IntervalVictoryCheck", {
 		"enabled": true,

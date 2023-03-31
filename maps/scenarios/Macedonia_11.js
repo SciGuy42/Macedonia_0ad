@@ -6,11 +6,9 @@ warn("loading the triggers file");
 
 var unitTargetClass = "Unit+!Ship";
 
-
 var triggerPointShipUnload = "C";
 var triggerPointShipInvasionSpawn = "A";
 var triggerPointGreekSpecialAttack = "B";
-
 
 var unitFormations = [
 	"special/formations/box"
@@ -18,7 +16,6 @@ var unitFormations = [
 	"special/formations/line_closed",
 	"special/formations/column_closed"*/
 ];
-
 
 Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, target_class)
 {
@@ -28,12 +25,10 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 		target = this.FindClosestTarget(attacker, target_player, siegeTargetClass);
 	}
 
-
 	if (target)
 	{
 		// get target position
 		var cmpTargetPosition = Engine.QueryInterface(target, IID_Position).GetPosition2D();
-
 
 		const cmpUnitAI = Engine.QueryInterface(attacker, IID_UnitAI);
 		cmpUnitAI.SwitchToStance("violent");
@@ -41,7 +36,6 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	}
 	else // find a structure
 	{
-
 
 		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
@@ -77,7 +71,6 @@ Trigger.prototype.StructureBuiltAction = function(data)
 	// warn("The OnStructureBuilt event happened with the following data:");
 	// warn(uneval(data));
 
-
 };
 
 Trigger.prototype.ConstructionStartedAction = function(data)
@@ -109,7 +102,6 @@ Trigger.prototype.ResearchQueuedAction = function(data)
 	// warn("The OnResearchQueued event happened with the following data:");
 	// warn(uneval(data));
 };
-
 
 Trigger.prototype.OwnershipChangedAction = function(data)
 {
@@ -182,9 +174,6 @@ Trigger.prototype.PlayerCommandAction = function(data)
 	// warn(uneval(data));
 };
 
-
-
-
 Trigger.prototype.PatrolOrder = function(units, patrol_entities, k, player_number)
 {
 	if (units.length <= 0)
@@ -226,7 +215,6 @@ Trigger.prototype.PatrolOrder = function(units, patrol_entities, k, player_numbe
 		});
 	}
 };
-
 
 Trigger.prototype.IntervalActionSpawnPatrol = function(data)
 {
@@ -287,7 +275,6 @@ Trigger.prototype.IntervalActionSpawnPatrol = function(data)
 		this.PatrolOrder(squad, patrol_points, 2, 6);
 	}
 };
-
 
 Trigger.prototype.InvasionRangeAction = function(data)
 {
@@ -438,10 +425,8 @@ Trigger.prototype.spawnInvasionAttack = function(data)
 	const owner = 6;// TriggerHelper.GetOwner(spawn_site);
 	const attacker_ships = [];
 
-
 	const cmpTrigger = Engine.QueryInterface(SYSTEM_ENTITY, IID_Trigger);
 	const triggerPoint = pickRandom(this.GetTriggerPoints(triggerPointShipInvasionSpawn));
-
 
 	// let ship_spawned = TriggerHelper.SpawnUnits(spawn_site,this.spawn_ship_templates[1],1,owner);
 	const ship_spawned = TriggerHelper.SpawnUnits(triggerPoint, this.spawn_ship_templates[1], 1, owner);
@@ -462,7 +447,6 @@ Trigger.prototype.spawnInvasionAttack = function(data)
 
 	}
 
-
 	// make sure the unit has no orders, for some reason after garissoning, the order queue is full of pick up orders
 	const cmpUnitAI = Engine.QueryInterface(ship_spawned[0], IID_UnitAI);
 	cmpUnitAI.orderQueue = [];
@@ -470,7 +454,6 @@ Trigger.prototype.spawnInvasionAttack = function(data)
 	cmpUnitAI.isIdle = true;
 
 	attacker_ships.push(ship_spawned[0]);
-
 
 	this.invasion_under_way = true;
 	this.invasion_ship = ship_spawned[0];
@@ -491,7 +474,6 @@ Trigger.prototype.spawnInvasionAttack = function(data)
 	// cmpUnitAI.WalkToTarget(12101,true);
 	// cmpUnitAI.WalkAndFight(target_position.x,target_position.y,null);
 
-
 	/* let gholder = Engine.QueryInterface(ship_spawned[0], IID_GarrisonHolder);
 	for (let unit of garrison_units)
 	{
@@ -510,7 +492,6 @@ Trigger.prototype.spawnInvasionAttack = function(data)
 	}*/
 
 };
-
 
 Trigger.prototype.IntervalActionShipAttack = function(data)
 {
@@ -574,7 +555,6 @@ Trigger.prototype.IntervalActionShipAttack = function(data)
 		if (cmpUnitAI.IsIdle())
 			attacker_ships.push(ship);
 	}*/
-
 
 	// pick target
 	const dock_targets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "Dock").filter(TriggerHelper.IsInWorld);
@@ -671,7 +651,6 @@ Trigger.prototype.IntervalActionTraders = function(data)
 			// warn("Found "+docks_others.length+" docks of others");
 			// warn(uneval(docks_others));
 
-
 			// randomly assign each ship to a dock of another player
 			for (const trader of traders_s)
 			{
@@ -763,8 +742,6 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	}*/
 };
 
-
-
 Trigger.prototype.SpawnLandTraders = function(data)
 {
 	for (let e = 0; e < this.enemies.length; ++e)
@@ -798,7 +775,6 @@ Trigger.prototype.SpawnLandTraders = function(data)
 
 				if (markets_others.length > 0)
 				{
-
 
 					const site = pickRandom(markets_e);
 
@@ -856,7 +832,6 @@ Trigger.prototype.SpawnTradeShips = function(data)
 
 					cmpUnitAI.UpdateWorkOrders("Trade");
 					cmpUnitAI.SetupTradeRoute(pickRandom(docks_others), spawn_dock, null, true);
-
 
 				}
 			}
@@ -923,7 +898,6 @@ Trigger.prototype.GarrisonEntities = function(data)
 
 };
 
-
 Trigger.prototype.GreekAttack = function(data)
 {
 	const camps = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(6), "CivilCentre").filter(TriggerHelper.IsInWorld);
@@ -954,7 +928,6 @@ Trigger.prototype.GreekAttack = function(data)
 		}
 	}
 
-
 	for (let i = 0; i < num_attackers; ++i)
 	{
 		const units_i = TriggerHelper.SpawnUnits(spawn_site, pickRandom(this.greekInfTypes), 1, 6);
@@ -967,7 +940,6 @@ Trigger.prototype.GreekAttack = function(data)
 		const units_i = TriggerHelper.SpawnUnits(spawn_site, pickRandom(this.greekSiegeTypes), 1, 6);
 		attackers.push(units_i[0]);
 	}
-
 
 	// set formation
 	TriggerHelper.SetUnitFormation(6, attackers, pickRandom(unitFormations));
@@ -1009,7 +981,6 @@ Trigger.prototype.SpecialGreekAttack = function(data)
 	const cmpTrigger = Engine.QueryInterface(SYSTEM_ENTITY, IID_Trigger);
 	const triggerPoint = pickRandom(cmpTrigger.GetTriggerPoints(triggerPointGreekSpecialAttack));
 
-
 	const num_attackers = 36;
 	const attackers = [];
 
@@ -1026,7 +997,6 @@ Trigger.prototype.SpecialGreekAttack = function(data)
 		attackers.push(units_i[0]);
 	}
 
-
 	// set formation
 	TriggerHelper.SetUnitFormation(6, attackers, pickRandom(unitFormations));
 
@@ -1035,7 +1005,6 @@ Trigger.prototype.SpecialGreekAttack = function(data)
 	const target = this.FindClosestTarget(attackers[0], target_player, unitTargetClass);
 
 	const target_pos = TriggerHelper.GetEntityPosition2D(target);
-
 
 	const p = 6;
 	ProcessCommand(p, {
@@ -1088,9 +1057,6 @@ Trigger.prototype.CapadociaAttack = function(data)
 		attackers.push(units_i[0]);
 	}
 
-
-
-
 	// set formation
 	TriggerHelper.SetUnitFormation(4, attackers, pickRandom(unitFormations));
 
@@ -1119,7 +1085,6 @@ Trigger.prototype.CapadociaAttack = function(data)
 		},
 		"allowCapture": false
 	});
-
 
 	/* ProcessCommand(4, {
 		"type": "attack",
@@ -1268,7 +1233,6 @@ Trigger.prototype.UpdatePoints = function(data)
 	cmpTrigger.points_player4 = 0;
 	cmpTrigger.points_player6 = 0;
 
-
 	cmpTrigger.invasion_under_way = false;
 	cmpTrigger.invasion_ship = undefined;
 	cmpTrigger.ship_invasion_garrison = undefined;
@@ -1276,8 +1240,6 @@ Trigger.prototype.UpdatePoints = function(data)
 	cmpTrigger.cc_destroyed_event_happened = false;
 	cmpTrigger.fortress_destroyed_event_happened = false;
 	cmpTrigger.dock_destroyed_event_happened = false;
-
-
 
 	// some constants
 	cmpTrigger.greekPopLimit = 90;
@@ -1309,7 +1271,6 @@ Trigger.prototype.UpdatePoints = function(data)
 		if (p == 1)
 			cmpTechnologyManager.ResearchTechnology("unlock_shared_los");
 
-
 		if (p == 7 || p == 3)
 			cmpTechnologyManager.ResearchTechnology("phase_town_athen");
 		else
@@ -1321,7 +1282,6 @@ Trigger.prototype.UpdatePoints = function(data)
 		}
 	}
 
-
 	// one time actions
 	// cmpTrigger.DoAfterDelay(4 * 1000,"SetDifficultyLevel",null);
 
@@ -1331,11 +1291,9 @@ Trigger.prototype.UpdatePoints = function(data)
 	cmpTrigger.DoAfterDelay(10 * 1000, "SpawnTradeShips", null);
 	cmpTrigger.DoAfterDelay(10 * 1000, "SpawnLandTraders", null);
 
-
 	// debug
 	// cmpTrigger.DoAfterDelay(10 * 1000, "SpecialGreekAttack",null);
 	// cmpTrigger.DoAfterDelay(10 * 1000, "spawnInvasionAttack",null);
-
 
 	// register invasion unload trigger
 	cmpTrigger.RegisterTrigger("OnRange", "InvasionRangeAction", {
@@ -1358,7 +1316,6 @@ Trigger.prototype.UpdatePoints = function(data)
 		"interval": 90 * 1000,
 	});
 
-
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalActionSpawnPatrol", {
 		"enabled": true,
 		"delay": 180 * 1000,
@@ -1376,7 +1333,5 @@ Trigger.prototype.UpdatePoints = function(data)
 		"delay": 5 * 1000,
 		"interval": 15 * 1000,
 	});
-
-
 
 }

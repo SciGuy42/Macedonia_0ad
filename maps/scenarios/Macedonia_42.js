@@ -4,7 +4,6 @@ warn("loading the triggers file");
 // Trigger listeners //
 // /////////////////////
 
-
 var unitTargetClass = "Unit+!Ship";
 var siegeTargetClass = "Structure";
 
@@ -29,8 +28,6 @@ var triggerPointTempleQuest = "H";
 var triggerPointKidnapperGuardPatrol = "J";
 var triggerPointStartAssault = "I";*/
 
-
-
 var unitFormations = [
 	"special/formations/box",
 	"special/formations/battle_line",
@@ -38,9 +35,7 @@ var unitFormations = [
 	"special/formations/column_closed"
 ];
 
-
 var disabledTemplatesCCs = (civ) => [
-
 
 	// Expansions
 	"structures/" + civ + "/civil_centre",
@@ -52,7 +47,6 @@ var disabledTemplatesCCs = (civ) => [
 
 var disabledTemplatesDocksCCs = (civ) => [
 
-
 	// Expansions
 	"structures/" + civ + "/civil_centre",
 	"structures/" + civ + "/military_colony",
@@ -63,8 +57,6 @@ var disabledTemplatesDocksCCs = (civ) => [
 	"structures/cart/super_dock",
 	"structures/ptol/lighthouse"
 ];
-
-
 
 var disabledTemplates = (civ) => [
 	// Economic structures
@@ -101,7 +93,6 @@ var disabledTemplates = (civ) => [
 	"units/" + civ + "/support_female_citizen"
 ];
 
-
 Trigger.prototype.WalkAndFightRandomtTarget = function(attacker, target_player, target_class)
 {
 	let target = this.FindRandomTarget(attacker, target_player, target_class);
@@ -110,12 +101,10 @@ Trigger.prototype.WalkAndFightRandomtTarget = function(attacker, target_player, 
 		target = this.FindRandomTarget(attacker, target_player, siegeTargetClass);
 	}
 
-
 	if (target)
 	{
 		// get target position
 		var cmpTargetPosition = Engine.QueryInterface(target, IID_Position).GetPosition2D();
-
 
 		const cmpUnitAI = Engine.QueryInterface(attacker, IID_UnitAI);
 		cmpUnitAI.SwitchToStance("violent");
@@ -123,7 +112,6 @@ Trigger.prototype.WalkAndFightRandomtTarget = function(attacker, target_player, 
 	}
 	else // find a structure
 	{
-
 
 		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
@@ -138,12 +126,10 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 		target = this.FindClosestTarget(attacker, target_player, siegeTargetClass);
 	}
 
-
 	if (target)
 	{
 		// get target position
 		var cmpTargetPosition = Engine.QueryInterface(target, IID_Position).GetPosition2D();
-
 
 		const cmpUnitAI = Engine.QueryInterface(attacker, IID_UnitAI);
 		cmpUnitAI.SwitchToStance("violent");
@@ -152,12 +138,10 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	else // find a structure
 	{
 
-
 		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
-
 
 Trigger.prototype.FindRandomTarget = function(attacker, target_player, target_class)
 {
@@ -179,7 +163,6 @@ Trigger.prototype.FindRandomTarget = function(attacker, target_player, target_cl
 
 	return pickRandom(targets);
 };
-
 
 Trigger.prototype.FindClosestTarget = function(attacker, target_player, target_class)
 {
@@ -232,7 +215,6 @@ Trigger.prototype.SpawnAttackSquad = function(data)
 	const target_player = data.target_player;
 	let target_pos = data.target_pos;
 
-
 	// spawn the units
 	const attackers = [];
 	for (let i = 0; i < size; i++)
@@ -263,7 +245,6 @@ Trigger.prototype.SpawnAttackSquad = function(data)
 	});
 };
 
-
 // scenario indendent functions
 Trigger.prototype.PatrolOrderList = function(units, p, patrolTargets)
 {
@@ -288,7 +269,6 @@ Trigger.prototype.PatrolOrderList = function(units, p, patrolTargets)
 		});
 	}
 };
-
 
 Trigger.prototype.ShowText = function(text, option_a, option_b)
 {
@@ -336,7 +316,6 @@ Trigger.prototype.StructureDecayCheck = function(data)
 		const structs = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Structure").filter(TriggerHelper.IsInWorld);
 		// warn("checking decay");
 
-
 		for (const s of structs)
 		{
 			var cmpCapt = Engine.QueryInterface(s, IID_Capturable);
@@ -359,9 +338,6 @@ Trigger.prototype.StructureDecayCheck = function(data)
 		}
 	}
 };
-
-
-
 
 Trigger.prototype.IdleUnitCheck = function(data)
 {
@@ -388,7 +364,6 @@ Trigger.prototype.IdleUnitCheck = function(data)
 						// pick patrol sites
 						const sites = [pickRandom(structs), pickRandom(structs), pickRandom(structs), pickRandom(structs), pickRandom(structs)];
 
-
 						this.PatrolOrderList([u], p, sites);
 
 					}
@@ -397,8 +372,6 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		}
 
 	}
-
-
 
 	for (const p of [3])
 	{
@@ -419,7 +392,6 @@ Trigger.prototype.IdleUnitCheck = function(data)
 	}
 };
 
-
 // garison AI entities with archers
 Trigger.prototype.GarrisonEntities = function(data)
 {
@@ -438,7 +410,6 @@ Trigger.prototype.GarrisonEntities = function(data)
 				cmpUnitAI.Garrison(c, true);
 			}
 		}
-
 
 		const forts = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Fortress").filter(TriggerHelper.IsInWorld);
 
@@ -471,8 +442,6 @@ Trigger.prototype.GarrisonEntities = function(data)
 	}
 };
 
-
-
 Trigger.prototype.VictoryCheck = function(data)
 {
 
@@ -487,10 +456,6 @@ Trigger.prototype.VictoryCheck = function(data)
 		this.DoAfterDelay(30 * 1000, "VictoryCheck", null);
 	}
 };
-
-
-
-
 
 Trigger.prototype.OwnershipChangedAction = function(data)
 {
@@ -552,11 +517,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	{
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
 
-
-
-
-
-
 		// warn(uneval(id));
 		if (id != null && id.classesList.includes("Dock"))
 		{
@@ -566,7 +526,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				const bonus_ships = TriggerHelper.SpawnUnits(data.entity, "units/brit/ship_merchant", 4, 1);
 			}
 
-
 			this.SpawnDockDestroyedResponseAttack();
 
 		}
@@ -575,16 +534,10 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			warn("Tower destroyed!");
 			this.SpawnDockDestroyedResponseAttack();
 
-
 		}
-
-
 
 	}
 };
-
-
-
 
 Trigger.prototype.ResearchTechs = function(data)
 {
@@ -594,7 +547,6 @@ Trigger.prototype.ResearchTechs = function(data)
 
 		const cmpPlayer = QueryPlayerIDInterface(p);
 		const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
-
 
 		// just to make cavalry faster
 		cmpTechnologyManager.ResearchTechnology("cavalry_movement_speed");
@@ -655,7 +607,6 @@ Trigger.prototype.VictoryTextFn = function(n)
 		n);
 };
 
-
 Trigger.prototype.IntervalSpawnGoats = function(data)
 {
 	const p = 3;
@@ -682,7 +633,6 @@ Trigger.prototype.IntervalSpawnGoats = function(data)
 	}
 };
 
-
 Trigger.prototype.CheckForCC = function(data)
 {
 	// check if player 1 has built structure
@@ -707,7 +657,6 @@ Trigger.prototype.CheckForCC = function(data)
 	}
 };
 
-
 Trigger.prototype.SpawnPatrolShips = function(data)
 {
 	const p = 5;// red village east of our camp
@@ -725,7 +674,6 @@ Trigger.prototype.SpawnPatrolShips = function(data)
 
 	if (docks.length < 1)
 		return;
-
 
 	const ship_template = "units/maur/ship_trireme";
 	const garrison_size = 10;
@@ -746,13 +694,11 @@ Trigger.prototype.SpawnPatrolShips = function(data)
 
 		const patrol_sites = [trigger_sites[0], trigger_sites[1]];
 
-
 		this.PatrolOrderList(ship_spawned, p, patrol_sites);
 
 	}
 
 };
-
 
 Trigger.prototype.SpawnDockDestroyedResponseAttack = function(data)
 {
@@ -783,14 +729,11 @@ Trigger.prototype.SpawnDockDestroyedResponseAttack = function(data)
 
 	const target_pos = TriggerHelper.GetEntityPosition2D(targets[0]);
 
-
-
 	if (targets.length > 0)
 	{
 		warn("starting attack in reesponse to structure destroyed");
 
 		const num_waves = 5;
-
 
 		for (let i = 0; i < num_waves; i++)
 		{
@@ -805,7 +748,6 @@ Trigger.prototype.SpawnDockDestroyedResponseAttack = function(data)
 
 			const data = {};
 
-
 			data.p = p;
 			data.templates = templates;
 			data.size = size;
@@ -818,7 +760,6 @@ Trigger.prototype.SpawnDockDestroyedResponseAttack = function(data)
 		}
 	}
 };
-
 
 Trigger.prototype.SpawnStructureDestroyedResponseAttack = function(target_pos)
 {
@@ -842,13 +783,11 @@ Trigger.prototype.SpawnStructureDestroyedResponseAttack = function(target_pos)
 	const target_player = 1;
 	const targets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(target_player), "Unit").filter(TriggerHelper.IsInWorld);
 
-
 	if (targets.length > 0)
 	{
 		warn("starting attack in reesponse to structure destroyed");
 
 		const num_waves = 3;
-
 
 		for (let i = 0; i < num_waves; i++)
 		{
@@ -862,7 +801,6 @@ Trigger.prototype.SpawnStructureDestroyedResponseAttack = function(target_pos)
 			const size = base_size + i * size_increase;
 
 			const data = {};
-
 
 			data.p = p;
 			data.templates = templates;
@@ -899,13 +837,11 @@ Trigger.prototype.IntervalSpawnGroundAttack = function(data)
 	const target_player = 1;
 	const targets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(target_player), "Structure").filter(TriggerHelper.IsInWorld);
 
-
 	if (targets.length > 0)
 	{
 		// warn("starting ground attack");
 
 		const num_waves = 3;
-
 
 		for (let i = 0; i < num_waves; i++)
 		{
@@ -960,7 +896,6 @@ Trigger.prototype.IntervalSpawnGroundAttack = function(data)
 		}
 	}
 
-
 	// give some tech
 	const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 
@@ -1001,11 +936,9 @@ Trigger.prototype.IntervalSpawnGroundAttack = function(data)
 	// warn("spawning next attack in "+next_time+" seconds");
 	this.DoAfterDelay(next_time * 1000, "IntervalSpawnGroundAttack", null);
 
-
 	// increment counter
 	this.groundAttackCounter += 1;
 };
-
 
 Trigger.prototype.IntervalSpawnAttackShip = function(data)
 {
@@ -1030,7 +963,6 @@ Trigger.prototype.IntervalSpawnAttackShip = function(data)
 
 	const docks_pl1 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "Dock").filter(TriggerHelper.IsInWorld);
 
-
 	if (ships_pl1.length > 0 || docks_pl1.length > 0)
 	{
 		let ship_template = "units/maur/ship_bireme";
@@ -1045,8 +977,6 @@ Trigger.prototype.IntervalSpawnAttackShip = function(data)
 		const ship_spawned = TriggerHelper.SpawnUnits(pickRandom(docks), ship_template, 1, p);
 
 		TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/maur/champion_infantry_maceman", garrison_size, p);
-
-
 
 		const cmpUnitAI = Engine.QueryInterface(ship_spawned[0], IID_UnitAI);
 		if (cmpUnitAI)
@@ -1069,7 +999,6 @@ Trigger.prototype.IntervalSpawnAttackShip = function(data)
 			}
 
 			cmpUnitAI.Attack(target);
-
 
 		}
 
@@ -1144,7 +1073,6 @@ Trigger.prototype.IntervalSpawnPatrolShip = function(data)
 	this.DoAfterDelay(105 * 1000, "IntervalSpawnPatrolShip", null);
 };
 
-
 Trigger.prototype.IntervalSpawnFanatics = function(data)
 {
 	warn("fanatics attack!");
@@ -1165,7 +1093,6 @@ Trigger.prototype.IntervalSpawnFanatics = function(data)
 	}
 
 	const templates = ["units/brit/champion_infantry_swordsman", "units/gaul/champion_fanatic", "units/brit/infantry_javelineer_e", "units/brit/infantry_slinger_e", "units/brit/war_dog", "units/brit/infantry_spearman_e"];
-
 
 	let wave_size = 1;
 	const r = Math.random();
@@ -1191,9 +1118,7 @@ Trigger.prototype.IntervalSpawnFanatics = function(data)
 
 	this.DoAfterDelay(15 * 1000, "IntervalSpawnFanatics", null);
 
-
 };
-
 
 Trigger.prototype.IntervalSpawnGuards = function(data)
 {
@@ -1204,7 +1129,6 @@ Trigger.prototype.IntervalSpawnGuards = function(data)
 	{
 		return;
 	}
-
 
 	// compute population limit
 	const houses = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "House").filter(TriggerHelper.IsInWorld);
@@ -1217,8 +1141,6 @@ Trigger.prototype.IntervalSpawnGuards = function(data)
 	// warn(uneval(houses.length)+", "+uneval(barracks.length)+", "+uneval(forts.length)+", "+docks.length+", "+corals.length);
 
 	const pop_limit = 100 + houses.length * 2 + barracks.length * 6 + forts.length * 10 + docks.length * 50 + corals.length * 5 + ships.length * 3;
-
-
 
 	const units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Unit").filter(TriggerHelper.IsInWorld);
 
@@ -1239,7 +1161,6 @@ Trigger.prototype.IntervalSpawnGuards = function(data)
 
 				const inf_templates = ["units/brit/champion_infantry_swordsman", "units/gaul/champion_fanatic", "units/brit/infantry_javelineer_e", "units/brit/infantry_slinger_e", "units/brit/war_dog", "units/brit/infantry_spearman_e"];
 
-
 				// pick patrol sites
 				const sites = [pickRandom(patrol_sites), pickRandom(patrol_sites), pickRandom(patrol_sites), pickRandom(patrol_sites), pickRandom(patrol_sites)];
 
@@ -1250,14 +1171,11 @@ Trigger.prototype.IntervalSpawnGuards = function(data)
 			}
 		}
 
-
 	}
-
 
 	this.DoAfterDelay(15 * 1000, "IntervalSpawnGuards", null);
 
 };
-
 
 Trigger.prototype.SpawnInitialGuards = function(data)
 {
@@ -1268,7 +1186,6 @@ Trigger.prototype.SpawnInitialGuards = function(data)
 			size = 60;
 		else if (p == 5)
 			size = 90;
-
 
 		// decide whether player 2 or player 3
 		for (let i = 0; i < size; i++)
@@ -1293,7 +1210,6 @@ Trigger.prototype.SpawnInitialGuards = function(data)
 		}
 	}
 };
-
 
 Trigger.prototype.SpawnTraders = function(data)
 {
@@ -1323,12 +1239,8 @@ Trigger.prototype.SpawnTraders = function(data)
 		cmpUnitAI.UpdateWorkOrders("Trade");
 		cmpUnitAI.SetupTradeRoute(target_market, spawn_market, null, true);
 
-
-
-
 	}
 };
-
 
 Trigger.prototype.SpawnDesertRaiders = function(data)
 {
@@ -1337,7 +1249,6 @@ Trigger.prototype.SpawnDesertRaiders = function(data)
 
 	// check if we have structure
 	const spawn_sites = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Structure").filter(TriggerHelper.IsInWorld);
-
 
 	for (let i = 0; i < 90; i++)
 	{
@@ -1353,9 +1264,6 @@ Trigger.prototype.SpawnDesertRaiders = function(data)
 	}
 
 };
-
-
-
 
 Trigger.prototype.RangeActionTemple = function(data)
 {
@@ -1391,7 +1299,6 @@ Trigger.prototype.RangeActionTemple = function(data)
 
 	}
 
-
 };
 
 Trigger.prototype.SpawnUnit = function(data)
@@ -1406,7 +1313,6 @@ Trigger.prototype.SpawnUnit = function(data)
 	const unit_i = TriggerHelper.SpawnUnits(site, template, num, owner);
 
 };
-
 
 Trigger.prototype.PlayerCommandAction = function(data)
 {
@@ -1425,7 +1331,6 @@ Trigger.prototype.PlayerCommandAction = function(data)
 			cmpPlayer.AddResource("food", -1 * this.mercOffer.total_cost_food);
 			cmpPlayer.AddResource("stone", -1 * this.mercOffer.total_cost_stone);
 			cmpPlayer.AddResource("metal", -1 * this.mercOffer.total_cost_metal);
-
 
 			// spawm mercs
 
@@ -1497,7 +1402,6 @@ Trigger.prototype.RangeActionMercs = function(data)
 			this.mercOffer.total_cost_food = total_cost_food;
 			this.mercOffer.total_cost_metal = total_cost_metal;
 			this.mercOffer.template = template;
-
 
 			const offer_text = "You encounter a small camp used by local mercenaries. There are currently " + (offer_size) + " mounted archers available for a total price of " + (total_cost_food) + " food, " + (total_cost_stone) + " stone, and " + (total_cost_metal) + " metal. Would you be willing to hire them?";
 
@@ -1573,7 +1477,6 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 			template = "units/mace/champion_infantry_spearman_02";
 		}
 
-
 		// ok templates : healer
 
 		// not ok templates GenericName:"Heavy Skirmisher" -> merc skirmisher
@@ -1603,7 +1506,6 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 
 		this.DoAfterDelay(10 * 1000, "SpawnUnit", data);
 
-
 		// spawn the same template somewhere else
 		// let unit_i = TriggerHelper.SpawnUnits(this.tunnelOutlets[0],template,1,1);
 
@@ -1627,21 +1529,17 @@ Trigger.prototype.RangeActionTeleportA = function(data)
  *
  */
 
-
 {
-
 
 	const cmpTrigger = Engine.QueryInterface(SYSTEM_ENTITY, IID_Trigger);
 
 	// some constants (that may change)
-
 
 	// some state variables
 	cmpTrigger.groundAttackCounter = 0;
 	cmpTrigger.mercsAvailable = true;
 	cmpTrigger.mercOffer = {};
 	cmpTrigger.numLost = 0;
-
 
 	// start techs
 	cmpTrigger.DoAfterDelay(2 * 1000, "ResearchTechs", null);
@@ -1671,7 +1569,6 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 	for (const p of [1, 2, 3, 4, 5])
 	{
 		const cmpPlayer = QueryPlayerIDInterface(p);
-
 
 		let disTemplates = disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv());
 
@@ -1725,14 +1622,12 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 	// triggers
 	const data = { "enabled": true };
 
-
 	// cmpTrigger.RegisterTrigger("OnResearchFinished", "ResearchFinishedAction", data);
 
 	cmpTrigger.RegisterTrigger("OnOwnershipChanged", "OwnershipChangedAction", data);
 	// cmpTrigger.RegisterTrigger("OnStructureBuilt", "StructureBuiltAction", data);
 
 	// cmpTrigger.RegisterTrigger("OnPlayerCommand", "PlayerCommandAction", data);
-
 
 	cmpTrigger.RegisterTrigger("OnInterval", "IdleUnitCheck", {
 		"enabled": true,

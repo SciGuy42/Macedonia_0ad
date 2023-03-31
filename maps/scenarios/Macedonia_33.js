@@ -4,7 +4,6 @@ warn("loading the triggers file");
 // Trigger listeners //
 // /////////////////////
 
-
 var unitTargetClass = "Unit+!Ship";
 var siegeTargetClass = "Structure";
 
@@ -22,8 +21,6 @@ var triggerPointMountainAttackSpawn = "G";
 var triggerPointTempleQuest = "H";
 var triggerPointKidnapperGuardPatrol = "J";
 var triggerPointStartAssault = "I";*/
-
-
 
 var unitFormations = [
 	"special/formations/box",
@@ -59,7 +56,6 @@ var disabledTemplates = (civ) => [
 	// villagers
 	// "units/" + civ + "/support_female_citizen"
 ];
-
 
 Trigger.prototype.FindClosestTarget = function(attacker, target_player, target_class)
 {
@@ -132,7 +128,6 @@ Trigger.prototype.SpawnAttackSquad = function(p, site, templates, size, target_c
 	});
 };
 
-
 // scenario indendent functions
 Trigger.prototype.PatrolOrderList = function(units, p, patrolTargets)
 {
@@ -158,7 +153,6 @@ Trigger.prototype.PatrolOrderList = function(units, p, patrolTargets)
 		});
 	}
 };
-
 
 Trigger.prototype.ShowText = function(text, option_a, option_b)
 {
@@ -206,7 +200,6 @@ Trigger.prototype.StructureDecayCheck = function(data)
 		const structs = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Structure").filter(TriggerHelper.IsInWorld);
 		// warn("checking decay");
 
-
 		for (const s of structs)
 		{
 			var cmpCapt = Engine.QueryInterface(s, IID_Capturable);
@@ -252,7 +245,6 @@ Trigger.prototype.StructureDecayCheck = function(data)
 	}
 };
 
-
 Trigger.prototype.IdleUnitCheck = function(data)
 {
 
@@ -285,8 +277,6 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		}
 	}
 };
-
-
 
 // garison AI entities with archers
 Trigger.prototype.GarrisonEntities = function(data)
@@ -427,7 +417,6 @@ Trigger.prototype.GarrisonEntities = function(data)
 
 	}
 
-
 	for (const p of [0])
 	{
 		const towers = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "SentryTower").filter(TriggerHelper.IsInWorld);
@@ -446,7 +435,6 @@ Trigger.prototype.GarrisonEntities = function(data)
 
 	}
 };
-
 
 Trigger.prototype.FlipAssets = function(data)
 {
@@ -472,9 +460,6 @@ Trigger.prototype.FlipAssets = function(data)
 	this.DoAfterDelay(60 + this.cavalryAttackInterval * 1000, "SpawnIntervalCavalryAttack", null);
 
 };
-
-
-
 
 Trigger.prototype.SpawnInterevalPatrolBazira = function(data)
 {
@@ -515,7 +500,6 @@ Trigger.prototype.SpawnInterevalPatrolBazira = function(data)
 	// warn("spawning again in "+uneval(next_time));
 	this.DoAfterDelay(next_time, "SpawnInterevalPatrolBazira", null);
 };
-
 
 Trigger.prototype.SpawnInterevalPatrolOra = function(data)
 {
@@ -624,16 +608,12 @@ Trigger.prototype.SpawnInitialPatrol = function(data)
 	}
 };
 
-
-
 Trigger.prototype.SpawnIntervalCavalryAttack = function(data)
 {
 	warn("Starting cavalry attack");
 
-
 	// templates -- mostly far east horsemen
 	const templates = ["units/pers/cavalry_javelineer_e", "units/pers/cavalry_spearman_e", "units/pers/cavalry_axeman_e", "units/pers/champion_cavalry", "units/pers/champion_cavalry_archer"];
-
 
 	// how big each squad
 	const squad_size = this.cavalrySquadSize;
@@ -647,7 +627,6 @@ Trigger.prototype.SpawnIntervalCavalryAttack = function(data)
 		this.SpawnAttackSquad(0, s, templates, squad_size, "Structure", 1);
 		// warn("spawning squad");
 	}
-
 
 	// increment and repeat
 	this.cavalrySquadSize += this.cavalrySquadSizeIncrement;
@@ -718,12 +697,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			}
 		}
 
-
-
-
-
 	}
-
 
 	// if market from player 2
 	if (this.eventBaziraMarketDestroyed == false && data.from == 2 && (data.to == -1 || data.to == 1))
@@ -735,7 +709,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			if (id.classesList.includes("Market"))
 			{
 				// warn("Bazira market destroyed.");
-
 
 				this.eventBaziraMarketDestroyed = true;
 
@@ -755,7 +728,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			if (id.classesList.includes("Structure"))
 			{
 				// warn("Ora structure destroyed.");
-
 
 				this.eventOraStructureDestroyed = true;
 
@@ -813,16 +785,12 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	}
 };
 
-
-
-
 Trigger.prototype.RangeActionTemple = function(data)
 {
 
 	if (this.questTempleGiven == false)
 	{
 		this.ShowText("The monks in this temple greet you with welcome. They are happy to assist you in your cause, but immediately they face another problem. Recently, the monastary was raided by bandits, many who are elephant riders, who are camped out on a hill not too far from here. Should you recover our stolen goods, we will help you.", "Sounds good", "I'll get on it");
-
 
 		this.questTempleGiven = true;
 	}
@@ -831,8 +799,6 @@ Trigger.prototype.RangeActionTemple = function(data)
 
 Trigger.prototype.RangeActionColony = function(data)
 {
-
-
 
 	if (this.eventColonyAmbush == false)
 	{
@@ -862,8 +828,6 @@ Trigger.prototype.RangeActionColony = function(data)
 	}
 };
 
-
-
 Trigger.prototype.RewardQuestTemple = function(data)
 {
 	// warn("reward for temple quest");
@@ -891,7 +855,6 @@ Trigger.prototype.ResearchTechs = function(data)
 		const cmpPlayer = QueryPlayerIDInterface(p);
 		const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 
-
 		// just to make alexander faster
 		cmpTechnologyManager.ResearchTechnology("cavalry_health");
 		cmpTechnologyManager.ResearchTechnology("cavalry_movement_speed");
@@ -905,7 +868,6 @@ Trigger.prototype.ResearchTechs = function(data)
 	}
 };
 
-
 Trigger.prototype.VictoryTextFn = function(n)
 {
 	return markForPluralTranslation(
@@ -913,7 +875,6 @@ Trigger.prototype.VictoryTextFn = function(n)
 		"%(players)s and %(lastPlayer)s have won (game mode).",
 		n);
 };
-
 
 Trigger.prototype.IntervalVictoryCheck = function(data)
 {
@@ -939,8 +900,6 @@ Trigger.prototype.IntervalVictoryCheck = function(data)
 	}
 };
 
-
-
 {
 	const cmpTrigger = Engine.QueryInterface(SYSTEM_ENTITY, IID_Trigger);
 
@@ -954,7 +913,6 @@ Trigger.prototype.IntervalVictoryCheck = function(data)
 	cmpTrigger.patrolInervalOra = 15;
 
 	cmpTrigger.colonyAmbushSize = 25;
-
 
 	// variables related to gaia attacks
 	cmpTrigger.cavalrySquadSize = 5;
@@ -970,12 +928,10 @@ Trigger.prototype.IntervalVictoryCheck = function(data)
 	cmpTrigger.eventBaziraMarketDestroyed = false;
 	cmpTrigger.eventOraStructureDestroyed = false;
 
-
 	// quests state variables
 	cmpTrigger.questTempleGiven = false;
 	cmpTrigger.questTempleComplete = false;
 	cmpTrigger.numBanditsKilled = 0;
-
 
 	// count how many gaia elephants there are
 	cmpTrigger.numBanditElephants = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(0), "Elephant").filter(TriggerHelper.IsInWorld).length;
@@ -994,11 +950,8 @@ Trigger.prototype.IntervalVictoryCheck = function(data)
 	cmpTrigger.DoAfterDelay((20 + cmpTrigger.patrolInervalBazira) * 1000, "SpawnInterevalPatrolBazira", null);
 	cmpTrigger.DoAfterDelay((cmpTrigger.patrolInervalOra) * 1000, "SpawnInterevalPatrolOra", null);
 
-
 	// debug
 	// cmpTrigger.DoAfterDelay(15 * 1000,"FlipAssets",null);
-
-
 
 	// disable templates
 	for (const p of [1, 2, 3, 4, 5, 6, 7])
@@ -1021,7 +974,6 @@ Trigger.prototype.IntervalVictoryCheck = function(data)
 			cmpTechnologyManager.ResearchTechnology("unlock_shared_los");
 			cmpPlayer.SetPopulationBonuses(300);
 		}
-
 
 	}
 
@@ -1050,7 +1002,6 @@ Trigger.prototype.IntervalVictoryCheck = function(data)
 	cmpTrigger.RegisterTrigger("OnOwnershipChanged", "OwnershipChangedAction", data);
 	// cmpTrigger.RegisterTrigger("OnPlayerCommand", "PlayerCommandAction", data);
 
-
 	cmpTrigger.RegisterTrigger("OnInterval", "IdleUnitCheck", {
 		"enabled": true,
 		"delay": 60 * 1000,
@@ -1072,9 +1023,6 @@ Trigger.prototype.IntervalVictoryCheck = function(data)
 		"requiredComponent": IID_UnitAI, // only count units in range
 		"enabled": true
 	});
-
-
-
 
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalVictoryCheck", {
 		"enabled": true,

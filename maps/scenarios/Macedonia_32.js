@@ -4,7 +4,6 @@ warn("loading the triggers file");
 // Trigger listeners //
 // /////////////////////
 
-
 var unitTargetClass = "Unit+!Ship";
 var siegeTargetClass = "Structure";
 
@@ -19,8 +18,6 @@ var triggerPointMountainAttackSpawn = "G";
 var triggerPointTempleQuest = "H";
 var triggerPointKidnapperGuardPatrol = "J";
 var triggerPointStartAssault = "I";
-
-
 
 var unitFormations = [
 	"special/formations/box",
@@ -77,7 +74,6 @@ Trigger.prototype.PlayerCommandAction = function(data)
 
 };
 
-
 Trigger.prototype.FindClosestTarget = function(attacker, target_player, target_class)
 {
 
@@ -103,8 +99,6 @@ Trigger.prototype.FindClosestTarget = function(attacker, target_player, target_c
 
 	return closestTarget;
 };
-
-
 
 // garison AI entities with archers
 Trigger.prototype.GarrisonEntities = function(data)
@@ -157,7 +151,6 @@ Trigger.prototype.GarrisonEntities = function(data)
 			}
 		}*/
 
-
 	}
 
 	for (const p of [0, 6])
@@ -178,7 +171,6 @@ Trigger.prototype.GarrisonEntities = function(data)
 
 	}
 };
-
 
 Trigger.prototype.PatrolOrderList = function(units, p, patrolTargets)
 {
@@ -205,14 +197,12 @@ Trigger.prototype.PatrolOrderList = function(units, p, patrolTargets)
 	}
 };
 
-
 Trigger.prototype.StructureDecayCheck = function(data)
 {
 	for (const p of [2, 4, 6, 7])
 	{
 		const structs = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Structure").filter(TriggerHelper.IsInWorld);
 		// warn("checking decay");
-
 
 		for (const s of structs)
 		{
@@ -237,7 +227,6 @@ Trigger.prototype.StructureDecayCheck = function(data)
 	}
 
 };
-
 
 Trigger.prototype.SpawnAssaultSquad = function(data)
 {
@@ -288,7 +277,6 @@ Trigger.prototype.SpawnAssaultSquad = function(data)
 	{
 		const healers = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Healer").filter(TriggerHelper.IsInWorld);
 
-
 		if (healers.length < 10)
 		{
 			// warn("spawning healer");
@@ -330,7 +318,6 @@ Trigger.prototype.SpawnAssaultSquad = function(data)
 	// increment counter
 	this.mainAssaultCounter += 1;
 };
-
 
 Trigger.prototype.KidnapperGuardDistracted = function(data)
 {
@@ -383,9 +370,6 @@ Trigger.prototype.StartMainAttack = function(data)
 	this.DoAfterDelay(3 * delay * 1000, "KidnapperGuardDistracted", null);
 };
 
-
-
-
 Trigger.prototype.SpawnHorsemanPatrol = function(data)
 {
 	if (this.finalAttackTriggered == false)
@@ -436,8 +420,6 @@ Trigger.prototype.SpawnIntervalGuardPatrol = function(data)
 		const p = 8;
 		const units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Unit").filter(TriggerHelper.IsInWorld);
 
-
-
 		if (units.length < this.maxEnemyKidnappersPatrolSize)
 		{
 
@@ -471,10 +453,8 @@ Trigger.prototype.SpawnIntervalGuardPatrol = function(data)
 			// patrol sites
 			const trigger_sites = this.GetTriggerPoints(triggerPointKidnapperGuardPatrol);
 
-
 			// templates
 			const patrol_templates = ["units/pers/champion_infantry", "units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher", "units/pers/arstibara", "units/pers/infantry_archer_e", "units/pers/infantry_archer_e"];
-
 
 			if (spawn_sites.length > 0)
 			{
@@ -501,12 +481,9 @@ Trigger.prototype.SpawnIntervalPatrol = function(data)
 	const p = 2;
 	const units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Unit").filter(TriggerHelper.IsInWorld);
 
-
-
 	if (units.length < this.maxEnemyPatrolSize)
 	{
 		// warn("Found this many enemy units of player 2: "+uneval(units.length));
-
 
 		// decide how many to spawn
 		const difference = this.maxEnemyPatrolSize - units.length;
@@ -539,7 +516,6 @@ Trigger.prototype.SpawnIntervalPatrol = function(data)
 		// templates
 		const patrol_templates = ["units/pers/champion_infantry", "units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher", "units/pers/arstibara", "units/pers/infantry_archer_e", "units/pers/infantry_archer_e"];
 
-
 		if (outposts.length > 0 && sentry_towers.length > 0)
 		{
 			for (let i = 0; i < spawn_size; i++)
@@ -567,16 +543,13 @@ Trigger.prototype.SpawnInitialPatrol = function(data)
 	// templates
 	const patrol_templates = ["units/pers/champion_infantry", "units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher", "units/pers/arstibara", "units/pers/infantry_archer_e", "units/pers/infantry_archer_e"];
 
-
 	// sites
 	const outposts = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Outpost").filter(TriggerHelper.IsInWorld);
 	const sentry_towers = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "SentryTower").filter(TriggerHelper.IsInWorld);
 
-
 	for (let i = 0; i < num_patrols; i++)
 	{
 		const sites = [pickRandom(outposts), pickRandom(sentry_towers)];
-
 
 		// spawn the unit
 		const unit_i = TriggerHelper.SpawnUnits(pickRandom(sites), pickRandom(patrol_templates), 1, p);
@@ -596,14 +569,12 @@ Trigger.prototype.SpawnInitialPatrol = function(data)
 	{
 		const patrol_sites = [pickRandom(trigger_sites), pickRandom(trigger_sites), pickRandom(trigger_sites), pickRandom(trigger_sites), pickRandom(trigger_sites)];
 
-
 		// spawn the unit
 		const unit_i = TriggerHelper.SpawnUnits(spawn_site, pickRandom(patrol_templates), 1, p);
 
 		this.PatrolOrderList(unit_i, p, patrol_sites);
 	}
 };
-
 
 Trigger.prototype.FlipAssets = function(data)
 {
@@ -625,7 +596,6 @@ Trigger.prototype.FlipAssets = function(data)
 		cmpOwnership.SetOwner(1);
 	}
 };
-
 
 Trigger.prototype.SpawnElephantBandits = function(data)
 {
@@ -667,8 +637,6 @@ Trigger.prototype.SpawnElephantBandits = function(data)
 	}
 };
 
-
-
 Trigger.prototype.ActionTradersJourneyStart = function(data)
 {
 	// make traders move
@@ -699,7 +667,6 @@ Trigger.prototype.ActionTradersJourneyStart = function(data)
 
 };
 
-
 Trigger.prototype.SpawnTradersAmbush = function(data)
 {
 	const sites = this.GetTriggerPoints(triggerPointTraderAmbush);
@@ -729,8 +696,6 @@ Trigger.prototype.RangeActionTraders = function(data)
 		this.ShowText("You happen upon a desperate caravan trying to reach the Dock to the south. The traders ask you to provide escort and in exchange, their horsemen will assist when the final battle comes. The caravans will rest a bit longer and then head out -- scout ahead of them towards the Dock by the camp to make sure the road is safe.", "Got it!", "Will do");
 	}
 };
-
-
 
 Trigger.prototype.RangeActionStartAssault = function(data)
 {
@@ -763,12 +728,10 @@ Trigger.prototype.RangeActionStartAssault = function(data)
 		this.currentDialog = "decision_assault";
 		this.ShowText(text, "Yes, let's go!", "No, not yet.");
 
-
 		this.dialogActive = false; // disable for a while and schedule a toggle
 		this.DoAfterDelay(30 * 1000, "EnableDialog", null);
 
 	}
-
 
 };
 
@@ -812,7 +775,6 @@ Trigger.prototype.RangeActionTradersArrival = function(data)
 
 };
 
-
 Trigger.prototype.RangeActionStables = function(data)
 {
 	if (this.elephantAttackTriggered == false)
@@ -822,7 +784,6 @@ Trigger.prototype.RangeActionStables = function(data)
 
 		this.SpawnElephantBandits();
 	}
-
 
 };
 
@@ -841,15 +802,12 @@ Trigger.prototype.RangeActionTradeOutpost = function(data)
 
 };
 
-
 Trigger.prototype.RangeActionCivilCentre = function(data)
 {
 	if (this.assetTransferTriggered == false)
 	{
 		// warn("range action centre");
 		this.ShowText("We made it! The town is now under your command. Our immediate task is to fortify it by building towers, fortresses and walls around our base. Meanwhile, we need to find the horsemen's camps and destroy them. ", "On it!", "OK");
-
-
 
 		// flip player 3 to 1
 		this.FlipAssets();
@@ -859,7 +817,6 @@ Trigger.prototype.RangeActionCivilCentre = function(data)
 		this.DoAfterDelay(540 * 1000, "RebelAttackRepeat", null);
 	}
 };
-
 
 Trigger.prototype.SpawnSquad = function(data)
 {
@@ -961,7 +918,6 @@ Trigger.prototype.RebelAttack = function(data)
 	this.attackCounter += 1;
 };
 
-
 Trigger.prototype.RebelAttackRepeat = function(data)
 {
 
@@ -980,7 +936,6 @@ Trigger.prototype.RebelAttackRepeat = function(data)
 	}
 
 };
-
 
 Trigger.prototype.VictoryTextFn = function(n)
 {
@@ -1014,7 +969,6 @@ Trigger.prototype.VictoryCheck = function(data)
 	}
 };
 
-
 Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, target_class)
 {
 	let target = this.FindClosestTarget(attacker, target_player, target_class);
@@ -1023,12 +977,10 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 		target = this.FindClosestTarget(attacker, target_player, siegeTargetClass);
 	}
 
-
 	if (target)
 	{
 		// get target position
 		var cmpTargetPosition = Engine.QueryInterface(target, IID_Position).GetPosition2D();
-
 
 		const cmpUnitAI = Engine.QueryInterface(attacker, IID_UnitAI);
 		cmpUnitAI.SwitchToStance("violent");
@@ -1037,12 +989,10 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	else // find a structure
 	{
 
-
 		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
-
 
 Trigger.prototype.IdleUnitCheck = function(data)
 {
@@ -1164,7 +1114,6 @@ Trigger.prototype.IdleUnitCheck = function(data)
 	}
 };
 
-
 Trigger.prototype.QuestTradersEscortComplete = function(data)
 {
 	this.tradersQuestComplete = true;
@@ -1263,7 +1212,6 @@ Trigger.prototype.QuestSiegeEnginesCapturedComplete = function(data)
 	this.siegeEnginesCaptured = true;
 };
 
-
 Trigger.prototype.VictoryTextFn = function(n)
 {
 	return markForPluralTranslation(
@@ -1272,7 +1220,6 @@ Trigger.prototype.VictoryTextFn = function(n)
 		n);
 
 };
-
 
 Trigger.prototype.OwnershipChangedAction = function(data)
 {
@@ -1407,7 +1354,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 		this.alexRescued = true;
 
-
 		this.ShowText("Great! We have found Alexander! We must now destroy the camp's headquarters!", "On it!", "Great!");
 	}
 
@@ -1439,7 +1385,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 	}
 };
-
 
 Trigger.prototype.ResearchTechs = function(data)
 {
@@ -1491,7 +1436,6 @@ Trigger.prototype.ResearchTechs = function(data)
 
 };
 
-
 Trigger.prototype.ShowText = function(text, option_a, option_b)
 {
 	var cmpGUIInterface = Engine.QueryInterface(SYSTEM_ENTITY, IID_GuiInterface);
@@ -1531,14 +1475,12 @@ Trigger.prototype.ShowText = function(text, option_a, option_b)
 
 };
 
-
 Trigger.prototype.SpawnSiegeAttackers = function(data)
 {
 	const p = 5;
 
 	// find siege units
 	const siege = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Siege").filter(TriggerHelper.IsInWorld);
-
 
 	// spawn some units next to each siege unit
 	const squad_size = 9;
@@ -1590,7 +1532,6 @@ Trigger.prototype.SpawnArcherAmbush = function(data)
 		TriggerHelper.SpawnUnits(site, "units/pers/hero_xerxes_i", hero_size, p);
 	}
 };
-
 
 Trigger.prototype.SpawnMountainSquads = function(data)
 {
@@ -1644,8 +1585,6 @@ Trigger.prototype.SpawnMountainSquads = function(data)
 	{
 		// warn("End of mt attacks");
 
-
-
 	}
 
 };
@@ -1673,7 +1612,6 @@ Trigger.prototype.RangeActionTempleQuest = function(data)
 		}
 	}
 
-
 };
 
 Trigger.prototype.RangeActionMountainAttack = function(data)
@@ -1687,10 +1625,8 @@ Trigger.prototype.RangeActionMountainAttack = function(data)
 
 		this.ShowText("As you make it down this narrow pass, you suddenly spot a look out bandit making a get-away. We have been spotted and must prepared for battle!", "Great", "OK");
 
-
 		this.mountainAttackTriggered = true;
 	}
-
 
 };
 
@@ -1711,7 +1647,6 @@ Trigger.prototype.SpawnCityKidnappers = function(data)
 {
 	const p = 2;
 	const size = this.sizeCityKidnappers;
-
 
 	const templates = ["units/pers/champion_infantry", "units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher", "units/pers/arstibara"];
 
@@ -1735,7 +1670,6 @@ Trigger.prototype.SpawnCityKidnappers = function(data)
 	// brit cata: speed and vision for soldiers, range for javelins
 	// iber cata: health for soldiers
 	// rome cata: +1 resistance
-
 
 	const cmpTrigger = Engine.QueryInterface(SYSTEM_ENTITY, IID_Trigger);
 
@@ -1816,15 +1750,12 @@ Trigger.prototype.SpawnCityKidnappers = function(data)
 	// city kidnappers
 	cmpTrigger.DoAfterDelay(2, "SpawnCityKidnappers", null);
 
-
-
 	// debug
 	// cmpTrigger.DoAfterDelay(5 * 1000,"SpawnArcherAmbush",null);
 	// cmpTrigger.DoAfterDelay(5 * 1000,"SpawnSiegeAttackers",null);
 
 	// test main attack
 	// cmpTrigger.DoAfterDelay(10 * 1000,"StartMainAttack",null);
-
 
 	// mark some quests as already complete for debugging
 	// cmpTrigger.DoAfterDelay(10 * 1000,"QuestTempleComplete",null);
@@ -1848,7 +1779,6 @@ Trigger.prototype.SpawnCityKidnappers = function(data)
 
 		if (p == 3)
 			disTemplates = disTemplates.concat(disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv()));
-
 
 		cmpPlayer.SetDisabledTemplates(disTemplates);
 
@@ -1896,12 +1826,9 @@ Trigger.prototype.SpawnCityKidnappers = function(data)
 	const cmpPlayer4 = QueryPlayerIDInterface(4);
 	cmpPlayer4.SetNeutral(3);
 
-
 	const data = { "enabled": true };
 	cmpTrigger.RegisterTrigger("OnOwnershipChanged", "OwnershipChangedAction", data);
 	cmpTrigger.RegisterTrigger("OnPlayerCommand", "PlayerCommandAction", data);
-
-
 
 	cmpTrigger.RegisterTrigger("OnInterval", "StructureDecayCheck", {
 		"enabled": true,
@@ -1909,13 +1836,11 @@ Trigger.prototype.SpawnCityKidnappers = function(data)
 		"interval": 10 * 1000,
 	});
 
-
 	cmpTrigger.RegisterTrigger("OnInterval", "IdleUnitCheck", {
 		"enabled": true,
 		"delay": 5 * 1000,
 		"interval": 15 * 1000,
 	});
-
 
 	cmpTrigger.RegisterTrigger("OnRange", "RangeActionTradersArrival", {
 		"entities": cmpTrigger.GetTriggerPoints(triggerPointTradeOutpost), // central points to calculate the range circles
@@ -1980,6 +1905,5 @@ Trigger.prototype.SpawnCityKidnappers = function(data)
 		"requiredComponent": IID_UnitAI, // only count units in range
 		"enabled": true
 	});
-
 
 }

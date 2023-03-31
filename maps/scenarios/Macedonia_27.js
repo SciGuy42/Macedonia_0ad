@@ -4,18 +4,14 @@ warn("loading the triggers file");
 // Trigger listeners //
 // /////////////////////
 
-
 var unitTargetClass = "Unit+!Ship";
 var siegeTargetClass = "Structure";
-
 
 var triggerPointNorth = "B";
 var triggerPointPatrolA = "A";
 var triggerPointPatrolB = "B";
 var triggerPointSupplyConvoy = "K";
 var triggerPointSupplyConvoyDestination = "J";
-
-
 
 var unitFormations = [
 	"special/formations/box",
@@ -52,8 +48,6 @@ var disabledTemplates = (civ) => [
 	"units/" + civ + "/support_female_citizen"
 ];
 
-
-
 Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, target_class)
 {
 	let target = this.FindClosestTarget(attacker, target_player, target_class);
@@ -62,12 +56,10 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 		target = this.FindClosestTarget(attacker, target_player, siegeTargetClass);
 	}
 
-
 	if (target)
 	{
 		// get target position
 		var cmpTargetPosition = Engine.QueryInterface(target, IID_Position).GetPosition2D();
-
 
 		const cmpUnitAI = Engine.QueryInterface(attacker, IID_UnitAI);
 		cmpUnitAI.SwitchToStance("violent");
@@ -75,7 +67,6 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	}
 	else // find a structure
 	{
-
 
 		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
@@ -146,7 +137,6 @@ Trigger.prototype.ResearchQueuedAction = function(data)
 	// warn(uneval(data));
 };
 
-
 Trigger.prototype.SpecialAchaeanAssault = function(data)
 {
 	const owner = 5;
@@ -186,7 +176,6 @@ Trigger.prototype.SpecialArcadianAssault = function(data)
 		this.WalkAndFightClosestTarget(units_i[0], target_player, "Unit");
 	}
 };
-
 
 Trigger.prototype.SpawnStructureResponseAttack = function(data)
 {
@@ -243,7 +232,6 @@ Trigger.prototype.SpawnStructureResponseAttack = function(data)
 		});
 	}
 };
-
 
 /* Trigger.prototype.ResearchTechs = function(data)
 {
@@ -320,7 +308,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			if (id.classesList.includes("Structure"))
 			{
 				// warn(uneval(id));
-
 
 				// possibly send an attack from watch
 				if (Math.random() < this.responseSquadProb)
@@ -406,7 +393,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 			}
 
-
 			// check if civil centre
 			if (id.classesList.includes("CivilCentre"))
 			{
@@ -428,7 +414,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			}
 		}
 
-
 	}
 
 	// check if alexander
@@ -443,7 +428,6 @@ Trigger.prototype.PlayerCommandAction = function(data)
 	// warn("The OnPlayerCommand event happened with the following data:");
 	// warn(uneval(data));
 };
-
 
 Trigger.prototype.StructureDecayCheck = function(data)
 {
@@ -469,7 +453,6 @@ Trigger.prototype.StructureDecayCheck = function(data)
 		}
 	}
 };
-
 
 // garison AI entities with archers
 Trigger.prototype.GarrisonEntities = function(data)
@@ -561,7 +544,6 @@ Trigger.prototype.GarrisonEntities = function(data)
 			}
 		}
 
-
 		// camps
 		const camps_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "MercenaryCamp").filter(TriggerHelper.IsInWorld);
 
@@ -579,14 +561,12 @@ Trigger.prototype.GarrisonEntities = function(data)
 	}
 };
 
-
 Trigger.prototype.SpawnPatrolReinforcements = function(data)
 {
 	// find out how many units we have already
 	const cmpPlayer = QueryPlayerIDInterface(3);
 	const pop = cmpPlayer.GetPopulationCount();
 	// warn("pop = "+pop);
-
 
 	// fields
 	let p = 2;
@@ -677,9 +657,6 @@ Trigger.prototype.SpawnPatrolReinforcements = function(data)
 	}
 };
 
-
-
-
 Trigger.prototype.RangeActionAllies = function(data)
 {
 	if (this.alliesEvent == false)
@@ -688,7 +665,6 @@ Trigger.prototype.RangeActionAllies = function(data)
 
 		// TO DO: show some text
 		this.ShowText("You have encountered a local nomadic tribe who are happy to trade with us. They are no fans of Aria and have pledged somem warriors to help you take the city.", "Great", "OK");
-
 
 		// get allies
 		const site = pickRandom(this.GetTriggerPoints("C"));
@@ -727,11 +703,9 @@ Trigger.prototype.RangeActionTradersDestination = function(data)
 	{
 		// warn("num traders arrived = "+traders_arrived.length);
 
-
 	}
 
 };
-
 
 Trigger.prototype.HasUnits = function(player)
 {
@@ -753,7 +727,6 @@ Trigger.prototype.SpawnSupplyConvoy = function(data)
 		warn("[WARN] Trying to spawn units for player who may be dead, abort.");
 		return;
 	}
-
 
 	const p = 6;
 	const site = pickRandom(this.GetTriggerPoints(triggerPointSupplyConvoy));
@@ -878,17 +851,11 @@ Trigger.prototype.IdleUnitCheck = function(data)
 	}
 };
 
-
-
-
-
-
 Trigger.prototype.PatrolOrder = function(units, p, A, B)
 {
 
 	if (units.length <= 0)
 		return;
-
 
 	// list of patrol targets
 	const patrolTargets = [A, B];
@@ -910,17 +877,13 @@ Trigger.prototype.PatrolOrder = function(units, p, A, B)
 	}
 };
 
-
 Trigger.prototype.RepeatSpawnCavalryAttack = function(data)
 {
 	this.SpawnFinalCavalryAttack();
 
-
-
 	this.DoAfterDelay(5 * 1000, "RepeatSpawnCavalryAttack", null);
 
 };
-
 
 Trigger.prototype.VictoryTextFn = function(n)
 {
@@ -943,7 +906,6 @@ Trigger.prototype.SpawnFinalCavalryAttack = function(data)
 	const current_cavalry = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Cavalry").filter(TriggerHelper.IsInWorld);
 	if (current_cavalry.length > 400)
 		return;
-
 
 	const attack_size = 30;
 	const cav_templates = ["units/pers/cavalry_axeman_e", "units/pers/cavalry_spearman_e", "units/pers/cavalry_javelineer_e", "units/pers/cavalry_archer_e", "units/pers/champion_cavalry", "units/pers/champion_chariot", "units/pers/champion_elephant"];
@@ -984,8 +946,6 @@ Trigger.prototype.SpawnFinalCavalryAttack = function(data)
 
 };
 
-
-
 Trigger.prototype.SpawnCavalryAttack = function(data)
 {
 	if (this.HasUnits(6) == false)
@@ -993,9 +953,6 @@ Trigger.prototype.SpawnCavalryAttack = function(data)
 		warn("[WARN] Trying to spawn units for player who may be dead, abort.");
 		return;
 	}
-
-
-
 
 	// check if we have structures left, if not, end
 	const p = 6;
@@ -1019,7 +976,6 @@ Trigger.prototype.SpawnCavalryAttack = function(data)
 	let num_attackers = Math.floor(units_1.length / 7.0);
 	if (num_attackers < min_size)
 		num_attackers = min_size;*/
-
 
 	const num_attackers = 10 + this.pointsRunningAvg / 20;
 
@@ -1063,8 +1019,6 @@ Trigger.prototype.SpawnCavalryAttack = function(data)
 	});
 };
 
-
-
 Trigger.prototype.SpawnAchaeanPatrol = function(data)
 {
 	const p = 5; // arcdians
@@ -1085,7 +1039,6 @@ Trigger.prototype.SpawnAchaeanPatrol = function(data)
 
 		let targets_B = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Defensive+Tower").filter(TriggerHelper.IsInWorld);
 		targets_B = targets_B.concat(TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Gate").filter(TriggerHelper.IsInWorld));
-
 
 		if (targets_A.length == 0 || targets_B.length == 0)
 			return;
@@ -1124,7 +1077,6 @@ Trigger.prototype.SpawnBessusPatrol = function(data)
 			let targets_A = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "CivilCentre").filter(TriggerHelper.IsInWorld);
 			targets_A = targets_A.concat(TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "Market").filter(TriggerHelper.IsInWorld));
 
-
 			let targets_B = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "Defensive+Tower").filter(TriggerHelper.IsInWorld);
 			targets_B = targets_B.concat(TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "Fortress").filter(TriggerHelper.IsInWorld));
 
@@ -1149,9 +1101,6 @@ Trigger.prototype.SpawnBessusPatrol = function(data)
 		this.DoAfterDelay(30 * 1000, "SpawnBessusPatrol", null);
 	}
 };
-
-
-
 
 Trigger.prototype.ShowText = function(text, option_a, option_b)
 {
@@ -1191,7 +1140,6 @@ Trigger.prototype.ShowText = function(text, option_a, option_b)
 	});
 
 };
-
 
 Trigger.prototype.CheckForCC = function(data)
 {
@@ -1259,7 +1207,6 @@ Trigger.prototype.SpawnMercenarySquad = function(data)
 	});
 };
 
-
 Trigger.prototype.SetDiplomacy = function(data)
 {
 	// everyone is neutral towards 4 and 5
@@ -1284,7 +1231,6 @@ Trigger.prototype.SetDiplomacy = function(data)
 
 {
 	const cmpTrigger = Engine.QueryInterface(SYSTEM_ENTITY, IID_Trigger);
-
 
 	// some templates
 	cmpTrigger.patrolTemplates = ["units/pers/arstibara", "units/pers/champion_infantry", "units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher", "units/pers/infantry_archer_e"];
@@ -1314,10 +1260,7 @@ Trigger.prototype.SetDiplomacy = function(data)
 	// repeat action to collect points and spawn reinforcements
 	cmpTrigger.DoAfterDelay(30 * 1000, "SpawnPatrolReinforcements", null);
 
-
-
 	const cmpModifiersManager = Engine.QueryInterface(SYSTEM_ENTITY, IID_ModifiersManager);
-
 
 	for (const p of [1, 2, 3, 4])
 	{
@@ -1387,13 +1330,11 @@ Trigger.prototype.SetDiplomacy = function(data)
 		}
 	}
 
-
 	cmpTrigger.RegisterTrigger("OnInterval", "IdleUnitCheck", {
 		"enabled": true,
 		"delay": 10 * 1000,
 		"interval": 30 * 1000,
 	});
-
 
 	cmpTrigger.RegisterTrigger("OnRange", "RangeActionTradersDestination", {
 		"entities": cmpTrigger.GetTriggerPoints(triggerPointSupplyConvoyDestination), // central points to calculate the range circles
@@ -1423,7 +1364,5 @@ Trigger.prototype.SetDiplomacy = function(data)
 	cmpTrigger.RegisterTrigger("OnOwnershipChanged", "OwnershipChangedAction", data);
 
 	/* cmpTrigger.DoAfterDelay(300 * 1000,"SpawnAlliedInvasionAttack",null);*/
-
-
 
 }

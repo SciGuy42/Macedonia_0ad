@@ -4,10 +4,8 @@ warn("loading the triggers file");
 // Trigger listeners //
 // /////////////////////
 
-
 var unitTargetClass = "Unit+!Ship";
 var siegeTargetClass = "Structure";
-
 
 /* var triggerPointPatrolA = "A";
 var triggerPointPatrolB = "B";
@@ -18,8 +16,6 @@ var triggerPointRaid = "G";*/
 
 var triggerPointWorkshop = "K";
 var triggerPointDock = "D";
-
-
 
 var unitFormations = [
 	"special/formations/box",
@@ -56,9 +52,6 @@ var disabledTemplates = (civ) => [
 	"units/" + civ + "/support_female_citizen"
 ];
 
-
-
-
 Trigger.prototype.WalkAndGatherClosestTarget = function(attacker, target_player, target_class)
 {
 	let target = this.FindClosestTarget(attacker, target_player, target_class);
@@ -67,12 +60,10 @@ Trigger.prototype.WalkAndGatherClosestTarget = function(attacker, target_player,
 		target = this.FindClosestTarget(attacker, target_player, siegeTargetClass);
 	}
 
-
 	if (target)
 	{
 		// get target position
 		var cmpTargetPosition = Engine.QueryInterface(target, IID_Position).GetPosition2D();
-
 
 		const cmpUnitAI = Engine.QueryInterface(attacker, IID_UnitAI);
 		cmpUnitAI.PerformGather(target, true, true);
@@ -80,12 +71,10 @@ Trigger.prototype.WalkAndGatherClosestTarget = function(attacker, target_player,
 	else // find a structure
 	{
 
-
 		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
-
 
 Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, target_class)
 {
@@ -95,12 +84,10 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 		target = this.FindClosestTarget(attacker, target_player, siegeTargetClass);
 	}
 
-
 	if (target)
 	{
 		// get target position
 		var cmpTargetPosition = Engine.QueryInterface(target, IID_Position).GetPosition2D();
-
 
 		const cmpUnitAI = Engine.QueryInterface(attacker, IID_UnitAI);
 		cmpUnitAI.SwitchToStance("violent");
@@ -108,7 +95,6 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	}
 	else // find a structure
 	{
-
 
 		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
@@ -179,14 +165,10 @@ Trigger.prototype.ResearchQueuedAction = function(data)
 	// warn(uneval(data));
 };
 
-
-
 Trigger.prototype.OwnershipChangedAction = function(data)
 {
 
 };
-
-
 
 Trigger.prototype.PlayerCommandAction = function(data)
 {
@@ -239,8 +221,6 @@ Trigger.prototype.PlayerCommandAction = function(data)
 	}
 };
 
-
-
 // garison AI entities with archers
 Trigger.prototype.GarrisonEntities = function(data)
 {
@@ -280,7 +260,6 @@ Trigger.prototype.GarrisonEntities = function(data)
 			}
 		}
 
-
 		// camps
 		const camps_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "MercenaryCamp").filter(TriggerHelper.IsInWorld);
 
@@ -297,9 +276,6 @@ Trigger.prototype.GarrisonEntities = function(data)
 		}
 	}
 };
-
-
-
 
 Trigger.prototype.HorseCheck = function(data)
 {
@@ -344,7 +320,6 @@ Trigger.prototype.StructureDecayCheck = function(data)
 		const structs = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Structure").filter(TriggerHelper.IsInWorld);
 		// warn("checking decay");
 
-
 		for (const s of structs)
 		{
 			var cmpCapt = Engine.QueryInterface(s, IID_Capturable);
@@ -368,8 +343,6 @@ Trigger.prototype.StructureDecayCheck = function(data)
 	}
 
 };
-
-
 
 Trigger.prototype.VictoryTextFn = function(n)
 {
@@ -400,9 +373,6 @@ Trigger.prototype.IdleUnitCheck = function(data)
 	}
 
 };
-
-
-
 
 Trigger.prototype.PatrolOrderList = function(units, p, patrolTargets)
 {
@@ -435,7 +405,6 @@ Trigger.prototype.PatrolOrder = function(units, p, A, B)
 	if (units.length <= 0)
 		return;
 
-
 	// list of patrol targets
 	const patrolTargets = [A, B];
 
@@ -456,7 +425,6 @@ Trigger.prototype.PatrolOrder = function(units, p, A, B)
 	}
 };
 
-
 Trigger.prototype.pickRandomK = function(inputs, K)
 {
 	const subset = [];
@@ -474,7 +442,6 @@ Trigger.prototype.pickRandomK = function(inputs, K)
 	return subset;
 
 };
-
 
 Trigger.prototype.ShowText = function(text, option_a, option_b)
 {
@@ -514,7 +481,6 @@ Trigger.prototype.ShowText = function(text, option_a, option_b)
 	});
 
 };
-
 
 Trigger.prototype.SpawnTraders = function(data)
 {
@@ -566,9 +532,6 @@ Trigger.prototype.SpawnTraders = function(data)
 	this.DoAfterDelay(45 * 1000, "SpawnTraders", null);
 };
 
-
-
-
 Trigger.prototype.RangeActionDock = function(data)
 {
 	if (this.dockOffer == true)
@@ -599,7 +562,6 @@ Trigger.prototype.RangeActionDock = function(data)
 	}
 
 };
-
 
 Trigger.prototype.RangeActionWorkshop = function(data)
 {
@@ -640,9 +602,7 @@ Trigger.prototype.RangeActionWorkshop = function(data)
 
 	}
 
-
 };
-
 
 Trigger.prototype.StartOffer = function(data)
 {
@@ -700,7 +660,6 @@ Trigger.prototype.ResearchTechs = function(data)
 
 };
 
-
 Trigger.prototype.SpawnInfiltrators = function(data)
 {
 	// send all idle units to attack
@@ -732,17 +691,14 @@ Trigger.prototype.SpawnInfiltrators = function(data)
 		TriggerHelper.SpawnUnits(pickRandom(houses), pickRandom(templates), 1, 7);
 	}
 
-
 };
 
 {
 	const cmpTrigger = Engine.QueryInterface(SYSTEM_ENTITY, IID_Trigger);
 
-
 	// some templates
 
 	// some variables
-
 
 	// some state variables
 	cmpTrigger.workshopOffer = true;
@@ -772,12 +728,8 @@ Trigger.prototype.SpawnInfiltrators = function(data)
 	// schedule infiltrators
 	cmpTrigger.DoAfterDelay(5 * 1000, "SpawnInfiltrators", null);
 
-
-
 	// start techs
 	cmpTrigger.DoAfterDelay(1 * 1000, "ResearchTechs", null);
-
-
 
 	// set diplomacy
 	// everyone is neutral towards 6 except player 1
@@ -823,7 +775,6 @@ Trigger.prototype.SpawnInfiltrators = function(data)
 			cmpPlayer.SetDisabledTechnologies(["unlock_shared_dropsites"]);
 		}
 
-
 		const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 
 		cmpTechnologyManager.ResearchTechnology("phase_town_generic");
@@ -846,7 +797,6 @@ Trigger.prototype.SpawnInfiltrators = function(data)
 			cmpPlayer.SetPopulationBonuses(300);
 		}
 	}
-
 
 	cmpTrigger.RegisterTrigger("OnInterval", "StructureDecayCheck", {
 		"enabled": true,
@@ -882,18 +832,14 @@ Trigger.prototype.SpawnInfiltrators = function(data)
 		"enabled": true
 	});
 
-
 	// Activate all possible triggers
 	const data = { "enabled": true };
 
 	cmpTrigger.RegisterTrigger("OnPlayerCommand", "PlayerCommandAction", data);
 
-
 	// cmpTrigger.RegisterTrigger("OnStructureBuilt", "StructureBuiltAction", data);
 	cmpTrigger.RegisterTrigger("OnOwnershipChanged", "OwnershipChangedAction", data);
 
 	/* cmpTrigger.DoAfterDelay(300 * 1000,"SpawnAlliedInvasionAttack",null);*/
-
-
 
 }

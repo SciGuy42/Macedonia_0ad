@@ -4,7 +4,6 @@ warn("loading the triggers file");
 // Trigger listeners //
 // /////////////////////
 
-
 var unitTargetClass = "Unit+!Ship";
 var siegeTargetClass = "Structure";
 
@@ -14,7 +13,6 @@ var triggerPointShipInvasionSpawn1 = "A";
 var triggerPointShipPatrol = "J";
 var triggerPointShipUnload2 = "C";
 var triggerPointShipInvasionSpawn2 = "B";
-
 
 var unitFormations = [
 	"special/formations/box"
@@ -26,7 +24,6 @@ var unitFormations = [
 	"special/formations/line_closed",
 	"special/formations/column_closed"
 ];*/
-
 
 var disabledTemplates = (civ) => [
 	// Economic structures
@@ -77,7 +74,6 @@ var disabledTemplates = (civ) => [
 	"structures/cart/embassy_iberian"
 ];
 
-
 Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, target_class)
 {
 	let target = this.FindClosestTarget(attacker, target_player, target_class);
@@ -86,12 +82,10 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 		target = this.FindClosestTarget(attacker, target_player, siegeTargetClass);
 	}
 
-
 	if (target)
 	{
 		// get target position
 		var cmpTargetPosition = Engine.QueryInterface(target, IID_Position).GetPosition2D();
-
 
 		const cmpUnitAI = Engine.QueryInterface(attacker, IID_UnitAI);
 		cmpUnitAI.SwitchToStance("violent");
@@ -99,7 +93,6 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	}
 	else // find a structure
 	{
-
 
 		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
@@ -131,7 +124,6 @@ Trigger.prototype.FindClosestTarget = function(attacker, target_player, target_c
 
 	return closestTarget;
 };
-
 
 Trigger.prototype.StructureDecayCheck = function(data)
 {
@@ -262,7 +254,6 @@ Trigger.prototype.PlayerCommandAction = function(data)
 	// warn(uneval(data));
 };
 
-
 Trigger.prototype.PatrolOrder = function(units, p)
 {
 
@@ -312,7 +303,6 @@ Trigger.prototype.PatrolOrder = function(units, p)
 		});
 	}
 };
-
 
 // spawn allied attack
 Trigger.prototype.SpawnAlliedInvasionAttack = function(data)
@@ -380,12 +370,10 @@ Trigger.prototype.SpawnAlliedInvasionAttack = function(data)
 	if (docks_e.length < 1)
 		return;
 
-
 	// decide how many ships to spawn and where
 	const spawn_site = pickRandom(docks_e);
 	const owner = 3;// TriggerHelper.GetOwner(spawn_site);
 	const attacker_ships = [];
-
 
 	const cmpTrigger = Engine.QueryInterface(SYSTEM_ENTITY, IID_Trigger);
 	const triggerPoint = pickRandom(this.GetTriggerPoints(spawn_point));
@@ -409,7 +397,6 @@ Trigger.prototype.SpawnAlliedInvasionAttack = function(data)
 
 	}
 
-
 	// make sure the unit has no orders, for some reason after garissoning, the order queue is full of pick up orders
 	const cmpUnitAI = Engine.QueryInterface(ship_spawned[0], IID_UnitAI);
 	cmpUnitAI.orderQueue = [];
@@ -417,7 +404,6 @@ Trigger.prototype.SpawnAlliedInvasionAttack = function(data)
 	cmpUnitAI.isIdle = true;
 
 	attacker_ships.push(ship_spawned[0]);
-
 
 	this.invasion_under_way = true;
 	this.invasion_ship = ship_spawned[0];
@@ -438,7 +424,6 @@ Trigger.prototype.SpawnAlliedInvasionAttack = function(data)
 	// cmpUnitAI.WalkToTarget(12101,true);
 	// cmpUnitAI.WalkAndFight(target_position.x,target_position.y,null);
 
-
 	/* let gholder = Engine.QueryInterface(ship_spawned[0], IID_GarrisonHolder);
 	for (let unit of garrison_units)
 	{
@@ -456,13 +441,9 @@ Trigger.prototype.SpawnAlliedInvasionAttack = function(data)
 		uAI.AddOrder("Ungarrison", null, true);
 	}*/
 
-
-
 	this.DoAfterDelay(300 * 1000, "SpawnAlliedInvasionAttack", null);
 
 };
-
-
 
 Trigger.prototype.PersianCavalryAttack = function(data)
 {
@@ -478,14 +459,12 @@ Trigger.prototype.PersianCavalryAttack = function(data)
 	const num_attackers = this.persAttackLevel;
 	const attackers = [];
 
-
 	// spawn attackers
 	for (let i = 0; i < num_attackers; ++i)
 	{
 		const units_i = TriggerHelper.SpawnUnits(spawn_site, pickRandom(this.persianCavTypes), 1, p);
 		attackers.push(units_i[0]);
 	}
-
 
 	// set formation
 	TriggerHelper.SetUnitFormation(p, attackers, pickRandom(unitFormations));
@@ -513,8 +492,6 @@ Trigger.prototype.PersianCavalryAttack = function(data)
 	this.DoAfterDelay(next_attack_interval_sec * 1000, "PersianCavalryAttack", null);
 
 };
-
-
 
 // garison AI entities with archers
 Trigger.prototype.SpawnShipPatrolPeriodic = function(data)
@@ -570,7 +547,6 @@ Trigger.prototype.SpawnShipPatrolPeriodic = function(data)
 		});
 	}
 };
-
 
 // garison AI entities with archers
 Trigger.prototype.SpawnElephantPatrolPeriodic = function(data)
@@ -646,7 +622,6 @@ Trigger.prototype.SpawnPatrolPeriodic = function(data)
 		// set formation
 		TriggerHelper.SetUnitFormation(5, units, pickRandom(unitFormations));
 
-
 		// send to patrol
 		this.PatrolOrder(units, p);
 
@@ -691,7 +666,6 @@ Trigger.prototype.SpawnInitialPatrol = function(data)
 
 		// set formation
 		TriggerHelper.SetUnitFormation(5, units, pickRandom(unitFormations));
-
 
 		// send to patrol
 		this.PatrolOrder(units, p);
@@ -759,7 +733,6 @@ Trigger.prototype.GarrisonEntities = function(data)
 			for (const e of towers_w)
 			{
 
-
 				// spawn the garrison inside the tower
 				const archers_e = TriggerHelper.SpawnUnits(e, "units/cart/champion_infantry", 4, p);
 
@@ -771,7 +744,6 @@ Trigger.prototype.GarrisonEntities = function(data)
 			}
 		}
 	}
-
 
 	/* for (let p of [2,3,4,5])
 	{
@@ -848,7 +820,6 @@ Trigger.prototype.InvasionRangeAction2 = function(data)
 {
 	this.InvasionRangeAction(data);
 };
-
 
 Trigger.prototype.InvasionRangeAction = function(data)
 {
@@ -952,7 +923,6 @@ Trigger.prototype.IdleUnitCheck = function(data)
 	}
 };
 
-
 Trigger.prototype.RandomTemplatePers = function(data)
 {
 	const r = Math.random();
@@ -964,7 +934,6 @@ Trigger.prototype.RandomTemplatePers = function(data)
 	return pickRandom(this.pers_ele_templates);
 };
 
-
 Trigger.prototype.RandomTemplateMace = function(data)
 {
 	const r = Math.random();
@@ -975,7 +944,6 @@ Trigger.prototype.RandomTemplateMace = function(data)
 		return pickRandom(this.mace_cav_templates);
 	return pickRandom(this.mace_siege_templates);
 };
-
 
 Trigger.prototype.SetDifficultyLevel = function(data)
 {
@@ -1027,10 +995,8 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	// spawn patrols
 	cmpTrigger.DoAfterDelay(5 * 1000, "SpawnInitialPatrol", null);
 
-
 	cmpTrigger.persianCavTypes = ["units/pers/cavalry_spearman_a", "units/pers/cavalry_javelineer_a", "units/pers/cavalry_axeman_a", "units/pers/champion_cavalry_archer", "units/pers/cavalry_archer_a", "units/pers/champion_chariot", "units/pers/champion_cavalry"];
 	cmpTrigger.persAttackLevel = 15;
-
 
 	cmpTrigger.greekInfTypes = ["units/athen/champion_ranged", "units/athen/champion_marine", "units/athen/champion_marine", "units/athen/champion_infantry", "units/athen/champion_infantry", "units/theb_sacred_band"];
 	cmpTrigger.greekSiegeTypes = ["units/athen/siege_oxybeles_packed", "units/athen/siege_oxybeles_packed", "units/mace/siege_lithobolos_packed"];
@@ -1087,7 +1053,6 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		}
 	}
 
-
 	// repeat cavalry attacks
 	cmpTrigger.DoAfterDelay(180 * 1000, "PersianCavalryAttack", null);
 
@@ -1113,9 +1078,6 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		"interval": 120 * 1000,
 	});
 
-
-
-
 	// need to test
 	cmpTrigger.RegisterTrigger("OnInterval", "checkInvasionAttack", {
 		"enabled": true,
@@ -1128,7 +1090,6 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		"delay": 15 * 1000,
 		"interval": 15 * 1000,
 	});
-
 
 	// register invasion unload trigger
 	cmpTrigger.RegisterTrigger("OnRange", "InvasionRangeAction1", {
@@ -1162,15 +1123,11 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		"interval": 15 * 1000,
 	});*/
 
-
-
 	/* cmpTrigger.RegisterTrigger("OnInterval", "LevelUpPers", {
 		"enabled": true,
 		"delay": 1 * 1000,
 		"interval": 300 * 1000,
 	});
-
-
 
 	// register winning trigger
 	cmpTrigger.RegisterTrigger("OnRange", "RangeActionTriggerK", {
@@ -1180,6 +1137,5 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		"requiredComponent": IID_UnitAI, // only count units in range
 		"enabled": true
 	});*/
-
 
 }

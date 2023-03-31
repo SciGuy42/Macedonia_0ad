@@ -53,7 +53,6 @@ Trigger.prototype.PlayerCommandAction = function(data)
 	// warn(uneval(data));
 };
 
-
 Trigger.prototype.IntervalActionCavAttack = function(data)
 {
 
@@ -74,12 +73,10 @@ Trigger.prototype.IntervalAction = function(data)
 	if (this.numberOfTimerTrigger >= this.maxNumberOfTimerTrigger)
 		this.DisableTrigger("OnInterval", "IntervalAction");
 
-
 	var enemy_players = [2, 3];
 
 	for (let p = 0; p < enemy_players.length; ++p)
 	{
-
 
 		var enemy_units = TriggerHelper.GetEntitiesByPlayer(enemy_players[p]);
 		var human_units = TriggerHelper.GetEntitiesByPlayer(1);
@@ -127,12 +124,10 @@ Trigger.prototype.IntervalAction = function(data)
 	}
 };
 
-
 Trigger.prototype.SetDifficultyLevel = function(data)
 {
 	// Very Hard: 1.56; Hard: 1.25; Medium 1
 	const difficulty = "easy";
-
 
 	for (const player of [2, 3])
 	{
@@ -176,7 +171,6 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 
 	cmpTrigger.DoAfterDelay(5 * 1000, "SetDifficultyLevel", null);
 
-
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalAction", {
 		"enabled": true,
 		"delay": 20 * 1000,
@@ -185,10 +179,5 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 
 	// make traders trade
 	// var all_ents = TriggerHelper.GetEntitiesByPlayer(2);
-
-
-
-
-
 
 }

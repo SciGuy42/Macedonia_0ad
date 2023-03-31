@@ -51,7 +51,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	// warn("The OnOwnershipChanged event happened with the following data:");
 	// warn(uneval(data));
 
-
 };
 
 Trigger.prototype.PlayerCommandAction = function(data)
@@ -59,7 +58,6 @@ Trigger.prototype.PlayerCommandAction = function(data)
 	// warn("The OnPlayerCommand event happened with the following data:");
 	// warn(uneval(data));
 };
-
 
 Trigger.prototype.CavalryAttack = function(data)
 {
@@ -69,7 +67,6 @@ Trigger.prototype.CavalryAttack = function(data)
 	{
 		return;
 	}
-
 
 	// get target position
 	var cmpTargetPosition = Engine.QueryInterface(2747, IID_Position).GetPosition2D();
@@ -87,7 +84,6 @@ Trigger.prototype.CavalryAttack = function(data)
 			}
 		}
 	}
-
 
 	// spawn attacking party
 	var ents1 = TriggerHelper.SpawnUnits(2911, "units/mace/cavalry_spearman_a", this.spawnCavCount, 3);
@@ -137,7 +133,6 @@ Trigger.prototype.CavalryAttack = function(data)
 			//warn(uneval(targets_i));
 		}
 	}*/
-
 
 	// try out the dialog
 	/* var cmpGUIInterface = Engine.QueryInterface(SYSTEM_ENTITY, IID_GuiInterface);
@@ -203,7 +198,6 @@ Trigger.prototype.InfantryAttack = function(data)
 		}
 	}
 
-
 	// spawn attacking party
 	var ents1 = TriggerHelper.SpawnUnits(2906, "units/mace/infantry_pikeman_b", this.spawnInfCount + 3, 3);
 	var ents2 = TriggerHelper.SpawnUnits(2906, "units/mace/infantry_javelineer_b", this.spawnInfCount + 3, 3);
@@ -241,7 +235,6 @@ Trigger.prototype.InfantryAttack = function(data)
 		"allowCapture": false
 	});
 
-
 	/* for (let i = 0; i < full_list.length; ++i)
 	{
 		let cmpUnitAI = Engine.QueryInterface(full_list[i], IID_UnitAI);
@@ -254,7 +247,6 @@ Trigger.prototype.InfantryAttack = function(data)
 			//warn(uneval(targets_i));
 		}
 	}*/
-
 
 	// try out the dialog
 	/* var cmpGUIInterface = Engine.QueryInterface(SYSTEM_ENTITY, IID_GuiInterface);
@@ -300,7 +292,6 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 
 	// player 2
 	const cmpPlayer = QueryPlayerIDInterface(2);
-
 
 	const tower_garrison_count = 0;
 	const walltower_garrison_count = 0;
@@ -385,7 +376,6 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 
 };
 
-
 Trigger.prototype.VictoryTextFn = function(n)
 {
 	return markForPluralTranslation(
@@ -455,7 +445,6 @@ Trigger.prototype.RangeAction = function(data)
 		"delay": 45 * 1000,
 		"interval": 90 * 1000,
 	});*/
-
 
 	/* cmpTrigger.RegisterTrigger("OnInterval", "IntervalAction", {
 		"enabled": true,

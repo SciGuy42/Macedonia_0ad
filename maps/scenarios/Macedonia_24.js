@@ -4,17 +4,13 @@ warn("loading the triggers file");
 // Trigger listeners //
 // /////////////////////
 
-
 var unitTargetClass = "Unit+!Ship";
 var siegeTargetClass = "Structure";
-
 
 var triggerPointNorth = "B";
 var triggerPointSouth = "A";
 var triggerPointArc = "K";
 var triggerPointAch = "J";
-
-
 
 var unitFormations = [
 	"special/formations/box",
@@ -22,7 +18,6 @@ var unitFormations = [
 	"special/formations/line_closed",
 	"special/formations/column_closed"
 ];
-
 
 var disabledTemplates = (civ) => [
 	// Economic structures
@@ -52,8 +47,6 @@ var disabledTemplates = (civ) => [
 	"units/" + civ + "/support_female_citizen"
 ];
 
-
-
 Trigger.prototype.VictoryTextFn = function(n)
 {
 	return markForPluralTranslation(
@@ -82,12 +75,10 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 		target = this.FindClosestTarget(attacker, target_player, siegeTargetClass);
 	}
 
-
 	if (target)
 	{
 		// get target position
 		var cmpTargetPosition = Engine.QueryInterface(target, IID_Position).GetPosition2D();
-
 
 		const cmpUnitAI = Engine.QueryInterface(attacker, IID_UnitAI);
 		cmpUnitAI.SwitchToStance("violent");
@@ -96,12 +87,10 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	else // find a structure
 	{
 
-
 		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
-
 
 Trigger.prototype.FindRandomTarget = function(attacker, target_player, target_class)
 {
@@ -112,7 +101,6 @@ Trigger.prototype.FindRandomTarget = function(attacker, target_player, target_cl
 
 	return pickRandom(targets);
 };
-
 
 Trigger.prototype.FindClosestTarget = function(attacker, target_player, target_class)
 {
@@ -177,7 +165,6 @@ Trigger.prototype.ResearchQueuedAction = function(data)
 	// warn(uneval(data));
 };
 
-
 Trigger.prototype.SpecialAchaeanAssault = function(data)
 {
 	const owner = 5;
@@ -218,7 +205,6 @@ Trigger.prototype.SpecialArcadianAssault = function(data)
 	}
 };
 
-
 Trigger.prototype.ReserveInfantryAttack = function(data)
 {
 	// get all cavalry by reserve forces
@@ -245,7 +231,6 @@ Trigger.prototype.ReserveInfantryAttack = function(data)
 
 	// TO DO: from now on, do idle check on cavalry
 
-
 };
 
 Trigger.prototype.ReserveCavalryAttack = function(data)
@@ -271,7 +256,6 @@ Trigger.prototype.ReserveCavalryAttack = function(data)
 	});
 
 	// TO DO: from now on, do idle check on cavalry
-
 
 };
 
@@ -391,12 +375,10 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 				this.inf_reserve_counter += 1;
 
-
 			}
 			else if (data.entity == this.id_outpost_cav)
 			{
 				// round up all cavalry of player 4 and send towards alexander
-
 
 				// find all cavalry
 				const p = 4;
@@ -427,13 +409,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 	}
 
-
-
-
 };
-
-
-
 
 // garison AI entities with archers
 Trigger.prototype.GarrisonEntities = function(data)
@@ -519,7 +495,6 @@ Trigger.prototype.GarrisonEntities = function(data)
 		}
 	}
 };
-
 
 Trigger.prototype.IdleUnitCheck = function(data)
 {
@@ -670,7 +645,6 @@ Trigger.prototype.IdleUnitCheck = function(data)
 
 	}
 
-
 	if (this.dariusdleCheck == true)
 	{
 		const owner = 2;
@@ -721,7 +695,6 @@ Trigger.prototype.IdleUnitCheck = function(data)
 	}*/
 };
 
-
 Trigger.prototype.ShowText = function(text, option_a, option_b)
 {
 	var cmpGUIInterface = Engine.QueryInterface(SYSTEM_ENTITY, IID_GuiInterface);
@@ -763,7 +736,6 @@ Trigger.prototype.ShowText = function(text, option_a, option_b)
 
 Trigger.prototype.PlayerCommandAction = function(data)
 {
-
 
 	if (data.cmd.type == "dialog-answer")
 	{
@@ -812,20 +784,17 @@ Trigger.prototype.PlayerCommandAction = function(data)
 	}
 };
 
-
 Trigger.prototype.DifficultyOption = function(data)
 {
 	this.ShowText("The final showdown is at hand. Choose your difficulty level.", "Easy", "Hard(er)");
 
 };
 
-
 Trigger.prototype.PatrolOrder = function(units, p, A, B)
 {
 
 	if (units.length <= 0)
 		return;
-
 
 	// list of patrol targets
 	const patrolTargets = [A, B];
@@ -846,8 +815,6 @@ Trigger.prototype.PatrolOrder = function(units, p, A, B)
 		});
 	}
 };
-
-
 
 Trigger.prototype.CavalryAttack = function(data)
 {
@@ -932,7 +899,6 @@ Trigger.prototype.ArcadianAttack = function(data)
 		}
 	}
 
-
 	// set formation
 	TriggerHelper.SetUnitFormation(p, attackers, pickRandom(unitFormations));
 
@@ -958,8 +924,6 @@ Trigger.prototype.ArcadianAttack = function(data)
 
 	this.DoAfterDelay(next_attack_interval_sec * 1000, "ArcadianAttack", null);
 };
-
-
 
 Trigger.prototype.CheckAssault = function(data)
 {
@@ -1043,8 +1007,6 @@ Trigger.prototype.SpawnAssault = function(data)
 
 };
 
-
-
 Trigger.prototype.AttackCavalryWave = function(data)
 {
 	const p = 7;
@@ -1096,7 +1058,6 @@ Trigger.prototype.AttackCavalryWave = function(data)
 
 			// find target
 			const target = this.FindClosestTarget(clusters[k][0], target_player, siegeTargetClass);
-
 
 			const target_pos = TriggerHelper.GetEntityPosition2D(target);
 
@@ -1156,7 +1117,6 @@ Trigger.prototype.AttackInftanryWave = function(data)
 				{
 					attackers.push(u);
 
-
 					// this.WalkAndFightClosestTarget(u,target_player,siegeTargetClass);
 				}
 
@@ -1177,7 +1137,6 @@ Trigger.prototype.AttackInftanryWave = function(data)
 
 			// find target
 			const target = this.FindClosestTarget(clusters[k][0], target_player, siegeTargetClass);
-
 
 			const target_pos = TriggerHelper.GetEntityPosition2D(target);
 
@@ -1201,7 +1160,6 @@ Trigger.prototype.AttackInftanryWave = function(data)
 		}
 	}
 
-
 	if (this.waveIndex < this.numWaves)
 	{
 		this.waveIndex += 1;
@@ -1212,10 +1170,6 @@ Trigger.prototype.AttackInftanryWave = function(data)
 		this.infIdleCheck = true;
 	}
 };
-
-
-
-
 
 Trigger.prototype.AttackDarius = function(data)
 {
@@ -1292,7 +1246,6 @@ Trigger.prototype.AttackGreekInfantry = function(data)
 	this.greekInfIdleCheck = true;
 };
 
-
 Trigger.prototype.AttackIndianInfantry = function(data)
 {
 	const p = 6;
@@ -1321,7 +1274,6 @@ Trigger.prototype.AttackIndianInfantry = function(data)
 
 	// find target
 	const target = this.FindRandomTarget(attackers[0], target_player, siegeTargetClass);
-
 
 	const target_pos = TriggerHelper.GetEntityPosition2D(target);
 
@@ -1386,7 +1338,6 @@ Trigger.prototype.AttackIndianCavalry = function(data)
 			// find target
 			const target = this.FindRandomTarget(clusters[k][0], target_player, siegeTargetClass);
 
-
 			const target_pos = TriggerHelper.GetEntityPosition2D(target);
 
 			// warn(uneval(target_pos));
@@ -1438,7 +1389,6 @@ Trigger.prototype.AttackChariots = function(data)
 	this.charIdleCheck = true;
 };
 
-
 Trigger.prototype.AttackElephants = function(data)
 {
 	const owner = 6;
@@ -1464,7 +1414,6 @@ Trigger.prototype.AttackElephants = function(data)
 
 	this.eleIdleCheck = true;
 };
-
 
 Trigger.prototype.ResearchTechs = function(data)
 {
@@ -1501,7 +1450,6 @@ Trigger.prototype.ResearchTechs = function(data)
 	// cmpTechnologyManager.ResearchTechnology("trade_gain_02");
 
 };
-
 
 Trigger.prototype.ClusterUnits = function(units, num_clusters)
 {
@@ -1553,7 +1501,6 @@ Trigger.prototype.ClusterUnits = function(units, num_clusters)
 
 	return clusters;
 };
-
 
 Trigger.prototype.SetDiplomacy = function(data)
 {
@@ -1651,7 +1598,6 @@ Trigger.prototype.ClusterAttackGreeks = function(data)
 	}
 };
 
-
 Trigger.prototype.DariusFlees = function(data)
 {
 	// get Darius
@@ -1704,7 +1650,6 @@ Trigger.prototype.DariusFlees = function(data)
 	cmpTrigger.cavWaveInterval = 5;
 	cmpTrigger.cavIdleCheck = false;
 
-
 	cmpTrigger.charIdleCheck = false;
 	cmpTrigger.eleIdleCheck = false;
 	cmpTrigger.indianCavIdleCheck = false;
@@ -1747,7 +1692,6 @@ Trigger.prototype.DariusFlees = function(data)
 	cmpTrigger.DoAfterDelay(100 * 1000, "ClusterAttackGreeks", null);
 	cmpTrigger.DoAfterDelay(115 * 1000, "AttackDarius", null);
 
-
 	// start spawning traders
 	/* cmpTrigger.DoAfterDelay(5 * 1000, "SpawnCretanTraders",null);
 	cmpTrigger.DoAfterDelay(5 * 1000, "SpawnArcadianTraders",null);
@@ -1759,10 +1703,7 @@ Trigger.prototype.DariusFlees = function(data)
 	//schedule assault
 	cmpTrigger.DoAfterDelay(15 * 1000,"SpawnAssault",null);*/
 
-
 	// cmpTrigger.DoAfterDelay(10 * 1000,"FlipMegolopolisAssets",null);
-
-
 
 	// spawn patrols of forts
 	// cmpTrigger.DoAfterDelay(10 * 1000,"SpawnFortressPatrol",null);
@@ -1770,9 +1711,7 @@ Trigger.prototype.DariusFlees = function(data)
 	// invasion sea attack
 	// cmpTrigger.DoAfterDelay(10 * 1000,"SpawnNavalInvasionAttack",null);
 
-
 	const cmpModifiersManager = Engine.QueryInterface(SYSTEM_ENTITY, IID_ModifiersManager);
-
 
 	for (const p of [1, 2, 3, 4, 5, 6, 7, 8])
 	{
@@ -1893,9 +1832,7 @@ Trigger.prototype.DariusFlees = function(data)
 			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
 		}
 
-
 	}
-
 
 	cmpTrigger.RegisterTrigger("OnInterval", "IdleUnitCheck", {
 		"enabled": true,
@@ -1909,8 +1846,6 @@ Trigger.prototype.DariusFlees = function(data)
 		"interval": 20 * 1000,
 	});
 
-
-
 	// Activate all possible triggers
 	const data = { "enabled": true };
 	cmpTrigger.RegisterTrigger("OnOwnershipChanged", "OwnershipChangedAction", data);
@@ -1918,7 +1853,5 @@ Trigger.prototype.DariusFlees = function(data)
 	cmpTrigger.RegisterTrigger("OnPlayerCommand", "PlayerCommandAction", data);
 
 	/* cmpTrigger.DoAfterDelay(300 * 1000,"SpawnAlliedInvasionAttack",null);*/
-
-
 
 }

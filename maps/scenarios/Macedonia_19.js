@@ -4,7 +4,6 @@ warn("loading the triggers file");
 // Trigger listeners //
 // /////////////////////
 
-
 var unitTargetClass = "Unit+!Ship";
 var siegeTargetClass = "Structure";
 
@@ -14,15 +13,12 @@ var triggerPointCav = "C";
 var triggerPointEle = "E";
 var triggerPointSiege = "A";
 
-
-
 var unitFormations = [
 	"special/formations/box",
 	"special/formations/battle_line",
 	"special/formations/line_closed",
 	"special/formations/column_closed"
 ];
-
 
 var disabledTemplates = (civ) => [
 	// Economic structures
@@ -73,7 +69,6 @@ var disabledTemplates = (civ) => [
 	"structures/cart/embassy_iberian"
 ];
 
-
 Trigger.prototype.ShowText = function(text, option_a, option_b)
 {
 	var cmpGUIInterface = Engine.QueryInterface(SYSTEM_ENTITY, IID_GuiInterface);
@@ -113,7 +108,6 @@ Trigger.prototype.ShowText = function(text, option_a, option_b)
 
 };
 
-
 Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, target_class)
 {
 	let target = this.FindClosestTarget(attacker, target_player, target_class);
@@ -122,12 +116,10 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 		target = this.FindClosestTarget(attacker, target_player, siegeTargetClass);
 	}
 
-
 	if (target)
 	{
 		// get target position
 		var cmpTargetPosition = Engine.QueryInterface(target, IID_Position).GetPosition2D();
-
 
 		const cmpUnitAI = Engine.QueryInterface(attacker, IID_UnitAI);
 		cmpUnitAI.SwitchToStance("violent");
@@ -135,7 +127,6 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	}
 	else // find a structure
 	{
-
 
 		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
@@ -281,8 +272,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		}
 	}
 
-
-
 };
 
 Trigger.prototype.PlayerCommandAction = function(data)
@@ -290,8 +279,6 @@ Trigger.prototype.PlayerCommandAction = function(data)
 	// warn("The OnPlayerCommand event happened with the following data:");
 	// warn(uneval(data));
 };
-
-
 
 // garison AI entities with archers
 Trigger.prototype.GarrisonEntities = function(data)
@@ -363,7 +350,6 @@ Trigger.prototype.GarrisonEntities = function(data)
 	}
 };
 
-
 Trigger.prototype.IdleUnitCheck = function(data)
 {
 	this.idleCheckCounter += 1;
@@ -374,7 +360,6 @@ Trigger.prototype.IdleUnitCheck = function(data)
 	{
 		this.DoAfterDelay(5 * 1000, "StartNextAttack", null);
 	}
-
 
 	for (const p of [2, 3])
 	{
@@ -403,7 +388,6 @@ Trigger.prototype.IdleUnitCheck = function(data)
 	}
 };
 
-
 Trigger.prototype.RandomTemplatePers = function(data)
 {
 	const r = Math.random();
@@ -415,7 +399,6 @@ Trigger.prototype.RandomTemplatePers = function(data)
 	return pickRandom(this.pers_ele_templates);
 };
 
-
 Trigger.prototype.RandomTemplateMace = function(data)
 {
 	const r = Math.random();
@@ -426,8 +409,6 @@ Trigger.prototype.RandomTemplateMace = function(data)
 		return pickRandom(this.mace_cav_templates);
 	return pickRandom(this.mace_siege_templates);
 };
-
-
 
 Trigger.prototype.StartNextAttack = function(data)
 {
@@ -518,7 +499,6 @@ Trigger.prototype.StartNextAttack = function(data)
 		this.WalkAndFightClosestTarget(units_i[0], 1, siegeTargetClass);
 	}
 
-
 	// increment variables
 	this.attack_level += 20;
 	this.attack_index += 1;
@@ -532,8 +512,6 @@ Trigger.prototype.StartNextAttack = function(data)
 	if (this.attack_index < 3)
 		this.DoAfterDelay(300 * 1000, "StartNextAttack", null);
 };
-
-
 
 Trigger.prototype.ClusterUnits = function(units, num_clusters)
 {
@@ -586,7 +564,6 @@ Trigger.prototype.ClusterUnits = function(units, num_clusters)
 	return clusters;
 };
 
-
 Trigger.prototype.InitGaiaClusters = function(data)
 {
 	// get all gaia soldiers
@@ -596,7 +573,6 @@ Trigger.prototype.InitGaiaClusters = function(data)
 
 	// cluster them
 	const num_clusters = 2;
-
 
 	const clusters = this.ClusterUnits(soldiers, num_clusters);
 	// warn(uneval(clusters));
@@ -626,7 +602,6 @@ Trigger.prototype.InitGaiaClusters = function(data)
 	// cluster gaia units
 	cmpTrigger.DoAfterDelay(1 * 1000, "InitGaiaClusters", null);
 
-
 	cmpTrigger.pers_inf_templates = ["units/pers/arstibara", "units/pers/champion_infantry", "units/pers/infantry_archer_a", "units/pers/infantry_javelineer_a", "units/pers/infantry_spearman_a", "units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher"];
 
 	cmpTrigger.pers_cav_templates = ["units/pers/cavalry_archer_a", "units/pers/cavalry_javelineer_a", "units/pers/cavalry_spearman_a", "units/pers/cavalry_axeman_a", "units/pers/champion_cavalry", "units/pers/champion_cavalry_archer"];
@@ -649,7 +624,6 @@ Trigger.prototype.InitGaiaClusters = function(data)
 
 	cmpTrigger.idleCheckCounter = 0;
 
-
 	for (const p of [1, 2, 3])
 	{
 		const cmpPlayer = QueryPlayerIDInterface(p);
@@ -663,7 +637,6 @@ Trigger.prototype.InitGaiaClusters = function(data)
 			cmpPlayer.SetDisabledTemplates(disTemplates);
 
 		const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
-
 
 		cmpTechnologyManager.ResearchTechnology("phase_town_generic");
 		cmpTechnologyManager.ResearchTechnology("phase_city_generic");

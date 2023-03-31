@@ -21,7 +21,6 @@ Trigger.prototype.PatrolOrderList = function(units, p, patrolTargets)
 	if (units.length <= 0)
 		return;
 
-
 	for (const patrolTarget of patrolTargets)
 	{
 		const targetPos = TriggerHelper.GetEntityPosition2D(patrolTarget);
@@ -38,7 +37,6 @@ Trigger.prototype.PatrolOrderList = function(units, p, patrolTargets)
 		});
 	}
 };
-
 
 Trigger.prototype.FindClosestTarget = function(attacker, target_player, target_class)
 {
@@ -80,9 +78,6 @@ Trigger.prototype.FindClosestTarget = function(attacker, target_player, target_c
 	return closestTarget;
 };
 
-
-
-
 // every function just logs when it gets fired, and shows the data
 Trigger.prototype.StructureBuiltAction = function(data)
 {
@@ -120,7 +115,6 @@ Trigger.prototype.ResearchQueuedAction = function(data)
 	// warn(uneval(data));
 };
 
-
 /*
  * TODO: add some spawn attacks the first time a gate or wall is destroyed
  *
@@ -153,8 +147,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 					const trader = TriggerHelper.SpawnUnits(pickRandom(ccs), "units/mace/support_trader", 1, 1);
 
-
-
 					const m1 = markets[0];
 					const m2 = markets[markets.length - 1];
 
@@ -162,7 +154,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 					cmpUnitAI.UpdateWorkOrders("Trade");
 					cmpUnitAI.SetupTradeRoute(m1, m2, null, true);
-
 
 				}
 			}
@@ -186,7 +177,6 @@ Trigger.prototype.PlayerCommandAction = function(data)
 	// warn("The OnPlayerCommand event happened with the following data:");
 	// warn(uneval(data));
 };
-
 
 Trigger.prototype.IntervalSpawnGuards = function(data)
 {
@@ -219,7 +209,6 @@ Trigger.prototype.IntervalSpawnGuards = function(data)
 				}
 			}
 		}
-
 
 		// warn("found "+ soldiers.length + " soldiers");
 
@@ -263,8 +252,6 @@ Trigger.prototype.IntervalSpawnGuards = function(data)
 	this.DoAfterDelay(30 * 1000, "IntervalSpawnGuards", null);
 };
 
-
-
 Trigger.prototype.SpawnAndStartCavalryAttack = function()
 {
 	const p = 3;
@@ -275,9 +262,7 @@ Trigger.prototype.SpawnAndStartCavalryAttack = function()
 		return;
 	}
 
-
 	this.gaul_cavalry_types = ["units/gaul/cavalry_swordsman_e", "units/gaul/cavalry_javelineer_e", "units/brit/war_dog", "units/gaul/champion_cavalry", "units/brit/champion_chariot"];
-
 
 	// get list of barracks
 	let sites = [];
@@ -329,8 +314,6 @@ Trigger.prototype.SpawnAndStartCavalryAttack = function()
 	}
 };
 
-
-
 Trigger.prototype.IntervalActionTraders = function(data)
 {
 
@@ -376,7 +359,6 @@ Trigger.prototype.IntervalActionTraders = function(data)
 	}
 };
 
-
 Trigger.prototype.IntervalAction = function(data)
 {
 
@@ -394,7 +376,6 @@ Trigger.prototype.IntervalCrannogSpawnAction = function(data)
 	}
 };
 
-
 // garison AI entities with archers
 Trigger.prototype.GarrisonEntities = function(data)
 {
@@ -406,7 +387,6 @@ Trigger.prototype.GarrisonEntities = function(data)
 
 		// 5 person towers
 		const towers = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "StoneTower").filter(TriggerHelper.IsInWorld);
-
 
 		for (const c of towers)
 		{
@@ -421,9 +401,6 @@ Trigger.prototype.GarrisonEntities = function(data)
 		}
 	}
 };
-
-
-
 
 {
 	const cmpTrigger = Engine.QueryInterface(SYSTEM_ENTITY, IID_Trigger);

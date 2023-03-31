@@ -210,7 +210,6 @@ KMeans.prototype.assignClusterToDataPoints = function()
 	return assignments;
 };
 
-
 /**
  * moveMeans
  * @desc Update the positions of the the cluster centroids (means) to the average positions

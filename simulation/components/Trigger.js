@@ -360,7 +360,6 @@ Trigger.prototype.CallTrigger = function(event, name, eventData, evenIfDisabled 
 	});
 };
 
-
 /**
  * Called by the trigger listeners to execute the actual action. Including sanity checks.
  * Intended for internal use, prefer CallEvent or CallTrigger.

@@ -4,10 +4,8 @@ warn("loading the triggers file");
 // Trigger listeners //
 // /////////////////////
 
-
 var unitTargetClass = "Unit+!Ship";
 var siegeTargetClass = "Structure";
-
 
 var triggerPointPatrolA = "A";
 var triggerPointPatrolB = "B";
@@ -16,15 +14,12 @@ var triggerPointPatrolMountainMiddle = "J";
 var triggerPointPatrolMountainEast = "I";
 var triggerPointRaid = "G";
 
-
-
 var unitFormations = [
 	"special/formations/box",
 	"special/formations/battle_line",
 	"special/formations/line_closed",
 	"special/formations/column_closed"
 ];
-
 
 var disabledTemplates = (civ) => [
 	// Economic structures
@@ -54,8 +49,6 @@ var disabledTemplates = (civ) => [
 	"units/" + civ + "/support_female_citizen"
 ];
 
-
-
 Trigger.prototype.WalkAndGatherClosestTarget = function(attacker, target_player, target_class)
 {
 	let target = this.FindClosestTarget(attacker, target_player, target_class);
@@ -64,12 +57,10 @@ Trigger.prototype.WalkAndGatherClosestTarget = function(attacker, target_player,
 		target = this.FindClosestTarget(attacker, target_player, siegeTargetClass);
 	}
 
-
 	if (target)
 	{
 		// get target position
 		var cmpTargetPosition = Engine.QueryInterface(target, IID_Position).GetPosition2D();
-
 
 		const cmpUnitAI = Engine.QueryInterface(attacker, IID_UnitAI);
 		cmpUnitAI.PerformGather(target, true, true);
@@ -77,12 +68,10 @@ Trigger.prototype.WalkAndGatherClosestTarget = function(attacker, target_player,
 	else // find a structure
 	{
 
-
 		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
-
 
 Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, target_class)
 {
@@ -92,12 +81,10 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 		target = this.FindClosestTarget(attacker, target_player, siegeTargetClass);
 	}
 
-
 	if (target)
 	{
 		// get target position
 		var cmpTargetPosition = Engine.QueryInterface(target, IID_Position).GetPosition2D();
-
 
 		const cmpUnitAI = Engine.QueryInterface(attacker, IID_UnitAI);
 		cmpUnitAI.SwitchToStance("violent");
@@ -105,7 +92,6 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	}
 	else // find a structure
 	{
-
 
 		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
@@ -175,8 +161,6 @@ Trigger.prototype.ResearchQueuedAction = function(data)
 	// warn("The OnResearchQueued event happened with the following data:");
 	// warn(uneval(data));
 };
-
-
 
 Trigger.prototype.OwnershipChangedAction = function(data)
 {
@@ -259,9 +243,6 @@ Trigger.prototype.PlayerCommandAction = function(data)
 	// warn(uneval(data));
 };
 
-
-
-
 // garison AI entities with archers
 Trigger.prototype.GarrisonEntities = function(data)
 {
@@ -318,9 +299,6 @@ Trigger.prototype.GarrisonEntities = function(data)
 	}
 };
 
-
-
-
 Trigger.prototype.HorseCheck = function(data)
 {
 	for (const p of [0])
@@ -367,7 +345,6 @@ Trigger.prototype.StructureDecayCheck = function(data)
 		const structs = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Structure").filter(TriggerHelper.IsInWorld);
 		// warn("checking decay");
 
-
 		for (const s of structs)
 		{
 			var cmpCapt = Engine.QueryInterface(s, IID_Capturable);
@@ -392,8 +369,6 @@ Trigger.prototype.StructureDecayCheck = function(data)
 
 };
 
-
-
 Trigger.prototype.IdleUnitCheck = function(data)
 {
 	this.idleCheckCounter += 1;
@@ -408,7 +383,6 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		this.RegisterTrigger("OnOwnershipChanged", "OwnershipChangedAction", data);
 		// warn("started ownership changed trigger");
 	}
-
 
 	// find idle hunters
 	for (const p of [4, 5])
@@ -487,7 +461,6 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			}
 		}
 
-
 		/* let units_siege = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p),"Siege").filter(TriggerHelper.IsInWorld);
 		let units_ele = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p),"Elephant").filter(TriggerHelper.IsInWorld);
 
@@ -524,12 +497,7 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		}
 	}
 
-
-
 };
-
-
-
 
 Trigger.prototype.PatrolOrderList = function(units, p, patrolTargets)
 {
@@ -562,7 +530,6 @@ Trigger.prototype.PatrolOrder = function(units, p, A, B)
 	if (units.length <= 0)
 		return;
 
-
 	// list of patrol targets
 	const patrolTargets = [A, B];
 
@@ -582,7 +549,6 @@ Trigger.prototype.PatrolOrder = function(units, p, A, B)
 		});
 	}
 };
-
 
 Trigger.prototype.SpawnEastMountainPatrol = function(data)
 {
@@ -605,7 +571,6 @@ Trigger.prototype.SpawnEastMountainPatrol = function(data)
 
 	// spawn a single template
 	const inf_units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Infantry").filter(TriggerHelper.IsInWorld);
-
 
 	if (inf_units.length < this.maxSacaInf)
 	{
@@ -648,7 +613,6 @@ Trigger.prototype.SpawnMiddleMountainPatrol = function(data)
 	// spawn a single template
 	const inf_units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Infantry").filter(TriggerHelper.IsInWorld);
 
-
 	if (inf_units.length < this.maxSacaInf)
 	{
 
@@ -690,7 +654,6 @@ Trigger.prototype.SpawnWestMountainPatrol = function(data)
 	// spawn a single template
 	const inf_units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Infantry").filter(TriggerHelper.IsInWorld);
 
-
 	if (inf_units.length < this.maxSacaInf)
 	{
 
@@ -709,7 +672,6 @@ Trigger.prototype.SpawnWestMountainPatrol = function(data)
 	this.DoAfterDelay(next_spawn_seconds * 1000, "SpawnWestMountainPatrol", null);
 
 };
-
 
 Trigger.prototype.pickRandomK = function(inputs, K)
 {
@@ -779,7 +741,6 @@ Trigger.prototype.SpawnMaPatrol = function(data)
 
 };
 
-
 Trigger.prototype.SpawnApaPatrol = function(data)
 {
 	const p = 5;
@@ -826,7 +787,6 @@ Trigger.prototype.SpawnApaPatrol = function(data)
 
 };
 
-
 Trigger.prototype.SpawnCavalryRaid = function(data)
 {
 	// size of raid is determined by number of structures owned by 4 and 5
@@ -845,7 +805,6 @@ Trigger.prototype.SpawnCavalryRaid = function(data)
 	this.DoAfterDelay(360 * 1000, "SpawnCavalryRaid", null);
 
 };
-
 
 Trigger.prototype.SpawnSiegeAttackSquad = function(data)
 {
@@ -1007,8 +966,6 @@ Trigger.prototype.CavalryAttack = function(data)
 	});
 };
 
-
-
 Trigger.prototype.ShowText = function(text, option_a, option_b)
 {
 	var cmpGUIInterface = Engine.QueryInterface(SYSTEM_ENTITY, IID_GuiInterface);
@@ -1048,7 +1005,6 @@ Trigger.prototype.ShowText = function(text, option_a, option_b)
 
 };
 
-
 Trigger.prototype.DiplomacyStatusCheck = function(data)
 {
 	if (this.warStarted == false)
@@ -1075,7 +1031,6 @@ Trigger.prototype.DiplomacyStatusCheck = function(data)
 			this.DoAfterDelay(6 * 1000, "SpawnMiddleMountainPatrol", null);
 			this.DoAfterDelay(7 * 1000, "SpawnEastMountainPatrol", null);
 
-
 			// warn("WAR STARTED");
 			this.ShowText("Our scouts have some disturbing news to report! The Sogdians and the Sacae are now in open rebellion against us! We must destroy the Sogdian settlement and all posts and tents set up by the Ma and Apa Saka!", "I knew it!", "OK");
 
@@ -1091,7 +1046,6 @@ Trigger.prototype.DiplomacyStatusCheck = function(data)
 	}
 
 };
-
 
 Trigger.prototype.ResearchTechs = function(data)
 {
@@ -1116,7 +1070,6 @@ Trigger.prototype.ResearchTechs = function(data)
 			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
 			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
 
-
 		}
 
 	}
@@ -1126,7 +1079,6 @@ Trigger.prototype.ResearchTechs = function(data)
 
 };
 
-
 Trigger.prototype.VictoryTextFn = function(n)
 {
 	return markForPluralTranslation(
@@ -1134,7 +1086,6 @@ Trigger.prototype.VictoryTextFn = function(n)
 		"%(players)s and %(lastPlayer)s have won (game mode).",
 		n);
 };
-
 
 // attack against captured gaia fortress
 Trigger.prototype.VictoryCheck = function(data)
@@ -1156,11 +1107,8 @@ Trigger.prototype.VictoryCheck = function(data)
 	}
 };
 
-
-
 {
 	const cmpTrigger = Engine.QueryInterface(SYSTEM_ENTITY, IID_Trigger);
-
 
 	// some templates
 
@@ -1181,14 +1129,11 @@ Trigger.prototype.VictoryCheck = function(data)
 	// start techs
 	// cmpTrigger.DoAfterDelay(1 * 1000,"ResearchTechs",null);
 
-
 	// debug - this only happens once they become hostile
 	// cmpTrigger.DoAfterDelay(5 * 1000,"SpawnCavalryRaid",null);
 
-
 	// check whether to start war
 	cmpTrigger.DoAfterDelay(30 * 1000, "DiplomacyStatusCheck", null);
-
 
 	// set diplomacy
 	// everyone is neutral towards 3 and 1
@@ -1224,7 +1169,6 @@ Trigger.prototype.VictoryCheck = function(data)
 
 	const cmpModifiersManager = Engine.QueryInterface(SYSTEM_ENTITY, IID_ModifiersManager);
 
-
 	for (const p of [1, 2, 3, 4, 5])
 	{
 		cmpPlayer = QueryPlayerIDInterface(p);
@@ -1245,7 +1189,6 @@ Trigger.prototype.VictoryCheck = function(data)
 
 		cmpPlayer.SetDisabledTemplates(disTemplates);
 		// warn("Disabling templates for player "+uneval(p));
-
 
 		const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 
@@ -1285,7 +1228,6 @@ Trigger.prototype.VictoryCheck = function(data)
 		}
 	}
 
-
 	cmpTrigger.RegisterTrigger("OnInterval", "StructureDecayCheck", {
 		"enabled": true,
 		"delay": 5 * 1000,
@@ -1311,15 +1253,11 @@ Trigger.prototype.VictoryCheck = function(data)
 		"interval": 15 * 1000,
 	});
 
-
-
 	// Activate all possible triggers
 	const data = { "enabled": true };
 	// cmpTrigger.RegisterTrigger("OnStructureBuilt", "StructureBuiltAction", data);
 	// cmpTrigger.RegisterTrigger("OnOwnershipChanged", "OwnershipChangedAction", data);
 
 	/* cmpTrigger.DoAfterDelay(300 * 1000,"SpawnAlliedInvasionAttack",null);*/
-
-
 
 }

@@ -4,16 +4,12 @@ warn("loading the triggers file");
 // Trigger listeners //
 // /////////////////////
 
-
 var unitTargetClass = "Unit+!Ship";
 var siegeTargetClass = "Structure";
-
 
 var triggerPointShipInvasion = "B";
 var triggerPointShipSpawn = "A";
 var triggerPointCavalryAttack = "K";
-
-
 
 var unitFormations = [
 	"special/formations/box",
@@ -21,7 +17,6 @@ var unitFormations = [
 	"special/formations/line_closed",
 	"special/formations/column_closed"
 ];
-
 
 var disabledTemplates = (civ) => [
 	// Economic structures
@@ -72,7 +67,6 @@ var disabledTemplates = (civ) => [
 	"structures/cart/embassy_iberian"
 ];
 
-
 var textSiegeChoice1 = "Three ships with siege equipment are about to sail from Tyre. Choose the cargo of the first ship!";
 var textSiegeChoice2 = "Three ships with siege equipment are about to sail from Tyre. Choose the cargo of the second ship!";
 var textSiegeChoice3 = "Three ships with siege equipment are about to sail from Tyre. Choose the cargo of the third ship!";
@@ -121,18 +115,15 @@ Trigger.prototype.Dialog1 = function(data)
 	this.ShowText(textSiegeChoice1, "4 Ballistas", "2 Siege Towers");
 };
 
-
 Trigger.prototype.Dialog2 = function(data)
 {
 	this.ShowText(textSiegeChoice2, "3 Rams", "3 Catapults");
 };
 
-
 Trigger.prototype.Dialog3 = function(data)
 {
 	this.ShowText(textSiegeChoice3, "2 Catapults", "4 Ballistas");
 };
-
 
 Trigger.prototype.SpawnSiegeEquipment = function(data)
 {
@@ -192,7 +183,6 @@ Trigger.prototype.SpawnSiegeEquipment = function(data)
 
 	this.ShowText("Our siege equipment has arrived!", "Great!", "Awesome!");
 
-
 	const cmpPlayer = QueryPlayerIDInterface(1);
 	const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 	cmpTechnologyManager.ResearchTechnology("silvershields");
@@ -210,12 +200,10 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 		target = this.FindClosestTarget(attacker, target_player, siegeTargetClass);
 	}
 
-
 	if (target)
 	{
 		// get target position
 		var cmpTargetPosition = Engine.QueryInterface(target, IID_Position).GetPosition2D();
-
 
 		const cmpUnitAI = Engine.QueryInterface(attacker, IID_UnitAI);
 		cmpUnitAI.SwitchToStance("violent");
@@ -223,7 +211,6 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	}
 	else // find a structure
 	{
-
 
 		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
@@ -293,7 +280,6 @@ Trigger.prototype.ResearchQueuedAction = function(data)
 	// warn(uneval(data));
 };
 
-
 Trigger.prototype.VictoryTextFn = function(n)
 {
 	return markForPluralTranslation(
@@ -321,7 +307,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 Trigger.prototype.PlayerCommandAction = function(data)
 {
 
-
 	if (data.cmd.type == "dialog-answer" && this.currentDialog < 3)
 	{
 		warn("The OnPlayerCommand event happened with the following data:");
@@ -336,8 +321,6 @@ Trigger.prototype.PlayerCommandAction = function(data)
 		warn(uneval(this.dialogAnswers));
 	}
 };
-
-
 
 Trigger.prototype.InvasionRangeAction = function(data)
 {
@@ -395,7 +378,6 @@ Trigger.prototype.InvasionRangeAction = function(data)
 
 				warn("Next invasion in " + uneval(this.carthageInvasionAttackInterval));
 				this.DoAfterDelay(this.carthageInvasionAttackInterval * 1000, "SpawnNavalInvasionAttack", null);
-
 
 			}
 		}
@@ -522,7 +504,6 @@ Trigger.prototype.GarrisonEntities = function(data)
 	}
 };
 
-
 Trigger.prototype.IdleUnitCheck = function(data)
 {
 	for (const p of [4, 5])
@@ -551,19 +532,13 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		}
 	}
 
-
-
 };
-
-
-
 
 Trigger.prototype.PatrolOrder = function(units, p, site_a, site_b)
 {
 
 	if (units.length <= 0)
 		return;
-
 
 	// list of patrol targets
 	const patrolTargets = [site_a, site_b];
@@ -584,7 +559,6 @@ Trigger.prototype.PatrolOrder = function(units, p, site_a, site_b)
 		});
 	}
 };
-
 
 // garison AI entities with archers
 Trigger.prototype.SpawnIntervalPatrol = function(data)
@@ -609,7 +583,6 @@ Trigger.prototype.SpawnIntervalPatrol = function(data)
 		const village = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Village").filter(TriggerHelper.IsInWorld);
 
 		const gates = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Gate").filter(TriggerHelper.IsInWorld);
-
 
 		const targets_A = ccs.concat(forts).concat(market).concat(village).concat(gates);
 
@@ -640,7 +613,6 @@ Trigger.prototype.SpawnIntervalPatrol = function(data)
 
 			// set formation
 			TriggerHelper.SetUnitFormation(p, units, pickRandom(unitFormations));
-
 
 			// send to patrol
 			this.PatrolOrder(units, p, pickRandom(targets_A), site_j);
@@ -721,7 +693,6 @@ Trigger.prototype.SpawnInitialPatrol = function(data)
 	// which player
 	const p = 2;
 
-
 	// targets A
 	const ccs = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "CivilCentre").filter(TriggerHelper.IsInWorld);
 
@@ -732,7 +703,6 @@ Trigger.prototype.SpawnInitialPatrol = function(data)
 	const village = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Village").filter(TriggerHelper.IsInWorld);
 
 	const gates = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Gate").filter(TriggerHelper.IsInWorld);
-
 
 	const targets_A = ccs.concat(forts).concat(market).concat(village).concat(gates);
 
@@ -763,7 +733,6 @@ Trigger.prototype.SpawnInitialPatrol = function(data)
 
 		// set formation
 		TriggerHelper.SetUnitFormation(p, units, pickRandom(unitFormations));
-
 
 		// send to patrol
 		this.PatrolOrder(units, p, pickRandom(targets_A), site_j);
@@ -800,12 +769,10 @@ Trigger.prototype.CarthageShipAttack = function(data)
 
 	// get possible trade ship targets -- TODO
 
-
 	// full list of targets
 	const targets = dock_targets;
 
 	// TODO: add any idle ships to attackers
-
 
 	// order attack
 	if (targets.length > 0)
@@ -821,7 +788,6 @@ Trigger.prototype.CarthageShipAttack = function(data)
 
 	this.DoAfterDelay(this.cartShipAttackInterval * 1000, "CarthageShipAttack", null);
 };
-
 
 Trigger.prototype.ToggleTowerOwnershipA = function(data)
 {
@@ -903,7 +869,6 @@ Trigger.prototype.SpawnCavalryAttack = function(data)
 	// set formation
 	TriggerHelper.SetUnitFormation(p, attackers, pickRandom(unitFormations));
 
-
 	const target_pos = TriggerHelper.GetEntityPosition2D(target);
 
 	ProcessCommand(p, {
@@ -953,7 +918,6 @@ Trigger.prototype.CarthageAttack = function(data)
 		}
 	}
 
-
 	// set formation
 	TriggerHelper.SetUnitFormation(p, attackers, pickRandom(unitFormations));
 
@@ -980,7 +944,6 @@ Trigger.prototype.CarthageAttack = function(data)
 	this.DoAfterDelay(next_attack_interval_sec * 1000, "CarthageAttack", null);
 };
 
-
 Trigger.prototype.CheckForCC = function(data)
 {
 	// check if player 1 has built structure
@@ -998,14 +961,12 @@ Trigger.prototype.CheckForCC = function(data)
 		// start naval invasion attacks
 		this.DoAfterDelay(360 * 1000, "SpawnNavalInvasionAttack", null);
 
-
 	}
 	else
 	{
 		this.DoAfterDelay(30 * 1000, "CheckForCC", null);
 	}
 };
-
 
 Trigger.prototype.StructureDecayCheck = function(data)
 {
@@ -1043,12 +1004,10 @@ Trigger.prototype.StructureDecayCheck = function(data)
 	cmpTrigger.RegisterTrigger("OnResearchFinished", "ResearchFinishedAction", data);
 	cmpTrigger.RegisterTrigger("OnResearchQueued", "ResearchQueuedAction", data);*/
 
-
 	const data = { "enabled": true };
 	cmpTrigger.RegisterTrigger("OnOwnershipChanged", "OwnershipChangedAction", data);
 
 	cmpTrigger.RegisterTrigger("OnPlayerCommand", "PlayerCommandAction", data);
-
 
 	// carthage attacker types
 	cmpTrigger.cartAttackerTypes = ["units/cart/champion_infantry", "units/cart/champion_pikeman", "units/cart/infantry_archer_a", "units/cart/champion_cavalry", "units/cart/infantry_slinger_iber_a"];
@@ -1072,11 +1031,9 @@ Trigger.prototype.StructureDecayCheck = function(data)
 	cmpTrigger.DoAfterDelay(1 * 1000, "ToggleTowerOwnershipA", null);
 	cmpTrigger.DoAfterDelay(1 * 1050, "ToggleTowerOwnershipB", null);
 
-
 	// spawn patrols of forts
 	cmpTrigger.DoAfterDelay(7 * 1000, "SpawnInitialPatrol", null);
 	cmpTrigger.DoAfterDelay(10 * 1000, "SpawnIntervalPatrol", null);
-
 
 	// small persistent attacks
 	cmpTrigger.DoAfterDelay(30 * 1000, "SpawnFanaticSquad", null);
@@ -1091,15 +1048,12 @@ Trigger.prototype.StructureDecayCheck = function(data)
 	cmpTrigger.DoAfterDelay(cmpTrigger.cavalryAttackInerval * 1000, "SpawnCavalryAttack", null);
 	// cmpTrigger.DoAfterDelay(10 * 1000,"SpawnCavalryAttack",null);
 
-
-
 	// invasion sea attack
 	// cmpTrigger.DoAfterDelay(10 * 1000,"SpawnNavalInvasionAttack",null);
 
 	for (const p of [1, 2, 3, 4])
 	{
 		const cmpPlayer = QueryPlayerIDInterface(p);
-
 
 		// disable troop production
 		let disTemplates = disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv());
@@ -1144,19 +1098,16 @@ Trigger.prototype.StructureDecayCheck = function(data)
 		}
 	}
 
-
 	cmpTrigger.RegisterTrigger("OnInterval", "StructureDecayCheck", {
 		"enabled": true,
 		"delay": 15 * 1000,
 		"interval": 15 * 1000,
 	});
 
-
 	cmpTrigger.RegisterTrigger("OnInterval", "IdleUnitCheck", {
 		"enabled": true,
 		"delay": 30 * 1000,
 		"interval": 30 * 1000,
 	});
-
 
 }

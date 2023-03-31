@@ -15,13 +15,10 @@ warn("loading the triggers file");
 var unitTargetClass = "Unit+!Ship";
 var siegeTargetClass = "Structure";
 
-
 var triggerPointNorth = "B";
 var triggerPointSouth = "A";
 var triggerPointArchers = "K";
 var triggerPointGate = "J";
-
-
 
 var unitFormations = [
 	"special/formations/box",
@@ -58,7 +55,6 @@ var disabledTemplates = (civ) => [
 	// villagers
 	"units/" + civ + "/support_female_citizen"
 ];
-
 
 Trigger.prototype.ClusterUnits = function(units, num_clusters)
 {
@@ -119,12 +115,10 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 		target = this.FindClosestTarget(attacker, target_player, siegeTargetClass);
 	}
 
-
 	if (target)
 	{
 		// get target position
 		var cmpTargetPosition = Engine.QueryInterface(target, IID_Position).GetPosition2D();
-
 
 		const cmpUnitAI = Engine.QueryInterface(attacker, IID_UnitAI);
 		cmpUnitAI.SwitchToStance("violent");
@@ -132,7 +126,6 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	}
 	else // find a structure
 	{
-
 
 		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
@@ -201,7 +194,6 @@ Trigger.prototype.ResearchQueuedAction = function(data)
 	// warn("The OnResearchQueued event happened with the following data:");
 	// warn(uneval(data));
 };
-
 
 Trigger.prototype.SpecialAchaeanAssault = function(data)
 {
@@ -286,7 +278,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
 		cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_03");
 
-
 		this.gaiaFortressCaptured = true;
 	}
 	else if (data.entity == 1925 && this.gaiaCampCaptured == false) // gaia camp
@@ -310,7 +301,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
 		cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
 	}
-
 
 	// check if gaia soldier, if so, make his buddies attack
 	if (data.from == 0 && data.to == -1)
@@ -350,7 +340,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			}
 		}
 
-
 		if (data.entity == 1718 || data.entity == 1719 || data.entity == 1720)
 		{
 			// spawn siege
@@ -365,8 +354,6 @@ Trigger.prototype.PlayerCommandAction = function(data)
 	// warn("The OnPlayerCommand event happened with the following data:");
 	// warn(uneval(data));
 };
-
-
 
 Trigger.prototype.InvasionRangeAction = function(data)
 {
@@ -425,7 +412,6 @@ Trigger.prototype.InvasionRangeAction = function(data)
 				// warn("Next invasion in "+uneval(this.carthageInvasionAttackInterval));
 				this.DoAfterDelay(this.carthageInvasionAttackInterval * 1000, "SpawnNavalInvasionAttack", null);
 
-
 			}
 		}
 	}
@@ -461,7 +447,6 @@ Trigger.prototype.checkInvasionAttack = function(data)
 	}
 };
 
-
 // garison AI entities with archers
 Trigger.prototype.GarrisonEntities = function(data)
 {
@@ -476,7 +461,6 @@ Trigger.prototype.GarrisonEntities = function(data)
 			// spawn the garrison inside the tower
 			const size = 1;
 
-
 			const archers_e = TriggerHelper.SpawnUnits(e, "units/pers/infantry_archer_e", size, p);
 
 			for (const a of archers_e)
@@ -485,7 +469,6 @@ Trigger.prototype.GarrisonEntities = function(data)
 				cmpUnitAI.OccupyTurret(e, true, true);
 			}
 		}
-
 
 		// towers
 		const towers_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "StoneTower").filter(TriggerHelper.IsInWorld);
@@ -496,7 +479,6 @@ Trigger.prototype.GarrisonEntities = function(data)
 			let size = 5;
 			if (p == 0)
 				size = 2;
-
 
 			const archers_e = TriggerHelper.SpawnUnits(e, "units/pers/infantry_archer_e", size, p);
 
@@ -525,14 +507,12 @@ Trigger.prototype.GarrisonEntities = function(data)
 		// FORTRESS
 		const forts_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Fortress").filter(TriggerHelper.IsInWorld);
 
-
 		for (const e of forts_p)
 		{
 			// spawn the garrison inside the tower
 			let fort_size = 20;
 			if (p == 0)
 				fort_size = 5;
-
 
 			const archers_e = TriggerHelper.SpawnUnits(e, "units/pers/infantry_archer_e", fort_size, p);
 
@@ -590,7 +570,6 @@ Trigger.prototype.GarrisonEntities = function(data)
 	}
 };
 
-
 Trigger.prototype.IdleUnitCheck = function(data)
 {
 	for (const p of [7])
@@ -620,17 +599,11 @@ Trigger.prototype.IdleUnitCheck = function(data)
 	}
 };
 
-
-
-
-
-
 Trigger.prototype.PatrolOrder = function(units, p, A, B)
 {
 
 	if (units.length <= 0)
 		return;
-
 
 	// list of patrol targets
 	const patrolTargets = [A, B];
@@ -686,15 +659,12 @@ Trigger.prototype.SpawnFortressPatrol = function(data)
 		// set formation
 		TriggerHelper.SetUnitFormation(p, units, pickRandom(unitFormations));
 
-
 		// send to patrol
 		this.PatrolOrder(units, p);
 
 	}
 
 };
-
-
 
 Trigger.prototype.FlipAlliedAssets = function(data)
 {
@@ -716,7 +686,6 @@ Trigger.prototype.FlipAlliedAssets = function(data)
 		cmpOwnership.SetOwner(1);
 	}
 };
-
 
 Trigger.prototype.ShowText = function(text, option_a, option_b)
 {
@@ -873,7 +842,6 @@ Trigger.prototype.SpawnFortressAttackSquad = function(data)
 	});
 };
 
-
 Trigger.prototype.SpawnRearPassAttackSquad = function(data)
 {
 	const attackers = [];
@@ -934,7 +902,6 @@ Trigger.prototype.SpawnPassAttackSquad = function(data)
 	});
 };
 
-
 // attack against captured gaia fortress
 Trigger.prototype.SpawnFortressAttack = function(data)
 {
@@ -950,8 +917,6 @@ Trigger.prototype.SpawnFortressAttack = function(data)
 
 	const ele_templates = TriggerHelper.GetTemplateNamesByClasses("Champion+Elephant+!Hero", "pers", undefined, undefined, true);
 	templates.push(ele_templates[0]);
-
-
 
 	// size of each squad
 	const squad_size = 8;
@@ -973,7 +938,6 @@ Trigger.prototype.SpawnFortressAttack = function(data)
 
 	}
 };
-
 
 Trigger.prototype.VictoryTextFn = function(n)
 {
@@ -1000,7 +964,6 @@ Trigger.prototype.VictoryCheck = function(data)
 		this.DoAfterDelay(20 * 1000, "VictoryCheck", data);
 	}
 };
-
 
 // attack against captured gaia fortress
 Trigger.prototype.SpawnPassAttack = function(data)
@@ -1073,7 +1036,6 @@ Trigger.prototype.SpawnPassAttack = function(data)
 
 	this.DoAfterDelay(60 * 1000, "VictoryCheck", data);
 
-
 	this.passAttackTriggered = true;
 };
 
@@ -1129,7 +1091,6 @@ Trigger.prototype.SpawnAlexnaderAmbush = function(data)
 	});
 };
 
-
 Trigger.prototype.SpawnTraderAttack = function(data)
 {
 	// warn("trader attack");
@@ -1156,7 +1117,6 @@ Trigger.prototype.SpawnTraderAttack = function(data)
 	const target = this.FindClosestTarget(attackers[0], target_player, "Trader");
 
 	const target_pos = TriggerHelper.GetEntityPosition2D(target);
-
 
 	ProcessCommand(p, {
 		"type": "attack-walk",
@@ -1194,19 +1154,16 @@ Trigger.prototype.SpawnAmbush = function(data)
 
 };
 
-
 Trigger.prototype.DropSiteWarning = function(data)
 {
 
 	this.ShowText("The fishermen urge you to return all your good to the dock now -- they'll need to resume operations very soon", "OK", "Will do");
 };
 
-
 Trigger.prototype.DropSiteEnd = function(data)
 {
 
 	this.ShowText("The fishermen have now resumed operations at their dock -- they thank you for your help and hope you gathered enough resources.", "OK", "Will do");
-
 
 	// set team to allies so we can use their dock
 	let cmpPlayer = QueryPlayerIDInterface(1);
@@ -1216,9 +1173,6 @@ Trigger.prototype.DropSiteEnd = function(data)
 	cmpPlayer.SetNeutral(1);
 
 };
-
-
-
 
 Trigger.prototype.RangeActionBanditAttack = function(data)
 {
@@ -1250,7 +1204,6 @@ Trigger.prototype.RangeActionBanditAttack = function(data)
 		this.banditAtttackTriggered = true;
 	}
 };
-
 
 Trigger.prototype.RewardTraders = function(data)
 {
@@ -1286,14 +1239,11 @@ Trigger.prototype.RangeActionTradersDestination = function(data)
 
 			this.RewardTraders();
 
-
 			// warn("give reward for escort service");
 		}
 	}
 
 };
-
-
 
 Trigger.prototype.SendTradersToTarget = function(data)
 {
@@ -1335,7 +1285,6 @@ Trigger.prototype.RangeActionTraders = function(data)
 			this.traders = units_i;
 
 			this.DoAfterDelay(25 * 1000, "SendTradersToTarget", null);
-
 
 			// make them move to target market
 			/* for (let u of units_i)
@@ -1388,11 +1337,7 @@ Trigger.prototype.RangeActionDock = function(data)
 
 	}
 
-
-
-
 };
-
 
 Trigger.prototype.RangeActionTemple = function(data)
 {
@@ -1444,8 +1389,6 @@ Trigger.prototype.RewardTemple = function(data)
 	this.heal_rate_g *= 2;
 };
 
-
-
 Trigger.prototype.RangeActionPassAttack = function(data)
 {
 	if (this.passAttackTriggered == false)
@@ -1465,8 +1408,6 @@ Trigger.prototype.RangeActionPassAttack = function(data)
 	}
 };
 
-
-
 Trigger.prototype.RangeActionFortressAttack = function(data)
 {
 	if (this.fortressAttackTriggered == false && this.gaiaFortressCaptured == true)
@@ -1485,7 +1426,6 @@ Trigger.prototype.RangeActionFortressAttack = function(data)
 
 	}
 };
-
 
 Trigger.prototype.RangeActionAmbush = function(data)
 {
@@ -1513,7 +1453,6 @@ Trigger.prototype.StartMarch = function(data)
 
 	const target = pickRandom(this.GetTriggerPoints(triggerPointGate));
 
-
 	const target_pos = TriggerHelper.GetEntityPosition2D(target);
 
 	ProcessCommand(p, {
@@ -1525,7 +1464,6 @@ Trigger.prototype.StartMarch = function(data)
 	});
 
 };
-
 
 Trigger.prototype.StructureDecayCheck = function(data)
 {
@@ -1539,7 +1477,6 @@ Trigger.prototype.StructureDecayCheck = function(data)
 			if (cmpCapt)
 			{
 				const c_points = cmpCapt.GetCapturePoints();
-
 
 				if (c_points[0] > 0)
 				{
@@ -1587,7 +1524,6 @@ Trigger.prototype.ResearchStartingTech = function(data)
 
 	const cmpModifiersManager = Engine.QueryInterface(SYSTEM_ENTITY, IID_ModifiersManager);
 
-
 	for (const p of [1, 2, 4, 5])
 	{
 
@@ -1624,11 +1560,9 @@ Trigger.prototype.ResearchStartingTech = function(data)
 				"Resistance/Entity/Damage/Crush": [{ "affects": ["Hero"], "add": 10 }],
 			}, cmpPlayer.entity);
 
-
 		}
 	}
 };
-
 
 Trigger.prototype.SetDiplomacy = function(data)
 {
@@ -1660,7 +1594,6 @@ Trigger.prototype.SetDiplomacy = function(data)
 	}
 };
 
-
 Trigger.prototype.InitGaiaClusters = function(data)
 {
 	// get all gaia soldiers
@@ -1671,7 +1604,6 @@ Trigger.prototype.InitGaiaClusters = function(data)
 	// cluster them
 	const num_clusters = 6;
 
-
 	const clusters = this.ClusterUnits(soldiers, num_clusters);
 	// warn(uneval(clusters));
 
@@ -1679,7 +1611,6 @@ Trigger.prototype.InitGaiaClusters = function(data)
 	this.gaiaClusters = clusters;
 
 };
-
 
 {
 	const cmpTrigger = Engine.QueryInterface(SYSTEM_ENTITY, IID_Trigger);
@@ -1722,7 +1653,6 @@ Trigger.prototype.InitGaiaClusters = function(data)
 	// how many additional troops to spawn at various times as a function of current population
 	cmpTrigger.ambushAssassinsRatio = 0.2;
 	cmpTrigger.banditRatio = 0.2;
-
 
 	// brit catafalque -- greater vision and movement for infantry, greater range for skirmishers
 	// cart catagalque -- + 1 armoer and attack for melee cavalry
@@ -1767,13 +1697,9 @@ Trigger.prototype.InitGaiaClusters = function(data)
 	// init gaia clusters
 	cmpTrigger.DoAfterDelay(1 * 1000, "InitGaiaClusters", null);
 
-
 	// debug
 	// cmpTrigger.DoAfterDelay(5 * 1000,"RewardTraders",null);
 	// cmpTrigger.DoAfterDelay(10 * 1000,"SpawnFortressAttack",null);
-
-
-
 
 	for (const p of [1, 2, 3, 4, 5])
 	{
@@ -1794,7 +1720,6 @@ Trigger.prototype.InitGaiaClusters = function(data)
 
 		cmpPlayer.SetDisabledTemplates(disTemplates);
 		// warn("Disabling templates for player "+uneval(p));
-
 
 		const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 
@@ -1836,7 +1761,6 @@ Trigger.prototype.InitGaiaClusters = function(data)
 		"requiredComponent": IID_UnitAI, // only count units in range
 		"enabled": true
 	});
-
 
 	cmpTrigger.RegisterTrigger("OnRange", "RangeActionTemple", {
 		"entities": cmpTrigger.GetTriggerPoints("I"), // central points to calculate the range circles
@@ -1917,7 +1841,5 @@ Trigger.prototype.InitGaiaClusters = function(data)
 	cmpTrigger.RegisterTrigger("OnOwnershipChanged", "OwnershipChangedAction", data);
 
 	/* cmpTrigger.DoAfterDelay(300 * 1000,"SpawnAlliedInvasionAttack",null);*/
-
-
 
 }

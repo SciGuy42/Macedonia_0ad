@@ -6,7 +6,6 @@ warn("loading the triggers file");
 
 var triggerPointShipUnload = "B";
 
-
 // every function just logs when it gets fired, and shows the data
 Trigger.prototype.StructureBuiltAction = function(data)
 {
@@ -69,7 +68,6 @@ Trigger.prototype.CheckVictoryCondition = function(data)
 };
 
 // check victory
-
 
 Trigger.prototype.OwnershipChangedAction = function(data)
 {
@@ -164,7 +162,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		}
 		// cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
 
-
 	}
 	else if (data.from == 4)
 	{
@@ -198,7 +195,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 		// check victory condition
 
-
 	}
 };
 
@@ -207,7 +203,6 @@ Trigger.prototype.PlayerCommandAction = function(data)
 	// warn("The OnPlayerCommand event happened with the following data:");
 	// warn(uneval(data));
 };
-
 
 Trigger.prototype.IntervalActionCavAttack = function(data)
 {
@@ -218,8 +213,6 @@ Trigger.prototype.IntervalAction = function(data)
 {
 
 };
-
-
 
 Trigger.prototype.InvasionRangeAction = function(data)
 {
@@ -247,7 +240,6 @@ Trigger.prototype.InvasionRangeAction = function(data)
 		}
 	}
 };
-
 
 Trigger.prototype.RangeAction = function(data)
 {
@@ -319,7 +311,6 @@ Trigger.prototype.spawnShipEscort = function(data)
 
 	const warships = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(random_enemy), "Warship").filter(TriggerHelper.IsInWorld);
 
-
 	if (traders_e.length > 0 && docks.length > 0 && warships.length < this.maxNumEscorts)
 	{
 		const spawn_site = pickRandom(docks);
@@ -382,10 +373,6 @@ Trigger.prototype.spawnCatapultShipAttack = function(data)
 
 };
 
-
-
-
-
 // spawn random attack
 Trigger.prototype.spawnInvasionAttack = function(data)
 {
@@ -409,7 +396,6 @@ Trigger.prototype.spawnInvasionAttack = function(data)
 	TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/athen/champion_ranged", 10, random_enemy);
 	TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], "units/theb_sacred_band", 10, random_enemy);
 
-
 	// make sure the unit has no orders, for some reason after garissoning, the order queue is full of pick up orders
 	const cmpUnitAI = Engine.QueryInterface(ship_spawned[0], IID_UnitAI);
 	cmpUnitAI.orderQueue = [];
@@ -430,7 +416,6 @@ Trigger.prototype.spawnInvasionAttack = function(data)
 	// cmpUnitAI.WalkToTarget(12101,true);
 	// cmpUnitAI.WalkAndFight(target_position.x,target_position.y,null);
 
-
 	/* let gholder = Engine.QueryInterface(ship_spawned[0], IID_GarrisonHolder);
 	for (let unit of garrison_units)
 	{
@@ -449,7 +434,6 @@ Trigger.prototype.spawnInvasionAttack = function(data)
 	}*/
 
 };
-
 
 // spawn random attack
 Trigger.prototype.specialShipAttack = function(data)
@@ -471,7 +455,6 @@ Trigger.prototype.specialShipAttack = function(data)
 		const units_pl1 = TriggerHelper.GetEntitiesByPlayer(1);
 		const warships_pl1 = TriggerHelper.MatchEntitiesByClass(units_pl1, "Warship").filter(TriggerHelper.IsInWorld);
 		const shipSpawnCount = Math.floor(warships_pl1.length / 4.0 + 2);
-
 
 		// spawn the ships
 		const attacker_ships = [];
@@ -496,7 +479,6 @@ Trigger.prototype.specialShipAttack = function(data)
 		const dock_targets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "Dock").filter(TriggerHelper.IsInWorld);
 
 		const ship_targets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "Dock").filter(TriggerHelper.IsInWorld);
-
 
 		let target;
 
@@ -567,7 +549,6 @@ Trigger.prototype.spawnShipAttack = function(data)
 
 		const ship_targets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "Dock").filter(TriggerHelper.IsInWorld);
 
-
 		let target;
 
 		if (ship_targets.length == 0)
@@ -629,7 +610,6 @@ Trigger.prototype.spawnTradeShips = function(data)
 
 				cmpUnitAI.UpdateWorkOrders("Trade");
 				cmpUnitAI.SetupTradeRoute(pickRandom(docks_others), spawn_dock, null, true);
-
 
 			}
 		}
@@ -823,8 +803,6 @@ Trigger.prototype.GarrisonEntities = function(data)
 	// start spawning escorts for trade ships
 	cmpTrigger.DoAfterDelay(cmpTrigger.shipEscortInterval, "spawnShipEscort", null);
 
-
-
 	/* let ents_4 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(4), "CivilCentre");
 
 	for (let e of ents_4)
@@ -853,10 +831,6 @@ Trigger.prototype.GarrisonEntities = function(data)
 		"requiredComponent": IID_UnitAI, // only count units in range
 		"enabled": true
 	});
-
-
-
-
 
 	/*
 

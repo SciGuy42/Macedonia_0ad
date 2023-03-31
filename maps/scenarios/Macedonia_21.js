@@ -4,16 +4,12 @@ warn("loading the triggers file");
 // Trigger listeners //
 // /////////////////////
 
-
 var unitTargetClass = "Unit+!Ship";
 var siegeTargetClass = "Structure";
-
 
 var triggerPointShipInvasion = "B";
 var triggerPointShipSpawn = "A";
 var triggerPointCavalryAttack = "K";
-
-
 
 var unitFormations = [
 	"special/formations/box",
@@ -50,8 +46,6 @@ var disabledTemplates = (civ) => [
 	"units/" + civ + "/support_female_citizen"
 ];
 
-
-
 Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, target_class)
 {
 	let target = this.FindClosestTarget(attacker, target_player, target_class);
@@ -60,12 +54,10 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 		target = this.FindClosestTarget(attacker, target_player, siegeTargetClass);
 	}
 
-
 	if (target)
 	{
 		// get target position
 		var cmpTargetPosition = Engine.QueryInterface(target, IID_Position).GetPosition2D();
-
 
 		const cmpUnitAI = Engine.QueryInterface(attacker, IID_UnitAI);
 		cmpUnitAI.SwitchToStance("violent");
@@ -73,7 +65,6 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	}
 	else // find a structure
 	{
-
 
 		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
@@ -198,8 +189,6 @@ Trigger.prototype.PlayerCommandAction = function(data)
 	// warn(uneval(data));
 };
 
-
-
 Trigger.prototype.InvasionRangeAction = function(data)
 {
 	// warn("The Invasion OnRange event happened with the following data:");
@@ -257,7 +246,6 @@ Trigger.prototype.InvasionRangeAction = function(data)
 				warn("Next invasion in " + uneval(this.carthageInvasionAttackInterval));
 				this.DoAfterDelay(this.carthageInvasionAttackInterval * 1000, "SpawnNavalInvasionAttack", null);
 
-
 			}
 		}
 	}
@@ -305,7 +293,6 @@ Trigger.prototype.SpawnNavalInvasionAttack = function(data)
 		return;
 	}
 
-
 	// check if carthage has docks
 	const have_docks = false;
 	const spawn_docks = [];
@@ -313,7 +300,6 @@ Trigger.prototype.SpawnNavalInvasionAttack = function(data)
 
 	if (docks_e.length < 1)
 		return;
-
 
 	// decide how many ships to spawn and where
 	const spawn_site = pickRandom(docks_e);
@@ -351,11 +337,9 @@ Trigger.prototype.SpawnNavalInvasionAttack = function(data)
 	// send ship
 	cmpUnitAI.Walk(ungarrisonPos.x, ungarrisonPos.y, true);
 
-
 	// this.DoAfterDelay(300 * 1000,"SpawnAlliedInvasionAttack",null);
 
 };
-
 
 // garison AI entities with archers
 Trigger.prototype.GarrisonEntities = function(data)
@@ -410,7 +394,6 @@ Trigger.prototype.GarrisonEntities = function(data)
 	}
 };
 
-
 Trigger.prototype.IdleUnitCheck = function(data)
 {
 	for (const p of [6])
@@ -440,14 +423,10 @@ Trigger.prototype.IdleUnitCheck = function(data)
 	}
 };
 
-
-
-
 Trigger.prototype.StartEpisode = function(data)
 {
 	const fort_A = 553;// TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(1), "MercenaryCamp").filter(TriggerHelper.IsInWorld)[0];
 	const fort_B = 554;// TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(2), "MercenaryCamp").filter(TriggerHelper.IsInWorld)[0];
-
 
 	// PLAYER 1
 	var counts_A = [];
@@ -475,7 +454,6 @@ Trigger.prototype.StartEpisode = function(data)
 	// set formation
 	// TriggerHelper.SetUnitFormation(1, units_A, pickRandom(unitFormations));
 
-
 	ProcessCommand(1, {
 		"type": "attack-walk",
 		"entities": units_A,
@@ -487,7 +465,6 @@ Trigger.prototype.StartEpisode = function(data)
 		},
 		"allowCapture": false
 	});
-
 
 	// PLAYER 2
 	var counts_B = [];
@@ -514,7 +491,6 @@ Trigger.prototype.StartEpisode = function(data)
 
 	// TriggerHelper.SetUnitFormation(2, units_B, pickRandom(unitFormations));
 
-
 	ProcessCommand(2, {
 		"type": "attack-walk",
 		"entities": units_B,
@@ -528,7 +504,6 @@ Trigger.prototype.StartEpisode = function(data)
 	});
 };
 
-
 Trigger.prototype.GarrisonPlayerShips = function(data)
 {
 	const p = 1;
@@ -536,7 +511,6 @@ Trigger.prototype.GarrisonPlayerShips = function(data)
 
 	const units_pl1 = TriggerHelper.GetEntitiesByPlayer(1);
 	const warships_pl1 = TriggerHelper.MatchEntitiesByClass(units_pl1, "Warship").filter(TriggerHelper.IsInWorld);
-
 
 	warn("Found " + uneval(warships_pl1));
 	for (const ship of warships_pl1)
@@ -549,17 +523,14 @@ Trigger.prototype.GarrisonPlayerShips = function(data)
 	}
 };
 
-
 Trigger.prototype.PatrolOrder = function(units, p)
 {
 
 	if (units.length <= 0)
 		return;
 
-
 	// list of patrol targets
 	const patrolTargets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Fortress").filter(TriggerHelper.IsInWorld);
-
 
 	for (const patrolTarget of patrolTargets)
 	{
@@ -612,7 +583,6 @@ Trigger.prototype.SpawnFortressPatrol = function(data)
 		// set formation
 		TriggerHelper.SetUnitFormation(p, units, pickRandom(unitFormations));
 
-
 		// send to patrol
 		this.PatrolOrder(units, p);
 
@@ -623,8 +593,6 @@ Trigger.prototype.SpawnFortressPatrol = function(data)
 Trigger.prototype.CarthageShipAttack = function(data)
 {
 	warn("Carthage ship attack!");
-
-
 
 	// check if we have docks
 	const p = 6;
@@ -654,15 +622,12 @@ Trigger.prototype.CarthageShipAttack = function(data)
 		// get possible targets
 		// get possible list of dock targets
 
-
 		// get possible trade ship targets -- TODO
-
 
 		// full list of targets
 		const targets = dock_targets;
 
 		// TODO: add any idle ships to attackers
-
 
 		// order attack
 		if (targets.length > 0)
@@ -679,7 +644,6 @@ Trigger.prototype.CarthageShipAttack = function(data)
 
 	this.DoAfterDelay(this.cartShipAttackInterval * 1000, "CarthageShipAttack", null);
 };
-
 
 Trigger.prototype.CavalryAttack = function(data)
 {
@@ -766,7 +730,6 @@ Trigger.prototype.CarthageAttack = function(data)
 		}
 	}
 
-
 	// set formation
 	TriggerHelper.SetUnitFormation(p, attackers, pickRandom(unitFormations));
 
@@ -793,7 +756,6 @@ Trigger.prototype.CarthageAttack = function(data)
 	this.DoAfterDelay(next_attack_interval_sec * 1000, "CarthageAttack", null);
 };
 
-
 Trigger.prototype.CheckForCC = function(data)
 {
 	// check if player 1 has built structure
@@ -810,7 +772,6 @@ Trigger.prototype.CheckForCC = function(data)
 
 		// start naval invasion attacks
 		this.DoAfterDelay(500 * 1000, "SpawnNavalInvasionAttack", null);
-
 
 	}
 	else
@@ -832,7 +793,6 @@ Trigger.prototype.CheckForCC = function(data)
 	cmpTrigger.RegisterTrigger("OnResearchQueued", "ResearchQueuedAction", data);
 
 	cmpTrigger.RegisterTrigger("OnPlayerCommand", "PlayerCommandAction", data);*/
-
 
 	// carthage attacker types
 	cmpTrigger.cartAttackerTypes = ["units/cart/champion_infantry", "units/cart/champion_pikeman", "units/cart/infantry_archer_a", "units/cart/champion_cavalry", "units/cart/infantry_slinger_iber_a"];
@@ -868,13 +828,9 @@ Trigger.prototype.CheckForCC = function(data)
 	// cmpTrigger.DoAfterDelay(10 * 1000,"SpawnNavalInvasionAttack",null);
 	// cmpTrigger.DoAfterDelay(10 * 1000,"CarthageShipAttack",null);
 
-
-
-
 	for (const p of [1, 2, 3, 4, 5, 6])
 	{
 		const cmpPlayer = QueryPlayerIDInterface(p);
-
 
 		// disable troop production
 		const disTemplates = disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv());
@@ -932,13 +888,11 @@ Trigger.prototype.CheckForCC = function(data)
 
 	/* cmpTrigger.DoAfterDelay(300 * 1000,"SpawnAlliedInvasionAttack",null);
 
-
 	cmpTrigger.RegisterTrigger("OnInterval", "SpawnPatrolPeriodic", {
 		"enabled": true,
 		"delay": 120 * 1000,
 		"interval": 60 * 1000,
 	});
-
 
 	cmpTrigger.RegisterTrigger("OnInterval", "checkInvasionAttack", {
 		"enabled": true,
@@ -973,15 +927,11 @@ Trigger.prototype.CheckForCC = function(data)
 		"interval": 15 * 1000,
 	});*/
 
-
-
 	/* cmpTrigger.RegisterTrigger("OnInterval", "LevelUpPers", {
 		"enabled": true,
 		"delay": 1 * 1000,
 		"interval": 300 * 1000,
 	});
-
-
 
 	// register winning trigger
 	cmpTrigger.RegisterTrigger("OnRange", "RangeActionTriggerK", {
@@ -991,6 +941,5 @@ Trigger.prototype.CheckForCC = function(data)
 		"requiredComponent": IID_UnitAI, // only count units in range
 		"enabled": true
 	});*/
-
 
 }

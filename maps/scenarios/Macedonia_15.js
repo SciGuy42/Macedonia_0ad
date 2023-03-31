@@ -4,7 +4,6 @@ warn("loading the triggers file");
 // Trigger listeners //
 // /////////////////////
 
-
 var disabledTemplates = (civ) => [
 	// Economic structures
 	"structures/" + civ + "/corral",
@@ -79,7 +78,6 @@ Trigger.prototype.PlayerCommandAction = function(data)
 	// warn(uneval(data));
 };
 
-
 Trigger.prototype.IntervalActionCavAttack = function(data)
 {
 
@@ -100,12 +98,10 @@ Trigger.prototype.IntervalAction = function(data)
 	if (this.numberOfTimerTrigger >= this.maxNumberOfTimerTrigger)
 		this.DisableTrigger("OnInterval", "IntervalAction");
 
-
 	var enemy_players = [2];
 
 	for (let p = 0; p < enemy_players.length; ++p)
 	{
-
 
 		var enemy_units = TriggerHelper.GetEntitiesByPlayer(enemy_players[p]);
 		var human_units = TriggerHelper.GetEntitiesByPlayer(1);
@@ -152,7 +148,6 @@ Trigger.prototype.IntervalAction = function(data)
 		}
 	}
 };
-
 
 Trigger.prototype.SetDifficultyLevel = function(data)
 {
@@ -222,11 +217,8 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
 			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
 
-
 		}
 	}
-
-
 
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalAction", {
 		"enabled": true,
@@ -236,10 +228,5 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 
 	// make traders trade
 	// var all_ents = TriggerHelper.GetEntitiesByPlayer(2);
-
-
-
-
-
 
 }

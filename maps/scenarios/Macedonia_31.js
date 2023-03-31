@@ -4,11 +4,8 @@ warn("loading the triggers file");
 // Trigger listeners //
 // /////////////////////
 
-
 var unitTargetClass = "Unit+!Ship";
 var siegeTargetClass = "Structure";
-
-
 
 var triggerPointPatrol = "B";
 var triggerPointCvilCentre = "J";
@@ -16,9 +13,6 @@ var triggerPointParolSpawn = "K";
 var triggerPointAttackA = "I";
 var triggerPointAttackB = "H";
 var triggerPointAttackC = "G";
-
-
-
 
 var unitFormations = [
 	"special/formations/box",
@@ -55,7 +49,6 @@ var disabledTemplates = (civ) => [
 	// "units/" + civ + "/support_female_citizen"
 ];
 
-
 Trigger.prototype.FindClosestTarget = function(attacker, target_player, target_class)
 {
 
@@ -82,8 +75,6 @@ Trigger.prototype.FindClosestTarget = function(attacker, target_player, target_c
 	return closestTarget;
 };
 
-
-
 // garison AI entities with archers
 Trigger.prototype.GarrisonEntities = function(data)
 {
@@ -106,7 +97,6 @@ Trigger.prototype.GarrisonEntities = function(data)
 		}
 	}
 };
-
 
 Trigger.prototype.PatrolOrderList = function(units, p, patrolTargets)
 {
@@ -133,14 +123,12 @@ Trigger.prototype.PatrolOrderList = function(units, p, patrolTargets)
 	}
 };
 
-
 Trigger.prototype.StructureDecayCheck = function(data)
 {
 	for (const p of [4])
 	{
 		const structs = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Structure").filter(TriggerHelper.IsInWorld);
 		// warn("checking decay");
-
 
 		for (const s of structs)
 		{
@@ -165,7 +153,6 @@ Trigger.prototype.StructureDecayCheck = function(data)
 	}
 
 };
-
 
 Trigger.prototype.SpawnHorsemanPatrol = function(data)
 {
@@ -235,8 +222,6 @@ Trigger.prototype.SpawnInitialPatrol = function(data)
 		if (Math.random() < 0.5)
 			sites_i = sites_reversed;
 
-
-
 		const index = Math.floor(Math.random() * sites_i.length);
 		// warn("index = "+index);
 
@@ -260,9 +245,7 @@ Trigger.prototype.SpawnInitialPatrol = function(data)
 		this.PatrolOrderList(unit_i, p, patrol_sites_i);
 	}
 
-
 };
-
 
 Trigger.prototype.FlipAssets = function(data)
 {
@@ -285,15 +268,12 @@ Trigger.prototype.FlipAssets = function(data)
 	}
 };
 
-
 Trigger.prototype.RangeActionCivilCentre = function(data)
 {
 	if (this.assetTransferTriggered == false)
 	{
 		// warn("range action centre");
 		this.ShowText("We made it! The town is now under your command. Our immediate task is to fortify it by building towers, fortresses and walls around our base. Meanwhile, we need to find the horsemen's camps and destroy them. ", "On it!", "OK");
-
-
 
 		// flip player 3 to 1
 		this.FlipAssets();
@@ -329,7 +309,6 @@ Trigger.prototype.SpawnFarmers = function(data)
 		}
 	}
 };
-
 
 Trigger.prototype.TransferFood = function(data)
 {
@@ -422,7 +401,6 @@ Trigger.prototype.RebelAttack = function(data)
 	const squad_size_distractor = 3 + Math.round(pop / 25) + this.attackCounter;
 	const templates_distractor = ["units/pers/champion_cavalry", "units/pers/champion_cavalry_archer", "units/pers/cavalry_javelineer_e", "units/pers/cavalry_javelineer_a", "units/pers/cavalry_axeman_e", "units/pers/cavalry_axeman_a", "units/pers/cavalry_spearman_e", "units/pers/cavalry_spearman_a", "units/pers/cavalry_spearman_b"];
 
-
 	for (let i = 0; i < num_squads_distractors; i++)
 	{
 		const data_i = {};
@@ -458,7 +436,6 @@ Trigger.prototype.RebelAttack = function(data)
 	this.attackCounter += 1;
 };
 
-
 Trigger.prototype.RebelAttackRepeat = function(data)
 {
 
@@ -477,7 +454,6 @@ Trigger.prototype.RebelAttackRepeat = function(data)
 	}
 
 };
-
 
 Trigger.prototype.VictoryTextFn = function(n)
 {
@@ -511,7 +487,6 @@ Trigger.prototype.VictoryCheck = function(data)
 	}
 };
 
-
 Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, target_class)
 {
 	let target = this.FindClosestTarget(attacker, target_player, target_class);
@@ -520,12 +495,10 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 		target = this.FindClosestTarget(attacker, target_player, siegeTargetClass);
 	}
 
-
 	if (target)
 	{
 		// get target position
 		var cmpTargetPosition = Engine.QueryInterface(target, IID_Position).GetPosition2D();
-
 
 		const cmpUnitAI = Engine.QueryInterface(attacker, IID_UnitAI);
 		cmpUnitAI.SwitchToStance("violent");
@@ -534,12 +507,10 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	else // find a structure
 	{
 
-
 		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
 	}
 
 };
-
 
 Trigger.prototype.IdleUnitCheck = function(data)
 {
@@ -588,7 +559,6 @@ Trigger.prototype.IdleUnitCheck = function(data)
 
 					this.PatrolOrderList([u], p, patrol_sites_i);
 
-
 					// warn("Found idle soldier");
 					// this.WalkAndFightClosestTarget(u,1,"Unit");
 				}
@@ -599,7 +569,6 @@ Trigger.prototype.IdleUnitCheck = function(data)
 	for (const p of [5])
 	{
 		const units_cav = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Unit").filter(TriggerHelper.IsInWorld);
-
 
 		for (const u of units_cav)
 		{
@@ -669,7 +638,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	}
 };
 
-
 Trigger.prototype.ResearchTechs = function(data)
 {
 	for (const p of [1])
@@ -699,7 +667,6 @@ Trigger.prototype.ResearchTechs = function(data)
 		}
 	}
 };
-
 
 Trigger.prototype.ShowText = function(text, option_a, option_b)
 {
@@ -746,8 +713,6 @@ Trigger.prototype.ShowText = function(text, option_a, option_b)
 	 * another 1200 to get all tower upgrades
 	 */
 
-
-
 	const cmpTrigger = Engine.QueryInterface(SYSTEM_ENTITY, IID_Trigger);
 
 	// some constants
@@ -775,7 +740,6 @@ Trigger.prototype.ShowText = function(text, option_a, option_b)
 	// start techs
 	cmpTrigger.DoAfterDelay(1 * 1000, "ResearchTechs", null);
 
-
 	// debug
 	// cmpTrigger.DoAfterDelay(5 * 1000,"RebelAttack",null);
 
@@ -792,7 +756,6 @@ Trigger.prototype.ShowText = function(text, option_a, option_b)
 
 		if (p == 3)
 			disTemplates = disTemplates.concat(disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv()));
-
 
 		cmpPlayer.SetDisabledTemplates(disTemplates);
 
@@ -828,7 +791,6 @@ Trigger.prototype.ShowText = function(text, option_a, option_b)
 	cmpPlayer3.SetAlly(4);
 	cmpPlayer3.SetAlly(1);
 
-
 	const data = { "enabled": true };
 	cmpTrigger.RegisterTrigger("OnOwnershipChanged", "OwnershipChangedAction", data);
 
@@ -849,7 +811,6 @@ Trigger.prototype.ShowText = function(text, option_a, option_b)
 		"delay": 5 * 1000,
 		"interval": 45 * 1000,
 	});
-
 
 	cmpTrigger.RegisterTrigger("OnRange", "RangeActionCivilCentre", {
 		"entities": cmpTrigger.GetTriggerPoints(triggerPointCvilCentre), // central points to calculate the range circles

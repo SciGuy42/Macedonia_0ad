@@ -53,14 +53,12 @@ Trigger.prototype.PlayerCommandAction = function(data)
 	// warn(uneval(data));
 };
 
-
 Trigger.prototype.IntervalActionCavAttack = function(data)
 {
 
 	// warn("The OnInterval event happened with the following data:");
 
 };
-
 
 Trigger.prototype.IntervalAction = function(data)
 {
@@ -134,7 +132,6 @@ Trigger.prototype.RangeAction = function(data)
 	}
 };
 
-
 Trigger.prototype.GarrisonShips = function(data)
 {
 
@@ -164,7 +161,6 @@ Trigger.prototype.GarrisonShips = function(data)
 	cmpTrigger.numberOfTimerTrigger = 0;
 	cmpTrigger.maxNumberOfTimerTrigger = 1; // execute it that many times
 
-
 	cmpTrigger.spawnedTraders = false;
 
 	// garrison ships
@@ -174,11 +170,8 @@ Trigger.prototype.GarrisonShips = function(data)
 	const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 	cmpTechnologyManager.ResearchTechnology("unlock_shared_los");
 
-
 	// make traders trade
 	// var all_ents = TriggerHelper.GetEntitiesByPlayer(2);
-
-
 
 	/* for (let i = 0; i < all_ents.length; i++)
 	{
@@ -188,7 +181,6 @@ Trigger.prototype.GarrisonShips = function(data)
 			if (cmpUnitAI
 		}
 	}	*/
-
 
 	cmpTrigger.RegisterTrigger("OnRange", "RangeAction", {
 		"entities": cmpTrigger.GetTriggerPoints("A"), // central points to calculate the range circles

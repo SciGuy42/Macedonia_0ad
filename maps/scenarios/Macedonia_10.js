@@ -44,7 +44,6 @@ Trigger.prototype.ResearchQueuedAction = function(data)
 	// warn(uneval(data));
 };
 
-
 Trigger.prototype.StructureDecayCheck = function(data)
 {
 	this.structureDecayCounter += 1;
@@ -60,7 +59,6 @@ Trigger.prototype.StructureDecayCheck = function(data)
 			{
 				const c_points = cmpCapt.GetCapturePoints();
 
-
 				if (c_points[0] > 0)
 				{
 					c_points[p] += c_points[0];
@@ -73,7 +71,6 @@ Trigger.prototype.StructureDecayCheck = function(data)
 
 	this.DoAfterDelay(15 * 1000, "StructureDecayCheck", null);
 };
-
 
 /*
  */
@@ -109,7 +106,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 			// warn("Temple captured events happened");
 
-
 		}
 		else if (data.entity == 2507) // little temple
 		{
@@ -127,7 +123,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			cmpTechnologyManager.ResearchTechnology("health_regen_units");
 			cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_02");
 			cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
-
 
 		}
 		else if (data.entity == 2553) // siege shop
@@ -150,7 +145,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
 			cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
 		}
-
 
 	}
 	else if (data.from == 3 || data.from == 2) // possibly destroyed a structure
@@ -264,7 +258,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 	}
 
-
 	// warn("The OnOwnershipChanged event happened with the following data:");
 	/* warn(uneval(data));
 	if ((data.from == 4 || data.from == 2) && (data.to == -1 || data.to == 1))
@@ -326,9 +319,7 @@ Trigger.prototype.SpawnAndStartCavalryAttack = function()
 		return;
 	}
 
-
 	this.gaul_cavalry_types = ["units/gaul/cavalry_swordsman_e", "units/gaul/cavalry_javelineer_e", "units/brit/war_dog", "units/gaul/champion_cavalry", "units/brit/champion_chariot"];
-
 
 	// get list of barracks
 	let sites = [];
@@ -401,8 +392,6 @@ Trigger.prototype.SpawnAndStartCavalryAttack = function()
 		}
 	}
 };
-
-
 
 Trigger.prototype.IntervalActionSpawnTraders = function(data)
 {
@@ -484,14 +473,12 @@ Trigger.prototype.IntervalAction = function(data)
 
 };
 
-
 Trigger.prototype.AttackOrder = function(units)
 {
 	if (units.length <= 0)
 		return;
 
 	const human_ents = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "Human").filter(TriggerHelper.IsInWorld);
-
 
 	// find target
 	const cmpPosAI = Engine.QueryInterface(units[0], IID_Position);
@@ -526,14 +513,12 @@ Trigger.prototype.AttackOrder = function(units)
 	}
 };
 
-
 // scenario indendent functions
 Trigger.prototype.PatrolOrderList = function(units, p, patrolTargets)
 {
 
 	if (units.length <= 0)
 		return;
-
 
 	for (const patrolTarget of patrolTargets)
 	{
@@ -584,7 +569,6 @@ Trigger.prototype.PatrolOrder = function(units)
 		});
 	}
 };
-
 
 Trigger.prototype.IntervalDefenderCavSpawnAction = function(data)
 {
@@ -705,7 +689,6 @@ Trigger.prototype.IntervalDefenderCheckAction = function(data)
 		this.PatrolOrder(temp_list);
 	}
 
-
 	//this.PatrolOrder(fighters_strays);
 
 	*/
@@ -754,7 +737,6 @@ Trigger.prototype.IntervalDefenderSpawnAction = function(data)
 
 	const towers = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(3), "StoneTower").filter(TriggerHelper.IsInWorld);
 
-
 	// spawn infantry
 	const units = [];
 	const p = 2;
@@ -777,7 +759,6 @@ Trigger.prototype.IntervalDefenderSpawnAction = function(data)
 			this.PatrolOrderList(unit_i, p, patrol_sites);
 		}
 	}
-
 
 	// check for idle units and add them to queue
 	const all_ents = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "Human").filter(TriggerHelper.IsInWorld);
@@ -814,7 +795,6 @@ Trigger.prototype.IntervalDefenderSpawnAction = function(data)
 	// send cavalry to attack
 	this.AttackOrder(attack_ents);
 
-
 	/* let units = TriggerHelper.SpawnUnits(spawn_site,pickRandom(this.gaul_cavalry_types),1,5);*/
 };
 
@@ -843,7 +823,6 @@ var disabledTemplates = (civ) => [
 	"structures/ptol/lighthouse"
 ];
 
-
 Trigger.prototype.IntervalReinforcementSpawnAction = function(data)
 {
 	const size = this.current_points;
@@ -856,8 +835,6 @@ Trigger.prototype.IntervalReinforcementSpawnAction = function(data)
 	this.current_points -= Math.floor(this.current_points);
 };
 
-
-
 Trigger.prototype.TriggerDiplomacy = function(data)
 {
 	const towers = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "StoneTower").filter(TriggerHelper.IsInWorld);
@@ -867,7 +844,6 @@ Trigger.prototype.TriggerDiplomacy = function(data)
 		cmpOwnership.SetOwner(3);
 	}
 };
-
 
 Trigger.prototype.SetDifficultyLevel = function(data)
 {
@@ -951,7 +927,6 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	cmpPlayer.SetDisabledTemplates(disabledTemplates(QueryPlayerIDInterface(3, IID_Identity).GetCiv()));
 	let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 
-
 	cmpTechnologyManager.ResearchTechnology("phase_town_athen");
 	cmpTechnologyManager.ResearchTechnology("phase_city_athen");
 	// cmpTechnologyManager.ResearchTechnology("tower_health");
@@ -986,8 +961,6 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 
 	cmpTrigger.DoAfterDelay(5, "TriggerDiplomacy", null);
 
-
-
 	// same state variables
 	cmpTrigger.current_points = 0;
 	cmpTrigger.gate_attack_done = false;
@@ -1018,7 +991,6 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		"interval": 15 * 1000,
 	});
 
-
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalDefenderCavSpawnAction", {
 		"enabled": true,
 		"delay": 115 * 1000,
@@ -1047,7 +1019,6 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	cmpTrigger.ccs = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(3), "CivilCentre").filter(TriggerHelper.IsInWorld);
 
 	cmpTrigger.forts = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(3), "Fortress").filter(TriggerHelper.IsInWorld);
-
 
 	/* warn(uneval(cmpTrigger.fields));
 	warn(uneval(cmpTrigger.farmsteads));
@@ -1087,7 +1058,6 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		"interval": 90 * 1000,
 	});*/
 
-
 	/* let ents_3 = TriggerHelper.GetEntitiesByPlayer(3);
 	for (let e of ents_3)
 	{
@@ -1098,7 +1068,5 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 		}
 
 	}*/
-
-
 
 }
