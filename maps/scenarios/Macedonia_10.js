@@ -155,31 +155,31 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	}
 	else if (data.from == 3 || data.from == 2) // possibly destroyed a structure
 	{
-		if (this.fields.indexOf(data.entity) >= 0)
+		if (this.fields.includes(data.entity))
 		{
 			// warn("Field destroyed");
 			// add some points
 			this.current_points += 3;
 		}
-		else if (this.farmsteads.indexOf(data.entity) >= 0)
+		else if (this.farmsteads.includes(data.entity))
 		{
 			// warn("farmstead destroyed");
 			// add some points
 			this.current_points += 5;
 		}
-		else if (this.storehouses.indexOf(data.entity) >= 0)
+		else if (this.storehouses.includes(data.entity))
 		{
 			// warn("storehouse destroyed");
 			// add some points
 			this.current_points += 5;
 		}
-		else if (this.docks.indexOf(data.entity) >= 0)
+		else if (this.docks.includes(data.entity))
 		{
 			// warn("dock destroyed");
 			// add some points
 			this.current_points += 10;
 		}
-		else if (this.gates.indexOf(data.entity) >= 0)
+		else if (this.gates.includes(data.entity))
 		{
 			// gate was destroyed, send cavalry attack
 			// warn("gate destroyed");
@@ -205,7 +205,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			}
 
 		}
-		else if (this.ccs.indexOf(data.entity) >= 0)
+		else if (this.ccs.includes(data.entity))
 		{ // civil centered destroyed
 			if (this.cc_attack_done == false)
 			{
@@ -235,7 +235,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				TriggerHelper.SetPlayerWon(1, this.VictoryTextFn, this.VictoryTextFn);
 			}
 		}
-		else if (this.forts.indexOf(data.entity) >= 0)
+		else if (this.forts.includes(data.entity))
 		{ // forts destroyed
 			if (this.fort_attack_done == false)
 			{
@@ -267,23 +267,25 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 	// warn("The OnOwnershipChanged event happened with the following data:");
 	/* warn(uneval(data));
-	if ((data.from == 4 || data.from == 2) && (data.to == -1 || data.to == 1)){
-		let id = Engine.QueryInterface(data.entity, IID_Identity);
+	if ((data.from == 4 || data.from == 2) && (data.to == -1 || data.to == 1))
+	{
+		const id = Engine.QueryInterface(data.entity, IID_Identity);
 		if (id)
 		{
 			warn(uneval(id));
 			warn(typeof id.visibleClassesList);
 			warn(uneval(id.visibleClassesList));
 
-			if (id.visibleClassesList.indexOf("Trader") >= 0){
-				//give reward to human player for killing trader
-				let ccs = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(1), "CivilCentre").filter(TriggerHelper.IsInWorld);
-
-				TriggerHelper.SpawnUnits(pickRandom(ccs),"units/mace/support_trader",1,1);
-			}
-			else if (this.crannog_ids.indexOf(data.entity) >= 0 || data.entity == 7176 || data.entity == 7177) //if pl2 or pl4 lose a civic center
+			if (id.visibleClassesList.includes("Trader"))
 			{
-				//stage attack from player 3 in response to a civil centre lost by player 4
+				// give reward to human player for killing trader
+				const ccs = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "CivilCentre").filter(TriggerHelper.IsInWorld);
+
+				TriggerHelper.SpawnUnits(pickRandom(ccs), "units/mace/support_trader", 1, 1);
+			}
+			else if (this.crannog_ids.includes(data.entity) || data.entity == 7176 || data.entity == 7177) // if pl2 or pl4 lose a civic center
+			{
+				// stage attack from player 3 in response to a civil centre lost by player 4
 				warn("crannog destroyed or captured");
 				this.SpawnAndStartCavalryAttack();
 			}
@@ -791,11 +793,11 @@ Trigger.prototype.IntervalDefenderSpawnAction = function(data)
 				const cmpI = Engine.QueryInterface(all_ents[i], IID_Identity);
 				// warn(uneval(cmpI));
 
-				if (cmpI.visibleClassesList.indexOf("Infantry") >= 0)
+				if (cmpI.visibleClassesList.includes("Infantry"))
 				{
 					patrol_ents.push(all_ents[i]);
 				}
-				else if (cmpI.visibleClassesList.indexOf("Cavalry") >= 0)
+				else if (cmpI.visibleClassesList.includes("Cavalry"))
 				{
 					attack_ents.push(all_ents[i]);
 				}

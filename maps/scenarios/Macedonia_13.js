@@ -181,7 +181,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 	if (data.from == 0 && data.to == 1)
 	{
-		if (id.classesList.indexOf("Dock") >= 0)
+		if (id.classesList.includes("Dock"))
 		{
 			this.num_docks_captured += 1;
 			warn("dock captured");
@@ -192,25 +192,25 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 
 		}
-		else if (id.classesList.indexOf("Forge") >= 0)
+		else if (id.classesList.includes("Forge"))
 		{
 			warn("smith captured");
 			this.num_smith_captured += 1;
 			if (this.num_smith_captured == 1)
 				this.ForgeShipAttackRepeats();
 		}
-		else if (id.classesList.indexOf("Arsenal") >= 0)
+		else if (id.classesList.includes("Arsenal"))
 		{
 			warn("shop captured");
 			this.DoAfterDelay(240 * 1000, "WorkshopShipAttack", null);
 		}
 	}
-	/* else if (data.from == 2 && id.classesList.indexOf("Gate") >= 0)
+	/* else if (data.from == 2 && id.classesList.includes("Gate"))
 	{
 		warn("gate destroyed");
 		this.GateDestroyedAttack();
 	}
-	else if (data.from == 2 && id.classesList.indexOf("CivilCentre") >= 0)
+	else if (data.from == 2 && id.classesList.includes("CivilCentre"))
 	{
 		warn("cc destroyed");
 		// TO DO: win
@@ -315,7 +315,7 @@ Trigger.prototype.PatrolOrder = function(units, patrol_entities, k, player_numbe
 		while (patrolTargets.length < k)
 		{
 			const ent_k = Math.floor(Math.random() * patrol_entities.length);
-			if (patrolTargets.indexOf(patrol_entities[ent_k]) < 0)
+			if (!patrolTargets.includes(patrol_entities[ent_k]))
 				patrolTargets.push(patrol_entities[ent_k]);
 		}
 	}

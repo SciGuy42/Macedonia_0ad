@@ -537,7 +537,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
 		if (id != null)
 		{
-			if (id.classesList.indexOf("Structure") >= 0)
+			if (id.classesList.includes("Structure"))
 			{
 				const health_s = Engine.QueryInterface(data.entity, IID_Health);
 				if (health_s)
@@ -559,21 +559,21 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		// warn(uneval(id));
 		if (id != null)
 		{
-			if (id.classesList.indexOf("Trader") >= 0)
+			if (id.classesList.includes("Trader"))
 			{
 				// player 1 gets some food
 				const cmpPlayer = QueryPlayerIDInterface(1);
 				cmpPlayer.AddResource("food", 75);
 			}
 
-			if (id.classesList.indexOf("StoneTower") >= 0)
+			if (id.classesList.includes("StoneTower"))
 			{
 				// player 1 gets some food
 				const cmpPlayer = QueryPlayerIDInterface(1);
 				cmpPlayer.AddResource("food", 300);
 			}
 
-			if (id.classesList.indexOf("Fortress") >= 0)
+			if (id.classesList.includes("Fortress"))
 			{
 				// warn("fort destroyed");
 
@@ -668,7 +668,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 		// with a probability, launch a cavalry soldier attack if infantry was attacked
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
-		if (id != null && id.classesList.indexOf("Infantry") >= 0)
+		if (id != null && id.classesList.includes("Infantry"))
 		{
 			if (Math.random() < 0.25)
 			{
@@ -706,20 +706,20 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	// check if arsenal
 	/* if (data.entity == 2711)
 	{
-		//spawn some siege
-		let unit_i = TriggerHelper.SpawnUnits(data.entity,"units/brit/siege_ram",3,1);
+		// spawn some siege
+		const unit_i = TriggerHelper.SpawnUnits(data.entity, "units/brit/siege_ram", 3, 1);
 	}
 
-	//check if player 2 lost building
+	// check if player 2 lost building
 	if (data.from == 2 && (data.to == 1 || data.to == -1))
 	{
-		let id = Engine.QueryInterface(data.entity, IID_Identity);
-		//warn(uneval(id));
-		if (id != null && id.classesList.indexOf("Structure") >= 0)
+		const id = Engine.QueryInterface(data.entity, IID_Identity);
+		// warn(uneval(id));
+		if (id != null && id.classesList.includes("Structure"))
 		{
 			if (Math.random() < 0.2)
 			{
-				let target_pos = TriggerHelper.GetEntityPosition2D(data.entity);
+				const target_pos = TriggerHelper.GetEntityPosition2D(data.entity);
 
 				this.SpawnStructureDestroyedResponseAttack(target_pos);
 
@@ -728,20 +728,18 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	}
 	else if (data.from == 1 && data.to == -1)
 	{
-		let id = Engine.QueryInterface(data.entity, IID_Identity);
-		//warn(uneval(id));
-		if (id != null && id.classesList.indexOf("Champion") >= 0)
+		const id = Engine.QueryInterface(data.entity, IID_Identity);
+		// warn(uneval(id));
+		if (id != null && id.classesList.includes("Champion"))
 		{
 			this.numLost += 1;
 
 			if (this.numLost >= 15)
 			{
-				TriggerHelper.SetPlayerWon(2,this.VictoryTextFnEnemy,this.VictoryTextFnEnemy);
+				TriggerHelper.SetPlayerWon(2, this.VictoryTextFnEnemy, this.VictoryTextFnEnemy);
 
 			}
 		}
-
-
 	}*/
 };
 

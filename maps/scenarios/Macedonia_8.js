@@ -138,9 +138,8 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			warn(typeof id.visibleClassesList);
 			warn(uneval(id.visibleClassesList));*/
 
-			if (id.visibleClassesList.indexOf("Trader") >= 0)
+			if (id.visibleClassesList.includes("Trader"))
 			{
-
 				// make it trade
 				const markets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "Trade").filter(TriggerHelper.IsInWorld);
 
@@ -167,7 +166,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 				}
 			}
-			else if (this.crannog_ids.indexOf(data.entity) >= 0 /* || data.entity == 7176 || data.entity == 7177*/) // if pl2 or pl4 lose a civic center
+			else if (this.crannog_ids.includes(data.entity) /* || data.entity == 7176 || data.entity == 7177*/) // if pl2 or pl4 lose a civic center
 			{
 				// stage attack from player 3 in response to a civil centre lost by player 4
 				//	warn("crannog destroyed or captured");

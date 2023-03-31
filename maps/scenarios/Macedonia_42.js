@@ -506,7 +506,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	{
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
 		// warn(uneval(id));
-		if (id != null && id.classesList.indexOf("Structure") >= 0)
+		if (id != null && id.classesList.includes("Structure"))
 		{
 			if (Math.random() < 0.2)
 			{
@@ -537,7 +537,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		warn(uneval(id));
 		warn(uneval(cmpUnitAI));
 		warn(uneval(health_s));*/
-		if (id != null && id.classesList.indexOf("Champion") >= 0 && health_s.hitpoints == 0)
+		if (id != null && id.classesList.includes("Champion") && health_s.hitpoints == 0)
 		{
 			this.numLost += 1;
 			warn("num champs lost = " + this.numLost);
@@ -558,7 +558,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 
 		// warn(uneval(id));
-		if (id != null && id.classesList.indexOf("Dock") >= 0)
+		if (id != null && id.classesList.includes("Dock"))
 		{
 			// if captured, we get some ships from it
 			if (data.to == 1)
@@ -570,7 +570,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			this.SpawnDockDestroyedResponseAttack();
 
 		}
-		else if (id != null && id.classesList.indexOf("SentryTower") >= 0)
+		else if (id != null && id.classesList.includes("SentryTower"))
 		{
 			warn("Tower destroyed!");
 			this.SpawnDockDestroyedResponseAttack();

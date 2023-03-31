@@ -630,7 +630,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		// warn(uneval(id));
 		if (id != null)
 		{
-			if (id.classesList.indexOf("Siege") >= 0)
+			if (id.classesList.includes("Siege"))
 			{
 				const unit_i = TriggerHelper.SpawnUnits(data.entity, "units/mace/siege_lithobolos_packed", 1, 1);
 			}
@@ -649,7 +649,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			// warn(uneval(id));
 			if (id != null)
 			{
-				if (id.classesList.indexOf("Elephant") >= 0)
+				if (id.classesList.includes("Elephant"))
 				{
 					// find how many elephants remain
 					const units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(6), "Elephant").filter(TriggerHelper.IsInWorld);
@@ -751,7 +751,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		// warn(uneval(id));
 		if (id != null)
 		{
-			if (id.classesList.indexOf("Structure") >= 0)
+			if (id.classesList.includes("Structure"))
 			{
 				if (Math.random() < 0.25)
 				{
@@ -787,20 +787,18 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	// check if gaia soldier
 	/* if (data.from == 0 && data.to == -1)
 	{
-		//check class
-		let id = Engine.QueryInterface(data.entity, IID_Identity);
-		//warn(uneval(id));
+		// check class
+		const id = Engine.QueryInterface(data.entity, IID_Identity);
+		// warn(uneval(id));
 		if (id != null)
 		{
-			 if (id.classesList.indexOf("Soldier") >= 0)
+			if (id.classesList.includes("Soldier"))
 			{
-				//check distance
+				// check distance
 
 			}
 		}
 	}*/
-
-
 };
 
 Trigger.prototype.ResearchTechs = function(data)

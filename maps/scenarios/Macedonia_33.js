@@ -684,7 +684,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
 		if (id)
 		{
-			if (id.classesList.indexOf("Elephant") >= 0)
+			if (id.classesList.includes("Elephant"))
 			{
 				this.numBanditsKilled += 1;
 				// warn("Elephant killed");
@@ -732,7 +732,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
 		if (id)
 		{
-			if (id.classesList.indexOf("Market") >= 0)
+			if (id.classesList.includes("Market"))
 			{
 				// warn("Bazira market destroyed.");
 
@@ -752,7 +752,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
 		if (id)
 		{
-			if (id.classesList.indexOf("Structure") >= 0)
+			if (id.classesList.includes("Structure"))
 			{
 				// warn("Ora structure destroyed.");
 
@@ -790,7 +790,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
 		if (id)
 		{
-			if (id.classesList.indexOf("Unit") >= 0)
+			if (id.classesList.includes("Unit"))
 			{
 				// warn("player 4 structure destroyed");
 

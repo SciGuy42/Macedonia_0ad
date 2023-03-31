@@ -799,7 +799,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	if ((data.from == 2 || data.from == 4 || data.from == 5 || data.from == 6) && data.to == -1)
 	{
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
-		if (id != null && id.classesList.indexOf("Structure") >= 0)
+		if (id != null && id.classesList.includes("Structure"))
 		{
 			// warn(uneval(id));
 
@@ -841,27 +841,27 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		}
 
 
-		/* if (this.foundations && this.foundations.indexOf(data.entity) < 0)
+		/* if (this.foundations && !this.foundations.includes(data.entity))
 		{
-			let id = Engine.QueryInterface(data.entity, IID_Identity);
-			if (id != null && id.classesList.indexOf("Structure") >= 0 && Math.random() < 0.5 && this.warEnded == false)
+			const id = Engine.QueryInterface(data.entity, IID_Identity);
+			if (id != null && id.classesList.includes("Structure") && Math.random() < 0.5 && this.warEnded == false)
 			{
-				//if player 6 is alive, possibly send an attack force
-				let p = 6;
-				let cmpPlayer = QueryPlayerIDInterface(p);
-				//warn(uneval(cmpPlayer.GetState()));
+				// if player 6 is alive, possibly send an attack force
+				const p = 6;
+				const cmpPlayer = QueryPlayerIDInterface(p);
+				// warn(uneval(cmpPlayer.GetState()));
 
-				//check also if they have structures
-				let structs_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p),"Structure").filter(TriggerHelper.IsInWorld);
+				// check also if they have structures
+				const structs_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Structure").filter(TriggerHelper.IsInWorld);
 
 				if (cmpPlayer.GetState() == "active" && structs_p.length > 0)
 				{
-					let cavalry = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p),"Cavalry").filter(TriggerHelper.IsInWorld);
+					const cavalry = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Cavalry").filter(TriggerHelper.IsInWorld);
 
 					if (cavalry.length < 150)
 					{
-						//spawn attack
-						let data_attack = {};
+						// spawn attack
+						const data_attack = {};
 						data_attack.attack_size = 15;
 
 						var cmpTargetPosition = Engine.QueryInterface(data.entity, IID_Position).GetPosition2D();
@@ -877,7 +877,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		}
 		else
 		{
-			//warn("foundation destroyed");
+			// warn("foundation destroyed");
 		}*/
 
 	}
@@ -889,26 +889,26 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 	}*/
 
-	/* if (data.entity == 5251 && this.eventAdvanceAttackStarted == false) //brit tower, used as debug trigger
+	/* if (data.entity == 5251 && this.eventAdvanceAttackStarted == false) // brit tower, used as debug trigger
 	{
 		this.eventAdvanceAttackStarted = true;
 		this.StartAdvanceAttack();
 	}
-	else if (data.entity == 5252 && this.eventMacedonianCavalryArrived == false) //brit tower, used as debug trigger
+	else if (data.entity == 5252 && this.eventMacedonianCavalryArrived == false) // brit tower, used as debug trigger
 	{
 		this.eventMacedonianCavalryArrived = true;
 		this.StartMaceAttack();
 	}*/
 
 
-	/* if (data.from == 0 && data.to == 1) //we captured a gaia structure, there is only 1 so...
+	/* if (data.from == 0 && data.to == 1) // we captured a gaia structure, there is only 1 so...
 	{
-		//spawn some bolt shooters
-		let siege = TriggerHelper.SpawnUnits(data.entity,"units/mace/siege_oxybeles_packed",5,1);
+		// spawn some bolt shooters
+		const siege = TriggerHelper.SpawnUnits(data.entity, "units/mace/siege_oxybeles_packed", 5, 1);
 
-		//warn("spawned siege");
-		//destroy building
-		let health_s = Engine.QueryInterface(data.entity, IID_Health);
+		// warn("spawned siege");
+		// destroy building
+		const health_s = Engine.QueryInterface(data.entity, IID_Health);
 		health_s.Kill();
 	}*/
 };

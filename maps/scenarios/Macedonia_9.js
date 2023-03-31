@@ -78,7 +78,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 	if (data.from == 0 && data.to == 1)  // we captured something
 	{
-		if (this.gaia_houses.indexOf(data.entity) >= 0 && this.captured_houses.indexOf(data.entity) < 0)
+		if (this.gaia_houses.includes(data.entity) && !this.captured_houses.includes(data.entity))
 		{
 			// we captured a house
 			const cmpPlayer = QueryPlayerIDInterface(1);
@@ -87,7 +87,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 			this.captured_houses.push(data.entity);
 		}
-		else if (this.gaia_docks.indexOf(data.entity) >= 0)
+		else if (this.gaia_docks.includes(data.entity))
 		{
 			this.captured_dock = true;
 			// this.spawnShipAttack();
@@ -168,7 +168,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	}
 	else if (data.from == 4)
 	{
-		if (this.greek_docks.indexOf(data.entity) >= 0)
+		if (this.greek_docks.includes(data.entity))
 		{
 			// get list of remaining docks
 			// Greek rebel docks
@@ -191,7 +191,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			}
 
 		}
-		else if (this.greek_ccs.indexOf(data.entity) >= 0)
+		else if (this.greek_ccs.includes(data.entity))
 		{
 			this.CheckVictoryCondition();
 		}

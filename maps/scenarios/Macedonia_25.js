@@ -317,7 +317,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	{
 		// check if soldier
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
-		if (id && id.classesList.indexOf("Soldier") >= 0)
+		if (id && id.classesList.includes("Soldier"))
 		{
 			// find out which cluster
 			let target_cluster = -1;
@@ -1272,7 +1272,7 @@ Trigger.prototype.RangeActionTradersDestination = function(data)
 		for (const e of data.currentCollection)
 		{
 			const id = Engine.QueryInterface(e, IID_Identity);
-			if (id.classesList.indexOf("Trader") >= 0)
+			if (id.classesList.includes("Trader"))
 			{
 				give_reward = true;
 			}
@@ -1359,7 +1359,7 @@ Trigger.prototype.RangeActionTraders = function(data)
 
 Trigger.prototype.RangeActionDock = function(data)
 {
-	if (data.added.indexOf(this.alexanderId) >= 0)
+	if (data.added.includes(this.alexanderId))
 	{
 		if (this.banditHorseQuestGiven == false)
 		{
@@ -1398,7 +1398,7 @@ Trigger.prototype.RangeActionTemple = function(data)
 {
 	// warn(uneval(data));
 
-	if (data.added.indexOf(this.alexanderId) >= 0)
+	if (data.added.includes(this.alexanderId))
 	{
 		if (this.pegasusQuestGiven == false)
 		{

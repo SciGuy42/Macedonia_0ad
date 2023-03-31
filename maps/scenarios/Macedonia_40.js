@@ -505,7 +505,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	{
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
 		// warn(uneval(id));
-		if (id != null && id.classesList.indexOf("Infantry") >= 0)
+		if (id != null && id.classesList.includes("Infantry"))
 		{
 			// warn("gaia attacks");
 
@@ -524,7 +524,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				}
 			}
 		}
-		else if (id != null && id.classesList.indexOf("Siege") >= 0)
+		else if (id != null && id.classesList.includes("Siege"))
 		{
 			// fake capture of siege
 			const unit_i = TriggerHelper.SpawnUnits(data.entity, "units/ptol/siege_polybolos_packed", 1, 1);
@@ -539,7 +539,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	{
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
 		// warn(uneval(id));
-		if (id != null && id.classesList.indexOf("Temple") >= 0 && this.questTempleComplete == false)
+		if (id != null && id.classesList.includes("Temple") && this.questTempleComplete == false)
 		{
 			const health_s = Engine.QueryInterface(data.entity, IID_Health);
 			health_s.Kill();
@@ -557,21 +557,20 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	// check if we killed gaia infantry
 	/* if (data.from == 0 && data.to == -1)
 	{
-		let id = Engine.QueryInterface(data.entity, IID_Identity);
-		//warn(uneval(id));
-		if (id != null && id.classesList.indexOf("Infantry") >= 0)
+		const id = Engine.QueryInterface(data.entity, IID_Identity);
+		// warn(uneval(id));
+		if (id != null && id.classesList.includes("Infantry"))
 		{
 			warn("gaia attacks");
 
-			//get all gaia units and make them attack
-			let units_infantry = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(0),"Infantry").filter(TriggerHelper.IsInWorld);
+			// get all gaia units and make them attack
+			const units_infantry = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(0), "Infantry").filter(TriggerHelper.IsInWorld);
 
-			for (let u of units_infantry)
+			for (const u of units_infantry)
 			{
-				this.WalkAndFightClosestTarget(u,1,unitTargetClass);
+				this.WalkAndFightClosestTarget(u, 1, unitTargetClass);
 			}
 		}
-
 	}*/
 };
 
@@ -907,7 +906,7 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 
 		// warn(uneval(id.classesList));
 		// warn(uneval(id.classesList.indexOf("Cavalry")));
-		if (id != null && id.classesList.indexOf("Cavalry") < 0)
+		if (id != null && !id.classesList.includes("Cavalry"))
 		{
 
 			// warn(uneval(id));
@@ -986,7 +985,7 @@ Trigger.prototype.RangeActionTeleportB = function(data)
 
 		// warn(uneval(id.classesList));
 		// warn(uneval(id.classesList.indexOf("Cavalry")));
-		if (id != null && id.classesList.indexOf("Cavalry") < 0)
+		if (id != null && !id.classesList.includes("Cavalry"))
 		{
 
 			// warn(uneval(id));
@@ -1060,7 +1059,7 @@ Trigger.prototype.RangeActionTeleportC = function(data)
 
 		// warn(uneval(id.classesList));
 		// warn(uneval(id.classesList.indexOf("Cavalry")));
-		if (id != null && id.classesList.indexOf("Cavalry") < 0)
+		if (id != null && !id.classesList.includes("Cavalry"))
 		{
 
 			// warn(uneval(id));
@@ -1133,7 +1132,7 @@ Trigger.prototype.RangeActionTeleportD = function(data)
 
 		// warn(uneval(id.classesList));
 		// warn(uneval(id.classesList.indexOf("Cavalry")));
-		if (id != null && id.classesList.indexOf("Cavalry") < 0)
+		if (id != null && !id.classesList.includes("Cavalry"))
 		{
 
 			// warn(uneval(id));

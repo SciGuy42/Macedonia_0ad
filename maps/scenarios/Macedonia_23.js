@@ -234,7 +234,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
 		if (id)
 		{
-			if (id.classesList.indexOf("Temple") >= 0)
+			if (id.classesList.includes("Temple"))
 			{
 				if (this.templeCaptured == false)
 				{
@@ -275,7 +275,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 				}
 			}
-			else if (id.classesList.indexOf("Trade") >= 0 && id.classesList.indexOf("Dock") < 0)
+			else if (id.classesList.includes("Trade") && !id.classesList.includes("Dock"))
 			{
 				if (this.marketCaptured == false)
 				{
@@ -301,7 +301,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 					}
 				}
 			}
-			else if (id.classesList.indexOf("Dock") >= 0)
+			else if (id.classesList.includes("Dock"))
 			{
 				this.numDocksCaptured++;
 
@@ -340,7 +340,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 				// warn("Tower captured and destroyed");
 			}
-			else if (id.classesList.indexOf("Arsenal") >= 0)
+			else if (id.classesList.includes("Arsenal"))
 			{
 				// spawn siege equipment
 				const p = 1;
@@ -351,7 +351,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				// warn("Workshop captured and destroyed");
 			}
 
-			if (id.classesList.indexOf("Dock") < 0)
+			if (!id.classesList.includes("Dock"))
 			{
 				// destroy the structure
 				const health_s = Engine.QueryInterface(data.entity, IID_Health);
@@ -369,7 +369,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
 		if (id)
 		{
-			if (id.classesList.indexOf("MercenaryCamp") >= 0)
+			if (id.classesList.includes("MercenaryCamp"))
 			{
 				if (this.campCaptured == false)
 				{
@@ -406,7 +406,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			const id = Engine.QueryInterface(data.entity, IID_Identity);
 			if (id)
 			{
-				if (id.classesList.indexOf("Structure") >= 0)
+				if (id.classesList.includes("Structure"))
 				{
 					this.numBuildingsDestroyed++;
 
@@ -476,7 +476,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			const id = Engine.QueryInterface(data.entity, IID_Identity);
 			if (id)
 			{
-				if (id.classesList.indexOf("Structure") >= 0)
+				if (id.classesList.includes("Structure"))
 				{
 					this.numBuildingsDestroyed++;
 					this.patrolSizeDefault += 2;

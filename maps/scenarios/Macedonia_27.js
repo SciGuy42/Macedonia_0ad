@@ -287,7 +287,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	{
 		// check if trader
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
-		if (id != null && id.classesList.indexOf("Trader") >= 0)
+		if (id != null && id.classesList.includes("Trader"))
 		{
 			// warn("trader dies");
 			const cmpTrader = Engine.QueryInterface(data.entity, IID_Trader);
@@ -317,7 +317,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		if (id)
 		{
 			// check if structure
-			if (id.classesList.indexOf("Structure") >= 0)
+			if (id.classesList.includes("Structure"))
 			{
 				// warn(uneval(id));
 
@@ -335,7 +335,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 						data_attack.ele_prob = 0.4;
 
 					}
-					else if (id.classesList.indexOf("Fortress") >= 0) // fortress
+					else if (id.classesList.includes("Fortress")) // fortress
 					{
 						data_attack.attack_size = 20;
 						data_attack.ele_prob = 0.9;
@@ -367,24 +367,24 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				// give bonus loot to player 1 and lower pop limit for watch
 				const cmpPlayer = QueryPlayerIDInterface(1);
 
-				if (id.classesList.indexOf("Field") >= 0)
+				if (id.classesList.includes("Field"))
 				{
 					cmpPlayer.AddResource("food", 500);
 					this.maxWatchPop = Math.floor(this.maxWatchPop * 0.974);
 				}
-				else if (id.classesList.indexOf("Fortress") >= 0)
+				else if (id.classesList.includes("Fortress"))
 				{
 					cmpPlayer.AddResource("stone", 500);
 					cmpPlayer.AddResource("metal", 250);
 					this.maxWatchPop = Math.floor(this.maxWatchPop * 0.975);
 				}
-				else if (id.classesList.indexOf("Economic") >= 0)
+				else if (id.classesList.includes("Economic"))
 				{
 					cmpPlayer.AddResource("wood", 500);
 					cmpPlayer.AddResource("metal", 250);
 					this.maxWatchPop = Math.floor(this.maxWatchPop * 0.975);
 				}
-				else if (id.classesList.indexOf("House") >= 0)
+				else if (id.classesList.includes("House"))
 				{
 					cmpPlayer.AddResource("food", 100);
 					cmpPlayer.AddResource("wood", 50);
@@ -408,7 +408,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 
 			// check if civil centre
-			if (id.classesList.indexOf("CivilCentre") >= 0)
+			if (id.classesList.includes("CivilCentre"))
 			{
 				TriggerHelper.SetPlayerWon(1, this.VictoryTextFn, this.VictoryTextFn);
 
@@ -706,7 +706,7 @@ Trigger.prototype.RangeActionTradersDestination = function(data)
 	for (const e of data.currentCollection)
 	{
 		const id = Engine.QueryInterface(e, IID_Identity);
-		if (id.classesList.indexOf("Trader") >= 0)
+		if (id.classesList.includes("Trader"))
 		{
 			traders_arrived.push(e);
 

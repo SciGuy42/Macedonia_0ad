@@ -218,7 +218,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
 		warn(uneval(id));
 
-		if (id.classesList.indexOf("Embassy") >= 0)
+		if (id.classesList.includes("Embassy"))
 		{
 			// captured camp, spawn some balistas
 			TriggerHelper.SpawnUnits(data.entity, "units/mace/siege_oxybeles_packed", 8, 1);
@@ -226,7 +226,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			// spawn the princess
 			TriggerHelper.SpawnUnits(data.entity, "units/kush/hero_amanirenas", 1, 1);
 		}
-		else if (id.classesList.indexOf("Pyramid") >= 0)
+		else if (id.classesList.includes("Pyramid"))
 		{
 			const cmpPlayer = QueryPlayerIDInterface(1);
 			const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
@@ -247,7 +247,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	{
 		// check if soldier
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
-		if (id && id.classesList.indexOf("Soldier") >= 0)
+		if (id && id.classesList.includes("Soldier"))
 		{
 			// find out which cluster
 			let target_cluster = -1;

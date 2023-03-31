@@ -283,7 +283,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	if (data.from == 1 && data.to == -1)
 	{
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
-		if (id && id.classesList.indexOf("Outpost") >= 0)
+		if (id && id.classesList.includes("Outpost"))
 		{
 			// warn("Outpost destroyed!");
 			// warn(uneval(data));

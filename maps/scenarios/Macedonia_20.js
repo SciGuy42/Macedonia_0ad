@@ -218,7 +218,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 	if (data.from == 0 && data.to == 1)
 	{
-		if (id.classesList.indexOf("Corral") >= 0)
+		if (id.classesList.includes("Corral"))
 		{
 			warn("corral captured");
 
@@ -268,7 +268,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		}
 
 	}
-	else if (data.from == 2 && (data.to == 1 || data.to == -1) && id.classesList.indexOf("MercenaryCamp") >= 0)
+	else if (data.from == 2 && (data.to == 1 || data.to == -1) && id.classesList.includes("MercenaryCamp"))
 	{
 		// completes rescue quest
 		this.questRescueComplete = true;
@@ -865,7 +865,7 @@ Trigger.prototype.RangeActionTriggerAttack = function(data)
 		for (const e of data.currentCollection)
 		{
 			const id = Engine.QueryInterface(e, IID_Identity);
-			if (id.classesList.indexOf("Trader") >= 0)
+			if (id.classesList.includes("Trader"))
 			{
 				num_caravans++;
 				caravans.push(e);
@@ -1014,7 +1014,7 @@ Trigger.prototype.RangeActionElephantVillage = function(data)
 		for (const e of data.currentCollection)
 		{
 			const id = Engine.QueryInterface(e, IID_Identity);
-			if (id.classesList.indexOf("Trader") >= 0)
+			if (id.classesList.includes("Trader"))
 			{
 				num_caravans++;
 				caravans.push(e);
@@ -1250,7 +1250,7 @@ Trigger.prototype.RangeActionTriggerGoat = function(data)
 		for (const e of data.currentCollection)
 		{
 			const id = Engine.QueryInterface(e, IID_Identity);
-			if (id.classesList.indexOf("Animal") >= 0)
+			if (id.classesList.includes("Animal"))
 			{
 				num_goats++;
 				goats.push(e);

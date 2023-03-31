@@ -786,7 +786,7 @@ Trigger.prototype.RangeActionTradersArrival = function(data)
 		for (const e of data.currentCollection)
 		{
 			const id = Engine.QueryInterface(e, IID_Identity);
-			if (id.classesList.indexOf("Trader") >= 0)
+			if (id.classesList.includes("Trader"))
 			{
 				num_caravans++;
 			}
@@ -1321,7 +1321,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		// check if siege
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
 
-		if (id != null && id.classesList.indexOf("Siege") >= 0)
+		if (id != null && id.classesList.includes("Siege"))
 		{
 
 			this.numSiegeCaptured += 1;
@@ -1342,7 +1342,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	{
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
 
-		if (id != null && id.classesList.indexOf("Elephant") >= 0)
+		if (id != null && id.classesList.includes("Elephant"))
 		{
 			this.numElephantsKilled += 1;
 
@@ -1432,7 +1432,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	{
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
 
-		if (id != null && id.classesList.indexOf("Hero") >= 0)
+		if (id != null && id.classesList.includes("Hero"))
 		{
 			TriggerHelper.SetPlayerWon(2, this.VictoryTextFn, this.VictoryTextFn);
 		}

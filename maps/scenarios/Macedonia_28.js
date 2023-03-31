@@ -184,7 +184,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	{
 		// with smalll chance, some of the mountains patrols engage
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
-		if (id != null && id.classesList.indexOf("Structure") >= 0 && id.classesList.indexOf("Foundation") < 0)
+		if (id != null && id.classesList.includes("Structure") && !id.classesList.includes("Foundation"))
 		{
 			// warn("Player 2 lost a structure!");
 
@@ -225,7 +225,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	if ((data.from == 5 || data.from == 4) && (data.to == -1 || data.to == 1))
 	{
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
-		if (id != null && id.classesList.indexOf("MercenaryCamp") >= 0)
+		if (id != null && id.classesList.includes("MercenaryCamp"))
 		{
 			// warn("Camp destroyed!");
 			const num_attack_squads = 2;
@@ -719,7 +719,7 @@ Trigger.prototype.pickRandomK = function(inputs, K)
 	{
 		const next = pickRandom(inputs);
 
-		if (subset.indexOf(next) < 0)
+		if (!subset.includes(next))
 		{
 			subset.push(next);
 		}

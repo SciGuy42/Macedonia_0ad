@@ -267,7 +267,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		{
 			const id = Engine.QueryInterface(data.entity, IID_Identity);
 			// warn(uneval(id));
-			if (id && id.classesList.indexOf("Outpost") >= 0)
+			if (id && id.classesList.includes("Outpost"))
 			{
 				// warn("command");
 				this.boatCommandTriggered = true;
@@ -282,22 +282,22 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	{
 		if ((data.from == 5 || data.from == 6) && data.to == -1)
 		{
-			//check if structure
-			let id = Engine.QueryInterface(data.entity, IID_Identity);
-			//warn(uneval(id));
-			if (id != null && id.classesList.indexOf("Structure") >= 0)
+			// check if structure
+			const id = Engine.QueryInterface(data.entity, IID_Identity);
+			// warn(uneval(id));
+			if (id != null && id.classesList.includes("Structure"))
 			{
 				if (data.from == 5)
 				{
-					//spawn attack from player 6
-					this.DoAfterDelay(5 * 1000,"SpecialArcadianAssault",null);
+					// spawn attack from player 6
+					this.DoAfterDelay(5 * 1000, "SpecialArcadianAssault", null);
 					this.specialAttackTriggered = true;
 
 				}
 				else if (data.from == 6)
 				{
-					//spawn attack from player 5
-					this.DoAfterDelay(5 * 1000,"SpecialAchaeanAssault",null);
+					// spawn attack from player 5
+					this.DoAfterDelay(5 * 1000, "SpecialAchaeanAssault", null);
 					this.specialAttackTriggered = true;
 				}
 			}
@@ -310,8 +310,8 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 	if (data.from == 5 && data.to == -1)
 	{
-		let id = Engine.QueryInterface(data.entity, IID_Identity);
-		if (id.classesList.indexOf("Fortress") >= 0)
+		const id = Engine.QueryInterface(data.entity, IID_Identity);
+		if (id.classesList.includes("Fortress"))
 		{
 			warn("Fortress destroyed!");
 			this.CavalryAttack();
@@ -323,21 +323,21 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 	/* if (data.from == 0 && data.to == 1)
 	{
-		let id = Engine.QueryInterface(data.entity, IID_Identity);
+		const id = Engine.QueryInterface(data.entity, IID_Identity);
 		warn(uneval(id));
 
-		if (id.classesList.indexOf("Embassy") >= 0)
+		if (id.classesList.includes("Embassy"))
 		{
-			//captured camp, spawn some balistas
-			TriggerHelper.SpawnUnits(data.entity,"units/mace/siege_oxybeles_packed",8,1);
+			// captured camp, spawn some balistas
+			TriggerHelper.SpawnUnits(data.entity, "units/mace/siege_oxybeles_packed", 8, 1);
 
-			//spawn the princess
-			TriggerHelper.SpawnUnits(data.entity,"units/kush/hero_amanirenas",1,1);
+			// spawn the princess
+			TriggerHelper.SpawnUnits(data.entity, "units/kush/hero_amanirenas", 1, 1);
 		}
-		else if (id.classesList.indexOf("Pyramid") >= 0)
+		else if (id.classesList.includes("Pyramid"))
 		{
-			let cmpPlayer = QueryPlayerIDInterface(1);
-			let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
+			const cmpPlayer = QueryPlayerIDInterface(1);
+			const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 
 			cmpTechnologyManager.ResearchTechnology("tower_health");
 			cmpTechnologyManager.ResearchTechnology("tower_range");
@@ -350,11 +350,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 		}
 	}*/
-
-
-
-
-
 };
 
 Trigger.prototype.PlayerCommandAction = function(data)
@@ -783,7 +778,7 @@ Trigger.prototype.pickRandomK = function(inputs, K)
 	{
 		const next = pickRandom(inputs);
 
-		if (subset.indexOf(next) < 0)
+		if (!subset.includes(next))
 		{
 			subset.push(next);
 		}
@@ -1224,7 +1219,7 @@ Trigger.prototype.RangeActionRiverCrossing = function(data)
 		for (const e of data.added)
 		{
 			const id = Engine.QueryInterface(e, IID_Identity);
-			if (id && (id.classesList.indexOf("Cavalry") >= 0 || id.classesList.indexOf("Infantry") >= 0))
+			if (id && (id.classesList.includes("Cavalry") || id.classesList.includes("Infantry")))
 			{
 				// we have unloaded some troops, river is now considered crossed
 				this.riverCrossed = true;

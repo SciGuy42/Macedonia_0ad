@@ -116,9 +116,9 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	// warn("The OnOwnershipChanged event happened with the following data:");
 	// warn(uneval(data));
 
-	/* if (this.enemies.indexOf(data.from) >= 0)
+	/* if (this.enemies.includes(data.from))
 	{
-		let id = Engine.QueryInterface(data.entity, IID_Identity);
+		const id = Engine.QueryInterface(data.entity, IID_Identity);
 
 		if (id)
 		{
@@ -127,49 +127,49 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 				if ((id.classesList.includes("Defensive") && id.classesList.includes("Tower")) && this.tower_destroyed_event_happened == false)
 				{
-					//warn("tower destroyed");
+					// warn("tower destroyed");
 					this.tower_destroyed_event_happened = true;
-					//this.DoAfterDelay(5 * 1000, "spawnInvasionAttack",null);
+					// this.DoAfterDelay(5 * 1000, "spawnInvasionAttack",null);
 
-					//bump up points of capadocia for attack
+					// bump up points of capadocia for attack
 					this.points_player4 += 2000;
 					this.CapadociaAttack();
 					this.points_player4 -= 1500;
 				}
-				else if (id.visibleClassesList.indexOf("CivilCentre") >= 0)
+				else if (id.visibleClassesList.includes("CivilCentre"))
 				{
-					//warn("special greek attack");
-					this.DoAfterDelay(5 * 1000, "SpecialGreekAttack",null);
+					// warn("special greek attack");
+					this.DoAfterDelay(5 * 1000, "SpecialGreekAttack", null);
 
 				}
 			}
 			else if (data.from == 4)
 			{
-				if (id.classesList.indexOf("MercenaryCamp") >= 0)
+				if (id.classesList.includes("MercenaryCamp"))
 				{
 					warn("special greek attack");
-					this.DoAfterDelay(5 * 1000, "SpecialGreekAttack",null);
+					this.DoAfterDelay(5 * 1000, "SpecialGreekAttack", null);
 
-					//do another just for fun
-					this.DoAfterDelay(60 * 1000, "SpecialGreekAttack",null);
+					// do another just for fun
+					this.DoAfterDelay(60 * 1000, "SpecialGreekAttack", null);
 				}
 			}
-			else if (this.invasion_under_way == false) //triggers for ship invasion attacks
+			else if (this.invasion_under_way == false) // triggers for ship invasion attacks
 			{
-				if (id.visibleClassesList.indexOf("CivilCentre") >= 0 && this.cc_destroyed_event_happened == false)
+				if (id.visibleClassesList.includes("CivilCentre") && this.cc_destroyed_event_happened == false)
 				{
 					this.cc_destroyed_event_happened = true;
-					this.DoAfterDelay(5 * 1000, "spawnInvasionAttack",null);
+					this.DoAfterDelay(5 * 1000, "spawnInvasionAttack", null);
 				}
-				else if (id.visibleClassesList.indexOf("Fortress") >= 0 && this.fortress_destroyed_event_happened == false)
+				else if (id.visibleClassesList.includes("Fortress") && this.fortress_destroyed_event_happened == false)
 				{
 					this.fortress_destroyed_event_happened = true;
-					this.DoAfterDelay(5 * 1000, "spawnInvasionAttack",null);
+					this.DoAfterDelay(5 * 1000, "spawnInvasionAttack", null);
 				}
-				else if (id.classesList.indexOf("Dock") >= 0 && this.dock_destroyed_event_happened == false)
+				else if (id.classesList.includes("Dock") && this.dock_destroyed_event_happened == false)
 				{
 					this.dock_destroyed_event_happened = true;
-					this.DoAfterDelay(5 * 1000, "spawnInvasionAttack",null);
+					this.DoAfterDelay(5 * 1000, "spawnInvasionAttack", null);
 				}
 			}
 		}
@@ -203,7 +203,7 @@ Trigger.prototype.PatrolOrder = function(units, patrol_entities, k, player_numbe
 		while (patrolTargets.length < k)
 		{
 			const ent_k = Math.floor(Math.random() * patrol_entities.length);
-			if (patrolTargets.indexOf(patrol_entities[ent_k]) < 0)
+			if (!patrolTargets.includes(patrol_entities[ent_k]))
 				patrolTargets.push(patrol_entities[ent_k]);
 		}
 	}

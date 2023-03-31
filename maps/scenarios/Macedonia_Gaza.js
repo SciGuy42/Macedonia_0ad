@@ -278,7 +278,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	if (data.from == 5 && data.to == -1)
 	{
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
-		if (id.classesList.indexOf("Fortress") >= 0)
+		if (id.classesList.includes("Fortress"))
 		{
 			warn("Fortress destroyed!");
 			this.CavalryAttack();
@@ -290,21 +290,21 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 	/* if (data.from == 0 && data.to == 1)
 	{
-		let id = Engine.QueryInterface(data.entity, IID_Identity);
+		const id = Engine.QueryInterface(data.entity, IID_Identity);
 		warn(uneval(id));
 
-		if (id.classesList.indexOf("Embassy") >= 0)
+		if (id.classesList.includes("Embassy"))
 		{
-			//captured camp, spawn some balistas
-			TriggerHelper.SpawnUnits(data.entity,"units/mace/siege_oxybeles_packed",8,1);
+			// captured camp, spawn some balistas
+			TriggerHelper.SpawnUnits(data.entity, "units/mace/siege_oxybeles_packed", 8, 1);
 
-			//spawn the princess
-			TriggerHelper.SpawnUnits(data.entity,"units/kush/hero_amanirenas",1,1);
+			// spawn the princess
+			TriggerHelper.SpawnUnits(data.entity, "units/kush/hero_amanirenas", 1, 1);
 		}
-		else if (id.classesList.indexOf("Pyramid") >= 0)
+		else if (id.classesList.includes("Pyramid"))
 		{
-			let cmpPlayer = QueryPlayerIDInterface(1);
-			let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
+			const cmpPlayer = QueryPlayerIDInterface(1);
+			const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 
 			cmpTechnologyManager.ResearchTechnology("tower_health");
 			cmpTechnologyManager.ResearchTechnology("tower_range");
@@ -317,11 +317,6 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 		}
 	}*/
-
-
-
-
-
 };
 
 Trigger.prototype.PlayerCommandAction = function(data)

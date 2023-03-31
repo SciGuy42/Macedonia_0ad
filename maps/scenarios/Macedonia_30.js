@@ -465,7 +465,7 @@ Trigger.prototype.pickRandomK = function(inputs, K)
 	{
 		const next = pickRandom(inputs);
 
-		if (subset.indexOf(next) < 0)
+		if (!subset.includes(next))
 		{
 			subset.push(next);
 		}

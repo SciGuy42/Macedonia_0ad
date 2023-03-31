@@ -972,7 +972,7 @@ Trigger.prototype.StructureBuiltAction = function(data)
 
 	// check if civil cenrte by player 1
 	const id = Engine.QueryInterface(data.building, IID_Identity);
-	if (id && id.classesList.indexOf("CivilCentre") >= 0)
+	if (id && id.classesList.includes("CivilCentre"))
 	{
 		this.numCCsBuilt += 1;
 		if (this.numCCsBuilt >= 2 && this.warStarted == false)
@@ -1096,10 +1096,10 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	// check if players 2 and 5 lost a structure
 	if ((data.from == 2 || data.from == 5))
 	{
-		if (this.foundations && this.foundations.indexOf(data.entity) < 0)
+		if (this.foundations && !this.foundations.includes(data.entity))
 		{
 			const id = Engine.QueryInterface(data.entity, IID_Identity);
-			if (id != null && id.classesList.indexOf("Structure") >= 0 && Math.random() < 0.5 && this.warEnded == false)
+			if (id != null && id.classesList.includes("Structure") && Math.random() < 0.5 && this.warEnded == false)
 			{
 				// if player 6 is alive, possibly send an attack force
 				const p = 6;
@@ -1172,7 +1172,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	{
 		// check if soldier
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
-		if (id && id.classesList.indexOf("Soldier") >= 0)
+		if (id && id.classesList.includes("Soldier"))
 		{
 			// find out which cluster
 			let target_cluster = -1;

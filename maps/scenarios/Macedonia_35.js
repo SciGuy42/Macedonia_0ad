@@ -356,7 +356,7 @@ Trigger.prototype.IdleUnitCheck = function(data)
 							// warn("target's classes: "+uneval(id.classesList));
 
 							// if attacking unit, possibly switch to structure
-							if (id.classesList.indexOf("Unit") >= 0)
+							if (id.classesList.includes("Unit"))
 							{
 
 								// find distance to target

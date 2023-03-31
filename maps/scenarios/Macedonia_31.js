@@ -626,7 +626,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			// check if camp
 			const id = Engine.QueryInterface(data.entity, IID_Identity);
 
-			if (id != null && id.classesList.indexOf("Structure") >= 0)
+			if (id != null && id.classesList.includes("Structure"))
 			{
 				this.numCampsDestroyed++;
 

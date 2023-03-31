@@ -764,7 +764,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	{
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
 		// warn(uneval(id));
-		if (id != null && id.classesList.indexOf("Infantry") >= 0)
+		if (id != null && id.classesList.includes("Infantry"))
 		{
 			warn("gaia attacks");
 

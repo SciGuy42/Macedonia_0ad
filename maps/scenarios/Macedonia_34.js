@@ -637,7 +637,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
 		if (id)
 		{
-			if (id.classesList.indexOf("House") >= 0)
+			if (id.classesList.includes("House"))
 			{
 
 				// increase spawn interval
@@ -667,7 +667,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
 		if (id)
 		{
-			if (id.classesList.indexOf("Infantry") >= 0)
+			if (id.classesList.includes("Infantry"))
 			{
 				// warn("infantry killed");
 
@@ -677,7 +677,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				cmpPlayer.AddResource("stone", 5);
 				cmpPlayer.AddResource("metal", 3);
 			}
-			else if (id.classesList.indexOf("Elephant") >= 0)
+			else if (id.classesList.includes("Elephant"))
 			{
 				// warn("Elephant killed");
 
@@ -686,7 +686,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				cmpPlayer.AddResource("wood", 10);
 				cmpPlayer.AddResource("metal", 5);
 			}
-			else if (id.classesList.indexOf("Structure") >= 0)
+			else if (id.classesList.includes("Structure"))
 			{
 				// warn("Elephant killed");
 
@@ -704,7 +704,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
 		if (id)
 		{
-			if (id.classesList.indexOf("Hero") >= 0)
+			if (id.classesList.includes("Hero"))
 			{
 				// TODO: lose game
 				// warn("hero dead");
@@ -719,7 +719,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
 		if (id)
 		{
-			if (id.classesList.indexOf("CivilCentre") >= 0)
+			if (id.classesList.includes("CivilCentre"))
 			{
 				// TODO: lose game
 				warn("cc dead");
@@ -732,7 +732,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	{
 		// check if soldier
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
-		if (id && id.classesList.indexOf("Soldier") >= 0)
+		if (id && id.classesList.includes("Soldier"))
 		{
 			// find out which cluster
 			let target_cluster = -1;
