@@ -656,7 +656,7 @@ Trigger.prototype.IntervalSpawnGroundAttack = function(data)
 			// decide how many
 			const size = base_size + i * size_increase;
 
-			const data = {};
+			data = {};
 
 			/* let p = data.p;
 			let site = data.site;
@@ -1244,7 +1244,7 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 		// health_s.Kill();
 		Engine.DestroyEntity(u);
 
-		const data = {};
+		data = {};
 		data.site = this.tunnelOutlets[0];
 		data.owner = 1;
 		data.template = template;

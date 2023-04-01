@@ -379,7 +379,7 @@ Trigger.prototype.IdleUnitCheck = function(data)
 	if (this.ownTriggerStarted == null)
 	{
 		this.ownTriggerStarted = true;
-		const data = { "enabled": true };
+		data = { "enabled": true };
 		this.RegisterTrigger("OnOwnershipChanged", "OwnershipChangedAction", data);
 		// warn("started ownership changed trigger");
 	}

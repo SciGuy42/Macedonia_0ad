@@ -897,7 +897,7 @@ Trigger.prototype.RangeActionTeleportA = function(data)
 
 				Engine.DestroyEntity(u);
 
-				const data = {};
+				data = {};
 				data.site = this.tunnelOutlets[0];
 				data.owner = 1;
 				data.template = new_template;
@@ -967,7 +967,7 @@ Trigger.prototype.RangeActionTeleportB = function(data)
 
 				Engine.DestroyEntity(u);
 
-				const data = {};
+				data = {};
 				data.site = this.tunnelOutlets[1];
 				data.owner = 1;
 				data.template = new_template;
@@ -1036,7 +1036,7 @@ Trigger.prototype.RangeActionTeleportC = function(data)
 
 				Engine.DestroyEntity(u);
 
-				const data = {};
+				data = {};
 				data.site = this.tunnelOutlets[2];
 				data.owner = 1;
 				data.template = new_template;
@@ -1106,7 +1106,7 @@ Trigger.prototype.RangeActionTeleportD = function(data)
 
 				Engine.DestroyEntity(u);
 
-				const data = {};
+				data = {};
 				data.site = this.tunnelOutlets[3];
 				data.owner = 1;
 				data.template = new_template;

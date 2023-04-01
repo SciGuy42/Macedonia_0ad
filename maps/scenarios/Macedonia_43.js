@@ -1072,7 +1072,7 @@ Trigger.prototype.IntervalSpawnGroundAttack = function(data)
 			// decide how many
 			const size = base_size + i * size_increase;
 
-			const data = {};
+			data = {};
 
 			/* let p = data.p;
 			let site = data.site;

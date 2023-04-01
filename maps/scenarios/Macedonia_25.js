@@ -929,7 +929,7 @@ Trigger.prototype.SpawnFortressAttack = function(data)
 
 	for (let i = 0; i < num_squads; i++)
 	{
-		const data = {};
+		data = {};
 		data.squad_size = squad_size;
 		data.templates = templates;
 		data.site = pickRandom(sites);
@@ -1000,7 +1000,7 @@ Trigger.prototype.SpawnPassAttack = function(data)
 
 	for (let i = 0; i < num_squads; i++)
 	{
-		const data = {};
+		data = {};
 		data.squad_size = squad_size + Math.round(i * 1.55);
 		data.templates = templates;
 		data.site = pickRandom(sites);

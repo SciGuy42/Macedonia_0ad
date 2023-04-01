@@ -1143,7 +1143,7 @@ Trigger.prototype.IntervalSpawnGroundAttack = function(data)
 			// decide how many
 			const size = base_size + i * size_increase;
 
-			const data = {};
+			data = {};
 
 			/* let p = data.p;
 			let site = data.site;
@@ -1431,7 +1431,7 @@ Trigger.prototype.RangeActionGreekColony = function(data)
 		{
 			const spawn_site = sites[0];
 
-			const data = {};
+			data = {};
 			data.p = 7;
 			data.site = spawn_site;
 			data.templates = ["units/pers/champion_infantry", "units/pers/champion_elephant", "units/pers/arstibara", "units/pers/infantry_javelineer_b", "units/pers/infantry_archer_b", "units/pers/infantry_spearman_b", "units/pers/infantry_spearman_b", "units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher"];
