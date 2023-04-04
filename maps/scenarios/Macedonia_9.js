@@ -478,7 +478,7 @@ Trigger.prototype.specialShipAttack = function(data)
 		// pick target
 		const dock_targets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "Dock").filter(TriggerHelper.IsInWorld);
 
-		const ship_targets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "Dock").filter(TriggerHelper.IsInWorld);
+		const ship_targets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "Ship").filter(TriggerHelper.IsInWorld);
 
 		let target;
 
@@ -547,10 +547,11 @@ Trigger.prototype.spawnShipAttack = function(data)
 		// pick target
 		const dock_targets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "Dock").filter(TriggerHelper.IsInWorld);
 
-		const ship_targets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "Dock").filter(TriggerHelper.IsInWorld);
+		const ship_targets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "Ship").filter(TriggerHelper.IsInWorld);
 
 		let target;
-
+		// TODO-ERROR-PREVENTION: "dock_targets" and "ship_targets" can both be empty arrays
+		// "target" can become undefined causing errors when calling "cmpUnitAI.Attack(target)"
 		if (ship_targets.length == 0)
 			target = pickRandom(dock_targets);
 		else if (dock_targets.length == 0)
