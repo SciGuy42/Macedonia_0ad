@@ -867,7 +867,7 @@ Trigger.prototype.IntervalSpawnGoats = function(data)
 	const p = 3;
 
 	const cmpPlayer = QueryPlayerIDInterface(p);
-	if (cmpPlayer.GetState != "active")
+	if (cmpPlayer.GetState() != "active")
 	{
 		return;
 	}

@@ -1062,7 +1062,7 @@ Trigger.prototype.SpawnBessusPatrol = function(data)
 
 	// get state and see if player is alive
 	const cmpPlayer = QueryPlayerIDInterface(p);
-	if (cmpPlayer.GetState != "defeated")
+	if (cmpPlayer.GetState() != "defeated")
 	{
 
 		// see how many units we have
