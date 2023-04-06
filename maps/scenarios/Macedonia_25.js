@@ -1499,8 +1499,8 @@ Trigger.prototype.HealthCheck = function(data)
 
 	for (const u of units_p)
 	{
-		const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-		if (cmpUnitAI.isGarrisoned)
+		const cmpGarrisonable = Engine.QueryInterface(u, IID_Garrisonable);
+		if (cmpGarrisonable && cmpGarrisonable.IsGarrisoned())
 		{
 			// warn("Found unit to heal!");
 
