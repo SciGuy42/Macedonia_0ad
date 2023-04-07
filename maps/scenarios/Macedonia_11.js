@@ -562,6 +562,8 @@ Trigger.prototype.IntervalActionShipAttack = function(data)
 	const ship_targets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "Ship").filter(TriggerHelper.IsInWorld);
 
 	let target;
+	// TODO-ERROR-PREVENTION: "dock_targets" and "ship_targets" can both be empty arrays
+	// "target" can become undefined causing errors when calling "cmpUnitAI.Attack(target)"
 	if (dock_targets.length == 0)
 		target = pickRandom(ship_targets);
 	else if (ship_targets.length == 0)
