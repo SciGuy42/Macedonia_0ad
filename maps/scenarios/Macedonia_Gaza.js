@@ -211,7 +211,7 @@ Trigger.prototype.FindClosestTarget = function(attacker, target_player, target_c
 		if (!TriggerHelper.IsInWorld(target))
 			continue;
 
-		const targetDistance = DistanceBetweenEntities(attacker, target);
+		const targetDistance = PositionHelper.DistanceBetweenEntities(attacker, target);
 		if (targetDistance < minDistance)
 		{
 			closestTarget = target;

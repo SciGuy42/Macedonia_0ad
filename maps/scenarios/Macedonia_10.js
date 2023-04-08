@@ -639,7 +639,7 @@ Trigger.prototype.IntervalDefenderCheckAction = function(data)
 						if (!TriggerHelper.IsInWorld(target))
 							continue;
 
-						let targetDistance = DistanceBetweenEntities(f, target);
+						let targetDistance = PositionHelper.DistanceBetweenEntities(f, target);
 						if (targetDistance < minDistance)
 						{
 							closestTarget = target;

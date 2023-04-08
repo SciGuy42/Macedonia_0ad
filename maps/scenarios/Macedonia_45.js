@@ -193,7 +193,7 @@ Trigger.prototype.FindClosestTarget = function(attacker, target_player, target_c
 		if (!TriggerHelper.IsInWorld(target))
 			continue;
 
-		const targetDistance = DistanceBetweenEntities(attacker, target);
+		const targetDistance = PositionHelper.DistanceBetweenEntities(attacker, target);
 		if (targetDistance < minDistance)
 		{
 			closestTarget = target;
@@ -360,7 +360,7 @@ Trigger.prototype.MonitorCrazedHeroesQuest = function(data)
 			}
 
 			// check if any of them are close to the gaia temple
-			const d = DistanceBetweenEntities(u, nomad_temple);
+			const d = PositionHelper.DistanceBetweenEntities(u, nomad_temple);
 
 			if (d < 35)
 			{
@@ -684,7 +684,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				const camp = camps[0];
 
 				// find distance between dead entity and camp
-				const d = DistanceBetweenEntities(data.entity, camp);
+				const d = PositionHelper.DistanceBetweenEntities(data.entity, camp);
 				// warn(d);
 				if (d < 250)
 				{
@@ -1958,7 +1958,7 @@ Trigger.prototype.SpawnMountainVillageGuards = function(data)
 
 		for (const s of all_structs)
 		{
-			const d = DistanceBetweenEntities(s, camp);
+			const d = PositionHelper.DistanceBetweenEntities(s, camp);
 			if (d < 150)
 			{
 				patrol_sites.push(s);
@@ -2240,7 +2240,7 @@ Trigger.prototype.StatusCheck = function(data)
 				var cmpTriggerPosition = Engine.QueryInterface(trigger_site, IID_Position).GetPosition2D();
 
 				// look at distance between positions
-				const targetDistance = DistanceBetweenEntities(u, trigger_site);
+				const targetDistance = PositionHelper.DistanceBetweenEntities(u, trigger_site);
 
 				if (targetDistance < 60)
 				{
