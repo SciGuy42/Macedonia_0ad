@@ -126,10 +126,10 @@ Trigger.prototype.ResearchQueuedAction = function(data)
 Trigger.prototype.OwnershipChangedAction = function(data)
 {
 	// warn("The OnOwnershipChanged event happened with the following data:");
-	warn(uneval(data));
+	// warn(uneval(data));
 
 	const id = Engine.QueryInterface(data.entity, IID_Identity);
-	warn(uneval(id));
+	// warn(uneval(id));
 
 	if (data.from == 0 && data.to == 1)
 	{
@@ -438,10 +438,11 @@ Trigger.prototype.IntervalActionTraders = function(data)
 			const cmpUnitAI = Engine.QueryInterface(trader, IID_UnitAI);
 			if (cmpUnitAI)
 			{
-				if (cmpUnitAI.IsIdle())
+				if (cmpUnitAI.IsIdle() && docks_others.length)
 				{
 					// warn("updating ship orders");
 					cmpUnitAI.UpdateWorkOrders("Trade");
+					// TODO-ERROR-PREVENTION: "docks_others" can become an empty array
 					cmpUnitAI.SetupTradeRoute(pickRandom(docks_others), docks_e[0], null, true);
 				}
 			}
