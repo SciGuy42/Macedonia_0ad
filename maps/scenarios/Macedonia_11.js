@@ -22,6 +22,8 @@ Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, 
 	let target = this.FindClosestTarget(attacker, target_player, target_class);
 	if (!target)
 	{
+		// TODO-ERROR-PREVENTION: siegeTargetClass is not defined
+		// Did you miss adding "var siegeTargetClass = "Structure";" at the top of the file ?
 		target = this.FindClosestTarget(attacker, target_player, siegeTargetClass);
 	}
 
@@ -535,6 +537,9 @@ Trigger.prototype.IntervalActionShipAttack = function(data)
 		const ship_spawned = TriggerHelper.SpawnUnits(spawn_site, pickRandom(this.spawn_ship_templates), 1, owner);
 
 		// spawn the garrison inside the ship
+		// TODO-ERROR-PREVENTION: Many errors result from the line below, run the simulation at turn ~3000
+		// "WARNING: PlayerID 4 |    >>> no landing zone for land 2 and sea undefined" and later
+		// "simulation/ai/common-api/utils.js line 27 undefined has no properties"
 		TriggerHelper.SpawnGarrisonedUnits(ship_spawned[0], pickRandom(this.spawn_garrison_templates), this.garrisonCount, owner);
 
 		// make sure the unit has no orders, for some reason after garissoning, the order queue is full of pick up orders
@@ -624,6 +629,7 @@ Trigger.prototype.IntervalActionTraders = function(data)
 					{
 						// warn("updating trade orders");
 						cmpUnitAI.UpdateWorkOrders("Trade");
+						// TODO-ERROR-PREVENTION: "markets_others" can become an empty array
 						cmpUnitAI.SetupTradeRoute(pickRandom(markets_others), markets_e[0], null, true);
 					}
 				}
@@ -663,6 +669,7 @@ Trigger.prototype.IntervalActionTraders = function(data)
 					{
 						// warn("updating ship orders");
 						cmpUnitAI.UpdateWorkOrders("Trade");
+						// TODO-ERROR-PREVENTION: "docks_others" can become an empty array
 						cmpUnitAI.SetupTradeRoute(pickRandom(docks_others), docks_e[0], null, true);
 					}
 				}
