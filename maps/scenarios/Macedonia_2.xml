@@ -42892,7 +42892,7 @@
 		</Entity>
 		<Entity uid="8055">
 			<Template>gaia/treasure/metal</Template>
-			<Player>1</Player>
+			<Player>0</Player>
 			<Position x="1503.56312" z="936.66236"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="36805"/>
@@ -42948,21 +42948,21 @@
 		</Entity>
 		<Entity uid="8064">
 			<Template>gaia/treasure/metal</Template>
-			<Player>1</Player>
+			<Player>0</Player>
 			<Position x="1535.59571" z="714.5818"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="52144"/>
 		</Entity>
 		<Entity uid="8065">
 			<Template>gaia/treasure/metal</Template>
-			<Player>1</Player>
+			<Player>0</Player>
 			<Position x="1534.99183" z="712.22535"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="27228"/>
 		</Entity>
 		<Entity uid="8066">
 			<Template>gaia/treasure/metal</Template>
-			<Player>1</Player>
+			<Player>0</Player>
 			<Position x="1532.29151" z="713.00867"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="39046"/>

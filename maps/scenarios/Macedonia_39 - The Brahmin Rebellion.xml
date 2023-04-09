@@ -31658,77 +31658,77 @@
 		</Entity>
 		<Entity uid="5983">
 			<Template>gaia/treasure/metal</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="635.34052" z="769.02546"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="24647"/>
 		</Entity>
 		<Entity uid="5984">
 			<Template>gaia/treasure/metal</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="639.211" z="769.07789"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="55873"/>
 		</Entity>
 		<Entity uid="5985">
 			<Template>gaia/treasure/metal</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="637.66401" z="767.09809"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="53798"/>
 		</Entity>
 		<Entity uid="5986">
 			<Template>gaia/treasure/food_crate</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="644.42206" z="774.07795"/>
 			<Orientation y="0.82531"/>
 			<Actor seed="60869"/>
 		</Entity>
 		<Entity uid="5987">
 			<Template>gaia/treasure/food_crate</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="645.01166" z="775.98963"/>
 			<Orientation y="0.01902"/>
 			<Actor seed="31707"/>
 		</Entity>
 		<Entity uid="5988">
 			<Template>gaia/treasure/food_crate</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="644.46839" z="778.49903"/>
 			<Orientation y="2.04503"/>
 			<Actor seed="36143"/>
 		</Entity>
 		<Entity uid="5989">
 			<Template>gaia/treasure/food_crate</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="646.98603" z="777.52186"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="65476"/>
 		</Entity>
 		<Entity uid="5990">
 			<Template>gaia/treasure/metal_weapons_small</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="628.26771" z="773.07276"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="18429"/>
 		</Entity>
 		<Entity uid="5991">
 			<Template>gaia/treasure/metal_weapons_small</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="638.41675" z="785.83631"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="965"/>
 		</Entity>
 		<Entity uid="5992">
 			<Template>gaia/treasure/metal_weapons_small</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="629.18824" z="767.26801"/>
 			<Orientation y="0.68213"/>
 			<Actor seed="36551"/>
 		</Entity>
 		<Entity uid="5993">
 			<Template>gaia/treasure/wood_lumber</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="642.70777" z="770.38642"/>
 			<Orientation y="2.54061"/>
 			<Actor seed="56253"/>

@@ -14811,21 +14811,21 @@
 		</Entity>
 		<Entity uid="3237">
 			<Template>gaia/treasure/food_bin</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1566.66883" z="538.20936"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="7103"/>
 		</Entity>
 		<Entity uid="3238">
 			<Template>gaia/treasure/food_bin</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1571.8108" z="538.19294"/>
 			<Orientation y="-1.14475"/>
 			<Actor seed="41416"/>
 		</Entity>
 		<Entity uid="3239">
 			<Template>gaia/treasure/food_bin</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1571.5553" z="544.33027"/>
 			<Orientation y="-2.69324"/>
 			<Actor seed="4757"/>

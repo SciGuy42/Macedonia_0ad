@@ -12485,7 +12485,7 @@
 		</Entity>
 		<Entity uid="2944">
 			<Template>gaia/treasure/shipwreck_ram_bow</Template>
-			<Player>1</Player>
+			<Player>0</Player>
 			<Position x="51.93094" z="672.50641"/>
 			<Orientation y="0.97402"/>
 			<Actor seed="19455"/>

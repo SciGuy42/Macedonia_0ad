@@ -776,7 +776,7 @@
 		</Entity>
 		<Entity uid="256">
 			<Template>gaia/tree/toona</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="535.72858" z="881.39173"/>
 			<Orientation y="5.40107"/>
 		</Entity>
@@ -71223,13 +71223,13 @@
 		</Entity>
 		<Entity uid="12508">
 			<Template>gaia/treasure/metal</Template>
-			<Player>1</Player>
+			<Player>0</Player>
 			<Position x="1103.47468" z="1761.11634"/>
 			<Orientation y="-1.60375"/>
 		</Entity>
 		<Entity uid="12513">
 			<Template>gaia/treasure/wood</Template>
-			<Player>1</Player>
+			<Player>0</Player>
 			<Position x="1117.201" z="1763.95374"/>
 			<Orientation y="-2.11696"/>
 		</Entity>

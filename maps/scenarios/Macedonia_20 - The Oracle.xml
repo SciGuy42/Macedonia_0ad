@@ -32757,7 +32757,7 @@
 		</Entity>
 		<Entity uid="6423">
 			<Template>gaia/ruins/stone_statues_kushite</Template>
-			<Player>3</Player>
+			<Player>0</Player>
 			<Position x="1512.24207" z="252.1305"/>
 			<Orientation y="2.6469"/>
 			<Actor seed="51548"/>

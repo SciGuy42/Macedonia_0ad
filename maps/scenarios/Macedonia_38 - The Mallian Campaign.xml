@@ -45541,7 +45541,7 @@
 		</Entity>
 		<Entity uid="12051">
 			<Template>gaia/ore/tropical_large</Template>
-			<Player>1</Player>
+			<Player>0</Player>
 			<Position x="960.57483" z="233.67923"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="49632"/>

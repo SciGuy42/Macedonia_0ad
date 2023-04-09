@@ -72720,7 +72720,7 @@
 		</Entity>
 		<Entity uid="12793">
 			<Template>gaia/tree/oak</Template>
-			<Player>3</Player>
+			<Player>0</Player>
 			<Position x="276.4061" z="680.26288"/>
 			<Orientation y="-2.9708"/>
 		</Entity>
@@ -72756,7 +72756,7 @@
 		</Entity>
 		<Entity uid="12799">
 			<Template>gaia/tree/oak</Template>
-			<Player>3</Player>
+			<Player>0</Player>
 			<Position x="337.28873" z="637.44709"/>
 			<Orientation y="-1.90557"/>
 		</Entity>
@@ -74286,7 +74286,7 @@
 		</Entity>
 		<Entity uid="13057">
 			<Template>gaia/tree/oak_large</Template>
-			<Player>3</Player>
+			<Player>0</Player>
 			<Position x="351.39939" z="654.70545"/>
 			<Orientation y="-3.47727"/>
 		</Entity>
@@ -76902,7 +76902,7 @@
 		</Entity>
 		<Entity uid="13521">
 			<Template>gaia/treasure/metal</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="264.5045" z="628.09815"/>
 			<Orientation y="3.85221"/>
 		</Entity>
