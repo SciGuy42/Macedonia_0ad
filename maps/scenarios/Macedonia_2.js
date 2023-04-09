@@ -187,7 +187,7 @@ Trigger.prototype.GarrisonShips = function(data)
 		"players": [1], // only count entities of player 1
 		"maxRange": 40,
 		"requiredComponent": IID_UnitAI, // only count units in range
-		"enabled": true,
+		"enabled": true
 	});
 
 	/* cmpTrigger.RegisterTrigger("OnInterval", "IntervalAction", {

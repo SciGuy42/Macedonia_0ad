@@ -657,13 +657,13 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalAction", {
 		"enabled": true,
 		"delay": 6 * 1000,
-		"interval": 40 * 1000,
+		"interval": 40 * 1000
 	});
 
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalActionTraders", {
 		"enabled": true,
 		"delay": 3 * 1000,
-		"interval": 45 * 1000,
+		"interval": 45 * 1000
 	});
 
 	/* let ents_5 = TriggerHelper.GetEntitiesByPlayer(5);

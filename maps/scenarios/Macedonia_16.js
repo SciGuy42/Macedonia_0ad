@@ -954,19 +954,19 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	cmpTrigger.RegisterTrigger("OnInterval", "LevelUpPers", {
 		"enabled": true,
 		"delay": 1 * 1000,
-		"interval": 240 * 1000,
+		"interval": 240 * 1000
 	});
 
 	cmpTrigger.RegisterTrigger("OnInterval", "IdleUnitCheck", {
 		"enabled": true,
 		"delay": 15 * 1000,
-		"interval": 15 * 1000,
+		"interval": 15 * 1000
 	});
 
 	cmpTrigger.RegisterTrigger("OnInterval", "StructureDecayCheck", {
 		"enabled": true,
 		"delay": 10 * 1000,
-		"interval": 10 * 1000,
+		"interval": 10 * 1000
 	});
 
 	// register winning trigger

@@ -1316,31 +1316,31 @@ Trigger.prototype.UpdatePoints = function(data)
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalActionShipAttack", {
 		"enabled": true,
 		"delay": 320 * 1000,
-		"interval": 240 * 1000,
+		"interval": 240 * 1000
 	});
 
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalActionTraders", {
 		"enabled": true,
 		"delay": 3 * 1000,
-		"interval": 90 * 1000,
+		"interval": 90 * 1000
 	});
 
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalActionSpawnPatrol", {
 		"enabled": true,
 		"delay": 180 * 1000,
-		"interval": 90 * 1000,
+		"interval": 90 * 1000
 	});
 
 	cmpTrigger.RegisterTrigger("OnInterval", "UpdatePoints", {
 		"enabled": true,
 		"delay": 5 * 1000,
-		"interval": 60 * 1000,
+		"interval": 60 * 1000
 	});
 
 	cmpTrigger.RegisterTrigger("OnInterval", "checkInvasionAttack", {
 		"enabled": true,
 		"delay": 5 * 1000,
-		"interval": 15 * 1000,
+		"interval": 15 * 1000
 	});
 
 }

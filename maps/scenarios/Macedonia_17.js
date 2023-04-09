@@ -1063,32 +1063,32 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	cmpTrigger.RegisterTrigger("OnInterval", "SpawnPatrolPeriodic", {
 		"enabled": true,
 		"delay": 1 * 1000,
-		"interval": 45 * 1000,
+		"interval": 45 * 1000
 	});
 
 	cmpTrigger.RegisterTrigger("OnInterval", "SpawnElephantPatrolPeriodic", {
 		"enabled": true,
 		"delay": 1 * 1000,
-		"interval": 45 * 1000,
+		"interval": 45 * 1000
 	});
 
 	cmpTrigger.RegisterTrigger("OnInterval", "SpawnShipPatrolPeriodic", {
 		"enabled": true,
 		"delay": 1 * 1000,
-		"interval": 120 * 1000,
+		"interval": 120 * 1000
 	});
 
 	// need to test
 	cmpTrigger.RegisterTrigger("OnInterval", "checkInvasionAttack", {
 		"enabled": true,
 		"delay": 5 * 1000,
-		"interval": 15 * 1000,
+		"interval": 15 * 1000
 	});
 
 	cmpTrigger.RegisterTrigger("OnInterval", "StructureDecayCheck", {
 		"enabled": true,
 		"delay": 15 * 1000,
-		"interval": 15 * 1000,
+		"interval": 15 * 1000
 	});
 
 	// register invasion unload trigger
@@ -1114,7 +1114,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	cmpTrigger.RegisterTrigger("OnInterval", "IdleUnitCheck", {
 		"enabled": true,
 		"delay": 15 * 1000,
-		"interval": 15 * 1000,
+		"interval": 15 * 1000
 	});
 
 	/* cmpTrigger.RegisterTrigger("OnInterval", "IntervalUnitSpawn", {

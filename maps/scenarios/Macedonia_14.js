@@ -710,13 +710,13 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalUnitSpawn", {
 		"enabled": true,
 		"delay": 15 * 1000,
-		"interval": 15 * 1000,
+		"interval": 15 * 1000
 	});
 
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalUnitCheck", {
 		"enabled": true,
 		"delay": 5 * 1000,
-		"interval": 15 * 1000,
+		"interval": 15 * 1000
 	});
 
 	// register wave triggers

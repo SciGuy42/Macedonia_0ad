@@ -75,30 +75,30 @@ Trigger.prototype.ShowText = function(text, option_a, option_b)
 			"text": {
 				"caption": {
 					"message": markForTranslation(text),
-					"translateMessage": true,
-				},
+					"translateMessage": true
+				}
 			},
 			"button1": {
 				"caption": {
 					"message": markForTranslation(option_a),
-					"translateMessage": true,
+					"translateMessage": true
 				},
 				"tooltip": {
 					"message": markForTranslation(option_a),
-					"translateMessage": true,
-				},
+					"translateMessage": true
+				}
 			},
 			"button2": {
 				"caption": {
 					"message": markForTranslation(option_b),
-					"translateMessage": true,
+					"translateMessage": true
 				},
 				"tooltip": {
 					"message": markForTranslation(option_b),
-					"translateMessage": true,
-				},
-			},
-		},
+					"translateMessage": true
+				}
+			}
+		}
 	});
 
 };
@@ -818,7 +818,7 @@ Trigger.prototype.RangeActionTriggerAttack = function(data)
 		for (let i = 0; i < spawn_size; i++)
 		{
 			// decide what to spawn
-			const unit_type = pickRandom(["units/pers/arstibara", "units/pers/champion_infantry", "units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher", "units/pers/infantry_archer_e", "units/pers/infantry_spearman_a", "units/pers/infantry_spearman_a", "units/pers/infantry_spearman_a", "units/pers/infantry_javelineer_a", "units/pers/infantry_javelineer_a",]);
+			const unit_type = pickRandom(["units/pers/arstibara", "units/pers/champion_infantry", "units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher", "units/pers/infantry_archer_e", "units/pers/infantry_spearman_a", "units/pers/infantry_spearman_a", "units/pers/infantry_spearman_a", "units/pers/infantry_javelineer_a", "units/pers/infantry_javelineer_a"]);
 			const spawned_units = TriggerHelper.SpawnUnits(spawn_site, unit_type, 1, owner);
 
 			// issue orders

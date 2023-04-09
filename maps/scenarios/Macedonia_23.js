@@ -240,15 +240,15 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 						cmpTechnologyManager.ResearchTechnology("heal_range_2");
 
 						cmpModifiersManager.AddModifiers("Healer Rate Bonus", {
-							"Heal/Interval": [{ "affects": ["Healer"], "multiply": 0.6 }],
+							"Heal/Interval": [{ "affects": ["Healer"], "multiply": 0.6 }]
 						}, cmpPlayer.entity);
 
 						cmpModifiersManager.AddModifiers("Healer Range Bonus", {
-							"Heal/Range": [{ "affects": ["Healer"], "multiply": 1.5 }],
+							"Heal/Range": [{ "affects": ["Healer"], "multiply": 1.5 }]
 						}, cmpPlayer.entity);
 
 						cmpModifiersManager.AddModifiers("Healer Vision Bonus", {
-							"Vision/Range": [{ "affects": ["Healer"], "multiply": 1.5 }],
+							"Vision/Range": [{ "affects": ["Healer"], "multiply": 1.5 }]
 						}, cmpPlayer.entity);
 					}
 
@@ -273,7 +273,7 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 						const cmpModifiersManager = Engine.QueryInterface(SYSTEM_ENTITY, IID_ModifiersManager);
 
 						cmpModifiersManager.AddModifiers("New Route Bonus", {
-							"Trader/GainMultiplier": [{ "affects": ["Trader"], "multiply": 1.5 }],
+							"Trader/GainMultiplier": [{ "affects": ["Trader"], "multiply": 1.5 }]
 						}, cmpPlayer.entity);
 
 						this.ShowText("Excellent find! The market contained information about unknown trade routes, we will now be able to generate more supplies for the army!", "Glad to help!", "Oh boy..");
@@ -1445,7 +1445,7 @@ Trigger.prototype.ResearchStartingTradeTech = function(data)
 			cmpTechnologyManager.ResearchTechnology("siege_pack_unpack");
 
 			cmpModifiersManager.AddModifiers("Trade Bonus", {
-				"Trader/GainMultiplier": [{ "affects": ["Trader"], "multiply": 2.0 }],
+				"Trader/GainMultiplier": [{ "affects": ["Trader"], "multiply": 2.0 }]
 			}, cmpPlayer.entity);
 
 		}
@@ -1459,7 +1459,7 @@ Trigger.prototype.ResearchStartingTradeTech = function(data)
 			cmpTechnologyManager.ResearchTechnology("trade_gain_01");*/
 
 			cmpModifiersManager.AddModifiers("AI Bonus", {
-				"Trader/GainMultiplier": [{ "affects": ["Trader"], "multiply": 2.4 }],
+				"Trader/GainMultiplier": [{ "affects": ["Trader"], "multiply": 2.4 }]
 			}, cmpPlayer.entity);
 
 			cmpTechnologyManager.ResearchTechnology("hellenistic_metropolis");
@@ -1471,7 +1471,7 @@ Trigger.prototype.ResearchStartingTradeTech = function(data)
 			cmpTechnologyManager.ResearchTechnology("trade_gain_01");*/
 			// warn("!");
 			cmpModifiersManager.AddModifiers("Scythian Trade Bonus Bonus", {
-				"Trader/GainMultiplier": [{ "affects": ["Trader"], "multiply": 4.0 }],
+				"Trader/GainMultiplier": [{ "affects": ["Trader"], "multiply": 4.0 }]
 			}, cmpPlayer.entity);
 
 			// get cavalry tech too
@@ -1517,30 +1517,30 @@ Trigger.prototype.ShowText = function(text, option_a, option_b)
 			"text": {
 				"caption": {
 					"message": markForTranslation(text),
-					"translateMessage": true,
-				},
+					"translateMessage": true
+				}
 			},
 			"button1": {
 				"caption": {
 					"message": markForTranslation(option_a),
-					"translateMessage": true,
+					"translateMessage": true
 				},
 				"tooltip": {
 					"message": markForTranslation(option_a),
-					"translateMessage": true,
-				},
+					"translateMessage": true
+				}
 			},
 			"button2": {
 				"caption": {
 					"message": markForTranslation(option_b),
-					"translateMessage": true,
+					"translateMessage": true
 				},
 				"tooltip": {
 					"message": markForTranslation(option_b),
-					"translateMessage": true,
-				},
-			},
-		},
+					"translateMessage": true
+				}
+			}
+		}
 	});
 
 };
@@ -2109,7 +2109,7 @@ Trigger.prototype.PointIncrement = function(data)
 	cmpTrigger.RegisterTrigger("OnInterval", "IdleUnitCheck", {
 		"enabled": true,
 		"delay": 60 * 1000,
-		"interval": 30 * 1000,
+		"interval": 30 * 1000
 	});
 
 	// Activate all possible triggers

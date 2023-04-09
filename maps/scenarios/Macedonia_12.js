@@ -1017,43 +1017,43 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalLockGates", {
 		"enabled": true,
 		"delay": 2 * 1000,
-		"interval": 5 * 1000,
+		"interval": 5 * 1000
 	});
 
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalActionTraders", {
 		"enabled": true,
 		"delay": 3 * 1000,
-		"interval": 60 * 1000,
+		"interval": 60 * 1000
 	});
 
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalSpawnTradeShips", {
 		"enabled": true,
 		"delay": 6 * 1000,
-		"interval": 60 * 1000,
+		"interval": 60 * 1000
 	});
 
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalUnitCheck", {
 		"enabled": true,
 		"delay": 120 * 1000,
-		"interval": 90 * 1000,
+		"interval": 90 * 1000
 	});
 
 	cmpTrigger.RegisterTrigger("OnInterval", "PersianAttack", {
 		"enabled": true,
 		"delay": 210 * 1000,
-		"interval": 130 * 1000,
+		"interval": 130 * 1000
 	});
 
 	cmpTrigger.RegisterTrigger("OnInterval", "GreekAttack", {
 		"enabled": true,
 		"delay": 120 * 1000,
-		"interval": 110 * 1000,
+		"interval": 110 * 1000
 	});
 
 	cmpTrigger.RegisterTrigger("OnInterval", "DockShipAttack", {
 		"enabled": true,
 		"delay": 180 * 1000,
-		"interval": 180 * 1000,
+		"interval": 180 * 1000
 	});
 
 	// make traders trade

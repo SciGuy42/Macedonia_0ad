@@ -274,7 +274,7 @@ var disabledTemplates = (civ) => [
 	// Walls
 	"structures/" + civ + "/wallset_stone",
 	"structures/rome/wallset_siege",
-	"structures/wallset_palisade",
+	"structures/wallset_palisade"
 
 	// Shoreline
 	/* "structures/" + civ + "/dock",

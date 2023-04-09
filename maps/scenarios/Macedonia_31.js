@@ -43,7 +43,7 @@ var disabledTemplates = (civ) => [
 	"structures/" + civ + "/dock",
 	"structures/brit/crannog",
 	"structures/cart/super_dock",
-	"structures/ptol/lighthouse",
+	"structures/ptol/lighthouse"
 
 	// villagers
 	// "units/" + civ + "/support_female_citizen"
@@ -679,30 +679,30 @@ Trigger.prototype.ShowText = function(text, option_a, option_b)
 			"text": {
 				"caption": {
 					"message": markForTranslation(text),
-					"translateMessage": true,
-				},
+					"translateMessage": true
+				}
 			},
 			"button1": {
 				"caption": {
 					"message": markForTranslation(option_a),
-					"translateMessage": true,
+					"translateMessage": true
 				},
 				"tooltip": {
 					"message": markForTranslation(option_a),
-					"translateMessage": true,
-				},
+					"translateMessage": true
+				}
 			},
 			"button2": {
 				"caption": {
 					"message": markForTranslation(option_b),
-					"translateMessage": true,
+					"translateMessage": true
 				},
 				"tooltip": {
 					"message": markForTranslation(option_b),
-					"translateMessage": true,
-				},
-			},
-		},
+					"translateMessage": true
+				}
+			}
+		}
 	});
 
 };
@@ -797,19 +797,19 @@ Trigger.prototype.ShowText = function(text, option_a, option_b)
 	cmpTrigger.RegisterTrigger("OnInterval", "StructureDecayCheck", {
 		"enabled": true,
 		"delay": 10 * 1000,
-		"interval": 10 * 1000,
+		"interval": 10 * 1000
 	});
 
 	cmpTrigger.RegisterTrigger("OnInterval", "TransferFood", {
 		"enabled": true,
 		"delay": 10 * 1000,
-		"interval": 30 * 1000,
+		"interval": 30 * 1000
 	});
 
 	cmpTrigger.RegisterTrigger("OnInterval", "IdleUnitCheck", {
 		"enabled": true,
 		"delay": 5 * 1000,
-		"interval": 45 * 1000,
+		"interval": 45 * 1000
 	});
 
 	cmpTrigger.RegisterTrigger("OnRange", "RangeActionCivilCentre", {

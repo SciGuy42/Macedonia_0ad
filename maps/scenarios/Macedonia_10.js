@@ -982,26 +982,26 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalDefenderSpawnAction", {
 		"enabled": true,
 		"delay": 30 * 1000,
-		"interval": 45 * 1000,
+		"interval": 45 * 1000
 	});
 
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalDefenderCheckAction", {
 		"enabled": true,
 		"delay": 30 * 1000,
-		"interval": 15 * 1000,
+		"interval": 15 * 1000
 	});
 
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalDefenderCavSpawnAction", {
 		"enabled": true,
 		"delay": 115 * 1000,
-		"interval": 125 * 1000,
+		"interval": 125 * 1000
 	});
 
 	// reinforcements
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalReinforcementSpawnAction", {
 		"enabled": true,
 		"delay": 60 * 1000,
-		"interval": 60 * 1000,
+		"interval": 60 * 1000
 	});
 
 	// cmpTrigger.DoAfterDelay(5 * 1000,"SetDifficultyLevel",null);

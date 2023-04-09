@@ -435,7 +435,7 @@ Trigger.prototype.RangeAction = function(data)
 	cmpTrigger.RegisterTrigger("OnInterval", "VictoryCheck", {
 		"enabled": true,
 		"delay": 15 * 1000,
-		"interval": 15 * 1000,
+		"interval": 15 * 1000
 	});
 
 	// disable templates

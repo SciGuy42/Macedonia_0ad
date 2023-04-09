@@ -1064,30 +1064,30 @@ Trigger.prototype.ShowText = function(text, option_a, option_b)
 			"text": {
 				"caption": {
 					"message": markForTranslation(text),
-					"translateMessage": true,
-				},
+					"translateMessage": true
+				}
 			},
 			"button1": {
 				"caption": {
 					"message": markForTranslation(option_a),
-					"translateMessage": true,
+					"translateMessage": true
 				},
 				"tooltip": {
 					"message": markForTranslation(option_a),
-					"translateMessage": true,
-				},
+					"translateMessage": true
+				}
 			},
 			"button2": {
 				"caption": {
 					"message": markForTranslation(option_b),
-					"translateMessage": true,
+					"translateMessage": true
 				},
 				"tooltip": {
 					"message": markForTranslation(option_b),
-					"translateMessage": true,
-				},
-			},
-		},
+					"translateMessage": true
+				}
+			}
+		}
 	});
 
 };
@@ -1362,31 +1362,31 @@ Trigger.prototype.FleetMovementCommand = function(data)
 
 			// improve healing
 			cmpModifiersManager.AddModifiers("Healer Rate Bonus", {
-				"Heal/Interval": [{ "affects": ["Healer"], "multiply": 0.5 }],
+				"Heal/Interval": [{ "affects": ["Healer"], "multiply": 0.5 }]
 			}, cmpPlayer.entity);
 
 			cmpModifiersManager.AddModifiers("Healer Range Bonus", {
-				"Heal/Range": [{ "affects": ["Healer"], "multiply": 1.5 }],
+				"Heal/Range": [{ "affects": ["Healer"], "multiply": 1.5 }]
 			}, cmpPlayer.entity);
 
 			cmpModifiersManager.AddModifiers("Healer Vision Bonus", {
-				"Vision/Range": [{ "affects": ["Healer"], "multiply": 1.5 }],
+				"Vision/Range": [{ "affects": ["Healer"], "multiply": 1.5 }]
 			}, cmpPlayer.entity);
 
 			// siege attack interval
 			cmpModifiersManager.AddModifiers("Siege Rate Bonus", {
-				"Attack/Ranged/RepeatTime": [{ "affects": ["Siege"], "multiply": 0.5 }],
+				"Attack/Ranged/RepeatTime": [{ "affects": ["Siege"], "multiply": 0.5 }]
 			}, cmpPlayer.entity);
 			cmpModifiersManager.AddModifiers("Siege Prepare Bonus", {
-				"Attack/Ranged/PrepareTime": [{ "affects": ["Siege"], "multiply": 0.5 }],
+				"Attack/Ranged/PrepareTime": [{ "affects": ["Siege"], "multiply": 0.5 }]
 			}, cmpPlayer.entity);
 
 			cmpModifiersManager.AddModifiers("Fish Garrison Bonus", {
-				"GarrisonHolder/Max": [{ "affects": ["Ship+!Trader"], "add": 2 }],
+				"GarrisonHolder/Max": [{ "affects": ["Ship+!Trader"], "add": 2 }]
 			}, cmpPlayer.entity);
 
 			cmpModifiersManager.AddModifiers("Pop", {
-				"Player/MaxPopulation": [{ "add": 100 }],
+				"Player/MaxPopulation": [{ "add": 100 }]
 			}, cmpPlayer.entity);
 
 		}
@@ -1399,13 +1399,13 @@ Trigger.prototype.FleetMovementCommand = function(data)
 	cmpTrigger.RegisterTrigger("OnInterval", "IdleUnitCheck", {
 		"enabled": true,
 		"delay": 60 * 1000,
-		"interval": 60 * 1000,
+		"interval": 60 * 1000
 	});
 
 	cmpTrigger.RegisterTrigger("OnInterval", "StructureDecayCheck", {
 		"enabled": true,
 		"delay": 10 * 1000,
-		"interval": 10 * 1000,
+		"interval": 10 * 1000
 	});
 
 	// Activate all possible triggers

@@ -447,19 +447,19 @@ Trigger.prototype.GarrisonEntities = function(data)
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalCrannogSpawnAction", {
 		"enabled": true,
 		"delay": 6 * 1000,
-		"interval": 90 * 1000,
+		"interval": 90 * 1000
 	});
 
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalAction", {
 		"enabled": true,
 		"delay": 6 * 1000,
-		"interval": 20 * 1000,
+		"interval": 20 * 1000
 	});
 
 	// every so often, check for idle traders
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalActionTraders", {
 		"enabled": true,
 		"delay": 10 * 1000,
-		"interval": 60 * 1000,
+		"interval": 60 * 1000
 	});
 }

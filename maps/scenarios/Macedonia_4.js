@@ -174,7 +174,7 @@ Trigger.prototype.SetDifficultyLevel = function(data)
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalAction", {
 		"enabled": true,
 		"delay": 20 * 1000,
-		"interval": 5 * 1000,
+		"interval": 5 * 1000
 	});
 
 	// make traders trade

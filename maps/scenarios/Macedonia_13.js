@@ -1084,20 +1084,20 @@ Trigger.prototype.StructureDecayCheck = function(data)
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalActionSpawnPatrol", {
 		"enabled": true,
 		"delay": 10 * 1000,
-		"interval": 90 * 1000,
+		"interval": 90 * 1000
 	});
 
 	// traders
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalActionTraders", {
 		"enabled": true,
 		"delay": 10 * 1000,
-		"interval": 60 * 1000,
+		"interval": 60 * 1000
 	});
 
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalSpawnTradeShips", {
 		"enabled": true,
 		"delay": 30 * 1000,
-		"interval": 60 * 1000,
+		"interval": 60 * 1000
 	});
 
 	// register arrival trigger
@@ -1112,7 +1112,7 @@ Trigger.prototype.StructureDecayCheck = function(data)
 	cmpTrigger.RegisterTrigger("OnInterval", "StructureDecayCheck", {
 		"enabled": true,
 		"delay": 2 * 1000,
-		"interval": 2 * 1000,
+		"interval": 2 * 1000
 	});
 
 	/* cmpTrigger.RegisterTrigger("OnInterval", "IntervalUnitCheck", {

@@ -753,7 +753,7 @@ Trigger.prototype.VictoryCheck = function(data)
 	cmpTrigger.RegisterTrigger("OnInterval", "IdleUnitCheck", {
 		"enabled": true,
 		"delay": 120 * 1000,
-		"interval": 30 * 1000,
+		"interval": 30 * 1000
 	});
 
 	/* cmpTrigger.RegisterTrigger("OnInterval", "IntervalAction", {
@@ -783,7 +783,7 @@ Trigger.prototype.VictoryCheck = function(data)
 	cmpTrigger.RegisterTrigger("OnInterval", "StructureDecayCheck", {
 		"enabled": true,
 		"delay": 10 * 1000,
-		"interval": 10 * 1000,
+		"interval": 10 * 1000
 	});
 
 }

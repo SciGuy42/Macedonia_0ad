@@ -216,30 +216,30 @@ Trigger.prototype.ShowText = function(text, option_a, option_b)
 			"text": {
 				"caption": {
 					"message": markForTranslation(text),
-					"translateMessage": true,
-				},
+					"translateMessage": true
+				}
 			},
 			"button1": {
 				"caption": {
 					"message": markForTranslation(option_a),
-					"translateMessage": true,
+					"translateMessage": true
 				},
 				"tooltip": {
 					"message": markForTranslation(option_a),
-					"translateMessage": true,
-				},
+					"translateMessage": true
+				}
 			},
 			"button2": {
 				"caption": {
 					"message": markForTranslation(option_b),
-					"translateMessage": true,
+					"translateMessage": true
 				},
 				"tooltip": {
 					"message": markForTranslation(option_b),
-					"translateMessage": true,
-				},
-			},
-		},
+					"translateMessage": true
+				}
+			}
+		}
 	});
 
 };
@@ -1575,12 +1575,12 @@ Trigger.prototype.InitGaiaClusters = function(data)
 	cmpTrigger.RegisterTrigger("OnInterval", "IdleUnitCheck", {
 		"enabled": true,
 		"delay": 20 * 1000,
-		"interval": 20 * 1000,
+		"interval": 20 * 1000
 	});
 
 	cmpTrigger.RegisterTrigger("OnInterval", "StructureDecayCheck", {
 		"enabled": true,
 		"delay": 10 * 1000,
-		"interval": 10 * 1000,
+		"interval": 10 * 1000
 	});
 }

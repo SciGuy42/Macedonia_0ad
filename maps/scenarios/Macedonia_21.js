@@ -860,7 +860,7 @@ Trigger.prototype.CheckForCC = function(data)
 	cmpTrigger.RegisterTrigger("OnInterval", "checkInvasionAttack", {
 		"enabled": true,
 		"delay": 5 * 1000,
-		"interval": 15 * 1000,
+		"interval": 15 * 1000
 	});
 
 	// register invasion unload trigger
@@ -875,7 +875,7 @@ Trigger.prototype.CheckForCC = function(data)
 	cmpTrigger.RegisterTrigger("OnInterval", "IdleUnitCheck", {
 		"enabled": true,
 		"delay": 15 * 1000,
-		"interval": 15 * 1000,
+		"interval": 15 * 1000
 	});
 
 	// 17 minutes in, it starts

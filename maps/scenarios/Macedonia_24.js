@@ -706,30 +706,30 @@ Trigger.prototype.ShowText = function(text, option_a, option_b)
 			"text": {
 				"caption": {
 					"message": markForTranslation(text),
-					"translateMessage": true,
-				},
+					"translateMessage": true
+				}
 			},
 			"button1": {
 				"caption": {
 					"message": markForTranslation(option_a),
-					"translateMessage": true,
+					"translateMessage": true
 				},
 				"tooltip": {
 					"message": markForTranslation(option_a),
-					"translateMessage": true,
-				},
+					"translateMessage": true
+				}
 			},
 			"button2": {
 				"caption": {
 					"message": markForTranslation(option_b),
-					"translateMessage": true,
+					"translateMessage": true
 				},
 				"tooltip": {
 					"message": markForTranslation(option_b),
-					"translateMessage": true,
-				},
-			},
-		},
+					"translateMessage": true
+				}
+			}
+		}
 	});
 
 };
@@ -1779,26 +1779,26 @@ Trigger.prototype.DariusFlees = function(data)
 
 			// healer bonuses
 			cmpModifiersManager.AddModifiers("Healer Rate Bonus", {
-				"Heal/Interval": [{ "affects": ["Healer"], "multiply": 0.5 }],
+				"Heal/Interval": [{ "affects": ["Healer"], "multiply": 0.5 }]
 			}, cmpPlayer.entity);
 
 			cmpModifiersManager.AddModifiers("Healer Range Bonus", {
-				"Heal/Range": [{ "affects": ["Healer"], "multiply": 1.5 }],
+				"Heal/Range": [{ "affects": ["Healer"], "multiply": 1.5 }]
 			}, cmpPlayer.entity);
 
 			cmpModifiersManager.AddModifiers("Healer Vision Bonus", {
-				"Vision/Range": [{ "affects": ["Healer"], "multiply": 1.5 }],
+				"Vision/Range": [{ "affects": ["Healer"], "multiply": 1.5 }]
 			}, cmpPlayer.entity);
 
 			// hero bonuses
 			cmpModifiersManager.AddModifiers("Hero Piercing Resistance Bonus", {
-				"Resistance/Entity/Damage/Pierce": [{ "affects": ["Hero"], "add": 6 }],
+				"Resistance/Entity/Damage/Pierce": [{ "affects": ["Hero"], "add": 6 }]
 			}, cmpPlayer.entity);
 			cmpModifiersManager.AddModifiers("Hero Hack Resistance Bonus", {
-				"Resistance/Entity/Damage/Hack": [{ "affects": ["Hero"], "add": 6 }],
+				"Resistance/Entity/Damage/Hack": [{ "affects": ["Hero"], "add": 6 }]
 			}, cmpPlayer.entity);
 			cmpModifiersManager.AddModifiers("Hero Crush Resistance Bonus", {
-				"Resistance/Entity/Damage/Crush": [{ "affects": ["Hero"], "add": 10 }],
+				"Resistance/Entity/Damage/Crush": [{ "affects": ["Hero"], "add": 10 }]
 			}, cmpPlayer.entity);
 		}
 		else if (p == 2)
@@ -1837,13 +1837,13 @@ Trigger.prototype.DariusFlees = function(data)
 	cmpTrigger.RegisterTrigger("OnInterval", "IdleUnitCheck", {
 		"enabled": true,
 		"delay": 30 * 1000,
-		"interval": 20 * 1000,
+		"interval": 20 * 1000
 	});
 
 	cmpTrigger.RegisterTrigger("OnInterval", "VictoryCheck", {
 		"enabled": true,
 		"delay": 10 * 1000,
-		"interval": 20 * 1000,
+		"interval": 20 * 1000
 	});
 
 	// Activate all possible triggers

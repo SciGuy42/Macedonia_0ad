@@ -446,7 +446,7 @@ Trigger.prototype.GarrisonAction = function(data)
 	cmpTrigger.RegisterTrigger("OnInterval", "IntervalAction", {
 		"enabled": true,
 		"delay": 6 * 1000,
-		"interval": 20 * 1000,
+		"interval": 20 * 1000
 	});
 
 }

@@ -698,30 +698,30 @@ Trigger.prototype.ShowText = function(text, option_a, option_b)
 			"text": {
 				"caption": {
 					"message": markForTranslation(text),
-					"translateMessage": true,
-				},
+					"translateMessage": true
+				}
 			},
 			"button1": {
 				"caption": {
 					"message": markForTranslation(option_a),
-					"translateMessage": true,
+					"translateMessage": true
 				},
 				"tooltip": {
 					"message": markForTranslation(option_a),
-					"translateMessage": true,
-				},
+					"translateMessage": true
+				}
 			},
 			"button2": {
 				"caption": {
 					"message": markForTranslation(option_b),
-					"translateMessage": true,
+					"translateMessage": true
 				},
 				"tooltip": {
 					"message": markForTranslation(option_b),
-					"translateMessage": true,
-				},
-			},
-		},
+					"translateMessage": true
+				}
+			}
+		}
 	});
 
 };
@@ -1551,13 +1551,13 @@ Trigger.prototype.ResearchStartingTech = function(data)
 
 			// hero
 			cmpModifiersManager.AddModifiers("Hero Piercing Resistance Bonus", {
-				"Resistance/Entity/Damage/Pierce": [{ "affects": ["Hero"], "add": 4 }],
+				"Resistance/Entity/Damage/Pierce": [{ "affects": ["Hero"], "add": 4 }]
 			}, cmpPlayer.entity);
 			cmpModifiersManager.AddModifiers("Hero Hack Resistance Bonus", {
-				"Resistance/Entity/Damage/Hack": [{ "affects": ["Hero"], "add": 4 }],
+				"Resistance/Entity/Damage/Hack": [{ "affects": ["Hero"], "add": 4 }]
 			}, cmpPlayer.entity);
 			cmpModifiersManager.AddModifiers("Hero Crush Resistance Bonus", {
-				"Resistance/Entity/Damage/Crush": [{ "affects": ["Hero"], "add": 10 }],
+				"Resistance/Entity/Damage/Crush": [{ "affects": ["Hero"], "add": 10 }]
 			}, cmpPlayer.entity);
 
 		}
@@ -1821,19 +1821,19 @@ Trigger.prototype.InitGaiaClusters = function(data)
 	cmpTrigger.RegisterTrigger("OnInterval", "HealthCheck", {
 		"enabled": true,
 		"delay": 15 * 1000,
-		"interval": 15 * 1000,
+		"interval": 15 * 1000
 	});
 
 	cmpTrigger.RegisterTrigger("OnInterval", "IdleUnitCheck", {
 		"enabled": true,
 		"delay": 15 * 1000,
-		"interval": 15 * 1000,
+		"interval": 15 * 1000
 	});
 
 	cmpTrigger.RegisterTrigger("OnInterval", "StructureDecayCheck", {
 		"enabled": true,
 		"delay": 15 * 1000,
-		"interval": 15 * 1000,
+		"interval": 15 * 1000
 	});
 
 	// Activate all possible triggers

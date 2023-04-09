@@ -602,30 +602,30 @@ Trigger.prototype.ShowText = function(text, option_a, option_b)
 			"text": {
 				"caption": {
 					"message": markForTranslation(text),
-					"translateMessage": true,
-				},
+					"translateMessage": true
+				}
 			},
 			"button1": {
 				"caption": {
 					"message": markForTranslation(option_a),
-					"translateMessage": true,
+					"translateMessage": true
 				},
 				"tooltip": {
 					"message": markForTranslation(option_a),
-					"translateMessage": true,
-				},
+					"translateMessage": true
+				}
 			},
 			"button2": {
 				"caption": {
 					"message": markForTranslation(option_b),
-					"translateMessage": true,
+					"translateMessage": true
 				},
 				"tooltip": {
 					"message": markForTranslation(option_b),
-					"translateMessage": true,
-				},
-			},
-		},
+					"translateMessage": true
+				}
+			}
+		}
 	});
 
 };
@@ -1313,7 +1313,7 @@ Trigger.prototype.AlexanderHealthCheck = function(data)
 	cmpTrigger.RegisterTrigger("OnInterval", "AlexanderHealthCheck", {
 		"enabled": true,
 		"delay": 10 * 1000,
-		"interval": 5 * 1000,
+		"interval": 5 * 1000
 	});
 
 	// some additional modifiers
@@ -1337,11 +1337,11 @@ Trigger.prototype.AlexanderHealthCheck = function(data)
 		if (p == 1 || p == 3)
 		{
 			cmpModifiersManager.AddModifiers("Hero Resistance Pierce Bonus", {
-				"Resistance/Entity/Damage/Pierce": [{ "affects": ["Hero"], "multiply": 2.0 }],
+				"Resistance/Entity/Damage/Pierce": [{ "affects": ["Hero"], "multiply": 2.0 }]
 			}, cmpPlayer.entity);
 
 			cmpModifiersManager.AddModifiers("Hero Resistance Hack Bonus", {
-				"Resistance/Entity/Damage/Hack": [{ "affects": ["Hero"], "multiply": 2.0 }],
+				"Resistance/Entity/Damage/Hack": [{ "affects": ["Hero"], "multiply": 2.0 }]
 			}, cmpPlayer.entity);
 
 		}

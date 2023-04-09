@@ -48,7 +48,7 @@ var disabledTemplates = (civ) => [
 	"structures/" + civ + "/dock",
 	"structures/brit/crannog",
 	"structures/cart/super_dock",
-	"structures/ptol/lighthouse",
+	"structures/ptol/lighthouse"
 
 	// villagers
 	// "units/" + civ + "/support_female_citizen"
@@ -1447,30 +1447,30 @@ Trigger.prototype.ShowText = function(text, option_a, option_b)
 			"text": {
 				"caption": {
 					"message": markForTranslation(text),
-					"translateMessage": true,
-				},
+					"translateMessage": true
+				}
 			},
 			"button1": {
 				"caption": {
 					"message": markForTranslation(option_a),
-					"translateMessage": true,
+					"translateMessage": true
 				},
 				"tooltip": {
 					"message": markForTranslation(option_a),
-					"translateMessage": true,
-				},
+					"translateMessage": true
+				}
 			},
 			"button2": {
 				"caption": {
 					"message": markForTranslation(option_b),
-					"translateMessage": true,
+					"translateMessage": true
 				},
 				"tooltip": {
 					"message": markForTranslation(option_b),
-					"translateMessage": true,
-				},
-			},
-		},
+					"translateMessage": true
+				}
+			}
+		}
 	});
 
 };
@@ -1795,17 +1795,17 @@ Trigger.prototype.SpawnCityKidnappers = function(data)
 			// some modifiers
 			// hero bonuses
 			cmpModifiersManager.AddModifiers("Hero Piercing Resistance Bonus", {
-				"Resistance/Entity/Damage/Pierce": [{ "affects": ["Hero"], "add": 6 }],
+				"Resistance/Entity/Damage/Pierce": [{ "affects": ["Hero"], "add": 6 }]
 			}, cmpPlayer.entity);
 			cmpModifiersManager.AddModifiers("Hero Hack Resistance Bonus", {
-				"Resistance/Entity/Damage/Hack": [{ "affects": ["Hero"], "add": 6 }],
+				"Resistance/Entity/Damage/Hack": [{ "affects": ["Hero"], "add": 6 }]
 			}, cmpPlayer.entity);
 			cmpModifiersManager.AddModifiers("Hero Crush Resistance Bonus", {
-				"Resistance/Entity/Damage/Crush": [{ "affects": ["Hero"], "add": 10 }],
+				"Resistance/Entity/Damage/Crush": [{ "affects": ["Hero"], "add": 10 }]
 			}, cmpPlayer.entity);
 
 			cmpModifiersManager.AddModifiers("Hero Ranged Rate Bonus", {
-				"Attack/Ranged/RepeatTime": [{ "affects": ["Ranged+Hero"], "multiply": 0.5 }],
+				"Attack/Ranged/RepeatTime": [{ "affects": ["Ranged+Hero"], "multiply": 0.5 }]
 			}, cmpPlayer.entity);
 		}
 	}
@@ -1833,13 +1833,13 @@ Trigger.prototype.SpawnCityKidnappers = function(data)
 	cmpTrigger.RegisterTrigger("OnInterval", "StructureDecayCheck", {
 		"enabled": true,
 		"delay": 10 * 1000,
-		"interval": 10 * 1000,
+		"interval": 10 * 1000
 	});
 
 	cmpTrigger.RegisterTrigger("OnInterval", "IdleUnitCheck", {
 		"enabled": true,
 		"delay": 5 * 1000,
-		"interval": 15 * 1000,
+		"interval": 15 * 1000
 	});
 
 	cmpTrigger.RegisterTrigger("OnRange", "RangeActionTradersArrival", {
