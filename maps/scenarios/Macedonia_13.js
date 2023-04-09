@@ -565,6 +565,7 @@ Trigger.prototype.IntervalActionTraders = function(data)
 				{
 					// warn("updating ship orders");
 					cmpUnitAI.UpdateWorkOrders("Trade");
+					// TODO-ERROR-PREVENTION: "docks_others" can become an empty array
 					cmpUnitAI.SetupTradeRoute(pickRandom(docks_others), docks_e[0], null, true);
 				}
 			}
@@ -909,6 +910,7 @@ Trigger.prototype.RangeActionArrival = function(data)
 		warn("found " + workshops_p.length + " workshops");
 
 		// Make it owned by the current player
+		// TODO-ERROR-PREVENTION: "camps_p" can become an empty array, causing errors
 		var cmpOwnership = Engine.QueryInterface(camps_p[0], IID_Ownership);
 		cmpOwnership.SetOwner(1);
 		cmpOwnership = Engine.QueryInterface(markets_p[0], IID_Ownership);
