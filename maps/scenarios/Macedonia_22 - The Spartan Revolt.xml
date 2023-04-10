@@ -38,14 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "While Alexnader leaves Egypt for Persia, the homeland is in trouble. The king of Sparta, Agis III, has taken it upon himself to organize a revolt again Macedonian rule. Alexander's man in Macedonia, Antipater, must put out the revole before it gets out of hand. \n\nAgis III has secured help from the Cretans as well as several other nearby cities. The town of Megalopols has refused to join the rebellion and is currently under assault from the Spartans. You must hurry, secure the city and launch an attack against the Spartans and their allies. \n\nAI Settings: for Sparta, pick Petra with a difficult of your choice. For all others, pick Sandbox. ",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 22 - The Spartan Revolt (332 BC)",
   "PlayerData": [
-    "",
     {
       "Civ": "mace",
       "Color": {
@@ -126,7 +124,6 @@
   "Preview": "boeotian_plains.png",
   "RevealMap": false,
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_22.js"
   ],
   "VictoryConditions": [

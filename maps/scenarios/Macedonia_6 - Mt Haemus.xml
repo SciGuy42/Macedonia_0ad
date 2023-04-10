@@ -38,14 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "Before crossing to Asia, Alexander wanted to safeguard his northern borders and, in the spring of 335 BC, he advanced into Thrace to deal with the revolt, which was led by the Illyrians and Triballi. He was reinforced along the way by the Agriani, a Thracian tribe under the command of Alexander's friend, Langarus. The Macedonian army marched up to Mount Haemus, where they met a Thracian garrison manning the heights. \n\nYour intelligence reports suggest that a small settlemenths off the main road may serve as a good starting base. Your allies, the Agriani are under attack by raiders and are requesting immediate help. \n\nTo win, defeat all enemies.\n\nAI Settings: Triballi Hillside Defenders and Greek Mercs should be set to Sandbox. All others can be set with a difficulty level of your choice (Medium for enemies for casual play). ",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 6 - Mt Haemus (335 BC)",
   "PlayerData": [
-    null,
     {
       "Civ": "mace",
       "Name": "Alexander",
@@ -100,7 +98,6 @@
       "Team": 1
     },
     {
-      "AI": "petra",
       "Civ": "spart",
       "Color": {
         "b": 16,
@@ -114,7 +111,6 @@
   "Preview": "Macedonia_0ad_Haemus.png",
   "RevealMap": false,
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_6.js"
   ],
   "VictoryConditions": [

@@ -38,14 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "Alexander's father set preparations for the invasion of the Persian Empire years before his death. Despite the Persian invasion of Greece a century ago, many of the Greek colonies and settlements in Asia Minor were allied with the Achaemenids. You have arrived with a small force to ensure that these Greek Rebels are taken care of before we proceed with the invasion. Your mission's objective is to destroy all docks, civil centers and fortresses held by the Greek rebels. \n\nYour intelligence officer reports that a small island nearby would serve as a good base if we're able to capture its docks. There are few ways to make money here though there are plenty of weaky guarded merchant ships sailing the coasts. \n\nUse your scouts wisely. Intelligence suggests the presence of a temple that may aid us in our mission. Though it is guarded by zealots, violence may not be the only way to attain it. There are also rumours of a famous blacksmith far in the woods who may be able to help us. Finally, our allies' furthest island is holding a catapult ship -- if we arrive there safely, it is ours!\n\nNotes: \n\nCapturing the following Gaia buildings results in the following tech improvements;\n\nTemple: improved line of sight, units heal when idle\nBlacksmith: improve attack for all, improved ship armor\nSiege Workshop: gain catapults and improve their attack \n\nTo prevent decay, garrison buildings you want to keep. You do not need the maximum number of garrison troops to prevent decay. \n\nThe only player you need to defeat is Player 4 (yellow). ",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 9 - Ionian Rebels (335 BC)",
   "PlayerData": [
-    "",
     {
       "Civ": "mace",
       "Name": "Macedonians",
@@ -75,7 +73,6 @@
   "Preview": "corinthian_isthmus_4.png",
   "RevealMap": false,
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_9.js"
   ],
   "VictoryConditions": [

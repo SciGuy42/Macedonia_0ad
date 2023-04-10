@@ -38,14 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "In 336 BC, Philip II sent Parmenion, with Amyntas, Andromenes and Attalus, and an army of 10,000 men into Asia Minor to make preparations for an invasion to free the Greeks living on the western coast and islands from Achaemenid rule. At first, all went well. The Greek cities on the western coast of Anatolia revolted until the news arrived that Philip had been assassinated and had been succeeded as king by his young son Alexander. The Macedonians were demoralized by Philip's death and were subsequently defeated near Magnesia by the Achaemenids under the command of the mercenary Memnon of Rhodes.\n\nAfter the defeat, your troops have retreated to the town of Magnesia. Build up your defenses quickly! The Persians and the Greek rebels are approaching! How long can you last?\n\nObjective: 45 minutes into the game, have at least 2 civil centres standing\n\nNotes: you are given some extra time in the beginning to advance to the Town Phase. Venturing too far out of the city may result in encounters with large standing Persian armies. Destroying certain Gaia buildings well outside your city may lead to scripting errors. The AI difficulty levels are active and will have an effect between Medium and Very Hard. ",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 5 - Siege of Magnesia (336 BC)",
   "PlayerData": [
-    "",
     {
       "Civ": "mace",
       "Color": {

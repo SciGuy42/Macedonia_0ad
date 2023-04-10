@@ -38,15 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "After returning to Mesopotamia, Alexander took the time to rule his newly formed empire. New laws, new rules, power plays, and shuffling of satraps were all day to day events. Occasionally, Alexander would host lavish parties with drunken debauchery, but he also enjoyed frequent hunting trips. On one such trip, Alexander took those closest to him -- from Macedonian and Greek nobles, to Persian satraps and even Indian adventurers. The hunters used small boats to reach the hunting grounds but a surprise lightning storm wrecked havoc to the small ships. Alexander finds himself alone on the short of an unfamiliar river, his companions nowhere in sight. A local band of archers has fortified itself awaiting reinforcements -- while Alexander was generally liked throughout his empire, many of the local Persians did not pledge allegiance to him and would rather see him captured or dead. Alexander must find and rescue the remaining 10 hunters and make haste to a small Greek colony that will provide safety. Little does he know that making to a safe house is going to be only half the battle. \n\nNotes: some building have dialogue options -- move a unit close the building (perhaps circle around) to trigger them. \n\nAI Settings: Players 2, 3 and 5 (the Persian Villages) should be set to Petra with a difficulty of your choice. All others should be Sandbox. ",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 44 - A Band of Heroes (Part 2, 325 BC)",
-  "Nomad": true,
   "PlayerData": [
-    null,
     {
       "Civ": "athen",
       "Color": {
@@ -178,17 +175,12 @@
   ],
   "Preview": "ratumacos.png",
   "RevealMap": false,
-  "Script": "mountain_river_lake_heightmap.js",
-  "Seed": 0,
-  "Size": 512,
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_44.js"
   ],
   "VictoryConditions": [
     "conquest"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>

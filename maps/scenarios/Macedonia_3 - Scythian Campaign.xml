@@ -38,16 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "In 342 BC, Philip led a great military expedition north against the Scythians, conquering the Thracian fortified settlement Eumolpia to give it his name, Philippopolis (modern Plovdiv). \n\nIntelligence Report:\n\nYou have arrived with a small contingent of forces. Establish a camp. The main enemy stronghold lies to the East. Across the river, stands a small fishing village known for its fierce warriors. South of your position, scouts report a neutral barbarian camp. \n",
-  "Keywords": [
-    "new"
-  ],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 3 - Scythian Raids (342 BC)",
   "PlayerData": [
-    "",
     {
       "Civ": "mace",
       "Color": {
@@ -76,19 +72,16 @@
       "Team": 0
     },
     {
-      "AI": "petra",
       "Civ": "brit",
       "Name": "Scythians",
       "Team": 1
     },
     {
-      "AI": "petra",
       "Civ": "brit",
       "Name": "Scythian Settlements",
       "Team": 1
     },
     {
-      "AI": "petra",
       "Civ": "iber",
       "Name": "Scythian Mercenaries",
       "Team": 1

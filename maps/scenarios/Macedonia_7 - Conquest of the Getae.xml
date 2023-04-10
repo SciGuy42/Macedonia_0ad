@@ -38,18 +38,11 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "To secure the northern border, the Macedonians marched to the Danube River where they encountered the Getae tribe on the opposite shore. You have arrived with a small detachment of troops with the objective of capturing a base and defeating the Getae tribes in the area. On the southern shore, lies a small fishing village ripe for the taking. On a small island not too far from us, is another settlement with some foritifcations that may also serve as a good starting camp. Our ship carrying the battering ram, however, has crash landed nearby -- we need to look through any wreckage we find if we are to be able to break through fortifications any time soon!\n\nAI Settings: Player 3 (\"Friendly Traders\") and Player 6 (\"Getae Raiders\") should be on Sandbox. All others should be on a difficulty level of your choice. ",
-  "DisabledTemplates": [
-    "structures/ptol/lighthouse"
-  ],
-  "Keywords": [
-    "trigger"
-  ],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 7 - Conquest of the Getae (335 BC)",
-  "Nomad": false,
   "PlayerData": [
     {
       "Civ": "mace",
@@ -90,17 +83,12 @@
   ],
   "Preview": "Macedonia_0ad_Getae.png",
   "RevealMap": false,
-  "Seed": 0,
-  "Size": 448,
-  "SupportedBiomes": "generic/",
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_7.js"
   ],
   "VictoryConditions": [
     "conquest_units"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>

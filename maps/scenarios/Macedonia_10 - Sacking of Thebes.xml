@@ -38,16 +38,11 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "The Battle of Thebes was a battle that took place between Alexander III of Macedon and the Greek city state of Thebes in 335 BC immediately outside of and in the city proper. After having been made Hegemon of the League of Corinth, Alexander had marched to the north to deal with revolts in Illyria and Thrace. The garrison in Macedonia was weakened and Thebes declared its independence. The Thebans refused to submit on merciful terms, and he assaulted the city.\n\nYour army has arrived...but in the hurried march, we have lost track of our siege equipment! Meanwhile, as long as the city remains well supplied from farms and mines outside its walls, it will be difficult to penetrate its defenses. \n\nIntelligence:\n- Thebes lies up the main road. \n- Two temples lie well outside the city walls. The temples are currently defended by zealots but we may be able to gain some support from priests if we capture them, perhaps even blessings from their gods.\n- Our reinforcements will be arriving throughout the battle -- the more of Thebes' food and metal supply we destroy, the more reinforcments will arrive. \n- There is an abandoned arsenal in the area -- capturing it may be crucial to obtaining siege equipment\n\nYou win once 2 enemy civil centres are destroyed or captured.\n\nAI Settings: Player 2 should be on Sandbox and Player 3 on a difficulty level of your choice (Medium for casual). \n\n",
-  "DisabledTemplates": [
-    "structures/ptol/lighthouse"
-  ],
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 10 - The Sacking of Thebes (335 BC)",
-  "Nomad": false,
   "PlayerData": [
     {
       "Civ": "mace",
@@ -84,28 +79,13 @@
   ],
   "Preview": "anatolian_plateau.png",
   "RevealMap": false,
-  "Script": "anatolian_plateau.js",
-  "Seed": 0,
-  "Size": 384,
-  "SupportedBiomes": "generic/",
-  "SupportedTriggerDifficulties": {
-    "Default": "Medium",
-    "Values": [
-      "Very Easy",
-      "Easy",
-      "Medium",
-      "Hard",
-      "Very Hard"
-    ]
-  },
+
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_10.js"
   ],
   "VictoryConditions": [
     "conquest"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>

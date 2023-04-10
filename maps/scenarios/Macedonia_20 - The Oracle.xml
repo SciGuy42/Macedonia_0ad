@@ -38,17 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "At last, Alexnader gets to meet face to face with the Oracle of Amun. The Oracle is ready to give Alexander the blessings of the Gods -- but in exhcnage, Alexnader must perform a task. A cult leader, Amenhotep, has emerged with quite a following and must be destroyed. Seek him and his followers out and kill them to the last man. Once his followers are disposed of, you are to face Amenhotep alone. \n\nThe warrior princess you rescued on the way will be by your side on this mission. The Oracle does not know the prceise location of Amenhotep's hideout but has pointed you in the general direction. He gives some final words of wisdon, \"The Gods help those who help others\".\n\nIntelligence Report:\n\nWe have arrived at a largely unknown land. An allied camp of Mecadonian and Greek soldiers lies far to the north -- perhaps they have inelligence regarding Amenhotep's hideout. \n\nBeware of the danger of the desert -- while some villages and tribes we encounter will be friendly, others, not so much. There are also reports of bandits roaming around. Finally, Persian assassins eager to kill Alexnader have also been reported in the area. \n\nAI Settings: all AIs should be set to Sandbox",
-  "Keywords": [
-    "new"
-  ],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 20 - The Oracle's Quest (332 BC)",
-  "Nomad": false,
   "PlayerData": [
-    "",
     {
       "Civ": "athen",
       "Name": "Alexander",
@@ -116,7 +111,6 @@
       "Team": 0
     },
     {
-      "AI": "petra",
       "Civ": "kush",
       "Color": {
         "b": 16,
@@ -139,18 +133,12 @@
   ],
   "Preview": "lower_nubia.png",
   "RevealMap": false,
-  "Script": "lower_nubia.js",
-  "Seed": 0,
-  "Size": 512,
-  "SupportedBiomes": "fields_of_meroe/",
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_20.js"
   ],
   "VictoryConditions": [
     "conquest"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>

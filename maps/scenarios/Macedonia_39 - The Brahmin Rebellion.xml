@@ -38,14 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "Macedonia 39 - The Brahmin Rebellion (325 BC)\n\nIn April of 325 BC, the Brahmin went into open rebellion against Alexander's forces. While the rebellion was ultimately unsuccessful, many of the Greek colonies suffered attacks and massacres.  \n\nYou have been dispatched by Alexander to help defend Sparta-on-the-Indus, a colony founded recently by veterans, mostly from the Peloponnese region. The colony is headed by Agis and his warrior wife, who will be at your service. Many of the veterans have married warrior maidens, who will also help in the defense. \n\nOur scouts report that two rebel armies are headed our way. Your job is to boost the defense of the colony and battle the attackers until they are destroyed. The first rebel army is expected to arrive in about a week (about 18 game minutes). There are several nearby trading posts that we can use for supplies in addition to gathering resources. To the south west, there reside a group of bandits which have recently stolen good from the colony -- if we recover them, we should be able to build up our defense much quicker. \n\nThe colony's militia will aid in the defense. You can \"donate\" soldiers to the militia by moving the unit behind the militia's outpost, right next to the militia camp in the back of the town. \n\nGood luck!\n\nAI Settings: All AIs should be set to Sandbox",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 39 - The Brahmin Rebellion (325 BC)",
   "PlayerData": [
-    "",
     {
       "Civ": "spart",
       "Name": "Greek Colony",
@@ -91,7 +89,6 @@
   "Preview": "punjab_2.png",
   "RevealMap": false,
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_39.js"
   ],
   "VictoryConditions": [

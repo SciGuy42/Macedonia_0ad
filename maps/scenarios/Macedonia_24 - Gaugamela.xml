@@ -38,15 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "The final showdown between Alexander and Darius is at hand. A much smaller (but much better trained) Greek and Macedonian army meets the much larger Persian forces near the village of Arbela. Darius has gathered forces from all corners of the empire, including Indian war elephants and cavalry. He rides in his chariot flanked by his most trusted soldiers as well as Greek mercenaries. \n\nAs Alexander, you are in charge of the companion cavalry, as well as a few other elite units. A small force of Egyptian warriors has also decided to follow you into Persia in seek of adventure and glory. \n\nThe Macedonian reserve waits back at the camp but can be signaled into action by lighting \"bonfires\". There are three such fires (represented as Outposts) at your disposal. The first, if lit, will send half of our reserve infatry towards Craterus. The second will send the other half towards Alexander. They can be lit in any order. The third will let the reserve cavalry known to join the fight and head towards Alexnader. You can \"light\" each bonfire by clicking on the outpost and then destroying it (press the 'Del' key on the keyboard or click the skull button under the building description). \n\nMay the Gods be with us!\n\nAI Settings: all AIs should be set to Sandbox. ",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 24 - Gaugamela (331 BC)",
-  "Nomad": false,
   "PlayerData": [
-    null,
     {
       "Civ": "athen",
       "Team": 0
@@ -114,18 +111,13 @@
   ],
   "Preview": "anatolian_plateau.png",
   "RevealMap": true,
-  "Script": "anatolian_plateau.js",
-  "Seed": 9403,
-  "Size": 384,
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/KMeans.js",
     "scenarios/Macedonia_24.js"
   ],
   "VictoryConditions": [
     "conquest"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>

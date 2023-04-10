@@ -38,12 +38,9 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "In the winter of 330 BC, Ariobarzanes led a last stand of the remaining Persian forces at the Persian Gates near Persepolis. After the conquest of Susa, Alexander split the Macedonian army into two parts. Alexander's general, Parmenion, took one half along the Royal Road, and Alexander himself took the route towards Persis. Passing into Persis required traversing the Persian Gates, a narrow mountain pass that lent itself easily to ambush. Alexander eventually found a path to the rear of the Persians from the captured prisoners of war or a local shepherd, defeating the Persians and capturing Persepolis. \n\nYou lead a small contingent of elite forces, which are about to march through the mountain pass. Your primary objective is to discover a path to the Persian controlled side of the mountains. Good luck!\n\nNotes:\n- Some conversations and dialogue options will be triggered only if Alexander himself is present\n- The area is prone for ambushes -- keep Alexander safe and always be on the lookout for danger!\n- Your scouts report that there is a monastery nearby, as well as local villagers who may be willing to help you find a safe path\n\nAI Settings: all AIs should be set to Sandbox. \n\n",
-  "Keywords": [
-    "hidden"
-  ],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 25 - The Last Stand (330 BC)",
   "PlayerData": [
@@ -104,7 +101,6 @@
       "Team": 1
     },
     {
-      "AI": "petra",
       "Civ": "pers",
       "Color": {
         "b": 200,
@@ -115,7 +111,6 @@
       "Team": 2
     },
     {
-      "AI": "petra",
       "Civ": "pers",
       "Color": {
         "b": 0,
@@ -129,7 +124,6 @@
   "Preview": "the_persian_gates.png",
   "RevealMap": false,
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/KMeans.js",
     "scenarios/Macedonia_25.js"
   ],

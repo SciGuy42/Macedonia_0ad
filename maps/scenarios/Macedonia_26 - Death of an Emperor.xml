@@ -38,14 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "After defeating Ariobarzanes, the Satrap of Persis, Alexander's army marches on Persepolis and sacks the city. Darius has fled further into Bactria, along with Bessus and other loyal Satraps. Alexnader is in hot pursuit, for as long as Darius lives, he cannot claim to be the legitimate emperor of the former Achamenid Empire. \n\nAs Alexander's forces close in on Darius, things are not as they seem. Bessus has betrayed Darius -- as the Emperor lie dying, he formally conceals the title of Emperor to Alexander. In exchange, he wants only one thing -- revenge! Defeat Bessus and the rest of the traitors and the Empire is yours. \n\nBessus' forces have taken over a small town north-west of our position. The town is heavily fortified. The last remaining Greek mercenaries in service of the Achamenids are located in a camp further west. They are likely to fight to the death. \n\nDarius has commanded his most loyal servants to help you establish a camp and defeat Bessus. You will need to rely on local Persians for your forces. Your primary objective is to defeat Bessus' forces and put the remainder of the Greek mercenaries to the sword. Your scouts report that there are local traders whom you can trade with for additional supplies. \n\nAI Settings: Players 2 and 6 should be set to Petra with a difficulty of your choice (Very Hard may be too hard in this case). All other AIs should be set to Sandbox. ",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 26 - Death of an Emperor (330 BC)",
   "PlayerData": [
-    "",
     {
       "Civ": "pers",
       "Name": "Alexander",
@@ -100,7 +98,6 @@
   "Preview": "neareastern_badlands_2.png",
   "RevealMap": false,
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_26.js"
   ],
   "VictoryConditions": [

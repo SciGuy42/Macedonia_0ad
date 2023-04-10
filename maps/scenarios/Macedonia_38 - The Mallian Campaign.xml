@@ -38,15 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "\nThe Mallian campaign was conducted by Alexander the Great from November 326 to February 325 BC, against the Malli of the Punjab. Once the mutiny situation was resolved, Alexander decided to head south, following the river Hydaspes, after the omens ostensibly declared it unfavorable to march further east. Initially, the fleet and army just sailed down the river, occasionally marching short distances inland. Only slight opposition was experienced. However, the Malli and the Oxydraci combined to refuse passage through their territory. Alexander sought to prevent their forces meeting, and made a swift campaign against them.\n\nOur forces have just reached the point where the Hydaspes merges into the Acesinea river. Craterus has already established a based on the western bank. We need to find a suitable place to make camp as soon as possible as our enemies have received word of our arrival and will be preparing accordingly. Further to the west, lies the tribe of Sibea and their capital city. South, across the Acesinea, lies a desert with the town of Kot Kamalia, another enemy base that needs to be destroyed. Past the desert, is the river of Hydraotis, with two enemy towns nearby, Multan and Tulambo. \n\nOur also scouts report that a band of Persian mercenaries are in the service of the Mallians. We must locate their base and destroy their fortress to eliminate their ability to support the Mallians. There may also be neutral traders in the area that we can use to secure additional supplies for the war effort. Your advisors also suggest that disrupting our enemies' trade may be crucial to winning the campaign. \n\nFinally, we can directly supply Cratarus' advance with fresh troops by moving them to the little walled off area to the north-east of his camp. Good luck!\n\nAI Settings: Players 7 and 8 should be set to Sandbox. All others should go with Petra with a difficulty and personality of your choice (tested with Medium and Balanced personality for a fairly easy win). \n\n",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 38 - The Mallian Campaign (326 BC)",
-  "Nomad": true,
   "PlayerData": [
-    "",
     {
       "Civ": "mace",
       "Name": "Alexander",
@@ -128,17 +125,12 @@
   ],
   "Preview": "lorraine_plain.png",
   "RevealMap": false,
-  "Script": "indian_plains.js",
-  "Seed": 0,
-  "Size": 512,
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_38.js"
   ],
   "VictoryConditions": [
     "conquest"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>

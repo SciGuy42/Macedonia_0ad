@@ -38,15 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "After defeating the Illyrians in Thrace Alexander set to subjugate them once and for all by seizing the town of Pelium. The Siege of Pelium was undertaken by Alexander the Great against the Illyrian tribes of what is modern day Albania. It was critical for Alexander to take this pass as it provided easy access to Illyria and Macedonia, which was urgently needed in order to quell the unrest in Greece at this time in Athens and Thebes. This was an important point of demarcation in Alexander's early reign, as it established him among the Danubian tribes to the north as a serious monarch to be reckoned with, just as he would later establish this precedent for the Greek city states under his hegemony. \n\nTo win the scenario, destroy all Illyrian units and structures. \n\nAI Settings: Player 2 and Player 4 should be set to a difficulty of your choice, Player 3 should be set to Sandbox. ",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 8 - Pelium (335 BC)",
-  "Nomad": false,
   "PlayerData": [
-    "",
     {
       "Civ": "mace",
       "Name": "Alexander",
@@ -103,18 +100,12 @@
   ],
   "Preview": "Macedonia_0ad_Pelium.png",
   "RevealMap": false,
-  "Script": "mainland.js",
-  "Seed": 0,
-  "Size": 384,
-  "SupportedBiomes": "generic/",
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_8.js"
   ],
   "VictoryConditions": [
     "conquest_structures"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>

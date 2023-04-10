@@ -38,15 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "After defeating Spitamenes' rebels, Alexander took some time to govern the newly founded empire. Alexander spent a few week in Maracanda (modern day Samarkand) to assembly his empire's administration and court. Anyone who was anyone was there, from Greek and Macedonian nobles, Egyptian warriors, Persian satraps who are loyal, even Indian royalty. \n\nOne night (after heavy drinking), Alexander's court wakes up in disarray -- Alexander has been kidnapped! You rush outside the palace and there is chaos in the street -- the local guard is desperate to repulse the assailants. Playing as Alexander's most trusted warriors and guards, your job is to repel the attacks, find Alexander and free him! \n\nHints and notes:\n- It is best to complete all \"side quests\" before proceeding with the attempt to free Alexander\n- You can trigger a conversation with the allied commander of Alexander's forces by walking near the camp's \"mercenary camp\" building. If you choose to wait, come back in a bit to trigger the same conversation. \n- After rescuing Alexander, you will need to destroy the enemy \"mercenary camp\" building to defeat them\n\nAI Settings: All AIs should be set to Sandbox. ",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 32 - A Band of Heroes (Part 1, 328 BC)",
-  "Nomad": true,
   "PlayerData": [
-    "",
     {
       "Civ": "mace",
       "Name": "Heroes",
@@ -93,7 +90,6 @@
       "Team": 3
     },
     {
-      "AI": "petra",
       "Civ": "maur",
       "Name": "Bandits",
       "Team": 2
@@ -111,17 +107,12 @@
   ],
   "Preview": "syria.png",
   "RevealMap": false,
-  "Script": "syria.js",
-  "Seed": 0,
-  "Size": 384,
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_32.js"
   ],
   "VictoryConditions": [
     "conquest"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>

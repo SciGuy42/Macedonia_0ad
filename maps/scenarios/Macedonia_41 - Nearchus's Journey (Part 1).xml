@@ -38,13 +38,11 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "After the Brahmin rebels were defeated, Alexander decided to return to Babylonia. In June, general Craterus had already left for Carmania with a third of the soldiers. In August, Alexander and three quarters of what remained of the army set out for a long and difficult march through the Gedrosian desert. \n\nNearchus was to ship the remaining quarter of the soldiers, 17,000 - 20,000 men, to Carmania and Babylonia. The voyage down the Indus lasted from November 326 to July 325. It was not an easy cruise: several times, the Macedonians had to fight their way past resisting native towns. Finally, the reached Patala (Old Indian for \"camp for ships\"), modern Bahmanabad, 75 kilometers north-east of Hyderabad.\n\nWhile sailing westward along the Persian coast, Nearchus often had to go up rivers to seek supplies as the coastline was barren. At the Hingol river, he made one such expedition in order to procure supplies and forage for the food needed for the remainder of the journey. As you sail up the river, you find that hostile native tribes, the Oreitans, occupy both banks. Our scouts report that up the river lies a fork, where two smaller rivers join, and that at that fork, there is a native settlement, whose inhabitants recently killed one of our messengers. There are also friendly traders in this region, but beware of river raiders who are used to being unchallenged in the water. \n\nObjective: establish or capture a base and pacify the area -- destroy all Oreitans. \n\nAI Settings: Players 2 and 3 should be set to Petra with a difficulty of your choice (Medium for casual play); all others should be Sandbox. ",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 41 - Nearchus' Journey: The Hingol River (325 BC)",
-  "Nomad": true,
   "PlayerData": [
     {
       "Civ": "mace",
@@ -93,7 +91,6 @@
       "Team": 1
     },
     {
-      "AI": "petra",
       "Civ": "pers",
       "Color": {
         "b": 203,
@@ -106,17 +103,12 @@
   ],
   "Preview": "ratumacos.png",
   "RevealMap": false,
-  "Script": "river_heightmap_10.js",
-  "Seed": 3088,
-  "Size": 512,
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_41.js"
   ],
   "VictoryConditions": [
     "conquest"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>

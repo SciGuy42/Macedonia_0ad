@@ -38,21 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
-  "BaseHeight": 0,
-  "BaseTerrain": [
-    "medit_grass_field_dry",
-    "medit_grass_field_brown",
-    "medit_grass_field_b"
-  ],
   "CircularMap": true,
   "Description": "After the victory over the Sacae at the Jaxartes, Alexander had the opportunity to deal with the revolt of Spitamenes, the Sogdian rebel leader. Alexander headed south, to Maracanda which was besieged by Spitamenes, but by the time he arrived, the siege was lifted and the Sogdian rebels were gone.\n\nDuring the winter of of 329/328 BC, Spitamenes, on the other hand, had moved on to Bactra, the capital of Bactria, and has captured several nearby settlements. You have been sent by Alexander to reinforce the Macedonian garrison and assist Artabazus, the loyal satrap of Bactria, in the defense of the city and the destruction of the rebels.\n\nUpon arriving, Artabazus offers his welcome and dispatches a dozen horse archers to be at your service. Your primary objective is to defend the town, build up your own forces and work together with Artabazus to conquer the nearby rebels.\n\nThere are also neutral traders in the area who may be suitable trading partners. Artabazus suggests that you use your cavalry to disrupt the rebels' trade for extra loot. A arsenal not far to the north-east of our town will likely be willing to sell you some siege equipment. Meanwhile, a dock on a nearby river has traders in search of stone who would be willing to give plenty of fish in return.\n\nAs you finish discussions, all of a sudden there is chaos and mayhem on the streets of the city -- the rebels must have infiltrated the town and are not trying to take it from within. To arms!\n\nAI Settings: Players 2 through 5: Petra with a difficulty of your choice. Players 6 and 7: Sandbox.",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 30 - Bactra (328 BC)",
-  "Nomad": true,
   "PlayerData": [
-    "",
     {
       "Civ": "mace",
       "Name": "Macedonian Garrison",
@@ -130,17 +121,12 @@
   ],
   "Preview": "persian_highlands.png",
   "RevealMap": false,
-  "Seed": 4766,
-  "Size": 512,
-  "SupportedBiomes": "persian_highlands/",
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_30.js"
   ],
   "VictoryConditions": [
     "conquest"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>

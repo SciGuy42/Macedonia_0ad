@@ -38,13 +38,11 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "The year is 359 BC. Philip II is busy consolidating his internal position. A rebel prince has refused to pay tribute -- it is time you make an example of him. \n\nIntelligence: the rebel holdout lies to the north along the main path. There are multiple ways to approach the town, some more and some less direct. Scouts have also reported that bands from the hillside are rushing in to defend their local lord. \n\nNotes: the AI should be Petra for both enemies. The difficulty setting will have effects beyond the gathering rate (e.g., at Very Hard, more troops are garrisoned than at Medium).",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 1 - Consolidating Control (359 BC)",
-  "Nomad": false,
   "PlayerData": [
     {
       "Civ": "mace",
@@ -70,7 +68,6 @@
       "Team": 0
     },
     {
-      "AI": "petra",
       "Civ": "mace",
       "Name": "Rebelious Prince",
       "Resources": {
@@ -94,7 +91,6 @@
       "Team": 1
     },
     {
-      "AI": "petra",
       "Civ": "mace",
       "Color": {
         "b": 31,
@@ -113,17 +109,12 @@
   ],
   "Preview": "canyon.png",
   "RevealMap": false,
-  "Script": "canyon.js",
-  "Seed": 0,
-  "Size": 256,
-  "SupportedBiomes": "generic/",
   "TriggerScripts": [
     "scenarios/Macedonia_1.js"
   ],
   "VictoryConditions": [
     "conquest_units"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>

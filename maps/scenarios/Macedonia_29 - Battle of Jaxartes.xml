@@ -38,15 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "After securing Alexandria Eschate, Alexander's forces continued to battle the Sogdian rebellion. The Sogdian leader Spitamenes was besieging Maracanda in the south; at the same time, an army of Saka mounted nomadic warriors appeared north of the Jaxartes, eager to join in the struggle and take away the loot. The Macedonian king sent an officer named Pharnouches south to confront Spitamenes, and personally attacked the Sacae in what was to become a sensational fight. \n\nThe Jaxartes is wider than a bowshot, which meant that the Macedonians could board their hurriedly prepared ships and rafts in safety, but that they would enter the Sacan field of fire halfway across the river. Your advisors suggest two strategies to pursue to cross the river effectively: 1) your rafts should make a landing en masse, and 2) use your siege equipment to provide cover fire -- we may be able to eliminate some of the archers before they realize their bows and arrows are useless against our catapults -- we just need to find a good spot for our siege equipment that can target their archers from our side of the river. \n\nYour ships and rafts already have some troops loaded but you may want to load additional ones as soon as you can. You can \"signal\" an order for all your vessels to automatically head to the other side of the river by destroying your outpost (click on it and click on the delete button). \n\nAI Settings: all AIs should be set to Sandbox",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 29 - Battle of Jaxartes (329 BC)",
-  "Nomad": true,
   "PlayerData": [
-    "",
     {
       "Civ": "mace",
       "Name": "Alexander",
@@ -96,17 +93,12 @@
   ],
   "Preview": "fortress.png",
   "RevealMap": false,
-  "Script": "fortress.js",
-  "Seed": 5397,
-  "Size": 192,
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_29.js"
   ],
   "VictoryConditions": [
     "conquest"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>

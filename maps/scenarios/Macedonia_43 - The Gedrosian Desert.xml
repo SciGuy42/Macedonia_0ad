@@ -38,15 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "Gedrosia is the Hellenized name of the part of coastal Balochistan that roughly corresponds to today's Makran. The region is mostly a desert, with few resources available. While Nearchus' navy sailed along the Persian coast, Alexnader too the path across the desert, where the marching conditions for his army were brutal, to say the least. It is not clear why Alexander chose such a treacherous path, some hypothesize that he was indirectly exacting revenge upon his troops for their refusal to follow him deeper into India. \n\nYou are in charge of a small band of elite soldiers and your primary objectives are: 1) keep the army supplied with food; we lose food in fixed interval and if we ever approach 0, soldiers will start dying; and 2) keep the army safe while it crosses the desert; the soldiers are so weak, they will not be able to put up much of a fight if attacked; we must destroy the fortifications of some local Persian rebels, if they stay up for too long our army will be too vulnerable. \n\nLocal traders may be of some assistance. We should immediately seek to make contact with monastery not too far from our starting point, as we'll need food and healers from them. We should also make sure the path towards the other side of the desert is clear of any immediate dangers. Our scouts report that a small band of mercenaries may be available for hire, they are residing in a tent camp in the desert. A trading village with an elephant stable may also be willing to sell us some elephants. Most of the locals up in the mountain will be hostile but we must seek them out as their food supply will surely come handy. One tribe is known for its large goat herds. \n\nGood luck!\n\nAI Settings: All AIs should be set to Sandbox\n\nNotes: \n\n1. you must be constantly on the lookout for food. It is possible to store too much too quickly and some of it will go to waste. But it is probably better to have too much than too little. \n2. If any of the Persian rebel fortifications remain standing after 1 hour of game time, you lose the game.\n3. If more than 1200 army soldiers die (either due to starvation or enemies), you lose the game. Note that the number of units lost shown by the UI does not include starvation deaths. \n4. Act quickly and save often!\n\n",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 43 - The Gedrosian Desert (325 BC)",
-  "Nomad": true,
   "PlayerData": [
-    "",
     {
       "Civ": "mace",
       "Color": {
@@ -105,7 +102,6 @@
       }
     },
     {
-      "AI": "petra",
       "Civ": "pers",
       "Color": {
         "b": 0,
@@ -117,17 +113,12 @@
   ],
   "Preview": "ratumacos.png",
   "RevealMap": false,
-  "Script": "desert_heightmap.js",
-  "Seed": 6681,
-  "Size": 512,
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_43.js"
   ],
   "VictoryConditions": [
     "conquest"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>

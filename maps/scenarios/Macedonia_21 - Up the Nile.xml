@@ -38,18 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "Alexander did not linger in Egypt for long and soon headed out to finish off the Achamenid dynasty. While Egypt remained mostly peaceful under Macenodian rule, conflicts were inevitable from time to time. Our intelligence reports that a band of rebels have errected fortifications up the Nile river and are harassing our traders. You are to sail up the river and deal with those rebels. \n\nIntelligence reports:\n- The area contains a large island in the river which would be suitable spot for setting up camp. On the two banks of the river, there may be suitable land as well but beware of hostile forces. \n- A small allied post is located on the north end of the island, it coild be a good source of supplies throughout the mission.\n- An force from Carthage has arrive in the area as well, looking to avenge the sacking of their mother city, Tyre.\n- We have brought skilled ship builder, the finest of the land, who will be able to build catapult ships -- we may find those handy when dealing with the fortifications that are to be destroyed.\n\nAI Settings:\nPlayers 2 and 4: Petra with a difficulty of your choice\nAll others: Sandbox",
-  "Keywords": [
-    "naval",
-    "new"
-  ],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 21 - Up the Nile River (332 BC)",
-  "Nomad": false,
   "PlayerData": [
-    null,
     {
       "Civ": "ptol",
       "Name": "Macedonians",
@@ -94,17 +88,12 @@
   ],
   "Preview": "elephantine.png",
   "RevealMap": false,
-  "Script": "elephantine.js",
-  "Seed": 8542,
-  "Size": 512,
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_21.js"
   ],
   "VictoryConditions": [
     "conquest"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>

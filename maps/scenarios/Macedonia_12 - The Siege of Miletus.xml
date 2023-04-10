@@ -38,14 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "Description": "The Siege of Miletus was Alexander the Great's first siege and naval encounter with the Achaemenid Empire. This siege was directed against Miletus, a city in southern Ionia, which is now located in the Ayd1n province of modern-day Turkey. Upon arrival of Alexander, the order to attack the city had already been issued by a local commander. \n\nObjectives:\n\nDestroy or capture the city's civil centres. \n\nIntelligence Report:\n\nYou have arrived with a contingent of troops right as the battle is about to start. In addition, two warshps are also at your disposal. Capturing the city may very well require first acquiring siege weaponry from one of the neutral siege camps that can be found in the area. It is rummered that on the far side of the city, on the cliff side, there is a hidden path that would allow a small contingent of troops (including siege rams) to land in am amphibious assault. \n\nAI Settings:\n\nMermon's Greeks should be set to Sandbox difficulty. ",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 12 - Siege of Miletus (334 BC)",
   "PlayerData": [
     {
-      "AI": "petra",
       "Civ": "mace",
       "Color": {
         "b": 255,
@@ -97,7 +95,6 @@
       "Team": 1
     },
     {
-      "AI": "petra",
       "Civ": "spart",
       "Color": {
         "b": 0,
@@ -108,7 +105,6 @@
       "Team": 1
     },
     {
-      "AI": "petra",
       "Civ": "mace",
       "Color": {
         "b": 255,
@@ -119,7 +115,6 @@
       "Team": 0
     },
     {
-      "AI": "petra",
       "Civ": "pers",
       "Color": {
         "b": 0,
@@ -133,7 +128,6 @@
   "Preview": "Macedonia_0ad_Miletus.png",
   "RevealMap": true,
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_12.js"
   ],
   "VictoryConditions": [
