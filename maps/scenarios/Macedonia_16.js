@@ -724,7 +724,9 @@ Trigger.prototype.RepeatUnitSpawnPers = function(data)
 
 	// find site
 	const forts_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(owner), "Fortress").filter(TriggerHelper.IsInWorld);
+	// TODO-ERROR-PREVENTION: spawn_site can become undefined, which can lead to errors
 	const spawn_site = pickRandom(forts_p);
+	warn(uneval(["spawn_site", spawn_site]));
 
 	// spawn
 	const spawn_size = pickRandom([4, 5, 6]) + this.persLevel;
@@ -748,6 +750,7 @@ Trigger.prototype.RepeatUnitSpawnPers = function(data)
 	TriggerHelper.SetUnitFormation(owner, attackers, formation);
 
 	// make them attack
+	// TODO-ERROR-PREVENTION: target can become undefined, which can lead to errors
 	const target = this.FindClosestTarget(attackers[0], 1, unitTargetClass);
 	const target_pos = TriggerHelper.GetEntityPosition2D(target);
 
