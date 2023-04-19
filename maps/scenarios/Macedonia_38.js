@@ -289,13 +289,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		for (const u of units)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI && Math.random() < 0.25)
-			{
-				if (cmpUnitAI.IsIdle())
-				{
-					this.WalkAndFightClosestTarget(u, 1, unitTargetClass);
-				}
-			}
+			if (cmpUnitAI && Math.random() < 0.25 && cmpUnitAI.IsIdle())
+				this.WalkAndFightClosestTarget(u, 1, unitTargetClass);
 		}
 
 		const inf_units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Infantry").filter(TriggerHelper.IsInWorld);
@@ -303,19 +298,13 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		for (const u of inf_units)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
+				const trigger_sites = this.GetTriggerPoints(triggerPointsPatrol);
+				// pick patrol sites
+				const sites = [pickRandom(trigger_sites), pickRandom(trigger_sites), pickRandom(trigger_sites)];
+				this.PatrolOrderList([u], p, sites);
 
-					const trigger_sites = this.GetTriggerPoints(triggerPointsPatrol);
-
-					// pick patrol sites
-					const sites = [pickRandom(trigger_sites), pickRandom(trigger_sites), pickRandom(trigger_sites)];
-
-					this.PatrolOrderList([u], p, sites);
-
-				}
 			}
 		}
 	}
@@ -701,9 +690,9 @@ Trigger.prototype.SpawnStructureResponseAttack = function(data)
 	let index = -1;
 	let min_distance = 10000;
 
-	for (let i = 0; i < sites.length; i++)
+	for (const [i, site_] of sites.entries())
 	{
-		const d_i = PositionHelper.DistanceBetweenEntities(target_structure, sites[i]);
+		const d_i = PositionHelper.DistanceBetweenEntities(target_structure, site_);
 		if (d_i < min_distance)
 		{
 			index = i;

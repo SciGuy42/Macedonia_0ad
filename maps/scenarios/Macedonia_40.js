@@ -321,16 +321,11 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		for (const u of inf_units)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
-
-					// pick patrol sites
-					const sites = [pickRandom(spawn_sites), pickRandom(spawn_sites), pickRandom(spawn_sites), pickRandom(spawn_sites)];
-
-					this.PatrolOrderList([u], p, sites);
-				}
+				// pick patrol sites
+				const sites = [pickRandom(spawn_sites), pickRandom(spawn_sites), pickRandom(spawn_sites), pickRandom(spawn_sites)];
+				this.PatrolOrderList([u], p, sites);
 			}
 		}
 	}
@@ -345,18 +340,12 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		for (const u of units)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
-
-					const sites = [pickRandom(patrol_sites), pickRandom(patrol_sites), pickRandom(patrol_sites), pickRandom(patrol_sites)];
-
-					this.PatrolOrderList([u], p, sites);
-				}
+				const sites = [pickRandom(patrol_sites), pickRandom(patrol_sites), pickRandom(patrol_sites), pickRandom(patrol_sites)];
+				this.PatrolOrderList([u], p, sites);
 			}
 		}
-
 	}
 };
 
@@ -482,13 +471,8 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			for (const u of units_infantry)
 			{
 				const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-				if (cmpUnitAI)
-				{
-					if (cmpUnitAI.IsIdle())
-					{
-						this.WalkAndFightClosestTarget(u, 1, unitTargetClass);
-					}
-				}
+				if (cmpUnitAI && cmpUnitAI.IsIdle())
+					this.WalkAndFightClosestTarget(u, 1, unitTargetClass);
 			}
 		}
 		else if (id != null && id.classesList.includes("Siege"))

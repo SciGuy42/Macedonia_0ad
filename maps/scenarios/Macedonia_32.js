@@ -288,16 +288,13 @@ Trigger.prototype.SpawnAssaultSquad = function(data)
 		}
 	}
 
-	if (this.mainAssaultCounter > 1)
+	if (this.mainAssaultCounter > 1 && this.tradersQuestComplete == true)
 	{
-		if (this.tradersQuestComplete == true)
-		{
-			// spawn 2 melee cavalry
-			const unit_i = TriggerHelper.SpawnUnits(spawn_sites[0], "units/pers/cavalry_axeman_e", 4, p);
+		// spawn 2 melee cavalry
+		const unit_i = TriggerHelper.SpawnUnits(spawn_sites[0], "units/pers/cavalry_axeman_e", 4, p);
 
-			this.WalkAndFightClosestTarget(unit_i[0], 2, unitTargetClass);
-			// warn("spawned cavalry");
-		}
+		this.WalkAndFightClosestTarget(unit_i[0], 2, unitTargetClass);
+		// warn("spawned cavalry");
 	}
 
 	if (this.siegeEnginesCaptured == true)
@@ -613,13 +610,8 @@ Trigger.prototype.SpawnElephantBandits = function(data)
 	for (const u of units_ele)
 	{
 		const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-		if (cmpUnitAI)
-		{
-			if (cmpUnitAI.IsIdle())
-			{
-				this.WalkAndFightClosestTarget(u, 1, "Melee");
-			}
-		}
+		if (cmpUnitAI && cmpUnitAI.IsIdle())
+			this.WalkAndFightClosestTarget(u, 1, "Melee");
 	}
 
 	// increment counter
@@ -1008,13 +1000,10 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			{
 				const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 
-				if (cmpUnitAI)
+				if (cmpUnitAI && cmpUnitAI.IsIdle())
 				{
-					if (cmpUnitAI.IsIdle())
-					{
-						// warn("Found idle soldier");
-						this.WalkAndFightClosestTarget(u, 1, unitTargetClass);
-					}
+					// warn("Found idle soldier");
+					this.WalkAndFightClosestTarget(u, 1, unitTargetClass);
 				}
 			}
 		}
@@ -1031,32 +1020,29 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			{
 				const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 
-				if (cmpUnitAI)
+				if (cmpUnitAI && cmpUnitAI.IsIdle())
 				{
-					if (cmpUnitAI.IsIdle())
+
+					if (this.mainAssaultStarted == true && this.mainAssaultCounter > 5)
 					{
-
-						if (this.mainAssaultStarted == true && this.mainAssaultCounter > 5)
-						{
-							// warn("Found idle soldier of player 2, attacking");
-							if (Math.random() < 0.3)
-								this.WalkAndFightClosestTarget(u, 1, unitTargetClass);
-							else
-								this.WalkAndFightClosestTarget(u, 4, unitTargetClass);
-						}
+						// warn("Found idle soldier of player 2, attacking");
+						if (Math.random() < 0.3)
+							this.WalkAndFightClosestTarget(u, 1, unitTargetClass);
 						else
-						{
-							// warn("Found idle soldier of player 2, patrolling");
-							// sites
-							const outposts = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Outpost").filter(TriggerHelper.IsInWorld);
-							const sentry_towers = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "SentryTower").filter(TriggerHelper.IsInWorld);
+							this.WalkAndFightClosestTarget(u, 4, unitTargetClass);
+					}
+					else
+					{
+						// warn("Found idle soldier of player 2, patrolling");
+						// sites
+						const outposts = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Outpost").filter(TriggerHelper.IsInWorld);
+						const sentry_towers = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "SentryTower").filter(TriggerHelper.IsInWorld);
 
-							const sites = [pickRandom(outposts), pickRandom(sentry_towers)];
+						const sites = [pickRandom(outposts), pickRandom(sentry_towers)];
 
-							// patrol
-							this.PatrolOrderList([u], p, sites);
+						// patrol
+						this.PatrolOrderList([u], p, sites);
 
-						}
 					}
 				}
 			}
@@ -1074,13 +1060,10 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			{
 				const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 
-				if (cmpUnitAI)
+				if (cmpUnitAI && cmpUnitAI.IsIdle())
 				{
-					if (cmpUnitAI.IsIdle())
-					{
-						// warn("Found idle soldier");
-						this.WalkAndFightClosestTarget(u, 2, unitTargetClass);
-					}
+					// warn("Found idle soldier");
+					this.WalkAndFightClosestTarget(u, 2, unitTargetClass);
 				}
 			}
 		}
@@ -1092,22 +1075,19 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			{
 				const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 
-				if (cmpUnitAI)
+				if (cmpUnitAI && cmpUnitAI.IsIdle())
 				{
-					if (cmpUnitAI.IsIdle())
+					const structures_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Structure").filter(TriggerHelper.IsInWorld);
+
+					const num_targets = 3;
+					const targets = [];
+
+					while (targets.length < num_targets)
 					{
-						const structures_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Structure").filter(TriggerHelper.IsInWorld);
-
-						const num_targets = 3;
-						const targets = [];
-
-						while (targets.length < num_targets)
-						{
-							targets.push(pickRandom(structures_p));
-						}
-
-						this.PatrolOrderList([u], p, targets);
+						targets.push(pickRandom(structures_p));
 					}
+
+					this.PatrolOrderList([u], p, targets);
 				}
 			}
 		}
@@ -1223,22 +1203,15 @@ Trigger.prototype.VictoryTextFn = function(n)
 
 Trigger.prototype.OwnershipChangedAction = function(data)
 {
-	if (this.cityKidnappersSpawned == true && this.cityKidnappersKilled == false)
+	if (this.cityKidnappersSpawned == true && this.cityKidnappersKilled == false && data.from == 2 && data.to == -1)
 	{
-		if (data.from == 2 && data.to == -1)
+		this.numKidnappersKilled += 1;
+		// warn("kidnapper killed");
+		if (this.numKidnappersKilled >= this.sizeCityKidnappers)
 		{
-			this.numKidnappersKilled += 1;
-
-			// warn("kidnapper killed");
-
-			if (this.numKidnappersKilled >= this.sizeCityKidnappers)
-			{
-				// warn("Kidnappers killed!");
-
-				this.QuestCityKidnappersComplete();
-			}
+			// warn("Kidnappers killed!");
+			this.QuestCityKidnappersComplete();
 		}
-
 	}
 
 	// check to make sure the player isn't try to pick off the siege guards one by one -- if one gets killed, all attack
@@ -1250,12 +1223,9 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		for (const u of units_cav)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
-					this.WalkAndFightClosestTarget(u, 1, "Unit");
-				}
+				this.WalkAndFightClosestTarget(u, 1, "Unit");
 			}
 		}
 
@@ -1561,13 +1531,8 @@ Trigger.prototype.SpawnMountainSquads = function(data)
 		const unit_i = TriggerHelper.SpawnUnits(pickRandom(sites), pickRandom(templates), 1, p);
 
 		const cmpUnitAI = Engine.QueryInterface(unit_i[0], IID_UnitAI);
-		if (cmpUnitAI)
-		{
-			if (cmpUnitAI.IsIdle())
-			{
-				this.WalkAndFightClosestTarget(unit_i[0], 1, "Melee");
-			}
-		}
+		if (cmpUnitAI && cmpUnitAI.IsIdle())
+			this.WalkAndFightClosestTarget(unit_i[0], 1, "Melee");
 	}
 
 	// increment counters

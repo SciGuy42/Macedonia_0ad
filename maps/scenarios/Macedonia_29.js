@@ -193,31 +193,27 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	// warn(uneval(data));
 
 	// check of enemy archer killed before river crossed
-	if (this.riverCrossed == false && this.archersRetreated == false)
+	if (this.riverCrossed == false && this.archersRetreated == false && data.from == 2 && data.to == -1)
 	{
-		if (data.from == 2 && data.to == -1)
+		// count how many troops have been killed
+		this.archersKilled += 1;
+
+		warn("archers killed = " + this.archersKilled);
+
+		if (this.archersKilled > this.archersRetreatThreshold)
 		{
-			// count how many troops have been killed
-			this.archersKilled += 1;
+			this.DoAfterDelay(5 * 1000, "ArchersRetreatCommand", null);
+			this.DoAfterDelay(10 * 1000, "ArchersRetreatCommand", null);
+			this.DoAfterDelay(15 * 1000, "ArchersRetreatCommand", null);
 
-			warn("archers killed = " + this.archersKilled);
+			// warn("Archers have retreated");
+			this.archersRetreated = true;
 
-			if (this.archersKilled > this.archersRetreatThreshold)
-			{
-
-				this.DoAfterDelay(5 * 1000, "ArchersRetreatCommand", null);
-				this.DoAfterDelay(10 * 1000, "ArchersRetreatCommand", null);
-				this.DoAfterDelay(15 * 1000, "ArchersRetreatCommand", null);
-
-				// warn("Archers have retreated");
-				this.archersRetreated = true;
-
-				this.ShowText("The archers are retreating! Now we can cross the river in safety!", "Great", "ok");
-			}
-			else if (this.archersKilled == 1)
-			{
-				this.ShowText("Excellent! That archer did not see this coming! Let's keep firing until they realize they need to retreat!", "Great", "ok");
-			}
+			this.ShowText("The archers are retreating! Now we can cross the river in safety!", "Great", "ok");
+		}
+		else if (this.archersKilled == 1)
+		{
+			this.ShowText("Excellent! That archer did not see this coming! Let's keep firing until they realize they need to retreat!", "Great", "ok");
 		}
 	}
 
@@ -241,20 +237,16 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	}
 
 	// check if the outpost is destroyed as an order
-	if (this.boatCommandTriggered == false)
+	// warn(uneval(data));
+	if (this.boatCommandTriggered == false && data.from == 1 && data.to == -1)
 	{
-		// warn(uneval(data));
-		if (data.from == 1 && data.to == -1)
+		const id = Engine.QueryInterface(data.entity, IID_Identity);
+		// warn(uneval(id));
+		if (id && id.classesList.includes("Outpost"))
 		{
-			const id = Engine.QueryInterface(data.entity, IID_Identity);
-			// warn(uneval(id));
-			if (id && id.classesList.includes("Outpost"))
-			{
-				// warn("command");
-				this.boatCommandTriggered = true;
-				this.FleetMovementCommand();
-			}
-
+			// warn("command");
+			this.boatCommandTriggered = true;
+			this.FleetMovementCommand();
 		}
 	}
 
@@ -498,13 +490,10 @@ Trigger.prototype.FinalAtttackB = function(data)
 		for (const u of units_cav)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
-					// warn("Found idle soldier");
-					this.WalkAndFightClosestTarget(u, 1, unitTargetClass);
-				}
+				// warn("Found idle soldier");
+				this.WalkAndFightClosestTarget(u, 1, unitTargetClass);
 			}
 		}
 	}
@@ -520,13 +509,10 @@ Trigger.prototype.FinalAtttackA = function(data)
 		for (const u of units_cav)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
-					// warn("Found idle soldier");
-					this.WalkAndFightClosestTarget(u, 1, unitTargetClass);
-				}
+				// warn("Found idle soldier");
+				this.WalkAndFightClosestTarget(u, 1, unitTargetClass);
 			}
 		}
 	}
@@ -543,13 +529,10 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		for (const u of units_cav)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
-					// warn("Found idle soldier");
-					this.WalkAndFightClosestTarget(u, 1, unitTargetClass);
-				}
+				// warn("Found idle soldier");
+				this.WalkAndFightClosestTarget(u, 1, unitTargetClass);
 			}
 		}
 	}

@@ -286,13 +286,11 @@ Trigger.prototype.ClusterUnits = function(units, num_clusters)
 	{
 		const cluter_k = [];
 
-		for (let i = 0; i < units.length; i++)
+		for (const [i, unit] of units.entries())
 		{
 
 			if (clustering[i] == k)
-			{
-				cluter_k.push(units[i]);
-			}
+				cluter_k.push(unit);
 		}
 
 		clusters.push(cluter_k);
@@ -339,16 +337,10 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			for (const u of units)
 			{
 				const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-				if (cmpUnitAI)
+				if (cmpUnitAI && cmpUnitAI.IsIdle())
 				{
-					if (cmpUnitAI.IsIdle())
-					{
-
-						const sites = [pickRandom(sites_outer), pickRandom(sites_inner), pickRandom(sites_outer)];
-
-						this.PatrolOrderList([u], p, sites);
-
-					}
+					const sites = [pickRandom(sites_outer), pickRandom(sites_inner), pickRandom(sites_outer)];
+					this.PatrolOrderList([u], p, sites);
 				}
 			}
 		}
@@ -363,13 +355,10 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			for (const u of units)
 			{
 				const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-				if (cmpUnitAI)
+				if (cmpUnitAI && cmpUnitAI.IsIdle())
 				{
-					if (cmpUnitAI.IsIdle())
-					{
-						warn("Found idle pl 3 unit");
-						this.WalkAndFightClosestTarget(u, 2, unitTargetClass);
-					}
+					warn("Found idle pl 3 unit");
+					this.WalkAndFightClosestTarget(u, 2, unitTargetClass);
 				}
 			}
 		}
@@ -669,14 +658,11 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	if (data.from == 1 && data.to == -1)
 	{
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
-		if (id)
+		if (id && id.classesList.includes("Hero"))
 		{
-			if (id.classesList.includes("Hero"))
-			{
-				// TODO: lose game
-				// warn("hero dead");
-				TriggerHelper.SetPlayerWon(2, this.VictoryTextFn, this.VictoryTextFn);
-			}
+			// TODO: lose game
+			// warn("hero dead");
+			TriggerHelper.SetPlayerWon(2, this.VictoryTextFn, this.VictoryTextFn);
 		}
 	}
 
@@ -684,14 +670,11 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	if (data.from == 2 && data.to == -1)
 	{
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
-		if (id)
+		if (id && id.classesList.includes("CivilCentre"))
 		{
-			if (id.classesList.includes("CivilCentre"))
-			{
-				// TODO: lose game
-				warn("cc dead");
-				TriggerHelper.SetPlayerWon(1, this.VictoryTextFn, this.VictoryTextFn);
-			}
+			// TODO: lose game
+			warn("cc dead");
+			TriggerHelper.SetPlayerWon(1, this.VictoryTextFn, this.VictoryTextFn);
 		}
 	}
 
@@ -721,12 +704,9 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				for (const u of this.gaiaClusters[target_cluster])
 				{
 					const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-					if (cmpUnitAI)
+					if (cmpUnitAI && cmpUnitAI.IsIdle())
 					{
-						if (cmpUnitAI.IsIdle())
-						{
-							this.WalkAndFightClosestTarget(u, 1, "Unit");
-						}
+						this.WalkAndFightClosestTarget(u, 1, "Unit");
 					}
 				}
 			}
@@ -748,31 +728,25 @@ Trigger.prototype.RangeActionTemple = function(data)
 
 Trigger.prototype.RangeActionRandevouz = function(data)
 {
-	if (this.eventRandevouz == false)
+	// warn(uneval(data));
+	if (this.eventRandevouz == false && data.added.length >= 1 && data.currentCollection.length >= 4)
 	{
-		// warn(uneval(data));
+		// flip flag
+		this.eventRandevouz = true;
 
-		if (data.added.length >= 1 && data.currentCollection.length >= 4)
-		{
+		// show text
+		this.ShowText("You have made it to the camp! The attack will commence!", "So it goes.", "Oh my");
 
-			// flip flag
-			this.eventRandevouz = true;
+		// flip assets
+		this.FlipAssets();
 
-			// show text
-			this.ShowText("You have made it to the camp! The attack will commence!", "So it goes.", "Oh my");
+		// start attacks
+		this.DoAfterDelay(this.ptolAttackInterval * 1000, "SpawnIntervalPtolemyAttack", null);
 
-			// flip assets
-			this.FlipAssets();
-
-			// start attacks
-			this.DoAfterDelay(this.ptolAttackInterval * 1000, "SpawnIntervalPtolemyAttack", null);
-
-			// schedule warn and end game messages
-			// this.DoAfterDelay(this.warnMessageTime * 1000,"WarnMessage",null);
-			// this.DoAfterDelay(this.timeLeft * 1000,"FailMessage",null);
-			// this.DoAfterDelay((this.timeLeft+2) * 1000,"EndGame",null);
-
-		}
+		// schedule warn and end game messages
+		// this.DoAfterDelay(this.warnMessageTime * 1000,"WarnMessage",null);
+		// this.DoAfterDelay(this.timeLeft * 1000,"FailMessage",null);
+		// this.DoAfterDelay((this.timeLeft+2) * 1000,"EndGame",null);
 	}
 };
 

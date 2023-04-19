@@ -284,14 +284,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		for (const u of units)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
-			{
-				if (cmpUnitAI.IsIdle())
-				{
-
-					this.WalkAndFightClosestTarget(u, 1, unitTargetClass);
-				}
-			}
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
+				this.WalkAndFightClosestTarget(u, 1, unitTargetClass);
 		}
 
 		// also check for elephants
@@ -314,13 +308,10 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 
 			// check if idle
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
-					// warn("idle elephant");
-					this.WalkAndFightClosestTarget(u, 1, siegeTargetClass, false);
-				}
+				// warn("idle elephant");
+				this.WalkAndFightClosestTarget(u, 1, siegeTargetClass, false);
 			}
 
 			if (cmpUnitAI)
@@ -328,52 +319,48 @@ Trigger.prototype.IdleUnitCheck = function(data)
 				// print order
 				const orders = cmpUnitAI.GetOrders();
 
-				if (orders && orders.length > 0)
-				{
-					// warn(uneval(orders));
+				if (orders && orders.length > 0 && // warn(uneval(orders));
 
 					// check if it is attack
-					if (orders[0].type == "Attack")
+					orders[0].type == "Attack")
+				{
+					let target = orders[0].data.target;
+					const id = Engine.QueryInterface(target, IID_Identity);
+					if (id)
 					{
-						let target = orders[0].data.target;
-						const id = Engine.QueryInterface(target, IID_Identity);
-						if (id)
+						// warn("target's classes: "+uneval(id.classesList));
+
+						// if attacking unit, possibly switch to structure
+						if (id.classesList.includes("Unit"))
 						{
-							// warn("target's classes: "+uneval(id.classesList));
 
-							// if attacking unit, possibly switch to structure
-							if (id.classesList.includes("Unit"))
+							// find distance to target
+							const distance = PositionHelper.DistanceBetweenEntities(u, target);
+							// warn("distance to targe = "+uneval(distance));
+
+							if (distance > 20)
 							{
+								// change order to attack nearest structure
 
-								// find distance to target
-								const distance = PositionHelper.DistanceBetweenEntities(u, target);
-								// warn("distance to targe = "+uneval(distance));
+								target = this.FindClosestTarget(u, 1, "Structure");
+								cmpUnitAI.orders = [];
+								cmpUnitAI.Attack(target, false, false);
 
-								if (distance > 20)
-								{
-									// change order to attack nearest structure
+								// warn("switching target to "+uneval(target)+", new orders:");
+								// let orders_new = cmpUnitAI.GetOrders();
+								// warn(uneval(orders_new));
 
-									target = this.FindClosestTarget(u, 1, "Structure");
-									cmpUnitAI.orders = [];
-									cmpUnitAI.Attack(target, false, false);
-
-									// warn("switching target to "+uneval(target)+", new orders:");
-									// let orders_new = cmpUnitAI.GetOrders();
-									// warn(uneval(orders_new));
-
-									// cmpUnitAI.StopMoving();
-									// cmpUnitAI.FinishOrder();
-									// cmpUnitAI.orderQueue = [];
-									// cmpUnitAI.order = undefined;
-									// cmpUnitAI.isIdle = true;
-								}
+								// cmpUnitAI.StopMoving();
+								// cmpUnitAI.FinishOrder();
+								// cmpUnitAI.orderQueue = [];
+								// cmpUnitAI.order = undefined;
+								// cmpUnitAI.isIdle = true;
 							}
-							else
-							{
-								// set allow capture to false
-								orders[0].data.allowCapture = false;
-							}
-
+						}
+						else
+						{
+							// set allow capture to false
+							orders[0].data.allowCapture = false;
 						}
 					}
 				}
@@ -394,21 +381,12 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		for (const u of units)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
-
-					if (structs.length > 0)
-					{
-						this.WalkAndFightClosestTarget(u, 3, siegeTargetClass);
-					}
-					else
-					{
-						this.WalkAndFightClosestTarget(u, 1, unitTargetClass);
-					}
-
-				}
+				if (structs.length > 0)
+					this.WalkAndFightClosestTarget(u, 3, siegeTargetClass);
+				else
+					this.WalkAndFightClosestTarget(u, 1, unitTargetClass);
 			}
 		}
 	}
@@ -1067,20 +1045,18 @@ Trigger.prototype.SpawnFarmers = function(data)
 
 	const farms = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Field").filter(TriggerHelper.IsInWorld);
 
-	for (let i = 0; i < farms.length; i++)
+	for (const farm of farms)
 	{
 		// spawn the unit
-		const farm_i = farms[i];
-		const unit_i = TriggerHelper.SpawnUnits(farm_i, "units/pers/support_female_citizen", 5, p);
+		const unit_i = TriggerHelper.SpawnUnits(farm, "units/pers/support_female_citizen", 5, p);
 
 		// give order
 		for (const u of unit_i)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
 			if (cmpUnitAI)
-			{
-				cmpUnitAI.Gather(farm_i, false);
-			}
+				cmpUnitAI.Gather(farm, false);
+
 		}
 	}
 };

@@ -69,19 +69,17 @@ Trigger.prototype.CavalryAttack = function(data)
 	}
 
 	// get target position
+	// TODO-ERROR-PREVENTION: you want to get the position of "mace/hero_philip_ii" but he might be already dead
 	var cmpTargetPosition = Engine.QueryInterface(2747, IID_Position).GetPosition2D();
 
 	// check if any idle soldiers are around and ask them to attack
-	for (let i = 0; i < all_ents.length; ++i)
+	for (const all_ent of all_ents)
 	{
-		const cmpUnitAI = Engine.QueryInterface(all_ents[i], IID_UnitAI);
-		if (cmpUnitAI)
+		const cmpUnitAI = Engine.QueryInterface(all_ent, IID_UnitAI);
+		if (cmpUnitAI && cmpUnitAI.IsIdle() && Engine.QueryInterface(all_ent, IID_Attack))
 		{
-			if (cmpUnitAI.IsIdle() && Engine.QueryInterface(all_ents[i], IID_Attack))
-			{
-				// warn("found idle soldier")
-				cmpUnitAI.WalkAndFight(cmpTargetPosition.x, cmpTargetPosition.y, null);
-			}
+			// warn("found idle soldier")
+			cmpUnitAI.WalkAndFight(cmpTargetPosition.x, cmpTargetPosition.y, null);
 		}
 	}
 
@@ -182,19 +180,17 @@ Trigger.prototype.InfantryAttack = function(data)
 	}
 
 	// get target position
+	// TODO-ERROR-PREVENTION: you want to get the position of "mace/hero_philip_ii" but he might be already dead
 	var cmpTargetPosition = Engine.QueryInterface(2747, IID_Position).GetPosition2D();
 
 	// check if any idle soldiers are around and ask them to attack
-	for (let i = 0; i < all_ents.length; ++i)
+	for (const all_ent of all_ents)
 	{
-		const cmpUnitAI = Engine.QueryInterface(all_ents[i], IID_UnitAI);
-		if (cmpUnitAI)
+		const cmpUnitAI = Engine.QueryInterface(all_ent, IID_UnitAI);
+		if (cmpUnitAI && cmpUnitAI.IsIdle() && Engine.QueryInterface(all_ent, IID_Attack))
 		{
-			if (cmpUnitAI.IsIdle() && Engine.QueryInterface(all_ents[i], IID_Attack))
-			{
-				// warn("found idle soldier")
-				cmpUnitAI.WalkAndFight(cmpTargetPosition.x, cmpTargetPosition.y, null);
-			}
+			// warn("found idle soldier")
+			cmpUnitAI.WalkAndFight(cmpTargetPosition.x, cmpTargetPosition.y, null);
 		}
 	}
 

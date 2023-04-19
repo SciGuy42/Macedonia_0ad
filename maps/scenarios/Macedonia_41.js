@@ -337,18 +337,13 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			for (const u of land_units)
 			{
 				const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-				if (cmpUnitAI)
+				if (cmpUnitAI && cmpUnitAI.IsIdle())
 				{
-					if (cmpUnitAI.IsIdle())
-					{
-
-						// attack closest target
-						this.WalkAndFightClosestTarget(u, 1, "Structure");
-					}
+					// attack closest target
+					this.WalkAndFightClosestTarget(u, 1, "Structure");
 				}
 			}
 		}
-
 		// ships - TODO
 	}
 
@@ -1064,50 +1059,32 @@ Trigger.prototype.PlayerCommandAction = function(data)
 {
 
 	// warn(uneval(data));
-	if (data.cmd.type == "dialog-answer")
+	// warn("The OnPlayerCommand event happened with the following data:");
+	if (data.cmd.type == "dialog-answer" && data.cmd.answer == "button1")
 	{
-		// warn("The OnPlayerCommand event happened with the following data:");
-		// warn(uneval(data));
+		// subtract resources
+		const cmpPlayer = QueryPlayerIDInterface(1);
+		// warn(uneval(this.mercOffer));
+		cmpPlayer.AddResource("food", -1 * this.mercOffer.total_cost_food);
+		cmpPlayer.AddResource("stone", -1 * this.mercOffer.total_cost_stone);
+		cmpPlayer.AddResource("metal", -1 * this.mercOffer.total_cost_metal);
 
-		if (data.cmd.answer == "button1")
-		{
-			// subtract resources
-			const cmpPlayer = QueryPlayerIDInterface(1);
-			// warn(uneval(this.mercOffer));
-			cmpPlayer.AddResource("food", -1 * this.mercOffer.total_cost_food);
-			cmpPlayer.AddResource("stone", -1 * this.mercOffer.total_cost_stone);
-			cmpPlayer.AddResource("metal", -1 * this.mercOffer.total_cost_metal);
+		// spawm mercs
 
-			// spawm mercs
+		const sites = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(4), "Barracks").filter(TriggerHelper.IsInWorld);
 
-			const sites = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(4), "Barracks").filter(TriggerHelper.IsInWorld);
+		if (sites.length == 0)
+			return;
 
-			if (sites.length == 0)
-			{
-				return;
-			}
-
-			const spawn_site = sites[0];
-
-			const units = TriggerHelper.SpawnUnits(spawn_site, this.mercOffer.template, this.mercOffer.size, 1);
-
-			// warn("spawned mercs");
-		}
-
+		const spawn_site = sites[0];
+		const units = TriggerHelper.SpawnUnits(spawn_site, this.mercOffer.template, this.mercOffer.size, 1);
+		// warn("spawned mercs");
 	}
 };
 
 Trigger.prototype.ToggleMercs = function(data)
 {
-	if (this.mercsAvailable == true)
-	{
-		this.mercsAvailable = false;
-	}
-	else
-	{
-		this.mercsAvailable = true;
-	}
-
+	this.mercsAvailable = !this.mercsAvailable;
 };
 
 Trigger.prototype.RangeActionMercs = function(data)

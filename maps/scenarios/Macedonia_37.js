@@ -303,13 +303,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			for (const u of units)
 			{
 				const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-				if (cmpUnitAI)
-				{
-					if (cmpUnitAI.IsIdle())
-					{
-						this.WalkAndFightClosestTarget(u, 1, unitTargetClass);
-					}
-				}
+				if (cmpUnitAI && cmpUnitAI.IsIdle())
+					this.WalkAndFightClosestTarget(u, 1, unitTargetClass);
 			}
 		}
 	}
@@ -1139,12 +1134,9 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				for (const u of this.gaiaClusters[target_cluster])
 				{
 					const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-					if (cmpUnitAI)
+					if (cmpUnitAI && cmpUnitAI.IsIdle())
 					{
-						if (cmpUnitAI.IsIdle())
-						{
-							this.WalkAndFightClosestTarget(u, 1, "Unit");
-						}
+						this.WalkAndFightClosestTarget(u, 1, "Unit");
 					}
 				}
 			}
@@ -1401,13 +1393,10 @@ Trigger.prototype.ClusterUnits = function(units, num_clusters)
 	{
 		const cluter_k = [];
 
-		for (let i = 0; i < units.length; i++)
+		for (const [i, unit] of units.entries())
 		{
-
 			if (clustering[i] == k)
-			{
-				cluter_k.push(units[i]);
-			}
+				cluter_k.push(unit);
 		}
 
 		clusters.push(cluter_k);

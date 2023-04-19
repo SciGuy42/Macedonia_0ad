@@ -81,9 +81,9 @@ Trigger.prototype.IntervalActionTraders = function(data)
 	// start land traders
 	var traders = [8050, 8051];
 
-	for (let i = 0; i < traders.length; ++i)
+	for (const trader of traders)
 	{
-		const cmpUnitAI = Engine.QueryInterface(traders[i], IID_UnitAI);
+		const cmpUnitAI = Engine.QueryInterface(trader, IID_UnitAI);
 		if (cmpUnitAI)
 		{
 			// warn("updating worker orders");
@@ -94,9 +94,9 @@ Trigger.prototype.IntervalActionTraders = function(data)
 
 	// start ship traders
 	var ships_g = [7759, 7760];
-	for (let i = 0; i < ships_g.length; ++i)
+	for (const element of ships_g)
 	{
-		const cmpUnitAI = Engine.QueryInterface(ships_g[i], IID_UnitAI);
+		const cmpUnitAI = Engine.QueryInterface(element, IID_UnitAI);
 		if (cmpUnitAI)
 		{
 			// warn("updating ship orders");
@@ -107,9 +107,9 @@ Trigger.prototype.IntervalActionTraders = function(data)
 
 	// start ship traders group 2
 	var ships_g2 = [8072, 8071, 7864, 7865];
-	for (let i = 0; i < ships_g2.length; ++i)
+	for (const element of ships_g2)
 	{
-		const cmpUnitAI = Engine.QueryInterface(ships_g2[i], IID_UnitAI);
+		const cmpUnitAI = Engine.QueryInterface(element, IID_UnitAI);
 		if (cmpUnitAI)
 		{
 			// warn("updating ship orders");

@@ -180,17 +180,13 @@ Trigger.prototype.ResearchFinishedAction = function(data)
 	warn("The OnResearchFinished event happened with the following data:");
 	warn(uneval(data));
 
-	if (data.player == 1)
+	if (data.player == 1 && data.tech != "phase_town_generic" && data.tech != "phase_city_generic")
 	{
-		if (data.tech != "phase_town_generic" && data.tech != "phase_city_generic")
-		{
-			const cmpPlayer = QueryPlayerIDInterface(3);
-			const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
-			cmpTechnologyManager.ResearchTechnology(data.tech);
+		const cmpPlayer = QueryPlayerIDInterface(3);
+		const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
+		cmpTechnologyManager.ResearchTechnology(data.tech);
 
-			warn("Researching tech for ally");
-		}
-
+		warn("Researching tech for ally");
 	}
 };
 
@@ -893,32 +889,24 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		for (const u of units_inf)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
-					this.PatrolOrder([u], p);
+				this.PatrolOrder([u], p);
 
-				}
 			}
 		}
 	}
 
-	for (const p of [4])
+	for (const player of [4])
 	{
-		const units_inf = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Elephant").filter(TriggerHelper.IsInWorld);
+		const units_inf = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(player), "Elephant").filter(TriggerHelper.IsInWorld);
 
 		// make patrol if idle
-		for (const u of units_inf)
+		for (const unit of units_inf)
 		{
-			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
-			{
-				if (cmpUnitAI.IsIdle())
-				{
-					this.PatrolOrder([u], p);
-				}
-			}
+			const cmpUnitAI = Engine.QueryInterface(unit, IID_UnitAI);
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
+				this.PatrolOrder([unit], player);
 		}
 	}
 };

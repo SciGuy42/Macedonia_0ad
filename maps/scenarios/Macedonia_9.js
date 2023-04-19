@@ -137,28 +137,26 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				this.escortShipGarrison += 1;
 			}
 		}
-		else if (data.entity == 12602) // gaia workshop
+		else if (data.entity == 12602 && !this.captured_shop)
 		{
-			if (this.captured_shop == false)
-			{
-				// spawn some siege catapults
-				TriggerHelper.SpawnUnits(12602, "units/mace/siege_lithobolos_packed", 3, 1);
+			// gaia workshop
+			// spawn some siege catapults
+			TriggerHelper.SpawnUnits(12602, "units/mace/siege_lithobolos_packed", 3, 1);
 
-				// we get some siege tech
-				const cmpPlayer = QueryPlayerIDInterface(1);
-				const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
+			// we get some siege tech
+			const cmpPlayer = QueryPlayerIDInterface(1);
+			const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 
-				cmpTechnologyManager.ResearchTechnology("siege_health");
-				cmpTechnologyManager.ResearchTechnology("siege_attack");
+			cmpTechnologyManager.ResearchTechnology("siege_health");
+			cmpTechnologyManager.ResearchTechnology("siege_attack");
 
-				warn("captured siege");
+			warn("captured siege");
 
-				this.captured_shop = true;
+			this.captured_shop = true;
 
-				// add additional troops to garrison
-				this.attackShipGarrison += 1;
-				this.escortShipGarrison += 2;
-			}
+			// add additional troops to garrison
+			this.attackShipGarrison += 1;
+			this.escortShipGarrison += 2;
 		}
 		// cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
 
@@ -634,13 +632,8 @@ Trigger.prototype.makeShipsTrade = function(data)
 		for (const trader of traders_e)
 		{
 			const cmpUnitAI = Engine.QueryInterface(trader, IID_UnitAI);
-			if (cmpUnitAI)
-			{
-				if (cmpUnitAI.IsIdle())
-				{
-					idle_traders_e.push(trader);
-				}
-			}
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
+				idle_traders_e.push(trader);
 		}
 
 		if (idle_traders_e.length >= 1)

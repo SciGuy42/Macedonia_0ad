@@ -188,10 +188,10 @@ Trigger.prototype.IntervalActionAlliedAttack = function(data)
 
 	var enemy_players = [2];
 
-	for (let p = 0; p < enemy_players.length; ++p)
+	for (const enemy_player of enemy_players)
 	{
 
-		var enemy_units = TriggerHelper.GetEntitiesByPlayer(enemy_players[p]);
+		var enemy_units = TriggerHelper.GetEntitiesByPlayer(enemy_player);
 		var human_units = TriggerHelper.GetEntitiesByPlayer(1);
 
 		var d = 0;
@@ -200,21 +200,21 @@ Trigger.prototype.IntervalActionAlliedAttack = function(data)
 
 		if (human_units.length > 0)
 		{
-			for (let i = 0; i < enemy_units.length; ++i)
+			for (const enemy_unit of enemy_units)
 			{
-				const cmpUnitAI = Engine.QueryInterface(enemy_units[i], IID_UnitAI);
+				const cmpUnitAI = Engine.QueryInterface(enemy_unit, IID_UnitAI);
 
 				// check if the unit is idle and if it can attack
 				if (cmpUnitAI)
 				{
-					const pos_i = Engine.QueryInterface(enemy_units[i], IID_Position).GetPosition2D();
+					const pos_i = Engine.QueryInterface(enemy_unit, IID_Position).GetPosition2D();
 
-					if (cmpUnitAI.IsIdle() && Engine.QueryInterface(enemy_units[i], IID_Attack))
+					if (cmpUnitAI.IsIdle() && Engine.QueryInterface(enemy_unit, IID_Attack))
 					{
 
-						for (let j = 0; j < human_units.length; j++)
+						for (const [j, human_unit] of human_units.entries())
 						{
-							const pos_j = Engine.QueryInterface(human_units[j], IID_Position).GetPosition2D();
+							const pos_j = Engine.QueryInterface(human_unit, IID_Position).GetPosition2D();
 
 							d = Math.sqrt((pos_i.x - pos_j.x) * (pos_i.x - pos_j.x) + (pos_i.y - pos_j.y) * (pos_i.y - pos_j.y));
 
@@ -436,15 +436,12 @@ Trigger.prototype.IntervalActionTraders = function(data)
 		for (const trader of traders_s)
 		{
 			const cmpUnitAI = Engine.QueryInterface(trader, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle() && docks_others.length)
 			{
-				if (cmpUnitAI.IsIdle() && docks_others.length)
-				{
-					// warn("updating ship orders");
-					cmpUnitAI.UpdateWorkOrders("Trade");
-					// TODO-ERROR-PREVENTION: "docks_others" can become an empty array
-					cmpUnitAI.SetupTradeRoute(pickRandom(docks_others), docks_e[0], null, true);
-				}
+				// warn("updating ship orders");
+				cmpUnitAI.UpdateWorkOrders("Trade");
+				// TODO-ERROR-PREVENTION: "docks_others" can become an empty array
+				cmpUnitAI.SetupTradeRoute(pickRandom(docks_others), docks_e[0], null, true);
 			}
 
 		}
@@ -456,15 +453,15 @@ Trigger.prototype.IntervalActionTraders = function(data)
 Trigger.prototype.IntervalSpawnTradeShips = function(data)
 {
 	const trader_ais = [3];
-	for (let e = 0; e < trader_ais.length; ++e)
+	for (const trader_ai of trader_ais)
 	{
 		// get list of docks
-		const docks_e = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(trader_ais[e]), "Dock").filter(TriggerHelper.IsInWorld);
+		const docks_e = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(trader_ai), "Dock").filter(TriggerHelper.IsInWorld);
 
 		if (docks_e.length > 0)
 		{
 			// get list of trade ships
-			const traders_e = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(trader_ais[e]), "Trader+Ship").filter(TriggerHelper.IsInWorld);
+			const traders_e = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(trader_ai), "Trader+Ship").filter(TriggerHelper.IsInWorld);
 
 			if (traders_e.length < 6)
 			{
@@ -472,7 +469,7 @@ Trigger.prototype.IntervalSpawnTradeShips = function(data)
 				let docks_others = [];
 				for (const p of this.enemies)
 				{
-					if (p != trader_ais[e])
+					if (p != trader_ai)
 					{
 						const docks_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Dock").filter(TriggerHelper.IsInWorld);
 
@@ -483,7 +480,7 @@ Trigger.prototype.IntervalSpawnTradeShips = function(data)
 				if (docks_others.length > 0)
 				{
 					const spawn_dock = pickRandom(docks_e);
-					const trader = TriggerHelper.SpawnUnits(spawn_dock, "units/pers/ship_merchant", 1, trader_ais[e]);
+					const trader = TriggerHelper.SpawnUnits(spawn_dock, "units/pers/ship_merchant", 1, trader_ai);
 
 					warn("spawned trade ship");
 
@@ -581,13 +578,8 @@ Trigger.prototype.GreekAttack = function(data)
 	for (const u of units)
 	{
 		const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-		if (cmpUnitAI)
-		{
-			if (cmpUnitAI.IsIdle())
-			{
-				attackers.push(u);
-			}
-		}
+		if (cmpUnitAI && cmpUnitAI.IsIdle())
+			attackers.push(u);
 	}
 
 	// spawn attackers
@@ -644,17 +636,11 @@ Trigger.prototype.IntervalUnitCheck = function(data)
 
 	const attackers = [];
 
-	for (const u of soldiers)
+	for (const soldier of soldiers)
 	{
-		const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-		if (cmpUnitAI)
-		{
-			if (cmpUnitAI.IsIdle())
-			{
-				if (Math.random() < 0.5)
-					attackers.push(u);
-			}
-		}
+		const cmpUnitAI = Engine.QueryInterface(soldier, IID_UnitAI);
+		if (cmpUnitAI && cmpUnitAI.IsIdle() && Math.random() < 0.5)
+			attackers.push(soldier);
 	}
 
 	warn("Selected " + attackers.length + " idle soldiers");
@@ -834,16 +820,11 @@ Trigger.prototype.PersianAttack = function(data)
 	// find any idle soldiers
 	let units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(5), "Infantry").filter(TriggerHelper.IsInWorld);
 	units = units.concat(TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(5), "Siege").filter(TriggerHelper.IsInWorld));
-	for (const u of units)
+	for (const unit of units)
 	{
-		const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-		if (cmpUnitAI)
-		{
-			if (cmpUnitAI.IsIdle())
-			{
-				attackers.push(u);
-			}
-		}
+		const cmpUnitAI = Engine.QueryInterface(unit, IID_UnitAI);
+		if (cmpUnitAI && cmpUnitAI.IsIdle())
+			attackers.push(unit);
 	}
 
 	// spawn attackers

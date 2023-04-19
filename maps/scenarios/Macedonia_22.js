@@ -177,28 +177,25 @@ Trigger.prototype.SpecialArcadianAssault = function(data)
 
 Trigger.prototype.OwnershipChangedAction = function(data)
 {
-	if (this.specialAttackTriggered == false)
+	if (this.specialAttackTriggered == false && (data.from == 5 || data.from == 6) && data.to == -1)
 	{
-		if ((data.from == 5 || data.from == 6) && data.to == -1)
+		// check if structure
+		const id = Engine.QueryInterface(data.entity, IID_Identity);
+		// warn(uneval(id));
+		if (id != null && id.classesList.includes("Structure"))
 		{
-			// check if structure
-			const id = Engine.QueryInterface(data.entity, IID_Identity);
-			// warn(uneval(id));
-			if (id != null && id.classesList.includes("Structure"))
+			if (data.from == 5)
 			{
-				if (data.from == 5)
-				{
-					// spawn attack from player 6
-					this.DoAfterDelay(5 * 1000, "SpecialArcadianAssault", null);
-					this.specialAttackTriggered = true;
+				// spawn attack from player 6
+				this.DoAfterDelay(5 * 1000, "SpecialArcadianAssault", null);
+				this.specialAttackTriggered = true;
 
-				}
-				else if (data.from == 6)
-				{
-					// spawn attack from player 5
-					this.DoAfterDelay(5 * 1000, "SpecialAchaeanAssault", null);
-					this.specialAttackTriggered = true;
-				}
+			}
+			else if (data.from == 6)
+			{
+				// spawn attack from player 5
+				this.DoAfterDelay(5 * 1000, "SpecialAchaeanAssault", null);
+				this.specialAttackTriggered = true;
 			}
 		}
 	}
@@ -476,13 +473,10 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		for (const u of units_all)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
-					// warn("Found idle soldier");
-					this.WalkAndFightClosestTarget(u, target_p, unitTargetClass);
-				}
+				// warn("Found idle soldier");
+				this.WalkAndFightClosestTarget(u, target_p, unitTargetClass);
 			}
 		}
 	}
@@ -747,13 +741,9 @@ Trigger.prototype.SpawnAchaeanPatrol = function(data)
 				// check if patroling
 				const orders = cmpUnitAI.GetOrders();
 				// warn(uneval(orders));
-				if (orders.length > 0)
+				if (orders.length > 0 && orders[0].type == "Patrol")
 				{
-					if (orders[0].type == "Patrol")
-					{
-						num_patroling += 1;
-					}
-
+					num_patroling += 1;
 				}
 			}
 		}
@@ -820,13 +810,9 @@ Trigger.prototype.SpawnArcadianPatrol = function(data)
 				// check if patroling
 				const orders = cmpUnitAI.GetOrders();
 				// warn(uneval(orders));
-				if (orders.length > 0)
+				if (orders.length > 0 && orders[0].type == "Patrol")
 				{
-					if (orders[0].type == "Patrol")
-					{
-						num_patroling += 1;
-					}
-
+					num_patroling += 1;
 				}
 			}
 		}
@@ -931,27 +917,24 @@ Trigger.prototype.SpawnArcadianTraders = function(data)
 	for (const u of traders)
 	{
 		const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-		if (cmpUnitAI)
+		if (cmpUnitAI && cmpUnitAI.IsIdle())
 		{
-			if (cmpUnitAI.IsIdle())
+			// warn("Found idle trader");
+
+			// make list of others' docks
+			let markets_others = [];
+			const trading_partners = [2, 5, 4];
+			for (const p of trading_partners)
 			{
-				// warn("Found idle trader");
+				const markets_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Trade").filter(TriggerHelper.IsInWorld);
+				markets_others = markets_others.concat(markets_p);
+			}
 
-				// make list of others' docks
-				let markets_others = [];
-				const trading_partners = [2, 5, 4];
-				for (const p of trading_partners)
-				{
-					const markets_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Trade").filter(TriggerHelper.IsInWorld);
-					markets_others = markets_others.concat(markets_p);
-				}
-
-				if (markets_others.length > 0)
-				{
-					cmpUnitAI.UpdateWorkOrders("Trade");
-					cmpUnitAI.SetupTradeRoute(pickRandom(markets_others), pickRandom(docks), null, true);
-					// warn("making idle trader trade");
-				}
+			if (markets_others.length > 0)
+			{
+				cmpUnitAI.UpdateWorkOrders("Trade");
+				cmpUnitAI.SetupTradeRoute(pickRandom(markets_others), pickRandom(docks), null, true);
+				// warn("making idle trader trade");
 			}
 		}
 	}
@@ -1026,27 +1009,24 @@ Trigger.prototype.SpawnCretanTraders = function(data)
 	for (const u of traders)
 	{
 		const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-		if (cmpUnitAI)
+		if (cmpUnitAI && cmpUnitAI.IsIdle())
 		{
-			if (cmpUnitAI.IsIdle())
+			// warn("Found idle trader");
+
+			// make list of others' docks
+			let markets_others = [];
+			const trading_partners = [2, 5, 6];
+			for (const p of trading_partners)
 			{
-				// warn("Found idle trader");
+				const markets_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Trade").filter(TriggerHelper.IsInWorld);
+				markets_others = markets_others.concat(markets_p);
+			}
 
-				// make list of others' docks
-				let markets_others = [];
-				const trading_partners = [2, 5, 6];
-				for (const p of trading_partners)
-				{
-					const markets_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Trade").filter(TriggerHelper.IsInWorld);
-					markets_others = markets_others.concat(markets_p);
-				}
-
-				if (markets_others.length > 0)
-				{
-					cmpUnitAI.UpdateWorkOrders("Trade");
-					cmpUnitAI.SetupTradeRoute(pickRandom(markets_others), pickRandom(docks), null, true);
-					// warn("making idle trader trade");
-				}
+			if (markets_others.length > 0)
+			{
+				cmpUnitAI.UpdateWorkOrders("Trade");
+				cmpUnitAI.SetupTradeRoute(pickRandom(markets_others), pickRandom(docks), null, true);
+				// warn("making idle trader trade");
 			}
 		}
 	}

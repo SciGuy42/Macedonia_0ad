@@ -257,16 +257,11 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 			if (target_cluster != -1)
 			{
 				// go through every unit in cluster and if idle, order to attack
-				for (const u of this.gaiaClusters[target_cluster])
+				for (const unit of this.gaiaClusters[target_cluster])
 				{
-					const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-					if (cmpUnitAI)
-					{
-						if (cmpUnitAI.IsIdle())
-						{
-							this.WalkAndFightClosestTarget(u, 1, "Unit");
-						}
-					}
+					const cmpUnitAI = Engine.QueryInterface(unit, IID_UnitAI);
+					if (cmpUnitAI && cmpUnitAI.IsIdle())
+						this.WalkAndFightClosestTarget(unit, 1, "Unit");
 				}
 			}
 		}
@@ -373,16 +368,13 @@ Trigger.prototype.IdleUnitCheck = function(data)
 
 		const units_all = units_inf.concat(units_cav, units_siege, units_ele);
 
-		for (const u of units_all)
+		for (const unit of units_all)
 		{
-			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			const cmpUnitAI = Engine.QueryInterface(unit, IID_UnitAI);
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
-					// warn("Found idle soldier");
-					this.WalkAndFightClosestTarget(u, target_p, unitTargetClass);
-				}
+				// warn("Found idle soldier");
+				this.WalkAndFightClosestTarget(unit, target_p, unitTargetClass);
 			}
 		}
 	}
@@ -549,13 +541,10 @@ Trigger.prototype.ClusterUnits = function(units, num_clusters)
 	{
 		const cluter_k = [];
 
-		for (let i = 0; i < units.length; i++)
+		for (const [i, unit] of units.entries())
 		{
-
 			if (clustering[i] == k)
-			{
-				cluter_k.push(units[i]);
-			}
+				cluter_k.push(unit);
 		}
 
 		clusters.push(cluter_k);

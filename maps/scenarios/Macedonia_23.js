@@ -346,36 +346,30 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 
 		// if temple
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
-		if (id)
+		if (id && id.classesList.includes("MercenaryCamp") && this.campCaptured == false)
 		{
-			if (id.classesList.includes("MercenaryCamp"))
-			{
-				if (this.campCaptured == false)
-				{
-					// our default gains improve
-					const increment_factor = 1.25;
-					const bonus = 200;
+			// our default gains improve
+			const increment_factor = 1.25;
+			const bonus = 200;
 
-					this.pointFood += bonus;
-					this.pointFoodIncrement *= increment_factor;
-					this.pointWood += bonus;
-					this.pointWoodIncrement *= increment_factor;
-					this.pointStone += bonus;
-					this.pointStoneIncrement *= increment_factor;
-					this.pointMetal += bonus;
-					this.pointMetalIncrement *= increment_factor;
+			this.pointFood += bonus;
+			this.pointFoodIncrement *= increment_factor;
+			this.pointWood += bonus;
+			this.pointWoodIncrement *= increment_factor;
+			this.pointStone += bonus;
+			this.pointStoneIncrement *= increment_factor;
+			this.pointMetal += bonus;
+			this.pointMetalIncrement *= increment_factor;
 
-					// give small bonus to enemy
-					this.maxPatrolNumber += 100;
-					this.patrolSizeDefault += 6;
+			// give small bonus to enemy
+			this.maxPatrolNumber += 100;
+			this.patrolSizeDefault += 6;
 
-					// warn("Camp captured! increments: "+uneval(this.pointFoodIncrement));
+			// warn("Camp captured! increments: "+uneval(this.pointFoodIncrement));
 
-					this.ShowText("Excellent work! The camp conttained maps of the area that will enable our army to gather more resources!", "Glad to help!", "Oh boy..");
+			this.ShowText("Excellent work! The camp conttained maps of the area that will enable our army to gather more resources!", "Glad to help!", "Oh boy..");
 
-					this.campCaptured = true;
-				}
-			}
+			this.campCaptured = true;
 		}
 	}
 	else if (this.scythianAttackTriggered == false)
@@ -383,86 +377,76 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		if (data.from == 2 && (data.to == 1 || data.to == -1 || data.to == 3))
 		{
 			const id = Engine.QueryInterface(data.entity, IID_Identity);
-			if (id)
+			if (id && id.classesList.includes("Structure"))
 			{
-				if (id.classesList.includes("Structure"))
+				this.numBuildingsDestroyed++;
+
+				// warn("Num buildings destroyed = "+uneval(this.numBuildingsDestroyed));
+
+				if (this.numBuildingsDestroyed >= this.buildingsDestroyedThreshold)
 				{
-					this.numBuildingsDestroyed++;
+					this.scythianAttackTriggered = true;
 
-					// warn("Num buildings destroyed = "+uneval(this.numBuildingsDestroyed));
+					// increase max repairmen and max cavalry for pl 2
+					this.maxRepairmen *= 2;
+					this.cavLimit *= 2;
 
-					if (this.numBuildingsDestroyed >= this.buildingsDestroyedThreshold)
+					// patrols spawn faster now and with more people
+					this.patrolSpawnTime = 4;
+					this.patrolSizeDefault += 8;
+
+					// give some tech to players 2 and 6, the olbians
+					for (const p of [2, 6])
 					{
-						this.scythianAttackTriggered = true;
 
-						// increase max repairmen and max cavalry for pl 2
-						this.maxRepairmen *= 2;
-						this.cavLimit *= 2;
+						const cmpPlayer = QueryPlayerIDInterface(p);
+						const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 
-						// patrols spawn faster now and with more people
-						this.patrolSpawnTime = 4;
-						this.patrolSizeDefault += 8;
-
-						// give some tech to players 2 and 6, the olbians
-						for (const p of [2, 6])
-						{
-
-							const cmpPlayer = QueryPlayerIDInterface(p);
-							const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
-
-							/* cmpTechnologyManager.ResearchTechnology("attack_soldiers_will");
+						/* cmpTechnologyManager.ResearchTechnology("attack_soldiers_will");
 							cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
 							cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
 							cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
 							cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
 							cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
 							cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_02");*/
-						}
-
-						// start slave army -- the Olbians free the slaves
-						warn("slave attack!");
-						this.DoAfterDelay(5 * 1000, "SpawnSlaveAttack", null);
-
-						// make sure gate opens
-						const slave_pl = QueryPlayerIDInterface(6);
-						slave_pl.SetAlly(2);
-
-						// start scythian waves
-						// warn("Starting cavalry waves in 2 minutes");
-						this.DoAfterDelay(120 * 1000, "SpawnCavalryWave", null);
-						this.DoAfterDelay(110 * 1000, "MessageScythianAttack", null);
-
-						// start scythian attack on our extra docks
-						this.DoAfterDelay(180 * 1000, "SpawnCavalryDockAttack", null);
-
-						this.ShowText("Word has arrived that the Olbians have freed and armed their slaves! They must be desperate! Fight on!\n\nHowever, we also have bad news: the Scythian cavalry is getting closer and closer -- we must secure the city before they arrive!", "Glad to help!", "Oh boy..");
-
-						// schedule victory message -- need to survive 13 minutes of cavalry attacks
-						this.DoAfterDelay(780 * 1000, "VictoryAchieved", null);
-
-						// this.DoAfterDelay(10 * 1000,"VictoryAchieved",null);
 					}
+
+					// start slave army -- the Olbians free the slaves
+					warn("slave attack!");
+					this.DoAfterDelay(5 * 1000, "SpawnSlaveAttack", null);
+
+					// make sure gate opens
+					const slave_pl = QueryPlayerIDInterface(6);
+					slave_pl.SetAlly(2);
+
+					// start scythian waves
+					// warn("Starting cavalry waves in 2 minutes");
+					this.DoAfterDelay(120 * 1000, "SpawnCavalryWave", null);
+					this.DoAfterDelay(110 * 1000, "MessageScythianAttack", null);
+
+					// start scythian attack on our extra docks
+					this.DoAfterDelay(180 * 1000, "SpawnCavalryDockAttack", null);
+
+					this.ShowText("Word has arrived that the Olbians have freed and armed their slaves! They must be desperate! Fight on!\n\nHowever, we also have bad news: the Scythian cavalry is getting closer and closer -- we must secure the city before they arrive!", "Glad to help!", "Oh boy..");
+
+					// schedule victory message -- need to survive 13 minutes of cavalry attacks
+					this.DoAfterDelay(780 * 1000, "VictoryAchieved", null);
+
+					// this.DoAfterDelay(10 * 1000,"VictoryAchieved",null);
 				}
 			}
 		}
 	}
-	else if (this.scythianAttackTriggered == true)
+	else if (this.scythianAttackTriggered == true && data.from == 2 && (data.to == 1 || data.to == -1 || data.to == 3))
 	{
-		if (data.from == 2 && (data.to == 1 || data.to == -1 || data.to == 3))
+		const id = Engine.QueryInterface(data.entity, IID_Identity);
+		if (id && id.classesList.includes("Structure"))
 		{
-			const id = Engine.QueryInterface(data.entity, IID_Identity);
-			if (id)
-			{
-				if (id.classesList.includes("Structure"))
-				{
-					this.numBuildingsDestroyed++;
-					this.patrolSizeDefault += 2;
-					// warn("default patrol size is now "+this.patrolSizeDefault);
-				}
-
-			}
-
+			this.numBuildingsDestroyed++;
+			this.patrolSizeDefault += 2;
+			// warn("default patrol size is now "+this.patrolSizeDefault);
 		}
+
 	}
 
 	// olbian slaves cannot capture buildings or siege
@@ -480,45 +464,41 @@ Trigger.prototype.PlayerCommandAction = function(data)
 	// warn("The OnPlayerCommand event happened with the following data:");
 	// warn(uneval(data));
 
-	if (data.cmd.type == "tribute")
+	if (data.cmd.type == "tribute" && data.player == 1 && data.cmd.player == 3)
 	{
-		if (data.player == 1 && data.cmd.player == 3)
+		// warn(uneval(data.cmd.amounts));
+
+		let resource = "";
+		let amount = 0;
+		if (data.cmd.amounts.food)
 		{
-			// warn(uneval(data.cmd.amounts));
-
-			let resource = "";
-			let amount = 0;
-			if (data.cmd.amounts.food)
-			{
-				amount = data.cmd.amounts.food;
-				resource = "food";
-				this.pointFood += amount;
-			}
-			if (data.cmd.amounts.wood)
-			{
-				amount = data.cmd.amounts.wood;
-				resource = "wood";
-				this.pointWood += amount;
-			}
-			if (data.cmd.amounts.stone)
-			{
-				amount = data.cmd.amounts.stone;
-				resource = "stone";
-				this.pointStone += amount;
-			}
-			if (data.cmd.amounts.metal)
-			{
-				amount = data.cmd.amounts.metal;
-				resource = "metal";
-				this.pointMetal += amount;
-			}
-
-			// warn("tributing "+amount+" "+resource);
-
-			const cmpPlayer = QueryPlayerIDInterface(3);
-			cmpPlayer.AddResource(resource, -1 * amount);
-
+			amount = data.cmd.amounts.food;
+			resource = "food";
+			this.pointFood += amount;
 		}
+		if (data.cmd.amounts.wood)
+		{
+			amount = data.cmd.amounts.wood;
+			resource = "wood";
+			this.pointWood += amount;
+		}
+		if (data.cmd.amounts.stone)
+		{
+			amount = data.cmd.amounts.stone;
+			resource = "stone";
+			this.pointStone += amount;
+		}
+		if (data.cmd.amounts.metal)
+		{
+			amount = data.cmd.amounts.metal;
+			resource = "metal";
+			this.pointMetal += amount;
+		}
+
+		// warn("tributing "+amount+" "+resource);
+
+		const cmpPlayer = QueryPlayerIDInterface(3);
+		cmpPlayer.AddResource(resource, -1 * amount);
 
 	}
 };
@@ -674,13 +654,10 @@ Trigger.prototype.IdleUnitCheck = function(data)
 					// make it patrol
 
 					const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-					if (cmpUnitAI)
+					if (cmpUnitAI && cmpUnitAI.IsIdle())
 					{
-						if (cmpUnitAI.IsIdle())
-						{
-							// warn("Found idle soldier");
-							this.WalkAndFightClosestTarget(u, target_p, unitTargetClass);
-						}
+						// warn("Found idle soldier");
+						this.WalkAndFightClosestTarget(u, target_p, unitTargetClass);
 					}
 				}
 			}
@@ -711,13 +688,10 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		for (const u of units_all)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
-					// warn("Found idle soldier");
-					this.WalkAndFightClosestTarget(u, target_p, unitTargetClass);
-				}
+				// warn("Found idle soldier");
+				this.WalkAndFightClosestTarget(u, target_p, unitTargetClass);
 			}
 		}
 	}
@@ -1667,17 +1641,12 @@ Trigger.prototype.ResearchFinishedAction = function(data)
 	// warn("The OnResearchFinished event happened with the following data:");
 	// warn(uneval(data));
 
-	if (data.player == 1)
+	if (data.player == 1 && data.tech != "phase_town_generic" && data.tech != "phase_city_generic")
 	{
-		if (data.tech != "phase_town_generic" && data.tech != "phase_city_generic")
-		{
-			const cmpPlayer = QueryPlayerIDInterface(3);
-			const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
-			cmpTechnologyManager.ResearchTechnology(data.tech);
-
-			// warn("Researching tech for ally");
-		}
-
+		const cmpPlayer = QueryPlayerIDInterface(3);
+		const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
+		cmpTechnologyManager.ResearchTechnology(data.tech);
+		// warn("Researching tech for ally");
 	}
 };
 

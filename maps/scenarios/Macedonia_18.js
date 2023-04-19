@@ -293,14 +293,10 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	// warn("The OnOwnershipChanged event happened with the following data:");
 	// warn(uneval(data));
 
-	if (data.entity == 4984)
+	if (data.entity == 4984 && data.from == 2 && (data.to == -1 || data.to == 1))
 	{
-		if (data.from == 2 && (data.to == -1 || data.to == 1))
-		{
-			// victory
-			TriggerHelper.SetPlayerWon(1, this.VictoryTextFn, this.VictoryTextFn);
-
-		}
+		// victory
+		TriggerHelper.SetPlayerWon(1, this.VictoryTextFn, this.VictoryTextFn);
 	}
 };
 
@@ -518,16 +514,13 @@ Trigger.prototype.IdleUnitCheck = function(data)
 
 		const units_all = units_inf.concat(units_cav, units_siege, units_ele);
 
-		for (const u of units_all)
+		for (const unit of units_all)
 		{
-			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			const cmpUnitAI = Engine.QueryInterface(unit, IID_UnitAI);
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
-					// warn("Found idle soldier");
-					this.WalkAndFightClosestTarget(u, target_p, unitTargetClass);
-				}
+				// warn("Found idle soldier");
+				this.WalkAndFightClosestTarget(unit, target_p, unitTargetClass);
 			}
 		}
 	}

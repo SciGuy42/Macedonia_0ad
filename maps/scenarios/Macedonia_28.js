@@ -168,37 +168,32 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	{
 		// with smalll chance, some of the mountains patrols engage
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
-		if (id != null && id.classesList.includes("Structure") && !id.classesList.includes("Foundation"))
+		// warn("Player 2 lost a structure!");
+		// with small probability, send archers from players 4 and 5 on the attack
+		if (id != null && id.classesList.includes("Structure") && !id.classesList.includes("Foundation") && Math.random() < 1.0)
 		{
-			// warn("Player 2 lost a structure!");
-
-			// with small probability, send archers from players 4 and 5 on the attack
-			if (Math.random() < 1.0)
+			// archer attack
+			for (const p of [4, 5])
 			{
-				// archer attack
-				for (const p of [4, 5])
+				const archers_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Archer").filter(TriggerHelper.IsInWorld);
+				//	warn("Found "+archers_p.length+" archers of player "+p);
+
+				const attack_size = Math.round(archers_p.length / 3);
+				const archers_response_squad = [];
+
+				if (attack_size <= archers_p.length)
 				{
-					const archers_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Archer").filter(TriggerHelper.IsInWorld);
-					//	warn("Found "+archers_p.length+" archers of player "+p);
+					for (let i = 0; i < attack_size; i++)
+						archers_response_squad.push(archers_p[i]);
 
-					const attack_size = Math.round(archers_p.length / 3);
-					const archers_response_squad = [];
+					// warn("attacking archers = "+uneval(archers_response_squad));
 
-					if (attack_size <= archers_p.length)
+					for (const u of archers_response_squad)
 					{
-						for (let i = 0; i < attack_size; i++)
-							archers_response_squad.push(archers_p[i]);
-
-						// warn("attacking archers = "+uneval(archers_response_squad));
-
-						for (const u of archers_response_squad)
-						{
-							var cmpTargetPosition = Engine.QueryInterface(data.entity, IID_Position).GetPosition2D();
-							const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-							cmpUnitAI.SwitchToStance("violent");
-							cmpUnitAI.WalkAndFight(cmpTargetPosition.x, cmpTargetPosition.y, null);
-
-						}
+						var cmpTargetPosition = Engine.QueryInterface(data.entity, IID_Position).GetPosition2D();
+						const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
+						cmpUnitAI.SwitchToStance("violent");
+						cmpUnitAI.WalkAndFight(cmpTargetPosition.x, cmpTargetPosition.y, null);
 					}
 				}
 			}
@@ -395,13 +390,10 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		for (const u of units_cav)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
-					// warn("Found idle soldier");
-					this.WalkAndGatherClosestTarget(u, 0, "Animal");
-				}
+				// warn("Found idle soldier");
+				this.WalkAndGatherClosestTarget(u, 0, "Animal");
 			}
 		}
 
@@ -411,19 +403,16 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		for (const u of units_cav_soldiers)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
+				// send to patrol
+				if (p == 4)
 				{
-					// send to patrol
-					if (p == 4)
-					{
-						this.PatrolOrderList([u], p, this.GetTriggerPoints(triggerPointPatrolA));
-					}
-					else if (p == 5)
-					{
-						this.PatrolOrderList([u], p, this.GetTriggerPoints(triggerPointPatrolB));
-					}
+					this.PatrolOrderList([u], p, this.GetTriggerPoints(triggerPointPatrolA));
+				}
+				else if (p == 5)
+				{
+					this.PatrolOrderList([u], p, this.GetTriggerPoints(triggerPointPatrolB));
 				}
 			}
 		}
@@ -434,29 +423,26 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		for (const u of units_inf)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
+				if (p == 4)
 				{
-					if (p == 4)
-					{
-						// pick points to patrol
-						const patrol_points = this.pickRandomK(this.GetTriggerPoints(triggerPointPatrolMountainWest), 5);
+					// pick points to patrol
+					const patrol_points = this.pickRandomK(this.GetTriggerPoints(triggerPointPatrolMountainWest), 5);
 
-						this.PatrolOrderList([u], p, patrol_points);
+					this.PatrolOrderList([u], p, patrol_points);
 
-					}
-					else if (p == 5)
-					{
-						let patrol_points = [];
-						if (Math.random() < 0.5)
-							patrol_points = this.pickRandomK(this.GetTriggerPoints(triggerPointPatrolMountainMiddle), 5);
-						else
-							patrol_points = this.pickRandomK(this.GetTriggerPoints(triggerPointPatrolMountainEast), 5);
+				}
+				else if (p == 5)
+				{
+					let patrol_points = [];
+					if (Math.random() < 0.5)
+						patrol_points = this.pickRandomK(this.GetTriggerPoints(triggerPointPatrolMountainMiddle), 5);
+					else
+						patrol_points = this.pickRandomK(this.GetTriggerPoints(triggerPointPatrolMountainEast), 5);
 
-						this.PatrolOrderList([u], p, patrol_points);
+					this.PatrolOrderList([u], p, patrol_points);
 
-					}
 				}
 			}
 		}
@@ -486,13 +472,10 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		for (const u of units_cav)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
-					// warn("Found idle soldier");
-					this.WalkAndFightClosestTarget(u, 1, unitTargetClass);
-				}
+				// warn("Found idle soldier");
+				this.WalkAndFightClosestTarget(u, 1, unitTargetClass);
 			}
 		}
 	}

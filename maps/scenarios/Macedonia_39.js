@@ -303,17 +303,12 @@ Trigger.prototype.ResearchFinishedAction = function(data)
 	// warn("The OnResearchFinished event happened with the following data:");
 	// warn(uneval(data));
 
-	if (data.player == 1)
+	if (data.player == 1 && data.tech != "phase_town_generic" && data.tech != "phase_city_generic")
 	{
-		if (data.tech != "phase_town_generic" && data.tech != "phase_city_generic")
-		{
-			const cmpPlayer = QueryPlayerIDInterface(3);
-			const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
-			cmpTechnologyManager.ResearchTechnology(data.tech);
-
-			// warn("Researching tech for ally");
-		}
-
+		const cmpPlayer = QueryPlayerIDInterface(3);
+		const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
+		cmpTechnologyManager.ResearchTechnology(data.tech);
+		// warn("Researching tech for ally");
 	}
 };
 
@@ -338,18 +333,12 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		for (const u of inf_units)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
-
-					const trigger_sites = this.GetTriggerPoints(triggerPointsPatrol);
-
-					// pick patrol sites
-					const sites = [pickRandom(trigger_sites), pickRandom(trigger_sites), pickRandom(trigger_sites), pickRandom(trigger_sites)];
-
-					this.PatrolOrderList([u], p, sites);
-				}
+				const trigger_sites = this.GetTriggerPoints(triggerPointsPatrol);
+				// pick patrol sites
+				const sites = [pickRandom(trigger_sites), pickRandom(trigger_sites), pickRandom(trigger_sites), pickRandom(trigger_sites)];
+				this.PatrolOrderList([u], p, sites);
 			}
 		}
 	}
@@ -366,16 +355,11 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		units = units.concat(cav_units);
 		units = units.concat(ele_units);
 
-		for (const u of inf_units)
+		for (const unit of inf_units)
 		{
-			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
-			{
-				if (cmpUnitAI.IsIdle())
-				{
-					this.WalkAndFightClosestTarget(u, 1, unitTargetClass);
-				}
-			}
+			const cmpUnitAI = Engine.QueryInterface(unit, IID_UnitAI);
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
+				this.WalkAndFightClosestTarget(unit, 1, unitTargetClass);
 		}
 
 	}

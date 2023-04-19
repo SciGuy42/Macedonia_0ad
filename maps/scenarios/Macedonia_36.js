@@ -381,13 +381,10 @@ Trigger.prototype.HealersAdvanceDebug = function(data)
 	for (const u of healers)
 	{
 		const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-		if (cmpUnitAI)
+		if (cmpUnitAI && cmpUnitAI.IsIdle())
 		{
-			if (cmpUnitAI.IsIdle())
-			{
-				// warn("Found idle persia inf or cav");
-				this.WalkAndFightClosestTarget(u, 2, unitTargetClass);
-			}
+			// warn("Found idle persia inf or cav");
+			this.WalkAndFightClosestTarget(u, 2, unitTargetClass);
 		}
 	}
 };
@@ -407,13 +404,10 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		for (const u of units_all)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
-					// warn("Found idle persia inf or cav");
-					this.WalkAndFightClosestTarget(u, target_p, unitTargetClass);
-				}
+				// warn("Found idle persia inf or cav");
+				this.WalkAndFightClosestTarget(u, target_p, unitTargetClass);
 			}
 		}
 	}
@@ -430,14 +424,10 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		{
 			// check if idle
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
-
-					// set to walk and attack
-					this.WalkAndFightClosestTarget(u, target_player, siegeTargetClass);
-				}
+				// set to walk and attack
+				this.WalkAndFightClosestTarget(u, target_player, siegeTargetClass);
 			}
 		}
 
@@ -454,14 +444,10 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		{
 			// check if idle
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
-
-					// set to walk and attack
-					this.WalkAndFightClosestTarget(u, target_player, siegeTargetClass);
-				}
+				// set to walk and attack
+				this.WalkAndFightClosestTarget(u, target_player, siegeTargetClass);
 			}
 		}
 
@@ -479,14 +465,10 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		{
 			// check if idle
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
-
-					// set to walk and attack
-					this.WalkAndFightClosestTarget(u, target_player, unitTargetClass);
-				}
+				// set to walk and attack
+				this.WalkAndFightClosestTarget(u, target_player, unitTargetClass);
 			}
 		}
 	}
@@ -503,14 +485,10 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		{
 			// check if idle
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
-
-					// set to walk and attack
-					this.WalkAndFightClosestTarget(u, target_player, unitTargetClass);
-				}
+				// set to walk and attack
+				this.WalkAndFightClosestTarget(u, target_player, unitTargetClass);
 			}
 		}
 
@@ -528,14 +506,10 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		{
 			// check if idle
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
-
-					// set to walk and attack
-					this.WalkAndFightClosestTarget(u, target_player, unitTargetClass);
-				}
+				// set to walk and attack
+				this.WalkAndFightClosestTarget(u, target_player, unitTargetClass);
 			}
 		}
 
@@ -553,14 +527,10 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		{
 			// check if idle
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
-
-					// set to walk and attack
-					this.WalkAndFightClosestTarget(u, target_player, unitTargetClass);
-				}
+				// set to walk and attack
+				this.WalkAndFightClosestTarget(u, target_player, unitTargetClass);
 			}
 		}
 	}
@@ -779,25 +749,24 @@ Trigger.prototype.AttackCavalryWaveDebug = function(data)
 	// warn(uneval(clusters.length));
 
 	// for each cluster, send attack
-	for (let k = 0; k < clusters.length; k++)
+	for (const cluster of clusters)
 	{
-		if (clusters[k].length > 0)
+		if (cluster.length > 0)
 		{
-
 			// find target
-			const target = this.FindClosestTarget(clusters[k][0], target_player, unitTargetClass);
+			const target = this.FindClosestTarget(cluster[0], target_player, unitTargetClass);
 
 			const target_pos = TriggerHelper.GetEntityPosition2D(target);
 
 			// warn(uneval(target_pos));
 
 			// set formation
-			TriggerHelper.SetUnitFormation(p, clusters[k], "special/formations/battle_line");
+			TriggerHelper.SetUnitFormation(p, cluster, "special/formations/battle_line");
 
 			// attack walk
 			ProcessCommand(p, {
 				"type": "attack-walk",
-				"entities": clusters[k],
+				"entities": cluster,
 				"x": target_pos.x,
 				"z": target_pos.y,
 				"queued": true,
@@ -826,25 +795,24 @@ Trigger.prototype.AttackCavalryWave = function(data)
 	// warn(uneval(clusters.length));
 
 	// for each cluster, send attack
-	for (let k = 0; k < clusters.length; k++)
+	for (const cluster of clusters)
 	{
-		if (clusters[k].length > 0)
+		if (cluster.length > 0)
 		{
-
 			// find target
-			const target = this.FindClosestTarget(clusters[k][0], target_player, unitTargetClass);
+			const target = this.FindClosestTarget(cluster[0], target_player, unitTargetClass);
 
 			const target_pos = TriggerHelper.GetEntityPosition2D(target);
 
 			// warn(uneval(target_pos));
 
 			// set formation
-			TriggerHelper.SetUnitFormation(p, clusters[k], "special/formations/battle_line");
+			TriggerHelper.SetUnitFormation(p, cluster, "special/formations/battle_line");
 
 			// attack walk
 			ProcessCommand(p, {
 				"type": "attack-walk",
-				"entities": clusters[k],
+				"entities": cluster,
 				"x": target_pos.x,
 				"z": target_pos.y,
 				"queued": true,
@@ -873,25 +841,24 @@ Trigger.prototype.AttackTaxila = function(data)
 	// warn(uneval(clusters.length));
 
 	// for each cluster, send attack
-	for (let k = 0; k < clusters.length; k++)
+	for (const cluster of clusters)
 	{
-		if (clusters[k].length > 0)
+		if (cluster.length > 0)
 		{
-
 			// find target
-			const target = this.FindClosestTarget(clusters[k][0], target_player, unitTargetClass);
+			const target = this.FindClosestTarget(cluster[0], target_player, unitTargetClass);
 
 			const target_pos = TriggerHelper.GetEntityPosition2D(target);
 
 			// warn(uneval(target_pos));
 
 			// set formation
-			TriggerHelper.SetUnitFormation(p, clusters[k], "special/formations/battle_line");
+			TriggerHelper.SetUnitFormation(p, cluster, "special/formations/battle_line");
 
 			// attack walk
 			ProcessCommand(p, {
 				"type": "attack-walk",
-				"entities": clusters[k],
+				"entities": cluster,
 				"x": target_pos.x,
 				"z": target_pos.y,
 				"queued": true,
@@ -920,25 +887,24 @@ Trigger.prototype.AttackInftanryWave = function(data)
 	// warn(uneval(clusters.length));
 
 	// for each cluster, send attack
-	for (let k = 0; k < clusters.length; k++)
+	for (const cluster of clusters)
 	{
-		if (clusters[k].length > 0)
+		if (cluster.length > 0)
 		{
-
 			// find target
-			const target = this.FindClosestTarget(clusters[k][0], target_player, unitTargetClass);
+			const target = this.FindClosestTarget(cluster[0], target_player, unitTargetClass);
 
 			const target_pos = TriggerHelper.GetEntityPosition2D(target);
 
 			// warn(uneval(target_pos));
 
 			// set formation
-			TriggerHelper.SetUnitFormation(p, clusters[k], "special/formations/battle_line");
+			TriggerHelper.SetUnitFormation(p, cluster, "special/formations/battle_line");
 
 			// attack walk
 			ProcessCommand(p, {
 				"type": "attack-walk",
-				"entities": clusters[k],
+				"entities": cluster,
 				"x": target_pos.x,
 				"z": target_pos.y,
 				"queued": true,
@@ -966,15 +932,11 @@ Trigger.prototype.AttackIndianInfantry = function(data)
 	{
 		// check if idle
 		const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-		if (cmpUnitAI)
+		if (cmpUnitAI && cmpUnitAI.IsIdle())
 		{
-			if (cmpUnitAI.IsIdle())
-			{
-
-				attackers.push(u);
-				// set to walk and attack
-				// this.WalkAndFightClosestTarget(u,target_player,siegeTargetClass);
-			}
+			attackers.push(u);
+			// set to walk and attack
+			// this.WalkAndFightClosestTarget(u,target_player,siegeTargetClass);
 		}
 	}
 
@@ -1018,16 +980,11 @@ Trigger.prototype.AttackIndianCavalry = function(data)
 	{
 		// check if idle
 		const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-		if (cmpUnitAI)
+		if (cmpUnitAI && cmpUnitAI.IsIdle())
 		{
-			if (cmpUnitAI.IsIdle())
-			{
-
-				attackers.push(u);
-
-				// set to walk and attack
-				// this.WalkAndFightClosestTarget(u,target_player,siegeTargetClass);
-			}
+			attackers.push(u);
+			// set to walk and attack
+			// this.WalkAndFightClosestTarget(u,target_player,siegeTargetClass);
 		}
 	}
 
@@ -1036,25 +993,24 @@ Trigger.prototype.AttackIndianCavalry = function(data)
 	// warn(uneval(clusters.length));
 
 	// for each cluster, send attack
-	for (let k = 0; k < clusters.length; k++)
+	for (const cluster of clusters)
 	{
-		if (clusters[k].length > 0)
+		if (cluster.length > 0)
 		{
-
 			// find target
-			const target = this.FindRandomTarget(clusters[k][0], target_player, siegeTargetClass);
+			const target = this.FindRandomTarget(cluster[0], target_player, siegeTargetClass);
 
 			const target_pos = TriggerHelper.GetEntityPosition2D(target);
 
 			// warn(uneval(target_pos));
 
 			// set formation
-			TriggerHelper.SetUnitFormation(p, clusters[k], "special/formations/battle_line");
+			TriggerHelper.SetUnitFormation(p, cluster, "special/formations/battle_line");
 
 			// attack walk
 			ProcessCommand(p, {
 				"type": "attack-walk",
-				"entities": clusters[k],
+				"entities": cluster,
 				"x": target_pos.x,
 				"z": target_pos.y,
 				"queued": true,
@@ -1161,13 +1117,10 @@ Trigger.prototype.ClusterUnits = function(units, num_clusters)
 	{
 		const cluter_k = [];
 
-		for (let i = 0; i < units.length; i++)
+		for (const [i, unit] of units.entries())
 		{
-
 			if (clustering[i] == k)
-			{
-				cluter_k.push(units[i]);
-			}
+				cluter_k.push(unit);
 		}
 
 		clusters.push(cluter_k);

@@ -92,12 +92,11 @@ Trigger.prototype.ClusterUnits = function(units, num_clusters)
 	{
 		const cluter_k = [];
 
-		for (let i = 0; i < units.length; i++)
+		for (const [i, unit] of units.entries())
 		{
-
 			if (clustering[i] == k)
 			{
-				cluter_k.push(units[i]);
+				cluter_k.push(unit);
 			}
 		}
 
@@ -329,12 +328,9 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				for (const u of this.gaiaClusters[target_cluster])
 				{
 					const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-					if (cmpUnitAI)
+					if (cmpUnitAI && cmpUnitAI.IsIdle())
 					{
-						if (cmpUnitAI.IsIdle())
-						{
-							this.WalkAndFightClosestTarget(u, 1, "Unit");
-						}
+						this.WalkAndFightClosestTarget(u, 1, "Unit");
 					}
 				}
 			}
@@ -587,13 +583,10 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		for (const u of units_all)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
-					// warn("Found idle soldier");
-					this.WalkAndFightClosestTarget(u, target_p, unitTargetClass);
-				}
+				// warn("Found idle soldier");
+				this.WalkAndFightClosestTarget(u, target_p, unitTargetClass);
 			}
 		}
 	}
@@ -1391,39 +1384,31 @@ Trigger.prototype.RewardTemple = function(data)
 
 Trigger.prototype.RangeActionPassAttack = function(data)
 {
-	if (this.passAttackTriggered == false)
+	// warn(uneval(data));
+	if (this.passAttackTriggered == false && data.currentCollection.length > 5)
 	{
-		// warn(uneval(data));
-		if (data.currentCollection.length > 5)
-		{
-			// trigger attack
-			// warn("pass attack");
-			this.DoAfterDelay(30 * 1000, "SpawnPassAttack", null);
+		// trigger attack
+		// warn("pass attack");
+		this.DoAfterDelay(30 * 1000, "SpawnPassAttack", null);
 
-			this.passAttackTriggered = true;
+		this.passAttackTriggered = true;
 
-			this.ShowText("Finally, we have found a way! In the distance, you see a Persian fortress and an army assembling nearby, getting ready to march towards us. We must meet them in battle. If we win, this is it for the Persian Empire!", "We will meet the enemy in the field!", "We will defend ourselves from the higher ground!");
-		}
-
+		this.ShowText("Finally, we have found a way! In the distance, you see a Persian fortress and an army assembling nearby, getting ready to march towards us. We must meet them in battle. If we win, this is it for the Persian Empire!", "We will meet the enemy in the field!", "We will defend ourselves from the higher ground!");
 	}
 };
 
 Trigger.prototype.RangeActionFortressAttack = function(data)
 {
-	if (this.fortressAttackTriggered == false && this.gaiaFortressCaptured == true)
+	// warn(uneval(data));
+	if (this.fortressAttackTriggered == false && this.gaiaFortressCaptured == true && data.currentCollection.length > 5)
 	{
-		// warn(uneval(data));
-		if (data.currentCollection.length > 5)
-		{
-			// trigger attack
-			// warn("fortress attack");
-			this.DoAfterDelay(10 * 1000, "SpawnFortressAttack", null);
+		// trigger attack
+		// warn("fortress attack");
+		this.DoAfterDelay(10 * 1000, "SpawnFortressAttack", null);
 
-			this.fortressAttackTriggered = true;
+		this.fortressAttackTriggered = true;
 
-			this.ShowText("This path looks promising....but further in the distance your scouts notice enemy forces marching towards us. Prepare for battle!", "Yes, sir!", "Oh no!");
-		}
-
+		this.ShowText("This path looks promising....but further in the distance your scouts notice enemy forces marching towards us. Prepare for battle!", "Yes, sir!", "Oh no!");
 	}
 };
 

@@ -100,10 +100,10 @@ Trigger.prototype.IntervalAction = function(data)
 
 	var enemy_players = [2];
 
-	for (let p = 0; p < enemy_players.length; ++p)
+	for (const enemy_player of enemy_players)
 	{
 
-		var enemy_units = TriggerHelper.GetEntitiesByPlayer(enemy_players[p]);
+		var enemy_units = TriggerHelper.GetEntitiesByPlayer(enemy_player);
 		var human_units = TriggerHelper.GetEntitiesByPlayer(1);
 
 		var d = 0;
@@ -112,21 +112,21 @@ Trigger.prototype.IntervalAction = function(data)
 
 		if (human_units.length > 0)
 		{
-			for (let i = 0; i < enemy_units.length; ++i)
+			for (const enemy_unit of enemy_units)
 			{
-				const cmpUnitAI = Engine.QueryInterface(enemy_units[i], IID_UnitAI);
+				const cmpUnitAI = Engine.QueryInterface(enemy_unit, IID_UnitAI);
 
 				// check if the unit is idle and if it can attack
 				if (cmpUnitAI)
 				{
-					const pos_i = Engine.QueryInterface(enemy_units[i], IID_Position).GetPosition2D();
+					const pos_i = Engine.QueryInterface(enemy_unit, IID_Position).GetPosition2D();
 
-					if (cmpUnitAI.IsIdle() && Engine.QueryInterface(enemy_units[i], IID_Attack))
+					if (cmpUnitAI.IsIdle() && Engine.QueryInterface(enemy_unit, IID_Attack))
 					{
 
-						for (let j = 0; j < human_units.length; j++)
+						for (const [j, human_unit] of human_units.entries())
 						{
-							const pos_j = Engine.QueryInterface(human_units[j], IID_Position).GetPosition2D();
+							const pos_j = Engine.QueryInterface(human_unit, IID_Position).GetPosition2D();
 
 							d = Math.sqrt((pos_i.x - pos_j.x) * (pos_i.x - pos_j.x) + (pos_i.y - pos_j.y) * (pos_i.y - pos_j.y));
 

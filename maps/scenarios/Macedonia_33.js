@@ -260,18 +260,12 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			for (const u of units)
 			{
 				const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-				if (cmpUnitAI)
+				if (cmpUnitAI && cmpUnitAI.IsIdle())
 				{
-					if (cmpUnitAI.IsIdle())
-					{
-						// warn("Found idle soldier");
-						// this.WalkAndFightClosestTarget(u,1,unitTargetClass);
-
-						const sites = [pickRandom(sites_p2), pickRandom(sites_p2), pickRandom(sites_p2)];
-
-						this.PatrolOrderList([u], p, sites);
-
-					}
+					// warn("Found idle soldier");
+					// this.WalkAndFightClosestTarget(u,1,unitTargetClass);
+					const sites = [pickRandom(sites_p2), pickRandom(sites_p2), pickRandom(sites_p2)];
+					this.PatrolOrderList([u], p, sites);
 				}
 			}
 		}
@@ -661,42 +655,36 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	{
 		// if elephant
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
-		if (id)
+		if (id && id.classesList.includes("Elephant"))
 		{
-			if (id.classesList.includes("Elephant"))
+			this.numBanditsKilled += 1;
+			// warn("Elephant killed");
+			if (this.numBanditsKilled >= this.numBanditElephants)
 			{
-				this.numBanditsKilled += 1;
-				// warn("Elephant killed");
+				// quest complete
+				this.questTempleComplete = true;
 
-				if (this.numBanditsKilled >= this.numBanditElephants)
+				// warn("All elephants killed!");
+
+				if (this.questTempleGiven == false)
 				{
-					// quest complete
-					this.questTempleComplete = true;
+					// we did the quest before assigned to it, monks still give us reward
 
-					// warn("All elephants killed!");
+					// TODO: show text
+					this.ShowText("The bandit elephant riders have been defeated. Among the loot, you find ancient religious relics. Monks from a nearby temple are happy you have recovered them and in exchange, offers some medicines and knowledge that will improve the performance of our healers", "Great", "Also great!");
 
-					if (this.questTempleGiven == false)
-					{
-						// we did the quest before assigned to it, monks still give us reward
-
-						// TODO: show text
-						this.ShowText("The bandit elephant riders have been defeated. Among the loot, you find ancient religious relics. Monks from a nearby temple are happy you have recovered them and in exchange, offers some medicines and knowledge that will improve the performance of our healers", "Great", "Also great!");
-
-						this.questTempleGiven = true;
-					}
-					else
-					{
-						// TODO: show text
-						this.ShowText("The bandit elephant riders have been defeated. Among the loot, you find ancient religious relics. Monks from a nearby temple are happy you have recovered them and in exchange, offers some medicines and knowledge that will improve the performance of our healers", "Great", "Also great!");
-
-					}
-
-					// TODO: give reward
-					this.RewardQuestTemple();
+					this.questTempleGiven = true;
 				}
+				else
+				{
+					// TODO: show text
+					this.ShowText("The bandit elephant riders have been defeated. Among the loot, you find ancient religious relics. Monks from a nearby temple are happy you have recovered them and in exchange, offers some medicines and knowledge that will improve the performance of our healers", "Great", "Also great!");
+				}
+
+				// TODO: give reward
+				this.RewardQuestTemple();
 			}
 		}
-
 	}
 
 	// if market from player 2
@@ -704,17 +692,14 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	{
 		// if market
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
-		if (id)
+		if (id && id.classesList.includes("Market"))
 		{
-			if (id.classesList.includes("Market"))
-			{
-				// warn("Bazira market destroyed.");
+			// warn("Bazira market destroyed.");
 
-				this.eventBaziraMarketDestroyed = true;
+			this.eventBaziraMarketDestroyed = true;
 
-				// spawning interval for patrol doubles
-				this.patrolInervalBazira *= 2;
-			}
+			// spawning interval for patrol doubles
+			this.patrolInervalBazira *= 2;
 		}
 	}
 
@@ -723,17 +708,14 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	{
 		// if any building
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
-		if (id)
+		if (id && id.classesList.includes("Structure"))
 		{
-			if (id.classesList.includes("Structure"))
-			{
-				// warn("Ora structure destroyed.");
+			// warn("Ora structure destroyed.");
 
-				this.eventOraStructureDestroyed = true;
+			this.eventOraStructureDestroyed = true;
 
-				// spawning interval for patrol doubles
-				this.patrolInervalBazira *= 2;
-			}
+			// spawning interval for patrol doubles
+			this.patrolInervalBazira *= 2;
 		}
 	}
 
@@ -744,15 +726,12 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		// if any building
 		// warn("player 2 lost something");
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
-		if (id)
+		if (id && id.classesList.includes("Defensive") && id.classesList.includes("Tower"))
 		{
-			if (id.classesList.includes("Defensive") && id.classesList.includes("Tower"))
-			{
-				// warn("Bazira tower destroyed.");
+			// warn("Bazira tower destroyed.");
 
-				// spawning interval for patrol increases
-				this.patrolInervalBazira *= 1.075;
-			}
+			// spawning interval for patrol increases
+			this.patrolInervalBazira *= 1.075;
 		}
 	}
 
@@ -760,28 +739,23 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	if (data.from == 4 && (data.to == -1 || data.to == 1))
 	{
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
-		if (id)
+		if (id && id.classesList.includes("Unit"))
 		{
-			if (id.classesList.includes("Unit"))
+			// warn("player 4 structure destroyed");
+
+			// see if any left
+			const structs_p4 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(data.from), "Unit").filter(TriggerHelper.IsInWorld);
+
+			if (structs_p4.length <= 0)
 			{
-				// warn("player 4 structure destroyed");
+				// player is defeated
 
-				// see if any left
-				const structs_p4 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(data.from), "Unit").filter(TriggerHelper.IsInWorld);
+				// TODO: add text
 
-				if (structs_p4.length <= 0)
-				{
-					// player is defeated
-
-					// TODO: add text
-
-					// flip city assets
-					this.DoAfterDelay(2 * 1000, "FlipAssets", null);
-
-				}
+				// flip city assets
+				this.DoAfterDelay(2 * 1000, "FlipAssets", null);
 			}
 		}
-
 	}
 };
 
@@ -799,31 +773,25 @@ Trigger.prototype.RangeActionTemple = function(data)
 
 Trigger.prototype.RangeActionColony = function(data)
 {
-
-	if (this.eventColonyAmbush == false)
+	// warn(uneval(data));
+	if (this.eventColonyAmbush == false && data.added.length >= 1 && data.currentCollection.length >= 4)
 	{
-		// warn(uneval(data));
+		// flip flag
+		this.eventColonyAmbush = true;
 
-		if (data.added.length >= 1 && data.currentCollection.length >= 4)
+		// show text
+		this.ShowText("You encounter a newly set-up Greek colony of veterans and adventurers who have been traveling East from back home. But things are not ok. The colony appears to have been taken over by local warriors who upon noticing you, rise to arms. We must defeat the enemies who have taken over a Greek settlement!\\Note: capturing the Greek colony will enable us to recruit mercenaries.", "So it goes.", "Oh my");
+
+		// spawn
+		const templates = ["units/maur/champion_infantry_maceman", "units/maur/infantry_archer_e", "units/maur/champion_maiden", "units/maur/champion_maiden_archer", "units/maur/infantry_spearman_e", "units/pers/infantry_javelineer_e"];
+
+		// sites
+		const spawn_sites = this.GetTriggerPoints(triggerPointsColonyAmbush);
+
+		for (let i = 0; i < this.colonyAmbushSize; i++)
 		{
-
-			// flip flag
-			this.eventColonyAmbush = true;
-
-			// show text
-			this.ShowText("You encounter a newly set-up Greek colony of veterans and adventurers who have been traveling East from back home. But things are not ok. The colony appears to have been taken over by local warriors who upon noticing you, rise to arms. We must defeat the enemies who have taken over a Greek settlement!\\Note: capturing the Greek colony will enable us to recruit mercenaries.", "So it goes.", "Oh my");
-
-			// spawn
-			const templates = ["units/maur/champion_infantry_maceman", "units/maur/infantry_archer_e", "units/maur/champion_maiden", "units/maur/champion_maiden_archer", "units/maur/infantry_spearman_e", "units/pers/infantry_javelineer_e"];
-
-			// sites
-			const spawn_sites = this.GetTriggerPoints(triggerPointsColonyAmbush);
-
-			for (let i = 0; i < this.colonyAmbushSize; i++)
-			{
-				// spawn the unit
-				const unit_i = TriggerHelper.SpawnUnits(pickRandom(spawn_sites), pickRandom(templates), 1, 0);
-			}
+			// spawn the unit
+			const unit_i = TriggerHelper.SpawnUnits(pickRandom(spawn_sites), pickRandom(templates), 1, 0);
 		}
 	}
 };

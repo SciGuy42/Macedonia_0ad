@@ -617,26 +617,18 @@ Trigger.prototype.SpawnPatrolReinforcements = function(data)
 
 			// give orders
 			const cmpUnitAI = Engine.QueryInterface(units_i[0], IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
+				// targets A
+				const targets_A = this.GetTriggerPoints(triggerPointPatrolA);
 
-					// targets A
-					const targets_A = this.GetTriggerPoints(triggerPointPatrolA);
+				// targets B
+				const targets_B = this.GetTriggerPoints(triggerPointPatrolB);
 
-					// targets B
-					const targets_B = this.GetTriggerPoints(triggerPointPatrolB);
-
-					if (targets_A.length > 0 && targets_B.length > 0)
-					{
-						this.PatrolOrder(units_i, p, pickRandom(targets_A), pickRandom(targets_B));
-					}
-					else
-					{
-						return;// no point, we've lost
-					}
-				}
+				if (targets_A.length > 0 && targets_B.length > 0)
+					this.PatrolOrder(units_i, p, pickRandom(targets_A), pickRandom(targets_B));
+				else
+					return;// no point, we've lost
 			}
 		}
 
@@ -784,13 +776,8 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			for (const u of units)
 			{
 				const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-				if (cmpUnitAI)
-				{
-					if (cmpUnitAI.IsIdle())
-					{
-						this.WalkAndFightClosestTarget(u, 1, "Hero");
-					}
-				}
+				if (cmpUnitAI && cmpUnitAI.IsIdle())
+					this.WalkAndFightClosestTarget(u, 1, "Hero");
 			}
 		}
 	}
@@ -806,26 +793,18 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		for (const u of units_patrol)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
+				// targets A
+				const targets_A = this.GetTriggerPoints(triggerPointPatrolA);
 
-					// targets A
-					const targets_A = this.GetTriggerPoints(triggerPointPatrolA);
+				// targets B
+				const targets_B = this.GetTriggerPoints(triggerPointPatrolB);
 
-					// targets B
-					const targets_B = this.GetTriggerPoints(triggerPointPatrolB);
-
-					if (targets_A.length > 0 && targets_B.length > 0)
-					{
-						this.PatrolOrder([u], p, pickRandom(targets_A), pickRandom(targets_B));
-					}
-					else
-					{
-						return;// no point, we've lost
-					}
-				}
+				if (targets_A.length > 0 && targets_B.length > 0)
+					this.PatrolOrder([u], p, pickRandom(targets_A), pickRandom(targets_B));
+				else
+					return;// no point, we've lost
 			}
 		}
 
@@ -919,13 +898,8 @@ Trigger.prototype.SpawnFinalCavalryAttack = function(data)
 		const target_classes = ["Structure", "Unit", "Hero"];
 
 		const cmpUnitAI = Engine.QueryInterface(attackers[0], IID_UnitAI);
-		if (cmpUnitAI)
-		{
-			if (cmpUnitAI.IsIdle())
-			{
-				this.WalkAndFightClosestTarget(attackers[0], 1, pickRandom(target_classes));
-			}
-		}
+		if (cmpUnitAI && cmpUnitAI.IsIdle())
+			this.WalkAndFightClosestTarget(attackers[0], 1, pickRandom(target_classes));
 
 		/* let target = this.FindClosestTarget(attackers[0],1,pickRandom(target_classes));
 

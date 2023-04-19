@@ -357,16 +357,12 @@ Trigger.prototype.IdleUnitCheck = function(data)
 			for (const u of units)
 			{
 				const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-				if (cmpUnitAI)
+				if (cmpUnitAI && cmpUnitAI.IsIdle())
 				{
-					if (cmpUnitAI.IsIdle())
-					{
-						// pick patrol sites
-						const sites = [pickRandom(structs), pickRandom(structs), pickRandom(structs), pickRandom(structs), pickRandom(structs)];
+					// pick patrol sites
+					const sites = [pickRandom(structs), pickRandom(structs), pickRandom(structs), pickRandom(structs), pickRandom(structs)];
 
-						this.PatrolOrderList([u], p, sites);
-
-					}
+					this.PatrolOrderList([u], p, sites);
 				}
 			}
 		}
@@ -380,15 +376,9 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		for (const u of units)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
-			{
-				if (cmpUnitAI.IsIdle())
-				{
-					this.WalkAndFightClosestTarget(u, 1, "Structure");
-				}
-			}
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
+				this.WalkAndFightClosestTarget(u, 1, "Structure");
 		}
-
 	}
 };
 
@@ -471,16 +461,13 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	{
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
 		// warn(uneval(id));
-		if (id != null && id.classesList.includes("Structure"))
+		if (id != null && id.classesList.includes("Structure") && Math.random() < 0.2)
 		{
-			if (Math.random() < 0.2)
-			{
-				warn("spawning revenge attack!");
+			warn("spawning revenge attack!");
 
-				const target_pos = TriggerHelper.GetEntityPosition2D(data.entity);
+			const target_pos = TriggerHelper.GetEntityPosition2D(data.entity);
 
-				this.SpawnStructureDestroyedResponseAttack(target_pos);
-			}
+			this.SpawnStructureDestroyedResponseAttack(target_pos);
 		}
 
 		// check if dead units are detected as dead
@@ -1316,52 +1303,32 @@ Trigger.prototype.SpawnUnit = function(data)
 
 Trigger.prototype.PlayerCommandAction = function(data)
 {
-
+	// warn("The OnPlayerCommand event happened with the following data:");
 	// warn(uneval(data));
-	if (data.cmd.type == "dialog-answer")
+	if (data.cmd.type == "dialog-answer" && data.cmd.answer == "button1")
 	{
-		// warn("The OnPlayerCommand event happened with the following data:");
-		// warn(uneval(data));
+		// subtract resources
+		const cmpPlayer = QueryPlayerIDInterface(1);
+		// warn(uneval(this.mercOffer));
+		cmpPlayer.AddResource("food", -1 * this.mercOffer.total_cost_food);
+		cmpPlayer.AddResource("stone", -1 * this.mercOffer.total_cost_stone);
+		cmpPlayer.AddResource("metal", -1 * this.mercOffer.total_cost_metal);
 
-		if (data.cmd.answer == "button1")
-		{
-			// subtract resources
-			const cmpPlayer = QueryPlayerIDInterface(1);
-			// warn(uneval(this.mercOffer));
-			cmpPlayer.AddResource("food", -1 * this.mercOffer.total_cost_food);
-			cmpPlayer.AddResource("stone", -1 * this.mercOffer.total_cost_stone);
-			cmpPlayer.AddResource("metal", -1 * this.mercOffer.total_cost_metal);
+		// spawm mercs
+		const sites = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(4), "Barracks").filter(TriggerHelper.IsInWorld);
 
-			// spawm mercs
+		if (sites.length == 0)
+			return;
 
-			const sites = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(4), "Barracks").filter(TriggerHelper.IsInWorld);
-
-			if (sites.length == 0)
-			{
-				return;
-			}
-
-			const spawn_site = sites[0];
-
-			const units = TriggerHelper.SpawnUnits(spawn_site, this.mercOffer.template, this.mercOffer.size, 1);
-
-			// warn("spawned mercs");
-		}
-
+		const spawn_site = sites[0];
+		const units = TriggerHelper.SpawnUnits(spawn_site, this.mercOffer.template, this.mercOffer.size, 1);
+		// warn("spawned mercs");
 	}
 };
 
 Trigger.prototype.ToggleMercs = function(data)
 {
-	if (this.mercsAvailable == true)
-	{
-		this.mercsAvailable = false;
-	}
-	else
-	{
-		this.mercsAvailable = true;
-	}
-
+	this.mercsAvailable = !this.mercsAvailable;
 };
 
 Trigger.prototype.RangeActionMercs = function(data)

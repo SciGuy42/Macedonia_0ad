@@ -362,13 +362,8 @@ Trigger.prototype.MonitorCrazedHeroesQuest = function(data)
 		for (const u of units)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
-			{
-				if (cmpUnitAI.IsIdle())
-				{
-					this.WalkAndFightClosestTarget(u, 1, "Hero");
-				}
-			}
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
+				this.WalkAndFightClosestTarget(u, 1, "Hero");
 
 			// check if any of them are close to the gaia temple
 			const d = PositionHelper.DistanceBetweenEntities(u, nomad_temple);
@@ -408,13 +403,8 @@ Trigger.prototype.MonitorBarracksCaptivesQuest = function(data)
 			for (const u of units)
 			{
 				const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-				if (cmpUnitAI)
-				{
-					if (cmpUnitAI.IsIdle())
-					{
-						this.WalkAndFightClosestTarget(u, 1, "Hero");
-					}
-				}
+				if (cmpUnitAI && cmpUnitAI.IsIdle())
+					this.WalkAndFightClosestTarget(u, 1, "Hero");
 			}
 
 			this.DoAfterDelay(5 * 1000, "MonitorBarracksCaptivesQuest", null);
@@ -438,13 +428,8 @@ Trigger.prototype.IdleUnitCheckFast = function(data)
 		for (const u of units)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
-			{
-				if (cmpUnitAI.IsIdle())
-				{
-					this.WalkAndFightClosestTarget(u, 1, "Hero");
-				}
-			}
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
+				this.WalkAndFightClosestTarget(u, 1, "Hero");
 		}
 	}
 
@@ -588,41 +573,31 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	{
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
 		// warn(uneval(id));
-		if (id != null)
+		if (id != null && id.classesList.includes("Siege"))
 		{
-			if (id.classesList.includes("Siege"))
-			{
-				const unit_i = TriggerHelper.SpawnUnits(data.entity, "units/mace/siege_lithobolos_packed", 1, 1);
-			}
+			const unit_i = TriggerHelper.SpawnUnits(data.entity, "units/mace/siege_lithobolos_packed", 1, 1);
 		}
 
 	}
 
 	// QUEST RELATED TRIGGERS
 
-	if (this.elephantAmbushTriggered == true && this.elephantAmbushEnded == false)
+	if (this.elephantAmbushTriggered == true && this.elephantAmbushEnded == false && data.from == 6 && data.to == -1)
 	{
-		if (data.from == 6 && data.to == -1)
+		const id = Engine.QueryInterface(data.entity, IID_Identity);
+		// warn(uneval(id));
+		if (id != null && id.classesList.includes("Elephant"))
 		{
-			const id = Engine.QueryInterface(data.entity, IID_Identity);
-			// warn(uneval(id));
-			if (id != null)
+			// find how many elephants remain
+			const units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(6), "Elephant").filter(TriggerHelper.IsInWorld);
+			// warn("elephants = "+units.length);
+			if (units.length == 0)
 			{
-				if (id.classesList.includes("Elephant"))
-				{
-					// find how many elephants remain
-					const units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(6), "Elephant").filter(TriggerHelper.IsInWorld);
-					// warn("elephants = "+units.length);
-					if (units.length == 0)
-					{
-						this.elephantAmbushEnded = true;
+				this.elephantAmbushEnded = true;
 
-						this.QuestElephantAmbushComplete();
-					}
-
-				}
-
+				this.QuestElephantAmbushComplete();
 			}
+
 		}
 	}
 
@@ -655,31 +630,28 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 				// find distance between dead entity and camp
 				const d = PositionHelper.DistanceBetweenEntities(data.entity, camp);
 				// warn(d);
-				if (d < 250)
+				// with some probability, spawn cavalry attackers from cave
+				if (d < 250 && Math.random() < 0.125)
 				{
-					// with some probability, spawn cavalry attackers from cave
-					if (Math.random() < 0.125)
-					{
-						const templates = ["units/brit/cavalry_swordsman_a", "units/brit/champion_chariot", "units/brit/cavalry_swordsman_b", "units/brit/cavalry_swordsman_b"];
+					const templates = ["units/brit/cavalry_swordsman_a", "units/brit/champion_chariot", "units/brit/cavalry_swordsman_b", "units/brit/cavalry_swordsman_b"];
 
-						const site = 21865; // skeleton in front of cave, can't be looked up with code
+					const site = 21865; // skeleton in front of cave, can't be looked up with code
 
-						const unit_i = TriggerHelper.SpawnUnits(site, pickRandom(templates), 1, p);
+					const unit_i = TriggerHelper.SpawnUnits(site, pickRandom(templates), 1, p);
 
-						const target_pos = TriggerHelper.GetEntityPosition2D(data.entity);
+					const target_pos = TriggerHelper.GetEntityPosition2D(data.entity);
 
-						ProcessCommand(p, {
-							"type": "attack-walk",
-							"entities": unit_i,
-							"x": target_pos.x,
-							"z": target_pos.y,
-							"queued": true,
-							"targetClasses": {
-								"attack": "Hero"
-							},
-							"allowCapture": false
-						});
-					}
+					ProcessCommand(p, {
+						"type": "attack-walk",
+						"entities": unit_i,
+						"x": target_pos.x,
+						"z": target_pos.y,
+						"queued": true,
+						"targetClasses": {
+							"attack": "Hero"
+						},
+						"allowCapture": false
+					});
 				}
 			}
 
@@ -688,16 +660,13 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	}
 
 	// check if structure from persian  rebels
-	if (this.rebelFortressAttackStarted == false)
+	if (this.rebelFortressAttackStarted == false && data.from == 7 && data.to == -1)
 	{
-		if (data.from == 7 && data.to == -1)
-		{
-			// warn("starting rebel fortress attack");
+		// warn("starting rebel fortress attack");
 
-			this.DoAfterDelay(1 * 1000, "SpawnFortressAttack", data);
+		this.DoAfterDelay(1 * 1000, "SpawnFortressAttack", data);
 
-			this.rebelFortressAttackStarted = true;
-		}
+		this.rebelFortressAttackStarted = true;
 	}
 
 	// check if structure from persian villlages
@@ -705,38 +674,30 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 	{
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
 		// warn(uneval(id));
-		if (id != null)
+		if (id != null && id.classesList.includes("Structure") && Math.random() < 0.25)
 		{
-			if (id.classesList.includes("Structure"))
-			{
-				if (Math.random() < 0.25)
-				{
-					// warn("spawning structure response attack");
+			// warn("spawning structure response attack");
 
-					// find CC of player who lost structure
-					const ccs = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(data.from), "CivilCentre").filter(TriggerHelper.IsInWorld);
+			// find CC of player who lost structure
+			const ccs = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(data.from), "CivilCentre").filter(TriggerHelper.IsInWorld);
 
-					const site = pickRandom(ccs);
+			const site = pickRandom(ccs);
 
-					const templates = ["units/pers/infantry_archer_e", "units/pers/infantry_spearman_e", "units/pers/champion_infantry", "units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher"];
+			const templates = ["units/pers/infantry_archer_e", "units/pers/infantry_spearman_e", "units/pers/champion_infantry", "units/pers/kardakes_hoplite", "units/pers/kardakes_skirmisher"];
 
-					// warn(uneval(id.classesList));
+			// warn(uneval(id.classesList));
 
-					const data_attack = {};
-					data_attack.p = 7;
-					data_attack.site = site;
-					data_attack.templates = templates;
-					data_attack.size = 12;
-					data_attack.target_class = "Unit";
-					data_attack.target_player = 1;
-					data_attack.use_formation = true;
+			const data_attack = {};
+			data_attack.p = 7;
+			data_attack.site = site;
+			data_attack.templates = templates;
+			data_attack.size = 12;
+			data_attack.target_class = "Unit";
+			data_attack.target_player = 1;
+			data_attack.use_formation = true;
 
-					this.DoAfterDelay(2 * 1000, "SpawnAttackSquad", data_attack);
-				}
-			}
-
+			this.DoAfterDelay(2 * 1000, "SpawnAttackSquad", data_attack);
 		}
-
 	}
 
 	// check if gaia soldier
@@ -1477,13 +1438,10 @@ Trigger.prototype.RangeActionTemple = function(data)
 			this.ShowText("The small monastary you encounter welcomes you. They are willing to help you with healing but first ask that you seek out an ancient relic stolen by thieves. The relic looks like a pegasus -- you won't miss it. Should you ackquire it, come back to the temple, the monks will be forever grateful.", "We'll see what we can do.", "OK");
 		}
 	}
-	else if (this.questTempleComplete == false)
+	else if (this.questTempleComplete == false && this.questTempleRelicTaken == true)
 	{
-		if (this.questTempleRelicTaken == true)
-		{
-			// complete quest
-			this.QuestTempleComplete();
-		}
+		// complete quest
+		this.QuestTempleComplete();
 	}
 };
 
@@ -1570,43 +1528,17 @@ Trigger.prototype.PlayerCommandAction = function(data)
 
 Trigger.prototype.ToggleArcherTraining = function(data)
 {
-	if (this.archerTrainingAvailable == true)
-	{
-		this.archerTrainingAvailable = false;
-	}
-	else
-	{
-		this.archerTrainingAvailable = true;
-	}
-
+	this.archerTrainingAvailable = !this.archerTrainingAvailable;
 };
 
 Trigger.prototype.ToggleMercs = function(data)
 {
-	if (this.mercsAvailable == true)
-	{
-		this.mercsAvailable = false;
-	}
-	else
-	{
-		this.mercsAvailable = true;
-		// warn("mercs ara available now.");
-	}
-
+	this.mercsAvailable = !this.mercsAvailable;
 };
 
 Trigger.prototype.ToggleElephantTraders = function(data)
 {
-	if (this.elephantsAvailable == true)
-	{
-		this.elephantsAvailable = false;
-	}
-	else
-	{
-		this.elephantsAvailable = true;
-		// warn("elephants ara available now.");
-	}
-
+	this.elephantsAvailable = !this.elephantsAvailable;
 };
 
 Trigger.prototype.RangeActionElephantTraders = function(data)
@@ -2156,18 +2088,15 @@ Trigger.prototype.StatusCheck = function(data)
 		for (const u of units)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
 
-					const patrol_sites = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Structure").filter(TriggerHelper.IsInWorld);
+				const patrol_sites = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Structure").filter(TriggerHelper.IsInWorld);
 
-					// pick patrol sites
-					const sites = [pickRandom(patrol_sites), pickRandom(patrol_sites), pickRandom(patrol_sites)];
+				// pick patrol sites
+				const sites = [pickRandom(patrol_sites), pickRandom(patrol_sites), pickRandom(patrol_sites)];
 
-					this.PatrolOrderList([u], p, sites);
-				}
+				this.PatrolOrderList([u], p, sites);
 			}
 		}
 	}
@@ -2180,23 +2109,20 @@ Trigger.prototype.StatusCheck = function(data)
 		for (const u of units)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
 
-					const target_site = this.GetTriggerPoints("B")[0];
-					const target_pos = TriggerHelper.GetEntityPosition2D(target_site);
+				const target_site = this.GetTriggerPoints("B")[0];
+				const target_pos = TriggerHelper.GetEntityPosition2D(target_site);
 
-					// make walk
-					ProcessCommand(p, {
-						"type": "walk",
-						"entities": [u],
-						"x": target_pos.x,
-						"z": target_pos.y,
-						"queued": true
-					});
-				}
+				// make walk
+				ProcessCommand(p, {
+					"type": "walk",
+					"entities": [u],
+					"x": target_pos.x,
+					"z": target_pos.y,
+					"queued": true
+				});
 			}
 		}
 	}
@@ -2275,13 +2201,10 @@ Trigger.prototype.StatusCheck = function(data)
 		for (const u of units)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
-					// attack closes soldier
-					this.WalkAndFightClosestTarget(u, 1, "Hero");
-				}
+				// attack closes soldier
+				this.WalkAndFightClosestTarget(u, 1, "Hero");
 			}
 		}
 

@@ -191,25 +191,19 @@ Trigger.prototype.OwnershipChangedAction = function(data)
 		const id = Engine.QueryInterface(data.entity, IID_Identity);
 		//	warn(uneval(data));
 		//	warn(uneval(id));
-		if (id != null && id.classesList.includes("Structure"))
+		// with small probability spawn mercenary squad
+		if (id != null && id.classesList.includes("Structure") && Math.random() < this.mercSpawnProb)
 		{
+			this.DoAfterDelay(5 * 1000, "SpawnMercenarySquad", null);
+			// warn("spawning mercs");
 
-			// with small probability spawn mercenary squad
-			if (Math.random() < this.mercSpawnProb)
-			{
-				this.DoAfterDelay(5 * 1000, "SpawnMercenarySquad", null);
-				// warn("spawning mercs");
+			// decay
+			this.mercSpawnProb *= this.mercSpawnProbDecay;
 
-				// decay
-				this.mercSpawnProb *= this.mercSpawnProbDecay;
+			if (this.mercSpawnProb < 0.2)
+				this.mercSpawnProb = 0.2;
 
-				if (this.mercSpawnProb < 0.2)
-				{
-					this.mercSpawnProb = 0.2;
-				}
-
-				// warn("new prob = "+uneval(this.mercSpawnProb));
-			}
+			// warn("new prob = "+uneval(this.mercSpawnProb));
 		}
 	}
 
@@ -398,13 +392,10 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		for (const u of units_all)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
-					// warn("Found idle soldier");
-					this.WalkAndFightClosestTarget(u, target_p, unitTargetClass);
-				}
+				// warn("Found idle soldier");
+				this.WalkAndFightClosestTarget(u, target_p, unitTargetClass);
 			}
 		}
 	}

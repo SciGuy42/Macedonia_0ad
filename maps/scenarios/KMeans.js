@@ -81,25 +81,24 @@ KMeans.prototype.dataDimensionExtents = function()
 	var data = this.data;
 	var extents = [];
 
-	for (var i = 0; i < data.length; i++)
+	for (var point of data)
 	{
-		var point = data[i];
 
-		for (var j = 0; j < point.length; j++)
+		for (const [j, element] of point.entries())
 		{
 			if (!extents[j])
 			{
 				extents[j] = { "min": 1000, "max": 0 };
 			}
 
-			if (point[j] < extents[j].min)
+			if (element < extents[j].min)
 			{
-				extents[j].min = point[j];
+				extents[j].min = element;
 			}
 
-			if (point[j] > extents[j].max)
+			if (element > extents[j].max)
 			{
-				extents[j].max = point[j];
+				extents[j].max = element;
 			}
 		}
 	}
@@ -186,10 +185,10 @@ KMeans.prototype.assignClusterToDataPoints = function()
 			 * √((pi-qi)^2+...+(pn-qn)^2)
 			 */
 
-			for (var dim = 0; dim < point.length; dim++)
+			for (const [dim, element] of point.entries())
 			{
 				// dif = (pn - qn)
-				var difference = point[dim] - mean[dim];
+				var difference = element - mean[dim];
 
 				// dif = (dif)^2
 				difference = Math.pow(difference, 2);

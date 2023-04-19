@@ -238,14 +238,11 @@ Trigger.prototype.IntervalActionTraders = function(data)
 		for (const trader of traders_e)
 		{
 			const cmpUnitAI = Engine.QueryInterface(trader, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
-					// warn("updating trade orders");
-					cmpUnitAI.UpdateWorkOrders("Trade");
-					cmpUnitAI.SetupTradeRoute(pickRandom(markets_others), markets_e[0], null, true);
-				}
+				// warn("updating trade orders");
+				cmpUnitAI.UpdateWorkOrders("Trade");
+				cmpUnitAI.SetupTradeRoute(pickRandom(markets_others), markets_e[0], null, true);
 			}
 
 		}

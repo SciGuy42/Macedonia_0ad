@@ -26,19 +26,15 @@ Trigger.prototype.StructureBuiltAction = function(data)
 	const owner = TriggerHelper.GetOwner(building);
 	// warn("owner = "+uneval(owner));
 
-	if (owner == 1) // we built a structure
+	// trigger cavalry attacks
+	// we built a structure
+	if (owner == 1 && this.gaul_cavalary_started == false)
 	{
-		// trigger cavalry attacks
-		if (this.gaul_cavalary_started == false)
-		{
-			// warn("player 1 built first structure");
+		// warn("player 1 built first structure");
 
-			this.StartRepeatAttacks();
+		this.StartRepeatAttacks();
 
-			this.gaul_cavalary_started = true;
-
-		}
-
+		this.gaul_cavalary_started = true;
 	}
 };
 
@@ -508,9 +504,9 @@ Trigger.prototype.IntervalAction = function(data)
 			if (targets.length > 0 || targets_docks.length > 0)
 			{
 
-				for (let i = 0; i < idle_warships.length; i++)
+				for (const idle_warship of idle_warships)
 				{
-					const cmpUnitAI = Engine.QueryInterface(idle_warships[i], IID_UnitAI);
+					const cmpUnitAI = Engine.QueryInterface(idle_warship, IID_UnitAI);
 
 					if (cmpUnitAI.IsIdle())
 					{
@@ -530,7 +526,7 @@ Trigger.prototype.IntervalAction = function(data)
 							if (!TriggerHelper.IsInWorld(target))
 								continue;
 
-							const targetDistance = PositionHelper.DistanceBetweenEntities(idle_warships[i], target);
+							const targetDistance = PositionHelper.DistanceBetweenEntities(idle_warship, target);
 							if (targetDistance < minDistance)
 							{
 								closestTarget = target;

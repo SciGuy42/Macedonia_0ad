@@ -623,15 +623,12 @@ Trigger.prototype.IntervalActionTraders = function(data)
 			for (const trader of traders_e)
 			{
 				const cmpUnitAI = Engine.QueryInterface(trader, IID_UnitAI);
-				if (cmpUnitAI)
+				if (cmpUnitAI && cmpUnitAI.IsIdle())
 				{
-					if (cmpUnitAI.IsIdle())
-					{
-						// warn("updating trade orders");
-						cmpUnitAI.UpdateWorkOrders("Trade");
-						// TODO-ERROR-PREVENTION: "markets_others" can become an empty array
-						cmpUnitAI.SetupTradeRoute(pickRandom(markets_others), markets_e[0], null, true);
-					}
+					// warn("updating trade orders");
+					cmpUnitAI.UpdateWorkOrders("Trade");
+					// TODO-ERROR-PREVENTION: "markets_others" can become an empty array
+					cmpUnitAI.SetupTradeRoute(pickRandom(markets_others), markets_e[0], null, true);
 				}
 
 			}
@@ -663,15 +660,12 @@ Trigger.prototype.IntervalActionTraders = function(data)
 			for (const trader of traders_s)
 			{
 				const cmpUnitAI = Engine.QueryInterface(trader, IID_UnitAI);
-				if (cmpUnitAI)
+				if (cmpUnitAI && cmpUnitAI.IsIdle())
 				{
-					if (cmpUnitAI.IsIdle())
-					{
-						// warn("updating ship orders");
-						cmpUnitAI.UpdateWorkOrders("Trade");
-						// TODO-ERROR-PREVENTION: "docks_others" can become an empty array
-						cmpUnitAI.SetupTradeRoute(pickRandom(docks_others), docks_e[0], null, true);
-					}
+					// warn("updating ship orders");
+					cmpUnitAI.UpdateWorkOrders("Trade");
+					// TODO-ERROR-PREVENTION: "docks_others" can become an empty array
+					cmpUnitAI.SetupTradeRoute(pickRandom(docks_others), docks_e[0], null, true);
 				}
 
 			}
@@ -925,16 +919,11 @@ Trigger.prototype.GreekAttack = function(data)
 
 	// find any idle soldiers
 	const units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(6), "Infantry").filter(TriggerHelper.IsInWorld);
-	for (const u of units)
+	for (const unit of units)
 	{
-		const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-		if (cmpUnitAI)
-		{
-			if (cmpUnitAI.IsIdle())
-			{
-				attackers.push(u);
-			}
-		}
+		const cmpUnitAI = Engine.QueryInterface(unit, IID_UnitAI);
+		if (cmpUnitAI && cmpUnitAI.IsIdle())
+			attackers.push(unit);
 	}
 
 	for (let i = 0; i < num_attackers; ++i)
@@ -1045,16 +1034,11 @@ Trigger.prototype.CapadociaAttack = function(data)
 
 	// find any idle soldiers
 	const units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(4), "Cavalry").filter(TriggerHelper.IsInWorld);
-	for (const u of units)
+	for (const unit of units)
 	{
-		const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-		if (cmpUnitAI)
-		{
-			if (cmpUnitAI.IsIdle())
-			{
-				attackers.push(u);
-			}
-		}
+		const cmpUnitAI = Engine.QueryInterface(unit, IID_UnitAI);
+		if (cmpUnitAI && cmpUnitAI.IsIdle())
+			attackers.push(unit);
 	}
 
 	// warn("found "+attackers.length+" idle cavalry");
@@ -1205,16 +1189,13 @@ Trigger.prototype.UpdatePoints = function(data)
 		const units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Soldier").filter(TriggerHelper.IsInWorld);
 
 		const idle_units = [];
-		for (const u of units)
+		for (const unit of units)
 		{
-			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			const cmpUnitAI = Engine.QueryInterface(unit, IID_UnitAI);
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
-					idle_units.push(u);
-					this.WalkAndFightClosestTarget(u, 1, "Structure");
-				}
+				idle_units.push(unit);
+				this.WalkAndFightClosestTarget(unit, 1, "Structure");
 			}
 		}
 

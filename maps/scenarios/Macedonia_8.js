@@ -197,16 +197,10 @@ Trigger.prototype.IntervalSpawnGuards = function(data)
 		for (const u of soldiers)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle() && patrol_sites.length > 5)
 			{
-				if (cmpUnitAI.IsIdle())
-				{
-					if (patrol_sites.length > 5)
-					{
-						const sites = [pickRandom(patrol_sites), pickRandom(patrol_sites), pickRandom(patrol_sites)];
-						this.PatrolOrderList([u], p, sites);
-					}
-				}
+				const sites = [pickRandom(patrol_sites), pickRandom(patrol_sites), pickRandom(patrol_sites)];
+				this.PatrolOrderList([u], p, sites);
 			}
 		}
 
@@ -369,9 +363,9 @@ Trigger.prototype.IntervalCrannogSpawnAction = function(data)
 	// spawn random infantry next to each crannog
 	const crannogs = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(4), "CivilCentre").filter(TriggerHelper.IsInWorld);
 
-	for (let i = 0; i < crannogs.length; ++i)
+	for (const crannog of crannogs)
 	{
-		TriggerHelper.SpawnUnits(crannogs[i], pickRandom(this.infantryTypesSpawn), 1 + this.spawn_crannog_bonus, 4);
+		TriggerHelper.SpawnUnits(crannog, pickRandom(this.infantryTypesSpawn), 1 + this.spawn_crannog_bonus, 4);
 		// warn("spawning crannog unit");
 	}
 };

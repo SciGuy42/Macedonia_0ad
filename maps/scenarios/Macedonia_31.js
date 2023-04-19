@@ -292,20 +292,16 @@ Trigger.prototype.SpawnFarmers = function(data)
 
 	const num_farmers = 20;
 
-	for (let i = 0; i < farms.length; i++)
+	for (const farm of farms)
 	{
 		// spawn the unit
-		const farm_i = farms[i];
-		const unit_i = TriggerHelper.SpawnUnits(farm_i, "units/pers/support_female_citizen", 3, p);
-
+		const unit_i = TriggerHelper.SpawnUnits(farm, "units/pers/support_female_citizen", 3, p);
 		// give order
-		for (const u of unit_i)
+		for (const unit of unit_i)
 		{
-			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
+			const cmpUnitAI = Engine.QueryInterface(unit, IID_UnitAI);
 			if (cmpUnitAI)
-			{
-				cmpUnitAI.Gather(farm_i, false);
-			}
+				cmpUnitAI.Gather(farm, false);
 		}
 	}
 };
@@ -521,47 +517,42 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		for (const u of units_cav)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI /* && Math.random() < 1.05*/)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
+				// get trigger points
+				const sites = this.GetTriggerPoints(triggerPointPatrol);
+
+				// find closest one
+				let index = -1;
+				let min_distance = 10000;
+
+				for (const [i, site] of sites.entries())
 				{
-
-					// get trigger points
-					const sites = this.GetTriggerPoints(triggerPointPatrol);
-
-					// find closest one
-					let index = -1;
-					let min_distance = 10000;
-
-					for (let i = 0; i < sites.length; i++)
+					const d_i = PositionHelper.DistanceBetweenEntities(u, site);
+					if (d_i < min_distance)
 					{
-						const d_i = PositionHelper.DistanceBetweenEntities(u, sites[i]);
-						if (d_i < min_distance)
-						{
-							index = i;
-							min_distance = d_i;
-						}
+						index = i;
+						min_distance = d_i;
 					}
-
-					// make patrol
-					// make it patrol
-					const patrol_sites_i = [];
-					let k = index + 1;
-
-					for (let j = 0; j < sites.length; j++)
-					{
-						if (k >= sites.length)
-							k = 0;
-
-						patrol_sites_i.push(sites[k]);
-						k += 1;
-					}
-
-					this.PatrolOrderList([u], p, patrol_sites_i);
-
-					// warn("Found idle soldier");
-					// this.WalkAndFightClosestTarget(u,1,"Unit");
 				}
+
+				// make patrol
+				// make it patrol
+				const patrol_sites_i = [];
+				let k = index + 1;
+
+				for (let j = 0; j < sites.length; j++)
+				{
+					if (k >= sites.length)
+						k = 0;
+
+					patrol_sites_i.push(sites[k]);
+					k += 1;
+				}
+
+				this.PatrolOrderList([u], p, patrol_sites_i);
+				// warn("Found idle soldier");
+				// this.WalkAndFightClosestTarget(u,1,"Unit");
 			}
 		}
 	}
@@ -573,13 +564,10 @@ Trigger.prototype.IdleUnitCheck = function(data)
 		for (const u of units_cav)
 		{
 			const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
-					// warn("Found idle soldier");
-					this.WalkAndFightClosestTarget(u, 1, siegeTargetClass);
-				}
+				// warn("Found idle soldier");
+				this.WalkAndFightClosestTarget(u, 1, siegeTargetClass);
 			}
 		}
 	}
@@ -588,53 +576,50 @@ Trigger.prototype.IdleUnitCheck = function(data)
 
 Trigger.prototype.OwnershipChangedAction = function(data)
 {
-	if (this.finalAttackTriggered == false)
+	if (this.finalAttackTriggered == false && data.from == 2 && (data.to == -1 || data.to == 1))
 	{
-		if (data.from == 2 && (data.to == -1 || data.to == 1))
+		// check if camp
+		const id = Engine.QueryInterface(data.entity, IID_Identity);
+
+		if (id != null && id.classesList.includes("Structure"))
 		{
-			// check if camp
-			const id = Engine.QueryInterface(data.entity, IID_Identity);
+			this.numCampsDestroyed++;
 
-			if (id != null && id.classesList.includes("Structure"))
+			// warn("camp destroyed");
+
+			// destroy the structure
+			const health_s = Engine.QueryInterface(data.entity, IID_Health);
+			if (health_s)
+				health_s.Kill();
+
+			// check if we've destroyed all camps
+			if (this.numCampsDestroyed == 1)
 			{
-				this.numCampsDestroyed++;
-
-				// warn("camp destroyed");
-
-				// destroy the structure
-				const health_s = Engine.QueryInterface(data.entity, IID_Health);
-				if (health_s)
-					health_s.Kill();
-
-				// check if we've destroyed all camps
-				if (this.numCampsDestroyed == 1)
-				{
-					this.ShowText("Great job! Now we just need to find the second camp and those horsemen will stop bothering us.", "On it!", "OK");
-				}
-				if (this.numCampsDestroyed == 2)
-				{
-					// schedule final attack
-					// warn("camps destroyed");
-
-					this.ShowText("Great! The horsemen's camps have been destroyed. We need to get back to our base as soon as we can. Our scouts report that Spitamenes' raiders are on their way for one last assault.", "On it!", "OK");
-
-					// stop spawning of patrol cavalry
-					this.finalAttackTriggered = true;
-
-					// spawn final attack
-					this.DoAfterDelay(15 * 1000, "RebelAttack", null);
-					this.DoAfterDelay(35 * 1000, "RebelAttack", null);
-					this.DoAfterDelay(70 * 1000, "RebelAttack", null);
-					this.DoAfterDelay(145 * 1000, "RebelAttack", null);
-					this.DoAfterDelay(175 * 1000, "RebelAttack", null);
-
-					// start checking for victory
-					this.DoAfterDelay(180 * 1000, "VictoryCheck", null);
-
-				}
+				this.ShowText("Great job! Now we just need to find the second camp and those horsemen will stop bothering us.", "On it!", "OK");
 			}
+			if (this.numCampsDestroyed == 2)
+			{
+				// schedule final attack
+				// warn("camps destroyed");
 
+				this.ShowText("Great! The horsemen's camps have been destroyed. We need to get back to our base as soon as we can. Our scouts report that Spitamenes' raiders are on their way for one last assault.", "On it!", "OK");
+
+				// stop spawning of patrol cavalry
+				this.finalAttackTriggered = true;
+
+				// spawn final attack
+				this.DoAfterDelay(15 * 1000, "RebelAttack", null);
+				this.DoAfterDelay(35 * 1000, "RebelAttack", null);
+				this.DoAfterDelay(70 * 1000, "RebelAttack", null);
+				this.DoAfterDelay(145 * 1000, "RebelAttack", null);
+				this.DoAfterDelay(175 * 1000, "RebelAttack", null);
+
+				// start checking for victory
+				this.DoAfterDelay(180 * 1000, "VictoryCheck", null);
+
+			}
 		}
+
 	}
 };
 

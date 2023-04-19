@@ -381,9 +381,9 @@ Trigger.prototype.SpawnAndStartCavalryAttack = function()
 
 	const target_position = Engine.QueryInterface(best_target, IID_Position).GetPosition2D();
 
-	for (let i = 0; i < attackers.length; ++i)
+	for (const attacker of attackers)
 	{
-		const cmpUnitAI = Engine.QueryInterface(attackers[i], IID_UnitAI);
+		const cmpUnitAI = Engine.QueryInterface(attacker, IID_UnitAI);
 		if (cmpUnitAI)
 		{
 			// warn(uneval(cmpUnitAI));
@@ -453,14 +453,11 @@ Trigger.prototype.IntervalActionTraders = function(data)
 		for (const trader of traders_e)
 		{
 			const cmpUnitAI = Engine.QueryInterface(trader, IID_UnitAI);
-			if (cmpUnitAI)
+			if (cmpUnitAI && cmpUnitAI.IsIdle())
 			{
-				if (cmpUnitAI.IsIdle())
-				{
-					// warn("updating trade orders");
-					cmpUnitAI.UpdateWorkOrders("Trade");
-					cmpUnitAI.SetupTradeRoute(pickRandom(markets_others), pickRandom(markets_e), null, true);
-				}
+				// warn("updating trade orders");
+				cmpUnitAI.UpdateWorkOrders("Trade");
+				cmpUnitAI.SetupTradeRoute(pickRandom(markets_others), pickRandom(markets_e), null, true);
 			}
 
 		}
@@ -501,9 +498,9 @@ Trigger.prototype.AttackOrder = function(units)
 	}
 
 	const target_position = Engine.QueryInterface(best_target, IID_Position).GetPosition2D();
-	for (let i = 0; i < units.length; ++i)
+	for (const unit of units)
 	{
-		const cmpUnitAI = Engine.QueryInterface(units[i], IID_UnitAI);
+		const cmpUnitAI = Engine.QueryInterface(unit, IID_UnitAI);
 		if (cmpUnitAI)
 		{
 			// warn(uneval(cmpUnitAI));
@@ -764,25 +761,18 @@ Trigger.prototype.IntervalDefenderSpawnAction = function(data)
 	const all_ents = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "Human").filter(TriggerHelper.IsInWorld);
 	const patrol_ents = [];
 	const attack_ents = [];
-	for (let i = 0; i < all_ents.length; ++i)
+	for (const entity of all_ents)
 	{
-		const cmpUnitAI = Engine.QueryInterface(all_ents[i], IID_UnitAI);
-		if (cmpUnitAI)
+		const cmpUnitAI = Engine.QueryInterface(entity, IID_UnitAI);
+		if (cmpUnitAI && cmpUnitAI.IsIdle() && Engine.QueryInterface(entity, IID_Attack))
 		{
-			if (cmpUnitAI.IsIdle() && Engine.QueryInterface(all_ents[i], IID_Attack))
-			{
-				const cmpI = Engine.QueryInterface(all_ents[i], IID_Identity);
-				// warn(uneval(cmpI));
+			const cmpI = Engine.QueryInterface(entity, IID_Identity);
+			// warn(uneval(cmpI));
 
-				if (cmpI.visibleClassesList.includes("Infantry"))
-				{
-					patrol_ents.push(all_ents[i]);
-				}
-				else if (cmpI.visibleClassesList.includes("Cavalry"))
-				{
-					attack_ents.push(all_ents[i]);
-				}
-			}
+			if (cmpI.visibleClassesList.includes("Infantry"))
+				patrol_ents.push(entity);
+			else if (cmpI.visibleClassesList.includes("Cavalry"))
+				attack_ents.push(entity);
 		}
 	}
 
