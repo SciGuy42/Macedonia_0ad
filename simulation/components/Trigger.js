@@ -53,13 +53,13 @@ Trigger.prototype.RemoveRegisteredTriggerPoint = function(ref, ent)
 {
 	if (!this.triggerPoints[ref])
 	{
-		warn("no trigger points found with ref "+ref);
+		warn("no trigger points found with ref " + ref);
 		return;
 	}
 	const i = this.triggerPoints[ref].indexOf(ent);
 	if (i == -1)
 	{
-		warn("entity " + ent + " wasn't found under the trigger points with ref "+ref);
+		warn("entity " + ent + " wasn't found under the trigger points with ref " + ref);
 		return;
 	}
 	this.triggerPoints[ref].splice(i, 1);
@@ -359,7 +359,6 @@ Trigger.prototype.CallTrigger = function(event, name, eventData, evenIfDisabled 
 		"triggerData": this.triggers[event][name].triggerData
 	});
 };
-
 
 /**
  * Called by the trigger listeners to execute the actual action. Including sanity checks.

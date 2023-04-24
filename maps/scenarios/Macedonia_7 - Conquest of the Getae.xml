@@ -38,18 +38,11 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "To secure the northern border, the Macedonians marched to the Danube River where they encountered the Getae tribe on the opposite shore. You have arrived with a small detachment of troops with the objective of capturing a base and defeating the Getae tribes in the area. On the southern shore, lies a small fishing village ripe for the taking. On a small island not too far from us, is another settlement with some foritifcations that may also serve as a good starting camp. Our ship carrying the battering ram, however, has crash landed nearby -- we need to look through any wreckage we find if we are to be able to break through fortifications any time soon!\n\nAI Settings: Player 3 (\"Friendly Traders\") and Player 6 (\"Getae Raiders\") should be on Sandbox. All others should be on a difficulty level of your choice. ",
-  "DisabledTemplates": [
-    "structures/ptol_lighthouse"
-  ],
-  "Keywords": [
-    "trigger"
-  ],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 7 - Conquest of the Getae (335 BC)",
-  "Nomad": false,
   "PlayerData": [
     {
       "Civ": "mace",
@@ -88,24 +81,19 @@
       "Team": 1
     }
   ],
-  "Preview": "",
+  "Preview": "Macedonia_0ad_Getae.png",
   "RevealMap": false,
-  "Seed": 0,
-  "Size": 448,
-  "SupportedBiomes": "generic/",
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_7.js"
   ],
   "VictoryConditions": [
     "conquest_units"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>
 		<Entity uid="150">
-			<Template>actor|props/special/eyecandy/campfire</Template>
+			<Template>actor|props/special/eyecandy/campfire.xml</Template>
 			<Position x="1638.02393" z="1085.92566"/>
 			<Orientation y="-3.01304"/>
 		</Entity>
@@ -254,52 +242,52 @@
 			<Orientation y="0.00701"/>
 		</Entity>
 		<Entity uid="175">
-			<Template>actor|props/special/eyecandy/bench_1</Template>
+			<Template>actor|props/special/eyecandy/bench_1.xml</Template>
 			<Position x="1622.78174" z="1069.14905"/>
 			<Orientation y="-3.97489"/>
 		</Entity>
 		<Entity uid="176">
-			<Template>actor|props/special/eyecandy/bench_1</Template>
+			<Template>actor|props/special/eyecandy/bench_1.xml</Template>
 			<Position x="1635.55378" z="1063.39399"/>
 			<Orientation y="-4.6032"/>
 		</Entity>
 		<Entity uid="177">
-			<Template>actor|props/special/eyecandy/bench_1</Template>
+			<Template>actor|props/special/eyecandy/bench_1.xml</Template>
 			<Position x="1649.26935" z="1066.24524"/>
 			<Orientation y="-5.23153"/>
 		</Entity>
 		<Entity uid="178">
-			<Template>actor|props/special/eyecandy/bench_1</Template>
+			<Template>actor|props/special/eyecandy/bench_1.xml</Template>
 			<Position x="1658.68952" z="1076.61377"/>
 			<Orientation y="-5.85984"/>
 		</Entity>
 		<Entity uid="179">
-			<Template>actor|props/special/eyecandy/bench_1</Template>
+			<Template>actor|props/special/eyecandy/bench_1.xml</Template>
 			<Position x="1660.21613" z="1090.53913"/>
 			<Orientation y="-6.48816"/>
 		</Entity>
 		<Entity uid="180">
-			<Template>actor|props/special/eyecandy/bench_1</Template>
+			<Template>actor|props/special/eyecandy/bench_1.xml</Template>
 			<Position x="1653.26606" z="1102.70228"/>
 			<Orientation y="-7.11648"/>
 		</Entity>
 		<Entity uid="181">
-			<Template>actor|props/special/eyecandy/bench_1</Template>
+			<Template>actor|props/special/eyecandy/bench_1.xml</Template>
 			<Position x="1640.49402" z="1108.45734"/>
 			<Orientation y="-7.74479"/>
 		</Entity>
 		<Entity uid="182">
-			<Template>actor|props/special/eyecandy/bench_1</Template>
+			<Template>actor|props/special/eyecandy/bench_1.xml</Template>
 			<Position x="1626.77851" z="1105.60608"/>
 			<Orientation y="-8.37311"/>
 		</Entity>
 		<Entity uid="183">
-			<Template>actor|props/special/eyecandy/bench_1</Template>
+			<Template>actor|props/special/eyecandy/bench_1.xml</Template>
 			<Position x="1617.35834" z="1095.23755"/>
 			<Orientation y="-9.00142"/>
 		</Entity>
 		<Entity uid="184">
-			<Template>actor|props/special/eyecandy/bench_1</Template>
+			<Template>actor|props/special/eyecandy/bench_1.xml</Template>
 			<Position x="1615.83173" z="1081.3122"/>
 			<Orientation y="-9.62975"/>
 		</Entity>
@@ -346,47 +334,47 @@
 			<Orientation y="-7.78968"/>
 		</Entity>
 		<Entity uid="192">
-			<Template>actor|props/special/eyecandy/rug_stand_iber</Template>
+			<Template>actor|props/special/eyecandy/rug_stand_iber.xml</Template>
 			<Position x="1619.73334" z="1065.79377"/>
 			<Orientation y="-5.54567"/>
 		</Entity>
 		<Entity uid="193">
-			<Template>actor|props/special/eyecandy/rug_stand_iber</Template>
+			<Template>actor|props/special/eyecandy/rug_stand_iber.xml</Template>
 			<Position x="1639.32593" z="1058.75684"/>
 			<Orientation y="-6.33107"/>
 		</Entity>
 		<Entity uid="194">
-			<Template>actor|props/special/eyecandy/rug_stand_iber</Template>
+			<Template>actor|props/special/eyecandy/rug_stand_iber.xml</Template>
 			<Position x="1658.15583" z="1067.63508"/>
 			<Orientation y="-7.11648"/>
 		</Entity>
 		<Entity uid="195">
-			<Template>actor|props/special/eyecandy/rug_stand_iber</Template>
+			<Template>actor|props/special/eyecandy/rug_stand_iber.xml</Template>
 			<Position x="1665.19275" z="1087.22773"/>
 			<Orientation y="-7.90188"/>
 		</Entity>
 		<Entity uid="196">
-			<Template>actor|props/special/eyecandy/rug_stand_iber</Template>
+			<Template>actor|props/special/eyecandy/rug_stand_iber.xml</Template>
 			<Position x="1656.31452" z="1106.05762"/>
 			<Orientation y="-8.68728"/>
 		</Entity>
 		<Entity uid="197">
-			<Template>actor|props/special/eyecandy/rug_stand_iber</Template>
+			<Template>actor|props/special/eyecandy/rug_stand_iber.xml</Template>
 			<Position x="1636.72187" z="1113.09449"/>
 			<Orientation y="-9.47268"/>
 		</Entity>
 		<Entity uid="198">
-			<Template>actor|props/special/eyecandy/rug_stand_iber</Template>
+			<Template>actor|props/special/eyecandy/rug_stand_iber.xml</Template>
 			<Position x="1617.89197" z="1104.21625"/>
 			<Orientation y="-10.25806"/>
 		</Entity>
 		<Entity uid="199">
-			<Template>actor|props/special/eyecandy/rug_stand_iber</Template>
+			<Template>actor|props/special/eyecandy/rug_stand_iber.xml</Template>
 			<Position x="1610.85511" z="1084.62366"/>
 			<Orientation y="-11.04346"/>
 		</Entity>
 		<Entity uid="301">
-			<Template>actor|props/special/eyecandy/campfire</Template>
+			<Template>actor|props/special/eyecandy/campfire.xml</Template>
 			<Position x="458.08698" z="982.37006"/>
 			<Orientation y="-0.00745"/>
 		</Entity>
@@ -535,52 +523,52 @@
 			<Orientation y="-0.27036"/>
 		</Entity>
 		<Entity uid="326">
-			<Template>actor|props/special/eyecandy/bench_1</Template>
+			<Template>actor|props/special/eyecandy/bench_1.xml</Template>
 			<Position x="442.84485" z="965.59345"/>
 			<Orientation y="-3.97489"/>
 		</Entity>
 		<Entity uid="327">
-			<Template>actor|props/special/eyecandy/bench_1</Template>
+			<Template>actor|props/special/eyecandy/bench_1.xml</Template>
 			<Position x="455.61689" z="959.83838"/>
 			<Orientation y="-4.6032"/>
 		</Entity>
 		<Entity uid="328">
-			<Template>actor|props/special/eyecandy/bench_1</Template>
+			<Template>actor|props/special/eyecandy/bench_1.xml</Template>
 			<Position x="469.3324" z="962.68964"/>
 			<Orientation y="-5.23153"/>
 		</Entity>
 		<Entity uid="329">
-			<Template>actor|props/special/eyecandy/bench_1</Template>
+			<Template>actor|props/special/eyecandy/bench_1.xml</Template>
 			<Position x="478.75257" z="973.05817"/>
 			<Orientation y="-5.85984"/>
 		</Entity>
 		<Entity uid="330">
-			<Template>actor|props/special/eyecandy/bench_1</Template>
+			<Template>actor|props/special/eyecandy/bench_1.xml</Template>
 			<Position x="480.27918" z="986.98353"/>
 			<Orientation y="-6.48816"/>
 		</Entity>
 		<Entity uid="331">
-			<Template>actor|props/special/eyecandy/bench_1</Template>
+			<Template>actor|props/special/eyecandy/bench_1.xml</Template>
 			<Position x="473.32917" z="999.14667"/>
 			<Orientation y="-7.11648"/>
 		</Entity>
 		<Entity uid="332">
-			<Template>actor|props/special/eyecandy/bench_1</Template>
+			<Template>actor|props/special/eyecandy/bench_1.xml</Template>
 			<Position x="460.55713" z="1004.90174"/>
 			<Orientation y="-7.74479"/>
 		</Entity>
 		<Entity uid="333">
-			<Template>actor|props/special/eyecandy/bench_1</Template>
+			<Template>actor|props/special/eyecandy/bench_1.xml</Template>
 			<Position x="446.84156" z="1002.05048"/>
 			<Orientation y="-8.37311"/>
 		</Entity>
 		<Entity uid="334">
-			<Template>actor|props/special/eyecandy/bench_1</Template>
+			<Template>actor|props/special/eyecandy/bench_1.xml</Template>
 			<Position x="437.4214" z="991.68195"/>
 			<Orientation y="-9.00142"/>
 		</Entity>
 		<Entity uid="335">
-			<Template>actor|props/special/eyecandy/bench_1</Template>
+			<Template>actor|props/special/eyecandy/bench_1.xml</Template>
 			<Position x="435.89478" z="977.7566"/>
 			<Orientation y="-9.62975"/>
 		</Entity>
@@ -627,42 +615,42 @@
 			<Orientation y="-7.78968"/>
 		</Entity>
 		<Entity uid="343">
-			<Template>actor|props/special/eyecandy/rug_stand_iber</Template>
+			<Template>actor|props/special/eyecandy/rug_stand_iber.xml</Template>
 			<Position x="439.7964" z="962.2381"/>
 			<Orientation y="-5.54567"/>
 		</Entity>
 		<Entity uid="344">
-			<Template>actor|props/special/eyecandy/rug_stand_iber</Template>
+			<Template>actor|props/special/eyecandy/rug_stand_iber.xml</Template>
 			<Position x="459.38904" z="955.20124"/>
 			<Orientation y="-6.33107"/>
 		</Entity>
 		<Entity uid="345">
-			<Template>actor|props/special/eyecandy/rug_stand_iber</Template>
+			<Template>actor|props/special/eyecandy/rug_stand_iber.xml</Template>
 			<Position x="478.21894" z="964.07947"/>
 			<Orientation y="-7.11648"/>
 		</Entity>
 		<Entity uid="346">
-			<Template>actor|props/special/eyecandy/rug_stand_iber</Template>
+			<Template>actor|props/special/eyecandy/rug_stand_iber.xml</Template>
 			<Position x="485.2558" z="983.67206"/>
 			<Orientation y="-7.90188"/>
 		</Entity>
 		<Entity uid="347">
-			<Template>actor|props/special/eyecandy/rug_stand_iber</Template>
+			<Template>actor|props/special/eyecandy/rug_stand_iber.xml</Template>
 			<Position x="476.37757" z="1002.50196"/>
 			<Orientation y="-8.68728"/>
 		</Entity>
 		<Entity uid="348">
-			<Template>actor|props/special/eyecandy/rug_stand_iber</Template>
+			<Template>actor|props/special/eyecandy/rug_stand_iber.xml</Template>
 			<Position x="456.78498" z="1009.53888"/>
 			<Orientation y="-9.47268"/>
 		</Entity>
 		<Entity uid="349">
-			<Template>actor|props/special/eyecandy/rug_stand_iber</Template>
+			<Template>actor|props/special/eyecandy/rug_stand_iber.xml</Template>
 			<Position x="437.95508" z="1000.66065"/>
 			<Orientation y="-10.25806"/>
 		</Entity>
 		<Entity uid="350">
-			<Template>actor|props/special/eyecandy/rug_stand_iber</Template>
+			<Template>actor|props/special/eyecandy/rug_stand_iber.xml</Template>
 			<Position x="430.91816" z="981.068"/>
 			<Orientation y="-11.04346"/>
 		</Entity>
@@ -34406,277 +34394,277 @@
 			<Orientation y="-1.57068"/>
 		</Entity>
 		<Entity uid="6221">
-			<Template>actor|props/structures/celts/blacksmith_bucket</Template>
+			<Template>actor|props/structures/celts/blacksmith_bucket.xml</Template>
 			<Position x="556.14509" z="987.39423"/>
 			<Orientation y="0.57828"/>
 		</Entity>
 		<Entity uid="6222">
-			<Template>actor|props/structures/celts/blacksmith_bucket</Template>
+			<Template>actor|props/structures/celts/blacksmith_bucket.xml</Template>
 			<Position x="877.1775" z="272.21552"/>
 			<Orientation y="-0.19224"/>
 		</Entity>
 		<Entity uid="6223">
-			<Template>actor|props/structures/celts/blacksmith_bucket</Template>
+			<Template>actor|props/structures/celts/blacksmith_bucket.xml</Template>
 			<Position x="1247.57343" z="744.34534"/>
 			<Orientation y="-2.06289"/>
 		</Entity>
 		<Entity uid="6224">
-			<Template>actor|props/structures/celts/blacksmith_bucket</Template>
+			<Template>actor|props/structures/celts/blacksmith_bucket.xml</Template>
 			<Position x="1127.65589" z="267.93085"/>
 			<Orientation y="0.27474"/>
 		</Entity>
 		<Entity uid="6225">
-			<Template>actor|props/structures/celts/blacksmith_bucket</Template>
+			<Template>actor|props/structures/celts/blacksmith_bucket.xml</Template>
 			<Position x="1034.2771" z="74.00196"/>
 			<Orientation y="-4.02561"/>
 		</Entity>
 		<Entity uid="6226">
-			<Template>actor|props/structures/celts/blacksmith_bucket</Template>
+			<Template>actor|props/structures/celts/blacksmith_bucket.xml</Template>
 			<Position x="1666.20557" z="953.79218"/>
 			<Orientation y="-3.96906"/>
 		</Entity>
 		<Entity uid="6227">
-			<Template>actor|props/structures/gauls/storehouse_barrel_b</Template>
+			<Template>actor|props/structures/gauls/storehouse_barrel_b.xml</Template>
 			<Position x="129.95716" z="1319.38117"/>
 			<Orientation y="-4.23511"/>
 		</Entity>
 		<Entity uid="6228">
-			<Template>actor|props/structures/gauls/storehouse_barrel_b</Template>
+			<Template>actor|props/structures/gauls/storehouse_barrel_b.xml</Template>
 			<Position x="1244.07471" z="871.99073"/>
 			<Orientation y="-3.1411"/>
 		</Entity>
 		<Entity uid="6229">
-			<Template>actor|props/structures/gauls/storehouse_barrel_b</Template>
+			<Template>actor|props/structures/gauls/storehouse_barrel_b.xml</Template>
 			<Position x="366.98774" z="1088.88337"/>
 			<Orientation y="0.62322"/>
 		</Entity>
 		<Entity uid="6230">
-			<Template>actor|props/structures/gauls/storehouse_barrel_b</Template>
+			<Template>actor|props/structures/gauls/storehouse_barrel_b.xml</Template>
 			<Position x="818.39411" z="1667.21277"/>
 			<Orientation y="-2.20968"/>
 		</Entity>
 		<Entity uid="6231">
-			<Template>actor|props/structures/gauls/storehouse_barrel_b</Template>
+			<Template>actor|props/structures/gauls/storehouse_barrel_b.xml</Template>
 			<Position x="890.66321" z="1373.16938"/>
 			<Orientation y="-2.43609"/>
 		</Entity>
 		<Entity uid="6232">
-			<Template>actor|props/structures/gauls/storehouse_barrel_b</Template>
+			<Template>actor|props/structures/gauls/storehouse_barrel_b.xml</Template>
 			<Position x="1015.55671" z="385.6756"/>
 			<Orientation y="-3.43313"/>
 		</Entity>
 		<Entity uid="6233">
-			<Template>actor|props/structures/celts/tartan_a</Template>
+			<Template>actor|props/structures/celts/tartan_a.xml</Template>
 			<Position x="891.2898" z="1591.4751"/>
 			<Orientation y="0.68285"/>
 		</Entity>
 		<Entity uid="6234">
-			<Template>actor|props/structures/celts/tartan_a</Template>
+			<Template>actor|props/structures/celts/tartan_a.xml</Template>
 			<Position x="908.97834" z="1594.3606"/>
 			<Orientation y="0.3408"/>
 		</Entity>
 		<Entity uid="6235">
-			<Template>actor|props/structures/celts/tartan_a</Template>
+			<Template>actor|props/structures/celts/tartan_a.xml</Template>
 			<Position x="895.43268" z="1621.79267"/>
 			<Orientation y="0.40188"/>
 		</Entity>
 		<Entity uid="6236">
-			<Template>actor|props/structures/celts/tartan_a</Template>
+			<Template>actor|props/structures/celts/tartan_a.xml</Template>
 			<Position x="1205.26325" z="81.20069"/>
 			<Orientation y="0.05224"/>
 		</Entity>
 		<Entity uid="6237">
-			<Template>actor|props/structures/celts/tartan_a</Template>
+			<Template>actor|props/structures/celts/tartan_a.xml</Template>
 			<Position x="1191.1573" z="70.04194"/>
 			<Orientation y="0.6774"/>
 		</Entity>
 		<Entity uid="6238">
-			<Template>actor|props/structures/celts/tartan_a</Template>
+			<Template>actor|props/structures/celts/tartan_a.xml</Template>
 			<Position x="1196.5702" z="100.58881"/>
 			<Orientation y="0.106"/>
 		</Entity>
 		<Entity uid="6239">
-			<Template>actor|props/structures/celts/tartan_a</Template>
+			<Template>actor|props/structures/celts/tartan_a.xml</Template>
 			<Position x="518.22687" z="1352.68482"/>
 			<Orientation y="0.21795"/>
 		</Entity>
 		<Entity uid="6240">
-			<Template>actor|props/structures/celts/tartan_a</Template>
+			<Template>actor|props/structures/celts/tartan_a.xml</Template>
 			<Position x="529.48786" z="1365.3506"/>
 			<Orientation y="0.63729"/>
 		</Entity>
 		<Entity uid="6241">
-			<Template>actor|props/structures/celts/tartan_a</Template>
+			<Template>actor|props/structures/celts/tartan_a.xml</Template>
 			<Position x="534.30646" z="1365.99708"/>
 			<Orientation y="0.68197"/>
 		</Entity>
 		<Entity uid="6242">
-			<Template>actor|props/structures/celts/tartan_a</Template>
+			<Template>actor|props/structures/celts/tartan_a.xml</Template>
 			<Position x="1264.00782" z="306.23993"/>
 			<Orientation y="0.0404"/>
 		</Entity>
 		<Entity uid="6243">
-			<Template>actor|props/structures/celts/tartan_a</Template>
+			<Template>actor|props/structures/celts/tartan_a.xml</Template>
 			<Position x="1276.00776" z="329.8755"/>
 			<Orientation y="0.28208"/>
 		</Entity>
 		<Entity uid="6244">
-			<Template>actor|props/structures/celts/tartan_a</Template>
+			<Template>actor|props/structures/celts/tartan_a.xml</Template>
 			<Position x="1278.35071" z="298.00385"/>
 			<Orientation y="0.76426"/>
 		</Entity>
 		<Entity uid="6245">
-			<Template>actor|props/structures/celts/tartan_a</Template>
+			<Template>actor|props/structures/celts/tartan_a.xml</Template>
 			<Position x="401.74054" z="1175.13007"/>
 			<Orientation y="0.18036"/>
 		</Entity>
 		<Entity uid="6246">
-			<Template>actor|props/structures/celts/tartan_a</Template>
+			<Template>actor|props/structures/celts/tartan_a.xml</Template>
 			<Position x="401.31922" z="1182.6175"/>
 			<Orientation y="0.32462"/>
 		</Entity>
 		<Entity uid="6247">
-			<Template>actor|props/structures/celts/tartan_a</Template>
+			<Template>actor|props/structures/celts/tartan_a.xml</Template>
 			<Position x="386.60114" z="1193.98871"/>
 			<Orientation y="0.20728"/>
 		</Entity>
 		<Entity uid="6248">
-			<Template>actor|props/special/eyecandy/wheel_laying</Template>
+			<Template>actor|props/special/eyecandy/wheel_laying.xml</Template>
 			<Position x="669.77778" z="1379.47986"/>
 			<Orientation y="0.43911"/>
 		</Entity>
 		<Entity uid="6249">
-			<Template>actor|props/special/eyecandy/wheel_laying</Template>
+			<Template>actor|props/special/eyecandy/wheel_laying.xml</Template>
 			<Position x="668.22736" z="1370.0022"/>
 			<Orientation y="-0.07857"/>
 		</Entity>
 		<Entity uid="6250">
-			<Template>actor|props/special/eyecandy/wheel_laying</Template>
+			<Template>actor|props/special/eyecandy/wheel_laying.xml</Template>
 			<Position x="674.7555" z="1372.75202"/>
 			<Orientation y="-2.46605"/>
 		</Entity>
 		<Entity uid="6251">
-			<Template>actor|props/special/eyecandy/wheel_laying</Template>
+			<Template>actor|props/special/eyecandy/wheel_laying.xml</Template>
 			<Position x="854.13477" z="1674.53107"/>
 			<Orientation y="-3.48527"/>
 		</Entity>
 		<Entity uid="6252">
-			<Template>actor|props/special/eyecandy/wheel_laying</Template>
+			<Template>actor|props/special/eyecandy/wheel_laying.xml</Template>
 			<Position x="846.79468" z="1664.48658"/>
 			<Orientation y="-0.47463"/>
 		</Entity>
 		<Entity uid="6253">
-			<Template>actor|props/special/eyecandy/wheel_laying</Template>
+			<Template>actor|props/special/eyecandy/wheel_laying.xml</Template>
 			<Position x="847.90967" z="1673.68049"/>
 			<Orientation y="-0.16208"/>
 		</Entity>
 		<Entity uid="6254">
-			<Template>actor|props/special/eyecandy/wheel_laying</Template>
+			<Template>actor|props/special/eyecandy/wheel_laying.xml</Template>
 			<Position x="1505.01514" z="418.17585"/>
 			<Orientation y="0.89963"/>
 		</Entity>
 		<Entity uid="6255">
-			<Template>actor|props/special/eyecandy/wheel_laying</Template>
+			<Template>actor|props/special/eyecandy/wheel_laying.xml</Template>
 			<Position x="1492.4803" z="414.68421"/>
 			<Orientation y="-2.76351"/>
 		</Entity>
 		<Entity uid="6256">
-			<Template>actor|props/special/eyecandy/wheel_laying</Template>
+			<Template>actor|props/special/eyecandy/wheel_laying.xml</Template>
 			<Position x="1497.5511" z="413.73365"/>
 			<Orientation y="-1.6811"/>
 		</Entity>
 		<Entity uid="6257">
-			<Template>actor|props/special/eyecandy/wheel_laying</Template>
+			<Template>actor|props/special/eyecandy/wheel_laying.xml</Template>
 			<Position x="1639.36615" z="793.60462"/>
 			<Orientation y="-0.3384"/>
 		</Entity>
 		<Entity uid="6258">
-			<Template>actor|props/special/eyecandy/wheel_laying</Template>
+			<Template>actor|props/special/eyecandy/wheel_laying.xml</Template>
 			<Position x="1644.99585" z="786.40833"/>
 			<Orientation y="1.25037"/>
 		</Entity>
 		<Entity uid="6259">
-			<Template>actor|props/special/eyecandy/wheel_laying</Template>
+			<Template>actor|props/special/eyecandy/wheel_laying.xml</Template>
 			<Position x="1644.6562" z="793.81379"/>
 			<Orientation y="-0.54574"/>
 		</Entity>
 		<Entity uid="6260">
-			<Template>actor|props/special/eyecandy/wheel_laying</Template>
+			<Template>actor|props/special/eyecandy/wheel_laying.xml</Template>
 			<Position x="1012.62574" z="571.49408"/>
 			<Orientation y="-1.45485"/>
 		</Entity>
 		<Entity uid="6261">
-			<Template>actor|props/special/eyecandy/wheel_laying</Template>
+			<Template>actor|props/special/eyecandy/wheel_laying.xml</Template>
 			<Position x="1001.5251" z="573.425"/>
 			<Orientation y="0.35425"/>
 		</Entity>
 		<Entity uid="6262">
-			<Template>actor|props/special/eyecandy/wheel_laying</Template>
+			<Template>actor|props/special/eyecandy/wheel_laying.xml</Template>
 			<Position x="1009.17115" z="566.71027"/>
 			<Orientation y="-0.484"/>
 		</Entity>
 		<Entity uid="6263">
-			<Template>actor|props/special/eyecandy/wheel_laying</Template>
+			<Template>actor|props/special/eyecandy/wheel_laying.xml</Template>
 			<Position x="1002.8672" z="565.92518"/>
 			<Orientation y="1.48981"/>
 		</Entity>
 		<Entity uid="6264">
-			<Template>actor|props/special/eyecandy/well_1_b</Template>
+			<Template>actor|props/special/eyecandy/well_1_b.xml</Template>
 			<Position x="1095.69123" z="305.32593"/>
 			<Orientation y="1.14338"/>
 		</Entity>
 		<Entity uid="6265">
-			<Template>actor|props/special/eyecandy/well_1_b</Template>
+			<Template>actor|props/special/eyecandy/well_1_b.xml</Template>
 			<Position x="213.34388" z="624.94111"/>
 			<Orientation y="-2.42309"/>
 		</Entity>
 		<Entity uid="6266">
-			<Template>actor|props/special/eyecandy/woodcord</Template>
+			<Template>actor|props/special/eyecandy/woodcord.xml</Template>
 			<Position x="150.27503" z="792.07953"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="6267">
-			<Template>actor|props/special/eyecandy/woodcord</Template>
+			<Template>actor|props/special/eyecandy/woodcord.xml</Template>
 			<Position x="159.85431" z="782.2179"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="6268">
-			<Template>actor|props/special/eyecandy/woodcord</Template>
+			<Template>actor|props/special/eyecandy/woodcord.xml</Template>
 			<Position x="1190.31067" z="254.00605"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="6269">
-			<Template>actor|props/special/eyecandy/woodcord</Template>
+			<Template>actor|props/special/eyecandy/woodcord.xml</Template>
 			<Position x="1182.04377" z="262.83576"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="6270">
-			<Template>actor|props/special/eyecandy/woodcord</Template>
+			<Template>actor|props/special/eyecandy/woodcord.xml</Template>
 			<Position x="110.16504" z="1260.38343"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="6271">
-			<Template>actor|props/special/eyecandy/woodcord</Template>
+			<Template>actor|props/special/eyecandy/woodcord.xml</Template>
 			<Position x="115.27332" z="725.521"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="6272">
-			<Template>actor|props/special/eyecandy/woodcord</Template>
+			<Template>actor|props/special/eyecandy/woodcord.xml</Template>
 			<Position x="1433.29957" z="981.28785"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="6273">
-			<Template>actor|props/special/eyecandy/woodcord</Template>
+			<Template>actor|props/special/eyecandy/woodcord.xml</Template>
 			<Position x="490.69636" z="1410.714"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="6274">
-			<Template>actor|props/special/eyecandy/woodcord</Template>
+			<Template>actor|props/special/eyecandy/woodcord.xml</Template>
 			<Position x="495.7317" z="1410.1897"/>
 			<Orientation y="0"/>
 		</Entity>
 		<Entity uid="6275">
-			<Template>actor|props/special/eyecandy/woodcord</Template>
+			<Template>actor|props/special/eyecandy/woodcord.xml</Template>
 			<Position x="1584.3506" z="1081.82813"/>
 			<Orientation y="0"/>
 		</Entity>

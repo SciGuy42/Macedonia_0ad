@@ -38,17 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "The Siege of Halicarnassus was fought between Alexander the Great and the Achaemenid Persian Empire in 334 BC. Alexander, who had no navy, was constantly being threatened by the Persian navy. It continuously attempted to provoke an engagement with Alexander, who would not oblige them. Eventually, the Persian fleet sailed to Halicarnassus, in order to establish a new defense. Ada of Caria, the former queen of Halicarnassus, had been driven from her throne by her younger brother Pixodarus of Caria. When Pixodarus died, Persian King Darius had appointed Orontobates satrap of Caria, which included Halicarnassus in its jurisdiction. On the arrival of Alexander in 334 BC, Ada, who was in possession of the fortress of Alinda, surrendered the fortress to him. \n\nObjectives:\n\n1. Make your way towards the fortress of Alinda to secure Ada's cooperation. \n\n2. Capture or destroy the city of Halicarnassus\n\nIntelligence Report:\n\nYou have arrived in the area with a small contingent of elite troops. To capture the city, we will need to raise more. The main way for our forces to gather supplies is by use of trade caravans. Beware of the Achaemenid forces and Mermon's Greeks who are also stationed in the area. \n\nAI Settings:\n\nPersian Outpost and Mermon's Greeks should be set to Sandbox difficulty. ",
-  "Keywords": [
-    "new"
-  ],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 13 - Caria (334 BC)",
-  "Nomad": false,
   "PlayerData": [
-    null,
     {
       "Civ": "mace",
       "Color": {
@@ -92,17 +87,12 @@
   ],
   "Preview": "hellas.png",
   "RevealMap": false,
-  "Script": "hellas.js",
-  "Seed": 4141,
-  "Size": 448,
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_13.js"
   ],
   "VictoryConditions": [
     "conquest"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>

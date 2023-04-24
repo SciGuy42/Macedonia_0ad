@@ -38,15 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": false,
-  "Description": "After Alexander's initial attempt failed, the choice became clear -- Tyre must be taken by a naval assault. Build up your navy, assemble a force and conquer the city. \n\nIntelligence Report:\n- While the Persian empire's navy has been decimated at this point, Tyre still has the ability to build ships -- watch out for attacks from the sea\n- The King of Cyprus, a longtime enemy of the Achamenids, has joined our efforts and has established a small camp soutth-west of Tyre. He will launch attacks on Tyre perioidically. \n- The land on the coast is about as barren as it gets -- we have brought some supplies with, but materials like stone and metal will need to be secured through trade with our allies.\n- There is a rumour of an old abandoned lighthous on an island north of Tyre -- it may contain useful maps, should we capture it. \n- The Persians maintain a small garrison in the city but have also established a camp to the north -- we should eliminate it as soon as we can to prevent Persian reinforcements from arriving to help Tyre\n\nAI Settings: Player 2 should be set to Petral with a difficulty of your choice. All other plays should be set to Sandbox. ",
-  "Keywords": [],
+  "Description": "After Alexander's initial attempt failed, the choice became clear -- Tyre must be taken by a naval assault. Build up your navy, assemble a force and conquer the city. \n\nIntelligence Report:\n- While the Persian empire's navy has been decimated at this point, Tyre still has the ability to build ships -- watch out for attacks from the sea\n- The King of Cyprus, a longtime enemy of the Achamenids, has joined our efforts and has established a small camp soutth-west of Tyre. He will launch attacks on Tyre perioidically. \n- The land on the coast is about as barren as it gets -- we have brought some supplies with, but materials like stone and metal will need to be secured through trade with our allies.\n- There is a rumour of an old abandoned lighthous on an island north of Tyre -- it may contain useful maps, should we capture it. \n- The Persians maintain a small garrison in the city but have also established a camp to the north -- we should eliminate it as soon as we can to prevent Persian reinforcements from arriving to help Tyre\n\nAI Settings: Player 2 should be set to Petra with a difficulty of your choice. All other players should be set to Sandbox. ",
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 17 - Fall of Tyre (332 BC)",
-  "Nomad": false,
   "PlayerData": [
-    "",
     {
       "Civ": "mace",
       "Color": {
@@ -106,16 +103,12 @@
   ],
   "Preview": "phoenician_levant.png",
   "RevealMap": false,
-  "Seed": 7028,
-  "Size": 512,
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_17.js"
   ],
   "VictoryConditions": [
     "conquest"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>
@@ -8202,35 +8195,35 @@
 		</Entity>
 		<Entity uid="3787">
 			<Template>gaia/fruit/berry_01</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1157.7782" z="631.26868"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="52658"/>
 		</Entity>
 		<Entity uid="3788">
 			<Template>gaia/fruit/berry_01</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1152.6742" z="628.97046"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="23707"/>
 		</Entity>
 		<Entity uid="3789">
 			<Template>gaia/fruit/berry_01</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1146.36426" z="632.61768"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="35581"/>
 		</Entity>
 		<Entity uid="3790">
 			<Template>gaia/fruit/berry_01</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1153.33387" z="638.34711"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="54957"/>
 		</Entity>
 		<Entity uid="3791">
 			<Template>gaia/fruit/berry_01</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1151.4856" z="634.24885"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="53986"/>
@@ -8279,91 +8272,91 @@
 		</Entity>
 		<Entity uid="3798">
 			<Template>gaia/fruit/fig</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1038.59351" z="620.36945"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="35408"/>
 		</Entity>
 		<Entity uid="3799">
 			<Template>gaia/fruit/fig</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1028.82081" z="610.07624"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="49141"/>
 		</Entity>
 		<Entity uid="3800">
 			<Template>gaia/fruit/fig</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1037.43421" z="591.46131"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="35868"/>
 		</Entity>
 		<Entity uid="3801">
 			<Template>gaia/fruit/fig</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1051.73902" z="590.4319"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="37030"/>
 		</Entity>
 		<Entity uid="3802">
 			<Template>gaia/fruit/fig</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1063.05457" z="600.40558"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="60895"/>
 		</Entity>
 		<Entity uid="3803">
 			<Template>gaia/fruit/fig</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1063.76294" z="611.95386"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="7275"/>
 		</Entity>
 		<Entity uid="3804">
 			<Template>gaia/fruit/fig</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1055.70862" z="620.16688"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="7377"/>
 		</Entity>
 		<Entity uid="3805">
 			<Template>gaia/fruit/fig</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1044.39197" z="607.42005"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="32423"/>
 		</Entity>
 		<Entity uid="3806">
 			<Template>gaia/fruit/fig</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1027.90674" z="598.41517"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="49026"/>
 		</Entity>
 		<Entity uid="3807">
 			<Template>gaia/fruit/fig</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1049.76917" z="601.0033"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="60579"/>
 		</Entity>
 		<Entity uid="3808">
 			<Template>gaia/fruit/fig</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1038.71106" z="601.38282"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="43107"/>
 		</Entity>
 		<Entity uid="3809">
 			<Template>gaia/fruit/fig</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1039.67176" z="610.9137"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="19912"/>
 		</Entity>
 		<Entity uid="3810">
 			<Template>gaia/fruit/fig</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1052.24915" z="610.47132"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="2866"/>
@@ -8755,49 +8748,49 @@
 		</Entity>
 		<Entity uid="3866">
 			<Template>gaia/tree/date_palm</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1248.67823" z="396.64713"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="23911"/>
 		</Entity>
 		<Entity uid="3867">
 			<Template>gaia/tree/date_palm</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1244.84327" z="416.17542"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="38753"/>
 		</Entity>
 		<Entity uid="3868">
 			<Template>gaia/tree/date_palm</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1251.19715" z="431.53052"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="2399"/>
 		</Entity>
 		<Entity uid="3869">
 			<Template>gaia/tree/date_palm</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1259.25489" z="424.45124"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="19595"/>
 		</Entity>
 		<Entity uid="3870">
 			<Template>gaia/tree/date_palm</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1251.26392" z="413.52485"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="58675"/>
 		</Entity>
 		<Entity uid="3871">
 			<Template>gaia/tree/date_palm</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1248.10523" z="462.04365"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="57332"/>
 		</Entity>
 		<Entity uid="3872">
 			<Template>gaia/tree/date_palm</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1218.77479" z="405.44855"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="18486"/>
@@ -9224,14 +9217,14 @@
 		</Entity>
 		<Entity uid="3933">
 			<Template>gaia/tree/cretan_date_palm_short</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="964.30597" z="485.69553"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="26378"/>
 		</Entity>
 		<Entity uid="3934">
 			<Template>gaia/tree/cretan_date_palm_short</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="964.09217" z="497.599"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="28716"/>
@@ -9357,49 +9350,49 @@
 		</Entity>
 		<Entity uid="3952">
 			<Template>gaia/tree/cretan_date_palm_short</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1250.33399" z="405.45145"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="54634"/>
 		</Entity>
 		<Entity uid="3953">
 			<Template>gaia/tree/cretan_date_palm_short</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1241.66211" z="408.52567"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="52357"/>
 		</Entity>
 		<Entity uid="3954">
 			<Template>gaia/tree/cretan_date_palm_short</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1237.69642" z="396.8183"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="45578"/>
 		</Entity>
 		<Entity uid="3955">
 			<Template>gaia/tree/cretan_date_palm_short</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1256.75" z="416.62638"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="3912"/>
 		</Entity>
 		<Entity uid="3956">
 			<Template>gaia/tree/cretan_date_palm_short</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1248.938" z="426.71732"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="2968"/>
 		</Entity>
 		<Entity uid="3957">
 			<Template>gaia/tree/cretan_date_palm_short</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1256.80762" z="436.07053"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="25752"/>
 		</Entity>
 		<Entity uid="3958">
 			<Template>gaia/tree/cretan_date_palm_short</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1248.65442" z="449.4976"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="9870"/>
@@ -9490,7 +9483,7 @@
 		</Entity>
 		<Entity uid="3971">
 			<Template>gaia/tree/cretan_date_palm_short</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1273.69349" z="927.05152"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="54824"/>
@@ -9721,91 +9714,91 @@
 		</Entity>
 		<Entity uid="4004">
 			<Template>gaia/tree/cretan_date_palm_short</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1217.07776" z="972.41913"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="15077"/>
 		</Entity>
 		<Entity uid="4005">
 			<Template>gaia/tree/cretan_date_palm_short</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1209.23194" z="971.10822"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="5742"/>
 		</Entity>
 		<Entity uid="4006">
 			<Template>gaia/tree/cretan_date_palm_short</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1184.56861" z="1018.99256"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="43985"/>
 		</Entity>
 		<Entity uid="4007">
 			<Template>gaia/tree/cretan_date_palm_short</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1190.01624" z="1008.12787"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="9762"/>
 		</Entity>
 		<Entity uid="4008">
 			<Template>gaia/tree/cretan_date_palm_short</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1202.38575" z="1029.05665"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="3680"/>
 		</Entity>
 		<Entity uid="4009">
 			<Template>gaia/tree/cretan_date_palm_short</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1212.3766" z="1014.26008"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="59873"/>
 		</Entity>
 		<Entity uid="4010">
 			<Template>gaia/tree/cretan_date_palm_short</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1221.3473" z="1004.82422"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="39889"/>
 		</Entity>
 		<Entity uid="4011">
 			<Template>gaia/tree/cretan_date_palm_short</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1187.66224" z="1044.7671"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="64677"/>
 		</Entity>
 		<Entity uid="4012">
 			<Template>gaia/tree/cretan_date_palm_short</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1201.0774" z="1040.65381"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="31562"/>
 		</Entity>
 		<Entity uid="4013">
 			<Template>gaia/tree/cretan_date_palm_short</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1160.85364" z="1042.93116"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="24842"/>
 		</Entity>
 		<Entity uid="4014">
 			<Template>gaia/tree/cretan_date_palm_short</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1158.42481" z="1053.36915"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="39270"/>
 		</Entity>
 		<Entity uid="4015">
 			<Template>gaia/tree/cretan_date_palm_short</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1171.38758" z="1038.7909"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="64640"/>
 		</Entity>
 		<Entity uid="4016">
 			<Template>gaia/tree/cretan_date_palm_short</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1166.61512" z="1033.85608"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="43315"/>
@@ -23880,7 +23873,7 @@
 		</Entity>
 		<Entity uid="6084">
 			<Template>gaia/ore/greece_small</Template>
-			<Player>1</Player>
+			<Player>0</Player>
 			<Position x="1801.11512" z="647.82001"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="35032"/>

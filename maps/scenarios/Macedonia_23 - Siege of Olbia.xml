@@ -38,13 +38,11 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "Zopyrion was made a governor of Thrace by Alexander the Great. In 331 BC, he led an invasion of Scythian lands, \"thinking that, if he did not attempt something, he should be stigmatized as indolent\". \n\nHe collected a force of thirty thousand men, marched along the Black Sea coast and besieged Olbia, a colony of Miletus (which was taken by Alexander in 334 BC). \n\nZopyrion has put you in charge of our reserve forces. Your primary objective is to secure supplies for our main army -- you do that by trading. The goods you trade, the faster our army will attack (note: all trade counts, even trade with others or among yourself). Food supports our basic infantry and cavalry. Wood supports our ranged infantry. Stone support our siege equipment while metal supports our elite infantry. You can also directly tribute food to our main forces to support our basic units. \n\nYour secondary objective is to destroy a small Scythian encampment on the bank of the Borysthenes river. The encampment is providing supplies for Olbia and cutting those supplies off will make it easier for us to take the town. Olbia is also trading with another village, further away. You can destroy it if you want to but you may also consider trading with it to raise extra funds. \n\nYou must hurry -- rumor is that the Scythians have marched towards Olbia with a large cavalry and we must secure the city before they get here. \n\nShould you encounter any barbarians, kill them on site. But capture (rather then destroy) their buildings, they may hold hidden supplies that will help the war effort. \n\nAI Settings: all AIs should be set to Sandbox. ",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 23 - Zopyrion's Campaign (331 BC)",
-  "Nomad": true,
   "PlayerData": [
     {
       "Civ": "mace",
@@ -95,17 +93,12 @@
   ],
   "Preview": "fortress.png",
   "RevealMap": false,
-  "Script": "fortress.js",
-  "Seed": 9516,
-  "Size": 448,
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_23.js"
   ],
   "VictoryConditions": [
     "conquest"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>

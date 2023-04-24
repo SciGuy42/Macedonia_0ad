@@ -1,9 +1,8 @@
 warn("loading the triggers file");
 
-///////////////////////
+// /////////////////////
 // Trigger listeners //
-///////////////////////
-
+// /////////////////////
 
 var unitTargetClass = "Unit+!Ship";
 var siegeTargetClass = "Structure";
@@ -11,10 +10,10 @@ var siegeTargetClass = "Structure";
 var triggerPointsInner = "A";
 var triggerPointsOuter = "B";
 var triggerPointsRandevouz = "C";
-//var triggerPointsColonyAmbush = "G";
-//var triggerPointsTemple = "H";
-//var triggerPointsCavalryAttack = "A";
-/*var triggerPointAmbush = "B";
+// var triggerPointsColonyAmbush = "G";
+// var triggerPointsTemple = "H";
+// var triggerPointsCavalryAttack = "A";
+/* var triggerPointAmbush = "B";
 var triggerPointTradeOutpost = "K";
 var triggerPointStables = "C";
 var triggerPointTraders = "D";
@@ -25,15 +24,12 @@ var triggerPointTempleQuest = "H";
 var triggerPointKidnapperGuardPatrol = "J";
 var triggerPointStartAssault = "I";*/
 
-
-
 var unitFormations = [
 	"special/formations/box",
 	"special/formations/battle_line",
 	"special/formations/line_closed",
 	"special/formations/column_closed"
 ];
-
 
 var disabledTemplates = (civ) => [
 	// Economic structures
@@ -43,113 +39,109 @@ var disabledTemplates = (civ) => [
 	"structures/" + civ + "/storehouse",
 	"structures/" + civ + "/rotarymill",
 	"structures/" + civ + "/market",
-	
+
 	// Expansions
 	"structures/" + civ + "/civil_centre",
 	"structures/" + civ + "/military_colony",
 
 	// Walls
 	"structures/" + civ + "/wallset_stone",
-	"structures/rome_wallset_siege",
-	"other/wallset_palisade",
+	"structures/rome/wallset_siege",
+	"structures/wallset_palisade",
 
 	// Shoreline
 	"structures/" + civ + "/dock",
 	"structures/brit/crannog",
 	"structures/cart/super_dock",
 	"structures/ptol/lighthouse",
-	
-	//villagers
+
+	// villagers
 	"units/" + civ + "/support_female_citizen"
 ];
 
-
-Trigger.prototype.WalkAndFightClosestTarget = function(attacker,target_player,target_class)
+Trigger.prototype.WalkAndFightClosestTarget = function(attacker, target_player, target_class)
 {
-	let target = this.FindClosestTarget(attacker,target_player,target_class);
+	let target = this.FindClosestTarget(attacker, target_player, target_class);
 	if (!target)
 	{
-		target = this.FindClosestTarget(attacker,target_player,siegeTargetClass);
+		target = this.FindClosestTarget(attacker, target_player, siegeTargetClass);
 	}
-	
-	
+
 	if (target)
 	{
 		// get target position
 		var cmpTargetPosition = Engine.QueryInterface(target, IID_Position).GetPosition2D();
-		
-		
-		let cmpUnitAI = Engine.QueryInterface(attacker, IID_UnitAI);
-		cmpUnitAI.SwitchToStance("violent");
-		cmpUnitAI.WalkAndFight(cmpTargetPosition.x,cmpTargetPosition.y,null);
-	}
-	else //find a structure
-	{
-		
-		
-		warn("[ERROR] Could not find closest target to fight: "+attacker+" and "+target_player+" and "+target_class);
-	}
-	
-}
 
-Trigger.prototype.FindClosestTarget = function(attacker,target_player,target_class)
+		const cmpUnitAI = Engine.QueryInterface(attacker, IID_UnitAI);
+		cmpUnitAI.SwitchToStance("violent");
+		cmpUnitAI.WalkAndFight(cmpTargetPosition.x, cmpTargetPosition.y, null);
+	}
+	else // find a structure
+	{
+
+		warn("[ERROR] Could not find closest target to fight: " + attacker + " and " + target_player + " and " + target_class);
+	}
+
+};
+
+Trigger.prototype.FindClosestTarget = function(attacker, target_player, target_class)
 {
-	
-	//let targets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(target_player), unitTargetClass);
-	
-	let targets = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(target_player), target_class).filter(TriggerHelper.IsInWorld);
-	
+
+	// let targets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(target_player), unitTargetClass);
+
+	let targets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(target_player), target_class).filter(TriggerHelper.IsInWorld);
+
 	if (targets.length < 1)
 	{
-		//no targets, check if any unit is there
-		targets = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(target_player), "Unit").filter(TriggerHelper.IsInWorld);
-	
+		// no targets, check if any unit is there
+		targets = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(target_player), "Unit").filter(TriggerHelper.IsInWorld);
+
 	}
-	
-	//if still no targets return null
+
+	// if still no targets return null
 	if (targets.length < 1)
 	{
 		warn("[ERROR] Could not find target!");
 		return null;
 	}
-	
+
 	let closestTarget;
 	let minDistance = Infinity;
-	
-	for (let target of targets)
+
+	for (const target of targets)
 	{
 		if (!TriggerHelper.IsInWorld(target))
 			continue;
 
-		let targetDistance = PositionHelper.DistanceBetweenEntities(attacker, target);
+		const targetDistance = PositionHelper.DistanceBetweenEntities(attacker, target);
 		if (targetDistance < minDistance)
 		{
 			closestTarget = target;
 			minDistance = targetDistance;
 		}
 	}
-	
-	return closestTarget;
-}
 
-Trigger.prototype.SpawnAttackSquad = function(p,site,templates,size,target_class,target_player)
+	return closestTarget;
+};
+
+Trigger.prototype.SpawnAttackSquad = function(p, site, templates, size, target_class, target_player)
 {
-	
-	//spawn the units
-	let attackers = [];	
+
+	// spawn the units
+	const attackers = [];
 	for (let i = 0; i < size; i++)
 	{
-		let unit_i = TriggerHelper.SpawnUnits(site,pickRandom(templates),1,p);
+		const unit_i = TriggerHelper.SpawnUnits(site, pickRandom(templates), 1, p);
 		attackers.push(unit_i[0]);
 	}
-	
-	//set formation
+
+	// set formation
 	TriggerHelper.SetUnitFormation(p, attackers, pickRandom(unitFormations));
 
-	//make them attack
-	let target = this.FindClosestTarget(attackers[0],target_player,target_class);
-	let target_pos = TriggerHelper.GetEntityPosition2D(target);
-	
+	// make them attack
+	const target = this.FindClosestTarget(attackers[0], target_player, target_class);
+	const target_pos = TriggerHelper.GetEntityPosition2D(target);
+
 	ProcessCommand(p, {
 		"type": "attack-walk",
 		"entities": attackers,
@@ -161,26 +153,25 @@ Trigger.prototype.SpawnAttackSquad = function(p,site,templates,size,target_class
 		},
 		"allowCapture": false
 	});
-}
+};
 
-
-//scenario indendent functions
-Trigger.prototype.PatrolOrderList = function(units,p,patrolTargets)
+// scenario indendent functions
+Trigger.prototype.PatrolOrderList = function(units, p, patrolTargets)
 {
-	
+
 	if (units.length <= 0)
 		return;
-		
-	//warn("targets: "+uneval(patrolTargets));
 
-	for (let patrolTarget of patrolTargets)
+	// warn("targets: "+uneval(patrolTargets));
+
+	for (const patrolTarget of patrolTargets)
 	{
-		let targetPos = TriggerHelper.GetEntityPosition2D(patrolTarget);
+		const targetPos = TriggerHelper.GetEntityPosition2D(patrolTarget);
 		ProcessCommand(p, {
 			"type": "patrol",
 			"entities": units,
-			"x": targetPos.x-10.0+(Math.random()*20),
-			"z": targetPos.y-10.0+(Math.random()*20),
+			"x": targetPos.x - 10.0 + (Math.random() * 20),
+			"z": targetPos.y - 10.0 + (Math.random() * 20),
 			"targetClasses": {
 				"attack": unitTargetClass
 			},
@@ -188,66 +179,64 @@ Trigger.prototype.PatrolOrderList = function(units,p,patrolTargets)
 			"allowCapture": false
 		});
 	}
-}
+};
 
-
-Trigger.prototype.ShowText = function(text,option_a,option_b)
+Trigger.prototype.ShowText = function(text, option_a, option_b)
 {
 	var cmpGUIInterface = Engine.QueryInterface(SYSTEM_ENTITY, IID_GuiInterface);
 	cmpGUIInterface.PushNotification({
 		"type": "dialog",
-		"players": [1,2,3,4,5,6,7,8],
+		"players": [1, 2, 3, 4, 5, 6, 7, 8],
 		"dialogName": "yes-no",
 		"data": {
 			"text": {
 				"caption": {
 					"message": markForTranslation(text),
-					"translateMessage": true,
-				},
+					"translateMessage": true
+				}
 			},
 			"button1": {
 				"caption": {
 					"message": markForTranslation(option_a),
-					"translateMessage": true,
+					"translateMessage": true
 				},
 				"tooltip": {
 					"message": markForTranslation(option_a),
-					"translateMessage": true,
-				},
+					"translateMessage": true
+				}
 			},
 			"button2": {
 				"caption": {
 					"message": markForTranslation(option_b),
-					"translateMessage": true,
+					"translateMessage": true
 				},
 				"tooltip": {
 					"message": markForTranslation(option_b),
-					"translateMessage": true,
-				},
-			},
-		},
+					"translateMessage": true
+				}
+			}
+		}
 	});
-	
-}
+
+};
 
 Trigger.prototype.StructureDecayCheck = function(data)
 {
-	for (let p of [1,2,3])
+	for (const p of [1, 2, 3])
 	{
-		let structs = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p),"Structure").filter(TriggerHelper.IsInWorld);
-		//warn("checking decay");
-		
-		
-		for (let s of structs)
+		const structs = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Structure").filter(TriggerHelper.IsInWorld);
+		// warn("checking decay");
+
+		for (const s of structs)
 		{
 			var cmpCapt = Engine.QueryInterface(s, IID_Capturable);
 			if (cmpCapt)
 			{
-				let c_points = cmpCapt.GetCapturePoints();
-				
-				//warn("capture points: "+uneval(cmpCapt.GetCapturePoints()));
-				//warn("max: "+uneval(cmpCapt.GetMaxCapturePoints()));
-				
+				const c_points = cmpCapt.GetCapturePoints();
+
+				// warn("capture points: "+uneval(cmpCapt.GetCapturePoints()));
+				// warn("max: "+uneval(cmpCapt.GetMaxCapturePoints()));
+
 				if (c_points[0] > 0)
 				{
 					c_points[p] += c_points[0];
@@ -255,629 +244,578 @@ Trigger.prototype.StructureDecayCheck = function(data)
 					cmpCapt.SetCapturePoints(c_points);
 
 				}
-				
+
 			}
 		}
 	}
-}
+};
 
-
-
-Trigger.prototype.ClusterUnits = function(units,num_clusters)
+Trigger.prototype.ClusterUnits = function(units, num_clusters)
 {
-	let dataset = [];
-	
-	for (let u of units)
+	const dataset = [];
+
+	for (const u of units)
 	{
 		// get target position
 		var cmpTargetPosition = Engine.QueryInterface(u, IID_Position).GetPosition2D();
-		
-		dataset.push([cmpTargetPosition.x,cmpTargetPosition.y]);
+
+		dataset.push([cmpTargetPosition.x, cmpTargetPosition.y]);
 	}
-	
-	//how many clusters
-	let kmeans = new KMeans({
-	  canvas: null,
-	  data: dataset,
-	  k: num_clusters
+
+	// how many clusters
+	const kmeans = new KMeans({
+		"canvas": null,
+		"data": dataset,
+		"k": num_clusters
 	});
-	
-	let num_iterations = 40;
-	
-	for (let i = 0; i < num_iterations; i ++)
+
+	const num_iterations = 40;
+
+	for (let i = 0; i < num_iterations; i++)
 	{
 		kmeans.run();
-		
+
 	}
-	
-	let clustering = kmeans.assignments;
-	
-	//warn(uneval(clustering));
-	
-	let clusters = [];
-	for (let k = 0; k < num_clusters; k ++){
-		let cluter_k = [];
-		
-		for (let i = 0; i < units.length; i ++){
-			
+
+	const clustering = kmeans.assignments;
+
+	// warn(uneval(clustering));
+
+	const clusters = [];
+	for (let k = 0; k < num_clusters; k++)
+	{
+		const cluter_k = [];
+
+		for (const [i, unit] of units.entries())
+		{
+
 			if (clustering[i] == k)
-			{
-				cluter_k.push(units[i]);
-			}
+				cluter_k.push(unit);
 		}
-		
+
 		clusters.push(cluter_k);
 	}
-	
-	return clusters;
-}
 
+	return clusters;
+};
 
 Trigger.prototype.InitGaiaClusters = function(data)
 {
-	//get all gaia soldiers
-	let soldiers = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(0), "Soldier+!Elephant").filter(TriggerHelper.IsInWorld);
-	
-	//warn("Found "+soldiers.length+" gaia soldiers.");
-	
-	//cluster them
-	let num_clusters = 1;
-	
-	
-	let clusters = this.ClusterUnits(soldiers,num_clusters);
-	//warn(uneval(clusters));
-	
-	//store so we can check when a unit is killed, who its buddies are
-	this.gaiaClusters = clusters;
-	
-}
+	// get all gaia soldiers
+	const soldiers = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(0), "Soldier+!Elephant").filter(TriggerHelper.IsInWorld);
 
+	// warn("Found "+soldiers.length+" gaia soldiers.");
+
+	// cluster them
+	const num_clusters = 1;
+
+	const clusters = this.ClusterUnits(soldiers, num_clusters);
+	// warn(uneval(clusters));
+
+	// store so we can check when a unit is killed, who its buddies are
+	this.gaiaClusters = clusters;
+
+};
 
 Trigger.prototype.IdleUnitCheck = function(data)
 {
 	this.idleCheckCounter += 1;
-	warn("idle counter = "+this.idleCheckCounter);
-	
-	for (let p of [2])
+	warn("idle counter = " + this.idleCheckCounter);
+
+	for (const p of [2])
 	{
-		let units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p),"Unit").filter(TriggerHelper.IsInWorld);
-		
-		//sites
-		let sites_p2 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p),"Structure").filter(TriggerHelper.IsInWorld);
-	
-		let sites_inner = this.GetTriggerPoints(triggerPointsInner);
-		let sites_outer = this.GetTriggerPoints(triggerPointsOuter);
-	
-	
+		const units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Unit").filter(TriggerHelper.IsInWorld);
+
+		// sites
+		const sites_p2 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Structure").filter(TriggerHelper.IsInWorld);
+
+		const sites_inner = this.GetTriggerPoints(triggerPointsInner);
+		const sites_outer = this.GetTriggerPoints(triggerPointsOuter);
+
 		if (sites_p2.length >= 3)
 		{
-			for (let u of units)
+			for (const u of units)
 			{
-				let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-				if (cmpUnitAI)
+				const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
+				if (cmpUnitAI && cmpUnitAI.IsIdle())
 				{
-					if (cmpUnitAI.IsIdle()){
-						
-						let sites = [pickRandom(sites_outer),pickRandom(sites_inner),pickRandom(sites_outer)];
-						
-						this.PatrolOrderList([u],p,sites);
-											
-					}
+					const sites = [pickRandom(sites_outer), pickRandom(sites_inner), pickRandom(sites_outer)];
+					this.PatrolOrderList([u], p, sites);
 				}
 			}
 		}
 	}
-	
+
 	if (this.eventRandevouz == true)
 	{
-		for (let p of [3])
+		for (const p of [3])
 		{
-			let units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p),"Unit").filter(TriggerHelper.IsInWorld);
-			
-			for (let u of units)
+			const units = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Unit").filter(TriggerHelper.IsInWorld);
+
+			for (const u of units)
 			{
-				let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-				if (cmpUnitAI)
+				const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
+				if (cmpUnitAI && cmpUnitAI.IsIdle())
 				{
-					if (cmpUnitAI.IsIdle())
-					{
-						warn("Found idle pl 3 unit");
-						this.WalkAndFightClosestTarget(u,2,unitTargetClass);	
-					}
+					warn("Found idle pl 3 unit");
+					this.WalkAndFightClosestTarget(u, 2, unitTargetClass);
 				}
 			}
 		}
 	}
-}
+};
 
-
-
-//garison AI entities with archers
+// garison AI entities with archers
 Trigger.prototype.GarrisonEntities = function(data)
 {
 
-	//ptolemy camp
-	for (let p of [3])
-	{
-		
-	}
-	
-	//main enemy
-	for (let p of [2])
-	{
-		let towers = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p),"StoneTower").filter(TriggerHelper.IsInWorld);
-		
-		for (let c of towers)
-		{
-			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(c, "units/maur/champion_infantry_maceman",5,p);
-			
-			for (let a of archers_e)
-			{
-				let cmpUnitAI = Engine.QueryInterface(a, IID_UnitAI);
-				cmpUnitAI.Garrison(c,true);
-			}
-		}
-		
-		//FORTRESS
-		let forts_p = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p), "Fortress").filter(TriggerHelper.IsInWorld);
-	
-		for (let e of forts_p)
-		{
-			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/maur/champion_infantry_maceman",20,p);
-				
-			for (let a of archers_e)
-			{
-				let cmpUnitAI = Engine.QueryInterface(a, IID_UnitAI);
-				cmpUnitAI.Garrison(e,true);
-			}
-		}
-		
-		//sentry tower
-		let towers_s = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(p), "SentryTower").filter(TriggerHelper.IsInWorld);
-		
-		for (let e of towers_s)
-		{
-			//spawn the garrison inside the tower
-			let archers_e = TriggerHelper.SpawnUnits(e, "units/maur/champion_infantry_maceman",3,p);
-			
-			for (let a of archers_e)
-			{
-				let cmpUnitAI = Engine.QueryInterface(a, IID_UnitAI);
-				cmpUnitAI.Garrison(e,true);
-			}
-		}
-		
-	}
-}	
+	// ptolemy camp
+	// for (const p of [3])
+	// {
 
+	// }
+
+	// main enemy
+	for (const p of [2])
+	{
+		const towers = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "StoneTower").filter(TriggerHelper.IsInWorld);
+
+		for (const c of towers)
+		{
+			// spawn the garrison inside the tower
+			const archers_e = TriggerHelper.SpawnUnits(c, "units/maur/champion_infantry_maceman", 5, p);
+
+			for (const a of archers_e)
+			{
+				const cmpUnitAI = Engine.QueryInterface(a, IID_UnitAI);
+				cmpUnitAI.Garrison(c, true);
+			}
+		}
+
+		// FORTRESS
+		const forts_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Fortress").filter(TriggerHelper.IsInWorld);
+
+		for (const e of forts_p)
+		{
+			// spawn the garrison inside the tower
+			const archers_e = TriggerHelper.SpawnUnits(e, "units/maur/champion_infantry_maceman", 20, p);
+
+			for (const a of archers_e)
+			{
+				const cmpUnitAI = Engine.QueryInterface(a, IID_UnitAI);
+				cmpUnitAI.Garrison(e, true);
+			}
+		}
+
+		// sentry tower
+		const towers_s = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "SentryTower").filter(TriggerHelper.IsInWorld);
+
+		for (const e of towers_s)
+		{
+			// spawn the garrison inside the tower
+			const archers_e = TriggerHelper.SpawnUnits(e, "units/maur/champion_infantry_maceman", 3, p);
+
+			for (const a of archers_e)
+			{
+				const cmpUnitAI = Engine.QueryInterface(a, IID_UnitAI);
+				cmpUnitAI.Garrison(e, true);
+			}
+		}
+
+	}
+};
 
 Trigger.prototype.FlipAssets = function(data)
 {
-	//get all structures except docks
-	let structures_p = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(3), "Structure+!Outpost");
-	
-	for (let u of structures_p)
-	{
-		var cmpOwnership = Engine.QueryInterface(u, IID_Ownership);
-		cmpOwnership.SetOwner(1);
-	}
-	
-	//get all units
-	let units_p = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(3), "Unit").filter(TriggerHelper.IsInWorld);
-	
-	for (let u of units_p)
-	{
-		var cmpOwnership = Engine.QueryInterface(u, IID_Ownership);
-		cmpOwnership.SetOwner(1);
-	}
-	
-	//set neutral so we don't try to retreat
-	let cmpPlayer3 = QueryPlayerIDInterface(3);
-	cmpPlayer3.SetNeutral(1);	
-}
+	// get all structures except docks
+	const structures_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(3), "Structure+!Outpost");
 
- 
- 
- 
+	for (const u of structures_p)
+	{
+		var cmpOwnership = Engine.QueryInterface(u, IID_Ownership);
+		cmpOwnership.SetOwner(1);
+	}
+
+	// get all units
+	const units_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(3), "Unit").filter(TriggerHelper.IsInWorld);
+
+	for (const u of units_p)
+	{
+		var cmpOwnership = Engine.QueryInterface(u, IID_Ownership);
+		cmpOwnership.SetOwner(1);
+	}
+
+	// set neutral so we don't try to retreat
+	const cmpPlayer3 = QueryPlayerIDInterface(3);
+	cmpPlayer3.SetNeutral(1);
+};
+
 Trigger.prototype.SpawnInterevalPatrol = function(data)
 {
-	//fortress 1 
-	let p = 2;
-	
-	//check how many unitts we have
-	let units_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p),"Unit").filter(TriggerHelper.IsInWorld);
-	
+	// fortress 1
+	const p = 2;
+
+	// check how many unitts we have
+	const units_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Unit").filter(TriggerHelper.IsInWorld);
+
 	if (units_p.length < this.maxPatrol)
 	{
-	
-		let templates_p2 = ["units/maur/champion_infantry_maceman","units/maur/infantry_archer_e","units/maur/champion_maiden","units/maur/champion_maiden_archer","units/maur/champion_infantry_maceman","units/maur/champion_elephant","units/maur/infantry_swordsman_e","units/maur/infantry_spearman_e"];
-	
-		//TO DO: check if we have civil centre or fortress
-		let sites_p2 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p),"Structure").filter(TriggerHelper.IsInWorld);
-	
-	
-		let sites_inner = this.GetTriggerPoints(triggerPointsInner);
-		let sites_outer = this.GetTriggerPoints(triggerPointsOuter);
-	
+
+		const templates_p2 = ["units/maur/champion_infantry_maceman", "units/maur/infantry_archer_e", "units/maur/champion_maiden", "units/maur/champion_maiden_archer", "units/maur/champion_infantry_maceman", "units/maur/champion_elephant", "units/maur/infantry_swordsman_e", "units/maur/infantry_spearman_e"];
+
+		// TO DO: check if we have civil centre or fortress
+		const sites_p2 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Structure").filter(TriggerHelper.IsInWorld);
+
+		const sites_inner = this.GetTriggerPoints(triggerPointsInner);
+		const sites_outer = this.GetTriggerPoints(triggerPointsOuter);
+
 		if (sites_p2.length >= 3)
 		{
-			let sites = [pickRandom(sites_outer),pickRandom(sites_inner),pickRandom(sites_inner)];
-			
-			//spawn the unit
-			let unit_i = TriggerHelper.SpawnUnits(pickRandom(sites_inner),pickRandom(templates_p2),1,p);
-			
-			this.PatrolOrderList(unit_i,p,sites);
-			
-			
-		}
-		else {
-			return; //no more respawns
-		}
-		
-	}
-	
-	//repeat
-	let next_time = Math.round(this.patrolInterval * 1000);
-	//warn("spawning again in "+uneval(next_time));
-	this.DoAfterDelay(next_time,"SpawnInterevalPatrol",null);
-}
+			const sites = [pickRandom(sites_outer), pickRandom(sites_inner), pickRandom(sites_inner)];
 
+			// spawn the unit
+			const unit_i = TriggerHelper.SpawnUnits(pickRandom(sites_inner), pickRandom(templates_p2), 1, p);
+
+			this.PatrolOrderList(unit_i, p, sites);
+
+		}
+		else
+		{
+			return; // no more respawns
+		}
+
+	}
+
+	// repeat
+	const next_time = Math.round(this.patrolInterval * 1000);
+	// warn("spawning again in "+uneval(next_time));
+	this.DoAfterDelay(next_time, "SpawnInterevalPatrol", null);
+};
 
 Trigger.prototype.SpawnInterevalPatrolOra = function(data)
 {
-	//fortress 2 but units are from 
-	let sites_owenr = 6;
-	let p = 7;
-	
-	//check to see if p is alive
-	let cmpPlayer = QueryPlayerIDInterface(p);
+	// fortress 2 but units are from
+	const sites_owenr = 6;
+	const p = 7;
+
+	// check to see if p is alive
+	const cmpPlayer = QueryPlayerIDInterface(p);
 	if (cmpPlayer.GetState() != "active")
 	{
-		warn("Player 7 must be dead.")
+		warn("Player 7 must be dead.");
 		return;
 	}
-		
-	//check how many unitts we have
-	let units_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p),"Unit").filter(TriggerHelper.IsInWorld);
-	
+
+	// check how many unitts we have
+	const units_p = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Unit").filter(TriggerHelper.IsInWorld);
+
 	if (units_p.length < this.maxPatrolOra)
 	{
-		//spawn a patrol unit
+		// spawn a patrol unit
 
-		
-		let templates_p2 = ["units/maur/champion_infantry_maceman","units/maur/infantry_archer_e","units/maur/champion_maiden","units/maur/champion_maiden_archer","units/maur/champion_infantry_maceman","units/maur/champion_elephant","units/maur/infantry_swordsman_e","units/maur/infantry_spearman_e"];
-	
-		//sites
-		let sites_p6 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(sites_owenr),"Structure").filter(TriggerHelper.IsInWorld);
-	
+		const templates_p2 = ["units/maur/champion_infantry_maceman", "units/maur/infantry_archer_e", "units/maur/champion_maiden", "units/maur/champion_maiden_archer", "units/maur/champion_infantry_maceman", "units/maur/champion_elephant", "units/maur/infantry_swordsman_e", "units/maur/infantry_spearman_e"];
+
+		// sites
+		const sites_p6 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(sites_owenr), "Structure").filter(TriggerHelper.IsInWorld);
+
 		if (sites_p6.length >= 3)
 		{
-			let sites = [pickRandom(sites_p6),pickRandom(sites_p6),pickRandom(sites_p6)];
-			
-			//spawn the unit
-			let unit_i = TriggerHelper.SpawnUnits(pickRandom(sites_p6),pickRandom(templates_p2),1,p);
-			
-			this.PatrolOrderList(unit_i,p,sites);
-			
-			//warn("Spawned patrol unit for Ora");
+			const sites = [pickRandom(sites_p6), pickRandom(sites_p6), pickRandom(sites_p6)];
+
+			// spawn the unit
+			const unit_i = TriggerHelper.SpawnUnits(pickRandom(sites_p6), pickRandom(templates_p2), 1, p);
+
+			this.PatrolOrderList(unit_i, p, sites);
+
+			// warn("Spawned patrol unit for Ora");
 		}
-		else {
-			return; //no more respawns
+		else
+		{
+			return; // no more respawns
 		}
-		
+
 	}
-	
-	//repeat
-	this.DoAfterDelay(this.patrolInervalOra * 1000,"SpawnInterevalPatrolOra",null);
-}
+
+	// repeat
+	this.DoAfterDelay(this.patrolInervalOra * 1000, "SpawnInterevalPatrolOra", null);
+};
 
 Trigger.prototype.SpawnInitialPatrol = function(data)
 {
 
-	//main enemy  
-	let p = 2;
-	let total_unit_count_p2 = this.initPatrol;
-	
-	let templates_p2 = ["units/maur/champion_infantry_maceman","units/maur/infantry_archer_e","units/maur/champion_maiden","units/maur/champion_maiden_archer","units/maur/champion_infantry_maceman","units/maur/champion_elephant","units/maur/infantry_swordsman_e","units/maur/infantry_spearman_e"];
-	
-	//sites
-	let sites_p2 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p),"Structure").filter(TriggerHelper.IsInWorld);
-	
-	
-	let sites_inner = this.GetTriggerPoints(triggerPointsInner);
-	let sites_outer = this.GetTriggerPoints(triggerPointsOuter);
-	
-	for (let i = 0; i < total_unit_count_p2; i ++)
+	// main enemy
+	const p = 2;
+	const total_unit_count_p2 = this.initPatrol;
+
+	const templates_p2 = ["units/maur/champion_infantry_maceman", "units/maur/infantry_archer_e", "units/maur/champion_maiden", "units/maur/champion_maiden_archer", "units/maur/champion_infantry_maceman", "units/maur/champion_elephant", "units/maur/infantry_swordsman_e", "units/maur/infantry_spearman_e"];
+
+	// sites
+	const sites_p2 = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(p), "Structure").filter(TriggerHelper.IsInWorld);
+
+	const sites_inner = this.GetTriggerPoints(triggerPointsInner);
+	const sites_outer = this.GetTriggerPoints(triggerPointsOuter);
+
+	for (let i = 0; i < total_unit_count_p2; i++)
 	{
-		let sites = [pickRandom(sites_inner),pickRandom(sites_outer),pickRandom(sites_inner),pickRandom(sites_outer)];
-		
-		//spawn the unit
-		let unit_i = TriggerHelper.SpawnUnits(pickRandom(sites_inner),pickRandom(templates_p2),1,p);
-		
-		this.PatrolOrderList(unit_i,p,sites);
+		const sites = [pickRandom(sites_inner), pickRandom(sites_outer), pickRandom(sites_inner), pickRandom(sites_outer)];
+
+		// spawn the unit
+		const unit_i = TriggerHelper.SpawnUnits(pickRandom(sites_inner), pickRandom(templates_p2), 1, p);
+
+		this.PatrolOrderList(unit_i, p, sites);
 	}
-}
-
-
+};
 
 Trigger.prototype.SpawnIntervalPtolemyAttack = function(data)
 {
-	//templates
-	let templates = ["units/athen/champion_ranged","units/athen/champion_marine","units/athen/champion_marine","units/mace/champion_infantry_spearman","units/mace/champion_infantry_spearman_02","units/merc_thorakites","units/merc_thureophoros"];
+	// templates
+	const templates = ["units/athen/champion_ranged", "units/athen/champion_marine", "units/athen/champion_marine", "units/mace/champion_infantry_spearman", "units/mace/champion_infantry_spearman_02", "units/merc_thorakites", "units/merc_thureophoros"];
 
-	//how big each squad
-	let squad_size = this.ptolAttackSize;
-	
-	//get all sites
-	let sites = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(3),"Structure").filter(TriggerHelper.IsInWorld);
-	
-	let sites_spawn = this.GetTriggerPoints(triggerPointsRandevouz);
-	
-	
-	this.SpawnAttackSquad(3,sites_spawn[0],templates,squad_size,"Structure",2);
-	
-	
-	this.DoAfterDelay(Math.round(this.ptolAttackInterval * 1000),"SpawnIntervalPtolemyAttack",null);
-	
-}
+	// how big each squad
+	const squad_size = this.ptolAttackSize;
+
+	// get all sites
+	const sites = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(3), "Structure").filter(TriggerHelper.IsInWorld);
+
+	const sites_spawn = this.GetTriggerPoints(triggerPointsRandevouz);
+
+	this.SpawnAttackSquad(3, sites_spawn[0], templates, squad_size, "Structure", 2);
+
+	this.DoAfterDelay(Math.round(this.ptolAttackInterval * 1000), "SpawnIntervalPtolemyAttack", null);
+
+};
 
 Trigger.prototype.OwnershipChangedAction = function(data)
 {
 
-	//check if house or tower
+	// check if house or tower
 	if (data.from == 2 && (data.to == -1 || data.to == 1))
 	{
-		let id = Engine.QueryInterface(data.entity, IID_Identity);
+		const id = Engine.QueryInterface(data.entity, IID_Identity);
 		if (id)
 		{
-			if (id.classesList.indexOf("House") >= 0)
+			if (id.classesList.includes("House"))
 			{
-									
-				//increase spawn interval
-				this.patrolInterval = this.patrolInterval * 1.1;
-				warn("new patrol spawn interval = "+uneval(this.patrolInterval));
+
+				// increase spawn interval
+				this.patrolInterval *= 1.1;
+				warn("new patrol spawn interval = " + uneval(this.patrolInterval));
 			}
-			else if (id.classesList.indexOf("GarrisonTower") >= 0)
+			else if (id.classesList.includes("Defensive") && id.classesList.includes("Tower"))
 			{
-				
-				//our allies spawn faster
-				this.ptolAttackInterval = this.ptolAttackInterval * 0.95;
+
+				// our allies spawn faster
+				this.ptolAttackInterval *= 0.95;
 			}
 		}
-		
+
 		if (data.to == 1)
 		{
-			//destroy building			
-			let health_s = Engine.QueryInterface(data.entity, IID_Health);
+			// destroy building
+			const health_s = Engine.QueryInterface(data.entity, IID_Health);
 			health_s.Kill();
 		}
 	}
-	
-	
-	//give extra loot
+
+	// give extra loot
 	if (data.from == 2 && data.to == -1)
 	{
-		let id = Engine.QueryInterface(data.entity, IID_Identity);
+		const id = Engine.QueryInterface(data.entity, IID_Identity);
 		if (id)
 		{
-			if (id.classesList.indexOf("Infantry") >= 0)
+			if (id.classesList.includes("Infantry"))
 			{
-				//warn("infantry killed");
-				
-				let cmpPlayer = QueryPlayerIDInterface(1);
-				cmpPlayer.AddResource("food",8);
-				cmpPlayer.AddResource("wood",6);
-				cmpPlayer.AddResource("stone",5);
-				cmpPlayer.AddResource("metal",3);
+				// warn("infantry killed");
+
+				const cmpPlayer = QueryPlayerIDInterface(1);
+				cmpPlayer.AddResource("food", 8);
+				cmpPlayer.AddResource("wood", 6);
+				cmpPlayer.AddResource("stone", 5);
+				cmpPlayer.AddResource("metal", 3);
 			}
-			else if (id.classesList.indexOf("Elephant") >= 0)
+			else if (id.classesList.includes("Elephant"))
 			{
-				//warn("Elephant killed");
-				
-				let cmpPlayer = QueryPlayerIDInterface(1);
-				cmpPlayer.AddResource("food",40);
-				cmpPlayer.AddResource("wood",10);
-				cmpPlayer.AddResource("metal",5);
+				// warn("Elephant killed");
+
+				const cmpPlayer = QueryPlayerIDInterface(1);
+				cmpPlayer.AddResource("food", 40);
+				cmpPlayer.AddResource("wood", 10);
+				cmpPlayer.AddResource("metal", 5);
 			}
-			else if (id.classesList.indexOf("Structure") >= 0)
+			else if (id.classesList.includes("Structure"))
 			{
-				//warn("Elephant killed");
-				
-				let cmpPlayer = QueryPlayerIDInterface(1);
-				cmpPlayer.AddResource("food",40);
-				cmpPlayer.AddResource("wood",200);
-				cmpPlayer.AddResource("stone",50);
+				// warn("Elephant killed");
+
+				const cmpPlayer = QueryPlayerIDInterface(1);
+				cmpPlayer.AddResource("food", 40);
+				cmpPlayer.AddResource("wood", 200);
+				cmpPlayer.AddResource("stone", 50);
 			}
 		}
 	}
-	
-	//check if hero from player 1 
+
+	// check if hero from player 1
 	if (data.from == 1 && data.to == -1)
 	{
-		let id = Engine.QueryInterface(data.entity, IID_Identity);
-		if (id)
+		const id = Engine.QueryInterface(data.entity, IID_Identity);
+		if (id && id.classesList.includes("Hero"))
 		{
-			if (id.classesList.indexOf("Hero") >= 0)
-			{
-				//TODO: lose game
-				//warn("hero dead");
-				TriggerHelper.SetPlayerWon(2,this.VictoryTextFn,this.VictoryTextFn);
-			}
+			// TODO: lose game
+			// warn("hero dead");
+			TriggerHelper.SetPlayerWon(2, this.VictoryTextFn, this.VictoryTextFn);
 		}
 	}
-	
-	//check if civil centre from player 2
+
+	// check if civil centre from player 2
 	if (data.from == 2 && data.to == -1)
 	{
-		let id = Engine.QueryInterface(data.entity, IID_Identity);
-		if (id)
+		const id = Engine.QueryInterface(data.entity, IID_Identity);
+		if (id && id.classesList.includes("CivilCentre"))
 		{
-			if (id.classesList.indexOf("CivilCentre") >= 0)
-			{
-				//TODO: lose game
-				warn("cc dead");
-				TriggerHelper.SetPlayerWon(1,this.VictoryTextFn,this.VictoryTextFn);
-			}
+			// TODO: lose game
+			warn("cc dead");
+			TriggerHelper.SetPlayerWon(1, this.VictoryTextFn, this.VictoryTextFn);
 		}
 	}
-	
+
 	if (data.from == 0 && data.to == -1)
 	{
-		//check if soldier
-		let id = Engine.QueryInterface(data.entity, IID_Identity);
-		if (id && id.classesList.indexOf("Soldier") >= 0)
+		// check if soldier
+		const id = Engine.QueryInterface(data.entity, IID_Identity);
+		if (id && id.classesList.includes("Soldier"))
 		{
-			//find out which cluster
+			// find out which cluster
 			let target_cluster = -1;
-			
-			for (let i = 0; i < this.gaiaClusters.length; i ++)
+
+			for (let i = 0; i < this.gaiaClusters.length; i++)
 			{
 				if (this.gaiaClusters[i].includes(data.entity))
 				{
-					target_cluster = i; 
+					target_cluster = i;
 					break;
 				}
 			}
-			
-			warn("target cluster = "+target_cluster);
-			
+
+			warn("target cluster = " + target_cluster);
+
 			if (target_cluster != -1)
 			{
-				//go through every unit in cluster and if idle, order to attack
-				for (let u of  this.gaiaClusters[target_cluster])
+				// go through every unit in cluster and if idle, order to attack
+				for (const u of this.gaiaClusters[target_cluster])
 				{
-					let cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
-					if (cmpUnitAI)
+					const cmpUnitAI = Engine.QueryInterface(u, IID_UnitAI);
+					if (cmpUnitAI && cmpUnitAI.IsIdle())
 					{
-						if (cmpUnitAI.IsIdle()){
-							this.WalkAndFightClosestTarget(u,1,"Unit");
-						}
+						this.WalkAndFightClosestTarget(u, 1, "Unit");
 					}
 				}
 			}
 		}
 	}
-}
-
-
-
+};
 
 Trigger.prototype.RangeActionTemple = function(data)
 {
-	
+
 	if (this.questTempleGiven == false)
 	{
-		this.ShowText("The monks in this temple greet you with welcome. They are happy to assist you in your cause, but immediately they face another problem. Recently, the monastary was raided by bandits, many who are elephant riders, who are camped out on a hill not too far from here. Should you recover our stolen goods, we will help you.","Sounds good","I'll get on it");
-		
-		
+		this.ShowText("The monks in this temple greet you with welcome. They are happy to assist you in your cause, but immediately they face another problem. Recently, the monastary was raided by bandits, many who are elephant riders, who are camped out on a hill not too far from here. Should you recover our stolen goods, we will help you.", "Sounds good", "I'll get on it");
+
 		this.questTempleGiven = true;
 	}
-	
-}
+
+};
 
 Trigger.prototype.RangeActionRandevouz = function(data)
 {
-	if (this.eventRandevouz == false)
+	// warn(uneval(data));
+	if (this.eventRandevouz == false && data.added.length >= 1 && data.currentCollection.length >= 4)
 	{
-		//warn(uneval(data));
-		
-		if (data.added.length >= 1 && data.currentCollection.length >= 4)
-		{
-		
-			//flip flag
-			this.eventRandevouz = true;
-			
-			//show text
-			this.ShowText("You have made it to the camp! The attack will commence!","So it goes.","Oh my");
-			
-			//flip assets
-			this.FlipAssets();
-			
-			//start attacks
-			this.DoAfterDelay(this.ptolAttackInterval * 1000,"SpawnIntervalPtolemyAttack",null);
-	
-			//schedule warn and end game messages
-			//this.DoAfterDelay(this.warnMessageTime * 1000,"WarnMessage",null);
-			//this.DoAfterDelay(this.timeLeft * 1000,"FailMessage",null);
-			//this.DoAfterDelay((this.timeLeft+2) * 1000,"EndGame",null);
-	
-		}
+		// flip flag
+		this.eventRandevouz = true;
+
+		// show text
+		this.ShowText("You have made it to the camp! The attack will commence!", "So it goes.", "Oh my");
+
+		// flip assets
+		this.FlipAssets();
+
+		// start attacks
+		this.DoAfterDelay(this.ptolAttackInterval * 1000, "SpawnIntervalPtolemyAttack", null);
+
+		// schedule warn and end game messages
+		// this.DoAfterDelay(this.warnMessageTime * 1000,"WarnMessage",null);
+		// this.DoAfterDelay(this.timeLeft * 1000,"FailMessage",null);
+		// this.DoAfterDelay((this.timeLeft+2) * 1000,"EndGame",null);
 	}
-}
-
-
+};
 
 Trigger.prototype.RewardQuestTemple = function(data)
 {
-	//warn("reward for temple quest");
-	
-	for (let p of [1])
+	// warn("reward for temple quest");
+
+	for (const p of [1])
 	{
-	
-		let cmpPlayer = QueryPlayerIDInterface(p);
-		let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
-		
-		//healer techs
-		cmpTechnologyManager.ResearchTechnology("heal_rate_2");	
-		cmpTechnologyManager.ResearchTechnology("heal_rate_2");	
-		cmpTechnologyManager.ResearchTechnology("heal_rate_2");	
+
+		const cmpPlayer = QueryPlayerIDInterface(p);
+		const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
+
+		// healer techs
+		cmpTechnologyManager.ResearchTechnology("heal_rate_2");
+		cmpTechnologyManager.ResearchTechnology("heal_rate_2");
+		cmpTechnologyManager.ResearchTechnology("heal_rate_2");
 		cmpTechnologyManager.ResearchTechnology("heal_range_2");
 		cmpTechnologyManager.ResearchTechnology("heal_range_2");
 	}
-	
-}
+
+};
 
 Trigger.prototype.ResearchTechs = function(data)
 {
-	//for playere 1
-	for (let p of [1])
+	// for playere 1
+	for (const p of [1])
 	{
-	
-		let cmpPlayer = QueryPlayerIDInterface(p);
-		let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
-		
+
+		const cmpPlayer = QueryPlayerIDInterface(p);
+		const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
 
 		cmpTechnologyManager.ResearchTechnology("cavalry_health");
 		cmpTechnologyManager.ResearchTechnology("cavalry_movement_speed");
 		cmpTechnologyManager.ResearchTechnology("nisean_horses");
-		
-		//healer techs
+
+		// healer techs
 		cmpTechnologyManager.ResearchTechnology("heal_rate");
-		cmpTechnologyManager.ResearchTechnology("heal_rate_2");	
+		cmpTechnologyManager.ResearchTechnology("heal_rate_2");
 		cmpTechnologyManager.ResearchTechnology("heal_range");
 		cmpTechnologyManager.ResearchTechnology("heal_range_2");
-		
-		//armor and attack
+
+		// resistance and attack
 		cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
 		cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_02");
 		cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
 		cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_02");
 		cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_01");
 		cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
-		
-		//faster training for infantry
-		cmpTechnologyManager.ResearchTechnology("infantry_cost_time");
+
+		// faster training for infantry
 		cmpTechnologyManager.ResearchTechnology("hoplite_tradition");
-		
+
 	}
-	
-	//main enemy
-	for (let p of [2])
+
+	// main enemy
+	for (const p of [2])
 	{
-	
-		let cmpPlayer = QueryPlayerIDInterface(p);
-		let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
-		
-		
-		//healer techs
+
+		const cmpPlayer = QueryPlayerIDInterface(p);
+		const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
+
+		// healer techs
 		cmpTechnologyManager.ResearchTechnology("heal_rate");
-		cmpTechnologyManager.ResearchTechnology("heal_rate_2");	
+		cmpTechnologyManager.ResearchTechnology("heal_rate_2");
 		cmpTechnologyManager.ResearchTechnology("heal_range");
 		cmpTechnologyManager.ResearchTechnology("heal_range_2");
-		
-		//armor and attack
+
+		// resistance and attack
 		cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_01");
 		cmpTechnologyManager.ResearchTechnology("soldier_attack_melee_02");
 		cmpTechnologyManager.ResearchTechnology("soldier_attack_ranged_01");
@@ -886,157 +824,145 @@ Trigger.prototype.ResearchTechs = function(data)
 		cmpTechnologyManager.ResearchTechnology("soldier_resistance_hack_02");
 		cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_01");
 		cmpTechnologyManager.ResearchTechnology("soldier_resistance_pierce_02");
-		
-	}
-}
 
+	}
+};
 
 Trigger.prototype.VictoryTextFn = function(n)
 {
 	return markForPluralTranslation(
-          "%(lastPlayer)s has won (game mode).",
-         "%(players)s and %(lastPlayer)s have won (game mode).",
-          n);
-}
-
+		"%(lastPlayer)s has won (game mode).",
+		"%(players)s and %(lastPlayer)s have won (game mode).",
+		n);
+};
 
 Trigger.prototype.WarnMessage = function(n)
 {
-	//show text
-	this.ShowText("Our scouts report that Indian reinforcements are on their way! We must destroy their civil centre immediately!\n\nNote: You have 5 game minutes time to do so in order to win.","So it goes.","Oh my");
-}
-
+	// show text
+	this.ShowText("Our scouts report that Indian reinforcements are on their way! We must destroy their civil centre immediately!\n\nNote: You have 5 game minutes time to do so in order to win.", "So it goes.", "Oh my");
+};
 
 Trigger.prototype.FailMessage = function(n)
 {
-	//show text
-	this.ShowText("We have failed to destroy the enemy. We must retreat","So it goes.","Oh my");
-				
-}
+	// show text
+	this.ShowText("We have failed to destroy the enemy. We must retreat", "So it goes.", "Oh my");
 
+};
 
 Trigger.prototype.EndGame = function(n)
 {
-	TriggerHelper.SetPlayerWon(2,this.VictoryTextFn,this.VictoryTextFn);
-			
-}
+	TriggerHelper.SetPlayerWon(2, this.VictoryTextFn, this.VictoryTextFn);
+
+};
 
 Trigger.prototype.IntervalVictoryCheck = function(data)
 {
-	//check how many cc's Ora has
-	let ccs = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(6),"CivilCentre").filter(TriggerHelper.IsInWorld);
-	//warn("player 6 has "+uneval(ccs.length)+" ccs");
-	
-	//check how many towers pl 2 has
-	let towers = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(2),"GarrisonTower").filter(TriggerHelper.IsInWorld);
-	//warn("player 2 has "+uneval(towers.length)+" towers");
-	
+	// check how many cc's Ora has
+	const ccs = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(6), "CivilCentre").filter(TriggerHelper.IsInWorld);
+	// warn("player 6 has "+uneval(ccs.length)+" ccs");
+
+	// check how many towers pl 2 has
+	const towers = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(2), "Defensive+Tower").filter(TriggerHelper.IsInWorld);
+	// warn("player 2 has "+uneval(towers.length)+" towers");
+
 	if (ccs.length <= 0 && towers.length <= 0)
 	{
-		TriggerHelper.SetPlayerWon(1,this.VictoryTextFn,this.VictoryTextFn);
+		TriggerHelper.SetPlayerWon(1, this.VictoryTextFn, this.VictoryTextFn);
 	}
-		
-	//check if we still have hero
-	let heroes = TriggerHelper.MatchEntitiesByClass( TriggerHelper.GetEntitiesByPlayer(1),"Hero").filter(TriggerHelper.IsInWorld);
-	
-	if (heroes.length <= 0 /*&& towers.length <= 0*/)
+
+	// check if we still have hero
+	const heroes = TriggerHelper.MatchEntitiesByClass(TriggerHelper.GetEntitiesByPlayer(1), "Hero").filter(TriggerHelper.IsInWorld);
+
+	if (heroes.length <= 0 /* && towers.length <= 0*/)
 	{
-		TriggerHelper.SetPlayerWon(6,this.VictoryTextFn,this.VictoryTextFn);
+		TriggerHelper.SetPlayerWon(6, this.VictoryTextFn, this.VictoryTextFn);
 	}
-}
-	
+};
 
 /* Random maps:
  * 	India - lake in middle, mostly dry empty
  *  Kerala - sea on one side, green
  *  Ratumacos - windy river
- * 
+ *
  * Skirmish:
  *  Deccan Plateau (2)
  *  Gambia River (3) rivers and desert
  *  Golden Island (2) -- island surround by river
  *  Two Seas (6) big but symmetrical
- * 
- * 
+ *
+ *
  */
 
-
 {
-	let cmpTrigger = Engine.QueryInterface(SYSTEM_ENTITY, IID_Trigger);
+	const cmpTrigger = Engine.QueryInterface(SYSTEM_ENTITY, IID_Trigger);
 
-	//some constants (that may change)
+	// some constants (that may change)
 	cmpTrigger.initPatrol = 70;
 	cmpTrigger.maxPatrol = 200;
-	cmpTrigger.patrolInterval = 1.75; //initially every 2 seconds, later it increases
-	
-	
+	cmpTrigger.patrolInterval = 1.75; // initially every 2 seconds, later it increases
+
 	cmpTrigger.ptolAttackSize = 5;
 	cmpTrigger.ptolAttackInterval = 8;
-	
+
 	cmpTrigger.timeLeft = 1500;
 	cmpTrigger.warnMessageTime = 1200;
-	
-	
-	//some state variables
+
+	// some state variables
 	cmpTrigger.eventRandevouz = false;
-	cmpTrigger.idleCheckCounter = 0; //if it gets too high, we lose
-	
-	//start techs
-	cmpTrigger.DoAfterDelay(1 * 1000,"ResearchTechs",null);
+	cmpTrigger.idleCheckCounter = 0; // if it gets too high, we lose
 
-	//garrison entities
-	cmpTrigger.DoAfterDelay(3 * 1000,"GarrisonEntities",null);
-	
-	//initial patrol
-	cmpTrigger.DoAfterDelay(5 * 1000,"SpawnInitialPatrol",null);
-	
-	//cluster gaia units
-	cmpTrigger.DoAfterDelay(1 * 500,"InitGaiaClusters",null);
-	
-	//repeat patrols
-	cmpTrigger.DoAfterDelay((20+cmpTrigger.patrolInterval) * 1000,"SpawnInterevalPatrol",null);
-	
+	// start techs
+	cmpTrigger.DoAfterDelay(1 * 1000, "ResearchTechs", null);
 
-	//disable templates
-	for (let p of [1,2,3])
+	// garrison entities
+	cmpTrigger.DoAfterDelay(3 * 1000, "GarrisonEntities", null);
+
+	// initial patrol
+	cmpTrigger.DoAfterDelay(5 * 1000, "SpawnInitialPatrol", null);
+
+	// cluster gaia units
+	cmpTrigger.DoAfterDelay(1 * 500, "InitGaiaClusters", null);
+
+	// repeat patrols
+	cmpTrigger.DoAfterDelay((20 + cmpTrigger.patrolInterval) * 1000, "SpawnInterevalPatrol", null);
+
+	// disable templates
+	for (const p of [1, 2, 3])
 	{
-		let cmpPlayer = QueryPlayerIDInterface(p);
-		
-		//disable templates -- nobody can build buildings
-		let disTemplates = disabledTemplates(cmpPlayer.GetCiv())
+		const cmpPlayer = QueryPlayerIDInterface(p);
+
+		// disable templates -- nobody can build buildings
+		const disTemplates = disabledTemplates(QueryPlayerIDInterface(p, IID_Identity).GetCiv());
 		cmpPlayer.SetDisabledTemplates(disTemplates);
-		
-		//add some tech
-		let cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
-		
+
+		// add some tech
+		const cmpTechnologyManager = Engine.QueryInterface(cmpPlayer.entity, IID_TechnologyManager);
+
 		cmpTechnologyManager.ResearchTechnology("phase_town_generic");
 		cmpTechnologyManager.ResearchTechnology("phase_city_generic");
-		
-		//no pop limit
+
+		// no pop limit
 		if (p == 1)
 		{
 			cmpTechnologyManager.ResearchTechnology("unlock_shared_los");
 			cmpPlayer.SetPopulationBonuses(300);
 		}
-		
-		
+
 	}
-	
-	//set diplomacy
-	
-	
-	//triggers
-	let data = { "enabled": true };
+
+	// set diplomacy
+
+	// triggers
+	const data = { "enabled": true };
 	cmpTrigger.RegisterTrigger("OnOwnershipChanged", "OwnershipChangedAction", data);
-	//cmpTrigger.RegisterTrigger("OnPlayerCommand", "PlayerCommandAction", data);
-	
-	
+	// cmpTrigger.RegisterTrigger("OnPlayerCommand", "PlayerCommandAction", data);
+
 	cmpTrigger.RegisterTrigger("OnInterval", "IdleUnitCheck", {
 		"enabled": true,
 		"delay": 20 * 1000,
-		"interval": 20 * 1000,
+		"interval": 20 * 1000
 	});
-	
+
 	cmpTrigger.RegisterTrigger("OnRange", "RangeActionRandevouz", {
 		"entities": cmpTrigger.GetTriggerPoints(triggerPointsRandevouz), // central points to calculate the range circles
 		"players": [1], // only count entities of player 1
@@ -1044,17 +970,16 @@ Trigger.prototype.IntervalVictoryCheck = function(data)
 		"requiredComponent": IID_UnitAI, // only count units in range
 		"enabled": true
 	});
-	
-	
-	/*cmpTrigger.RegisterTrigger("OnInterval", "IntervalVictoryCheck", {
+
+	/* cmpTrigger.RegisterTrigger("OnInterval", "IntervalVictoryCheck", {
 		"enabled": true,
 		"delay": 15 * 1000,
 		"interval": 15 * 1000,
 	});*/
-	
+
 	cmpTrigger.RegisterTrigger("OnInterval", "StructureDecayCheck", {
 		"enabled": true,
 		"delay": 10 * 1000,
-		"interval": 10 * 1000,
+		"interval": 10 * 1000
 	});
 }

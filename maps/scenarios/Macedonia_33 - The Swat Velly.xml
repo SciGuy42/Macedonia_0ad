@@ -38,13 +38,11 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "Shortly after the Winter of 326 BC, Alexander the Great crossed into the valley of the Soastus (Swat). He entered this beautiful country along a small river, the Wuch, and prepared to lay siege to the ancient city of Massaga. After an Indian mercenary leader had been killed, his men surrendered. Negotiations started and Alexander ordered the mercenaries to occupy a nearby hill.\n\nHowever, during the cease-fire, Alexander ordered his men to attack the Indian mercenaries. Your initial objective is to destroy the mercenaries and their camp, after which the city is going to be under your command. Further up the river lie the fortresses of Bazira and Ora. You are to take them by force and establish a firm grip on the Swat Valley.\n\nYour scouts warn that Bazira relies heavily on supplies from Ora. Destroying Bazira's market, as well as taking the fight to Ora are a few strategies they suggest about dealing with the situation. Your scouts also report that nearby villages may be suitable trading partners. Finally, tribesmen from the mountain have heard of your arrival and will likely harass your forces every chance they get. \n\nAI Settings: Player 6: Petra, with a difficulty of your choice; all others: Sandbox. ",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 33 - The Swat Valley (326 BC)",
-  "Nomad": true,
   "PlayerData": [
     {
       "Civ": "mace",
@@ -119,17 +117,12 @@
   ],
   "Preview": "cantabrian_highlands.png",
   "RevealMap": false,
-  "Script": "cantabrian_highlands.js",
-  "Seed": 8222,
-  "Size": 512,
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_33.js"
   ],
   "VictoryConditions": [
     "conquest"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>
@@ -72720,7 +72713,7 @@
 		</Entity>
 		<Entity uid="12793">
 			<Template>gaia/tree/oak</Template>
-			<Player>3</Player>
+			<Player>0</Player>
 			<Position x="276.4061" z="680.26288"/>
 			<Orientation y="-2.9708"/>
 		</Entity>
@@ -72756,7 +72749,7 @@
 		</Entity>
 		<Entity uid="12799">
 			<Template>gaia/tree/oak</Template>
-			<Player>3</Player>
+			<Player>0</Player>
 			<Position x="337.28873" z="637.44709"/>
 			<Orientation y="-1.90557"/>
 		</Entity>
@@ -74286,7 +74279,7 @@
 		</Entity>
 		<Entity uid="13057">
 			<Template>gaia/tree/oak_large</Template>
-			<Player>3</Player>
+			<Player>0</Player>
 			<Position x="351.39939" z="654.70545"/>
 			<Orientation y="-3.47727"/>
 		</Entity>
@@ -76902,7 +76895,7 @@
 		</Entity>
 		<Entity uid="13521">
 			<Template>gaia/treasure/metal</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="264.5045" z="628.09815"/>
 			<Orientation y="3.85221"/>
 		</Entity>

@@ -38,14 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "In September 330 BC, the Macedonian king Alexander the Great conquered Aria in pursuit of the leaders of the Persian national resistance, king Bessus and the last satrap of Aria, Satibarzanes. Alexander used siege towers to take Artacoana, the Arian capital; the inhabitants were killed or sold as slaves. The empty town was rebuilt and called Alexandria.\n\nYour forces have recently arrived and your first order of business is to identify the supply routes that caravans are using to supply the town and block them with your troops. We cannot let supplies continue into the city!\n\nThe town is heavily fortified. Rather than a direct assault, you are advised to hurt the town's economy by destroying its mines and farm fields which are outside the city walls. This will reduce the town's ability to draw reinforcements. \n\nWe need to find loot as soon as we can. Taking down the supply caravans should give us a nice boost. Our scouts also report of local nomadic tribes with trading posts, we may be able to trade with them. Finally, we need to use the terrain to our advantage. The enemy is numerous and will fight to do the death. To make matters worse, while the Greek Mercenaries have been soundly defeated, Satibarzanes has sommehow ackquired their siege equipment, which is no defending the city. \n\nPrimary objective: destroy or capture the civil centre of Artacoana.\n\nAI Settings: all AIs should be Sandbox. ",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 27 - Conquest of Aria (330 BC)",
   "PlayerData": [
-    "",
     {
       "Civ": "mace",
       "Name": "Alexander",
@@ -112,7 +110,6 @@
   "Preview": "bactria_2.png",
   "RevealMap": false,
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_27.js"
   ],
   "VictoryConditions": [
@@ -12485,7 +12482,7 @@
 		</Entity>
 		<Entity uid="2944">
 			<Template>gaia/treasure/shipwreck_ram_bow</Template>
-			<Player>1</Player>
+			<Player>0</Player>
 			<Position x="51.93094" z="672.50641"/>
 			<Orientation y="0.97402"/>
 			<Actor seed="19455"/>

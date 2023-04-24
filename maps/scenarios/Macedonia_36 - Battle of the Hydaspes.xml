@@ -38,13 +38,11 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "In May 326, the Macedonian king Alexander the Great and his ally, raja Ambhi of Taxila, battled Porus, a raja who had not been able to surrender himself to Alexander. There were heavy rains - the monsoon seems to have started early - and the river Jhelum, already wide in May because of the melting waters of the Himalayas, became very wide.\n\nPorus thought he'd have a chance, if only he could win time and keep the river between his own army and that of his enemy. What Alexnader needed was a surprise crossing, and the rain offered sufficient opportunity. Another element of surprise was that the Macedonian officer Coenus had brought the ships (which had been used to cross the Indus) all the way to the Jhelum. During a stormy night, Alexander and his army slipped away from the Jhelum through a hidden valley, out of sight of Porus. At dawn, Alexander crossed the Jhelum, a considerable distance upstream from his initial camp. \n\nUnaware of what had happened, and seeing a substantial part of Alexander's army (commanded by Craterus) still on the opposite shore, Porus could not believe the news that the Macedonians had reached the east bank. He sent his son to find out what had happened, but he was killed in action. The fact that it had been raining made it very hard to fight from chariots, a factor that contributed to the defeat of the prince. Alexander proceeded along the river, downstream, towards Porus' army. \n\nYou, playing as Coenus, are in charge of elite cavalry units, as well as the Dahae horse archers. Alexander's officers advise that our left flank is vulnerably and may need assistance. You are to do anything you can to ensure we are victorious. Alexander and Coenus must survive, and in addition, if too many of our infantry perish, we may have no choice but to put a hold on our Indian expeditions. \n\nAI Settings: all AIs should be Sandbox. ",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 36 - Battle of the Hydaspes (326 BC)",
-  "Nomad": true,
   "PlayerData": [
     {
       "Civ": "mace",
@@ -79,18 +77,13 @@
   ],
   "Preview": "hyrcanian_shores.png",
   "RevealMap": true,
-  "Script": "my_hycarian_shores.js",
-  "Seed": 0,
-  "Size": 384,
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/KMeans.js",
     "scenarios/Macedonia_36.js"
   ],
   "VictoryConditions": [
     "conquest"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>
@@ -21905,168 +21898,168 @@
 			<Actor seed="16941"/>
 		</Entity>
 		<Entity uid="4228">
-			<Template>units/thebes_sacred_band_hoplitai</Template>
+			<Template>units/theb_sacred_band</Template>
 			<Player>3</Player>
 			<Position x="1249.06995" z="365.57648"/>
 			<Orientation y="-0.71499"/>
 			<Actor seed="41757"/>
 		</Entity>
 		<Entity uid="4229">
-			<Template>units/thebes_sacred_band_hoplitai</Template>
+			<Template>units/theb_sacred_band</Template>
 			<Player>3</Player>
 			<Position x="1247.60926" z="363.62098"/>
 			<Orientation y="-0.71499"/>
 			<Actor seed="62779"/>
 		</Entity>
 		<Entity uid="4230">
-			<Template>units/thebes_sacred_band_hoplitai</Template>
+			<Template>units/theb_sacred_band</Template>
 			<Player>3</Player>
 			<Position x="1245.69983" z="361.91291"/>
 			<Orientation y="-0.71499"/>
 			<Actor seed="56812"/>
 		</Entity>
 		<Entity uid="4231">
-			<Template>units/thebes_sacred_band_hoplitai</Template>
+			<Template>units/theb_sacred_band</Template>
 			<Player>3</Player>
 			<Position x="1244.19324" z="360.13117"/>
 			<Orientation y="-0.71499"/>
 			<Actor seed="13214"/>
 		</Entity>
 		<Entity uid="4232">
-			<Template>units/thebes_sacred_band_hoplitai</Template>
+			<Template>units/theb_sacred_band</Template>
 			<Player>3</Player>
 			<Position x="1242.37757" z="358.41657"/>
 			<Orientation y="-0.71499"/>
 			<Actor seed="29216"/>
 		</Entity>
 		<Entity uid="4233">
-			<Template>units/thebes_sacred_band_hoplitai</Template>
+			<Template>units/theb_sacred_band</Template>
 			<Player>3</Player>
 			<Position x="1240.60413" z="356.63587"/>
 			<Orientation y="-0.71499"/>
 			<Actor seed="31091"/>
 		</Entity>
 		<Entity uid="4234">
-			<Template>units/thebes_sacred_band_hoplitai</Template>
+			<Template>units/theb_sacred_band</Template>
 			<Player>3</Player>
 			<Position x="1238.51832" z="354.47162"/>
 			<Orientation y="-0.71499"/>
 			<Actor seed="54492"/>
 		</Entity>
 		<Entity uid="4235">
-			<Template>units/thebes_sacred_band_hoplitai</Template>
+			<Template>units/theb_sacred_band</Template>
 			<Player>3</Player>
 			<Position x="1236.83887" z="352.4029"/>
 			<Orientation y="-0.71499"/>
 			<Actor seed="52421"/>
 		</Entity>
 		<Entity uid="4236">
-			<Template>units/thebes_sacred_band_hoplitai</Template>
+			<Template>units/theb_sacred_band</Template>
 			<Player>3</Player>
 			<Position x="1247.11561" z="367.35175"/>
 			<Orientation y="-0.71499"/>
 			<Actor seed="20199"/>
 		</Entity>
 		<Entity uid="4237">
-			<Template>units/thebes_sacred_band_hoplitai</Template>
+			<Template>units/theb_sacred_band</Template>
 			<Player>3</Player>
 			<Position x="1245.84717" z="365.11072"/>
 			<Orientation y="-0.71499"/>
 			<Actor seed="2695"/>
 		</Entity>
 		<Entity uid="4238">
-			<Template>units/thebes_sacred_band_hoplitai</Template>
+			<Template>units/theb_sacred_band</Template>
 			<Player>3</Player>
 			<Position x="1243.79175" z="363.38025"/>
 			<Orientation y="-0.71499"/>
 			<Actor seed="5012"/>
 		</Entity>
 		<Entity uid="4239">
-			<Template>units/thebes_sacred_band_hoplitai</Template>
+			<Template>units/theb_sacred_band</Template>
 			<Player>3</Player>
 			<Position x="1241.97974" z="361.52173"/>
 			<Orientation y="-0.71499"/>
 			<Actor seed="29815"/>
 		</Entity>
 		<Entity uid="4240">
-			<Template>units/thebes_sacred_band_hoplitai</Template>
+			<Template>units/theb_sacred_band</Template>
 			<Player>3</Player>
 			<Position x="1240.27393" z="359.79322"/>
 			<Orientation y="-0.71499"/>
 			<Actor seed="20428"/>
 		</Entity>
 		<Entity uid="4241">
-			<Template>units/thebes_sacred_band_hoplitai</Template>
+			<Template>units/theb_sacred_band</Template>
 			<Player>3</Player>
 			<Position x="1238.43921" z="357.6916"/>
 			<Orientation y="-0.71499"/>
 			<Actor seed="27994"/>
 		</Entity>
 		<Entity uid="4242">
-			<Template>units/thebes_sacred_band_hoplitai</Template>
+			<Template>units/theb_sacred_band</Template>
 			<Player>3</Player>
 			<Position x="1236.85157" z="355.9001"/>
 			<Orientation y="-0.71499"/>
 			<Actor seed="41015"/>
 		</Entity>
 		<Entity uid="4243">
-			<Template>units/thebes_sacred_band_hoplitai</Template>
+			<Template>units/theb_sacred_band</Template>
 			<Player>3</Player>
 			<Position x="1234.7334" z="353.79743"/>
 			<Orientation y="-0.71499"/>
 			<Actor seed="19912"/>
 		</Entity>
 		<Entity uid="4244">
-			<Template>units/thebes_sacred_band_hoplitai</Template>
+			<Template>units/theb_sacred_band</Template>
 			<Player>3</Player>
 			<Position x="1245.10022" z="369.38257"/>
 			<Orientation y="-0.71499"/>
 			<Actor seed="29597"/>
 		</Entity>
 		<Entity uid="4245">
-			<Template>units/thebes_sacred_band_hoplitai</Template>
+			<Template>units/theb_sacred_band</Template>
 			<Player>3</Player>
 			<Position x="1243.27479" z="367.2367"/>
 			<Orientation y="-0.71499"/>
 			<Actor seed="30385"/>
 		</Entity>
 		<Entity uid="4246">
-			<Template>units/thebes_sacred_band_hoplitai</Template>
+			<Template>units/theb_sacred_band</Template>
 			<Player>3</Player>
 			<Position x="1241.50318" z="365.32862"/>
 			<Orientation y="-0.71499"/>
 			<Actor seed="24440"/>
 		</Entity>
 		<Entity uid="4247">
-			<Template>units/thebes_sacred_band_hoplitai</Template>
+			<Template>units/theb_sacred_band</Template>
 			<Player>3</Player>
 			<Position x="1239.64966" z="363.54853"/>
 			<Orientation y="-0.71499"/>
 			<Actor seed="6257"/>
 		</Entity>
 		<Entity uid="4248">
-			<Template>units/thebes_sacred_band_hoplitai</Template>
+			<Template>units/theb_sacred_band</Template>
 			<Player>3</Player>
 			<Position x="1237.96985" z="361.5569"/>
 			<Orientation y="-0.71499"/>
 			<Actor seed="42266"/>
 		</Entity>
 		<Entity uid="4249">
-			<Template>units/thebes_sacred_band_hoplitai</Template>
+			<Template>units/theb_sacred_band</Template>
 			<Player>3</Player>
 			<Position x="1236.38953" z="359.32074"/>
 			<Orientation y="-0.71499"/>
 			<Actor seed="14547"/>
 		</Entity>
 		<Entity uid="4250">
-			<Template>units/thebes_sacred_band_hoplitai</Template>
+			<Template>units/theb_sacred_band</Template>
 			<Player>3</Player>
 			<Position x="1234.68201" z="357.5406"/>
 			<Orientation y="-0.71499"/>
 			<Actor seed="61184"/>
 		</Entity>
 		<Entity uid="4251">
-			<Template>units/thebes_sacred_band_hoplitai</Template>
+			<Template>units/theb_sacred_band</Template>
 			<Player>3</Player>
 			<Position x="1232.89014" z="355.64728"/>
 			<Orientation y="-0.71499"/>

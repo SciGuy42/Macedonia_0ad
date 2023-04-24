@@ -38,17 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "The battle of Issus took place in November 333 BC. After Alexander's forces successfully defeated the Persians at the Battle of the Granicus, Darius took personal charge of his army, gathered a large army from the depths of the empire, and maneuvered to cut the Greek line of supply, requiring Alexander to countermarch his forces, setting the stage for the battle near the mouth of the Pinarus River and south of the village of Issus. Darius was apparently unaware that, by deciding to stage the battle on a river bank, he was minimizing the numerical advantage his army had over Alexander's\n\nObjective:\n\nDestroy the enemy forces. Kill Darius!\n\nAI Settings:\n\nAll AIs should be set to Sandbox.",
-  "Keywords": [
-    "new"
-  ],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 15 - Battle of Issus (333 BC)",
-  "Nomad": false,
   "PlayerData": [
-    null,
     {
       "Civ": "mace",
       "Name": "Alexander"
@@ -60,19 +55,12 @@
   ],
   "Preview": "anatolian_plateau.png",
   "RevealMap": false,
-  "Script": "anatolian_plateau.js",
-  "Seed": 0,
-  "Size": 128,
-  "SupportedBiomes": "generic/",
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
-    "random/elephantine_triggers.js",
     "scenarios/Macedonia_15.js"
   ],
   "VictoryConditions": [
     "conquest"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>

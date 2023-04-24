@@ -38,23 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
-  "BaseHeight": 10,
-  "BaseTerrain": [
-    "desert_dirt_persia_2",
-    "desert_dirt_persia_1",
-    "desert_dirt_persia_2",
-    "grass_field_dry",
-    "grass_field_dry"
-  ],
   "CircularMap": true,
   "Description": "Of the many cities founded by Alexander the Great, Alexandria Eschatê was probably the one that created most problems. This must have surprised Alexander, because the march to the river Jaxartes, in the early summer of 329, had been easy. The last resistance to his rule had vanished after his friend Ptolemy had captured the Persian leader, Bessus.\n\nNow, he wanted to build a city on the bank of the river that was the boundary between Sogdia and the Hunger Steppe, which was inhabited by the Sacae (known as Scythians to the Greeks). It was to be an important site, because on the one hand it was to be the empire's northernmost military base, and a defense against the Sacan tribesmen, and on the other hand, it could be a base for a return to the west across the plains of the Ukraine.\n\nYou have been sent by Alexander to fortify and expand the new-found colony. Your precise orders are to construct at least 3 fortresses and at least 8 defense towers. You are also strongly advised to build a wall around your town as soon as possible as we do not know when our neighbors may turn hostile. You play as Phillip, a young charismatic (but hardened) officer who was put in charge of the situation while Alexander's main force is nearby. \n\nTo the north, lie the realms of two Sacae tribes, the Ma Saka and the Apa Saka. While mostly nomadic, there are several outposts that you should map out just in case. Far to the north, in the mountains, there are also reports of outposts that we probably want to know about. There is also a nearby Sogdian settlement which has negotiated its presence with the Sacae. We have established ambassadors with all three groups and for the time being, they welcome trade with us. Finally, our scouts report that a group of bandits have been spotted on the south bank of the river, to the West of our town.\n\nAI Settings: Player 2 (Sogdians) should be set to Petra with a difficulty of your choice. All other AI players should be set to Sandbox. \n\n \n",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 28 - Alexandria Eschate (329 BC)",
-  "Nomad": false,
   "PlayerData": [
-    null,
     {
       "Civ": "mace",
       "Color": {
@@ -112,7 +101,6 @@
       "Team": 1
     },
     {
-      "AI": "petra",
       "Civ": "pers",
       "Color": {
         "b": 200,
@@ -125,18 +113,12 @@
   ],
   "Preview": "persian_highlands.png",
   "RevealMap": false,
-  "Script": "persian_highlands.js",
-  "Seed": 0,
-  "Size": 512,
-  "SupportedBiomes": "persian_highlands/",
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_28.js"
   ],
   "VictoryConditions": [
     "conquest"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>

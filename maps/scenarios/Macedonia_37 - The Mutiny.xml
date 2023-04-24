@@ -38,15 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "After the battle at the Hydaspes, Alexander wanted to press further East into India. Alexander voiced plans for further conquests in the Indian subcontinent, however, when his men reached the river Hyphasis, there was an open revolt. Beyond the Hyphasis, was the Nanda empire, a vast kingdom rumored to have armies in the hundreds of thousands. \n\nCoenus, son of Polemokrates, stepped in to negotiate and achieve an agreement between Alexander and his many Macedon and Greek soldiers who did not want to follow further East. While the negotiations take place, Alexander was left with establishing a base that would either server as the eastern-most border of his empire, or a stepping stone further into India. \n\nObjective: Cross the river immediately ahead of you and construct 2 Civil Centers to establish your base. \n\nIntelligence Reports: on the other side of the river, lie the realms of the Nanda empire. The Gangaridai and Prasii tribes, vassals of the Nanda, hold formidable settlements, but for now, have invited us to trade with them. To the north, there is a Nanda fortress on top of a hill. Further, a Nanda garrison far to the East provides fresh troops to the vassal tribes. We should do what we can to establish a base while being aware that the situation may change quickly. A number of small trading posts scatter the land and should provide us with good opportunities to secure supplies, especially metal which is in short supply in the area. \n\nAI Settings: Players 2 and 5 should be Petra with a difficulty of your choice (medium for casual game play). All others should be Sandbox. ",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 37 - The Mutiny (326 BC)",
-  "Nomad": true,
   "PlayerData": [
-    "",
     {
       "Civ": "mace",
       "Name": "Alexander",
@@ -123,18 +120,13 @@
   ],
   "Preview": "lorraine_plain.png",
   "RevealMap": false,
-  "Script": "indian_plains.js",
-  "Seed": 3794,
-  "Size": 512,
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/KMeans.js",
     "scenarios/Macedonia_37.js"
   ],
   "VictoryConditions": [
     "conquest"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>
@@ -776,7 +768,7 @@
 		</Entity>
 		<Entity uid="256">
 			<Template>gaia/tree/toona</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="535.72858" z="881.39173"/>
 			<Orientation y="5.40107"/>
 		</Entity>
@@ -71223,13 +71215,13 @@
 		</Entity>
 		<Entity uid="12508">
 			<Template>gaia/treasure/metal</Template>
-			<Player>1</Player>
+			<Player>0</Player>
 			<Position x="1103.47468" z="1761.11634"/>
 			<Orientation y="-1.60375"/>
 		</Entity>
 		<Entity uid="12513">
 			<Template>gaia/treasure/wood</Template>
-			<Player>1</Player>
+			<Player>0</Player>
 			<Position x="1117.201" z="1763.95374"/>
 			<Orientation y="-2.11696"/>
 		</Entity>

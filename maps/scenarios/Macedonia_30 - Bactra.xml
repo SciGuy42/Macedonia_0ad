@@ -38,21 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
-  "BaseHeight": 0,
-  "BaseTerrain": [
-    "medit_grass_field_dry",
-    "medit_grass_field_brown",
-    "medit_grass_field_b"
-  ],
   "CircularMap": true,
   "Description": "After the victory over the Sacae at the Jaxartes, Alexander had the opportunity to deal with the revolt of Spitamenes, the Sogdian rebel leader. Alexander headed south, to Maracanda which was besieged by Spitamenes, but by the time he arrived, the siege was lifted and the Sogdian rebels were gone.\n\nDuring the winter of of 329/328 BC, Spitamenes, on the other hand, had moved on to Bactra, the capital of Bactria, and has captured several nearby settlements. You have been sent by Alexander to reinforce the Macedonian garrison and assist Artabazus, the loyal satrap of Bactria, in the defense of the city and the destruction of the rebels.\n\nUpon arriving, Artabazus offers his welcome and dispatches a dozen horse archers to be at your service. Your primary objective is to defend the town, build up your own forces and work together with Artabazus to conquer the nearby rebels.\n\nThere are also neutral traders in the area who may be suitable trading partners. Artabazus suggests that you use your cavalry to disrupt the rebels' trade for extra loot. A arsenal not far to the north-east of our town will likely be willing to sell you some siege equipment. Meanwhile, a dock on a nearby river has traders in search of stone who would be willing to give plenty of fish in return.\n\nAs you finish discussions, all of a sudden there is chaos and mayhem on the streets of the city -- the rebels must have infiltrated the town and are not trying to take it from within. To arms!\n\nAI Settings: Players 2 through 5: Petra with a difficulty of your choice. Players 6 and 7: Sandbox.",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 30 - Bactra (328 BC)",
-  "Nomad": true,
   "PlayerData": [
-    "",
     {
       "Civ": "mace",
       "Name": "Macedonian Garrison",
@@ -130,17 +121,12 @@
   ],
   "Preview": "persian_highlands.png",
   "RevealMap": false,
-  "Seed": 4766,
-  "Size": 512,
-  "SupportedBiomes": "persian_highlands/",
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_30.js"
   ],
   "VictoryConditions": [
     "conquest"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>
@@ -64013,126 +63999,126 @@
 		</Entity>
 		<Entity uid="12256">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="182.98795" z="890.18372"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="46123"/>
 		</Entity>
 		<Entity uid="12257">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="184.48884" z="881.04645"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="57365"/>
 		</Entity>
 		<Entity uid="12258">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="192.80512" z="875.4513"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="9063"/>
 		</Entity>
 		<Entity uid="12259">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="173.41605" z="884.63544"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="25132"/>
 		</Entity>
 		<Entity uid="12260">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="132.30439" z="658.1684"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="43620"/>
 		</Entity>
 		<Entity uid="12261">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="124.14776" z="654.74006"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="30594"/>
 		</Entity>
 		<Entity uid="12262">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="118.07526" z="649.46454"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="75"/>
 		</Entity>
 		<Entity uid="12263">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="227.6998" z="746.25525"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="16009"/>
 		</Entity>
 		<Entity uid="12264">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="239.01816" z="743.27198"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="12033"/>
 		</Entity>
 		<Entity uid="12265">
 			<Template>gaia/rock/desert_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="250.08024" z="744.93067"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="62132"/>
 		</Entity>
 		<Entity uid="12266">
 			<Template>gaia/rock/desert_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="247.90049" z="858.14112"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="29072"/>
 		</Entity>
 		<Entity uid="12267">
 			<Template>gaia/rock/desert_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="255.37269" z="852.45447"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="13990"/>
 		</Entity>
 		<Entity uid="12268">
 			<Template>gaia/rock/desert_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="270.9792" z="839.93561"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="58721"/>
 		</Entity>
 		<Entity uid="12269">
 			<Template>gaia/rock/desert_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="80.50716" z="836.58832"/>
 			<Orientation y="1.75348"/>
 			<Actor seed="11286"/>
 		</Entity>
 		<Entity uid="12270">
 			<Template>gaia/rock/desert_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="180.2334" z="932.3935"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="28307"/>
 		</Entity>
 		<Entity uid="12271">
 			<Template>gaia/rock/desert_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="182.42997" z="923.64905"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="16265"/>
 		</Entity>
 		<Entity uid="12272">
 			<Template>gaia/rock/desert_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="155.75992" z="709.57728"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="12190"/>
 		</Entity>
 		<Entity uid="12273">
 			<Template>gaia/rock/desert_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="158.42841" z="686.05842"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="55971"/>
@@ -64300,224 +64286,224 @@
 		</Entity>
 		<Entity uid="12298">
 			<Template>gaia/rock/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1492.55506" z="1638.16761"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="21964"/>
 		</Entity>
 		<Entity uid="12299">
 			<Template>gaia/rock/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1503.7345" z="1633.27442"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="13297"/>
 		</Entity>
 		<Entity uid="12300">
 			<Template>gaia/rock/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1483.46241" z="1641.68995"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="7327"/>
 		</Entity>
 		<Entity uid="12301">
 			<Template>gaia/rock/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1790.68091" z="1457.50403"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="43925"/>
 		</Entity>
 		<Entity uid="12302">
 			<Template>gaia/rock/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1790.10376" z="1446.26685"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="47060"/>
 		</Entity>
 		<Entity uid="12303">
 			<Template>gaia/rock/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1796.81446" z="1463.26417"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="23029"/>
 		</Entity>
 		<Entity uid="12304">
 			<Template>gaia/rock/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1785.14185" z="1621.37537"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="2071"/>
 		</Entity>
 		<Entity uid="12305">
 			<Template>gaia/rock/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1791.56556" z="1616.57081"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="34885"/>
 		</Entity>
 		<Entity uid="12306">
 			<Template>gaia/rock/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1797.53968" z="1612.141"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="59554"/>
 		</Entity>
 		<Entity uid="12307">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1479.03577" z="1731.08252"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="12798"/>
 		</Entity>
 		<Entity uid="12308">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1468.87293" z="1727.45447"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="17743"/>
 		</Entity>
 		<Entity uid="12309">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1462.48572" z="1720.15613"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="30451"/>
 		</Entity>
 		<Entity uid="12310">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1436.88587" z="1829.59705"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="24446"/>
 		</Entity>
 		<Entity uid="12311">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1429.50818" z="1834.02247"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="20956"/>
 		</Entity>
 		<Entity uid="12312">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1419.90613" z="1835.49427"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="8182"/>
 		</Entity>
 		<Entity uid="12313">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1429.89563" z="1824.10499"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="33838"/>
 		</Entity>
 		<Entity uid="12314">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1370.00062" z="1681.14258"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="2144"/>
 		</Entity>
 		<Entity uid="12315">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1367.42066" z="1691.43006"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="18606"/>
 		</Entity>
 		<Entity uid="12316">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1365.19446" z="1704.24646"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="6593"/>
 		</Entity>
 		<Entity uid="12317">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1086.33875" z="1848.49146"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="8483"/>
 		</Entity>
 		<Entity uid="12318">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1089.44996" z="1856.64124"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="1613"/>
 		</Entity>
 		<Entity uid="12319">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1102.84522" z="1852.09498"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="4980"/>
 		</Entity>
 		<Entity uid="12320">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1007.03376" z="1899.91126"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="14922"/>
 		</Entity>
 		<Entity uid="12321">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="999.22034" z="1921.82337"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="28234"/>
 		</Entity>
 		<Entity uid="12322">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1001.52015" z="1908.74085"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="4802"/>
 		</Entity>
 		<Entity uid="12323">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="721.20942" z="1821.20362"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="43357"/>
 		</Entity>
 		<Entity uid="12324">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="943.67157" z="1751.61512"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="28293"/>
 		</Entity>
 		<Entity uid="12326">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="694.4853" z="1934.41053"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="17544"/>
 		</Entity>
 		<Entity uid="12327">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="683.04883" z="1933.99036"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="10594"/>
 		</Entity>
 		<Entity uid="12328">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="678.5066" z="1925.01697"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="28538"/>
 		</Entity>
 		<Entity uid="12329">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="218.12797" z="1384.13526"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="38283"/>
 		</Entity>
 		<Entity uid="12330">
 			<Template>gaia/ore/desert_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="213.10953" z="1376.6327"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="5784"/>
@@ -71226,21 +71212,21 @@
 		</Entity>
 		<Entity uid="13321">
 			<Template>gaia/fruit/apple</Template>
-			<Player>1</Player>
+			<Player>0</Player>
 			<Position x="442.6757" z="270.56922"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="16629"/>
 		</Entity>
 		<Entity uid="13322">
 			<Template>gaia/fruit/apple</Template>
-			<Player>1</Player>
+			<Player>0</Player>
 			<Position x="445.15519" z="274.5918"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="44309"/>
 		</Entity>
 		<Entity uid="13323">
 			<Template>gaia/fruit/apple</Template>
-			<Player>1</Player>
+			<Player>0</Player>
 			<Position x="449.38071" z="278.25821"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="38477"/>

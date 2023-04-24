@@ -38,13 +38,11 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "Philip had married Audata, great-granddaughter of the Illyrian king of Dardania, Bardyllis. However, this did not prevent him from marching against the Illyrians in 358 and crushing them in a ferocious battle in which some 7,000 Illyrians died. By this move, Philip established his authority inland as far as Lake Ohrid and earned the favour of the Epirotes.\n\nIntelligence:\n---------------------\nYou have arrived with a small contingent of troops and workers. The first order of business is to set up camp. An Epirote trading post lies further up the river to the West.\n\nScouts report two Illyrian strongholds, one to the West and another to the Northwest. Other reports indicate a barbarian village north of our landing site.\n\nRumors are that a trading caravan has recently broken down nearby that village. \n\nBeware of the waters -- the Illyrian king has recruited a fleet of pirate ships to guard against your invasion. ",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 2 - Illyrian Campaign (358 BC)",
-  "Nomad": false,
   "PlayerData": [
     {
       "Civ": "mace",
@@ -69,7 +67,6 @@
       "Team": 1
     },
     {
-      "AI": "petra",
       "Civ": "mace",
       "Color": {
         "b": 31,
@@ -87,17 +84,12 @@
   ],
   "Preview": "lorraine_plain.png",
   "RevealMap": false,
-  "Script": "lorraine_plain.js",
-  "Seed": 0,
-  "Size": 448,
-  "SupportedBiomes": "generic/",
   "TriggerScripts": [
     "scenarios/Macedonia_2.js"
   ],
   "VictoryConditions": [
     "conquest"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>
@@ -42892,7 +42884,7 @@
 		</Entity>
 		<Entity uid="8055">
 			<Template>gaia/treasure/metal</Template>
-			<Player>1</Player>
+			<Player>0</Player>
 			<Position x="1503.56312" z="936.66236"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="36805"/>
@@ -42948,21 +42940,21 @@
 		</Entity>
 		<Entity uid="8064">
 			<Template>gaia/treasure/metal</Template>
-			<Player>1</Player>
+			<Player>0</Player>
 			<Position x="1535.59571" z="714.5818"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="52144"/>
 		</Entity>
 		<Entity uid="8065">
 			<Template>gaia/treasure/metal</Template>
-			<Player>1</Player>
+			<Player>0</Player>
 			<Position x="1534.99183" z="712.22535"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="27228"/>
 		</Entity>
 		<Entity uid="8066">
 			<Template>gaia/treasure/metal</Template>
-			<Player>1</Player>
+			<Player>0</Player>
 			<Position x="1532.29151" z="713.00867"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="39046"/>

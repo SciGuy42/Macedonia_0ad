@@ -38,13 +38,11 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "After conquering the valleys of the Kunar and Swat, Alexander the Great crossed to the river Indus, probably through the Shang-La pass. He wanted to capture the last stand of the native population in this part of India, Aornus (the name translates to \"hiding place\"). A local myth told that a god, probably Krishna, had been unable to capture this rock, which is 1500 meters high; this was enough to make Alexander decide that he had to capture it.\n\nPtolemy is currently occupying the Western summit while the Indians hold the Eastern one. You are to meet up with Ptolemy and help launch the assault on the Indian fort. Marching up the rock will be a challenge as the Indians have built a large number of towers and small forts. Your scouts have reported a sighting of an abandoned catapult in the area. The Indian defenders are numerous but your intelligence officers suggest you can severely limit their morale and ability to defend should we destroy the enemy's civilian houses (as they would be worried about getting their families out to safety). \n\nPrimary Objective: Destroy the Indian civil centre within 25 minutes of meeting up with Ptolemy (note: taking longer will result in defeat!)\n\nAI Settings: All AIs should be set to Sandbox",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 34 - The Hiding Place (326 BC)",
-  "Nomad": true,
   "PlayerData": [
     {
       "Civ": "mace",
@@ -74,19 +72,13 @@
   ],
   "Preview": "cantabrian_highlands.png",
   "RevealMap": false,
-  "Script": "cantabrian_highlands.js",
-  "Seed": 0,
-  "Size": 256,
-  "SupportedBiomes": "generic/",
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/KMeans.js",
     "scenarios/Macedonia_34.js"
   ],
   "VictoryConditions": [
     "conquest"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>

@@ -38,15 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "During a siege on a Brahmin-held town, Alexander used a genius tactic -- rather than assaulting the town directly, which had strong natural defenses, his men dug tunnels underneath the city and to the surprise of the Indian defenders, emerged seemingly out of nowhere to take the town. \n\nYour soldiers have just completed digging 4 tunnels into the city. But we're not quite ready for the assault just yet. We must scour the land to find resources (and trading partners) to procure supplies, as to raise a bigger army. In addition, one of our scouts has been captured by a group of desert raiders -- we must investigate. We have also heard a small monastery nearby that may be able to assist us. Finally, there are rumors that on the mountains on the far side of the town, there may be a secret path into the city used by smugglers. \n\nOnce inside the town, we'll be facing a large Brahmin guard -- we must eliminate their defensive and military buildings as quick as possible. We do not have siege weapons and therefore, we must capture the siege arsenal inside the town so we can deal with any fortifications we may encounter. \n\nAI Settings: All AIs should be set to Sandbox\n\nNote that each time this mission is played, the tunnel outlets are randomly positioned inside the city. ",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 40 - The Underground Assault (325 BC)",
-  "Nomad": false,
   "PlayerData": [
-    "",
     {
       "Civ": "mace",
       "Color": {
@@ -118,17 +115,12 @@
   ],
   "Preview": "india.png",
   "RevealMap": false,
-  "Script": "india.js",
-  "Seed": 4962,
-  "Size": 512,
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_40.js"
   ],
   "VictoryConditions": [
     "conquest"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>

@@ -38,13 +38,11 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "The year is 359 BC. Philip II is busy consolidating his internal position. A rebel prince has refused to pay tribute -- it is time you make an example of him. \n\nIntelligence: the rebel holdout lies to the north along the main path. There are multiple ways to approach the town, some more and some less direct. Scouts have also reported that bands from the hillside are rushing in to defend their local lord. \n\nNotes: the AI should be Petra for both enemies. The difficulty setting will have effects beyond the gathering rate (e.g., at Very Hard, more troops are garrisoned than at Medium).",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 1 - Consolidating Control (359 BC)",
-  "Nomad": false,
   "PlayerData": [
     {
       "Civ": "mace",
@@ -70,7 +68,6 @@
       "Team": 0
     },
     {
-      "AI": "petra",
       "Civ": "mace",
       "Name": "Rebelious Prince",
       "Resources": {
@@ -94,7 +91,6 @@
       "Team": 1
     },
     {
-      "AI": "petra",
       "Civ": "mace",
       "Color": {
         "b": 31,
@@ -113,17 +109,12 @@
   ],
   "Preview": "canyon.png",
   "RevealMap": false,
-  "Script": "canyon.js",
-  "Seed": 0,
-  "Size": 256,
-  "SupportedBiomes": "generic/",
   "TriggerScripts": [
     "scenarios/Macedonia_1.js"
   ],
   "VictoryConditions": [
     "conquest_units"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>
@@ -10592,14 +10583,14 @@
 		</Entity>
 		<Entity uid="2392">
 			<Template>gaia/ore/mediterranean_small</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="452.65934" z="695.3191"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="40383"/>
 		</Entity>
 		<Entity uid="2393">
 			<Template>gaia/ore/mediterranean_large</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="445.31516" z="685.66724"/>
 			<Orientation y="1.39574"/>
 			<Actor seed="47009"/>
@@ -11387,56 +11378,56 @@
 		</Entity>
 		<Entity uid="2512">
 			<Template>gaia/fauna_chicken</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="722.94336" z="827.42865"/>
 			<Orientation y="3.51517"/>
 			<Actor seed="20172"/>
 		</Entity>
 		<Entity uid="2513">
 			<Template>gaia/fauna_chicken</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="724.1825" z="826.42884"/>
 			<Orientation y="3.88735"/>
 			<Actor seed="23589"/>
 		</Entity>
 		<Entity uid="2514">
 			<Template>gaia/fauna_chicken</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="721.12177" z="826.71265"/>
 			<Orientation y="1.88317"/>
 			<Actor seed="57335"/>
 		</Entity>
 		<Entity uid="2515">
 			<Template>gaia/fauna_chicken</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="719.66187" z="823.45069"/>
 			<Orientation y="3.03524"/>
 			<Actor seed="50067"/>
 		</Entity>
 		<Entity uid="2516">
 			<Template>gaia/fauna_chicken</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="724.66291" z="823.26551"/>
 			<Orientation y="4.5543"/>
 			<Actor seed="3837"/>
 		</Entity>
 		<Entity uid="2517">
 			<Template>gaia/fauna_chicken</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="727.41657" z="825.30774"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="29309"/>
 		</Entity>
 		<Entity uid="2518">
 			<Template>gaia/fauna_chicken</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="721.40888" z="830.41834"/>
 			<Orientation y="0.70719"/>
 			<Actor seed="38455"/>
 		</Entity>
 		<Entity uid="2519">
 			<Template>gaia/fauna_chicken</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="717.74128" z="827.13318"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="55453"/>
@@ -11639,195 +11630,195 @@
 		</Entity>
 		<Entity uid="2551">
 			<Template>gaia/fruit/grapes</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="695.51563" z="812.84333"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="21203"/>
 		</Entity>
 		<Entity uid="2552">
 			<Template>gaia/fruit/grapes</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="692.09247" z="810.02112"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="27848"/>
 		</Entity>
 		<Entity uid="2553">
 			<Template>gaia/fruit/grapes</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="689.287" z="806.35608"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="63793"/>
 		</Entity>
 		<Entity uid="2554">
 			<Template>gaia/fruit/apple</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="730.92548" z="823.01441"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="61225"/>
 		</Entity>
 		<Entity uid="2555">
 			<Template>gaia/fruit/apple</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="736.26246" z="819.89783"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="63676"/>
 		</Entity>
 		<Entity uid="2556">
 			<Template>gaia/fruit/apple</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="731.0033" z="811.34217"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="39776"/>
 		</Entity>
 		<Entity uid="2557">
 			<Template>gaia/tree/cypress</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="645.8006" z="821.15516"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="35895"/>
 		</Entity>
 		<Entity uid="2558">
 			<Template>gaia/tree/cypress</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="643.16102" z="818.646"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="37439"/>
 		</Entity>
 		<Entity uid="2559">
 			<Template>gaia/tree/cypress</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="641.32001" z="812.98487"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="28753"/>
 		</Entity>
 		<Entity uid="2560">
 			<Template>gaia/tree/cypress</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="638.65925" z="808.07111"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="50886"/>
 		</Entity>
 		<Entity uid="2561">
 			<Template>gaia/tree/cypress</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="635.3252" z="804.9488"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="2675"/>
 		</Entity>
 		<Entity uid="2562">
 			<Template>gaia/tree/cypress</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="632.25379" z="801.02411"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="58971"/>
 		</Entity>
 		<Entity uid="2563">
 			<Template>gaia/tree/cypress</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="600.63355" z="816.20588"/>
 			<Orientation y="2.35621"/>
 		</Entity>
 		<Entity uid="2564">
 			<Template>gaia/tree/cypress</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="602.19898" z="820.69367"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="50185"/>
 		</Entity>
 		<Entity uid="2565">
 			<Template>gaia/tree/cypress</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="604.4538" z="824.69361"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="24132"/>
 		</Entity>
 		<Entity uid="2566">
 			<Template>gaia/tree/cypress</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="606.3755" z="830.39838"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="61376"/>
 		</Entity>
 		<Entity uid="2567">
 			<Template>gaia/tree/cypress</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="607.61945" z="835.11695"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="55888"/>
 		</Entity>
 		<Entity uid="2568">
 			<Template>gaia/tree/cypress</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="609.42908" z="838.67408"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="41298"/>
 		</Entity>
 		<Entity uid="2569">
 			<Template>gaia/tree/cypress</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="559.43488" z="735.14832"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="56652"/>
 		</Entity>
 		<Entity uid="2570">
 			<Template>gaia/tree/cypress</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="587.83692" z="720.99793"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="26895"/>
 		</Entity>
 		<Entity uid="2571">
 			<Template>gaia/tree/cypress</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="595.9928" z="743.33204"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="17375"/>
 		</Entity>
 		<Entity uid="2572">
 			<Template>gaia/tree/cypress</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="566.92975" z="752.5893"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="51815"/>
 		</Entity>
 		<Entity uid="2573">
 			<Template>gaia/fruit/fig</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="455.91962" z="638.1283"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="51184"/>
 		</Entity>
 		<Entity uid="2574">
 			<Template>gaia/fruit/fig</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="477.92408" z="591.99671"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="63974"/>
 		</Entity>
 		<Entity uid="2575">
 			<Template>gaia/tree/poplar_lombardy</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="494.38837" z="515.76398"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="9428"/>
 		</Entity>
 		<Entity uid="2576">
 			<Template>gaia/tree/poplar_lombardy</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="488.41614" z="518.72071"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="43184"/>
 		</Entity>
 		<Entity uid="2577">
 			<Template>gaia/tree/poplar_lombardy</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="482.72593" z="520.99891"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="58345"/>
 		</Entity>
 		<Entity uid="2578">
 			<Template>gaia/tree/poplar_lombardy</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="527.64167" z="501.91636"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="31682"/>
@@ -13653,28 +13644,28 @@
 		</Entity>
 		<Entity uid="2858">
 			<Template>gaia/ore/tropical_large</Template>
-			<Player>1</Player>
+			<Player>0</Player>
 			<Position x="752.9657" z="814.00544"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="62586"/>
 		</Entity>
 		<Entity uid="2859">
 			<Template>gaia/rock/temperate_small</Template>
-			<Player>1</Player>
+			<Player>0</Player>
 			<Position x="791.61103" z="820.65229"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="6564"/>
 		</Entity>
 		<Entity uid="2860">
 			<Template>gaia/rock/temperate_small</Template>
-			<Player>1</Player>
+			<Player>0</Player>
 			<Position x="738.3454" z="831.36182"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="751"/>
 		</Entity>
 		<Entity uid="2861">
 			<Template>gaia/rock/temperate_small</Template>
-			<Player>1</Player>
+			<Player>0</Player>
 			<Position x="734.72345" z="838.23462"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="50517"/>

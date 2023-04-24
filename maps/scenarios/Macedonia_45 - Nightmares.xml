@@ -38,15 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "Macedonia 45 - Nightmare (323 BC)\n\nAlexander is in trouble. His skin is burning up, head is raging with internal fire and strife. As he lay dying, in his mind there is one final battle to be fought.  The landscape is desolate, covered  in fire and ash. The sea is red and full of blood. All his enemies have gathered against him -- from the Spartan rebels, to the city of Tyre, and all the way to India. His only allies are the people who greeted him like a living God -- the land of Egypt. Will he prevail? Only you will find out. \n\nAI Settings: Player 8 (Doom Guard) should be set to Sandbox. For the rest of the players use a difficulty of your choice. For casual game play, set your Ally to Hard or Very Hard and your Enemies to a combination of Easy and Medium difficulties. \n\nYou can also gift units to your ally. Simply move them to the little palisade pen and they will switch ownership. Your ally may also gift units to you as well. \n",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 45 - Nightmare (323 BC)",
-  "Nomad": true,
   "PlayerData": [
-    "",
     {
       "Civ": "mace",
       "Name": "Alexander",
@@ -125,17 +122,12 @@
   ],
   "Preview": "ratumacos.png",
   "RevealMap": false,
-  "Script": "pompeii_v2.js",
-  "Seed": 5276,
-  "Size": 512,
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_45.js"
   ],
   "VictoryConditions": [
     "conquest"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>
@@ -28383,28 +28375,28 @@
 		</Entity>
 		<Entity uid="5105">
 			<Template>gaia/ore/alpine_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1819.98914" z="1293.85584"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="56932"/>
 		</Entity>
 		<Entity uid="5106">
 			<Template>gaia/ore/alpine_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1826.35901" z="1299.70276"/>
 			<Orientation y="2.92574"/>
 			<Actor seed="59981"/>
 		</Entity>
 		<Entity uid="5107">
 			<Template>gaia/ore/alpine_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1835.06177" z="1303.13416"/>
 			<Orientation y="0.04593"/>
 			<Actor seed="4287"/>
 		</Entity>
 		<Entity uid="5108">
 			<Template>gaia/ore/alpine_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1823.1366" z="1282.0293"/>
 			<Orientation y="-0.89594"/>
 			<Actor seed="60405"/>
@@ -28432,28 +28424,28 @@
 		</Entity>
 		<Entity uid="5112">
 			<Template>gaia/rock/alpine_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1582.31556" z="1208.6714"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="7063"/>
 		</Entity>
 		<Entity uid="5113">
 			<Template>gaia/rock/alpine_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1590.92188" z="1211.57032"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="21497"/>
 		</Entity>
 		<Entity uid="5114">
 			<Template>gaia/rock/alpine_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1674.8169" z="1186.25586"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="51251"/>
 		</Entity>
 		<Entity uid="5115">
 			<Template>gaia/rock/alpine_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1684.29932" z="1183.0171"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="13357"/>

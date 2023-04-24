@@ -38,15 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": false,
   "Description": "The Siege of Tyre was orchestrated by Alexander the Great in 332 BC during his campaigns against the Persians. The Macedonian army was unable to capture the city, which was a strategic coastal base on the Mediterranean Sea, through conventional means because it was on an island and had walls right up to the sea. \n\nAlexander responded to this problem by building a causeway that crosses the narrow gap of sea, with the intent of allowing his troops to march up the walls and breach them. \n\nThe causeway has just been constructed and you are now in charge of defending the Macedonian side from attacks. Our army is arriving is rushing towards the break but they will need your help! To win, march at least 10 troops up to the gate on the other side of the bridge. \n\nIntelligence Reports:\n- A large persian garrison remains in the city and they are also rushing towards our side -- defend our fortifications at all costs!\n- There are rumours of a skilled forge in the area who may be able to upgrade our weapons (any upgrades you purchase affect your allies as well).\n- The landscape on our side is mostly barren though some treasure may still be found, along with some abandoned siege weapons. \n\nAI Settings:\n- all AI players should be set to Petra with Sandbox difficulty",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 16 - A Bridge Too Far (332 BC)",
-  "Nomad": false,
   "PlayerData": [
-    "",
     {
       "Civ": "mace",
       "Resources": {
@@ -89,17 +86,12 @@
   ],
   "Preview": "phoenician_levant.png",
   "RevealMap": false,
-  "Script": "phoenician_levant.js",
-  "Seed": 0,
-  "Size": 192,
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_16.js"
   ],
   "VictoryConditions": [
     "conquest"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>

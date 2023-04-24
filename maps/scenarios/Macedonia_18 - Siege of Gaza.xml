@@ -38,15 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "The Siege of Gaza was a military event in the Egyptian campaign of Alexander the Great in 332 BC.\n\nDuring the Siege of Gaza, Alexander succeeded in reaching the walls by utilizing the engines he had employed against Tyre. After three unsuccessful assaults, the stronghold was taken by storm.\n\nObjective: Destroy or capture the Persian Fortress in Gaza. \n\nIntelligence Report: \n\nYour forces have set up camp south of the fortress. In addition, you have some forces in the small village of Majorma where the locals welcome your assault against the Persians. Establish your lines of supply -- we can trade and fish to acquire resources. Do not let Majorma loose its dock for we are awaiting a shipment of siege equipment from Tyre without which we will not be able to penetrate the walls of the fortress. Reports indicate that we could expect a cavalry assaulttt at any time -- beware! We do not expect any hostile navy to interfere with our progress -- after the capture of Tyre, the Persian navy has been destroyed. \n\nAI Settings: All AIs should be set to Sandbox",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 18 - Siege of Gaza (332 BC)",
-  "Nomad": false,
   "PlayerData": [
-    "",
     {
       "Civ": "mace",
       "Name": "Alexander",
@@ -92,17 +89,12 @@
   ],
   "Preview": "syria.png",
   "RevealMap": false,
-  "Script": "syria.js",
-  "Seed": 5557,
-  "Size": 512,
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_18.js"
   ],
   "VictoryConditions": [
     "conquest"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>

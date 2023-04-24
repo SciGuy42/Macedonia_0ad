@@ -38,15 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "Before Alexander and his army were able to cross at Hellespont, the Persian provincial governors, and others in power at that time in Persia, assembled their forces of 10-20,000 cavalry and 5-20,000 infantry to the town of Zelea. Memnon was a high-ranking Greek mercenary employed by the Persians, and he advised the Persians to lay waste to the land that Alexander would have to pass, depriving his army of food and supplies. This would make it harder for Alexander and his army to survive on their long journey before the battle. The satraps did not trust Memnon because of his nationality, and did not ravage their territories. While the Persians did not want to address Alexander right away, eventually the five nearest satraps along with the Greek Mercenaries were tasked with meeting Alexnader in battle.\n\nObjectives: \n\nDestroy the enemy. \n\nIntelligence Reports: \n\nThe five satraps and their allies maintain a strong network of supplies and trade -- interrupting that network will greatly hinder their growth and ability to raise troops.\n\nBeware of naval attacks -- enemy ships have been reported in the area. \n\nAI Settings:\n\nCappadocia and Greek Mercenaries should be set to Sandbox difficulty. Everyone else should be set to Petra with a difficulty of your choice. ",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 11 - The Five Satraps (334 BC)",
-  "Nomad": false,
   "PlayerData": [
-    null,
     {
       "Civ": "mace",
       "Color": {
@@ -120,17 +117,12 @@
   ],
   "Preview": "anatolian_plateau.png",
   "RevealMap": false,
-  "Script": "anatolian_plateau.js",
-  "Seed": 4940,
-  "Size": 512,
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_11.js"
   ],
   "VictoryConditions": [
     "conquest"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>

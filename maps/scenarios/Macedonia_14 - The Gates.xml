@@ -38,15 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "Alexander marched his army east through Cappadocia, where, for a stretch of nearly 150 km (93 mi), there was no water. As his army approached Mount Taurus, they found only one route through which to pass, which was a narrow defile called \"The Gates\". The defile was very narrow, and could can easily be defended. \n\nObjectives:\n\nMarch through \"The Gates\" and destroy all opposing Persian forces. \n\nIntelligence:\n\nOur reinforcements are slowly arriving and as they do, they will automatically follow us through the pass. \n\nAI Settings:\n\nAll AIs should be set to Sandbox.",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 14 - The Gates (333 BC)",
-  "Nomad": false,
   "PlayerData": [
-    "",
     {
       "Civ": "mace",
       "Color": {
@@ -97,17 +94,12 @@
   ],
   "Preview": "anatolian_plateau.png",
   "RevealMap": false,
-  "Script": "anatolian_plateau.js",
-  "Seed": 0,
-  "Size": 192,
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_14.js"
   ],
   "VictoryConditions": [
     "conquest"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>

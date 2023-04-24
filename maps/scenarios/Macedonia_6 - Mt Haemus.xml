@@ -38,14 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "Before crossing to Asia, Alexander wanted to safeguard his northern borders and, in the spring of 335 BC, he advanced into Thrace to deal with the revolt, which was led by the Illyrians and Triballi. He was reinforced along the way by the Agriani, a Thracian tribe under the command of Alexander's friend, Langarus. The Macedonian army marched up to Mount Haemus, where they met a Thracian garrison manning the heights. \n\nYour intelligence reports suggest that a small settlemenths off the main road may serve as a good starting base. Your allies, the Agriani are under attack by raiders and are requesting immediate help. \n\nTo win, defeat all enemies.\n\nAI Settings: Triballi Hillside Defenders and Greek Mercs should be set to Sandbox. All others can be set with a difficulty level of your choice (Medium for enemies for casual play). ",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 6 - Mt Haemus (335 BC)",
   "PlayerData": [
-    null,
     {
       "Civ": "mace",
       "Name": "Alexander",
@@ -100,7 +98,6 @@
       "Team": 1
     },
     {
-      "AI": "petra",
       "Civ": "spart",
       "Color": {
         "b": 16,
@@ -111,10 +108,9 @@
       "Team": 1
     }
   ],
-  "Preview": "",
+  "Preview": "Macedonia_0ad_Haemus.png",
   "RevealMap": false,
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/Macedonia_6.js"
   ],
   "VictoryConditions": [
@@ -25340,119 +25336,119 @@
 		</Entity>
 		<Entity uid="3711">
 			<Template>gaia/ore/alpine_small</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="865.06952" z="736.6667"/>
 			<Orientation y="1.55161"/>
 			<Actor seed="15581"/>
 		</Entity>
 		<Entity uid="3712">
 			<Template>gaia/ore/alpine_small</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="853.8675" z="725.7032"/>
 			<Orientation y="1.01137"/>
 			<Actor seed="18956"/>
 		</Entity>
 		<Entity uid="3713">
 			<Template>gaia/ore/alpine_small</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="865.06" z="747.94239"/>
 			<Orientation y="2.72457"/>
 			<Actor seed="2632"/>
 		</Entity>
 		<Entity uid="3714">
 			<Template>gaia/ore/alpine_small</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="883.29822" z="758.6811"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="32295"/>
 		</Entity>
 		<Entity uid="3715">
 			<Template>gaia/ore/alpine_small</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1042.35315" z="701.7201"/>
 			<Orientation y="-1.96462"/>
 			<Actor seed="26603"/>
 		</Entity>
 		<Entity uid="3716">
 			<Template>gaia/ore/alpine_small</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1046.35547" z="711.6698"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="60476"/>
 		</Entity>
 		<Entity uid="3717">
 			<Template>gaia/ore/alpine_small</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1038.22571" z="710.67505"/>
 			<Orientation y="-0.85897"/>
 			<Actor seed="31305"/>
 		</Entity>
 		<Entity uid="3718">
 			<Template>gaia/rock/mediterranean_small</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="960.40442" z="615.6623"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="10036"/>
 		</Entity>
 		<Entity uid="3719">
 			<Template>gaia/rock/mediterranean_small</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="962.31885" z="623.60468"/>
 			<Orientation y="1.5858"/>
 			<Actor seed="5976"/>
 		</Entity>
 		<Entity uid="3720">
 			<Template>gaia/rock/mediterranean_small</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="970.68775" z="626.27527"/>
 			<Orientation y="2.80846"/>
 			<Actor seed="6294"/>
 		</Entity>
 		<Entity uid="3721">
 			<Template>gaia/rock/mediterranean_small</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="962.80848" z="632.6941"/>
 			<Orientation y="1.33187"/>
 			<Actor seed="59428"/>
 		</Entity>
 		<Entity uid="3722">
 			<Template>gaia/rock/mediterranean_small</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1026.55958" z="760.84028"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="48110"/>
 		</Entity>
 		<Entity uid="3723">
 			<Template>gaia/rock/mediterranean_small</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1019.5373" z="767.7829"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="48672"/>
 		</Entity>
 		<Entity uid="3724">
 			<Template>gaia/rock/mediterranean_small</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="1016.82386" z="759.59449"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="51713"/>
 		</Entity>
 		<Entity uid="3725">
 			<Template>gaia/rock/mediterranean_small</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="953.81" z="792.00434"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="4131"/>
 		</Entity>
 		<Entity uid="3726">
 			<Template>gaia/rock/mediterranean_small</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="942.84577" z="601.57691"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="11769"/>
 		</Entity>
 		<Entity uid="3727">
 			<Template>gaia/rock/mediterranean_small</Template>
-			<Player>2</Player>
+			<Player>0</Player>
 			<Position x="946.8985" z="608.38868"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="33509"/>
@@ -25732,49 +25728,49 @@
 		</Entity>
 		<Entity uid="3767">
 			<Template>gaia/ore/alpine_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="755.65101" z="575.40223"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="46580"/>
 		</Entity>
 		<Entity uid="3768">
 			<Template>gaia/rock/mediterranean_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="761.96528" z="583.31824"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="14341"/>
 		</Entity>
 		<Entity uid="3769">
 			<Template>gaia/rock/mediterranean_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="764.14667" z="592.9275"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="53049"/>
 		</Entity>
 		<Entity uid="3770">
 			<Template>gaia/rock/mediterranean_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="861.08124" z="488.468"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="31816"/>
 		</Entity>
 		<Entity uid="3771">
 			<Template>gaia/rock/mediterranean_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="858.14106" z="496.76771"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="17717"/>
 		</Entity>
 		<Entity uid="3772">
 			<Template>gaia/rock/mediterranean_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1342.33362" z="312.39542"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="63421"/>
 		</Entity>
 		<Entity uid="3773">
 			<Template>gaia/rock/mediterranean_small</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="1347.06141" z="317.89826"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="23433"/>
@@ -26901,7 +26897,7 @@
 		</Entity>
 		<Entity uid="3955">
 			<Template>gaia/ore/temperate_large</Template>
-			<Player>6</Player>
+			<Player>0</Player>
 			<Position x="662.61597" z="532.48096"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="12484"/>
@@ -26943,21 +26939,21 @@
 		</Entity>
 		<Entity uid="3961">
 			<Template>gaia/rock/mediterranean_small</Template>
-			<Player>6</Player>
+			<Player>0</Player>
 			<Position x="1026.42542" z="484.46842"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="56159"/>
 		</Entity>
 		<Entity uid="3962">
 			<Template>gaia/rock/mediterranean_small</Template>
-			<Player>6</Player>
+			<Player>0</Player>
 			<Position x="1018.06379" z="487.64643"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="9569"/>
 		</Entity>
 		<Entity uid="3963">
 			<Template>gaia/rock/mediterranean_small</Template>
-			<Player>6</Player>
+			<Player>0</Player>
 			<Position x="1036.87806" z="484.65534"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="23006"/>
@@ -29806,133 +29802,133 @@
 		</Entity>
 		<Entity uid="4399">
 			<Template>gaia/ore/alpine_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="1736.82251" z="1319.8042"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="18573"/>
 		</Entity>
 		<Entity uid="4400">
 			<Template>gaia/ore/alpine_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="1727.60975" z="1327.0691"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="4144"/>
 		</Entity>
 		<Entity uid="4401">
 			<Template>gaia/ore/alpine_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="1740.10096" z="1328.70435"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="53948"/>
 		</Entity>
 		<Entity uid="4402">
 			<Template>gaia/rock/mediterranean_large</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="1459.7201" z="1427.16053"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="57478"/>
 		</Entity>
 		<Entity uid="4403">
 			<Template>gaia/rock/mediterranean_large</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="1462.16407" z="1436.26941"/>
 			<Orientation y="1.69417"/>
 			<Actor seed="58353"/>
 		</Entity>
 		<Entity uid="4404">
 			<Template>gaia/rock/mediterranean_large</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="1470.9115" z="1441.81397"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="8135"/>
 		</Entity>
 		<Entity uid="4405">
 			<Template>gaia/rock/mediterranean_large</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="1198.76331" z="1137.55042"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="28054"/>
 		</Entity>
 		<Entity uid="4406">
 			<Template>gaia/ore/alpine_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="1203.54334" z="1130.79102"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="49288"/>
 		</Entity>
 		<Entity uid="4407">
 			<Template>gaia/ore/alpine_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="1952.20044" z="930.95728"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="47750"/>
 		</Entity>
 		<Entity uid="4408">
 			<Template>gaia/ore/alpine_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="1959.44385" z="926.79377"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="19417"/>
 		</Entity>
 		<Entity uid="4409">
 			<Template>gaia/ore/alpine_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="1953.61365" z="922.0752"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="21827"/>
 		</Entity>
 		<Entity uid="4410">
 			<Template>gaia/rock/temperate_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="1850.67933" z="1114.21302"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="30207"/>
 		</Entity>
 		<Entity uid="4411">
 			<Template>gaia/rock/temperate_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="1853.96656" z="1105.04224"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="52881"/>
 		</Entity>
 		<Entity uid="4412">
 			<Template>gaia/rock/temperate_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="1782.35071" z="536.16993"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="56895"/>
 		</Entity>
 		<Entity uid="4413">
 			<Template>gaia/rock/temperate_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="1774.72095" z="531.23261"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="27851"/>
 		</Entity>
 		<Entity uid="4414">
 			<Template>gaia/rock/temperate_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="1774.45887" z="542.71467"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="16980"/>
 		</Entity>
 		<Entity uid="4415">
 			<Template>gaia/ore/alpine_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="1744.8307" z="537.23218"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="45674"/>
 		</Entity>
 		<Entity uid="4416">
 			<Template>gaia/ore/alpine_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="1834.23401" z="625.52619"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="61715"/>
 		</Entity>
 		<Entity uid="4417">
 			<Template>gaia/ore/alpine_small</Template>
-			<Player>5</Player>
+			<Player>0</Player>
 			<Position x="1842.2881" z="622.16077"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="916"/>

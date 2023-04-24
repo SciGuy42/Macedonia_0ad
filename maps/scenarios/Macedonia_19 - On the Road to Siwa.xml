@@ -38,13 +38,11 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "Upon arriving in Egypt, Alexander and his army of Greeks were regarded as liberators. Alexander way eager to meet the Oracle of Amun and set course to the Siwa Oasis along with his bodyguards. After a tough desert sand storm, Alexander's party stumbles upon a small Egyptian hamlet which is eager to provide shelter. \n\nUnofrtunately, where Alexnader goes, trouble seems to go as well. The hamlet's warrior princess has been captured by a gang of bandits that has been terrorizing the local villagers. Furthermore, word has spread out about Alexander's whereabouts and rumors are that a combination of Persian and anti-Greek Egyptian rebels are headed our way. You are to rescue the princess and build up the town's defenses to sustain the coming assault. \n\nObjectives:\n- Rescue the warrior princess -- the locals indicate that the bandit camp is to the north-north-west of the hamlet. To rescue her, you must defeat all bandits and CAPTURE their camp (do not destroy it for she may burn inside!)\n- Build up the town's defenses -- rumors are that a large force, including elephants and siege equipment is headed our way. The town is currently not prepared! Survive the onslaught and you shall be victorious. The enemy will arrive in approximately 10 days (about 22 minutes game time)\n\nIntelligence Reports:\n- To the south lies another, uninhabited oases. There may be some loot we can pick up. \n- To the west lie desers controlled by bandits -- they may have good loot for us as well, which will help us build our defenses quicker\n- To he north-east, there are rumors of an old pyramid that has been taken over by a fanatic cult. The pyramid is rumored to contain ancient texts regarding knowleding about defense towers, capturing it may reveal useful technologies. \n- There is very little stone and metal that we can mine. Our advisors recommend setting up strong internal trade networks to generate income. \n\nAI Settings:\n- All AIs should be set to Sandbox",
-  "Keywords": [],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 19 - On the Road to Siwa (332 BC)",
-  "Nomad": false,
   "PlayerData": [
     {
       "Civ": "kush",
@@ -74,18 +72,13 @@
   ],
   "Preview": "saharan_oases.png",
   "RevealMap": false,
-  "Seed": 0,
-  "Size": 512,
-  "SupportedBiomes": "generic/",
   "TriggerScripts": [
-    "scripts/TriggerHelper.js",
     "scenarios/KMeans.js",
     "scenarios/Macedonia_19.js"
   ],
   "VictoryConditions": [
     "conquest"
-  ],
-  "mapType": "random"
+  ]
 }
 ]]></ScriptSettings>
 	<Entities>

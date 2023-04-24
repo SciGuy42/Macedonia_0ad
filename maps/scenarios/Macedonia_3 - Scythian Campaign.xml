@@ -38,16 +38,12 @@
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
-  "AISeed": 0,
   "CircularMap": true,
   "Description": "In 342 BC, Philip led a great military expedition north against the Scythians, conquering the Thracian fortified settlement Eumolpia to give it his name, Philippopolis (modern Plovdiv). \n\nIntelligence Report:\n\nYou have arrived with a small contingent of forces. Establish a camp. The main enemy stronghold lies to the East. Across the river, stands a small fishing village known for its fierce warriors. South of your position, scouts report a neutral barbarian camp. \n",
-  "Keywords": [
-    "new"
-  ],
+  "Keywords": ["macedonian_campaign"],
   "LockTeams": true,
   "Name": "Macedonia 3 - Scythian Raids (342 BC)",
   "PlayerData": [
-    "",
     {
       "Civ": "mace",
       "Color": {
@@ -76,19 +72,16 @@
       "Team": 0
     },
     {
-      "AI": "petra",
       "Civ": "brit",
       "Name": "Scythians",
       "Team": 1
     },
     {
-      "AI": "petra",
       "Civ": "brit",
       "Name": "Scythian Settlements",
       "Team": 1
     },
     {
-      "AI": "petra",
       "Civ": "iber",
       "Name": "Scythian Mercenaries",
       "Team": 1
@@ -103,14 +96,14 @@
 ]]></ScriptSettings>
 	<Entities>
 		<Entity uid="17">
-			<Template>structures/bridge_wooden</Template>
+			<Template>actor|props/special/eyecandy/bridge_edge_wooden.xml</Template>
 			<Player>0</Player>
 			<Position x="415.97614" z="473.14173"/>
 			<Orientation y="1.21338"/>
 			<Actor seed="9104"/>
 		</Entity>
 		<Entity uid="18">
-			<Template>structures/bridge_wooden</Template>
+			<Template>actor|props/special/eyecandy/bridge_edge_wooden.xml</Template>
 			<Player>0</Player>
 			<Position x="409.78592" z="463.34095"/>
 			<Orientation y="-1.95751"/>
@@ -14910,91 +14903,91 @@
 		</Entity>
 		<Entity uid="2581">
 			<Template>gaia/fauna_chicken</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="728.49549" z="292.34665"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="29366"/>
 		</Entity>
 		<Entity uid="2582">
 			<Template>gaia/fauna_chicken</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="727.36347" z="291.06513"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="44953"/>
 		</Entity>
 		<Entity uid="2583">
 			<Template>gaia/fauna_chicken</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="728.09955" z="289.64036"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="27184"/>
 		</Entity>
 		<Entity uid="2584">
 			<Template>gaia/fauna_chicken</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="728.96723" z="290.65308"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="4167"/>
 		</Entity>
 		<Entity uid="2585">
 			<Template>gaia/fauna_chicken</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="730.05634" z="291.62052"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="12617"/>
 		</Entity>
 		<Entity uid="2586">
 			<Template>gaia/fauna_chicken</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="732.36048" z="289.71302"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="44936"/>
 		</Entity>
 		<Entity uid="2587">
 			<Template>gaia/fauna_chicken</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="731.18622" z="289.05308"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="7648"/>
 		</Entity>
 		<Entity uid="2588">
 			<Template>gaia/fauna_chicken</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="732.24323" z="286.75062"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="35543"/>
 		</Entity>
 		<Entity uid="2589">
 			<Template>gaia/fauna_chicken</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="734.15522" z="287.51597"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="30182"/>
 		</Entity>
 		<Entity uid="2590">
 			<Template>gaia/fauna_chicken</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="733.0995" z="288.02894"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="64129"/>
 		</Entity>
 		<Entity uid="2591">
 			<Template>gaia/fauna_chicken</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="733.86951" z="289.20572"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="52259"/>
 		</Entity>
 		<Entity uid="2592">
 			<Template>gaia/fauna_chicken</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="734.28559" z="285.86332"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="36931"/>
 		</Entity>
 		<Entity uid="2593">
 			<Template>gaia/fauna_chicken</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="729.51557" z="287.99585"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="46672"/>
@@ -15102,35 +15095,35 @@
 		</Entity>
 		<Entity uid="2609">
 			<Template>gaia/treasure/food_barrels_buried</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="215.03901" z="716.15339"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="59754"/>
 		</Entity>
 		<Entity uid="2610">
 			<Template>gaia/treasure/metal</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="204.00541" z="717.21302"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="55493"/>
 		</Entity>
 		<Entity uid="2611">
 			<Template>gaia/treasure/metal</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="212.70118" z="724.29102"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="33143"/>
 		</Entity>
 		<Entity uid="2612">
 			<Template>gaia/treasure/stone</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="198.09192" z="730.693"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="3304"/>
 		</Entity>
 		<Entity uid="2613">
 			<Template>gaia/treasure/wood</Template>
-			<Player>4</Player>
+			<Player>0</Player>
 			<Position x="191.75147" z="727.76551"/>
 			<Orientation y="2.17666"/>
 			<Actor seed="300"/>
