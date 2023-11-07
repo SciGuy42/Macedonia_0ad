@@ -20,8 +20,23 @@ jobs:
       run: |
         pyrogenesis -mod=mod -mod=public -mod=Macedonia_0ad -archivebuild="${HOME}/.local/share/0ad/mods/Macedonia_0ad" -archievebuild-output="Macedonia_0ad" -archivebuild-compress
 
-    - name: Upload Release Artifact
-      uses: actions/upload-artifact@v3
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: Macedonia_0ad
-        path: Macedonia_0ad.zip
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        draft: false
+        prerelease: false
+
+    - name: Upload Release Asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./Macedonia_0ad.zip
+        asset_name: Macedonia_0ad.zip
+        asset_content_type: application/zip 
