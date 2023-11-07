@@ -1,8 +1,8 @@
 {
 	"name": "macedonia_0ad",
-	"version": "0.25.0",
+	"version": "0.26.0",
 	"label": "Macedonia Campaign",
 	"url": "https://github.com/SciGuy42/Macedonia_0ad",
 	"description": "This mod adds a campaign that covers the times of Philip II and ends shortly before Alexander the Great gains control of the kingdom.",
-	"dependencies": ["0ad=0.0.27"]
+	"dependencies": ["0ad>=0.0.26"]
 }
