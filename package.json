@@ -1,0 +1,28 @@
+{
+  "devDependencies": {
+    "eslint": "^8.53.0",
+    "eslint-plugin-brace-rules": "^0.1.6"
+  },
+  "name": "Macedonia_0ad",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "requireindex": "^1.1.0"
+  },
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vpereira/Macedonia_0ad.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vpereira/Macedonia_0ad/issues"
+  },
+  "homepage": "https://github.com/vpereira/Macedonia_0ad#readme"
+}
