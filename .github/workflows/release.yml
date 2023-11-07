@@ -1,0 +1,27 @@
+name: Build and Release Mod
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v3
+
+    - name: Install 0 A.D.
+      run: sudo apt-get update && sudo apt-get install -y 0ad
+
+    - name: Build Mod Archive
+      run: |
+        pyrogenesis -mod=mod -mod=public -mod=Macedonia_0ad -archivebuild="${HOME}/.local/share/0ad/mods/Macedonia_0ad" -archievebuild-output="Macedonia_0ad" -archivebuild-compress
+
+    - name: Upload Release Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: Macedonia_0ad
+        path: Macedonia_0ad.zip
