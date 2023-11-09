@@ -18,7 +18,7 @@ jobs:
 
     - name: Build Mod Archive
       run: |
-        pyrogenesis -mod=mod -mod=public -mod=Macedonia_0ad -archivebuild="${HOME}/.local/share/0ad/mods/Macedonia_0ad" -archievebuild-output="Macedonia_0ad" -archivebuild-compress
+	 pyrogenesis -mod=mod -mod=public -mod=Macedonia_A26 -archivebuild="${HOME}/.local/share/0ad/mods/Macedonia_0ad" -archivebuild-output="Macedonia_A26.pyromod" -archivebuild-compress
 
     - name: Create Release
       id: create_release
@@ -37,6 +37,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./Macedonia_0ad.zip
-        asset_name: Macedonia_0ad.zip
+        asset_path: ./Macedonia_A26.pyromod
+        asset_name: Macedonia_A26.pyromod
         asset_content_type: application/zip 
