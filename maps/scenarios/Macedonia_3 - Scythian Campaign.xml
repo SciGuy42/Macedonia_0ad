@@ -32,15 +32,18 @@
 		</Postproc>
 	</Environment>
 	<Camera>
-		<Position x="112.889" y="292.675" z="83.66"/>
+		<Position x="154.375" y="241.58" z="504.472"/>
 		<Rotation angle="0"/>
 		<Declination angle="0.610865"/>
 	</Camera>
 	<ScriptSettings><![CDATA[
 {
+  "AISeed": 0,
   "CircularMap": true,
-  "Description": "In 342 BC, Philip led a great military expedition north against the Scythians, conquering the Thracian fortified settlement Eumolpia to give it his name, Philippopolis (modern Plovdiv). \n\nIntelligence Report:\n\nYou have arrived with a small contingent of forces. Establish a camp. The main enemy stronghold lies to the East. Across the river, stands a small fishing village known for its fierce warriors. South of your position, scouts report a neutral barbarian camp. \n",
-  "Keywords": ["macedonian_campaign"],
+  "Description": "In 342 BC, Philip led a great military expedition north against the Scythians, conquering the Thracian fortified settlement Eumolpia to give it his name, Philippopolis (modern Plovdiv). \n\nIntelligence Report:\n\nYou have arrived with a small contingent of forces. Establish a camp. The main enemy stronghold lies to the East. Across the river, stands a small fishing village known for its fierce warriors. South of your position, scouts report a neutral barbarian camp. \n\nAI Settings: Players 2 and 3 should be set to Petral with a difficulty of your choice. Player 4 should be set to Sandbox\n\n",
+  "Keywords": [
+    "macedonian_campaign"
+  ],
   "LockTeams": true,
   "Name": "Macedonia 3 - Scythian Raids (342 BC)",
   "PlayerData": [
@@ -97,14 +100,12 @@
 	<Entities>
 		<Entity uid="17">
 			<Template>actor|props/special/eyecandy/bridge_edge_wooden.xml</Template>
-			<Player>0</Player>
 			<Position x="415.97614" z="473.14173"/>
 			<Orientation y="1.21338"/>
 			<Actor seed="9104"/>
 		</Entity>
 		<Entity uid="18">
 			<Template>actor|props/special/eyecandy/bridge_edge_wooden.xml</Template>
-			<Player>0</Player>
 			<Position x="409.78592" z="463.34095"/>
 			<Orientation y="-1.95751"/>
 			<Actor seed="51006"/>
@@ -13875,27 +13876,6 @@
 			<Orientation y="2.89718"/>
 			<Actor seed="14472"/>
 		</Entity>
-		<Entity uid="2418">
-			<Template>units/brit/ship_merchant</Template>
-			<Player>2</Player>
-			<Position x="957.10547" z="400.79096"/>
-			<Orientation y="0.51481"/>
-			<Actor seed="42635"/>
-		</Entity>
-		<Entity uid="2419">
-			<Template>units/brit/ship_merchant</Template>
-			<Player>2</Player>
-			<Position x="971.02985" z="424.82651"/>
-			<Orientation y="0.23406"/>
-			<Actor seed="7319"/>
-		</Entity>
-		<Entity uid="2420">
-			<Template>units/brit/ship_merchant</Template>
-			<Player>2</Player>
-			<Position x="947.31373" z="425.03324"/>
-			<Orientation y="-0.66303"/>
-			<Actor seed="62852"/>
-		</Entity>
 		<Entity uid="2421">
 			<Template>units/brit/ship_fishing</Template>
 			<Player>2</Player>
@@ -13993,13 +13973,6 @@
 			<Position x="687.10773" z="269.96244"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="17302"/>
-		</Entity>
-		<Entity uid="2441">
-			<Template>units/brit/infantry_slinger_a</Template>
-			<Player>2</Player>
-			<Position x="223.72983" z="510.92762"/>
-			<Orientation y="-2.66266"/>
-			<Actor seed="64842"/>
 		</Entity>
 		<Entity uid="2443">
 			<Template>units/mace/support_female_citizen</Template>
@@ -14332,16 +14305,16 @@
 		</Entity>
 		<Entity uid="2492">
 			<Template>units/mace/siege_tower</Template>
-			<Player>0</Player>
-			<Position x="111.91504" z="714.11219"/>
-			<Orientation y="1.67688"/>
+			<Player>1</Player>
+			<Position x="126.13184" z="575.15534"/>
+			<Orientation y="0.73771"/>
 			<Actor seed="23675"/>
 		</Entity>
 		<Entity uid="2493">
 			<Template>units/mace/siege_lithobolos_packed</Template>
-			<Player>0</Player>
-			<Position x="93.94663" z="707.65705"/>
-			<Orientation y="2.88297"/>
+			<Player>1</Player>
+			<Position x="120.73201" z="556.84211"/>
+			<Orientation y="1.9438"/>
 			<Actor seed="16287"/>
 		</Entity>
 		<Entity uid="2494">
@@ -14568,28 +14541,28 @@
 		<Entity uid="2531">
 			<Template>units/athen/champion_ranged</Template>
 			<Player>4</Player>
-			<Position x="552.04426" z="247.90705"/>
+			<Position x="550.47034" z="247.4079"/>
 			<Orientation y="2.35621"/>
 			<Actor seed="64179"/>
 		</Entity>
 		<Entity uid="2532">
 			<Template>units/athen/champion_ranged</Template>
 			<Player>4</Player>
-			<Position x="549.87543" z="250.96528"/>
+			<Position x="548.48469" z="250.66907"/>
 			<Orientation y="-2.98581"/>
 			<Actor seed="490"/>
 		</Entity>
 		<Entity uid="2533">
 			<Template>units/athen/champion_ranged</Template>
 			<Player>4</Player>
-			<Position x="567.64094" z="229.1573"/>
+			<Position x="566.02521" z="229.12735"/>
 			<Orientation y="-2.11489"/>
 			<Actor seed="22018"/>
 		</Entity>
 		<Entity uid="2534">
 			<Template>units/athen/champion_ranged</Template>
 			<Player>4</Player>
-			<Position x="569.28168" z="226.18381"/>
+			<Position x="568.36133" z="224.46631"/>
 			<Orientation y="-2.10788"/>
 			<Actor seed="45066"/>
 		</Entity>
@@ -15146,20 +15119,6 @@
 			<Orientation y="3.01955"/>
 			<Actor seed="39933"/>
 		</Entity>
-		<Entity uid="2617">
-			<Template>units/brit/ship_merchant</Template>
-			<Player>2</Player>
-			<Position x="908.42005" z="457.38678"/>
-			<Orientation y="-1.90592"/>
-			<Actor seed="62852"/>
-		</Entity>
-		<Entity uid="2618">
-			<Template>units/brit/ship_merchant</Template>
-			<Player>2</Player>
-			<Position x="857.64435" z="524.87293"/>
-			<Orientation y="-3.47689"/>
-			<Actor seed="62852"/>
-		</Entity>
 		<Entity uid="2619">
 			<Template>units/brit/support_female_citizen</Template>
 			<Player>3</Player>
@@ -15264,6 +15223,90 @@
 			<Position x="831.6999" z="667.60334"/>
 			<Orientation y="-2.58826"/>
 			<Actor seed="7650"/>
+		</Entity>
+		<Entity uid="2634">
+			<Template>structures/brit/defense_tower</Template>
+			<Player>2</Player>
+			<Position x="668.92359" z="177.8679"/>
+			<Orientation y="2.35622"/>
+			<Actor seed="24051"/>
+		</Entity>
+		<Entity uid="2635">
+			<Template>structures/brit/defense_tower</Template>
+			<Player>2</Player>
+			<Position x="605.86036" z="207.20615"/>
+			<Orientation y="2.35622"/>
+			<Actor seed="24051"/>
+		</Entity>
+		<Entity uid="2636">
+			<Template>structures/brit/defense_tower</Template>
+			<Player>2</Player>
+			<Position x="577.1698" z="228.33481"/>
+			<Orientation y="2.35622"/>
+			<Actor seed="24051"/>
+		</Entity>
+		<Entity uid="2637">
+			<Template>structures/brit/defense_tower</Template>
+			<Player>2</Player>
+			<Position x="554.85785" z="256.30509"/>
+			<Orientation y="2.35622"/>
+			<Actor seed="24051"/>
+		</Entity>
+		<Entity uid="2638">
+			<Template>structures/brit/defense_tower</Template>
+			<Player>2</Player>
+			<Position x="632.10706" z="384.12821"/>
+			<Orientation y="2.35622"/>
+			<Actor seed="24051"/>
+		</Entity>
+		<Entity uid="2639">
+			<Template>structures/brit/defense_tower</Template>
+			<Player>2</Player>
+			<Position x="664.95655" z="371.85883"/>
+			<Orientation y="2.35622"/>
+			<Actor seed="24051"/>
+		</Entity>
+		<Entity uid="2640">
+			<Template>structures/brit/defense_tower</Template>
+			<Player>2</Player>
+			<Position x="696.3407" z="359.59031"/>
+			<Orientation y="2.35622"/>
+			<Actor seed="24051"/>
+		</Entity>
+		<Entity uid="2641">
+			<Template>structures/brit/defense_tower</Template>
+			<Player>2</Player>
+			<Position x="728.17695" z="345.24854"/>
+			<Orientation y="2.35622"/>
+			<Actor seed="24051"/>
+		</Entity>
+		<Entity uid="2642">
+			<Template>structures/brit/defense_tower</Template>
+			<Player>2</Player>
+			<Position x="755.99146" z="288.20197"/>
+			<Orientation y="3.16668"/>
+			<Actor seed="24051"/>
+		</Entity>
+		<Entity uid="2643">
+			<Template>structures/brit/defense_tower</Template>
+			<Player>2</Player>
+			<Position x="754.76136" z="253.08091"/>
+			<Orientation y="2.35622"/>
+			<Actor seed="24051"/>
+		</Entity>
+		<Entity uid="2644">
+			<Template>structures/brit/defense_tower</Template>
+			<Player>2</Player>
+			<Position x="742.17811" z="222.0305"/>
+			<Orientation y="2.35622"/>
+			<Actor seed="24051"/>
+		</Entity>
+		<Entity uid="2645">
+			<Template>structures/brit/defense_tower</Template>
+			<Player>2</Player>
+			<Position x="733.55408" z="193.40433"/>
+			<Orientation y="2.35622"/>
+			<Actor seed="24051"/>
 		</Entity>
 	</Entities>
 	<Paths/>
