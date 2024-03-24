@@ -32,7 +32,7 @@
 		</Postproc>
 	</Environment>
 	<Camera>
-		<Position x="577.712" y="141.116" z="482.825"/>
+		<Position x="469.752" y="70.0886" z="131.713"/>
 		<Rotation angle="0"/>
 		<Declination angle="0.610865"/>
 	</Camera>
@@ -40,10 +40,13 @@
 {
   "CircularMap": true,
   "Description": "The year is 359 BC. Philip II is busy consolidating his internal position. A rebel prince has refused to pay tribute -- it is time you make an example of him. \n\nIntelligence: the rebel holdout lies to the north along the main path. There are multiple ways to approach the town, some more and some less direct. Scouts have also reported that bands from the hillside are rushing in to defend their local lord. \n\nNotes: the AI should be Petra for both enemies. The difficulty setting will have effects beyond the gathering rate (e.g., at Very Hard, more troops are garrisoned than at Medium).",
-  "Keywords": ["macedonian_campaign"],
+  "Keywords": [
+    "macedonian_campaign"
+  ],
   "LockTeams": true,
   "Name": "Macedonia 1 - Consolidating Control (359 BC)",
   "PlayerData": [
+    null,
     {
       "Civ": "mace",
       "Name": "Philip II",
